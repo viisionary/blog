@@ -1,7 +1,7 @@
 <component name="libraryTable">
   <library name="favicon.ico">
     <CLASSES>
-      <root url="jar://$PROJECT_DIR$/img/favicon.ico.zip!/" />
+      <root url="jar://$PROJECT_DIR$/public/img/favicon.ico.zip!/" />
     </CLASSES>
     <JAVADOC />
     <SOURCES />
