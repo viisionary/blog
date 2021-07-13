@@ -3,6 +3,25 @@ languageCode = "en-us"
 theme = "anatole"
 title = "VISIONARY BLOG"
 EnableRobotstxt = true
+[menu]
+
+[[menu.main]]
+name = "Home"
+identifier = "home"
+weight = 100
+url = "/"
+
+[[menu.main]]
+name = "Posts"
+weight = 200
+identifier = "posts"
+url = "/post/"
+
+[[menu.main]]
+name = "About"
+weight = 300
+identifier = "about"
+url = "/about/"
 
 [params]
 profilePicture = "images/profile.png"
@@ -12,7 +31,6 @@ Blogging from Texas
 """
 readMore = true
 copyright = "2021-{{ YEAR }}"
-postSectionName = "blog"
 #fullPostContent = true
 #[menu]
 #[[menu.main]]
