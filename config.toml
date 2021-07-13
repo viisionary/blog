@@ -1,0 +1,5 @@
+baseURL = "http://example.org/"
+languageCode = "en-us"
+title = "VISIONARY S BLOG"
+theme = "beautifulhugo"
+
