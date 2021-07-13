@@ -1,4 +1,52 @@
 baseURL = "http://example.org/"
 languageCode = "en-us"
+theme = "anatole"
 title = "VISIONARY BLOG"
-theme = "jane"
+EnableRobotstxt = true
+
+[params]
+profilePicture = "images/profile.png"
+description = """
+Call me Mia
+Blogging from Texas
+"""
+readMore = true
+copyright = "2021-{{ YEAR }}"
+postSectionName = "blog"
+#fullPostContent = true
+[menu]
+[[menu.main]]
+name = "Home"
+identifier = "home"
+weight = 100
+url = "/"
+
+[[menu.main]]
+name = "Posts"
+weight = 200
+identifier = "posts"
+url = "/post/"
+
+[[menu.main]]
+name = "About"
+weight = 300
+identifier = "about"
+url = "/about/"
+displayMode = "dark"
+
+[[params.socialIcons]]
+icon = "fas fa-envelope"
+title = "e-mail"
+url = "min_0610@icloud.com"
+
+[[params.socialIcons]]
+icon = "fab fa-linkedin"
+title = "Linkedin"
+url = "https://de.linkedin.com/"
+
+[params.gitalk]
+clientID = "GitHub Application Client ID"
+clientSecret = "GitHub Application Client Secret"
+repo = "Repository name to store issues"
+owner = "GitHub repo owner"
+admin = "GitHub repo owner and collaborators, only these guys can initialize gitHub issues"
