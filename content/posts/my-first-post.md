@@ -3,7 +3,9 @@ title: "My First Post"
 date: 2021-07-13T17:30:33+08:00
 draft: true
 ---
-
+categories : [                              
+"构建",
+]
 # 如何优化你的前端项目
 
 Finished: Yes
