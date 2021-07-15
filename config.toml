@@ -4,21 +4,22 @@ theme = "showfolio"
 title = "VISIONARY BLOG"
 EnableRobotstxt = true
 images = ["site-feature-image.jpg"]
+Paginate = 1000
+darkMode = true
 
 [taxonomies]
 series = "series"
 
 [params]
-
 name = "Showfolio Theme"
-author = "John Doe"
+author = "VISIONARY"
 authorEmail = "name@example.com"
 authorImage = "images/profile.png"
-#autoDarkMode = true
-theme="dark"
-copyright = "Copyright © 2021 - John Doe · All rights reserved"
+copyright = "Copyright © 2021 - VISIONARY · All rights reserved"
 favicon = "favicon.ico"
-
+autoDarkMode = true
+paginate = 3
+hideAutoMenu = false
 profilePicture = "images/profile.png"
 description = """
 Call me Mia
@@ -37,54 +38,15 @@ enable = true
 enable = false  # options: true, false. Enable math support globally, default: false. You can always enable math on per page.
 use = "katex"  # options: "katex", "mathjax". default is "katex".
 
-[[params.socialIcons]]
-icon = "fas fa-envelope"
-title = "e-mail"
-url = "min_0610@icloud.com"
-
-[[params.socialIcons]]
-icon = "fab fa-linkedin"
-title = "Linkedin"
-url = "https://de.linkedin.com/"
-
-[[params.socialIcons]]
-icon = "fab fa-instagram"
-title = "instagram"
-url = "https://www.instagram.com/mia_.min/"
-
-[[params.socialIcons]]
-icon = "fab fa-twitter"
-title = "twiitter"
-url = "https://twitter.com/visionary_mi"
-
-[[params.socialIcons]]
-icon = "fab fa-github"
-title = "twiitterdisableComments"
-url = "https://github.com/viisionary"
-
-#[params.gitalk]
-#clientID = "4bcefb913150c531befa"
-#clientSecret = "5dc4b021b4783a761f92a5d73f984c2fae0cfeda"
-#repo = "https://github.com/viisionary/blog"
-#owner = "viisionary"
-#admin = "viisionary"
-#id= "location.pathname" # The unique id of the page.
-#labels= "gitalk" # Github issue labels. If you used to use Gitment, you can change it
-#perPage= 15 # Pagination size, with maximum 100.
-#pagerDirection= "last" # Comment sorting direction, available values are 'last' and 'first'.
-#createIssueManually= false # If it is 'false', it is
 #----------
 [params.homepage.social]
 twitter = "https://twitter.com/"
 linkedin = "https://linkedin.com/in/"
-github = "https://github.com/"
+github = "https://github.com/viisionary"
 medium = "https://medium.com/"
 reddit = "https://reddit.com/"
 dribbble = "https://dribbble.com/"
 
-[markup]
-[markup.highlight]
-style = "dracula"
 [build]
 writeStats = true
 [[params.homepage.resume.courses]]
@@ -113,3 +75,4 @@ title = "Hey 👋 I'm John Doe"
 tagline = "UX Designer and Product Lead"
 description = "Develop functional user interfaces and provide a valuable experience to customers."
 contact = "https://twitter.com/"
+ignoreErrors = ["error-remote-getjson"]
