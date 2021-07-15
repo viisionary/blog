@@ -34,3 +34,5 @@ npm publish --access=public
 ```bash
 npm version patch
 ```
+
+{{ template "_internal/disqus.html" . }}
