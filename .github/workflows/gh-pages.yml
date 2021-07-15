@@ -26,7 +26,7 @@ jobs:
 
       - name: Install
         run: npm install postcss-cli
-
+      - run: npm install @fullhuman/postcss-purgecss
       - name: Setup Hugo
         uses: peaceiris/actions-hugo@v2
         with:
