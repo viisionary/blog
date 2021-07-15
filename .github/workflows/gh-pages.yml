@@ -11,12 +11,12 @@ jobs:
     runs-on: ubuntu-20.04
     steps:
       - uses: actions/checkout@v2
+      - uses: actions/setup-node@v2
         with:
           submodules: true  # Fetch Hugo themes (true OR recursive)
           fetch-depth: 0    # Fetch all history for .GitInfo and .Lastmod
 
       - name: Install
-        uses: actions/setup-node@v2
         run: npm install postcss-cli
 
       - name: Setup Hugo
@@ -25,10 +25,7 @@ jobs:
           hugo-version: 'latest'
 
       - name: Build
-        uses: peaceiris/actions-hugo@v2
         run: hugo --minify
-        with:
-          hugo-version: 'latest'
 
       - name: Deploy
         uses: peaceiris/actions-gh-pages@v3
