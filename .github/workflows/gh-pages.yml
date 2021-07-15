@@ -20,7 +20,9 @@ jobs:
           registry-url: https://registry.npmjs.org
 
       - run: npm ci
-
+      - run: |
+          cd theme/showfolio
+          npm ci
       - name: Setup Hugo
         uses: peaceiris/actions-hugo@v2
         with:
