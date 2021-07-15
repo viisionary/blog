@@ -14,15 +14,12 @@ jobs:
         with:
           submodules: true  # Fetch Hugo themes (true OR recursive)
           fetch-depth: 0    # Fetch all history for .GitInfo and .Lastmod
-
-      - name: node Install
-        uses: actions/setup-node@v2
+      - uses: actions/setup-node@v2
         with:
           node-version: 14
           registry-url: https://registry.npmjs.org
 
-      - name: Install postcss
-        run: npm install
+      - run: npm ci
 
       - name: Setup Hugo
         uses: peaceiris/actions-hugo@v2
