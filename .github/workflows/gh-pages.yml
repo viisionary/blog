@@ -16,13 +16,18 @@ jobs:
           fetch-depth: 0    # Fetch all history for .GitInfo and .Lastmod
 
       - name: Setup Hugo
-      - uses: actions/setup-node@v2
-      - uses: peaceiris/actions-hugo@v2
+        uses: peaceiris/actions-hugo@v2
         with:
           hugo-version: 'latest'
           # extended: true
-      - name: install
-      - run: npm install postcss-cli
+
+      - name: install postcss-cli
+      - uses: actions/setup-node@v2
+        with:
+          node-version: 14
+          registry-url: https://registry.npmjs.org
+        run: npm install postcss-cli
+
       - name: Build
         run: hugo --minify
 
