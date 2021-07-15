@@ -22,7 +22,7 @@ jobs:
           registry-url: https://registry.npmjs.org
 
       - name: Install postcss
-        run: npm ci
+        run: npm install
 
       - name: Setup Hugo
         uses: peaceiris/actions-hugo@v2
