@@ -19,9 +19,8 @@ jobs:
         uses: peaceiris/actions-hugo@v2
         with:
           hugo-version: 'latest'
-          # extended: true
 
-      - name: install postcss-cli
+      - name: Install
         uses: actions/setup-node@v2
         with:
           node-version: 14
