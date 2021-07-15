@@ -22,9 +22,6 @@ jobs:
 
       - name: Install
         uses: actions/setup-node@v2
-        with:
-          node-version: 14
-          registry-url: https://registry.npmjs.org
         run: npm install postcss-cli
 
       - name: Build
