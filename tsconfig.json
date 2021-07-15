@@ -1,0 +1,6 @@
+{
+  "exclude": [
+    "CNAME",
+    "node_modules"
+  ]
+}
