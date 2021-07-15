@@ -21,7 +21,7 @@ jobs:
 
       - run: npm ci
       - run: |
-          cd theme/showfolio
+          cd themes/showfolio
           npm ci
       - name: Setup Hugo
         uses: peaceiris/actions-hugo@v2
