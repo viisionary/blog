@@ -1,14 +1,24 @@
 baseURL = "http://example.org/"
 languageCode = "en-us"
-theme = "anatole"
+theme = "showfolio"
 title = "VISIONARY BLOG"
 EnableRobotstxt = true
 images = ["site-feature-image.jpg"]
 
 [taxonomies]
 series = "series"
+
 [params]
-contentratio = 0.8
+
+name = "Showfolio Theme"
+author = "John Doe"
+authorEmail = "name@example.com"
+authorImage = "images/profile.png"
+#autoDarkMode = true
+theme="dark"
+copyright = "Copyright © 2021 - John Doe · All rights reserved"
+favicon = "favicon.ico"
+
 profilePicture = "images/profile.png"
 description = """
 Call me Mia
@@ -16,31 +26,9 @@ Call me Mia
 There is my development notes.
 """
 readMore = true
-copyright = "2021-{{ YEAR }}"
 disqusShortname = "visionary"
 googleAnalytics = "UA-123-45"
 gtagId = "G-Z0FJ599SKS"
-
-[menu]
-[[menu.main]]
-name = "Home"
-identifier = "home"
-weight = 100
-url = "/"
-
-[[menu.main]]
-name = "Posts"
-weight = 200
-identifier = "posts"
-url = "/posts/"
-
-[[menu.main]]
-name = "About"
-weight = 300
-identifier = "about"
-url = "/about/"
-
-
 
 [params.simpleAnalytics]
 enable = true
@@ -85,3 +73,43 @@ url = "https://github.com/viisionary"
 #perPage= 15 # Pagination size, with maximum 100.
 #pagerDirection= "last" # Comment sorting direction, available values are 'last' and 'first'.
 #createIssueManually= false # If it is 'false', it is
+#----------
+[params.homepage.social]
+twitter = "https://twitter.com/"
+linkedin = "https://linkedin.com/in/"
+github = "https://github.com/"
+medium = "https://medium.com/"
+reddit = "https://reddit.com/"
+dribbble = "https://dribbble.com/"
+
+[markup]
+[markup.highlight]
+style = "dracula"
+[build]
+writeStats = true
+[[params.homepage.resume.courses]]
+name = "Design Principles"
+provider = "UX Academy"
+duration = "Nov 2019 - Jan 2020"
+
+[[params.homepage.resume.work]]
+name = "Amazon"
+role = "Sr. UX Designer"
+duration = "Jan 2016 - Oct 2019"
+
+[[params.homepage.resume.work]]
+name = "Google"
+role = "Product Engineer"
+duration = "Nov 2019 - Apr 2021"
+
+[params.homepage.resume]
+skills = ["Visual Design", "Product Development"]
+[params.homepage.codepen]
+username = "viisionary"
+pens = ["poPeNKa", "RxodrP", "BmXGdm", "wdVypQ"]
+
+[params.homepage]
+title = "Hey 👋 I'm John Doe"
+tagline = "UX Designer and Product Lead"
+description = "Develop functional user interfaces and provide a valuable experience to customers."
+contact = "https://twitter.com/"
