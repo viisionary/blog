@@ -3,49 +3,46 @@ languageCode = "en-us"
 theme = "showfolio"
 title = "VISIONARY BLOG"
 EnableRobotstxt = true
-images = ["site-feature-image.jpg"]
+images = ["images/profile.png"]
 Paginate = 1000
 darkMode = true
-
+ignoreErrors = ["error-remote-getjson"]
 [taxonomies]
 series = "series"
 
 [params]
 name = "Showfolio Theme"
 author = "VISIONARY"
-authorEmail = "name@example.com"
-authorImage = "images/profile.png"
+authorEmail = "min_0610@icloud.com"
+authorImage = "images/Avatar.png"
 copyright = "Copyright © 2021 - VISIONARY · All rights reserved"
 favicon = "favicon.ico"
 autoDarkMode = true
 paginate = 3
 hideAutoMenu = false
-profilePicture = "images/profile.png"
 description = """
 Call me Mia
 
 There is my development notes.
 """
-readMore = true
+ignoreErrors = ["error-remote-getjson"]
 disqusShortname = "visionary"
 googleAnalytics = "UA-123-45"
 gtagId = "G-Z0FJ599SKS"
+githubUsername = "viisionary"
 
 [params.simpleAnalytics]
 enable = true
 
+
 [params.math]
-enable = false  # options: true, false. Enable math support globally, default: false. You can always enable math on per page.
+enable = true  # options: true, false. Enable math support globally, default: false. You can always enable math on per page.
 use = "katex"  # options: "katex", "mathjax". default is "katex".
 
-#----------
 [params.homepage.social]
-twitter = "https://twitter.com/"
-linkedin = "https://linkedin.com/in/"
+twitter = "https://twitter.com/visionary_mi"
 github = "https://github.com/viisionary"
-medium = "https://medium.com/"
-reddit = "https://reddit.com/"
-dribbble = "https://dribbble.com/"
+instagram = "https://www.instagram.com/mia_.min/"
 
 [build]
 writeStats = true
@@ -55,7 +52,7 @@ provider = "UX Academy"
 duration = "Nov 2019 - Jan 2020"
 
 [[params.homepage.resume.work]]
-name = "Amazon"
+name = "工作经历"
 role = "Sr. UX Designer"
 duration = "Jan 2016 - Oct 2019"
 
@@ -65,14 +62,22 @@ role = "Product Engineer"
 duration = "Nov 2019 - Apr 2021"
 
 [params.homepage.resume]
-skills = ["Visual Design", "Product Development"]
+skills = ["前端工程师"]
+
 [params.homepage.codepen]
 username = "viisionary"
-pens = ["poPeNKa", "RxodrP", "BmXGdm", "wdVypQ"]
+pens = ["poPeNKa", "RxodrP", "BmXGdm", "wdVypQ","wdVypQ"]
+
+[params.github.username]
+
+
+[params.homepage.github]
+username = "viisionary"
+repos = ["spider-tool","spider-tool","spider-tool"]
 
 [params.homepage]
-title = "Hey 👋 I'm John Doe"
-tagline = "UX Designer and Product Lead"
-description = "Develop functional user interfaces and provide a valuable experience to customers."
-contact = "https://twitter.com/"
-ignoreErrors = ["error-remote-getjson"]
+title = "VISIONARY BLOG"
+tagline = "BLOG"
+description = "There is my development notes."
+contact = "https://twitter.com/visionary_mi"
+

@@ -14,6 +14,12 @@ Hugo ships with several [Built-in Shortcodes](https://gohugo.io/content-manageme
 
 {{< youtube crE_O7JVHjk >}}
 
+----gist----
+{{< gist spf13 7896402 >}}
+
+{{< codepen MWmJaPw >}}
+{{< codepen NWjpdpz >}}
+{{< codepen BaaBage >}}
 <br>
 
 ---
@@ -23,3 +29,14 @@ Hugo ships with several [Built-in Shortcodes](https://gohugo.io/content-manageme
 <br>
 
 ---
+{{< highlight text >}}
+<section id="main">
+  <div>
+   <h1 id="title">{{ .Title }}</h1>
+    {{ range .Pages }}
+        {{ .Render "summary"}}
+    {{ end }}
+  </div>
+</section>
+{{< /highlight >}}
+
