@@ -10,6 +10,7 @@ Hugo ships with several [Built-in Shortcodes](https://gohugo.io/content-manageme
 
 ## <!--more-->
 
+## 富文本语法使用示例
 ## YouTube Privacy Enhanced Shortcode
 
 {{< youtube crE_O7JVHjk >}}
