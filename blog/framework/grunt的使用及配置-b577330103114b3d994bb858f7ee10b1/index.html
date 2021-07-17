@@ -1,0 +1,169 @@
+<!doctype html><html lang=en-us><head><meta charset=utf-8><meta name=viewport content="width=device-width,initial-scale=1"><title>Grunt的使用及配置 - VISIONARY BLOG</title><meta name=generator content="Hugo 0.85.0"><link rel=stylesheet href=https://blog.visionary.top/css/styles.min.164cbb1508747f243f6df5c8ed21c22e9e62a67f149d1e07b8e1982526aa384c.css integrity=sha256-Fky7FQh0fyQ/bfXI7SHCLp5ipn8UnR4HuOGYJSaqOEw=><script>window.matchMedia("(prefers-color-scheme: dark)").matches?document.documentElement.classList.add("dark"):document.documentElement.classList.remove("dark")</script></head><body class="flex flex-col min-h-screen dark:bg-gray-900 dark:text-gray-100 transition-colors duration-500"><header class="w-full px-4 pt-4 max-w-5xl mx-auto"><nav class="flex items-center justify-between flex-wrap"><div class="flex gap-2 items-center"><a href=mailto:min_0610@icloud.com aria-label=EMail><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentcolor" fill="none" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><circle cx="12" cy="12" r="4"/><path d="M16 12v1.5a2.5 2.5.0 005 0V12a9 9 0 10-5.5 8.28"/></svg></a><a href=https://blog.visionary.top/ class="flex items-center font-bold">VISIONARY BLOG</a></div><ul id=nav-menu class="flex w-auto mt-0 space-x-2"><li><a href=https://blog.visionary.top/about/ class="hover:text-blue-800 dark:hover:text-blue-300">About Me</a></li><li><a href=https://blog.visionary.top/blog/ class="hover:text-blue-800 dark:hover:text-blue-300">Blogs</a></li></ul></nav></header><main class="flex-1 mx-4 md:mx-12 lg:mx-24 mt-8 sm:mt-16"><article class="mb-16 max-w-5xl mx-auto px-4"><h1>Grunt的使用及配置</h1><ul></ul><div class=post-footer><div class=info><span class=separator><a class=category href=/categories/%E6%9E%B6%E6%9E%84/>架构</a><a class=category href=/categories/%E5%BE%AE%E5%89%8D%E7%AB%AF/>微前端</a></span>
+<span class=separator><a class=tag href=/tags/%E5%89%8D%E7%AB%AF%E5%AE%89%E5%85%A8/>前端安全</a></span></div></div><div class=post-footer></div><aside class=content-aside-bar><nav id=TableOfContents><ul><li><a href=#在项目目录下>在项目目录下</a></li><li><a href=#编辑项目文件>编辑项目文件</a></li></ul><ul><li><ul><li><a href=#uglify--压缩某个目录下的所有文件>uglify ｜ 压缩某个目录下的所有文件</a></li><li><a href=#babel--编译es6语法>Babel ｜ 编译es6语法</a></li></ul></li><li><a href=#grunt-ts-编译ts文件>grunt-ts ｜编译ts文件</a></li><li><a href=#grunt-contrib-copy-复制文件>grunt-contrib-copy ｜复制文件</a></li><li><a href=#grunt-mocha-test-运行测试文件>grunt-mocha-test ｜运行测试文件</a></li><li><a href=#gruntregistertask-自定义task>grunt.registerTask() ｜自定义Task</a></li></ul></nav></aside><div class="prose lg:prose-lg prose-blue dark:prose-dark"><p>一个用来打包编译js/ts项目的工具</p><p>可以使用不同的plugins达到要的效果</p><p><a href=https://en.wikipedia.org/wiki/Cross-site_request_forgery>Cross-site request forgery - Wikipedia</a></p><h1 id=grunt的使用及配置>Grunt的使用及配置</h1><p><a href=https://gruntjs.com/getting-started>Getting started - Grunt: The JavaScript Task Runner</a></p><h1 id=安装>安装</h1><div class=highlight><pre style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-bash data-lang=bash>npm install -g grunt-cli
+</code></pre></div><h2 id=在项目目录下>在项目目录下</h2><div class=highlight><pre style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-bash data-lang=bash>npm install grunt --save-dev
+
+npm install grunt-contrib-uglify --save-dev 
+</code></pre></div><h2 id=编辑项目文件>编辑项目文件</h2><p>新建index.js 文件 随意编写内容</p><p>新建Gruntfile.js</p><div class=highlight><pre style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-bash data-lang=bash>module.exports <span style=color:#f92672>=</span> <span style=color:#66d9ef>function</span><span style=color:#f92672>(</span>grunt<span style=color:#f92672>)</span> <span style=color:#f92672>{</span>
+  // Project configuration.
+  grunt.initConfig<span style=color:#f92672>({</span>
+    pkg: grunt.file.readJSON<span style=color:#f92672>(</span><span style=color:#e6db74>&#39;package.json&#39;</span><span style=color:#f92672>)</span>,
+    uglify: <span style=color:#f92672>{</span>
+      options: <span style=color:#f92672>{</span>
+        banner: <span style=color:#e6db74>&#39;/*! &lt;%= pkg.name %&gt; &lt;%= grunt.template.today(&#34;yyyy-mm-dd&#34;) %&gt; */\n&#39;</span>
+      <span style=color:#f92672>}</span>,
+      build: <span style=color:#f92672>{</span>
+        src: <span style=color:#e6db74>&#39;index.js&#39;</span>,
+        dest: <span style=color:#e6db74>&#39;build/&lt;%= pkg.name %&gt;.min.js&#39;</span>
+      <span style=color:#f92672>}</span>
+    <span style=color:#f92672>}</span>
+  <span style=color:#f92672>})</span>;
+
+  // Load the plugin that provides the <span style=color:#e6db74>&#34;uglify&#34;</span> task.
+  grunt.loadNpmTasks<span style=color:#f92672>(</span><span style=color:#e6db74>&#39;grunt-contrib-uglify&#39;</span><span style=color:#f92672>)</span>;
+
+  // Default task<span style=color:#f92672>(</span>s<span style=color:#f92672>)</span>.
+  grunt.registerTask<span style=color:#f92672>(</span><span style=color:#e6db74>&#39;default&#39;</span>, <span style=color:#f92672>[</span><span style=color:#e6db74>&#39;uglify&#39;</span><span style=color:#f92672>])</span>;
+
+<span style=color:#f92672>}</span>;
+</code></pre></div><p>运行grunt将会生成压缩后的文件 目录在dest中定义</p><h1 id=plugins>plugins</h1><h3 id=uglify--压缩某个目录下的所有文件>uglify ｜ 压缩某个目录下的所有文件</h3><p>src/index.js</p><div class=highlight><pre style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-jsx data-lang=jsx><span style=color:#66d9ef>import</span> {<span style=color:#a6e22e>text</span>} <span style=color:#a6e22e>from</span> <span style=color:#e6db74>&#39;./testModule&#39;</span>;
+<span style=color:#a6e22e>console</span>.<span style=color:#a6e22e>log</span>(<span style=color:#a6e22e>text</span>);
+</code></pre></div><p>src/testModule.js</p><div class=highlight><pre style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-jsx data-lang=jsx><span style=color:#a6e22e>exports</span> <span style=color:#66d9ef>const</span> <span style=color:#a6e22e>text</span> <span style=color:#f92672>=</span> <span style=color:#e6db74>&#39;hello&#39;</span>;
+</code></pre></div><p>修改Gruntfile 如下</p><div class=highlight><pre style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-jsx data-lang=jsx><span style=color:#a6e22e>module</span>.<span style=color:#a6e22e>exports</span> <span style=color:#f92672>=</span> <span style=color:#66d9ef>function</span>(<span style=color:#a6e22e>grunt</span>) {
+
+  <span style=color:#75715e>// Project configuration.
+</span><span style=color:#75715e></span>  <span style=color:#a6e22e>grunt</span>.<span style=color:#a6e22e>initConfig</span>({
+    <span style=color:#a6e22e>pkg</span><span style=color:#f92672>:</span> <span style=color:#a6e22e>grunt</span>.<span style=color:#a6e22e>file</span>.<span style=color:#a6e22e>readJSON</span>(<span style=color:#e6db74>&#39;package.json&#39;</span>),
+    <span style=color:#a6e22e>uglify</span><span style=color:#f92672>:</span> {
+      <span style=color:#a6e22e>options</span><span style=color:#f92672>:</span> {
+        <span style=color:#a6e22e>banner</span><span style=color:#f92672>:</span> <span style=color:#e6db74>&#39;/*! &lt;%= pkg.name %&gt; &lt;%= grunt.template.today(&#34;yyyy-mm-dd&#34;) %&gt; */\n&#39;</span>
+      },
+        <span style=color:#a6e22e>dist</span><span style=color:#f92672>:</span> {
+        <span style=color:#a6e22e>files</span><span style=color:#f92672>:</span> [{
+          <span style=color:#a6e22e>expand</span><span style=color:#f92672>:</span> <span style=color:#66d9ef>true</span>,
+          <span style=color:#a6e22e>src</span><span style=color:#f92672>:</span> [<span style=color:#e6db74>&#39;src/*.js&#39;</span>],
+          <span style=color:#a6e22e>dest</span><span style=color:#f92672>:</span> <span style=color:#e6db74>&#39;build/&#39;</span>,
+          <span style=color:#a6e22e>ext</span><span style=color:#f92672>:</span> <span style=color:#e6db74>&#39;.min.js&#39;</span>,
+          <span style=color:#a6e22e>extDot</span><span style=color:#f92672>:</span> <span style=color:#e6db74>&#39;first&#39;</span>,
+          <span style=color:#a6e22e>rename</span><span style=color:#f92672>:</span> <span style=color:#66d9ef>function</span> (<span style=color:#a6e22e>e</span>, <span style=color:#a6e22e>name</span>) {       <span style=color:#75715e>// The value for rename must be a function
+</span><span style=color:#75715e></span>            <span style=color:#66d9ef>return</span> <span style=color:#a6e22e>e</span> <span style=color:#f92672>+</span> <span style=color:#a6e22e>name</span>.<span style=color:#a6e22e>substring</span>(<span style=color:#ae81ff>4</span>); <span style=color:#75715e>// The function must return a string with the complete destination
+</span><span style=color:#75715e></span>          }
+        }]
+      }
+    },
+  });
+
+  <span style=color:#a6e22e>grunt</span>.<span style=color:#a6e22e>loadNpmTasks</span>(<span style=color:#e6db74>&#39;grunt-contrib-uglify&#39;</span>);
+  <span style=color:#a6e22e>grunt</span>.<span style=color:#a6e22e>registerTask</span>(<span style=color:#e6db74>&#39;default&#39;</span>, [<span style=color:#e6db74>&#39;uglify&#39;</span>]);
+
+};
+</code></pre></div><h3 id=babel--编译es6语法>Babel ｜ 编译es6语法</h3><p>直接安装如下包</p><div class=highlight><pre style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-json data-lang=json>		<span style=color:#e6db74>&#34;@babel/core&#34;</span><span style=color:#960050;background-color:#1e0010>:</span> <span style=color:#e6db74>&#34;^7.14.6&#34;</span><span style=color:#960050;background-color:#1e0010>,</span>
+    <span style=color:#e6db74>&#34;@babel/preset-env&#34;</span><span style=color:#960050;background-color:#1e0010>:</span> <span style=color:#e6db74>&#34;^7.14.7&#34;</span><span style=color:#960050;background-color:#1e0010>,</span>
+    <span style=color:#e6db74>&#34;grunt-babel&#34;</span><span style=color:#960050;background-color:#1e0010>:</span> <span style=color:#e6db74>&#34;^8.0.0&#34;</span><span style=color:#960050;background-color:#1e0010>,</span>
+</code></pre></div><p>配置文件中需要</p><ol><li><p>增加Babel的配置，</p></li><li><p>load插件，</p></li><li><p>注册插件</p></li></ol><p>编译后</p><div class=highlight><pre style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-jsx data-lang=jsx><span style=color:#75715e>/*! mycode 2021-07-15 */</span>
+
+<span style=color:#e6db74>&#34;use strict&#34;</span>;<span style=color:#66d9ef>var</span> <span style=color:#a6e22e>_testModule</span><span style=color:#f92672>=</span><span style=color:#a6e22e>require</span>(<span style=color:#e6db74>&#34;./testModule&#34;</span>);<span style=color:#a6e22e>console</span>.<span style=color:#a6e22e>log</span>(<span style=color:#a6e22e>_testModule</span>.<span style=color:#a6e22e>text</span>);
+</code></pre></div><p>bebel配置</p><div class=highlight><pre style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-jsx data-lang=jsx><span style=color:#a6e22e>babel</span><span style=color:#f92672>:</span> {
+     <span style=color:#a6e22e>options</span><span style=color:#f92672>:</span> {
+       <span style=color:#a6e22e>sourceMap</span><span style=color:#f92672>:</span> <span style=color:#66d9ef>true</span>,
+       <span style=color:#a6e22e>presets</span><span style=color:#f92672>:</span> [<span style=color:#e6db74>&#39;@babel/preset-env&#39;</span>]
+     },
+     <span style=color:#a6e22e>dist</span><span style=color:#f92672>:</span> {
+       <span style=color:#a6e22e>files</span><span style=color:#f92672>:</span> [{
+         <span style=color:#a6e22e>expand</span><span style=color:#f92672>:</span> <span style=color:#66d9ef>true</span>,
+         <span style=color:#a6e22e>src</span><span style=color:#f92672>:</span> [<span style=color:#e6db74>&#39;src/*.js&#39;</span>],
+         <span style=color:#a6e22e>dest</span><span style=color:#f92672>:</span> <span style=color:#e6db74>&#39;build&#39;</span>,
+         <span style=color:#a6e22e>ext</span><span style=color:#f92672>:</span> <span style=color:#e6db74>&#39;.js&#39;</span>
+       }]
+     }
+    },
+</code></pre></div><p>// TODO</p><h2 id=grunt-ts-编译ts文件>grunt-ts ｜编译ts文件</h2><h2 id=grunt-contrib-copy-复制文件>grunt-contrib-copy ｜复制文件</h2><h2 id=grunt-mocha-test-运行测试文件>grunt-mocha-test ｜运行测试文件</h2><h2 id=gruntregistertask-自定义task>grunt.registerTask() ｜自定义Task</h2><h1 id=一个完整配置文件的示例>一个完整配置文件的示例</h1><p>【ts & mocha & 压缩】</p><div class=highlight><pre style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-jsx data-lang=jsx><span style=color:#a6e22e>module</span>.<span style=color:#a6e22e>exports</span> <span style=color:#f92672>=</span> <span style=color:#66d9ef>function</span> (<span style=color:#a6e22e>grunt</span>) {
+	<span style=color:#a6e22e>require</span>(<span style=color:#e6db74>&#39;load-grunt-tasks&#39;</span>)(<span style=color:#a6e22e>grunt</span>);
+	<span style=color:#a6e22e>grunt</span>.<span style=color:#a6e22e>registerTask</span>(<span style=color:#e6db74>&#39;deleteLib&#39;</span>, <span style=color:#e6db74>&#39;A test task&#39;</span>, <span style=color:#66d9ef>function</span> () {
+		<span style=color:#a6e22e>grunt</span>.<span style=color:#a6e22e>file</span>.<span style=color:#66d9ef>delete</span>(<span style=color:#e6db74>&#39;lib&#39;</span>)
+	});
+	<span style=color:#a6e22e>grunt</span>.<span style=color:#a6e22e>initConfig</span>({
+		<span style=color:#a6e22e>pkg</span><span style=color:#f92672>:</span> <span style=color:#a6e22e>grunt</span>.<span style=color:#a6e22e>file</span>.<span style=color:#a6e22e>readJSON</span>(<span style=color:#e6db74>&#39;package.json&#39;</span>),
+		<span style=color:#a6e22e>ts</span><span style=color:#f92672>:</span> {
+			<span style=color:#66d9ef>default</span><span style=color:#f92672>:</span> {
+				<span style=color:#a6e22e>src</span><span style=color:#f92672>:</span> [<span style=color:#e6db74>&#34;src/*.ts&#34;</span>, <span style=color:#e6db74>&#34;!node_modules/**&#34;</span>],
+				<span style=color:#a6e22e>tsconfig</span><span style=color:#f92672>:</span> <span style=color:#e6db74>&#39;tsconfig.json&#39;</span>,
+				<span style=color:#a6e22e>outDir</span><span style=color:#f92672>:</span> <span style=color:#e6db74>&#34;lib&#34;</span>
+			},
+		},
+		<span style=color:#75715e>// babel: {
+</span><span style=color:#75715e></span>		<span style=color:#75715e>// 	options: {
+</span><span style=color:#75715e></span>		<span style=color:#75715e>// 		sourceMap: true,
+</span><span style=color:#75715e></span>		<span style=color:#75715e>// 		presets: [&#39;@babel/preset-env&#39;]
+</span><span style=color:#75715e></span>		<span style=color:#75715e>// 	},
+</span><span style=color:#75715e></span>		<span style=color:#75715e>// 	dist: {
+</span><span style=color:#75715e></span>		<span style=color:#75715e>// 		files: [{
+</span><span style=color:#75715e></span>		<span style=color:#75715e>// 			expand: true,
+</span><span style=color:#75715e></span>		<span style=color:#75715e>// 			src: [&#39;lib/*.js&#39;],
+</span><span style=color:#75715e></span>		<span style=color:#75715e>// 			dest: &#39;dist&#39;,
+</span><span style=color:#75715e></span>		<span style=color:#75715e>// 			ext: &#39;.js&#39;
+</span><span style=color:#75715e></span>		<span style=color:#75715e>// 		}]
+</span><span style=color:#75715e></span>		<span style=color:#75715e>// 	}
+</span><span style=color:#75715e></span>		<span style=color:#75715e>// },
+</span><span style=color:#75715e></span>		<span style=color:#a6e22e>mochaTest</span><span style=color:#f92672>:</span> {
+			<span style=color:#a6e22e>test</span><span style=color:#f92672>:</span> {
+				<span style=color:#a6e22e>options</span><span style=color:#f92672>:</span> {
+					<span style=color:#a6e22e>reporter</span><span style=color:#f92672>:</span> <span style=color:#e6db74>&#39;spec&#39;</span>,
+					<span style=color:#75715e>// captureFile: &#39;results.txt&#39;, // Optionally capture the reporter output to a file
+</span><span style=color:#75715e></span>					<span style=color:#a6e22e>quiet</span><span style=color:#f92672>:</span> <span style=color:#66d9ef>false</span>, <span style=color:#75715e>// Optionally suppress output to standard out (defaults to false)
+</span><span style=color:#75715e></span>					<span style=color:#a6e22e>clearRequireCache</span><span style=color:#f92672>:</span> <span style=color:#66d9ef>false</span>, <span style=color:#75715e>// Optionally clear the require cache before running tests (defaults to false)
+</span><span style=color:#75715e></span>					<span style=color:#a6e22e>clearCacheFilter</span><span style=color:#f92672>:</span> (<span style=color:#a6e22e>key</span>) =&gt; <span style=color:#66d9ef>true</span>, <span style=color:#75715e>// Optionally defines which files should keep in cache
+</span><span style=color:#75715e></span>					<span style=color:#a6e22e>noFail</span><span style=color:#f92672>:</span> <span style=color:#66d9ef>false</span> <span style=color:#75715e>// Optionally set to not fail on failed tests (will still fail on other errors)
+</span><span style=color:#75715e></span>				},
+				<span style=color:#a6e22e>src</span><span style=color:#f92672>:</span> [<span style=color:#e6db74>&#39;lib/test/*.spec.js&#39;</span>]
+			}
+		},
+		<span style=color:#a6e22e>uglify</span><span style=color:#f92672>:</span> {
+			<span style=color:#a6e22e>options</span><span style=color:#f92672>:</span> {
+				<span style=color:#75715e>//在头部添加 js文件名/版本号和时间的注释
+</span><span style=color:#75715e></span>				<span style=color:#a6e22e>stripBanners</span><span style=color:#f92672>:</span> <span style=color:#66d9ef>true</span>,
+				<span style=color:#a6e22e>banner</span><span style=color:#f92672>:</span> <span style=color:#e6db74>&#39;/*! &lt;%=pkg.name%&gt;-&lt;%=pkg.version%&gt;.js &lt;%=grunt.template.today(&#34;yyyy-mm-dd&#34;) %&gt; */\n&#39;</span>
+			},
+			<span style=color:#75715e>// files: [&#39;lib/src/*.js&#39;, ],
+</span><span style=color:#75715e></span>			<span style=color:#a6e22e>dist</span><span style=color:#f92672>:</span> {
+				<span style=color:#a6e22e>files</span><span style=color:#f92672>:</span> [{
+					<span style=color:#a6e22e>expand</span><span style=color:#f92672>:</span> <span style=color:#66d9ef>true</span>,
+					<span style=color:#a6e22e>cwd</span><span style=color:#f92672>:</span> <span style=color:#e6db74>&#34;lib/&#34;</span>,
+					<span style=color:#a6e22e>src</span><span style=color:#f92672>:</span> [<span style=color:#e6db74>&#39;src/*.js&#39;</span>],
+					<span style=color:#a6e22e>dest</span><span style=color:#f92672>:</span> <span style=color:#e6db74>&#39;spider-utils/&#39;</span>,
+					<span style=color:#a6e22e>ext</span><span style=color:#f92672>:</span> <span style=color:#e6db74>&#39;.js&#39;</span>,
+					<span style=color:#a6e22e>extDot</span><span style=color:#f92672>:</span> <span style=color:#e6db74>&#39;first&#39;</span>,
+					<span style=color:#a6e22e>rename</span><span style=color:#f92672>:</span> <span style=color:#66d9ef>function</span> (<span style=color:#a6e22e>e</span>, <span style=color:#a6e22e>name</span>) {       <span style=color:#75715e>// The value for rename must be a function
+</span><span style=color:#75715e></span>						<span style=color:#66d9ef>return</span> <span style=color:#a6e22e>e</span> <span style=color:#f92672>+</span> <span style=color:#a6e22e>name</span>.<span style=color:#a6e22e>substring</span>(<span style=color:#ae81ff>4</span>); <span style=color:#75715e>// The function must return a string with the complete destination
+</span><span style=color:#75715e></span>					}
+				}]
+			}
+		},
+		<span style=color:#a6e22e>copy</span><span style=color:#f92672>:</span> {
+			<span style=color:#a6e22e>main</span><span style=color:#f92672>:</span> {
+				<span style=color:#a6e22e>files</span><span style=color:#f92672>:</span> [{
+					<span style=color:#a6e22e>expand</span><span style=color:#f92672>:</span> <span style=color:#66d9ef>true</span>,
+					<span style=color:#a6e22e>cwd</span><span style=color:#f92672>:</span> <span style=color:#e6db74>&#39;lib/&#39;</span>,
+					<span style=color:#a6e22e>dest</span><span style=color:#f92672>:</span> <span style=color:#e6db74>&#39;spider-utils/&#39;</span>,
+					<span style=color:#a6e22e>src</span><span style=color:#f92672>:</span> [<span style=color:#e6db74>&#39;src/*.d.ts&#39;</span>],
+					<span style=color:#a6e22e>rename</span><span style=color:#f92672>:</span> <span style=color:#66d9ef>function</span> (<span style=color:#a6e22e>e</span>, <span style=color:#a6e22e>name</span>) {       <span style=color:#75715e>// The value for rename must be a function
+</span><span style=color:#75715e></span>						<span style=color:#66d9ef>return</span> <span style=color:#a6e22e>e</span> <span style=color:#f92672>+</span> <span style=color:#a6e22e>name</span>.<span style=color:#a6e22e>substring</span>(<span style=color:#ae81ff>4</span>); <span style=color:#75715e>// The function must return a string with the complete destination
+</span><span style=color:#75715e></span>					}
+				}, { <span style=color:#a6e22e>src</span><span style=color:#f92672>:</span> <span style=color:#e6db74>&#39;spider-utils-package.json&#39;</span>, <span style=color:#a6e22e>dest</span><span style=color:#f92672>:</span> <span style=color:#e6db74>&#39;spider-utils/package.json&#39;</span> }],
+			}
+		},
+	});
+
+	<span style=color:#a6e22e>grunt</span>.<span style=color:#a6e22e>loadNpmTasks</span>(<span style=color:#e6db74>&#39;grunt-mocha-test&#39;</span>);
+	<span style=color:#a6e22e>grunt</span>.<span style=color:#a6e22e>loadNpmTasks</span>(<span style=color:#e6db74>&#39;grunt-contrib-uglify&#39;</span>);
+	<span style=color:#a6e22e>grunt</span>.<span style=color:#a6e22e>loadNpmTasks</span>(<span style=color:#e6db74>&#34;grunt-ts&#34;</span>);
+	<span style=color:#a6e22e>grunt</span>.<span style=color:#a6e22e>loadNpmTasks</span>(<span style=color:#e6db74>&#39;grunt-contrib-copy&#39;</span>);
+
+	<span style=color:#a6e22e>grunt</span>.<span style=color:#a6e22e>registerTask</span>(<span style=color:#e6db74>&#39;default&#39;</span>, [
+		<span style=color:#e6db74>&#39;ts&#39;</span>,
+		<span style=color:#e6db74>&#39;mochaTest&#39;</span>,
+		<span style=color:#e6db74>&#39;uglify&#39;</span>,
+		<span style=color:#e6db74>&#39;copy&#39;</span>,
+		<span style=color:#e6db74>&#39;deleteLib&#39;</span>
+	],);
+};
+</code></pre></div></div></article></main><footer class="w-full text-center p-4 text-xs text-gray-400">copyright © 2021 - VISIONARY · All rights reserved</footer></body></html>
