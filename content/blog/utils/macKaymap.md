@@ -9,3 +9,5 @@ categories : [
 ]
 ---
 Press <kbd><kbd>CTRL</kbd>+<kbd>ALT</kbd>+<kbd>Delete</kbd></kbd> to end the session.
+
+按住command点击链接可以新标签打开

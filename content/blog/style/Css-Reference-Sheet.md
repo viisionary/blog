@@ -5,8 +5,7 @@ categories : ["css", "grid", "多行省略", "滚动条",]
 tags: ["thumbnail",]
 ---
 
-这里是预览
-
+常用的一些css显示效果
 
 <!--more-->
 
