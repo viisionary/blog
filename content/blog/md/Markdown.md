@@ -1,13 +1,9 @@
 ---
-title: "linux 属性"
+title: "code spilt show"
 date: 2021-07-16
-description: "Sample article showcasing basic Markdown syntax and formatting for HTML elements."
-categories : [                              
-"架构","微前端",
-]
 toc: true
-tags: [
-"前端安全",
+categories : [                              
+"md",
 ]
 ---
 
