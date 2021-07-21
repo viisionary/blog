@@ -1,0 +1,206 @@
+<!doctype html><html lang=en-us><head><meta charset=utf-8><meta name=viewport content="width=device-width,initial-scale=1"><title>react 源码阅读 - diff 算法 - VISIONARY BLOG</title><meta name=generator content="Hugo 0.85.0"><link rel=stylesheet href=https://blog.visionary.top/css/styles.min.164cbb1508747f243f6df5c8ed21c22e9e62a67f149d1e07b8e1982526aa384c.css integrity=sha256-Fky7FQh0fyQ/bfXI7SHCLp5ipn8UnR4HuOGYJSaqOEw=><script>window.matchMedia("(prefers-color-scheme: dark)").matches?document.documentElement.classList.add("dark"):document.documentElement.classList.remove("dark")</script></head><body class="flex flex-col min-h-screen dark:bg-gray-900 dark:text-gray-100 transition-colors duration-500"><header class="w-full px-4 pt-4 max-w-5xl mx-auto"><nav class="flex items-center justify-between flex-wrap"><div class="flex gap-2 items-center"><a href=mailto:min_0610@icloud.com aria-label=EMail><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentcolor" fill="none" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><circle cx="12" cy="12" r="4"/><path d="M16 12v1.5a2.5 2.5.0 005 0V12a9 9 0 10-5.5 8.28"/></svg></a><a href=https://blog.visionary.top/ class="flex items-center font-bold">VISIONARY BLOG</a></div><ul id=nav-menu class="flex w-auto mt-0 space-x-2"><li><a href=https://blog.visionary.top/about/ class="hover:text-blue-800 dark:hover:text-blue-300">About Me</a></li><li><a href=https://blog.visionary.top/blog/ class="hover:text-blue-800 dark:hover:text-blue-300">Blogs</a></li></ul></nav></header><main class="flex-1 mx-4 md:mx-12 lg:mx-24 mt-8 sm:mt-16"><article class="mb-16 max-w-5xl mx-auto px-4"><h1>react 源码阅读 - diff 算法</h1><ul></ul><div class=post-footer><div class=info><span class=separator><a class=category href=/categories/react/>react</a><a class=category href=/categories/%E6%BA%90%E7%A0%81/>源码</a></span></div></div><div class=post-footer></div><aside class=content-aside-bar><nav id=TableOfContents><ul><li><a href=#版本-v1702>版本 v17.0.2</a><ul><li><a href=#单节点--调和单节点>单节点 / 调和单节点</a></li><li><a href=#多节点>多节点</a></li><li><a href=#这部分的代码在-react-reconciler>这部分的代码在 react-reconciler</a></li></ul></li></ul></nav></aside><div class="prose lg:prose-lg prose-blue dark:prose-dark"><p>详细写了 diff 算法的原理，写了示例，分析了源码，加了注释</p><p>// TODO 有空加一个可debug的demo 还有 模拟一个可test的简易diff</p><p>可检查[1,2,3] [{props:{children:[]},next:''},{},{}]</p><h2 id=版本-v1702>版本 v17.0.2</h2><p>diff 算法只对同级元素进行</p><ol><li>diff算法比较的是什么 当前页面中的DOM节点对应的fiber节点 🆚 新一次render的结果生成的filter节点 生成的workInProgress Fiber 将被渲染到页面</li><li>diff算法的作用 找到可复用的fiber节点，提高效率</li><li>diff算法由什么触发 reconcile child fibers</li><li>diff算法在哪个阶段执行</li><li>diff 就是在 遍历 - 打标记，知道resultingFirstChild 记录了新的fiber树</li></ol><p>// TODO
+// new children debug看一下
+// oldFiber debug看一下</p><h3 id=单节点--调和单节点>单节点 / 调和单节点</h3><p>对于object/number/string</p><p>先检查上次更新时fiber节点是否存在对应DOM - 即检查是不是首次渲染，渲染过才有DOM</p><p>如果不存在对应DOM，则直接新生成新节点返回</p><p>要是存在对应DOM，继续检查是否可复用 - key & type相同</p><p>可复用的话，将节点新生成一个副本返回</p><p>不可复用的话，将DOM标记为需要删除，再新生成节点返回</p><div class=highlight><pre style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-jsx data-lang=jsx>&lt;<span style=color:#f92672>div</span>&gt;<span style=color:#a6e22e>old</span>&lt;/<span style=color:#f92672>div</span>&gt;
+<span style=color:#75715e>// ⬇️ type &amp; key = null 没变; children改变，div 可复用，标记child需要更新
+</span><span style=color:#75715e></span>&lt;<span style=color:#f92672>div</span>&gt;<span style=color:#66d9ef>new</span>&lt;/<span style=color:#f92672>div</span>&gt;
+
+&lt;<span style=color:#f92672>div</span>&gt;<span style=color:#a6e22e>old</span>&lt;/<span style=color:#f92672>div</span>&gt;
+<span style=color:#75715e>// ⬇️ type改变 直接标记div为delection 新生成 p-&gt; new 返回
+</span><span style=color:#75715e></span>&lt;<span style=color:#f92672>p</span>&gt;<span style=color:#66d9ef>new</span>&lt;/<span style=color:#f92672>p</span>&gt;
+
+&lt;<span style=color:#f92672>div</span> <span style=color:#a6e22e>key</span><span style=color:#f92672>=</span><span style=color:#e6db74>&#34;old&#34;</span>&gt;<span style=color:#a6e22e>old</span>&lt;/<span style=color:#f92672>div</span>&gt;
+<span style=color:#75715e>// ⬇️ key 改变 不可复用
+</span><span style=color:#75715e></span>&lt;<span style=color:#f92672>div</span> <span style=color:#a6e22e>key</span><span style=color:#f92672>=</span><span style=color:#e6db74>&#34;new&#34;</span>&gt;<span style=color:#a6e22e>old</span>&lt;/<span style=color:#f92672>div</span>&gt;
+</code></pre></div><h3 id=多节点>多节点</h3><p>对于 array</p><p>对 old array & new array 进行两次遍历</p><p>因为一般在业务中更新的情况要比增删的次数多</p><p>所以先处理更新的情况</p><ol><li>对于 array只有更新的情况</li></ol><p><img src=img_5.png alt=img_5.png></p><p>一次遍历即可结束 给要改变的节点打上标记</p><ol start=2><li>第一次遍历 old array没有了 - new array有剩余 - 新增</li></ol><p><img src=img_6.png alt=img_6.png></p><p>第一次遍历标记完更新之后，继续遍历new array剩余部分，都标记为 placement</p><ol start=3><li>第一次遍历 new array没有了 - old array有剩余 - 删除</li></ol><p><img src=img_8.png alt=img_8.png></p><p>继续遍历old array，都标记为deletion</p><ol start=4><li>第一次没有遍历完 - new array 和 old array 都有剩余</li></ol><p><img src=img_9.png alt=img_9.png></p><p>将 剩余的old array 生成 key -> fiber node 对应表； 方便new array 遍历时找对应的</p><p>开始第二次循环，遍历剩余的 new array</p><p><img src=img_10.png alt=img_10.png></p><p>标记移动了、删除了、新增了的节点</p><p>hint：节点从后向前移消耗较大、因为标记不变的是1</p><p><img src=img_11.png alt=img_11.png></p><h3 id=这部分的代码在-react-reconciler>这部分的代码在 react-reconciler</h3><div class=highlight><pre style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-shell data-lang=shell>packages/react-reconciler/src/ReactChildFiber.new.js
+</code></pre></div><p>编译后集中到了 reactDOM.js</p><p>有两个方法 reconcileSinglePortal ？由ReactDOM.createPortal创建来的？ reconcileSingleElement</p><div class=highlight><pre style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-typescript data-lang=typescript><span style=color:#75715e>// 去掉了一些dev代码
+</span><span style=color:#75715e></span><span style=color:#66d9ef>function</span> <span style=color:#a6e22e>reconcileSingleElement</span>(
+    <span style=color:#a6e22e>returnFiber</span>: <span style=color:#66d9ef>Fiber</span>,
+    <span style=color:#a6e22e>currentFirstChild</span>: <span style=color:#66d9ef>Fiber</span> <span style=color:#f92672>|</span> <span style=color:#66d9ef>null</span>,
+    <span style=color:#a6e22e>element</span>: <span style=color:#66d9ef>ReactElement</span>,
+    <span style=color:#a6e22e>lanes</span>: <span style=color:#66d9ef>Lanes</span>,
+)<span style=color:#f92672>:</span> <span style=color:#a6e22e>Fiber</span> {
+    <span style=color:#66d9ef>const</span> <span style=color:#a6e22e>key</span> <span style=color:#f92672>=</span> <span style=color:#a6e22e>element</span>.<span style=color:#a6e22e>key</span>;
+    <span style=color:#66d9ef>let</span> <span style=color:#a6e22e>child</span> <span style=color:#f92672>=</span> <span style=color:#a6e22e>currentFirstChild</span>;
+    <span style=color:#75715e>// 判断是否存在对应DOM节点
+</span><span style=color:#75715e></span>    <span style=color:#66d9ef>while</span> (<span style=color:#a6e22e>child</span> <span style=color:#f92672>!==</span> <span style=color:#66d9ef>null</span>) {
+        <span style=color:#75715e>// 上一次更新存在DOM节点，接下来判断是否可复用
+</span><span style=color:#75715e></span>        <span style=color:#75715e>// 比较key是否相同
+</span><span style=color:#75715e></span>        <span style=color:#66d9ef>if</span> (<span style=color:#a6e22e>child</span>.<span style=color:#a6e22e>key</span> <span style=color:#f92672>===</span> <span style=color:#a6e22e>key</span>) {
+            <span style=color:#75715e>// key相同，接下来比较type是否相同
+</span><span style=color:#75715e></span>            <span style=color:#66d9ef>const</span> <span style=color:#a6e22e>elementType</span> <span style=color:#f92672>=</span> <span style=color:#a6e22e>element</span>.<span style=color:#66d9ef>type</span>;
+            <span style=color:#75715e>// TODO ??  React.Fragment这个类型的？
+</span><span style=color:#75715e></span>            <span style=color:#66d9ef>if</span> (<span style=color:#a6e22e>elementType</span> <span style=color:#f92672>===</span> <span style=color:#a6e22e>REACT_FRAGMENT_TYPE</span><span style=color:#75715e>/*0xeacb*/</span>) {
+                <span style=color:#66d9ef>if</span> (<span style=color:#a6e22e>child</span>.<span style=color:#a6e22e>tag</span> <span style=color:#f92672>===</span> <span style=color:#a6e22e>Fragment</span> <span style=color:#75715e>/* 这是一个常量 7*/</span>) {
+                    <span style=color:#a6e22e>deleteRemainingChildren</span>(<span style=color:#a6e22e>returnFiber</span>, <span style=color:#a6e22e>child</span>.<span style=color:#a6e22e>sibling</span>);
+                    <span style=color:#75715e>// 可以复用，返回复用的fiber
+</span><span style=color:#75715e></span>                    <span style=color:#66d9ef>const</span> <span style=color:#a6e22e>existing</span> <span style=color:#f92672>=</span> <span style=color:#a6e22e>useFiber</span>(<span style=color:#a6e22e>child</span>, <span style=color:#a6e22e>element</span>.<span style=color:#a6e22e>props</span>.<span style=color:#a6e22e>children</span>);
+                    <span style=color:#a6e22e>existing</span>.<span style=color:#66d9ef>return</span> <span style=color:#f92672>=</span> <span style=color:#a6e22e>returnFiber</span>;
+                    <span style=color:#66d9ef>return</span> <span style=color:#a6e22e>existing</span>;
+
+                }
+            } <span style=color:#66d9ef>else</span> {
+                <span style=color:#75715e>// type相同 可复用
+</span><span style=color:#75715e></span>                <span style=color:#66d9ef>if</span> (<span style=color:#a6e22e>child</span>.<span style=color:#a6e22e>elementType</span> <span style=color:#f92672>===</span> <span style=color:#a6e22e>elementType</span> <span style=color:#f92672>||</span>
+                    <span style=color:#75715e>// Lazy types
+</span><span style=color:#75715e></span>                    (<span style=color:#a6e22e>enableLazyElements</span> <span style=color:#f92672>&amp;&amp;</span>
+                        <span style=color:#66d9ef>typeof</span> <span style=color:#a6e22e>elementType</span> <span style=color:#f92672>===</span> <span style=color:#e6db74>&#39;object&#39;</span> <span style=color:#f92672>&amp;&amp;</span>
+                        <span style=color:#a6e22e>elementType</span> <span style=color:#f92672>!==</span> <span style=color:#66d9ef>null</span> <span style=color:#f92672>&amp;&amp;</span>
+                        <span style=color:#a6e22e>elementType</span>.<span style=color:#a6e22e>$$typeof</span> <span style=color:#f92672>===</span> <span style=color:#a6e22e>REACT_LAZY_TYPE</span> <span style=color:#f92672>&amp;&amp;</span>
+                        <span style=color:#a6e22e>resolveLazy</span>(<span style=color:#a6e22e>elementType</span>) <span style=color:#f92672>===</span> <span style=color:#a6e22e>child</span>.<span style=color:#66d9ef>type</span>)
+                ) {
+                    <span style=color:#a6e22e>deleteRemainingChildren</span>(<span style=color:#a6e22e>returnFiber</span>, <span style=color:#a6e22e>child</span>.<span style=color:#a6e22e>sibling</span>);
+                    <span style=color:#66d9ef>const</span> <span style=color:#a6e22e>existing</span> <span style=color:#f92672>=</span> <span style=color:#a6e22e>useFiber</span>(<span style=color:#a6e22e>child</span>, <span style=color:#a6e22e>element</span>.<span style=color:#a6e22e>props</span>);
+                    <span style=color:#a6e22e>existing</span>.<span style=color:#a6e22e>ref</span> <span style=color:#f92672>=</span> <span style=color:#a6e22e>coerceRef</span>(<span style=color:#a6e22e>returnFiber</span>, <span style=color:#a6e22e>child</span>, <span style=color:#a6e22e>element</span>);
+                    <span style=color:#a6e22e>existing</span>.<span style=color:#66d9ef>return</span> <span style=color:#f92672>=</span> <span style=color:#a6e22e>returnFiber</span>;
+                    <span style=color:#66d9ef>return</span> <span style=color:#a6e22e>existing</span>;
+
+                }
+                <span style=color:#75715e>// key相同但是type不同,将该fiber及其兄弟fiber标记为删除
+</span><span style=color:#75715e></span>                <span style=color:#75715e>// TODO 为啥兄弟也删？
+</span><span style=color:#75715e></span>                <span style=color:#75715e>/**
+</span><span style=color:#75715e>                 * // 当前页面显示的
+</span><span style=color:#75715e>                 ul &gt; li * 3
+</span><span style=color:#75715e>
+</span><span style=color:#75715e>                 // 这次需要更新的
+</span><span style=color:#75715e>                 ul &gt; p
+</span><span style=color:#75715e>                 p 为单一节点 type变了 要把旧的li全部删掉
+</span><span style=color:#75715e>                 */</span>
+                <span style=color:#a6e22e>deleteRemainingChildren</span>(<span style=color:#a6e22e>returnFiber</span>, <span style=color:#a6e22e>child</span>);
+            }
+        } <span style=color:#66d9ef>else</span> {
+            <span style=color:#75715e>// key不同，将该fiber标记为删除
+</span><span style=color:#75715e></span>            <span style=color:#a6e22e>deleteChild</span>(<span style=color:#a6e22e>returnFiber</span>, <span style=color:#a6e22e>child</span>);
+        }
+    }
+    <span style=color:#75715e>// 创建新的filber 并返回
+</span><span style=color:#75715e></span>    <span style=color:#66d9ef>if</span> (<span style=color:#a6e22e>element</span>.<span style=color:#66d9ef>type</span> <span style=color:#f92672>===</span> <span style=color:#a6e22e>REACT_FRAGMENT_TYPE</span>) {
+        <span style=color:#66d9ef>const</span> <span style=color:#a6e22e>created</span> <span style=color:#f92672>=</span> <span style=color:#a6e22e>createFiberFromFragment</span>(
+            <span style=color:#a6e22e>element</span>.<span style=color:#a6e22e>props</span>.<span style=color:#a6e22e>children</span>,
+            <span style=color:#a6e22e>returnFiber</span>.<span style=color:#a6e22e>mode</span>,
+            <span style=color:#a6e22e>lanes</span>,
+            <span style=color:#a6e22e>element</span>.<span style=color:#a6e22e>key</span>,
+        );
+        <span style=color:#a6e22e>created</span>.<span style=color:#66d9ef>return</span> <span style=color:#f92672>=</span> <span style=color:#a6e22e>returnFiber</span>;
+        <span style=color:#66d9ef>return</span> <span style=color:#a6e22e>created</span>;
+    } <span style=color:#66d9ef>else</span> {
+        <span style=color:#66d9ef>const</span> <span style=color:#a6e22e>created</span> <span style=color:#f92672>=</span> <span style=color:#a6e22e>createFiberFromElement</span>(<span style=color:#a6e22e>element</span>, <span style=color:#a6e22e>returnFiber</span>.<span style=color:#a6e22e>mode</span>, <span style=color:#a6e22e>lanes</span>);
+        <span style=color:#a6e22e>created</span>.<span style=color:#a6e22e>ref</span> <span style=color:#f92672>=</span> <span style=color:#a6e22e>coerceRef</span>(<span style=color:#a6e22e>returnFiber</span>, <span style=color:#a6e22e>currentFirstChild</span>, <span style=color:#a6e22e>element</span>);
+        <span style=color:#a6e22e>created</span>.<span style=color:#66d9ef>return</span> <span style=color:#f92672>=</span> <span style=color:#a6e22e>returnFiber</span>;
+        <span style=color:#66d9ef>return</span> <span style=color:#a6e22e>created</span>;
+    }
+}
+</code></pre></div><div class=highlight><pre style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-typescript data-lang=typescript>
+<span style=color:#66d9ef>function</span> <span style=color:#a6e22e>reconcileChildrenArray</span>(
+    <span style=color:#a6e22e>returnFiber</span>: <span style=color:#66d9ef>Fiber</span>,
+    <span style=color:#a6e22e>currentFirstChild</span>: <span style=color:#66d9ef>Fiber</span> <span style=color:#f92672>|</span> <span style=color:#66d9ef>null</span>,
+    <span style=color:#a6e22e>lanes</span>: <span style=color:#66d9ef>Lanes</span>,
+    <span style=color:#a6e22e>newChildren</span>: <span style=color:#66d9ef>Array</span>,
+)<span style=color:#f92672>:</span> <span style=color:#a6e22e>Fiber</span> <span style=color:#f92672>|</span> <span style=color:#66d9ef>null</span> {
+    <span style=color:#75715e>//newChildren中每个组件进行比较的是current fiber，同级的Fiber节点是由sibling指针链接形成的单链表
+</span><span style=color:#75715e></span>    <span style=color:#75715e>//不支持双指针遍历。
+</span><span style=color:#75715e></span>    <span style=color:#75715e>//newChildren[0]与fiber比较，newChildren[1]与fiber.sibling
+</span><span style=color:#75715e></span>    <span style=color:#66d9ef>let</span> <span style=color:#a6e22e>resultingFirstChild</span>: <span style=color:#66d9ef>Fiber</span> <span style=color:#f92672>|</span> <span style=color:#66d9ef>null</span> <span style=color:#f92672>=</span> <span style=color:#66d9ef>null</span>;
+    <span style=color:#66d9ef>let</span> <span style=color:#a6e22e>previousNewFiber</span>: <span style=color:#66d9ef>Fiber</span> <span style=color:#f92672>|</span> <span style=color:#66d9ef>null</span> <span style=color:#f92672>=</span> <span style=color:#66d9ef>null</span>;
+
+    <span style=color:#66d9ef>let</span> <span style=color:#a6e22e>oldFiber</span> <span style=color:#f92672>=</span> <span style=color:#a6e22e>currentFirstChild</span>;
+    <span style=color:#66d9ef>let</span> <span style=color:#a6e22e>lastPlacedIndex</span> <span style=color:#f92672>=</span> <span style=color:#ae81ff>0</span>;
+    <span style=color:#66d9ef>let</span> <span style=color:#a6e22e>newIdx</span> <span style=color:#f92672>=</span> <span style=color:#ae81ff>0</span>;
+    <span style=color:#66d9ef>let</span> <span style=color:#a6e22e>nextOldFiber</span> <span style=color:#f92672>=</span> <span style=color:#66d9ef>null</span>;
+    <span style=color:#75715e>// 第一次遍历
+</span><span style=color:#75715e></span>    <span style=color:#66d9ef>for</span> (; <span style=color:#a6e22e>oldFiber</span> <span style=color:#f92672>!==</span> <span style=color:#66d9ef>null</span> <span style=color:#f92672>&amp;&amp;</span> <span style=color:#a6e22e>newIdx</span> <span style=color:#f92672>&lt;</span> <span style=color:#a6e22e>newChildren</span>.<span style=color:#a6e22e>length</span>; <span style=color:#a6e22e>newIdx</span><span style=color:#f92672>++</span>) {
+        <span style=color:#75715e>// ------------ TODO 相同就比下一个兄弟？
+</span><span style=color:#75715e></span>        <span style=color:#66d9ef>if</span> (<span style=color:#a6e22e>oldFiber</span>.<span style=color:#a6e22e>index</span> <span style=color:#f92672>&gt;</span> <span style=color:#a6e22e>newIdx</span>) {
+            <span style=color:#a6e22e>nextOldFiber</span> <span style=color:#f92672>=</span> <span style=color:#a6e22e>oldFiber</span>;
+            <span style=color:#a6e22e>oldFiber</span> <span style=color:#f92672>=</span> <span style=color:#66d9ef>null</span>;
+        } <span style=color:#66d9ef>else</span> {
+            <span style=color:#a6e22e>nextOldFiber</span> <span style=color:#f92672>=</span> <span style=color:#a6e22e>oldFiber</span>.<span style=color:#a6e22e>sibling</span>;
+        }
+        <span style=color:#75715e>// ------------ 打上更新标记
+</span><span style=color:#75715e></span>        <span style=color:#66d9ef>const</span> <span style=color:#a6e22e>newFiber</span> <span style=color:#f92672>=</span> <span style=color:#a6e22e>updateSlot</span>(
+            <span style=color:#a6e22e>returnFiber</span>,
+            <span style=color:#a6e22e>oldFiber</span>,
+            <span style=color:#a6e22e>newChildren</span>[<span style=color:#a6e22e>newIdx</span>],
+            <span style=color:#a6e22e>lanes</span>,
+        );  
+        <span style=color:#75715e>// 有不同的了 跳出循环
+</span><span style=color:#75715e></span>        <span style=color:#66d9ef>if</span> (<span style=color:#a6e22e>newFiber</span> <span style=color:#f92672>===</span> <span style=color:#66d9ef>null</span>) {
+            <span style=color:#66d9ef>if</span> (<span style=color:#a6e22e>oldFiber</span> <span style=color:#f92672>===</span> <span style=color:#66d9ef>null</span>) {
+                <span style=color:#a6e22e>oldFiber</span> <span style=color:#f92672>=</span> <span style=color:#a6e22e>nextOldFiber</span>;
+            }
+            <span style=color:#66d9ef>break</span>;
+        }
+        <span style=color:#75715e>// 处理副作用
+</span><span style=color:#75715e></span>        <span style=color:#66d9ef>if</span> (<span style=color:#a6e22e>shouldTrackSideEffects</span>) {
+            <span style=color:#75715e>// oldFiber有东西 不是null newFiber没了，old剩余部分标记删除
+</span><span style=color:#75715e></span>            <span style=color:#66d9ef>if</span> (<span style=color:#a6e22e>oldFiber</span> <span style=color:#f92672>&amp;&amp;</span> <span style=color:#a6e22e>newFiber</span>.<span style=color:#a6e22e>alternate</span> <span style=color:#f92672>===</span> <span style=color:#66d9ef>null</span>) {
+                <span style=color:#a6e22e>deleteChild</span>(<span style=color:#a6e22e>returnFiber</span>, <span style=color:#a6e22e>oldFiber</span>);
+            }
+        }
+        <span style=color:#75715e>// 打个标记？？  placement 是要新增的
+</span><span style=color:#75715e></span>        <span style=color:#a6e22e>lastPlacedIndex</span> <span style=color:#f92672>=</span> <span style=color:#a6e22e>placeChild</span>(<span style=color:#a6e22e>newFiber</span>, <span style=color:#a6e22e>lastPlacedIndex</span>, <span style=color:#a6e22e>newIdx</span>);
+
+        <span style=color:#75715e>// -------TODO ??
+</span><span style=color:#75715e></span>        <span style=color:#66d9ef>if</span> (<span style=color:#a6e22e>previousNewFiber</span> <span style=color:#f92672>===</span> <span style=color:#66d9ef>null</span>) {
+            <span style=color:#a6e22e>resultingFirstChild</span> <span style=color:#f92672>=</span> <span style=color:#a6e22e>newFiber</span>;
+        } <span style=color:#66d9ef>else</span> {
+            <span style=color:#a6e22e>previousNewFiber</span>.<span style=color:#a6e22e>sibling</span> <span style=color:#f92672>=</span> <span style=color:#a6e22e>newFiber</span>;
+        }
+        <span style=color:#a6e22e>previousNewFiber</span> <span style=color:#f92672>=</span> <span style=color:#a6e22e>newFiber</span>;
+        <span style=color:#a6e22e>oldFiber</span> <span style=color:#f92672>=</span> <span style=color:#a6e22e>nextOldFiber</span>;
+        <span style=color:#75715e>//----⬆️ 第一次遍历结束
+</span><span style=color:#75715e></span>    }
+    <span style=color:#75715e>// newChildren遍历完了 // 删除剩下的兄弟&amp;children
+</span><span style=color:#75715e></span>    <span style=color:#66d9ef>if</span> (<span style=color:#a6e22e>newIdx</span> <span style=color:#f92672>===</span> <span style=color:#a6e22e>newChildren</span>.<span style=color:#a6e22e>length</span>) {
+        <span style=color:#a6e22e>deleteRemainingChildren</span>(<span style=color:#a6e22e>returnFiber</span>, <span style=color:#a6e22e>oldFiber</span>);
+        <span style=color:#75715e>// 删除完毕 直接 return
+</span><span style=color:#75715e></span>        <span style=color:#66d9ef>return</span> <span style=color:#a6e22e>resultingFirstChild</span>;
+    }
+    <span style=color:#75715e>//oldFiber 遍历完了 new 的还有
+</span><span style=color:#75715e></span>    <span style=color:#66d9ef>if</span> (<span style=color:#a6e22e>oldFiber</span> <span style=color:#f92672>===</span> <span style=color:#66d9ef>null</span>) {
+        <span style=color:#75715e>// 继续遍历new的剩余部分
+</span><span style=color:#75715e></span>        <span style=color:#66d9ef>for</span> (; <span style=color:#a6e22e>newIdx</span> <span style=color:#f92672>&lt;</span> <span style=color:#a6e22e>newChildren</span>.<span style=color:#a6e22e>length</span>; <span style=color:#a6e22e>newIdx</span><span style=color:#f92672>++</span>) {
+            <span style=color:#75715e>// 创建新的fiber节点
+</span><span style=color:#75715e></span>            <span style=color:#66d9ef>const</span> <span style=color:#a6e22e>newFiber</span> <span style=color:#f92672>=</span> <span style=color:#a6e22e>createChild</span>(<span style=color:#a6e22e>returnFiber</span>, <span style=color:#a6e22e>newChildren</span>[<span style=color:#a6e22e>newIdx</span>], <span style=color:#a6e22e>lanes</span>);
+            <span style=color:#66d9ef>if</span> (<span style=color:#a6e22e>newFiber</span> <span style=color:#f92672>===</span> <span style=color:#66d9ef>null</span>) {
+                <span style=color:#66d9ef>continue</span>;
+            }
+            <span style=color:#a6e22e>lastPlacedIndex</span> <span style=color:#f92672>=</span> <span style=color:#a6e22e>placeChild</span>(<span style=color:#a6e22e>newFiber</span>, <span style=color:#a6e22e>lastPlacedIndex</span>, <span style=color:#a6e22e>newIdx</span>);
+            <span style=color:#66d9ef>if</span> (<span style=color:#a6e22e>previousNewFiber</span> <span style=color:#f92672>===</span> <span style=color:#66d9ef>null</span>) {
+                <span style=color:#75715e>// TODO: Move out of the loop. This only happens for the first run.
+</span><span style=color:#75715e></span>                <span style=color:#a6e22e>resultingFirstChild</span> <span style=color:#f92672>=</span> <span style=color:#a6e22e>newFiber</span>;
+            } <span style=color:#66d9ef>else</span> {
+                <span style=color:#a6e22e>previousNewFiber</span>.<span style=color:#a6e22e>sibling</span> <span style=color:#f92672>=</span> <span style=color:#a6e22e>newFiber</span>;
+            }
+            <span style=color:#a6e22e>previousNewFiber</span> <span style=color:#f92672>=</span> <span style=color:#a6e22e>newFiber</span>;
+        }
+        <span style=color:#75715e>// new array 协调完毕 直接return
+</span><span style=color:#75715e></span>        <span style=color:#66d9ef>return</span> <span style=color:#a6e22e>resultingFirstChild</span>;
+    }
+
+    <span style=color:#75715e>// 第二次遍历开始
+</span><span style=color:#75715e></span>    <span style=color:#75715e>// 剩余old array
+</span><span style=color:#75715e></span>    <span style=color:#75715e>// 将所有子级添加到键映射以进行快速查找
+</span><span style=color:#75715e></span>    <span style=color:#66d9ef>const</span> <span style=color:#a6e22e>existingChildren</span> <span style=color:#f92672>=</span> <span style=color:#a6e22e>mapRemainingChildren</span>(<span style=color:#a6e22e>returnFiber</span>, <span style=color:#a6e22e>oldFiber</span>);
+
+    <span style=color:#66d9ef>for</span> (; <span style=color:#a6e22e>newIdx</span> <span style=color:#f92672>&lt;</span> <span style=color:#a6e22e>newChildren</span>.<span style=color:#a6e22e>length</span>; <span style=color:#a6e22e>newIdx</span><span style=color:#f92672>++</span>) {
+        <span style=color:#75715e>// 生成key-fiber对应表
+</span><span style=color:#75715e></span>        <span style=color:#66d9ef>const</span> <span style=color:#a6e22e>newFiber</span> <span style=color:#f92672>=</span> <span style=color:#a6e22e>updateFromMap</span>(
+            <span style=color:#a6e22e>existingChildren</span>,
+            <span style=color:#a6e22e>returnFiber</span>,
+            <span style=color:#a6e22e>newIdx</span>,
+            <span style=color:#a6e22e>newChildren</span>[<span style=color:#a6e22e>newIdx</span>],
+            <span style=color:#a6e22e>lanes</span>,
+        );
+        <span style=color:#66d9ef>if</span> (<span style=color:#a6e22e>newFiber</span> <span style=color:#f92672>!==</span> <span style=color:#66d9ef>null</span>) {
+            <span style=color:#66d9ef>if</span> (<span style=color:#a6e22e>newFiber</span>.<span style=color:#a6e22e>alternate</span> <span style=color:#f92672>!==</span> <span style=color:#66d9ef>null</span>) {
+                <span style=color:#a6e22e>existingChildren</span>.<span style=color:#66d9ef>delete</span>(
+                    <span style=color:#a6e22e>newFiber</span>.<span style=color:#a6e22e>key</span> <span style=color:#f92672>===</span> <span style=color:#66d9ef>null</span> <span style=color:#f92672>?</span> <span style=color:#a6e22e>newIdx</span> : <span style=color:#66d9ef>newFiber.key</span>,
+                );
+            }
+        }
+    }
+    <span style=color:#75715e>// 剩余old array打上删除标记
+</span><span style=color:#75715e></span>    <span style=color:#a6e22e>existingChildren</span>.<span style=color:#a6e22e>forEach</span>(<span style=color:#a6e22e>child</span> <span style=color:#f92672>=&gt;</span> <span style=color:#a6e22e>deleteChild</span>(<span style=color:#a6e22e>returnFiber</span>, <span style=color:#a6e22e>child</span>));
+    <span style=color:#66d9ef>return</span> <span style=color:#a6e22e>resultingFirstChild</span>;
+}
+</code></pre></div></div></article></main><footer class="w-full text-center p-4 text-xs text-gray-400">copyright © 2021 - VISIONARY · All rights reserved</footer></body></html>
