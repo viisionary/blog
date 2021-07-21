@@ -1,6 +1,72 @@
-<!doctype html><html lang=en-us><head><meta charset=utf-8><meta name=viewport content="width=device-width,initial-scale=1"><title>js 代码规范 - clean code - VISIONARY BLOG</title><meta name=generator content="Hugo 0.85.0"><link rel=stylesheet href=https://blog.visionary.top/css/styles.min.164cbb1508747f243f6df5c8ed21c22e9e62a67f149d1e07b8e1982526aa384c.css integrity=sha256-Fky7FQh0fyQ/bfXI7SHCLp5ipn8UnR4HuOGYJSaqOEw=><script>window.matchMedia("(prefers-color-scheme: dark)").matches?document.documentElement.classList.add("dark"):document.documentElement.classList.remove("dark")</script></head><body class="flex flex-col min-h-screen dark:bg-gray-900 dark:text-gray-100 transition-colors duration-500"><header class="w-full px-4 pt-4 max-w-5xl mx-auto"><nav class="flex items-center justify-between flex-wrap"><div class="flex gap-2 items-center"><a href=mailto:min_0610@icloud.com aria-label=EMail><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentcolor" fill="none" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><circle cx="12" cy="12" r="4"/><path d="M16 12v1.5a2.5 2.5.0 005 0V12a9 9 0 10-5.5 8.28"/></svg></a><a href=https://blog.visionary.top/ class="flex items-center font-bold">VISIONARY BLOG</a></div><ul id=nav-menu class="flex w-auto mt-0 space-x-2"><li><a href=https://blog.visionary.top/about/ class="hover:text-blue-800 dark:hover:text-blue-300">About Me</a></li><li><a href=https://blog.visionary.top/blog/ class="hover:text-blue-800 dark:hover:text-blue-300">Blogs</a></li></ul></nav></header><main class="flex-1 mx-4 md:mx-12 lg:mx-24 mt-8 sm:mt-16"><article class="mb-16 max-w-5xl mx-auto px-4"><h1>js 代码规范 - clean code</h1><ul></ul><div class=post-footer><div class=info><span class=separator><a class=category href=/categories/%E4%BB%A3%E7%A0%81%E8%A7%84%E8%8C%83/>代码规范</a></span></div></div><div class=post-footer></div><aside class=content-aside-bar><nav id=TableOfContents><ul><li><a href=#变量名>变量名</a></li><li><a href=#function>function</a></li><li><a href=#类>类</a><ul><li><a href=#solid>solid</a></li></ul></li><li><a href=#并发>并发</a></li><li><a href=#error-handling>error handling</a></li></ul></nav></aside><div class="prose lg:prose-lg prose-blue dark:prose-dark"><p>编写代码应该遵循的原则</p><h2 id=变量名>变量名</h2><blockquote><p>tips
+<!doctype html><html lang=en-us>
+<head>
+<meta charset=utf-8>
+<meta name=viewport content="width=device-width,initial-scale=1">
+<title>
+js 代码规范 - clean code - VISIONARY BLOG
+</title><meta name=generator content="Hugo 0.86.0"><link rel=stylesheet href=https://blog.visionary.top/css/styles.min.164cbb1508747f243f6df5c8ed21c22e9e62a67f149d1e07b8e1982526aa384c.css integrity=sha256-Fky7FQh0fyQ/bfXI7SHCLp5ipn8UnR4HuOGYJSaqOEw=>
+<script>window.matchMedia("(prefers-color-scheme: dark)").matches?document.documentElement.classList.add("dark"):document.documentElement.classList.remove("dark")</script>
+</head>
+<body class="flex flex-col min-h-screen dark:bg-gray-900 dark:text-gray-100 transition-colors duration-500"><header class="w-full px-4 pt-4 max-w-5xl mx-auto">
+<nav class="flex items-center justify-between flex-wrap">
+<div class="flex gap-2 items-center">
+<a href=mailto:min_0610@icloud.com aria-label=EMail><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentcolor" fill="none" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><circle cx="12" cy="12" r="4"/><path d="M16 12v1.5a2.5 2.5.0 005 0V12a9 9 0 10-5.5 8.28"/></svg>
+</a>
+<a href=https://blog.visionary.top/ class="flex items-center font-bold">
+VISIONARY BLOG
+</a>
+</div>
+<ul id=nav-menu class="flex w-auto mt-0 space-x-2">
+<li>
+<a href=https://blog.visionary.top/about/ class="hover:text-blue-800 dark:hover:text-blue-300">About Me</a>
+</li>
+<li>
+<a href=https://blog.visionary.top/blog/ class="hover:text-blue-800 dark:hover:text-blue-300">Blogs</a>
+</li>
+</ul>
+</nav>
+</header>
+<main class="flex-1 mx-4 md:mx-12 lg:mx-24 mt-8 sm:mt-16">
+<article class="mb-16 max-w-5xl mx-auto px-4">
+<h1>js 代码规范 - clean code</h1>
+<ul>
+</ul>
+<div class=post-footer>
+<div class=info>
+<span class=separator><a class=category href=/categories/%E4%BB%A3%E7%A0%81%E8%A7%84%E8%8C%83/>代码规范</a></span>
+</div>
+</div>
+<div class=post-footer>
+</div>
+<aside class=content-aside-bar>
+<nav id=TableOfContents>
+<ul>
+<li><a href=#变量名>变量名</a></li>
+<li><a href=#function>function</a></li>
+<li><a href=#类>类</a>
+<ul>
+<li><a href=#solid>solid</a></li>
+</ul>
+</li>
+<li><a href=#并发>并发</a></li>
+<li><a href=#error-handling>error handling</a></li>
+</ul>
+</nav>
+</aside>
+<div class="prose lg:prose-lg prose-blue dark:prose-dark">
+<p>编写代码应该遵循的原则</p>
+<h2 id=变量名>变量名</h2>
+<blockquote>
+<p>tips
 在idea/web storm上可以开启拼写检查
-下载 Translation插件可以实现一键翻译/转换大小写/驼峰&lt;=>snack转换</p></blockquote><ol><li>使用语义话的变量名</li><li>常量使用大写去声明</li><li>使用可解释的变量名</li></ol><div class=highlight><pre style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-javascript data-lang=javascript><span style=color:#75715e>// ❌
+下载 Translation插件可以实现一键翻译/转换大小写/驼峰&lt;=>snack转换</p>
+</blockquote>
+<ol>
+<li>使用语义话的变量名</li>
+<li>常量使用大写去声明</li>
+<li>使用可解释的变量名</li>
+</ol>
+<div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-javascript data-lang=javascript><span style=color:#75715e>// ❌
 </span><span style=color:#75715e></span><span style=color:#66d9ef>const</span> <span style=color:#a6e22e>address</span> <span style=color:#f92672>=</span> <span style=color:#e6db74>&#34;One Infinite Loop, Cupertino 95014&#34;</span>;
 <span style=color:#66d9ef>const</span> <span style=color:#a6e22e>cityZipCodeRegex</span> <span style=color:#f92672>=</span> <span style=color:#e6db74>/^[^,\\]+[,\\\s]+(.+?)\s*(\d{5})?$/</span>;
 <span style=color:#a6e22e>saveCityZipCode</span>(
@@ -12,12 +78,26 @@
 <span style=color:#66d9ef>const</span> <span style=color:#a6e22e>cityZipCodeRegex</span> <span style=color:#f92672>=</span> <span style=color:#e6db74>/^[^,\\]+[,\\\s]+(.+?)\s*(\d{5})?$/</span>;
 <span style=color:#66d9ef>const</span> [<span style=color:#ae81ff>_</span>, <span style=color:#a6e22e>city</span>, <span style=color:#a6e22e>zipCode</span>] <span style=color:#f92672>=</span> <span style=color:#a6e22e>address</span>.<span style=color:#a6e22e>match</span>(<span style=color:#a6e22e>cityZipCodeRegex</span>) <span style=color:#f92672>||</span> [];
 <span style=color:#a6e22e>saveCityZipCode</span>(<span style=color:#a6e22e>city</span>, <span style=color:#a6e22e>zipCode</span>);
-</code></pre></div><ol start=4><li>避免使用模糊不清含义的变量名</li></ol><h2 id=function>function</h2><ol><li>不用添加不必要的context/上下文已经提供了的话，内部就不要重复写了</li></ol><div class=highlight><pre style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-javascript data-lang=javascript><span style=color:#75715e>// Bad example
+</code></pre></div><ol start=4>
+<li>避免使用模糊不清含义的变量名</li>
+</ol>
+<h2 id=function>function</h2>
+<ol>
+<li>不用添加不必要的context/上下文已经提供了的话，内部就不要重复写了</li>
+</ol>
+<div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-javascript data-lang=javascript><span style=color:#75715e>// Bad example
 </span><span style=color:#75715e></span><span style=color:#66d9ef>function</span> <span style=color:#a6e22e>paintCar</span>(<span style=color:#a6e22e>car</span>, <span style=color:#a6e22e>color</span>) {
 	<span style=color:#a6e22e>car</span>.<span style=color:#a6e22e>carColor</span> <span style=color:#f92672>=</span> <span style=color:#a6e22e>color</span>; <span style=color:#75715e>// car.color 更好
 </span><span style=color:#75715e></span>}
-</code></pre></div><ol start=2><li>参数内容较多时，最好使用es6的解构语法
-3.解构、一个function应该只做一件事情</li><li>函数方法应该表述清楚该function的作用</li><li>函数应该只有一个抽象级别</li><li>不要写重复的代码</li><li>使用Object.Assign设置对象</li></ol><div class=highlight><pre style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-javascript data-lang=javascript><span style=color:#75715e>// good example
+</code></pre></div><ol start=2>
+<li>参数内容较多时，最好使用es6的解构语法
+3.解构、一个function应该只做一件事情</li>
+<li>函数方法应该表述清楚该function的作用</li>
+<li>函数应该只有一个抽象级别</li>
+<li>不要写重复的代码</li>
+<li>使用Object.Assign设置对象</li>
+</ol>
+<div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-javascript data-lang=javascript><span style=color:#75715e>// good example
 </span><span style=color:#75715e></span><span style=color:#66d9ef>const</span> <span style=color:#a6e22e>menuConfig</span> <span style=color:#f92672>=</span> {
 	<span style=color:#a6e22e>title</span><span style=color:#f92672>:</span> <span style=color:#e6db74>&#34;Order&#34;</span>,
 	<span style=color:#75715e>// User did not include &#39;body&#39; key
@@ -42,7 +122,8 @@
 
 <span style=color:#a6e22e>createMenu</span>(<span style=color:#a6e22e>menuConfig</span>);
 </code></pre></div><p>8.不要将标志用作函数参数
-一个方法做一件事原则</p><div class=highlight><pre style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-javascript data-lang=javascript><span style=color:#75715e>//Bad:
+一个方法做一件事原则</p>
+<div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-javascript data-lang=javascript><span style=color:#75715e>//Bad:
 </span><span style=color:#75715e></span>
 <span style=color:#66d9ef>function</span> <span style=color:#a6e22e>createFile</span>(<span style=color:#a6e22e>name</span>, <span style=color:#a6e22e>temp</span>) {
   <span style=color:#66d9ef>if</span> (<span style=color:#a6e22e>temp</span>) {
@@ -60,7 +141,10 @@
 <span style=color:#66d9ef>function</span> <span style=color:#a6e22e>createTempFile</span>(<span style=color:#a6e22e>name</span>) {
   <span style=color:#a6e22e>createFile</span>(<span style=color:#e6db74>`./temp/</span><span style=color:#e6db74>${</span><span style=color:#a6e22e>name</span><span style=color:#e6db74>}</span><span style=color:#e6db74>`</span>);
 }
-</code></pre></div><ol start=9><li>避免副作用 - 避免在函数内部操作全局变量</li></ol><div class=highlight><pre style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-javascript data-lang=javascript><span style=color:#75715e>// Bad:
+</code></pre></div><ol start=9>
+<li>避免副作用 - 避免在函数内部操作全局变量</li>
+</ol>
+<div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-javascript data-lang=javascript><span style=color:#75715e>// Bad:
 </span><span style=color:#75715e></span>
 <span style=color:#75715e>// Global variable referenced by following function.
 </span><span style=color:#75715e>// If we had another function that used this name, now it&#39;d be an array and it could break it.
@@ -84,7 +168,8 @@
 
 <span style=color:#a6e22e>console</span>.<span style=color:#a6e22e>log</span>(<span style=color:#a6e22e>name</span>); <span style=color:#75715e>// &#39;Ryan McDermott&#39;;
 </span></code></pre></div><p>9:避免副作用 - 避免某个操作改变输入的原数组【多处使用的时候】
-重新克隆一个对象可能回对性能有所影响，但并不是大问题、</p><div class=highlight><pre style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-javascript data-lang=javascript><span style=color:#75715e>// Bad:
+重新克隆一个对象可能回对性能有所影响，但并不是大问题、</p>
+<div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-javascript data-lang=javascript><span style=color:#75715e>// Bad:
 </span><span style=color:#75715e></span>
 	<span style=color:#66d9ef>const</span> <span style=color:#a6e22e>addItemToCart</span> <span style=color:#f92672>=</span> (<span style=color:#a6e22e>cart</span>, <span style=color:#a6e22e>item</span>) =&gt; {
 		<span style=color:#a6e22e>cart</span>.<span style=color:#a6e22e>push</span>({ <span style=color:#a6e22e>item</span>, <span style=color:#a6e22e>date</span><span style=color:#f92672>:</span> Date.<span style=color:#a6e22e>now</span>() });
@@ -94,26 +179,55 @@
 	<span style=color:#66d9ef>const</span> <span style=color:#a6e22e>addItemToCart</span> <span style=color:#f92672>=</span> (<span style=color:#a6e22e>cart</span>, <span style=color:#a6e22e>item</span>) =&gt; {
 		<span style=color:#66d9ef>return</span> [...<span style=color:#a6e22e>cart</span>, { <span style=color:#a6e22e>item</span>, <span style=color:#a6e22e>date</span><span style=color:#f92672>:</span> Date.<span style=color:#a6e22e>now</span>() }];
 	};
-</code></pre></div><ol start=10><li>避免污染global的方法
-如果需要扩充、使用继承代替</li></ol><div class=highlight><pre style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-javascript data-lang=javascript><span style=color:#66d9ef>class</span> <span style=color:#a6e22e>SuperArray</span> <span style=color:#66d9ef>extends</span> Array {
+</code></pre></div><ol start=10>
+<li>避免污染global的方法
+如果需要扩充、使用继承代替</li>
+</ol>
+<div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-javascript data-lang=javascript><span style=color:#66d9ef>class</span> <span style=color:#a6e22e>SuperArray</span> <span style=color:#66d9ef>extends</span> Array {
   <span style=color:#a6e22e>diff</span>(<span style=color:#a6e22e>comparisonArray</span>) {
     <span style=color:#66d9ef>const</span> <span style=color:#a6e22e>hash</span> <span style=color:#f92672>=</span> <span style=color:#66d9ef>new</span> <span style=color:#a6e22e>Set</span>(<span style=color:#a6e22e>comparisonArray</span>);
     <span style=color:#66d9ef>return</span> <span style=color:#66d9ef>this</span>.<span style=color:#a6e22e>filter</span>(<span style=color:#a6e22e>elem</span> =&gt; <span style=color:#f92672>!</span><span style=color:#a6e22e>hash</span>.<span style=color:#a6e22e>has</span>(<span style=color:#a6e22e>elem</span>));
   }
 }
-</code></pre></div><ol start=11><li>封装条件语句/避免使用否定的条件/减少使用switch【使用getSomething/obj[something]代替】</li></ol><div class=highlight><pre style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-javascript data-lang=javascript><span style=color:#66d9ef>function</span> <span style=color:#a6e22e>shouldShowSpinner</span>(<span style=color:#a6e22e>fsm</span>, <span style=color:#a6e22e>listNode</span>) {
+</code></pre></div><ol start=11>
+<li>封装条件语句/避免使用否定的条件/减少使用switch【使用getSomething/obj[something]代替】</li>
+</ol>
+<div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-javascript data-lang=javascript><span style=color:#66d9ef>function</span> <span style=color:#a6e22e>shouldShowSpinner</span>(<span style=color:#a6e22e>fsm</span>, <span style=color:#a6e22e>listNode</span>) {
   <span style=color:#66d9ef>return</span> <span style=color:#a6e22e>fsm</span>.<span style=color:#a6e22e>state</span> <span style=color:#f92672>===</span> <span style=color:#e6db74>&#34;fetching&#34;</span> <span style=color:#f92672>&amp;&amp;</span> <span style=color:#a6e22e>isEmpty</span>(<span style=color:#a6e22e>listNode</span>);
 }
 
 <span style=color:#66d9ef>if</span> (<span style=color:#a6e22e>shouldShowSpinner</span>(<span style=color:#a6e22e>fsmInstance</span>, <span style=color:#a6e22e>listNodeInstance</span>)) {
   <span style=color:#75715e>// ...
 </span><span style=color:#75715e></span>}
-</code></pre></div><ol start=12><li>避免使用typeof val1 === &ldquo;number&rdquo; 等类型检查</li></ol><h2 id=类>类</h2><ol><li>优先使用es6的class</li><li>尽量编写链式调用</li><li>组合优于继承 【语义化方面】</li></ol><h3 id=solid>solid</h3><p>1.单责任原则（SRP）- 类处理的东西【对象】也应该是单一的
+</code></pre></div><ol start=12>
+<li>避免使用typeof val1 === &ldquo;number&rdquo; 等类型检查</li>
+</ol>
+<h2 id=类>类</h2>
+<ol>
+<li>优先使用es6的class</li>
+<li>尽量编写链式调用</li>
+<li>组合优于继承 【语义化方面】</li>
+</ol>
+<h3 id=solid>solid</h3>
+<p>1.单责任原则（SRP）- 类处理的东西【对象】也应该是单一的
 2. 开放/关闭原理（OCP）- 应该允许用户在不更改现有代码的情况下添加新功能
 3. LISKOV替代原理（LSP）- 子类可以使用父类定义的方法且不改变其属性【即正确的封装父类】
 4. 接口分离原则（ISP）- 不使用某个类中没有声明的属性
 5。依赖反演原则（DIP）
 高级模块不应依赖于低级模块。两者都应该取决于抽象。
-抽象不应依赖于细节。细节应该取决于抽象。</p><p>比如： 声明了一个class 内部有个属性是从另一个方法new来。在这个class内部的一个方法内 调用了new来的对象的方法
-这样在使用new来的对象的时候就会混乱</p><pre><code>更好的方法是，将要使用的方法的类封装，作为构造函数的参数传入、使之可以作为新类的一部分去调用，比较清晰条理
-</code></pre><h2 id=并发>并发</h2><p>使用promise，而不是回调</p><h2 id=error-handling>error handling</h2><p>使用try catch</p></div></article></main><footer class="w-full text-center p-4 text-xs text-gray-400">copyright © 2021 - VISIONARY · All rights reserved</footer></body></html>
+抽象不应依赖于细节。细节应该取决于抽象。</p>
+<p>比如： 声明了一个class 内部有个属性是从另一个方法new来。在这个class内部的一个方法内 调用了new来的对象的方法
+这样在使用new来的对象的时候就会混乱</p>
+<pre><code>更好的方法是，将要使用的方法的类封装，作为构造函数的参数传入、使之可以作为新类的一部分去调用，比较清晰条理
+</code></pre>
+<h2 id=并发>并发</h2>
+<p>使用promise，而不是回调</p>
+<h2 id=error-handling>error handling</h2>
+<p>使用try catch</p>
+</div>
+</article>
+</main><footer class="w-full text-center p-4 text-xs text-gray-400">
+copyright © 2021 - VISIONARY · All rights reserved
+</footer>
+</body>
+</html>

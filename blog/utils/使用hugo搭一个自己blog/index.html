@@ -1,18 +1,106 @@
-<!doctype html><html lang=en-us><head><meta charset=utf-8><meta name=viewport content="width=device-width,initial-scale=1"><title>使用Hugo搭一个自己Blog - VISIONARY BLOG</title><meta name=description content="Sample article showcasing basic Markdown syntax and formatting for HTML elements."><meta name=generator content="Hugo 0.85.0"><link rel=stylesheet href=https://blog.visionary.top/css/styles.min.164cbb1508747f243f6df5c8ed21c22e9e62a67f149d1e07b8e1982526aa384c.css integrity=sha256-Fky7FQh0fyQ/bfXI7SHCLp5ipn8UnR4HuOGYJSaqOEw=><script>window.matchMedia("(prefers-color-scheme: dark)").matches?document.documentElement.classList.add("dark"):document.documentElement.classList.remove("dark")</script></head><body class="flex flex-col min-h-screen dark:bg-gray-900 dark:text-gray-100 transition-colors duration-500"><header class="w-full px-4 pt-4 max-w-5xl mx-auto"><nav class="flex items-center justify-between flex-wrap"><div class="flex gap-2 items-center"><a href=mailto:min_0610@icloud.com aria-label=EMail><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentcolor" fill="none" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><circle cx="12" cy="12" r="4"/><path d="M16 12v1.5a2.5 2.5.0 005 0V12a9 9 0 10-5.5 8.28"/></svg></a><a href=https://blog.visionary.top/ class="flex items-center font-bold">VISIONARY BLOG</a></div><ul id=nav-menu class="flex w-auto mt-0 space-x-2"><li><a href=https://blog.visionary.top/about/ class="hover:text-blue-800 dark:hover:text-blue-300">About Me</a></li><li><a href=https://blog.visionary.top/blog/ class="hover:text-blue-800 dark:hover:text-blue-300">Blogs</a></li></ul></nav></header><main class="flex-1 mx-4 md:mx-12 lg:mx-24 mt-8 sm:mt-16"><article class="mb-16 max-w-5xl mx-auto px-4"><h1>使用Hugo搭一个自己Blog</h1><ul></ul><div class=post-footer><div class=info><span class=separator><a class=category href=/categories/%E6%9E%B6%E6%9E%84/>架构</a><a class=category href=/categories/%E5%BE%AE%E5%89%8D%E7%AB%AF/>微前端</a></span>
-<span class=separator><a class=tag href=/tags/%E5%89%8D%E7%AB%AF%E5%AE%89%E5%85%A8/>前端安全</a></span></div></div><div class=post-footer></div><aside class=content-aside-bar><nav id=TableOfContents><ul><li><a href=#安装>安装</a></li><li><a href=#推一个文章>推一个文章</a></li><li><a href=#启动>启动</a></li><li><a href=#配置主题>配置主题</a></li><li><a href=#集成到githubio页面中>集成到GitHub.io页面中</a></li><li><a href=#gh-pagesyml>gh-pages.yml</a><ul><li><a href=#配置domain>配置domain</a></li></ul></li></ul></nav></aside><div class="prose lg:prose-lg prose-blue dark:prose-dark"><p>xss & csrf 都是窃token cookie之类的敏感信息</p><p><a href=https://en.wikipedia.org/wiki/Cross-site_request_forgery>Cross-site request forgery - Wikipedia</a></p><p>比较好看好搭的blog，有很多极简风，响应式做的好的主题</p><p><a href=https://gohugo.io/getting-started/quick-start/>Quick Start</a></p><h2 id=安装>安装</h2><p>最简单的方法</p><div class=highlight><pre style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-bash data-lang=bash>brew install hugo
-</code></pre></div><p>但是go被墙容易装失败</p><p>可以去go官网下载安装包安装go</p><p>再给go配置国内的代理</p><div class=highlight><pre style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-bash data-lang=bash>git clone https://github.com/gohugoio/hugo.git
+<!doctype html><html lang=en-us>
+<head>
+<meta charset=utf-8>
+<meta name=viewport content="width=device-width,initial-scale=1">
+<title>
+使用Hugo搭一个自己Blog - VISIONARY BLOG
+</title>
+<meta name=description content="Sample article showcasing basic Markdown syntax and formatting for HTML elements.">
+<meta name=generator content="Hugo 0.86.0"><link rel=stylesheet href=https://blog.visionary.top/css/styles.min.164cbb1508747f243f6df5c8ed21c22e9e62a67f149d1e07b8e1982526aa384c.css integrity=sha256-Fky7FQh0fyQ/bfXI7SHCLp5ipn8UnR4HuOGYJSaqOEw=>
+<script>window.matchMedia("(prefers-color-scheme: dark)").matches?document.documentElement.classList.add("dark"):document.documentElement.classList.remove("dark")</script>
+</head>
+<body class="flex flex-col min-h-screen dark:bg-gray-900 dark:text-gray-100 transition-colors duration-500"><header class="w-full px-4 pt-4 max-w-5xl mx-auto">
+<nav class="flex items-center justify-between flex-wrap">
+<div class="flex gap-2 items-center">
+<a href=mailto:min_0610@icloud.com aria-label=EMail><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentcolor" fill="none" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><circle cx="12" cy="12" r="4"/><path d="M16 12v1.5a2.5 2.5.0 005 0V12a9 9 0 10-5.5 8.28"/></svg>
+</a>
+<a href=https://blog.visionary.top/ class="flex items-center font-bold">
+VISIONARY BLOG
+</a>
+</div>
+<ul id=nav-menu class="flex w-auto mt-0 space-x-2">
+<li>
+<a href=https://blog.visionary.top/about/ class="hover:text-blue-800 dark:hover:text-blue-300">About Me</a>
+</li>
+<li>
+<a href=https://blog.visionary.top/blog/ class="hover:text-blue-800 dark:hover:text-blue-300">Blogs</a>
+</li>
+</ul>
+</nav>
+</header>
+<main class="flex-1 mx-4 md:mx-12 lg:mx-24 mt-8 sm:mt-16">
+<article class="mb-16 max-w-5xl mx-auto px-4">
+<h1>使用Hugo搭一个自己Blog</h1>
+<ul>
+</ul>
+<div class=post-footer>
+<div class=info>
+<span class=separator><a class=category href=/categories/%E6%9E%B6%E6%9E%84/>架构</a><a class=category href=/categories/%E5%BE%AE%E5%89%8D%E7%AB%AF/>微前端</a></span>
+<span class=separator><a class=tag href=/tags/%E5%89%8D%E7%AB%AF%E5%AE%89%E5%85%A8/>前端安全</a></span>
+</div>
+</div>
+<div class=post-footer>
+</div>
+<aside class=content-aside-bar>
+<nav id=TableOfContents>
+<ul>
+<li><a href=#安装>安装</a></li>
+<li><a href=#推一个文章>推一个文章</a></li>
+<li><a href=#启动>启动</a></li>
+<li><a href=#配置主题>配置主题</a></li>
+<li><a href=#集成到githubio页面中>集成到GitHub.io页面中</a></li>
+<li><a href=#gh-pagesyml>gh-pages.yml</a>
+<ul>
+<li><a href=#配置domain>配置domain</a></li>
+</ul>
+</li>
+</ul>
+</nav>
+</aside>
+<div class="prose lg:prose-lg prose-blue dark:prose-dark">
+<p>xss & csrf 都是窃token cookie之类的敏感信息</p>
+<p><a href=https://en.wikipedia.org/wiki/Cross-site_request_forgery>Cross-site request forgery - Wikipedia</a></p>
+<p>比较好看好搭的blog，有很多极简风，响应式做的好的主题</p>
+<p><a href=https://gohugo.io/getting-started/quick-start/>Quick Start</a></p>
+<h2 id=安装>安装</h2>
+<p>最简单的方法</p>
+<div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-bash data-lang=bash>brew install hugo
+</code></pre></div><p>但是go被墙容易装失败</p>
+<p>可以去go官网下载安装包安装go</p>
+<p>再给go配置国内的代理</p>
+<div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-bash data-lang=bash>git clone https://github.com/gohugoio/hugo.git
 cd hugo
 go install --tags extended
-</code></pre></div><p>这样装完没有link 去到到目录下去跑，有需求也可以加个link</p><p>然后就可以新建一个项目了</p><div class=highlight><pre style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-bash data-lang=bash>hugo new site quickstart
+</code></pre></div><p>这样装完没有link 去到到目录下去跑，有需求也可以加个link</p>
+<p>然后就可以新建一个项目了</p>
+<div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-bash data-lang=bash>hugo new site quickstart
 
 cd quickstart
 git init
 git submodule add https://github.com/theNewDynamic/gohugo-theme-ananke.git themes/ananke
-</code></pre></div><p>tip: submodule 作为子模块才能push到GitHub上</p><h2 id=推一个文章>推一个文章</h2><div class=highlight><pre style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-bash data-lang=bash>hugo new posts/my-first-post.md
-</code></pre></div><h2 id=启动>启动</h2><p>本地实时预览</p><div class=highlight><pre style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-bash data-lang=bash>hugo server -D
-</code></pre></div><h2 id=配置主题>配置主题</h2><p>修改config.toml</p><div class=highlight><pre style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-bash data-lang=bash>theme <span style=color:#f92672>=</span> <span style=color:#e6db74>&#34;ananke&#34;</span>
-</code></pre></div><p>构建静态页面 生成在public下</p><div class=highlight><pre style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-bash data-lang=bash>hugo -D
-</code></pre></div><h2 id=集成到githubio页面中>集成到GitHub.io页面中</h2><ol><li>将quickstart项目remote到一个项目</li><li>开启pages功能 将pages指向 gh-pages的根目录</li><li>Actions中新建workflows</li></ol><p>git 将自动生成</p><p>blog/.github/workflows/</p><p>workflows配置好后</p><p>main分支push完毕会触发构建 生成的文件在gh-pages分支</p><h2 id=gh-pagesyml>gh-pages.yml</h2><div class=highlight><pre style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-bash data-lang=bash>name: github pages
+</code></pre></div><p>tip: submodule 作为子模块才能push到GitHub上</p>
+<h2 id=推一个文章>推一个文章</h2>
+<div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-bash data-lang=bash>hugo new posts/my-first-post.md
+</code></pre></div><h2 id=启动>启动</h2>
+<p>本地实时预览</p>
+<div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-bash data-lang=bash>hugo server -D
+</code></pre></div><h2 id=配置主题>配置主题</h2>
+<p>修改config.toml</p>
+<div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-bash data-lang=bash>theme <span style=color:#f92672>=</span> <span style=color:#e6db74>&#34;ananke&#34;</span>
+</code></pre></div><p>构建静态页面 生成在public下</p>
+<div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-bash data-lang=bash>hugo -D
+</code></pre></div><h2 id=集成到githubio页面中>集成到GitHub.io页面中</h2>
+<ol>
+<li>将quickstart项目remote到一个项目</li>
+<li>开启pages功能 将pages指向 gh-pages的根目录</li>
+<li>Actions中新建workflows</li>
+</ol>
+<p>git 将自动生成</p>
+<p>blog/.github/workflows/</p>
+<p>workflows配置好后</p>
+<p>main分支push完毕会触发构建 生成的文件在gh-pages分支</p>
+<h2 id=gh-pagesyml>gh-pages.yml</h2>
+<div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-bash data-lang=bash>name: github pages
 
 on:
   push:
@@ -44,4 +132,14 @@ jobs:
         with:
           github_token: <span style=color:#e6db74>${</span>{ secrets.GITHUB_TOKEN <span style=color:#e6db74>}</span><span style=color:#f92672>}</span>
           publish_dir: ./public
-</code></pre></div><h3 id=配置domain>配置domain</h3><p>购买一个域名</p><p>在DNS配置中，新增cname类型的域名指向<a href=http://github.io/>github.io</a>.</p><p>在GitHub page页面添加自己的域名</p></div></article></main><footer class="w-full text-center p-4 text-xs text-gray-400">copyright © 2021 - VISIONARY · All rights reserved</footer></body></html>
+</code></pre></div><h3 id=配置domain>配置domain</h3>
+<p>购买一个域名</p>
+<p>在DNS配置中，新增cname类型的域名指向<a href=http://github.io/>github.io</a>.</p>
+<p>在GitHub page页面添加自己的域名</p>
+</div>
+</article>
+</main><footer class="w-full text-center p-4 text-xs text-gray-400">
+copyright © 2021 - VISIONARY · All rights reserved
+</footer>
+</body>
+</html>

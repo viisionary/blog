@@ -1,5 +1,69 @@
-<!doctype html><html lang=en-us><head><meta charset=utf-8><meta name=viewport content="width=device-width,initial-scale=1"><title>tsconfig.json 属性一览 & Module 对比 - VISIONARY BLOG</title><meta name=description content="Sample article showcasing basic Markdown syntax and formatting for HTML elements."><meta name=generator content="Hugo 0.85.0"><link rel=stylesheet href=https://blog.visionary.top/css/styles.min.164cbb1508747f243f6df5c8ed21c22e9e62a67f149d1e07b8e1982526aa384c.css integrity=sha256-Fky7FQh0fyQ/bfXI7SHCLp5ipn8UnR4HuOGYJSaqOEw=><script>window.matchMedia("(prefers-color-scheme: dark)").matches?document.documentElement.classList.add("dark"):document.documentElement.classList.remove("dark")</script></head><body class="flex flex-col min-h-screen dark:bg-gray-900 dark:text-gray-100 transition-colors duration-500"><header class="w-full px-4 pt-4 max-w-5xl mx-auto"><nav class="flex items-center justify-between flex-wrap"><div class="flex gap-2 items-center"><a href=mailto:min_0610@icloud.com aria-label=EMail><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentcolor" fill="none" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><circle cx="12" cy="12" r="4"/><path d="M16 12v1.5a2.5 2.5.0 005 0V12a9 9 0 10-5.5 8.28"/></svg></a><a href=https://blog.visionary.top/ class="flex items-center font-bold">VISIONARY BLOG</a></div><ul id=nav-menu class="flex w-auto mt-0 space-x-2"><li><a href=https://blog.visionary.top/about/ class="hover:text-blue-800 dark:hover:text-blue-300">About Me</a></li><li><a href=https://blog.visionary.top/blog/ class="hover:text-blue-800 dark:hover:text-blue-300">Blogs</a></li></ul></nav></header><main class="flex-1 mx-4 md:mx-12 lg:mx-24 mt-8 sm:mt-16"><article class="mb-16 max-w-5xl mx-auto px-4"><h1>tsconfig.json 属性一览 & Module 对比</h1><ul></ul><div class=post-footer><div class=info><span class=separator><a class=category href=/categories/%E6%9E%B6%E6%9E%84/>架构</a><a class=category href=/categories/%E5%BE%AE%E5%89%8D%E7%AB%AF/>微前端</a></span>
-<span class=separator><a class=tag href=/tags/ts/>ts</a></span></div></div><div class=post-footer></div><aside class=content-aside-bar><nav id=TableOfContents><ul><li><a href=#属性一览>属性一览</a><ul><li><a href=#build包的时候的配置>build包的时候的配置</a></li><li><a href=#类型检查的时候的配置--build成页面的配置>类型检查的时候的配置 || build成页面的配置</a></li></ul></li><li><a href=#详细>详细</a><ul><li><a href=#module>Module</a></li></ul></li></ul></nav></aside><div class="prose lg:prose-lg prose-blue dark:prose-dark"><p>xss & csrf 都是窃token cookie之类的敏感信息</p><p><a href=https://en.wikipedia.org/wiki/Cross-site_request_forgery>Cross-site request forgery - Wikipedia</a></p><h2 id=属性一览>属性一览</h2><h3 id=build包的时候的配置>build包的时候的配置</h3><div class=highlight><pre style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-json data-lang=json>{
+<!doctype html><html lang=en-us>
+<head>
+<meta charset=utf-8>
+<meta name=viewport content="width=device-width,initial-scale=1">
+<title>
+tsconfig.json 属性一览 & Module 对比 - VISIONARY BLOG
+</title>
+<meta name=description content="Sample article showcasing basic Markdown syntax and formatting for HTML elements.">
+<meta name=generator content="Hugo 0.86.0"><link rel=stylesheet href=https://blog.visionary.top/css/styles.min.164cbb1508747f243f6df5c8ed21c22e9e62a67f149d1e07b8e1982526aa384c.css integrity=sha256-Fky7FQh0fyQ/bfXI7SHCLp5ipn8UnR4HuOGYJSaqOEw=>
+<script>window.matchMedia("(prefers-color-scheme: dark)").matches?document.documentElement.classList.add("dark"):document.documentElement.classList.remove("dark")</script>
+</head>
+<body class="flex flex-col min-h-screen dark:bg-gray-900 dark:text-gray-100 transition-colors duration-500"><header class="w-full px-4 pt-4 max-w-5xl mx-auto">
+<nav class="flex items-center justify-between flex-wrap">
+<div class="flex gap-2 items-center">
+<a href=mailto:min_0610@icloud.com aria-label=EMail><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentcolor" fill="none" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><circle cx="12" cy="12" r="4"/><path d="M16 12v1.5a2.5 2.5.0 005 0V12a9 9 0 10-5.5 8.28"/></svg>
+</a>
+<a href=https://blog.visionary.top/ class="flex items-center font-bold">
+VISIONARY BLOG
+</a>
+</div>
+<ul id=nav-menu class="flex w-auto mt-0 space-x-2">
+<li>
+<a href=https://blog.visionary.top/about/ class="hover:text-blue-800 dark:hover:text-blue-300">About Me</a>
+</li>
+<li>
+<a href=https://blog.visionary.top/blog/ class="hover:text-blue-800 dark:hover:text-blue-300">Blogs</a>
+</li>
+</ul>
+</nav>
+</header>
+<main class="flex-1 mx-4 md:mx-12 lg:mx-24 mt-8 sm:mt-16">
+<article class="mb-16 max-w-5xl mx-auto px-4">
+<h1>tsconfig.json 属性一览 & Module 对比</h1>
+<ul>
+</ul>
+<div class=post-footer>
+<div class=info>
+<span class=separator><a class=category href=/categories/%E6%9E%B6%E6%9E%84/>架构</a><a class=category href=/categories/%E5%BE%AE%E5%89%8D%E7%AB%AF/>微前端</a></span>
+<span class=separator><a class=tag href=/tags/ts/>ts</a></span>
+</div>
+</div>
+<div class=post-footer>
+</div>
+<aside class=content-aside-bar>
+<nav id=TableOfContents>
+<ul>
+<li><a href=#属性一览>属性一览</a>
+<ul>
+<li><a href=#build包的时候的配置>build包的时候的配置</a></li>
+<li><a href=#类型检查的时候的配置--build成页面的配置>类型检查的时候的配置 || build成页面的配置</a></li>
+</ul>
+</li>
+<li><a href=#详细>详细</a>
+<ul>
+<li><a href=#module>Module</a></li>
+</ul>
+</li>
+</ul>
+</nav>
+</aside>
+<div class="prose lg:prose-lg prose-blue dark:prose-dark">
+<p>xss & csrf 都是窃token cookie之类的敏感信息</p>
+<p><a href=https://en.wikipedia.org/wiki/Cross-site_request_forgery>Cross-site request forgery - Wikipedia</a></p>
+<h2 id=属性一览>属性一览</h2>
+<h3 id=build包的时候的配置>build包的时候的配置</h3>
+<div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-json data-lang=json>{
   <span style=color:#f92672>&#34;compilerOptions&#34;</span>: {
     <span style=color:#f92672>&#34;target&#34;</span>: <span style=color:#e6db74>&#34;es5&#34;</span>, <span style=color:#960050;background-color:#1e0010>//</span> <span style=color:#960050;background-color:#1e0010>定义目标语言的版本</span>
 		<span style=color:#f92672>&#34;module&#34;</span>: <span style=color:#e6db74>&#34;CommonJS&#34;</span>, <span style=color:#960050;background-color:#1e0010>//</span> <span style=color:#960050;background-color:#1e0010>生成代码的模板标准</span>
@@ -21,7 +85,8 @@
     <span style=color:#e6db74>&#34;node_modules&#34;</span>
   ]
 }
-</code></pre></div><h3 id=类型检查的时候的配置--build成页面的配置>类型检查的时候的配置 || build成页面的配置</h3><div class=highlight><pre style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-json data-lang=json>{
+</code></pre></div><h3 id=类型检查的时候的配置--build成页面的配置>类型检查的时候的配置 || build成页面的配置</h3>
+<div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-json data-lang=json>{
   <span style=color:#f92672>&#34;compilerOptions&#34;</span>: {
 		<span style=color:#f92672>&#34;removeComments&#34;</span>:<span style=color:#66d9ef>true</span>, <span style=color:#960050;background-color:#1e0010>//</span> <span style=color:#960050;background-color:#1e0010>删除注释</span>
 		<span style=color:#f92672>&#34;strict&#34;</span>: <span style=color:#66d9ef>true</span>, <span style=color:#960050;background-color:#1e0010>//</span> <span style=color:#960050;background-color:#1e0010>开启所有严格的类型检查</span>
@@ -35,19 +100,41 @@
 		<span style=color:#f92672>&#34;noEmit&#34;</span>: <span style=color:#66d9ef>true</span>, <span style=color:#960050;background-color:#1e0010>//</span> <span style=color:#960050;background-color:#1e0010>不输出文件,即编译后不会生成任何js文件</span>
 	}
 }
-</code></pre></div><h2 id=详细>详细</h2><h3 id=module>Module</h3><blockquote><p>设置程序的模块系统。
-主要涉及 import & export</p></blockquote><ol><li>写法</li></ol><p>ECMAScript 2015 SimpleModule.ts</p><div class=highlight><pre style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-tsx data-lang=tsx><span style=color:#66d9ef>import</span> <span style=color:#a6e22e>m</span> <span style=color:#f92672>=</span> <span style=color:#66d9ef>require</span>(<span style=color:#e6db74>&#34;mod&#34;</span>);
+</code></pre></div><h2 id=详细>详细</h2>
+<h3 id=module>Module</h3>
+<blockquote>
+<p>设置程序的模块系统。
+主要涉及 import & export</p>
+</blockquote>
+<ol>
+<li>写法</li>
+</ol>
+<p>ECMAScript 2015 SimpleModule.ts</p>
+<div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-tsx data-lang=tsx><span style=color:#66d9ef>import</span> <span style=color:#a6e22e>m</span> <span style=color:#f92672>=</span> <span style=color:#66d9ef>require</span>(<span style=color:#e6db74>&#34;mod&#34;</span>);
 <span style=color:#66d9ef>export</span> <span style=color:#66d9ef>let</span> <span style=color:#a6e22e>t</span> <span style=color:#f92672>=</span> <span style=color:#a6e22e>m</span>.<span style=color:#a6e22e>something</span> <span style=color:#f92672>+</span> <span style=color:#ae81ff>1</span>;
-</code></pre></div><p>CommonJS Node SimpleModule.js</p><div class=highlight><pre style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-jsx data-lang=jsx><span style=color:#66d9ef>var</span> <span style=color:#a6e22e>mod_1</span> <span style=color:#f92672>=</span> <span style=color:#a6e22e>require</span>(<span style=color:#e6db74>&#34;./mod&#34;</span>);
+</code></pre></div><p>CommonJS Node SimpleModule.js</p>
+<div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-jsx data-lang=jsx><span style=color:#66d9ef>var</span> <span style=color:#a6e22e>mod_1</span> <span style=color:#f92672>=</span> <span style=color:#a6e22e>require</span>(<span style=color:#e6db74>&#34;./mod&#34;</span>);
 <span style=color:#a6e22e>exports</span>.<span style=color:#a6e22e>t</span> <span style=color:#f92672>=</span> <span style=color:#a6e22e>mod_1</span>.<span style=color:#a6e22e>something</span> <span style=color:#f92672>+</span> <span style=color:#ae81ff>1</span>;
-</code></pre></div><ol start=2><li>实际编译</li></ol><p>ECMAScript 5 ⇒<code>CommonJS</code></p><div class=highlight><pre style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-tsx data-lang=tsx><span style=color:#75715e>// @filename: index.ts
+</code></pre></div><ol start=2>
+<li>实际编译</li>
+</ol>
+<p>ECMAScript 5 ⇒<code>CommonJS</code></p>
+<div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-tsx data-lang=tsx><span style=color:#75715e>// @filename: index.ts
 </span><span style=color:#75715e></span><span style=color:#66d9ef>import</span> { <span style=color:#a6e22e>valueOfPi</span> } <span style=color:#66d9ef>from</span> <span style=color:#e6db74>&#34;./constants&#34;</span>;
 <span style=color:#66d9ef>export</span> <span style=color:#66d9ef>const</span> <span style=color:#a6e22e>twoPi</span> <span style=color:#f92672>=</span> <span style=color:#a6e22e>valueOfPi</span> <span style=color:#f92672>*</span> <span style=color:#ae81ff>2</span>;
-</code></pre></div><div class=highlight><pre style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-jsx data-lang=jsx><span style=color:#e6db74>&#34;use strict&#34;</span>;
+</code></pre></div><div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-jsx data-lang=jsx><span style=color:#e6db74>&#34;use strict&#34;</span>;
 Object.<span style=color:#a6e22e>defineProperty</span>(<span style=color:#a6e22e>exports</span>, <span style=color:#e6db74>&#34;__esModule&#34;</span>, { <span style=color:#a6e22e>value</span><span style=color:#f92672>:</span> <span style=color:#66d9ef>true</span> });
 <span style=color:#a6e22e>exports</span>.<span style=color:#a6e22e>twoPi</span> <span style=color:#f92672>=</span> <span style=color:#66d9ef>void</span> <span style=color:#ae81ff>0</span>;
 <span style=color:#66d9ef>const</span> <span style=color:#a6e22e>constants_1</span> <span style=color:#f92672>=</span> <span style=color:#a6e22e>require</span>(<span style=color:#e6db74>&#34;./constants&#34;</span>);
 <span style=color:#a6e22e>exports</span>.<span style=color:#a6e22e>twoPi</span> <span style=color:#f92672>=</span> <span style=color:#a6e22e>constants_1</span>.<span style=color:#a6e22e>valueOfPi</span> <span style=color:#f92672>*</span> <span style=color:#ae81ff>2</span>;
-</code></pre></div><p>ECMAScript 5 ⇒ ESNext = ES2020 = ES6</p><div class=highlight><pre style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-tsx data-lang=tsx><span style=color:#66d9ef>import</span> { <span style=color:#a6e22e>valueOfPi</span> } <span style=color:#66d9ef>from</span> <span style=color:#e6db74>&#34;./constants&#34;</span>;
+</code></pre></div><p>ECMAScript 5 ⇒ ESNext = ES2020 = ES6</p>
+<div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-tsx data-lang=tsx><span style=color:#66d9ef>import</span> { <span style=color:#a6e22e>valueOfPi</span> } <span style=color:#66d9ef>from</span> <span style=color:#e6db74>&#34;./constants&#34;</span>;
 <span style=color:#66d9ef>export</span> <span style=color:#66d9ef>const</span> <span style=color:#a6e22e>twoPi</span> <span style=color:#f92672>=</span> <span style=color:#a6e22e>valueOfPi</span> <span style=color:#f92672>*</span> <span style=color:#ae81ff>2</span>;
-</code></pre></div></div></article></main><footer class="w-full text-center p-4 text-xs text-gray-400">copyright © 2021 - VISIONARY · All rights reserved</footer></body></html>
+</code></pre></div>
+</div>
+</article>
+</main><footer class="w-full text-center p-4 text-xs text-gray-400">
+copyright © 2021 - VISIONARY · All rights reserved
+</footer>
+</body>
+</html>

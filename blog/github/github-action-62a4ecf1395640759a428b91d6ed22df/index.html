@@ -1,5 +1,81 @@
-<!doctype html><html lang=en-us><head><meta charset=utf-8><meta name=viewport content="width=device-width,initial-scale=1"><title>Git Action - VISIONARY BLOG</title><meta name=generator content="Hugo 0.85.0"><link rel=stylesheet href=https://blog.visionary.top/css/styles.min.164cbb1508747f243f6df5c8ed21c22e9e62a67f149d1e07b8e1982526aa384c.css integrity=sha256-Fky7FQh0fyQ/bfXI7SHCLp5ipn8UnR4HuOGYJSaqOEw=><script>window.matchMedia("(prefers-color-scheme: dark)").matches?document.documentElement.classList.add("dark"):document.documentElement.classList.remove("dark")</script></head><body class="flex flex-col min-h-screen dark:bg-gray-900 dark:text-gray-100 transition-colors duration-500"><header class="w-full px-4 pt-4 max-w-5xl mx-auto"><nav class="flex items-center justify-between flex-wrap"><div class="flex gap-2 items-center"><a href=mailto:min_0610@icloud.com aria-label=EMail><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentcolor" fill="none" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><circle cx="12" cy="12" r="4"/><path d="M16 12v1.5a2.5 2.5.0 005 0V12a9 9 0 10-5.5 8.28"/></svg></a><a href=https://blog.visionary.top/ class="flex items-center font-bold">VISIONARY BLOG</a></div><ul id=nav-menu class="flex w-auto mt-0 space-x-2"><li><a href=https://blog.visionary.top/about/ class="hover:text-blue-800 dark:hover:text-blue-300">About Me</a></li><li><a href=https://blog.visionary.top/blog/ class="hover:text-blue-800 dark:hover:text-blue-300">Blogs</a></li></ul></nav></header><main class="flex-1 mx-4 md:mx-12 lg:mx-24 mt-8 sm:mt-16"><article class="mb-16 max-w-5xl mx-auto px-4"><h1>Git Action</h1><ul></ul><div class=post-footer><div class=info><span class=separator><a class=category href=/categories/%E6%9E%B6%E6%9E%84/>架构</a></span>
-<span class=separator><a class=tag href=/tags/webpack/>webpack</a></span></div></div><div class=post-footer></div><aside class=content-aside-bar><nav id=TableOfContents><ul><li><a href=#public-to-npm>Public to npm</a></li><li><a href=#加上workflow>加上workflow</a></li><li><a href=#获取-npm-accesstoken>获取 npm accesstoken</a></li><li><a href=#在该repositories中加上actions-secrets>在该repositories中加上Actions secrets</a></li></ul></nav></aside><div class="prose lg:prose-lg prose-blue dark:prose-dark"><p>Emoji can be enabled in a Hugo project in a number of ways.</p><p>github操作驱动一系列命令</p><p>这里是描述</p><p>还可以写更多</p><h2 id=public-to-npm>Public to npm</h2><h2 id=加上workflow>加上workflow</h2><p><img src=Github%20Action%2062a4ecf1395640759a428b91d6ed22df/Untitled.png alt=Github%20Action%2062a4ecf1395640759a428b91d6ed22df/Untitled.png></p><h2 id=获取-npm-accesstoken>获取 npm accesstoken</h2><p><a href=https://www.npmjs.com/settings/>https://www.npmjs.com/settings/</a></p><p>在npm官网中获取拥有publish权限的accesstoken</p><h2 id=在该repositories中加上actions-secrets>在该repositories中加上Actions secrets</h2><p>NPM_TOKEN 名称在yml文件中将会用到</p><p><img src=Github%20Action%2062a4ecf1395640759a428b91d6ed22df/Untitled%201.png alt=Github%20Action%2062a4ecf1395640759a428b91d6ed22df/Untitled%201.png></p><p><img src=Github%20Action%2062a4ecf1395640759a428b91d6ed22df/Untitled%202.png alt=Github%20Action%2062a4ecf1395640759a428b91d6ed22df/Untitled%202.png></p><h1 id=npm-publishyml>npm-publish.yml</h1><blockquote><p>当push master 时触发</p></blockquote><p>配备ubuntu环境</p><ol><li>npm ci 安装包</li><li>运行build指令</li><li>编辑好的代码在spider-utils</li><li>发布</li></ol><div class=highlight><pre style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-yaml data-lang=yaml><span style=color:#f92672>name</span>: <span style=color:#ae81ff>Node.js Package</span>
+<!doctype html><html lang=en-us>
+<head>
+<meta charset=utf-8>
+<meta name=viewport content="width=device-width,initial-scale=1">
+<title>
+Git Action - VISIONARY BLOG
+</title><meta name=generator content="Hugo 0.86.0"><link rel=stylesheet href=https://blog.visionary.top/css/styles.min.164cbb1508747f243f6df5c8ed21c22e9e62a67f149d1e07b8e1982526aa384c.css integrity=sha256-Fky7FQh0fyQ/bfXI7SHCLp5ipn8UnR4HuOGYJSaqOEw=>
+<script>window.matchMedia("(prefers-color-scheme: dark)").matches?document.documentElement.classList.add("dark"):document.documentElement.classList.remove("dark")</script>
+</head>
+<body class="flex flex-col min-h-screen dark:bg-gray-900 dark:text-gray-100 transition-colors duration-500"><header class="w-full px-4 pt-4 max-w-5xl mx-auto">
+<nav class="flex items-center justify-between flex-wrap">
+<div class="flex gap-2 items-center">
+<a href=mailto:min_0610@icloud.com aria-label=EMail><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentcolor" fill="none" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><circle cx="12" cy="12" r="4"/><path d="M16 12v1.5a2.5 2.5.0 005 0V12a9 9 0 10-5.5 8.28"/></svg>
+</a>
+<a href=https://blog.visionary.top/ class="flex items-center font-bold">
+VISIONARY BLOG
+</a>
+</div>
+<ul id=nav-menu class="flex w-auto mt-0 space-x-2">
+<li>
+<a href=https://blog.visionary.top/about/ class="hover:text-blue-800 dark:hover:text-blue-300">About Me</a>
+</li>
+<li>
+<a href=https://blog.visionary.top/blog/ class="hover:text-blue-800 dark:hover:text-blue-300">Blogs</a>
+</li>
+</ul>
+</nav>
+</header>
+<main class="flex-1 mx-4 md:mx-12 lg:mx-24 mt-8 sm:mt-16">
+<article class="mb-16 max-w-5xl mx-auto px-4">
+<h1>Git Action</h1>
+<ul>
+</ul>
+<div class=post-footer>
+<div class=info>
+<span class=separator><a class=category href=/categories/%E6%9E%B6%E6%9E%84/>架构</a></span>
+<span class=separator><a class=tag href=/tags/webpack/>webpack</a></span>
+</div>
+</div>
+<div class=post-footer>
+</div>
+<aside class=content-aside-bar>
+<nav id=TableOfContents>
+<ul>
+<li><a href=#public-to-npm>Public to npm</a></li>
+<li><a href=#加上workflow>加上workflow</a></li>
+<li><a href=#获取-npm-accesstoken>获取 npm accesstoken</a></li>
+<li><a href=#在该repositories中加上actions-secrets>在该repositories中加上Actions secrets</a></li>
+</ul>
+</nav>
+</aside>
+<div class="prose lg:prose-lg prose-blue dark:prose-dark">
+<p>Emoji can be enabled in a Hugo project in a number of ways.</p>
+<p>github操作驱动一系列命令</p>
+<p>这里是描述</p>
+<p>还可以写更多</p>
+<h2 id=public-to-npm>Public to npm</h2>
+<h2 id=加上workflow>加上workflow</h2>
+<p><img src=Github%20Action%2062a4ecf1395640759a428b91d6ed22df/Untitled.png alt=Github%20Action%2062a4ecf1395640759a428b91d6ed22df/Untitled.png></p>
+<h2 id=获取-npm-accesstoken>获取 npm accesstoken</h2>
+<p><a href=https://www.npmjs.com/settings/>https://www.npmjs.com/settings/</a></p>
+<p>在npm官网中获取拥有publish权限的accesstoken</p>
+<h2 id=在该repositories中加上actions-secrets>在该repositories中加上Actions secrets</h2>
+<p>NPM_TOKEN 名称在yml文件中将会用到</p>
+<p><img src=Github%20Action%2062a4ecf1395640759a428b91d6ed22df/Untitled%201.png alt=Github%20Action%2062a4ecf1395640759a428b91d6ed22df/Untitled%201.png></p>
+<p><img src=Github%20Action%2062a4ecf1395640759a428b91d6ed22df/Untitled%202.png alt=Github%20Action%2062a4ecf1395640759a428b91d6ed22df/Untitled%202.png></p>
+<h1 id=npm-publishyml>npm-publish.yml</h1>
+<blockquote>
+<p>当push master 时触发</p>
+</blockquote>
+<p>配备ubuntu环境</p>
+<ol>
+<li>npm ci 安装包</li>
+<li>运行build指令</li>
+<li>编辑好的代码在spider-utils</li>
+<li>发布</li>
+</ol>
+<div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-yaml data-lang=yaml><span style=color:#f92672>name</span>: <span style=color:#ae81ff>Node.js Package</span>
 
 <span style=color:#f92672>on</span>:
   <span style=color:#f92672>push</span>:
@@ -21,4 +97,12 @@
 </span><span style=color:#e6db74>          npm publish</span>          
         <span style=color:#f92672>env</span>:
           <span style=color:#f92672>NODE_AUTH_TOKEN</span>: <span style=color:#ae81ff>${{secrets.NPM_TOKEN}}</span>
-</code></pre></div><p>有不同依赖的命令</p><p>package-lock.json的作用</p></div></article></main><footer class="w-full text-center p-4 text-xs text-gray-400">copyright © 2021 - VISIONARY · All rights reserved</footer></body></html>
+</code></pre></div><p>有不同依赖的命令</p>
+<p>package-lock.json的作用</p>
+</div>
+</article>
+</main><footer class="w-full text-center p-4 text-xs text-gray-400">
+copyright © 2021 - VISIONARY · All rights reserved
+</footer>
+</body>
+</html>

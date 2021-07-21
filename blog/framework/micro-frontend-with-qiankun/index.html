@@ -1,5 +1,101 @@
-<!doctype html><html lang=en-us><head><meta charset=utf-8><meta name=viewport content="width=device-width,initial-scale=1"><title>Micro-Frontends with qiankun - VISIONARY BLOG</title><meta name=description content="Sample article showcasing basic Markdown syntax and formatting for HTML elements."><meta name=generator content="Hugo 0.85.0"><link rel=stylesheet href=https://blog.visionary.top/css/styles.min.164cbb1508747f243f6df5c8ed21c22e9e62a67f149d1e07b8e1982526aa384c.css integrity=sha256-Fky7FQh0fyQ/bfXI7SHCLp5ipn8UnR4HuOGYJSaqOEw=><script>window.matchMedia("(prefers-color-scheme: dark)").matches?document.documentElement.classList.add("dark"):document.documentElement.classList.remove("dark")</script></head><body class="flex flex-col min-h-screen dark:bg-gray-900 dark:text-gray-100 transition-colors duration-500"><header class="w-full px-4 pt-4 max-w-5xl mx-auto"><nav class="flex items-center justify-between flex-wrap"><div class="flex gap-2 items-center"><a href=mailto:min_0610@icloud.com aria-label=EMail><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentcolor" fill="none" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><circle cx="12" cy="12" r="4"/><path d="M16 12v1.5a2.5 2.5.0 005 0V12a9 9 0 10-5.5 8.28"/></svg></a><a href=https://blog.visionary.top/ class="flex items-center font-bold">VISIONARY BLOG</a></div><ul id=nav-menu class="flex w-auto mt-0 space-x-2"><li><a href=https://blog.visionary.top/about/ class="hover:text-blue-800 dark:hover:text-blue-300">About Me</a></li><li><a href=https://blog.visionary.top/blog/ class="hover:text-blue-800 dark:hover:text-blue-300">Blogs</a></li></ul></nav></header><main class="flex-1 mx-4 md:mx-12 lg:mx-24 mt-8 sm:mt-16"><article class="mb-16 max-w-5xl mx-auto px-4"><h1>Micro-Frontends with qiankun</h1><ul></ul><div class=post-footer><div class=info><span class=separator><a class=category href=/categories/%E6%9E%B6%E6%9E%84/>架构</a><a class=category href=/categories/%E5%BE%AE%E5%89%8D%E7%AB%AF/>微前端</a></span>
-<span class=separator><a class=tag href=/tags/webpack/>webpack</a></span></div></div><div class=post-footer></div><aside class=content-aside-bar><nav id=TableOfContents><ul><li><a href=#heading></a></li></ul><ul><li><a href=#使用乾坤搭建微前端框架>使用【乾坤搭建微前端框架】</a></li><li><a href=#项目结构>项目结构</a></li><li><a href=#main-app-react>main-app 【react】</a><ul><li><a href=#初始化全局状态-initglobalstatejs>初始化全局状态 initGlobalState.js</a></li><li><a href=#定义子应用>定义子应用</a></li><li><a href=#注册子应用>注册子应用</a></li></ul></li><li><a href=#child-app-1-react>child-app-1 【react】</a><ul><li><a href=#child-app-2>child-app-2</a></li></ul></li></ul><ul><li><a href=#存储>存储</a><ul><li><a href=#localstorage>localStorage</a></li><li><a href=#documentcookie>document.cookie</a></li></ul></li><li><a href=#父子组件传值>父子组件传值</a></li><li><a href=#子组件间传值>子组件间传值</a></li></ul><ul><li><a href=#nginx-配置>NGINX 配置</a></li><li><a href=#静态资源处理>静态资源处理</a></li></ul></nav></aside><div class="prose lg:prose-lg prose-blue dark:prose-dark"><p>可以实现多团队共同开发，每个团队维护使用了不同前端框架的项目，独立使用git，也可以在新网站上集成旧项目</p><h2 id=heading></h2><h1 id=micro-frontends-with-qiankun>Micro-Frontends with qiankun</h1><h2 id=使用乾坤搭建微前端框架>使用【乾坤搭建微前端框架】</h2><p><a href=https://qiankun.umijs.org/>qiankun</a></p><h2 id=项目结构>项目结构</h2><ul><li>main-app 【react】<ul><li>child-app-1【react】</li><li>child-app-2【vue】</li><li>more</li></ul></li></ul><h2 id=main-app-react>main-app 【react】</h2><div class=highlight><pre style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-jsx data-lang=jsx><span style=color:#66d9ef>import</span> {
+<!doctype html><html lang=en-us>
+<head>
+<meta charset=utf-8>
+<meta name=viewport content="width=device-width,initial-scale=1">
+<title>
+Micro-Frontends with qiankun - VISIONARY BLOG
+</title>
+<meta name=description content="Sample article showcasing basic Markdown syntax and formatting for HTML elements.">
+<meta name=generator content="Hugo 0.86.0"><link rel=stylesheet href=https://blog.visionary.top/css/styles.min.164cbb1508747f243f6df5c8ed21c22e9e62a67f149d1e07b8e1982526aa384c.css integrity=sha256-Fky7FQh0fyQ/bfXI7SHCLp5ipn8UnR4HuOGYJSaqOEw=>
+<script>window.matchMedia("(prefers-color-scheme: dark)").matches?document.documentElement.classList.add("dark"):document.documentElement.classList.remove("dark")</script>
+</head>
+<body class="flex flex-col min-h-screen dark:bg-gray-900 dark:text-gray-100 transition-colors duration-500"><header class="w-full px-4 pt-4 max-w-5xl mx-auto">
+<nav class="flex items-center justify-between flex-wrap">
+<div class="flex gap-2 items-center">
+<a href=mailto:min_0610@icloud.com aria-label=EMail><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentcolor" fill="none" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><circle cx="12" cy="12" r="4"/><path d="M16 12v1.5a2.5 2.5.0 005 0V12a9 9 0 10-5.5 8.28"/></svg>
+</a>
+<a href=https://blog.visionary.top/ class="flex items-center font-bold">
+VISIONARY BLOG
+</a>
+</div>
+<ul id=nav-menu class="flex w-auto mt-0 space-x-2">
+<li>
+<a href=https://blog.visionary.top/about/ class="hover:text-blue-800 dark:hover:text-blue-300">About Me</a>
+</li>
+<li>
+<a href=https://blog.visionary.top/blog/ class="hover:text-blue-800 dark:hover:text-blue-300">Blogs</a>
+</li>
+</ul>
+</nav>
+</header>
+<main class="flex-1 mx-4 md:mx-12 lg:mx-24 mt-8 sm:mt-16">
+<article class="mb-16 max-w-5xl mx-auto px-4">
+<h1>Micro-Frontends with qiankun</h1>
+<ul>
+</ul>
+<div class=post-footer>
+<div class=info>
+<span class=separator><a class=category href=/categories/%E6%9E%B6%E6%9E%84/>架构</a><a class=category href=/categories/%E5%BE%AE%E5%89%8D%E7%AB%AF/>微前端</a></span>
+<span class=separator><a class=tag href=/tags/webpack/>webpack</a></span>
+</div>
+</div>
+<div class=post-footer>
+</div>
+<aside class=content-aside-bar>
+<nav id=TableOfContents>
+<ul>
+<li><a href=#heading></a></li>
+</ul>
+<ul>
+<li><a href=#使用乾坤搭建微前端框架>使用【乾坤搭建微前端框架】</a></li>
+<li><a href=#项目结构>项目结构</a></li>
+<li><a href=#main-app-react>main-app 【react】</a>
+<ul>
+<li><a href=#初始化全局状态-initglobalstatejs>初始化全局状态 initGlobalState.js</a></li>
+<li><a href=#定义子应用>定义子应用</a></li>
+<li><a href=#注册子应用>注册子应用</a></li>
+</ul>
+</li>
+<li><a href=#child-app-1-react>child-app-1 【react】</a>
+<ul>
+<li><a href=#child-app-2>child-app-2</a></li>
+</ul>
+</li>
+</ul>
+<ul>
+<li><a href=#存储>存储</a>
+<ul>
+<li><a href=#localstorage>localStorage</a></li>
+<li><a href=#documentcookie>document.cookie</a></li>
+</ul>
+</li>
+<li><a href=#父子组件传值>父子组件传值</a></li>
+<li><a href=#子组件间传值>子组件间传值</a></li>
+</ul>
+<ul>
+<li><a href=#nginx-配置>NGINX 配置</a></li>
+<li><a href=#静态资源处理>静态资源处理</a></li>
+</ul>
+</nav>
+</aside>
+<div class="prose lg:prose-lg prose-blue dark:prose-dark">
+<p>可以实现多团队共同开发，每个团队维护使用了不同前端框架的项目，独立使用git，也可以在新网站上集成旧项目</p>
+<h2 id=heading></h2>
+<h1 id=micro-frontends-with-qiankun>Micro-Frontends with qiankun</h1>
+<h2 id=使用乾坤搭建微前端框架>使用【乾坤搭建微前端框架】</h2>
+<p><a href=https://qiankun.umijs.org/>qiankun</a></p>
+<h2 id=项目结构>项目结构</h2>
+<ul>
+<li>main-app 【react】
+<ul>
+<li>child-app-1【react】</li>
+<li>child-app-2【vue】</li>
+<li>more</li>
+</ul>
+</li>
+</ul>
+<h2 id=main-app-react>main-app 【react】</h2>
+<div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-jsx data-lang=jsx><span style=color:#66d9ef>import</span> {
     <span style=color:#a6e22e>addGlobalUncaughtErrorHandler</span>,
     <span style=color:#a6e22e>initGlobalState</span>,
     <span style=color:#a6e22e>MicroAppStateActions</span>,
@@ -41,7 +137,8 @@
         <span style=color:#75715e>//显示登录弹窗
 </span><span style=color:#75715e></span>    }
 });
-</code></pre></div><h3 id=初始化全局状态-initglobalstatejs>初始化全局状态 initGlobalState.js</h3><div class=highlight><pre style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-jsx data-lang=jsx><span style=color:#66d9ef>const</span> <span style=color:#a6e22e>customHistory</span> <span style=color:#f92672>=</span> <span style=color:#a6e22e>createBrowserHistory</span>();
+</code></pre></div><h3 id=初始化全局状态-initglobalstatejs>初始化全局状态 initGlobalState.js</h3>
+<div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-jsx data-lang=jsx><span style=color:#66d9ef>const</span> <span style=color:#a6e22e>customHistory</span> <span style=color:#f92672>=</span> <span style=color:#a6e22e>createBrowserHistory</span>();
 <span style=color:#66d9ef>export</span> <span style=color:#66d9ef>const</span> <span style=color:#a6e22e>state</span> <span style=color:#f92672>=</span> {
     <span style=color:#a6e22e>user</span><span style=color:#f92672>:</span> {
         <span style=color:#a6e22e>id</span><span style=color:#f92672>:</span> <span style=color:#a6e22e>Storage</span>.<span style=color:#a6e22e>getItem</span>(<span style=color:#e6db74>&#39;operatorId&#39;</span>),
@@ -66,7 +163,8 @@
         <span style=color:#a6e22e>customHistory</span>.<span style=color:#a6e22e>push</span>({<span style=color:#a6e22e>pathname</span>, <span style=color:#a6e22e>hash</span><span style=color:#f92672>:</span> <span style=color:#a6e22e>hash</span> <span style=color:#f92672>||</span> <span style=color:#e6db74>&#39;&#39;</span>, <span style=color:#a6e22e>search</span><span style=color:#f92672>:</span> <span style=color:#a6e22e>search</span> <span style=color:#f92672>||</span> <span style=color:#e6db74>&#39;&#39;</span>}, <span style=color:#a6e22e>state</span> <span style=color:#f92672>||</span> <span style=color:#e6db74>&#39;&#39;</span>)
     },
 };
-</code></pre></div><h3 id=定义子应用>定义子应用</h3><div class=highlight><pre style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-jsx data-lang=jsx><span style=color:#66d9ef>export</span> <span style=color:#66d9ef>const</span> <span style=color:#a6e22e>getMicroApps</span> <span style=color:#f92672>=</span> (<span style=color:#a6e22e>host</span><span style=color:#f92672>:</span> <span style=color:#a6e22e>string</span>) =&gt; [
+</code></pre></div><h3 id=定义子应用>定义子应用</h3>
+<div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-jsx data-lang=jsx><span style=color:#66d9ef>export</span> <span style=color:#66d9ef>const</span> <span style=color:#a6e22e>getMicroApps</span> <span style=color:#f92672>=</span> (<span style=color:#a6e22e>host</span><span style=color:#f92672>:</span> <span style=color:#a6e22e>string</span>) =&gt; [
     {
         <span style=color:#75715e>// 北京 vue
 </span><span style=color:#75715e></span>        <span style=color:#e6db74>&#34;name&#34;</span><span style=color:#f92672>:</span> <span style=color:#e6db74>&#34;web-firm&#34;</span>,
@@ -103,14 +201,17 @@
         <span style=color:#a6e22e>activeRule</span><span style=color:#f92672>:</span> <span style=color:#e6db74>&#39;/video-product&#39;</span>
     }
 ]
-</code></pre></div><h3 id=注册子应用>注册子应用</h3><div class=highlight><pre style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-jsx data-lang=jsx><span style=color:#a6e22e>registerMicroApps</span>(<span style=color:#a6e22e>getMicroApps</span>(<span style=color:#e6db74>&#39;//&#39;</span> <span style=color:#f92672>+</span> <span style=color:#a6e22e>host</span>), {
+</code></pre></div><h3 id=注册子应用>注册子应用</h3>
+<div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-jsx data-lang=jsx><span style=color:#a6e22e>registerMicroApps</span>(<span style=color:#a6e22e>getMicroApps</span>(<span style=color:#e6db74>&#39;//&#39;</span> <span style=color:#f92672>+</span> <span style=color:#a6e22e>host</span>), {
                 <span style=color:#a6e22e>beforeLoad</span><span style=color:#f92672>:</span> [<span style=color:#a6e22e>beforeLoad</span>],
                 <span style=color:#a6e22e>beforeMount</span><span style=color:#f92672>:</span> [<span style=color:#a6e22e>beforeMount</span>],
                 <span style=color:#a6e22e>afterMount</span><span style=color:#f92672>:</span> [<span style=color:#a6e22e>afterMount</span>],
                 <span style=color:#a6e22e>beforeUnmount</span><span style=color:#f92672>:</span> [<span style=color:#a6e22e>beforeUnmount</span>],
                 <span style=color:#a6e22e>afterUnmount</span><span style=color:#f92672>:</span> [<span style=color:#a6e22e>afterUnmount</span>],
             });
-</code></pre></div><h2 id=child-app-1-react>child-app-1 【react】</h2><p>入口文件</p><div class=highlight><pre style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-jsx data-lang=jsx>
+</code></pre></div><h2 id=child-app-1-react>child-app-1 【react】</h2>
+<p>入口文件</p>
+<div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-jsx data-lang=jsx>
 <span style=color:#66d9ef>function</span> <span style=color:#a6e22e>render</span>(<span style=color:#a6e22e>props</span><span style=color:#f92672>:</span> <span style=color:#a6e22e>any</span>) {
     <span style=color:#66d9ef>const</span> { <span style=color:#a6e22e>container</span> } <span style=color:#f92672>=</span> <span style=color:#a6e22e>props</span>;
     <span style=color:#a6e22e>ReactDOM</span>.<span style=color:#a6e22e>render</span>(&lt;<span style=color:#f92672>ConfigProvider</span> <span style=color:#a6e22e>locale</span><span style=color:#f92672>=</span>{<span style=color:#a6e22e>zhCN</span>}&gt;
@@ -143,7 +244,9 @@
 <span style=color:#66d9ef>if</span> (<span style=color:#f92672>!</span>window.<span style=color:#a6e22e>__POWERED_BY_QIANKUN__</span>) {
     <span style=color:#a6e22e>render</span>({});
 }
-</code></pre></div><h3 id=child-app-2>child-app-2</h3><p>入口文件 main.ts</p><div class=highlight><pre style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-jsx data-lang=jsx><span style=color:#66d9ef>export</span> <span style=color:#66d9ef>function</span> <span style=color:#a6e22e>render</span>(<span style=color:#a6e22e>props</span> <span style=color:#f92672>=</span> {}) {
+</code></pre></div><h3 id=child-app-2>child-app-2</h3>
+<p>入口文件 main.ts</p>
+<div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-jsx data-lang=jsx><span style=color:#66d9ef>export</span> <span style=color:#66d9ef>function</span> <span style=color:#a6e22e>render</span>(<span style=color:#a6e22e>props</span> <span style=color:#f92672>=</span> {}) {
     <span style=color:#a6e22e>console</span>.<span style=color:#a6e22e>log</span>(<span style=color:#e6db74>&#39;测试测试测试&#39;</span>)
     <span style=color:#75715e>// @ts-ignore
 </span><span style=color:#75715e></span>    <span style=color:#66d9ef>const</span> { <span style=color:#a6e22e>container</span> } <span style=color:#f92672>=</span> <span style=color:#a6e22e>props</span>
@@ -177,7 +280,20 @@
     <span style=color:#a6e22e>instance</span>.<span style=color:#a6e22e>$el</span>.<span style=color:#a6e22e>innerHTML</span> <span style=color:#f92672>=</span> <span style=color:#e6db74>&#39;&#39;</span>
     <span style=color:#a6e22e>instance</span> <span style=color:#f92672>=</span> <span style=color:#66d9ef>null</span>
 }
-</code></pre></div><h1 id=数据传递>数据传递</h1><h2 id=存储>存储</h2><h3 id=localstorage>localStorage</h3><h3 id=documentcookie>document.cookie</h3><h2 id=父子组件传值>父子组件传值</h2><h2 id=子组件间传值>子组件间传值</h2><h1 id=路由>路由</h1><p>可任意跳转</p><h1 id=部署>部署</h1><p><img src=Micro-Frontends%20with%20qiankun%20f6f7e51842ef440ebde3ed5eb8e910ab/Untitled.png alt=Micro-Frontends%20with%20qiankun%20f6f7e51842ef440ebde3ed5eb8e910ab/Untitled.png></p><p><img src=Micro-Frontends%20with%20qiankun%20f6f7e51842ef440ebde3ed5eb8e910ab/Untitled%201.png alt=Micro-Frontends%20with%20qiankun%20f6f7e51842ef440ebde3ed5eb8e910ab/Untitled%201.png></p><h2 id=nginx-配置>NGINX 配置</h2><p>为每个项目配置服务</p><div class=highlight><pre style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-jsx data-lang=jsx><span style=color:#960050;background-color:#1e0010>#</span><span style=color:#a6e22e>主应用</span>
+</code></pre></div><h1 id=数据传递>数据传递</h1>
+<h2 id=存储>存储</h2>
+<h3 id=localstorage>localStorage</h3>
+<h3 id=documentcookie>document.cookie</h3>
+<h2 id=父子组件传值>父子组件传值</h2>
+<h2 id=子组件间传值>子组件间传值</h2>
+<h1 id=路由>路由</h1>
+<p>可任意跳转</p>
+<h1 id=部署>部署</h1>
+<p><img src=Micro-Frontends%20with%20qiankun%20f6f7e51842ef440ebde3ed5eb8e910ab/Untitled.png alt=Micro-Frontends%20with%20qiankun%20f6f7e51842ef440ebde3ed5eb8e910ab/Untitled.png></p>
+<p><img src=Micro-Frontends%20with%20qiankun%20f6f7e51842ef440ebde3ed5eb8e910ab/Untitled%201.png alt=Micro-Frontends%20with%20qiankun%20f6f7e51842ef440ebde3ed5eb8e910ab/Untitled%201.png></p>
+<h2 id=nginx-配置>NGINX 配置</h2>
+<p>为每个项目配置服务</p>
+<div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-jsx data-lang=jsx><span style=color:#960050;background-color:#1e0010>#</span><span style=color:#a6e22e>主应用</span>
                 <span style=color:#a6e22e>location</span> <span style=color:#f92672>/</span> {
                         <span style=color:#a6e22e>rewrite</span> <span style=color:#f92672>/</span><span style=color:#a6e22e>h5</span><span style=color:#f92672>/</span>(.<span style=color:#f92672>*</span>) <span style=color:#a6e22e>http</span><span style=color:#f92672>:</span><span style=color:#75715e>//10.1.62.113:8888/video-product-h5;
 </span><span style=color:#75715e></span>                        <span style=color:#66d9ef>if</span> (<span style=color:#a6e22e>$request_filename</span> <span style=color:#f92672>~*</span> <span style=color:#f92672>^</span>.<span style=color:#f92672>*?</span>.(<span style=color:#a6e22e>html</span><span style=color:#f92672>|</span><span style=color:#a6e22e>htm</span>)<span style=color:#a6e22e>$</span>) {
@@ -204,10 +320,19 @@
                         <span style=color:#a6e22e>alias</span> <span style=color:#f92672>/</span><span style=color:#a6e22e>home</span><span style=color:#f92672>/</span><span style=color:#a6e22e>ccbop</span><span style=color:#f92672>/</span><span style=color:#a6e22e>wwwRoot</span><span style=color:#f92672>/</span><span style=color:#a6e22e>ccbop</span><span style=color:#f92672>-</span><span style=color:#a6e22e>frontend</span><span style=color:#f92672>/</span><span style=color:#a6e22e>video</span><span style=color:#f92672>-</span><span style=color:#a6e22e>product</span><span style=color:#f92672>-</span><span style=color:#a6e22e>h5</span>;
                         <span style=color:#a6e22e>try_files</span> <span style=color:#a6e22e>$uri</span> <span style=color:#a6e22e>$uri</span><span style=color:#f92672>/</span> <span style=color:#960050;background-color:#1e0010>/video-product-h5/index.html;</span>
                 }
-</code></pre></div><h2 id=静态资源处理>静态资源处理</h2><p>要请求到正确的路径</p><div class=highlight><pre style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-jsx data-lang=jsx><span style=color:#75715e>// vue.config.js
+</code></pre></div><h2 id=静态资源处理>静态资源处理</h2>
+<p>要请求到正确的路径</p>
+<div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-jsx data-lang=jsx><span style=color:#75715e>// vue.config.js
 </span><span style=color:#75715e></span><span style=color:#a6e22e>module</span>.<span style=color:#a6e22e>exports</span> <span style=color:#f92672>=</span> {
     <span style=color:#a6e22e>outputDir</span><span style=color:#f92672>:</span> <span style=color:#e6db74>&#39;dist&#39;</span>,
     <span style=color:#a6e22e>assetsDir</span><span style=color:#f92672>:</span> <span style=color:#e6db74>&#39;firmStatic&#39;</span>,
 		<span style=color:#a6e22e>port</span><span style=color:#f92672>:</span> <span style=color:#ae81ff>8887</span>
 }
-</code></pre></div><p>github 链接</p></div></article></main><footer class="w-full text-center p-4 text-xs text-gray-400">copyright © 2021 - VISIONARY · All rights reserved</footer></body></html>
+</code></pre></div><p>github 链接</p>
+</div>
+</article>
+</main><footer class="w-full text-center p-4 text-xs text-gray-400">
+copyright © 2021 - VISIONARY · All rights reserved
+</footer>
+</body>
+</html>

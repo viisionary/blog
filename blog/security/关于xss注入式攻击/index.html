@@ -1,5 +1,68 @@
-<!doctype html><html lang=en-us><head><meta charset=utf-8><meta name=viewport content="width=device-width,initial-scale=1"><title>关于xss注入式攻击 - VISIONARY BLOG</title><meta name=description content="Sample article showcasing basic Markdown syntax and formatting for HTML elements."><meta name=generator content="Hugo 0.85.0"><link rel=stylesheet href=https://blog.visionary.top/css/styles.min.164cbb1508747f243f6df5c8ed21c22e9e62a67f149d1e07b8e1982526aa384c.css integrity=sha256-Fky7FQh0fyQ/bfXI7SHCLp5ipn8UnR4HuOGYJSaqOEw=><script>window.matchMedia("(prefers-color-scheme: dark)").matches?document.documentElement.classList.add("dark"):document.documentElement.classList.remove("dark")</script></head><body class="flex flex-col min-h-screen dark:bg-gray-900 dark:text-gray-100 transition-colors duration-500"><header class="w-full px-4 pt-4 max-w-5xl mx-auto"><nav class="flex items-center justify-between flex-wrap"><div class="flex gap-2 items-center"><a href=mailto:min_0610@icloud.com aria-label=EMail><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentcolor" fill="none" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><circle cx="12" cy="12" r="4"/><path d="M16 12v1.5a2.5 2.5.0 005 0V12a9 9 0 10-5.5 8.28"/></svg></a><a href=https://blog.visionary.top/ class="flex items-center font-bold">VISIONARY BLOG</a></div><ul id=nav-menu class="flex w-auto mt-0 space-x-2"><li><a href=https://blog.visionary.top/about/ class="hover:text-blue-800 dark:hover:text-blue-300">About Me</a></li><li><a href=https://blog.visionary.top/blog/ class="hover:text-blue-800 dark:hover:text-blue-300">Blogs</a></li></ul></nav></header><main class="flex-1 mx-4 md:mx-12 lg:mx-24 mt-8 sm:mt-16"><article class="mb-16 max-w-5xl mx-auto px-4"><h1>关于xss注入式攻击</h1><ul></ul><div class=post-footer><div class=info><span class=separator><a class=category href=/categories/%E6%9E%B6%E6%9E%84/>架构</a><a class=category href=/categories/%E5%BE%AE%E5%89%8D%E7%AB%AF/>微前端</a></span>
-<span class=separator><a class=tag href=/tags/%E5%89%8D%E7%AB%AF%E5%AE%89%E5%85%A8/>前端安全</a></span></div></div><div class=post-footer></div><aside class=content-aside-bar><nav id=TableOfContents><ul><li><a href=#html中-可以被注入的写法>html中 可以被注入的写法</a></li><li><a href=#react-中-使用dangerouslysetinnerhtml-渲染富文本>react 中 使用dangerouslySetInnerHTML 渲染富文本</a></li><li><a href=#xss规则过滤>xss规则过滤</a></li><li><a href=#一些注入手段>一些注入手段</a></li><li><a href=#实践>实践</a><ul><li><a href=#例子豆瓣的搜索处理>**例子：**豆瓣的搜索处理</a></li><li><a href=#例子一旦用户输入或接口提交的内容直接作为标签被渲染是十分危险的><strong>例子</strong>：一旦用户输入或接口提交的内容直接作为标签被渲染，是十分危险的</a></li></ul></li><li><a href=#-注意>⚠️ 注意</a></li></ul></nav></aside><div class="prose lg:prose-lg prose-blue dark:prose-dark"><p>xss & csrf 都是窃token cookie之类的敏感信息</p><p><a href=https://en.wikipedia.org/wiki/Cross-site_request_forgery>Cross-site request forgery - Wikipedia</a></p><h2 id=html中-可以被注入的写法>html中 可以被注入的写法</h2><div class=highlight><pre style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-html data-lang=html><span style=color:#75715e>&lt;!DOCTYPE html&gt;</span>
+<!doctype html><html lang=en-us>
+<head>
+<meta charset=utf-8>
+<meta name=viewport content="width=device-width,initial-scale=1">
+<title>
+关于xss注入式攻击 - VISIONARY BLOG
+</title>
+<meta name=description content="Sample article showcasing basic Markdown syntax and formatting for HTML elements.">
+<meta name=generator content="Hugo 0.86.0"><link rel=stylesheet href=https://blog.visionary.top/css/styles.min.164cbb1508747f243f6df5c8ed21c22e9e62a67f149d1e07b8e1982526aa384c.css integrity=sha256-Fky7FQh0fyQ/bfXI7SHCLp5ipn8UnR4HuOGYJSaqOEw=>
+<script>window.matchMedia("(prefers-color-scheme: dark)").matches?document.documentElement.classList.add("dark"):document.documentElement.classList.remove("dark")</script>
+</head>
+<body class="flex flex-col min-h-screen dark:bg-gray-900 dark:text-gray-100 transition-colors duration-500"><header class="w-full px-4 pt-4 max-w-5xl mx-auto">
+<nav class="flex items-center justify-between flex-wrap">
+<div class="flex gap-2 items-center">
+<a href=mailto:min_0610@icloud.com aria-label=EMail><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentcolor" fill="none" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><circle cx="12" cy="12" r="4"/><path d="M16 12v1.5a2.5 2.5.0 005 0V12a9 9 0 10-5.5 8.28"/></svg>
+</a>
+<a href=https://blog.visionary.top/ class="flex items-center font-bold">
+VISIONARY BLOG
+</a>
+</div>
+<ul id=nav-menu class="flex w-auto mt-0 space-x-2">
+<li>
+<a href=https://blog.visionary.top/about/ class="hover:text-blue-800 dark:hover:text-blue-300">About Me</a>
+</li>
+<li>
+<a href=https://blog.visionary.top/blog/ class="hover:text-blue-800 dark:hover:text-blue-300">Blogs</a>
+</li>
+</ul>
+</nav>
+</header>
+<main class="flex-1 mx-4 md:mx-12 lg:mx-24 mt-8 sm:mt-16">
+<article class="mb-16 max-w-5xl mx-auto px-4">
+<h1>关于xss注入式攻击</h1>
+<ul>
+</ul>
+<div class=post-footer>
+<div class=info>
+<span class=separator><a class=category href=/categories/%E6%9E%B6%E6%9E%84/>架构</a><a class=category href=/categories/%E5%BE%AE%E5%89%8D%E7%AB%AF/>微前端</a></span>
+<span class=separator><a class=tag href=/tags/%E5%89%8D%E7%AB%AF%E5%AE%89%E5%85%A8/>前端安全</a></span>
+</div>
+</div>
+<div class=post-footer>
+</div>
+<aside class=content-aside-bar>
+<nav id=TableOfContents>
+<ul>
+<li><a href=#html中-可以被注入的写法>html中 可以被注入的写法</a></li>
+<li><a href=#react-中-使用dangerouslysetinnerhtml-渲染富文本>react 中 使用dangerouslySetInnerHTML 渲染富文本</a></li>
+<li><a href=#xss规则过滤>xss规则过滤</a></li>
+<li><a href=#一些注入手段>一些注入手段</a></li>
+<li><a href=#实践>实践</a>
+<ul>
+<li><a href=#例子豆瓣的搜索处理>**例子：**豆瓣的搜索处理</a></li>
+<li><a href=#例子一旦用户输入或接口提交的内容直接作为标签被渲染是十分危险的><strong>例子</strong>：一旦用户输入或接口提交的内容直接作为标签被渲染，是十分危险的</a></li>
+</ul>
+</li>
+<li><a href=#-注意>⚠️ 注意</a></li>
+</ul>
+</nav>
+</aside>
+<div class="prose lg:prose-lg prose-blue dark:prose-dark">
+<p>xss & csrf 都是窃token cookie之类的敏感信息</p>
+<p><a href=https://en.wikipedia.org/wiki/Cross-site_request_forgery>Cross-site request forgery - Wikipedia</a></p>
+<h2 id=html中-可以被注入的写法>html中 可以被注入的写法</h2>
+<div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-html data-lang=html><span style=color:#75715e>&lt;!DOCTYPE html&gt;</span>
 &lt;<span style=color:#f92672>html</span>&gt;
 &lt;<span style=color:#f92672>head</span>&gt;
 	&lt;<span style=color:#f92672>meta</span> <span style=color:#a6e22e>charset</span><span style=color:#f92672>=</span><span style=color:#e6db74>&#34;utf-8&#34;</span>&gt;
@@ -25,7 +88,8 @@ document.<span style=color:#a6e22e>write</span>(<span style=color:#a6e22e>xss</s
 <span style=color:#a6e22e>container</span>.<span style=color:#a6e22e>outerHTML</span><span style=color:#f92672>=</span><span style=color:#a6e22e>img</span>;
 &lt;/<span style=color:#f92672>script</span>&gt;
 &lt;/<span style=color:#f92672>html</span>&gt;
-</code></pre></div><h2 id=react-中-使用dangerouslysetinnerhtml-渲染富文本>react 中 使用dangerouslySetInnerHTML 渲染富文本</h2><div class=highlight><pre style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-jsx data-lang=jsx>&lt;&gt;
+</code></pre></div><h2 id=react-中-使用dangerouslysetinnerhtml-渲染富文本>react 中 使用dangerouslySetInnerHTML 渲染富文本</h2>
+<div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-jsx data-lang=jsx>&lt;&gt;
 <span style=color:#75715e>// 直接写标签会被react渲染成
 </span><span style=color:#75715e></span>			&lt;<span style=color:#f92672>p</span>
 				<span style=color:#a6e22e>dangerouslySetInnerHTML</span><span style=color:#f92672>=</span>{{
@@ -44,17 +108,21 @@ document.<span style=color:#a6e22e>write</span>(<span style=color:#a6e22e>xss</s
 <span style=color:#75715e>// 直接就是字符串
 </span><span style=color:#75715e></span>			{<span style=color:#e6db74>&#39;&lt;img src=&#34;&#34; alt=&#34;&#34; onError={alert(12)} /&gt;&#39;</span>}
 		&lt;/&gt;
-</code></pre></div><p><img src=%E5%85%B3%E4%BA%8Exss%E6%B3%A8%E5%85%A5%E5%BC%8F%E6%94%BB%E5%87%BB%20d71051ed2f464824a10f3eaa7399b05a/Untitled.png alt=%E5%85%B3%E4%BA%8Exss%E6%B3%A8%E5%85%A5%E5%BC%8F%E6%94%BB%E5%87%BB%20d71051ed2f464824a10f3eaa7399b05a/Untitled.png></p><h2 id=xss规则过滤>xss规则过滤</h2><div class=highlight><pre style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-jsx data-lang=jsx><span style=color:#66d9ef>function</span> <span style=color:#a6e22e>validSpeVal</span>(<span style=color:#a6e22e>val</span>) {
+</code></pre></div><p><img src=%E5%85%B3%E4%BA%8Exss%E6%B3%A8%E5%85%A5%E5%BC%8F%E6%94%BB%E5%87%BB%20d71051ed2f464824a10f3eaa7399b05a/Untitled.png alt=%E5%85%B3%E4%BA%8Exss%E6%B3%A8%E5%85%A5%E5%BC%8F%E6%94%BB%E5%87%BB%20d71051ed2f464824a10f3eaa7399b05a/Untitled.png></p>
+<h2 id=xss规则过滤>xss规则过滤</h2>
+<div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-jsx data-lang=jsx><span style=color:#66d9ef>function</span> <span style=color:#a6e22e>validSpeVal</span>(<span style=color:#a6e22e>val</span>) {
   <span style=color:#66d9ef>return</span> <span style=color:#a6e22e>val</span>.<span style=color:#a6e22e>replace</span>(<span style=color:#e6db74>/&amp;/g</span>, <span style=color:#e6db74>&#39;&amp;amp;&#39;</span>).<span style=color:#a6e22e>replace</span>(<span style=color:#e6db74>/&lt;/g</span>, <span style=color:#e6db74>&#39;&amp;lt;&#39;</span>).<span style=color:#a6e22e>replace</span>(<span style=color:#e6db74>/&gt;/g</span>, <span style=color:#e6db74>&#39;&amp;gt;&#39;</span>).<span style=color:#a6e22e>replace</span>(<span style=color:#e6db74>/&#34;/g</span>, <span style=color:#e6db74>&#39;&amp;quot;&#39;</span>)
   .<span style=color:#a6e22e>replace</span>(<span style=color:#e6db74>/&#39;/g</span>, <span style=color:#e6db74>&#34;&amp;apos;&#34;</span>).<span style=color:#a6e22e>replace</span>(<span style=color:#e6db74>/ /g</span>, <span style=color:#e6db74>&#34;&amp;nbsp;&#34;</span>);
 }
-</code></pre></div><h2 id=一些注入手段>一些注入手段</h2><p>比较古早 一般渲染富文本的地方有戏</p><div class=highlight><pre style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-html data-lang=html>// 用户输入 通过提前闭合标签
+</code></pre></div><h2 id=一些注入手段>一些注入手段</h2>
+<p>比较古早 一般渲染富文本的地方有戏</p>
+<div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-html data-lang=html>// 用户输入 通过提前闭合标签
 要是反给前端 前端还渲染了【document.write()】 就会alert
 &gt;&lt;<span style=color:#f92672>script</span>&gt;<span style=color:#a6e22e>alert</span>(<span style=color:#e6db74>&#39;XSS&#39;</span>);&lt;/<span style=color:#f92672>script</span>&gt;
-</code></pre></div><div class=highlight><pre style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-html data-lang=html>&lt;<span style=color:#f92672>a</span> <span style=color:#a6e22e>href</span><span style=color:#f92672>=</span><span style=color:#e6db74>&#34;javascript:alert(&amp;#x27;XSS&amp;#x27;)&#34;</span>&gt;跳转...&lt;/<span style=color:#f92672>a</span>&gt;
-</code></pre></div><div class=highlight><pre style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-html data-lang=html>element内可以直接加
+</code></pre></div><div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-html data-lang=html>&lt;<span style=color:#f92672>a</span> <span style=color:#a6e22e>href</span><span style=color:#f92672>=</span><span style=color:#e6db74>&#34;javascript:alert(&amp;#x27;XSS&amp;#x27;)&#34;</span>&gt;跳转...&lt;/<span style=color:#f92672>a</span>&gt;
+</code></pre></div><div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-html data-lang=html>element内可以直接加
 &lt;<span style=color:#f92672>img</span> <span style=color:#a6e22e>src</span><span style=color:#f92672>=</span><span style=color:#e6db74>&#34;/static/level3/cloud1.jpg&#34;</span> <span style=color:#a6e22e>onload</span><span style=color:#f92672>=</span><span style=color:#e6db74>&#34;{alert(1)}&#34;</span>&gt;
-</code></pre></div><div class=highlight><pre style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-jsx data-lang=jsx><span style=color:#66d9ef>function</span> <span style=color:#a6e22e>startTimer</span>(<span style=color:#a6e22e>seconds</span>) {
+</code></pre></div><div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-jsx data-lang=jsx><span style=color:#66d9ef>function</span> <span style=color:#a6e22e>startTimer</span>(<span style=color:#a6e22e>seconds</span>) {
         <span style=color:#a6e22e>seconds</span> <span style=color:#f92672>=</span> parseInt(<span style=color:#a6e22e>seconds</span>) <span style=color:#f92672>||</span> <span style=color:#ae81ff>3</span>;
         <span style=color:#a6e22e>setTimeout</span>(<span style=color:#66d9ef>function</span>() { 
           window.<span style=color:#a6e22e>confirm</span>(<span style=color:#e6db74>&#34;Time is up!&#34;</span>);
@@ -66,10 +134,32 @@ document.<span style=color:#a6e22e>write</span>(<span style=color:#a6e22e>xss</s
 </span><span style=color:#75715e>// startTimer(3)
 </span><span style=color:#75715e>// &#39;)+alert(1)+(&#39;
 </span><span style=color:#75715e></span><span style=color:#a6e22e>startTimer</span>(<span style=color:#e6db74>&#39;&#39;</span>)<span style=color:#f92672>+</span><span style=color:#a6e22e>alert</span>(<span style=color:#ae81ff>1</span>)<span style=color:#f92672>+</span>(<span style=color:#e6db74>&#39;&#39;</span>);
-</code></pre></div><div class=highlight><pre style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-jsx data-lang=jsx><span style=color:#a6e22e>大小写绕过</span>
+</code></pre></div><div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-jsx data-lang=jsx><span style=color:#a6e22e>大小写绕过</span>
 &lt;<span style=color:#f92672>SCript</span>&gt;&lt;/<span style=color:#f92672>sCript</span>&gt;
-</code></pre></div><p>能执行脚本的话可以怎么攻击？</p><div class=highlight><pre style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-jsx data-lang=jsx><span style=color:#75715e>// 劫持流量实现恶意跳转
+</code></pre></div><p>能执行脚本的话可以怎么攻击？</p>
+<div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-jsx data-lang=jsx><span style=color:#75715e>// 劫持流量实现恶意跳转
 </span><span style=color:#75715e></span>&lt;<span style=color:#f92672>script</span>&gt;window.<span style=color:#a6e22e>location</span>.<span style=color:#a6e22e>href</span><span style=color:#f92672>=</span><span style=color:#e6db74>&#34;http://www.baidu.com&#34;</span>;&lt;/<span style=color:#f92672>script</span>&gt;
 
 <span style=color:#75715e>// 窃取敏感信息 token.. cookie等等
-</span></code></pre></div><p>等&mldr;</p><h2 id=实践>实践</h2><h3 id=例子豆瓣的搜索处理>**例子：**豆瓣的搜索处理</h3><p>通过search input 渲染到页面的时候 url encode，正文用Entities</p><p><img src=%E5%85%B3%E4%BA%8Exss%E6%B3%A8%E5%85%A5%E5%BC%8F%E6%94%BB%E5%87%BB%20d71051ed2f464824a10f3eaa7399b05a/Untitled%201.png alt=%E5%85%B3%E4%BA%8Exss%E6%B3%A8%E5%85%A5%E5%BC%8F%E6%94%BB%E5%87%BB%20d71051ed2f464824a10f3eaa7399b05a/Untitled%201.png></p><p><img src=%E5%85%B3%E4%BA%8Exss%E6%B3%A8%E5%85%A5%E5%BC%8F%E6%94%BB%E5%87%BB%20d71051ed2f464824a10f3eaa7399b05a/Untitled%202.png alt=%E5%85%B3%E4%BA%8Exss%E6%B3%A8%E5%85%A5%E5%BC%8F%E6%94%BB%E5%87%BB%20d71051ed2f464824a10f3eaa7399b05a/Untitled%202.png></p><p><img src=%E5%85%B3%E4%BA%8Exss%E6%B3%A8%E5%85%A5%E5%BC%8F%E6%94%BB%E5%87%BB%20d71051ed2f464824a10f3eaa7399b05a/Untitled%203.png alt=%E5%85%B3%E4%BA%8Exss%E6%B3%A8%E5%85%A5%E5%BC%8F%E6%94%BB%E5%87%BB%20d71051ed2f464824a10f3eaa7399b05a/Untitled%203.png></p><p><img src=%E5%85%B3%E4%BA%8Exss%E6%B3%A8%E5%85%A5%E5%BC%8F%E6%94%BB%E5%87%BB%20d71051ed2f464824a10f3eaa7399b05a/Untitled%204.png alt=%E5%85%B3%E4%BA%8Exss%E6%B3%A8%E5%85%A5%E5%BC%8F%E6%94%BB%E5%87%BB%20d71051ed2f464824a10f3eaa7399b05a/Untitled%204.png></p><p>前端的过滤容易被绕过，所以后端也应该处理</p><h3 id=例子一旦用户输入或接口提交的内容直接作为标签被渲染是十分危险的><strong>例子</strong>：一旦用户输入或接口提交的内容直接作为标签被渲染，是十分危险的</h3><p><img src=%E5%85%B3%E4%BA%8Exss%E6%B3%A8%E5%85%A5%E5%BC%8F%E6%94%BB%E5%87%BB%20d71051ed2f464824a10f3eaa7399b05a/Untitled%205.png alt=%E5%85%B3%E4%BA%8Exss%E6%B3%A8%E5%85%A5%E5%BC%8F%E6%94%BB%E5%87%BB%20d71051ed2f464824a10f3eaa7399b05a/Untitled%205.png></p><p>**情景：**某个hacker可以发表这个链接， 然后分享给其他已登录网站的用户 用户一旦被诱导点击 hacker就可以拿到cookie模拟该用户操作</p><p>一般 一个用户可以提交且入库【或携带脚本在url（encode之类已避免）】 ，可以对其他用户可见，触发脚本执行才OK。</p><h2 id=-注意>⚠️ 注意</h2><p>用户的输入&url 在渲染在页面上的时候【如：前端使用 innerHTML或dangerouslySetInnerHTML 】应过滤 或禁止输入</p></div></article></main><footer class="w-full text-center p-4 text-xs text-gray-400">copyright © 2021 - VISIONARY · All rights reserved</footer></body></html>
+</span></code></pre></div><p>等&mldr;</p>
+<h2 id=实践>实践</h2>
+<h3 id=例子豆瓣的搜索处理>**例子：**豆瓣的搜索处理</h3>
+<p>通过search input 渲染到页面的时候 url encode，正文用Entities</p>
+<p><img src=%E5%85%B3%E4%BA%8Exss%E6%B3%A8%E5%85%A5%E5%BC%8F%E6%94%BB%E5%87%BB%20d71051ed2f464824a10f3eaa7399b05a/Untitled%201.png alt=%E5%85%B3%E4%BA%8Exss%E6%B3%A8%E5%85%A5%E5%BC%8F%E6%94%BB%E5%87%BB%20d71051ed2f464824a10f3eaa7399b05a/Untitled%201.png></p>
+<p><img src=%E5%85%B3%E4%BA%8Exss%E6%B3%A8%E5%85%A5%E5%BC%8F%E6%94%BB%E5%87%BB%20d71051ed2f464824a10f3eaa7399b05a/Untitled%202.png alt=%E5%85%B3%E4%BA%8Exss%E6%B3%A8%E5%85%A5%E5%BC%8F%E6%94%BB%E5%87%BB%20d71051ed2f464824a10f3eaa7399b05a/Untitled%202.png></p>
+<p><img src=%E5%85%B3%E4%BA%8Exss%E6%B3%A8%E5%85%A5%E5%BC%8F%E6%94%BB%E5%87%BB%20d71051ed2f464824a10f3eaa7399b05a/Untitled%203.png alt=%E5%85%B3%E4%BA%8Exss%E6%B3%A8%E5%85%A5%E5%BC%8F%E6%94%BB%E5%87%BB%20d71051ed2f464824a10f3eaa7399b05a/Untitled%203.png></p>
+<p><img src=%E5%85%B3%E4%BA%8Exss%E6%B3%A8%E5%85%A5%E5%BC%8F%E6%94%BB%E5%87%BB%20d71051ed2f464824a10f3eaa7399b05a/Untitled%204.png alt=%E5%85%B3%E4%BA%8Exss%E6%B3%A8%E5%85%A5%E5%BC%8F%E6%94%BB%E5%87%BB%20d71051ed2f464824a10f3eaa7399b05a/Untitled%204.png></p>
+<p>前端的过滤容易被绕过，所以后端也应该处理</p>
+<h3 id=例子一旦用户输入或接口提交的内容直接作为标签被渲染是十分危险的><strong>例子</strong>：一旦用户输入或接口提交的内容直接作为标签被渲染，是十分危险的</h3>
+<p><img src=%E5%85%B3%E4%BA%8Exss%E6%B3%A8%E5%85%A5%E5%BC%8F%E6%94%BB%E5%87%BB%20d71051ed2f464824a10f3eaa7399b05a/Untitled%205.png alt=%E5%85%B3%E4%BA%8Exss%E6%B3%A8%E5%85%A5%E5%BC%8F%E6%94%BB%E5%87%BB%20d71051ed2f464824a10f3eaa7399b05a/Untitled%205.png></p>
+<p>**情景：**某个hacker可以发表这个链接， 然后分享给其他已登录网站的用户 用户一旦被诱导点击 hacker就可以拿到cookie模拟该用户操作</p>
+<p>一般 一个用户可以提交且入库【或携带脚本在url（encode之类已避免）】 ，可以对其他用户可见，触发脚本执行才OK。</p>
+<h2 id=-注意>⚠️ 注意</h2>
+<p>用户的输入&url 在渲染在页面上的时候【如：前端使用 innerHTML或dangerouslySetInnerHTML 】应过滤 或禁止输入</p>
+</div>
+</article>
+</main><footer class="w-full text-center p-4 text-xs text-gray-400">
+copyright © 2021 - VISIONARY · All rights reserved
+</footer>
+</body>
+</html>

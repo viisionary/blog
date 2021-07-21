@@ -1,4 +1,85 @@
-<!doctype html><html lang=en-us><head><meta charset=utf-8><meta name=viewport content="width=device-width,initial-scale=1"><title>如何使用Whistle抓包 - VISIONARY BLOG</title><meta name=description content="Sample article showcasing basic Markdown syntax and formatting for HTML elements."><meta name=generator content="Hugo 0.85.0"><link rel=stylesheet href=https://blog.visionary.top/css/styles.min.164cbb1508747f243f6df5c8ed21c22e9e62a67f149d1e07b8e1982526aa384c.css integrity=sha256-Fky7FQh0fyQ/bfXI7SHCLp5ipn8UnR4HuOGYJSaqOEw=><script>window.matchMedia("(prefers-color-scheme: dark)").matches?document.documentElement.classList.add("dark"):document.documentElement.classList.remove("dark")</script></head><body class="flex flex-col min-h-screen dark:bg-gray-900 dark:text-gray-100 transition-colors duration-500"><header class="w-full px-4 pt-4 max-w-5xl mx-auto"><nav class="flex items-center justify-between flex-wrap"><div class="flex gap-2 items-center"><a href=mailto:min_0610@icloud.com aria-label=EMail><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentcolor" fill="none" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><circle cx="12" cy="12" r="4"/><path d="M16 12v1.5a2.5 2.5.0 005 0V12a9 9 0 10-5.5 8.28"/></svg></a><a href=https://blog.visionary.top/ class="flex items-center font-bold">VISIONARY BLOG</a></div><ul id=nav-menu class="flex w-auto mt-0 space-x-2"><li><a href=https://blog.visionary.top/about/ class="hover:text-blue-800 dark:hover:text-blue-300">About Me</a></li><li><a href=https://blog.visionary.top/blog/ class="hover:text-blue-800 dark:hover:text-blue-300">Blogs</a></li></ul></nav></header><main class="flex-1 mx-4 md:mx-12 lg:mx-24 mt-8 sm:mt-16"><article class="mb-16 max-w-5xl mx-auto px-4"><h1>如何使用Whistle抓包</h1><ul></ul><div class=post-footer><div class=info><span class=separator><a class=category href=/categories/%E6%9E%B6%E6%9E%84/>架构</a><a class=category href=/categories/%E5%BE%AE%E5%89%8D%E7%AB%AF/>微前端</a></span>
-<span class=separator><a class=tag href=/tags/%E5%89%8D%E7%AB%AF%E5%AE%89%E5%85%A8/>前端安全</a></span></div></div><div class=post-footer></div><aside class=content-aside-bar><nav id=TableOfContents><ul><li><ul><li><a href=#配置>配置</a></li><li><a href=#启动>启动</a></li></ul></li></ul></nav></aside><div class="prose lg:prose-lg prose-blue dark:prose-dark"><p>xss & csrf 都是窃token cookie之类的敏感信息</p><p><a href=https://en.wikipedia.org/wiki/Cross-site_request_forgery>Cross-site request forgery - Wikipedia</a></p><h1 id=如何使用whistle抓包>如何使用Whistle抓包</h1><blockquote><p>抓包工具</p></blockquote><p><a href=https://wproxy.org/whistle/>关于whistle</a></p><p>📖</p><hr><hr><h1 id=安装whistle>安装whistle</h1><div class=highlight><pre style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-bash data-lang=bash>npm install -g whistle
-</code></pre></div><h1 id=安装-chrome-插件switchyomega>安装 Chrome 插件SwitchyOmega</h1><h3 id=配置>配置</h3><p><img src=%E5%A6%82%E4%BD%95%E4%BD%BF%E7%94%A8Whistle%E6%8A%93%E5%8C%85%20af3be691cfd1472a9dfbecd05a0e0769/Untitled.png alt=%E5%A6%82%E4%BD%95%E4%BD%BF%E7%94%A8Whistle%E6%8A%93%E5%8C%85%20af3be691cfd1472a9dfbecd05a0e0769/Untitled.png></p><h3 id=启动>启动</h3><p><img src=%E5%A6%82%E4%BD%95%E4%BD%BF%E7%94%A8Whistle%E6%8A%93%E5%8C%85%20af3be691cfd1472a9dfbecd05a0e0769/Untitled%201.png alt=%E5%A6%82%E4%BD%95%E4%BD%BF%E7%94%A8Whistle%E6%8A%93%E5%8C%85%20af3be691cfd1472a9dfbecd05a0e0769/Untitled%201.png></p><p>reqMerge</p><p><a href=http://wproxy.org/whistle/rules/reqMerge.html>reqMerge</a></p><p>修改表单请求的内容，包括普通的表单、上传表单及请求类型为JSON的内容(Content-Type: application/json)</p><div class=highlight><pre style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-jsx data-lang=jsx><span style=color:#a6e22e>www</span>.<span style=color:#a6e22e>test</span>.<span style=color:#a6e22e>com</span><span style=color:#f92672>/</span><span style=color:#a6e22e>cgi</span><span style=color:#f92672>-</span><span style=color:#a6e22e>bin</span><span style=color:#f92672>/</span><span style=color:#a6e22e>get</span><span style=color:#f92672>-</span><span style=color:#a6e22e>data</span> <span style=color:#a6e22e>reqMerge</span><span style=color:#f92672>:</span><span style=color:#75715e>//(a=1&amp;b=2)
-</span></code></pre></div><p>w2 run</p></div></article></main><footer class="w-full text-center p-4 text-xs text-gray-400">copyright © 2021 - VISIONARY · All rights reserved</footer></body></html>
+<!doctype html><html lang=en-us>
+<head>
+<meta charset=utf-8>
+<meta name=viewport content="width=device-width,initial-scale=1">
+<title>
+如何使用Whistle抓包 - VISIONARY BLOG
+</title>
+<meta name=description content="Sample article showcasing basic Markdown syntax and formatting for HTML elements.">
+<meta name=generator content="Hugo 0.86.0"><link rel=stylesheet href=https://blog.visionary.top/css/styles.min.164cbb1508747f243f6df5c8ed21c22e9e62a67f149d1e07b8e1982526aa384c.css integrity=sha256-Fky7FQh0fyQ/bfXI7SHCLp5ipn8UnR4HuOGYJSaqOEw=>
+<script>window.matchMedia("(prefers-color-scheme: dark)").matches?document.documentElement.classList.add("dark"):document.documentElement.classList.remove("dark")</script>
+</head>
+<body class="flex flex-col min-h-screen dark:bg-gray-900 dark:text-gray-100 transition-colors duration-500"><header class="w-full px-4 pt-4 max-w-5xl mx-auto">
+<nav class="flex items-center justify-between flex-wrap">
+<div class="flex gap-2 items-center">
+<a href=mailto:min_0610@icloud.com aria-label=EMail><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentcolor" fill="none" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><circle cx="12" cy="12" r="4"/><path d="M16 12v1.5a2.5 2.5.0 005 0V12a9 9 0 10-5.5 8.28"/></svg>
+</a>
+<a href=https://blog.visionary.top/ class="flex items-center font-bold">
+VISIONARY BLOG
+</a>
+</div>
+<ul id=nav-menu class="flex w-auto mt-0 space-x-2">
+<li>
+<a href=https://blog.visionary.top/about/ class="hover:text-blue-800 dark:hover:text-blue-300">About Me</a>
+</li>
+<li>
+<a href=https://blog.visionary.top/blog/ class="hover:text-blue-800 dark:hover:text-blue-300">Blogs</a>
+</li>
+</ul>
+</nav>
+</header>
+<main class="flex-1 mx-4 md:mx-12 lg:mx-24 mt-8 sm:mt-16">
+<article class="mb-16 max-w-5xl mx-auto px-4">
+<h1>如何使用Whistle抓包</h1>
+<ul>
+</ul>
+<div class=post-footer>
+<div class=info>
+<span class=separator><a class=category href=/categories/%E6%9E%B6%E6%9E%84/>架构</a><a class=category href=/categories/%E5%BE%AE%E5%89%8D%E7%AB%AF/>微前端</a></span>
+<span class=separator><a class=tag href=/tags/%E5%89%8D%E7%AB%AF%E5%AE%89%E5%85%A8/>前端安全</a></span>
+</div>
+</div>
+<div class=post-footer>
+</div>
+<aside class=content-aside-bar>
+<nav id=TableOfContents>
+<ul>
+<li>
+<ul>
+<li><a href=#配置>配置</a></li>
+<li><a href=#启动>启动</a></li>
+</ul>
+</li>
+</ul>
+</nav>
+</aside>
+<div class="prose lg:prose-lg prose-blue dark:prose-dark">
+<p>xss & csrf 都是窃token cookie之类的敏感信息</p>
+<p><a href=https://en.wikipedia.org/wiki/Cross-site_request_forgery>Cross-site request forgery - Wikipedia</a></p>
+<h1 id=如何使用whistle抓包>如何使用Whistle抓包</h1>
+<blockquote>
+<p>抓包工具</p>
+</blockquote>
+<p><a href=https://wproxy.org/whistle/>关于whistle</a></p>
+<p>📖</p>
+<hr>
+<hr>
+<h1 id=安装whistle>安装whistle</h1>
+<div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-bash data-lang=bash>npm install -g whistle
+</code></pre></div><h1 id=安装-chrome-插件switchyomega>安装 Chrome 插件SwitchyOmega</h1>
+<h3 id=配置>配置</h3>
+<p><img src=%E5%A6%82%E4%BD%95%E4%BD%BF%E7%94%A8Whistle%E6%8A%93%E5%8C%85%20af3be691cfd1472a9dfbecd05a0e0769/Untitled.png alt=%E5%A6%82%E4%BD%95%E4%BD%BF%E7%94%A8Whistle%E6%8A%93%E5%8C%85%20af3be691cfd1472a9dfbecd05a0e0769/Untitled.png></p>
+<h3 id=启动>启动</h3>
+<p><img src=%E5%A6%82%E4%BD%95%E4%BD%BF%E7%94%A8Whistle%E6%8A%93%E5%8C%85%20af3be691cfd1472a9dfbecd05a0e0769/Untitled%201.png alt=%E5%A6%82%E4%BD%95%E4%BD%BF%E7%94%A8Whistle%E6%8A%93%E5%8C%85%20af3be691cfd1472a9dfbecd05a0e0769/Untitled%201.png></p>
+<p>reqMerge</p>
+<p><a href=http://wproxy.org/whistle/rules/reqMerge.html>reqMerge</a></p>
+<p>修改表单请求的内容，包括普通的表单、上传表单及请求类型为JSON的内容(Content-Type: application/json)</p>
+<div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-jsx data-lang=jsx><span style=color:#a6e22e>www</span>.<span style=color:#a6e22e>test</span>.<span style=color:#a6e22e>com</span><span style=color:#f92672>/</span><span style=color:#a6e22e>cgi</span><span style=color:#f92672>-</span><span style=color:#a6e22e>bin</span><span style=color:#f92672>/</span><span style=color:#a6e22e>get</span><span style=color:#f92672>-</span><span style=color:#a6e22e>data</span> <span style=color:#a6e22e>reqMerge</span><span style=color:#f92672>:</span><span style=color:#75715e>//(a=1&amp;b=2)
+</span></code></pre></div><p>w2 run</p>
+</div>
+</article>
+</main><footer class="w-full text-center p-4 text-xs text-gray-400">
+copyright © 2021 - VISIONARY · All rights reserved
+</footer>
+</body>
+</html>

@@ -1,27 +1,133 @@
-<!doctype html><html lang=en-us><head><meta charset=utf-8><meta name=viewport content="width=device-width,initial-scale=1"><title>react 源码阅读 - 流程 - VISIONARY BLOG</title><meta name=generator content="Hugo 0.85.0"><link rel=stylesheet href=https://blog.visionary.top/css/styles.min.164cbb1508747f243f6df5c8ed21c22e9e62a67f149d1e07b8e1982526aa384c.css integrity=sha256-Fky7FQh0fyQ/bfXI7SHCLp5ipn8UnR4HuOGYJSaqOEw=><script>window.matchMedia("(prefers-color-scheme: dark)").matches?document.documentElement.classList.add("dark"):document.documentElement.classList.remove("dark")</script></head><body class="flex flex-col min-h-screen dark:bg-gray-900 dark:text-gray-100 transition-colors duration-500"><header class="w-full px-4 pt-4 max-w-5xl mx-auto"><nav class="flex items-center justify-between flex-wrap"><div class="flex gap-2 items-center"><a href=mailto:min_0610@icloud.com aria-label=EMail><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentcolor" fill="none" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><circle cx="12" cy="12" r="4"/><path d="M16 12v1.5a2.5 2.5.0 005 0V12a9 9 0 10-5.5 8.28"/></svg></a><a href=https://blog.visionary.top/ class="flex items-center font-bold">VISIONARY BLOG</a></div><ul id=nav-menu class="flex w-auto mt-0 space-x-2"><li><a href=https://blog.visionary.top/about/ class="hover:text-blue-800 dark:hover:text-blue-300">About Me</a></li><li><a href=https://blog.visionary.top/blog/ class="hover:text-blue-800 dark:hover:text-blue-300">Blogs</a></li></ul></nav></header><main class="flex-1 mx-4 md:mx-12 lg:mx-24 mt-8 sm:mt-16"><article class="mb-16 max-w-5xl mx-auto px-4"><h1>react 源码阅读 - 流程</h1><ul></ul><div class=post-footer><div class=info><span class=separator><a class=category href=/categories/react/>react</a><a class=category href=/categories/%E6%BA%90%E7%A0%81/>源码</a></span></div></div><div class=post-footer></div><aside class=content-aside-bar><nav id=TableOfContents><ul><li><a href=#双缓存---fiber树-由fiber-node组成>双缓存 - Fiber树 【由fiber Node组成】</a></li><li><a href=#trigger-api>trigger api</a></li><li><a href=#scheduled-render>scheduled render</a><ul><li><a href=#beginwork>beginWork</a></li><li><a href=#completework>completeWork</a></li></ul></li><li><a href=#commit>commit</a></li></ul></nav></aside><div class="prose lg:prose-lg prose-blue dark:prose-dark"><p>React16架构</p><ul><li>scheduler 调度 【v15没有】<blockquote><p>调度任务的优先级，高优任务优先进入Reconciler
+<!doctype html><html lang=en-us>
+<head>
+<meta charset=utf-8>
+<meta name=viewport content="width=device-width,initial-scale=1">
+<title>
+react 源码阅读 - 流程 - VISIONARY BLOG
+</title><meta name=generator content="Hugo 0.86.0"><link rel=stylesheet href=https://blog.visionary.top/css/styles.min.164cbb1508747f243f6df5c8ed21c22e9e62a67f149d1e07b8e1982526aa384c.css integrity=sha256-Fky7FQh0fyQ/bfXI7SHCLp5ipn8UnR4HuOGYJSaqOEw=>
+<script>window.matchMedia("(prefers-color-scheme: dark)").matches?document.documentElement.classList.add("dark"):document.documentElement.classList.remove("dark")</script>
+</head>
+<body class="flex flex-col min-h-screen dark:bg-gray-900 dark:text-gray-100 transition-colors duration-500"><header class="w-full px-4 pt-4 max-w-5xl mx-auto">
+<nav class="flex items-center justify-between flex-wrap">
+<div class="flex gap-2 items-center">
+<a href=mailto:min_0610@icloud.com aria-label=EMail><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentcolor" fill="none" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><circle cx="12" cy="12" r="4"/><path d="M16 12v1.5a2.5 2.5.0 005 0V12a9 9 0 10-5.5 8.28"/></svg>
+</a>
+<a href=https://blog.visionary.top/ class="flex items-center font-bold">
+VISIONARY BLOG
+</a>
+</div>
+<ul id=nav-menu class="flex w-auto mt-0 space-x-2">
+<li>
+<a href=https://blog.visionary.top/about/ class="hover:text-blue-800 dark:hover:text-blue-300">About Me</a>
+</li>
+<li>
+<a href=https://blog.visionary.top/blog/ class="hover:text-blue-800 dark:hover:text-blue-300">Blogs</a>
+</li>
+</ul>
+</nav>
+</header>
+<main class="flex-1 mx-4 md:mx-12 lg:mx-24 mt-8 sm:mt-16">
+<article class="mb-16 max-w-5xl mx-auto px-4">
+<h1>react 源码阅读 - 流程</h1>
+<ul>
+</ul>
+<div class=post-footer>
+<div class=info>
+<span class=separator><a class=category href=/categories/react/>react</a><a class=category href=/categories/%E6%BA%90%E7%A0%81/>源码</a></span>
+</div>
+</div>
+<div class=post-footer>
+</div>
+<aside class=content-aside-bar>
+<nav id=TableOfContents>
+<ul>
+<li><a href=#双缓存---fiber树-由fiber-node组成>双缓存 - Fiber树 【由fiber Node组成】</a></li>
+<li><a href=#trigger-api>trigger api</a></li>
+<li><a href=#scheduled-render>scheduled render</a>
+<ul>
+<li><a href=#beginwork>beginWork</a></li>
+<li><a href=#completework>completeWork</a></li>
+</ul>
+</li>
+<li><a href=#commit>commit</a></li>
+</ul>
+</nav>
+</aside>
+<div class="prose lg:prose-lg prose-blue dark:prose-dark">
+<p>React16架构</p>
+<ul>
+<li>scheduler 调度 【v15没有】
+<blockquote>
+<p>调度任务的优先级，高优任务优先进入Reconciler
 到底是怎么调度的？
-react v18的并发模式 Concurrent Mode</p></blockquote></li><li>reconciler 协调<blockquote><p>负责找出变化的组件</p></blockquote></li><li>renderer 渲染<blockquote><p>负责将变化的组件渲染到页面上</p></blockquote></li></ul><h2 id=双缓存---fiber树-由fiber-node组成>双缓存 - Fiber树 【由fiber Node组成】</h2><blockquote><pre><code>           1. current
+react v18的并发模式 Concurrent Mode</p>
+</blockquote>
+</li>
+<li>reconciler 协调
+<blockquote>
+<p>负责找出变化的组件</p>
+</blockquote>
+</li>
+<li>renderer 渲染
+<blockquote>
+<p>负责将变化的组件渲染到页面上</p>
+</blockquote>
+</li>
+</ul>
+<h2 id=双缓存---fiber树-由fiber-node组成>双缓存 - Fiber树 【由fiber Node组成】</h2>
+<blockquote>
+<pre><code>           1. current
            2. workInProgress
-</code></pre></blockquote><p>执行代码 渲染一个div</p><p>对应的fiber树是 div-> this is simple html span</p><div class=highlight><pre style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-javascript data-lang=javascript>   <span style=color:#a6e22e>ReactDOM</span>.<span style=color:#a6e22e>render</span>(
+</code></pre>
+</blockquote>
+<p>执行代码 渲染一个div</p>
+<p>对应的fiber树是 div-> this is simple html span</p>
+<div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-javascript data-lang=javascript>   <span style=color:#a6e22e>ReactDOM</span>.<span style=color:#a6e22e>render</span>(
 	<span style=color:#f92672>&lt;</span><span style=color:#a6e22e>div</span><span style=color:#f92672>&gt;</span><span style=color:#66d9ef>this</span> <span style=color:#a6e22e>is</span> <span style=color:#a6e22e>simple</span> <span style=color:#a6e22e>html</span> <span style=color:#a6e22e>span</span><span style=color:#f92672>&lt;</span><span style=color:#960050;background-color:#1e0010>/div&gt;,</span>
 	document.<span style=color:#a6e22e>getElementById</span>(<span style=color:#e6db74>&#39;container&#39;</span>)
 );
 </code></pre></div><p><img src=img_4.png alt=img_4.png>
-render是一个入口</p><p><img src=img_13.png alt=img_13.png>
-<img src=img_14.png alt=img_14.png></p><p>首次render需要创建FiberRoot</p><p>执行unbatchedUpdates
+render是一个入口</p>
+<p><img src=img_13.png alt=img_13.png>
+<img src=img_14.png alt=img_14.png></p>
+<p>首次render需要创建FiberRoot</p>
+<p>执行unbatchedUpdates
 // 为什么得是unbatched的？
-//batchedUpdates 会合并一些update操作</p><hr><h2 id=trigger-api>trigger api</h2><p><img src=img_17.png alt=img_17.png>
-执行updateContainer 创建一个update</p><div class=highlight><pre style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-javascript data-lang=javascript><span style=color:#75715e>// update
+//batchedUpdates 会合并一些update操作</p>
+<hr>
+<h2 id=trigger-api>trigger api</h2>
+<p><img src=img_17.png alt=img_17.png>
+执行updateContainer 创建一个update</p>
+<div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-javascript data-lang=javascript><span style=color:#75715e>// update
 </span><span style=color:#75715e></span>{
 	<span style=color:#a6e22e>current$1</span>,
 		<span style=color:#a6e22e>eventTime</span>,
 		<span style=color:#a6e22e>lane</span> <span style=color:#75715e>//调起request update lane 请求分配一个lane //优先级
 </span><span style=color:#75715e></span>
 }
-</code></pre></div><p>createUpdate(eventTime, lane)</p><p><strong>enqueueUpdate(current$1, update)</strong>
+</code></pre></div><p>createUpdate(eventTime, lane)</p>
+<p><strong>enqueueUpdate(current$1, update)</strong>
 啥时候出队的 根据什么出队的
 <strong>scheduleUpdateOnFiber</strong>
-// 开始调度</p><hr><h2 id=scheduled-render>scheduled render</h2><blockquote><p>意思时执行render 和 current对比 => 重新形成fiber树 - 所以是调度render</p></blockquote><p>performSyncWorkOnRoot</p><p>⬇️</p><p>renderRootSync</p><p>⬇️</p><p>workLoopSync ➡️ performUnitOfWork ♻️ 先向下深度搜索</p><p>performUnitOfWork</p><blockquote><p>performUnitOfWork方法会创建下一个Fiber节点并赋值给workInProgress，并将workInProgress与已创建的Fiber节点连接起来构成Fiber树。</p></blockquote><h3 id=beginwork>beginWork</h3><p>主要工作是看看有没有可以复用的，复用或者新建形成fiber树</p><p>传入当前Fiber节点，创建子Fiber节点</p><div class=highlight><pre style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-typescript data-lang=typescript><span style=color:#66d9ef>function</span> <span style=color:#a6e22e>beginWork</span>(
+// 开始调度</p>
+<hr>
+<h2 id=scheduled-render>scheduled render</h2>
+<blockquote>
+<p>意思时执行render 和 current对比 => 重新形成fiber树 - 所以是调度render</p>
+</blockquote>
+<p>performSyncWorkOnRoot</p>
+<p>⬇️</p>
+<p>renderRootSync</p>
+<p>⬇️</p>
+<p>workLoopSync ➡️ performUnitOfWork ♻️ 先向下深度搜索</p>
+<p>performUnitOfWork</p>
+<blockquote>
+<p>performUnitOfWork方法会创建下一个Fiber节点并赋值给workInProgress，并将workInProgress与已创建的Fiber节点连接起来构成Fiber树。</p>
+</blockquote>
+<h3 id=beginwork>beginWork</h3>
+<p>主要工作是看看有没有可以复用的，复用或者新建形成fiber树</p>
+<p>传入当前Fiber节点，创建子Fiber节点</p>
+<div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-typescript data-lang=typescript><span style=color:#66d9ef>function</span> <span style=color:#a6e22e>beginWork</span>(
     <span style=color:#a6e22e>current</span>: <span style=color:#66d9ef>Fiber</span> <span style=color:#f92672>|</span> <span style=color:#66d9ef>null</span>,
     <span style=color:#a6e22e>workInProgress</span>: <span style=color:#66d9ef>Fiber</span>,
     <span style=color:#a6e22e>renderLanes</span>: <span style=color:#66d9ef>Lanes</span>,
@@ -60,7 +166,8 @@ render是一个入口</p><p><img src=img_13.png alt=img_13.png>
 </span><span style=color:#75715e></span>        <span style=color:#75715e>// 最终会进入reconcileChildren 触发diff算法
 </span><span style=color:#75715e></span>    }
 }
-</code></pre></div><p>根据不同的current状态（mount/update）进入不同的方法</p><div class=highlight><pre style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-typescript data-lang=typescript>
+</code></pre></div><p>根据不同的current状态（mount/update）进入不同的方法</p>
+<div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-typescript data-lang=typescript>
 <span style=color:#66d9ef>export</span> <span style=color:#66d9ef>function</span> <span style=color:#a6e22e>reconcileChildren</span>(
     <span style=color:#a6e22e>current</span>: <span style=color:#66d9ef>Fiber</span> <span style=color:#f92672>|</span> <span style=color:#66d9ef>null</span>,
     <span style=color:#a6e22e>workInProgress</span>: <span style=color:#66d9ef>Fiber</span>,
@@ -86,7 +193,18 @@ render是一个入口</p><p><img src=img_13.png alt=img_13.png>
         <span style=color:#75715e>// 后接diff算法总结
 </span><span style=color:#75715e></span>    }
 }
-</code></pre></div><h3 id=completework>completeWork</h3><p>mount时</p><ul><li>为Fiber节点生成对应的DOM节点</li><li>将子孙DOM节点插入刚生成的DOM节点中</li><li>处理props update时</li><li>onClick、onChange等回调函数的注册</li><li>处理style prop</li><li>处理DANGEROUSLY_SET_INNER_HTML prop</li><li>处理children prop</li></ul><div class=highlight><pre style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-typescript data-lang=typescript><span style=color:#66d9ef>function</span> <span style=color:#a6e22e>completeWork</span>(
+</code></pre></div><h3 id=completework>completeWork</h3>
+<p>mount时</p>
+<ul>
+<li>为Fiber节点生成对应的DOM节点</li>
+<li>将子孙DOM节点插入刚生成的DOM节点中</li>
+<li>处理props update时</li>
+<li>onClick、onChange等回调函数的注册</li>
+<li>处理style prop</li>
+<li>处理DANGEROUSLY_SET_INNER_HTML prop</li>
+<li>处理children prop</li>
+</ul>
+<div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-typescript data-lang=typescript><span style=color:#66d9ef>function</span> <span style=color:#a6e22e>completeWork</span>(
     <span style=color:#a6e22e>current</span>: <span style=color:#66d9ef>Fiber</span> <span style=color:#f92672>|</span> <span style=color:#66d9ef>null</span>,
     <span style=color:#a6e22e>workInProgress</span>: <span style=color:#66d9ef>Fiber</span>,
     <span style=color:#a6e22e>renderLanes</span>: <span style=color:#66d9ef>Lanes</span>,
@@ -99,4 +217,21 @@ render是一个入口</p><p><img src=img_13.png alt=img_13.png>
         <span style=color:#75715e>// ...
 </span><span style=color:#75715e></span>    }
 }
-</code></pre></div><p>completeUnitOfWork</p><hr><h2 id=commit>commit</h2><blockquote><p>此阶段 commit 上一步形成的fiber树， 改变fiberRootNode的指向 显示新生成的fiber树</p></blockquote><p>commitRoot</p><p>commitMutationEffects</p><p>commitMutationEffectsOnFiber</p><p>commitPlacement // 根据节点的标记、插入dom</p><p>insertOrAppendPlacementNodeIntoContainer</p></div></article></main><footer class="w-full text-center p-4 text-xs text-gray-400">copyright © 2021 - VISIONARY · All rights reserved</footer></body></html>
+</code></pre></div><p>completeUnitOfWork</p>
+<hr>
+<h2 id=commit>commit</h2>
+<blockquote>
+<p>此阶段 commit 上一步形成的fiber树， 改变fiberRootNode的指向 显示新生成的fiber树</p>
+</blockquote>
+<p>commitRoot</p>
+<p>commitMutationEffects</p>
+<p>commitMutationEffectsOnFiber</p>
+<p>commitPlacement // 根据节点的标记、插入dom</p>
+<p>insertOrAppendPlacementNodeIntoContainer</p>
+</div>
+</article>
+</main><footer class="w-full text-center p-4 text-xs text-gray-400">
+copyright © 2021 - VISIONARY · All rights reserved
+</footer>
+</body>
+</html>
