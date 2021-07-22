@@ -7,6 +7,7 @@ images = ["images/profile.png"]
 Paginate = 1000
 darkMode = true
 ignoreErrors = ["error-remote-getjson"]
+
 [taxonomies]
 series = "series"
 tag = "tags"
@@ -21,6 +22,7 @@ copyright = "Copyright © 2021 - VISIONARY · All rights reserved"
 favicon = "favicon.ico"
 autoDarkMode = true
 paginate = 3
+disqusShortname = "visionary"
 hideAutoMenu = false
 description = """
 Call me Mia
@@ -28,7 +30,6 @@ Call me Mia
 There is my development notes.
 """
 ignoreErrors = ["error-remote-getjson"]
-disqusShortname = "visionary"
 googleAnalytics = "UA-123-45"
 gtagId = "G-Z0FJ599SKS"
 githubUsername = "viisionary"
