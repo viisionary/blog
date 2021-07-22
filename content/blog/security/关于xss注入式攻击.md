@@ -160,3 +160,6 @@ startTimer('')+alert(1)+('');
 ## ⚠️ 注意
 
 用户的输入&url 在渲染在页面上的时候【如：前端使用 innerHTML或dangerouslySetInnerHTML 】应过滤 或禁止输入
+
+## CSRF跨站点请求伪造(Cross—Site Request Forgery)
+检测CSRF漏洞是一项比较繁琐的工作，最简单的方法就是抓取一个正常请求的数据包，去掉Referer字段后再重新提交，如果该提交还有效，那么基本上可以确定存在CSRF漏洞。

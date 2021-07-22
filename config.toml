@@ -1,7 +1,7 @@
 baseURL = "https://blog.visionary.top/"
 languageCode = "en-us"
 theme = "showfolio"
-title = "VISIONARY BLOG"
+title = "VISIONARY"
 EnableRobotstxt = true
 images = ["images/profile.png"]
 Paginate = 1000
@@ -45,7 +45,7 @@ use = "katex"  # options: "katex", "mathjax". default is "katex".
 twitter = "https://twitter.com/visionary_mi"
 github = "https://github.com/viisionary"
 instagram = "https://www.instagram.com/mia_.min/"
-wechat = "123"
+wechat = "/IMG_1958.JPG"
 [build]
 writeStats = true
 #[[params.homepage.resume.courses]]
@@ -63,11 +63,15 @@ writeStats = true
 #role = "Product Engineer"
 #duration = "Nov 2019 - Apr 2021"
 [params.homepage.resume]
-skills = ["HTML","CSS","JAVA SCRIPT","NODE.JS"]
+skills = ["HTML", "CSS", "JAVA SCRIPT", "NODE.JS"]
 
 [params.homepage.codepen]
 username = "viisionary"
 pens = ["poPeNKa", "RxodrP", "BmXGdm", "wdVypQ", "wdVypQ"]
+
+[params.homepage.codesandbox]
+username = "viisionary"
+codesandbox = ["fsk69", "lsmnx"]
 
 #------------- git hub repo
 [params.homepage.github]
@@ -76,10 +80,10 @@ repos = ["spider-tool", "spider-cli", "deploy2server"]
 
 [params.homepage.npm]
 username = "visionary_m"
-packages = ["spider-utils", "deploy2server","spider-cli-generater"]
+packages = ["spider-utils", "deploy2server", "spider-cli-generater"]
 
 [params.homepage]
-title = "VISIONARY BLOG"
+title = "VISIONARY"
 tagline = "BLOG"
 description = "There is my development notes."
 contact = "https://twitter.com/visionary_mi"
