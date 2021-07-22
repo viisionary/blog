@@ -3,7 +3,7 @@
 <meta charset=utf-8>
 <meta name=viewport content="width=device-width,initial-scale=1">
 <title>
-前端安全 - VISIONARY BLOG
+前端安全 - VISIONARY
 </title><meta name=generator content="Hugo 0.86.0"><link rel=stylesheet href=https://blog.visionary.top/css/styles.min.164cbb1508747f243f6df5c8ed21c22e9e62a67f149d1e07b8e1982526aa384c.css integrity=sha256-Fky7FQh0fyQ/bfXI7SHCLp5ipn8UnR4HuOGYJSaqOEw=>
 <script>window.matchMedia("(prefers-color-scheme: dark)").matches?document.documentElement.classList.add("dark"):document.documentElement.classList.remove("dark")</script>
 </head>
@@ -13,7 +13,7 @@
 <a href=mailto:min_0610@icloud.com aria-label=EMail><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentcolor" fill="none" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><circle cx="12" cy="12" r="4"/><path d="M16 12v1.5a2.5 2.5.0 005 0V12a9 9 0 10-5.5 8.28"/></svg>
 </a>
 <a href=https://blog.visionary.top/ class="flex items-center font-bold">
-VISIONARY BLOG
+VISIONARY
 </a>
 </div>
 <ul id=nav-menu class="flex w-auto mt-0 space-x-2">
@@ -31,6 +31,26 @@ VISIONARY BLOG
 <h1 class="text-4xl font-bold mb-4">前端安全</h1>
 <div class=text-gray-600></div>
 <div class=card-list>
+<a class="block my-6" href=/blog/security/%E6%B5%8F%E8%A7%88%E5%99%A8%E7%9A%84%E5%90%8C%E6%BA%90%E7%AD%96%E7%95%A5/>
+<h2 class="text-xl font-semibold mb-1">浏览器的同源策略</h2>
+<div class="font-light text-gray-800 dark:text-gray-200">
+同源策略是一个重要的安全策略，它用于限制一个origin的文档或者它加载的脚本如何能与另一个源的资源进行交互。它能帮助阻隔恶意文档，减少可能被攻击的媒介。
+不同源
+https http 不同源 端口不同 不同源 域名不同 不同源
+跨源数据存储访问 访问存储在浏览器中的数据，如 localStorage 和 IndexedDB，是以源进行分割。每个源都拥有自己单独的存储空间，一个源中的 JavaScript 脚本不能对属于其它源的数据进行读写操作。
+Cookies 使用不同的源定义方式。一个页面可以为本域和其父域设置 cookie，只要是父域不是公共后缀（public suffix）即可。
+Internet Explorer 使用其内部的方法来检测域是否是公共后缀。不管使用哪个协议（HTTP/HTTPS）或端口号，浏览器都允许给定的域以及其任何子域名(sub-domains) 访问 cookie。当你设置 cookie 时，你可以使用 Domain、Path、Secure、和 HttpOnly 标记来限定其可访问性。当你读取 cookie 时，你无法知道它是在哪里被设置的。 即使您只使用安全的 https 连接，您看到的任何 cookie 都有可能是使用不安全的连接进行设置的。
+跨域携带 Cookie // 被请求的站点 Access-Control-Allow-Origin: a.com //这里需要换成相应的发起请求的域名 Access-Control-Allow-Credentials: true // 请求站点 xhr = new XMLHttpRequest(); xhr.withCredentials= true; //关键句 xhr.open("GET", url); xhr.send();
+</div>
+<div class="info dark:info-dark">
+<span class="font-light mb-2 text-gray-500 text-sm" style=display:inline>
+July 22, 2021
+</span>
+<span class="font-light text-gray-500 text-sm dark:text-gray-200">
+<span class=separator><a class=tag href=/tags/%E5%89%8D%E7%AB%AF%E5%AE%89%E5%85%A8/>前端安全</a></span>
+</span>
+</div>
+</a>
 <a class="block my-6" href=/blog/github/github-sunmoudle-58cbca6eaada4bc6a5fc8ba40a41e4fc/>
 <h2 class="text-xl font-semibold mb-1">Github sun module</h2>
 <div class="font-light text-gray-800 dark:text-gray-200">

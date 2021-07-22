@@ -3,7 +3,7 @@
 <meta charset=utf-8>
 <meta name=viewport content="width=device-width,initial-scale=1">
 <title>
-关于xss注入式攻击 - VISIONARY BLOG
+关于xss注入式攻击 - VISIONARY
 </title>
 <meta name=description content="Sample article showcasing basic Markdown syntax and formatting for HTML elements.">
 <meta name=generator content="Hugo 0.86.0"><link rel=stylesheet href=https://blog.visionary.top/css/styles.min.164cbb1508747f243f6df5c8ed21c22e9e62a67f149d1e07b8e1982526aa384c.css integrity=sha256-Fky7FQh0fyQ/bfXI7SHCLp5ipn8UnR4HuOGYJSaqOEw=>
@@ -15,7 +15,7 @@
 <a href=mailto:min_0610@icloud.com aria-label=EMail><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentcolor" fill="none" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><circle cx="12" cy="12" r="4"/><path d="M16 12v1.5a2.5 2.5.0 005 0V12a9 9 0 10-5.5 8.28"/></svg>
 </a>
 <a href=https://blog.visionary.top/ class="flex items-center font-bold">
-VISIONARY BLOG
+VISIONARY
 </a>
 </div>
 <ul id=nav-menu class="flex w-auto mt-0 space-x-2">
@@ -55,6 +55,7 @@ VISIONARY BLOG
 </ul>
 </li>
 <li><a href=#-注意>⚠️ 注意</a></li>
+<li><a href=#csrf跨站点请求伪造crosssite-request-forgery>CSRF跨站点请求伪造(Cross—Site Request Forgery)</a></li>
 </ul>
 </nav>
 </aside>
@@ -156,6 +157,8 @@ document.<span style=color:#a6e22e>write</span>(<span style=color:#a6e22e>xss</s
 <p>一般 一个用户可以提交且入库【或携带脚本在url（encode之类已避免）】 ，可以对其他用户可见，触发脚本执行才OK。</p>
 <h2 id=-注意>⚠️ 注意</h2>
 <p>用户的输入&url 在渲染在页面上的时候【如：前端使用 innerHTML或dangerouslySetInnerHTML 】应过滤 或禁止输入</p>
+<h2 id=csrf跨站点请求伪造crosssite-request-forgery>CSRF跨站点请求伪造(Cross—Site Request Forgery)</h2>
+<p>检测CSRF漏洞是一项比较繁琐的工作，最简单的方法就是抓取一个正常请求的数据包，去掉Referer字段后再重新提交，如果该提交还有效，那么基本上可以确定存在CSRF漏洞。</p>
 </div>
 </article>
 </main><footer class="w-full text-center p-4 text-xs text-gray-400">

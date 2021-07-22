@@ -1,0 +1,243 @@
+<!doctype html><html lang=en-us>
+<head>
+<meta charset=utf-8>
+<meta name=viewport content="width=device-width,initial-scale=1">
+<title>
+Hooks使用 - VISIONARY
+</title><meta name=generator content="Hugo 0.86.0"><link rel=stylesheet href=https://blog.visionary.top/css/styles.min.164cbb1508747f243f6df5c8ed21c22e9e62a67f149d1e07b8e1982526aa384c.css integrity=sha256-Fky7FQh0fyQ/bfXI7SHCLp5ipn8UnR4HuOGYJSaqOEw=>
+<script>window.matchMedia("(prefers-color-scheme: dark)").matches?document.documentElement.classList.add("dark"):document.documentElement.classList.remove("dark")</script>
+</head>
+<body class="flex flex-col min-h-screen dark:bg-gray-900 dark:text-gray-100 transition-colors duration-500"><header class="w-full px-4 pt-4 max-w-5xl mx-auto">
+<nav class="flex items-center justify-between flex-wrap">
+<div class="flex gap-2 items-center">
+<a href=mailto:min_0610@icloud.com aria-label=EMail><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentcolor" fill="none" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><circle cx="12" cy="12" r="4"/><path d="M16 12v1.5a2.5 2.5.0 005 0V12a9 9 0 10-5.5 8.28"/></svg>
+</a>
+<a href=https://blog.visionary.top/ class="flex items-center font-bold">
+VISIONARY
+</a>
+</div>
+<ul id=nav-menu class="flex w-auto mt-0 space-x-2">
+<li>
+<a href=https://blog.visionary.top/about/ class="hover:text-blue-800 dark:hover:text-blue-300">About Me</a>
+</li>
+<li>
+<a href=https://blog.visionary.top/blog/ class="hover:text-blue-800 dark:hover:text-blue-300">Blogs</a>
+</li>
+</ul>
+</nav>
+</header>
+<main class="flex-1 mx-4 md:mx-12 lg:mx-24 mt-8 sm:mt-16">
+<article class="mb-16 max-w-5xl mx-auto px-4">
+<h1>Hooks使用</h1>
+<ul>
+</ul>
+<div class=post-footer>
+<div class=info>
+<span class=separator><a class=tag href=/tags/react/>react</a></span>
+</div>
+</div>
+<div class=post-footer>
+</div>
+<aside class=content-aside-bar>
+<nav id=TableOfContents>
+<ul>
+<li>
+<ul>
+<li><a href=#自定义hook>自定义Hook</a></li>
+<li><a href=#uselayouteffect>useLayoutEffect</a></li>
+<li><a href=#useref>useRef</a></li>
+<li><a href=#usememo--memo--usecallback>useMemo & memo & useCallback</a></li>
+<li><a href=#usecontext>useContext</a></li>
+<li><a href=#usereducer>useReducer</a></li>
+<li><a href=#usestate--useeffect>useState & useEffect</a></li>
+</ul>
+</li>
+</ul>
+</nav>
+</aside>
+<div class="prose lg:prose-lg prose-blue dark:prose-dark">
+<blockquote>
+<p>Hook 是 React 16.8 的新增特性。它可以让你在不编写 class 的情况下使用 state 以及其他的 React 特性。
+Hook 将组件中相互关联的部分拆分成更小的函数（比如设置订阅或请求数据）,而并非强制按照生命周期划分</p>
+</blockquote>
+<div style=position:relative;overflow:hidden>
+<iframe src="https://codesandbox.io/embed/hooks-lsmnx?fontsize=14&hidenavigation=1&theme=light" style=width:100%;height:500px;border:0;border-radius:4px;overflow:hidden title=crazy-tree-sk87l allow="accelerometer; ambient-light-sensor; camera; encrypted-media; geolocation; gyroscope; hid; microphone; midi; payment; usb; vr; xr-spatial-tracking" sandbox="allow-forms allow-modals allow-popups allow-presentation allow-same-origin allow-scripts"></iframe>
+</div>
+<h3 id=自定义hook>自定义Hook</h3>
+<div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-javascript data-lang=javascript><span style=color:#66d9ef>const</span> <span style=color:#a6e22e>getFriendInfo</span> <span style=color:#f92672>=</span> (<span style=color:#a6e22e>name</span>, <span style=color:#a6e22e>callback</span>) =&gt; {
+	<span style=color:#a6e22e>callback</span>({ <span style=color:#a6e22e>name</span>, <span style=color:#a6e22e>isOnline</span><span style=color:#f92672>:</span> <span style=color:#66d9ef>true</span> });
+};
+
+<span style=color:#66d9ef>function</span> <span style=color:#a6e22e>useFriendStatus</span>(<span style=color:#a6e22e>name</span>) {
+	<span style=color:#66d9ef>const</span> [<span style=color:#a6e22e>isOnline</span>, <span style=color:#a6e22e>setIsOnline</span>] <span style=color:#f92672>=</span> <span style=color:#a6e22e>useState</span>(<span style=color:#66d9ef>null</span>);
+
+	<span style=color:#66d9ef>function</span> <span style=color:#a6e22e>handleStatusChange</span>(<span style=color:#a6e22e>status</span>) {
+		<span style=color:#a6e22e>setIsOnline</span>(<span style=color:#a6e22e>status</span>.<span style=color:#a6e22e>isOnline</span>);
+	}
+
+	<span style=color:#a6e22e>useEffect</span>(() =&gt; {
+		<span style=color:#a6e22e>getFriendInfo</span>(<span style=color:#a6e22e>name</span>, <span style=color:#a6e22e>handleStatusChange</span>);
+		<span style=color:#66d9ef>return</span> () =&gt; {
+		};
+	});
+	<span style=color:#66d9ef>return</span> [<span style=color:#a6e22e>isOnline</span>];
+}
+
+<span style=color:#66d9ef>function</span> <span style=color:#a6e22e>FriendStatus</span>() {
+	<span style=color:#66d9ef>const</span> [<span style=color:#a6e22e>isOnline</span>] <span style=color:#f92672>=</span> <span style=color:#a6e22e>useFriendStatus</span>(<span style=color:#e6db74>&#34;joey&#34;</span>);
+	<span style=color:#66d9ef>if</span> (<span style=color:#a6e22e>isOnline</span> <span style=color:#f92672>===</span> <span style=color:#66d9ef>null</span>) {
+		<span style=color:#66d9ef>return</span> <span style=color:#e6db74>&#34;Loading...&#34;</span>;
+	}
+	<span style=color:#66d9ef>return</span> <span style=color:#f92672>&lt;</span><span style=color:#a6e22e>h5</span><span style=color:#f92672>&gt;</span><span style=color:#a6e22e>joey</span> <span style=color:#a6e22e>is</span> {<span style=color:#a6e22e>isOnline</span> <span style=color:#f92672>?</span> <span style=color:#e6db74>&#34;Online&#34;</span> <span style=color:#f92672>:</span> <span style=color:#e6db74>&#34;Offline&#34;</span>}<span style=color:#f92672>&lt;</span><span style=color:#960050;background-color:#1e0010>/h5&gt;;</span>
+}
+
+</code></pre></div><h3 id=uselayouteffect>useLayoutEffect</h3>
+<p>useEffect在浏览器渲染完成后执行 useLayoutEffect在浏览器渲染前执行</p>
+<h3 id=useref>useRef</h3>
+<div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-javascript data-lang=javascript>
+<span style=color:#66d9ef>const</span> <span style=color:#a6e22e>UseRefExample</span> <span style=color:#f92672>=</span> () =&gt; {
+	<span style=color:#66d9ef>const</span> [<span style=color:#a6e22e>count</span>, <span style=color:#a6e22e>setCount</span>] <span style=color:#f92672>=</span> <span style=color:#a6e22e>useState</span>(<span style=color:#ae81ff>0</span>);
+	<span style=color:#66d9ef>const</span> <span style=color:#a6e22e>btnRef</span> <span style=color:#f92672>=</span> <span style=color:#a6e22e>useRef</span>(<span style=color:#66d9ef>null</span>);
+
+	<span style=color:#a6e22e>useEffect</span>(() =&gt; {
+		<span style=color:#66d9ef>const</span> <span style=color:#a6e22e>onClick</span> <span style=color:#f92672>=</span> () =&gt; {
+			<span style=color:#a6e22e>setCount</span>(<span style=color:#a6e22e>count</span> <span style=color:#f92672>+</span> <span style=color:#ae81ff>1</span>);
+		};
+		<span style=color:#a6e22e>btnRef</span>.<span style=color:#a6e22e>current</span>.<span style=color:#a6e22e>addEventListener</span>(<span style=color:#e6db74>&#34;click&#34;</span>, <span style=color:#a6e22e>onClick</span>, <span style=color:#66d9ef>false</span>);
+		<span style=color:#66d9ef>return</span> () =&gt; <span style=color:#a6e22e>btnRef</span>.<span style=color:#a6e22e>current</span>.<span style=color:#a6e22e>removeEventListener</span>(<span style=color:#e6db74>&#34;click&#34;</span>, <span style=color:#a6e22e>onClick</span>, <span style=color:#66d9ef>false</span>);
+	}, [<span style=color:#a6e22e>count</span>]);
+
+	<span style=color:#66d9ef>return</span> (
+		<span style=color:#f92672>&lt;</span><span style=color:#a6e22e>div</span><span style=color:#f92672>&gt;</span>
+			<span style=color:#f92672>&lt;</span><span style=color:#a6e22e>div</span><span style=color:#f92672>&gt;</span>{<span style=color:#a6e22e>count</span>}<span style=color:#f92672>&lt;</span><span style=color:#960050;background-color:#1e0010>/div&gt;</span>
+			<span style=color:#f92672>&lt;</span><span style=color:#a6e22e>button</span> <span style=color:#a6e22e>ref</span><span style=color:#f92672>=</span>{<span style=color:#a6e22e>btnRef</span>}<span style=color:#f92672>&gt;</span><span style=color:#a6e22e>click</span> <span style=color:#a6e22e>me</span><span style=color:#f92672>&lt;</span><span style=color:#960050;background-color:#1e0010>/button&gt;</span>
+		<span style=color:#f92672>&lt;</span><span style=color:#960050;background-color:#1e0010>/div&gt;</span>
+	);
+};
+
+<span style=color:#66d9ef>function</span> <span style=color:#a6e22e>UseLayoutEffectExample</span>() {
+	<span style=color:#66d9ef>const</span> [<span style=color:#a6e22e>n</span>, <span style=color:#a6e22e>setN</span>] <span style=color:#f92672>=</span> <span style=color:#a6e22e>useState</span>(<span style=color:#ae81ff>0</span>);
+	<span style=color:#66d9ef>const</span> <span style=color:#a6e22e>onClick</span> <span style=color:#f92672>=</span> () =&gt; {
+		<span style=color:#a6e22e>setN</span>((<span style=color:#a6e22e>i</span>) =&gt; <span style=color:#a6e22e>i</span> <span style=color:#f92672>+</span> <span style=color:#ae81ff>1</span>);
+	};
+	<span style=color:#a6e22e>useEffect</span>(() =&gt; {
+		<span style=color:#a6e22e>console</span>.<span style=color:#a6e22e>log</span>(<span style=color:#e6db74>&#34;useEffect&#34;</span>);
+	});
+	<span style=color:#a6e22e>useLayoutEffect</span>(() =&gt; {
+		<span style=color:#a6e22e>console</span>.<span style=color:#a6e22e>log</span>(<span style=color:#e6db74>&#34;useLayoutEffect&#34;</span>);
+	});
+	<span style=color:#66d9ef>return</span> (
+		<span style=color:#f92672>&lt;</span><span style=color:#a6e22e>div</span> <span style=color:#a6e22e>className</span><span style=color:#f92672>=</span><span style=color:#e6db74>&#34;App&#34;</span><span style=color:#f92672>&gt;</span>
+			<span style=color:#f92672>&lt;</span><span style=color:#a6e22e>h1</span><span style=color:#f92672>&gt;</span><span style=color:#a6e22e>n</span><span style=color:#f92672>:</span> {<span style=color:#a6e22e>n</span>}<span style=color:#f92672>&lt;</span><span style=color:#960050;background-color:#1e0010>/h1&gt;</span>
+			<span style=color:#f92672>&lt;</span><span style=color:#a6e22e>button</span> <span style=color:#a6e22e>onClick</span><span style=color:#f92672>=</span>{<span style=color:#a6e22e>onClick</span>}<span style=color:#f92672>&gt;</span><span style=color:#a6e22e>Click</span><span style=color:#f92672>&lt;</span><span style=color:#960050;background-color:#1e0010>/button&gt;</span>
+		<span style=color:#f92672>&lt;</span><span style=color:#960050;background-color:#1e0010>/div&gt;</span>
+	);
+}
+</code></pre></div><h3 id=usememo--memo--usecallback>useMemo & memo & useCallback</h3>
+<p>useMemo 可限制子组件随着父组件的render而render useCallback是useMemo的语法糖</p>
+<div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-javascript data-lang=javascript><span style=color:#66d9ef>const</span> <span style=color:#a6e22e>Child</span> <span style=color:#f92672>=</span> <span style=color:#a6e22e>memo</span>(({ <span style=color:#a6e22e>data</span> }) =&gt; {
+	<span style=color:#a6e22e>console</span>.<span style=color:#a6e22e>log</span>(<span style=color:#e6db74>&#34;child render&#34;</span>);
+	<span style=color:#66d9ef>return</span> (
+		<span style=color:#f92672>&lt;</span><span style=color:#a6e22e>div</span><span style=color:#f92672>&gt;</span>
+			<span style=color:#f92672>&lt;</span><span style=color:#a6e22e>div</span><span style=color:#f92672>&gt;</span><span style=color:#a6e22e>child</span><span style=color:#f92672>&lt;</span><span style=color:#960050;background-color:#1e0010>/div&gt;</span>
+			<span style=color:#f92672>&lt;</span><span style=color:#a6e22e>div</span><span style=color:#f92672>&gt;</span>{<span style=color:#a6e22e>data</span>.<span style=color:#a6e22e>name</span>}<span style=color:#f92672>&lt;</span><span style=color:#960050;background-color:#1e0010>/div&gt;</span>
+		<span style=color:#f92672>&lt;</span><span style=color:#960050;background-color:#1e0010>/div&gt;</span>
+	);
+});
+
+<span style=color:#66d9ef>const</span> <span style=color:#a6e22e>UseMemoExample</span> <span style=color:#f92672>=</span> () =&gt; {
+	<span style=color:#a6e22e>console</span>.<span style=color:#a6e22e>log</span>(<span style=color:#e6db74>&#34;Hook render...&#34;</span>);
+	<span style=color:#66d9ef>const</span> [<span style=color:#a6e22e>count</span>, <span style=color:#a6e22e>setCount</span>] <span style=color:#f92672>=</span> <span style=color:#a6e22e>useState</span>(<span style=color:#ae81ff>0</span>);
+	<span style=color:#66d9ef>const</span> [<span style=color:#a6e22e>name</span>, <span style=color:#a6e22e>setName</span>] <span style=color:#f92672>=</span> <span style=color:#a6e22e>useState</span>(<span style=color:#e6db74>&#34;rose&#34;</span>);
+
+	<span style=color:#75715e>// const data = useMemo(() =&gt; {
+</span><span style=color:#75715e></span>	<span style=color:#75715e>//   return {
+</span><span style=color:#75715e></span>	<span style=color:#75715e>//     name
+</span><span style=color:#75715e></span>	<span style=color:#75715e>//   };
+</span><span style=color:#75715e></span>	<span style=color:#75715e>// }, [name]);
+</span><span style=color:#75715e></span>	<span style=color:#66d9ef>const</span> <span style=color:#a6e22e>data</span> <span style=color:#f92672>=</span> <span style=color:#a6e22e>useCallback</span>(() =&gt; {
+		<span style=color:#66d9ef>return</span> {
+			<span style=color:#a6e22e>name</span>
+		};
+	}, [<span style=color:#a6e22e>name</span>]);
+	<span style=color:#66d9ef>return</span> (
+		<span style=color:#f92672>&lt;</span><span style=color:#a6e22e>div</span><span style=color:#f92672>&gt;</span>
+			<span style=color:#f92672>&lt;</span><span style=color:#a6e22e>div</span><span style=color:#f92672>&gt;</span>{<span style=color:#a6e22e>count</span>}<span style=color:#f92672>&lt;</span><span style=color:#960050;background-color:#1e0010>/div&gt;</span>
+			<span style=color:#f92672>&lt;</span><span style=color:#a6e22e>button</span> <span style=color:#a6e22e>onClick</span><span style=color:#f92672>=</span>{() =&gt; <span style=color:#a6e22e>setCount</span>(<span style=color:#a6e22e>count</span> <span style=color:#f92672>+</span> <span style=color:#ae81ff>1</span>)}<span style=color:#f92672>&gt;</span><span style=color:#a6e22e>update</span> <span style=color:#a6e22e>count</span><span style=color:#f92672>&lt;</span><span style=color:#960050;background-color:#1e0010>/button&gt;</span>
+			<span style=color:#f92672>&lt;</span><span style=color:#a6e22e>Child</span> <span style=color:#a6e22e>data</span><span style=color:#f92672>=</span>{<span style=color:#a6e22e>data</span>} <span style=color:#f92672>/&gt;</span>
+		<span style=color:#f92672>&lt;</span><span style=color:#960050;background-color:#1e0010>/div&gt;</span>
+	);
+};
+</code></pre></div><h3 id=usecontext>useContext</h3>
+<p>themeContext.Provider & createContext & useContext 给组件提供上下文，使范围内可获取</p>
+<div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-javascript data-lang=javascript><span style=color:#66d9ef>const</span> <span style=color:#a6e22e>themeContext</span> <span style=color:#f92672>=</span> <span style=color:#a6e22e>createContext</span>(<span style=color:#66d9ef>null</span>);
+
+<span style=color:#66d9ef>const</span> <span style=color:#a6e22e>Child2</span> <span style=color:#f92672>=</span> () =&gt; {
+	<span style=color:#66d9ef>const</span> { <span style=color:#a6e22e>theme</span>, <span style=color:#a6e22e>setTheme</span> } <span style=color:#f92672>=</span> <span style=color:#a6e22e>useContext</span>(<span style=color:#a6e22e>themeContext</span>);
+	<span style=color:#66d9ef>return</span> (
+		<span style=color:#f92672>&lt;</span><span style=color:#a6e22e>button</span>
+			<span style=color:#a6e22e>onClick</span><span style=color:#f92672>=</span>{() =&gt; {
+				<span style=color:#a6e22e>setTheme</span>(<span style=color:#a6e22e>theme</span> <span style=color:#f92672>===</span> <span style=color:#e6db74>&#34;light&#34;</span> <span style=color:#f92672>?</span> <span style=color:#e6db74>&#34;dark&#34;</span> <span style=color:#f92672>:</span> <span style=color:#e6db74>&#34;light&#34;</span>);
+			}}
+		<span style=color:#f92672>&gt;</span>
+			{<span style=color:#a6e22e>theme</span>}
+		<span style=color:#f92672>&lt;</span><span style=color:#960050;background-color:#1e0010>/button&gt;</span>
+	);
+};
+
+<span style=color:#66d9ef>function</span> <span style=color:#a6e22e>UseThemeContext</span>() {
+	<span style=color:#66d9ef>const</span> [<span style=color:#a6e22e>theme</span>, <span style=color:#a6e22e>setTheme</span>] <span style=color:#f92672>=</span> <span style=color:#a6e22e>useState</span>(<span style=color:#e6db74>&#34;dark&#34;</span>);
+	<span style=color:#66d9ef>return</span> (
+		<span style=color:#f92672>&lt;</span><span style=color:#a6e22e>themeContext</span>.<span style=color:#a6e22e>Provider</span> <span style=color:#a6e22e>value</span><span style=color:#f92672>=</span>{{ <span style=color:#a6e22e>theme</span>, <span style=color:#a6e22e>setTheme</span> }}<span style=color:#f92672>&gt;</span>
+			<span style=color:#f92672>&lt;</span><span style=color:#a6e22e>div</span> <span style=color:#a6e22e>className</span><span style=color:#f92672>=</span><span style=color:#e6db74>&#34;App&#34;</span><span style=color:#f92672>&gt;</span>
+				{<span style=color:#a6e22e>theme</span>}
+				<span style=color:#f92672>&lt;</span><span style=color:#a6e22e>Child2</span> <span style=color:#f92672>/&gt;</span>
+			<span style=color:#f92672>&lt;</span><span style=color:#960050;background-color:#1e0010>/div&gt;</span>
+		<span style=color:#f92672>&lt;</span><span style=color:#960050;background-color:#1e0010>/themeContext.Provider&gt;</span>
+	);
+}
+</code></pre></div><h3 id=usereducer>useReducer</h3>
+<p>useReducer</p>
+<p>当你认为你写的一些数据可以放到一个对象内更好操作时就可使用useReducer</p>
+<div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-javascript data-lang=javascript><span style=color:#66d9ef>const</span> <span style=color:#a6e22e>initial</span> <span style=color:#f92672>=</span> {
+	<span style=color:#a6e22e>n</span><span style=color:#f92672>:</span> <span style=color:#ae81ff>0</span>
+};
+<span style=color:#66d9ef>const</span> <span style=color:#a6e22e>reducer</span> <span style=color:#f92672>=</span> (<span style=color:#a6e22e>state</span>, <span style=color:#a6e22e>action</span>) =&gt; {
+	<span style=color:#66d9ef>if</span> (<span style=color:#a6e22e>action</span>.<span style=color:#a6e22e>type</span> <span style=color:#f92672>===</span> <span style=color:#e6db74>&#34;add&#34;</span>) {
+		<span style=color:#66d9ef>return</span> { <span style=color:#a6e22e>n</span><span style=color:#f92672>:</span> <span style=color:#a6e22e>state</span>.<span style=color:#a6e22e>n</span> <span style=color:#f92672>+</span> <span style=color:#a6e22e>action</span>.<span style=color:#a6e22e>number</span> };
+	} <span style=color:#66d9ef>else</span> <span style=color:#66d9ef>if</span> (<span style=color:#a6e22e>action</span>.<span style=color:#a6e22e>type</span> <span style=color:#f92672>===</span> <span style=color:#e6db74>&#34;multi&#34;</span>) {
+		<span style=color:#66d9ef>return</span> { <span style=color:#a6e22e>n</span><span style=color:#f92672>:</span> <span style=color:#a6e22e>state</span>.<span style=color:#a6e22e>n</span> <span style=color:#f92672>*</span> <span style=color:#ae81ff>2</span> };
+	} <span style=color:#66d9ef>else</span> {
+		<span style=color:#66d9ef>throw</span> <span style=color:#66d9ef>new</span> Error(<span style=color:#e6db74>&#34;unknown type&#34;</span>);
+	}
+};
+
+<span style=color:#66d9ef>function</span> <span style=color:#a6e22e>UseReducerExample</span>() {
+	<span style=color:#66d9ef>const</span> [<span style=color:#a6e22e>state</span>, <span style=color:#a6e22e>dispatch</span>] <span style=color:#f92672>=</span> <span style=color:#a6e22e>useReducer</span>(<span style=color:#a6e22e>reducer</span>, <span style=color:#a6e22e>initial</span>);
+	<span style=color:#66d9ef>const</span> { <span style=color:#a6e22e>n</span> } <span style=color:#f92672>=</span> <span style=color:#a6e22e>state</span>;
+	<span style=color:#66d9ef>const</span> <span style=color:#a6e22e>onClick</span> <span style=color:#f92672>=</span> () =&gt; {
+		<span style=color:#a6e22e>dispatch</span>({ <span style=color:#a6e22e>type</span><span style=color:#f92672>:</span> <span style=color:#e6db74>&#34;add&#34;</span>, <span style=color:#a6e22e>number</span><span style=color:#f92672>:</span> <span style=color:#ae81ff>1</span> });
+	};
+	<span style=color:#66d9ef>const</span> <span style=color:#a6e22e>onClick2</span> <span style=color:#f92672>=</span> () =&gt; {
+		<span style=color:#a6e22e>dispatch</span>({ <span style=color:#a6e22e>type</span><span style=color:#f92672>:</span> <span style=color:#e6db74>&#34;add&#34;</span>, <span style=color:#a6e22e>number</span><span style=color:#f92672>:</span> <span style=color:#ae81ff>2</span> });
+	};
+	<span style=color:#66d9ef>return</span> (
+		<span style=color:#f92672>&lt;</span><span style=color:#a6e22e>div</span> <span style=color:#a6e22e>className</span><span style=color:#f92672>=</span><span style=color:#e6db74>&#34;App&#34;</span><span style=color:#f92672>&gt;</span>
+			<span style=color:#f92672>&lt;</span><span style=color:#a6e22e>h1</span><span style=color:#f92672>&gt;</span><span style=color:#a6e22e>n</span><span style=color:#f92672>:</span> {<span style=color:#a6e22e>n</span>}<span style=color:#f92672>&lt;</span><span style=color:#960050;background-color:#1e0010>/h1&gt;</span>
+
+			<span style=color:#f92672>&lt;</span><span style=color:#a6e22e>button</span> <span style=color:#a6e22e>onClick</span><span style=color:#f92672>=</span>{<span style=color:#a6e22e>onClick</span>}<span style=color:#f92672>&gt;+</span><span style=color:#ae81ff>1</span><span style=color:#f92672>&lt;</span><span style=color:#960050;background-color:#1e0010>/button&gt;</span>
+			<span style=color:#f92672>&lt;</span><span style=color:#a6e22e>button</span> <span style=color:#a6e22e>onClick</span><span style=color:#f92672>=</span>{<span style=color:#a6e22e>onClick2</span>}<span style=color:#f92672>&gt;+</span><span style=color:#ae81ff>2</span><span style=color:#f92672>&lt;</span><span style=color:#960050;background-color:#1e0010>/button&gt;</span>
+		<span style=color:#f92672>&lt;</span><span style=color:#960050;background-color:#1e0010>/div&gt;</span>
+	);
+}
+</code></pre></div><h3 id=usestate--useeffect>useState & useEffect</h3>
+<p>最常用的</p>
+<hr>
+<p><a href>react hooks 源码分析</a></p>
+</div>
+</article>
+</main><footer class="w-full text-center p-4 text-xs text-gray-400">
+copyright © 2021 - VISIONARY · All rights reserved
+</footer>
+</body>
+</html>

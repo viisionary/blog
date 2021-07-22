@@ -1,0 +1,93 @@
+<!doctype html><html lang=en-us>
+<head>
+<meta charset=utf-8>
+<meta name=viewport content="width=device-width,initial-scale=1">
+<title>
+WebWorker - VISIONARY
+</title><meta name=generator content="Hugo 0.86.0"><link rel=stylesheet href=https://blog.visionary.top/css/styles.min.164cbb1508747f243f6df5c8ed21c22e9e62a67f149d1e07b8e1982526aa384c.css integrity=sha256-Fky7FQh0fyQ/bfXI7SHCLp5ipn8UnR4HuOGYJSaqOEw=>
+<script>window.matchMedia("(prefers-color-scheme: dark)").matches?document.documentElement.classList.add("dark"):document.documentElement.classList.remove("dark")</script>
+</head>
+<body class="flex flex-col min-h-screen dark:bg-gray-900 dark:text-gray-100 transition-colors duration-500"><header class="w-full px-4 pt-4 max-w-5xl mx-auto">
+<nav class="flex items-center justify-between flex-wrap">
+<div class="flex gap-2 items-center">
+<a href=mailto:min_0610@icloud.com aria-label=EMail><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentcolor" fill="none" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><circle cx="12" cy="12" r="4"/><path d="M16 12v1.5a2.5 2.5.0 005 0V12a9 9 0 10-5.5 8.28"/></svg>
+</a>
+<a href=https://blog.visionary.top/ class="flex items-center font-bold">
+VISIONARY
+</a>
+</div>
+<ul id=nav-menu class="flex w-auto mt-0 space-x-2">
+<li>
+<a href=https://blog.visionary.top/about/ class="hover:text-blue-800 dark:hover:text-blue-300">About Me</a>
+</li>
+<li>
+<a href=https://blog.visionary.top/blog/ class="hover:text-blue-800 dark:hover:text-blue-300">Blogs</a>
+</li>
+</ul>
+</nav>
+</header>
+<main class="flex-1 mx-4 md:mx-12 lg:mx-24 mt-8 sm:mt-16">
+<article class="mb-16 max-w-5xl mx-auto px-4">
+<h1>WebWorker</h1>
+<ul>
+</ul>
+<div class=post-footer>
+<div class=info>
+<span class=separator><a class=tag href=/tags/%E5%89%8D%E7%AB%AF%E6%80%A7%E8%83%BD/>前端性能</a></span>
+</div>
+</div>
+<div class=post-footer>
+</div>
+<aside class=content-aside-bar>
+<nav id=TableOfContents>
+<ul>
+<li>
+<ul>
+<li><a href=#web-worker-有以下几个使用注意点>Web Worker 有以下几个使用注意点。</a></li>
+</ul>
+</li>
+<li><a href=#实例worker-线程完成轮询>实例：Worker 线程完成轮询</a></li>
+</ul>
+</nav>
+</aside>
+<div class="prose lg:prose-lg prose-blue dark:prose-dark">
+<blockquote>
+<p>JavaScript 语言采用的是单线程模型，也就是说，所有任务只能在一个线程上完成，一次只能做一件事。前面的任务没做完，后面的任务只能等着。随着电脑计算能力的增强，尤其是多核 CPU 的出现，单线程带来很大的不便，无法充分发挥计算机的计算能力。</p>
+</blockquote>
+<p><a href=https://www.ruanyifeng.com/blog/2018/07/web-worker.html>Web Worker 使用教程</a>
+Web Worker 的作用，就是为 JavaScript 创造多线程环境，允许主线程创建 Worker 线程，将一些任务分配给后者运行</p>
+<h3 id=web-worker-有以下几个使用注意点>Web Worker 有以下几个使用注意点。</h3>
+<p>（1）同源限制</p>
+<p>分配给 Worker 线程运行的脚本文件，必须与主线程的脚本文件同源。</p>
+<p>（2）DOM 限制</p>
+<p>Worker 线程所在的全局对象，与主线程不一样，无法读取主线程所在网页的 DOM 对象，也无法使用document、window、parent这些对象。但是，Worker 线程可以navigator对象和location对象。</p>
+<p>（3）通信联系</p>
+<p>Worker 线程和主线程不在同一个上下文环境，它们不能直接通信，必须通过消息完成。</p>
+<p>（4）脚本限制</p>
+<p>Worker 线程不能执行alert()方法和confirm()方法，但可以使用 XMLHttpRequest 对象发出 AJAX 请求。</p>
+<p>（5）文件限制</p>
+<p>Worker 线程无法读取本地文件，即不能打开本机的文件系统（file://），它所加载的脚本，必须来自网络。
+主线程</p>
+<div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-javascript data-lang=javascript>
+<span style=color:#66d9ef>var</span> <span style=color:#a6e22e>worker</span> <span style=color:#f92672>=</span> <span style=color:#66d9ef>new</span> <span style=color:#a6e22e>Worker</span>(<span style=color:#e6db74>&#39;work.js&#39;</span>);
+<span style=color:#a6e22e>worker</span>.<span style=color:#a6e22e>postMessage</span>(<span style=color:#e6db74>&#39;Hello World&#39;</span>);
+<span style=color:#a6e22e>worker</span>.<span style=color:#a6e22e>postMessage</span>({<span style=color:#a6e22e>method</span><span style=color:#f92672>:</span> <span style=color:#e6db74>&#39;echo&#39;</span>, <span style=color:#a6e22e>args</span><span style=color:#f92672>:</span> [<span style=color:#e6db74>&#39;Work&#39;</span>]});
+</code></pre></div><p>子线程</p>
+<div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-javascript data-lang=javascript><span style=color:#a6e22e>worker</span>.<span style=color:#a6e22e>onmessage</span> <span style=color:#f92672>=</span> <span style=color:#66d9ef>function</span> (<span style=color:#a6e22e>event</span>) {
+  <span style=color:#a6e22e>console</span>.<span style=color:#a6e22e>log</span>(<span style=color:#e6db74>&#39;Received message &#39;</span> <span style=color:#f92672>+</span> <span style=color:#a6e22e>event</span>.<span style=color:#a6e22e>data</span>);
+  <span style=color:#a6e22e>doSomething</span>();
+}
+
+<span style=color:#66d9ef>function</span> <span style=color:#a6e22e>doSomething</span>() {
+  <span style=color:#75715e>// 执行任务
+</span><span style=color:#75715e></span>  <span style=color:#a6e22e>worker</span>.<span style=color:#a6e22e>postMessage</span>(<span style=color:#e6db74>&#39;Work done!&#39;</span>);
+}
+</code></pre></div><h2 id=实例worker-线程完成轮询>实例：Worker 线程完成轮询</h2>
+<p>有时，浏览器需要轮询服务器状态，以便第一时间得知状态改变。这个工作可以放在 Worker 里面。</p>
+</div>
+</article>
+</main><footer class="w-full text-center p-4 text-xs text-gray-400">
+copyright © 2021 - VISIONARY · All rights reserved
+</footer>
+</body>
+</html>

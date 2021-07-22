@@ -1,0 +1,64 @@
+<!doctype html><html lang=en-us>
+<head>
+<meta charset=utf-8>
+<meta name=viewport content="width=device-width,initial-scale=1">
+<title>
+关于宏观任务与微观任务 - VISIONARY
+</title><meta name=generator content="Hugo 0.86.0"><link rel=stylesheet href=https://blog.visionary.top/css/styles.min.164cbb1508747f243f6df5c8ed21c22e9e62a67f149d1e07b8e1982526aa384c.css integrity=sha256-Fky7FQh0fyQ/bfXI7SHCLp5ipn8UnR4HuOGYJSaqOEw=>
+<script>window.matchMedia("(prefers-color-scheme: dark)").matches?document.documentElement.classList.add("dark"):document.documentElement.classList.remove("dark")</script>
+</head>
+<body class="flex flex-col min-h-screen dark:bg-gray-900 dark:text-gray-100 transition-colors duration-500"><header class="w-full px-4 pt-4 max-w-5xl mx-auto">
+<nav class="flex items-center justify-between flex-wrap">
+<div class="flex gap-2 items-center">
+<a href=mailto:min_0610@icloud.com aria-label=EMail><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentcolor" fill="none" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><circle cx="12" cy="12" r="4"/><path d="M16 12v1.5a2.5 2.5.0 005 0V12a9 9 0 10-5.5 8.28"/></svg>
+</a>
+<a href=https://blog.visionary.top/ class="flex items-center font-bold">
+VISIONARY
+</a>
+</div>
+<ul id=nav-menu class="flex w-auto mt-0 space-x-2">
+<li>
+<a href=https://blog.visionary.top/about/ class="hover:text-blue-800 dark:hover:text-blue-300">About Me</a>
+</li>
+<li>
+<a href=https://blog.visionary.top/blog/ class="hover:text-blue-800 dark:hover:text-blue-300">Blogs</a>
+</li>
+</ul>
+</nav>
+</header>
+<main class="flex-1 mx-4 md:mx-12 lg:mx-24 mt-8 sm:mt-16">
+<article class="mb-16 max-w-5xl mx-auto px-4">
+<h1>关于宏观任务与微观任务</h1>
+<ul>
+</ul>
+<div class=post-footer>
+<div class=info>
+<span class=separator><a class=tag href=/tags/qa/>qa</a></span>
+</div>
+</div>
+<div class=post-footer>
+</div>
+<aside class=content-aside-bar>
+<nav id=TableOfContents></nav>
+</aside>
+<div class="prose lg:prose-lg prose-blue dark:prose-dark">
+<p>宿主（浏览器）发起的任务我们可以称之为宏观任务（macrotask）；引擎（js）自己也可以发起任务，这个任务就叫做微观任务（microtask）</p>
+<blockquote>
+<p>从根本上来讲js是单线程语言，首先执行的肯定是同步队列，对于异步操作只能先把它放在一边。</p>
+</blockquote>
+<ul>
+<li>
+<p>宏任务包括有：setTimeOut、setInterval、setImmediate、I/O、用户交互操作，UI渲染</p>
+</li>
+<li>
+<p>微任务包括有：Promise(重点)、process.nextTick(nodejs)、Object.observe(不推荐使用)</p>
+</li>
+</ul>
+<p>当js单线程执行完成之后就会去执行任务对列的内容。当有宏微都有的时候执行是，先执行宏观任务对列内的第一个任务，在执行全部的微观任务，在执行宏观任务对列内的第一个任务，在去执行全部微观任务。</p>
+</div>
+</article>
+</main><footer class="w-full text-center p-4 text-xs text-gray-400">
+copyright © 2021 - VISIONARY · All rights reserved
+</footer>
+</body>
+</html>
