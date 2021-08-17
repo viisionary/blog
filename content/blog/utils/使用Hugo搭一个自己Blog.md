@@ -1,5 +1,5 @@
 ---
-title: "使用Hugo搭一个自己Blog"
+title : "使用Hugo搭一个自己Blog"
 date: 2021-07-16
 description: "Sample article showcasing basic Markdown syntax and formatting for HTML elements."
 categories : [                              

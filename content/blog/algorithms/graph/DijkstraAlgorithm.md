@@ -1,5 +1,5 @@
 ---
-title: "Dijkstra Algorithm"
+title : "Dijkstra Algorithm"
 date: 2018-05-16
 categories : [                              
 "algorithm","graph"

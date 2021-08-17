@@ -30,7 +30,7 @@ Call me Mia
 There is my development notes.
 """
 ignoreErrors = ["error-remote-getjson"]
-googleAnalytics = "UA-123-45"
+googleAnalytics = "2701108973"
 gtagId = "G-Z0FJ599SKS"
 githubUsername = "viisionary"
 

@@ -1,6 +1,6 @@
 ---
 author: Hugo Authors
-title: MAC 上好用的快捷键
+title : MAC 上好用的快捷键
 date: 2021-04-24
 math: true
 tags: ["keymap"]

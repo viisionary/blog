@@ -1,7 +1,7 @@
 ---
-title: zsh常用配置等
+title : zsh常用配置等
 date: 2019-01-12
-tags: ["keymap"]
+tags : ["keymap"]
 ---
 
 <!--more-->

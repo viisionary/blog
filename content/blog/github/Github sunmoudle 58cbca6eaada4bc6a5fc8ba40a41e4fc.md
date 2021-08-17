@@ -1,5 +1,5 @@
 ---
-title: "Github sun module"
+title : "Github sun module"
 date: 2021-07-16
 description: "Sample article showcasing basic Markdown syntax and formatting for HTML elements."
 categories : [                              

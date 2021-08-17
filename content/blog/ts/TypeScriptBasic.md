@@ -1,5 +1,5 @@
 ---
-title: "TypeScript Basic"
+title : "TypeScript Basic"
 date: 2021-07-16
 description: "Sample article showcasing basic Markdown syntax and formatting for HTML elements."
 categories : [                              
@@ -185,15 +185,15 @@ Readonly<Type>
 Record<Keys,Type>;
 
 interface PageInfo {
-  title: string;
+  title : string;
 }
 
 type Page = "home" | "about" | "contact";
 
 const nav: Record<Page, PageInfo> = {
-  about: { title: "about" },
-  contact: { title: "contact" },
-  home: { title: "home" },
+  about: { title : "about" },
+  contact: { title : "contact" },
+  home: { title : "home" },
 };
 
 // 选取部分

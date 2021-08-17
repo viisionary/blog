@@ -1,5 +1,5 @@
 ---
-title: "js 代码规范 - clean code"
+title : "js 代码规范 - clean code"
 date: 2021-07-16
 categories : [                              
 "代码规范",
@@ -52,7 +52,7 @@ function paintCar(car, color) {
 ```javascript
 // good example
 const menuConfig = {
-	title: "Order",
+	title : "Order",
 	// User did not include 'body' key
 	buttonText: "Send",
 	cancellable: true
@@ -61,7 +61,7 @@ const menuConfig = {
 function createMenu(config) {
 	let finalConfig = Object.assign(
 		{
-			title: "Foo",
+			title : "Foo",
 			body: "Bar",
 			buttonText: "Baz",
 			cancellable: true
@@ -69,7 +69,7 @@ function createMenu(config) {
 		config
 	);
 	return finalConfig
-	// config now equals: {title: "Order", body: "Bar", buttonText: "Send", cancellable: true}
+	// config now equals: {title : "Order", body: "Bar", buttonText: "Send", cancellable: true}
 	// ...
 }
 

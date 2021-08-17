@@ -1,5 +1,5 @@
 ---
-title: "链表"
+title : "链表"
 date: 2021-07-16
 categories : [                              
 "数据结构","算法",

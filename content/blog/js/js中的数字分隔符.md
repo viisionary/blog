@@ -1,37 +1,33 @@
-[comment]: <> (---)
+---
 
-[comment]: <> (title: "js中几个遍历数组方法的特点")
+title: "js中几个遍历数组方法的特点"
 
-[comment]: <> (date: 2021-07-16)
+date: 2021-07-16
 
-[comment]: <> (description: """)
+description: ""
 
-[comment]: <> (categories : [                              )
+categories : [                              
+"javascript",
+]
 
-[comment]: <> ("javascript",)
+toc: true
 
-[comment]: <> (])
+tags: [
+"语法",
+]
 
-[comment]: <> (toc: true)
+---
 
-[comment]: <> (tags: [)
+## 只是提高了可读性，其余没有区别
 
-[comment]: <> ("语法",)
+```javascript
 
-[comment]: <> (])
+const msInOneYear = 31536000000;
 
-[comment]: <> (---)
+const price = 4200;
 
-[comment]: <> (## 只是提高了可读性，其余没有区别)
+const msInOneYear = 31_536_000_000; //3千万
 
-[comment]: <> (```javascript)
+const price = 42_00; // 42
 
-[comment]: <> (const msInOneYear = 31536000000;)
-
-[comment]: <> (const price = 4200;)
-
-[comment]: <> (const msInOneYear = 31_536_000_000; //3千万)
-
-[comment]: <> (const price = 42_00; // 42)
-
-[comment]: <> (```)
+```

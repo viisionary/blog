@@ -1,6 +1,6 @@
 ---
 author: Hugo Authors
-title: Math Typesetting
+title : Math Typesetting
 date: 2021-04-24
 categories : [                              
 "md",

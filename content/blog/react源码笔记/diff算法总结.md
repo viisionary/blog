@@ -1,8 +1,9 @@
 ---
-title: "react 源码阅读 - diff 算法"
+title : "react 源码阅读 - diff 算法"
 date: 2021-04-02
 categories : ["react","源码"]
 ---
+<!--more-->
 
 详细写了 diff 算法的原理，写了示例，分析了源码，加了注释
 
@@ -85,6 +86,19 @@ diff 算法只对同级元素进行
 
 将 剩余的old array 生成 key -> fiber node 对应表； 方便new array 遍历时找对应的
 
+> 为什么需要unique key
+> 
+> 当出现在头部插入的行为时，生成了对应表 之前的fiber node 就可以复用
+> 
+> 要是 使用了index作为 key   prop传来的值可以正常使用， state找的时候就不对 【还有input输入框这种的值】
+> （子组件自己的东西会出错）
+> 复用的时候 key -> fiber node 对应的是错误的 0 - 0 => 0 - 1 , 1 - 0 
+> 
+> 在尾部插入时 index 相对来说是稳定的 就没有问题
+> 
+> 排序的时候 index是没变化的 props 跟着变了 state还是对应的原来的index 就不会有变化
+> 
+{{<codepen ZEKjyRm>}}
 开始第二次循环，遍历剩余的 new array
 
 ![img_10.png](img_10.png)

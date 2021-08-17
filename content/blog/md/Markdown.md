@@ -1,5 +1,5 @@
 ---
-title: "code spilt show"
+title : "code spilt show"
 date: 2021-07-16
 toc: true
 categories : [                              
