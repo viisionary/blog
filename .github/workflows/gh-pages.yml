@@ -23,7 +23,6 @@ jobs:
       - run: |
           cd themes/showfolio
           npm ci
-          grunt unr-index
       - name: Setup Hugo
         uses: peaceiris/actions-hugo@v2
         with:
@@ -31,6 +30,8 @@ jobs:
 
       - name: Build
         run: hugo --minify
+       - name: GENERATE SITE INDEX
+        run: grunt unr-index
 
       - name: Deploy
         uses: peaceiris/actions-gh-pages@v3
