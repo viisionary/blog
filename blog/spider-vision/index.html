@@ -4,7 +4,7 @@
 <meta name=viewport content="width=device-width,initial-scale=1">
 <title>
 spider-vision - VISIONARY
-</title><meta name=generator content="Hugo 0.86.0"><link rel=stylesheet href=https://blog.visionary.top/css/styles.min.b8da27393bbffae36779e3d6f6c11ac48118496123b767ea3037ef00a94e91ad.css integrity=sha256-uNonOTu/+uNneePW9sEaxIEYSWEjt2fqMDfvAKlOka0=>
+</title><meta name=generator content="Hugo 0.87.0"><link rel=stylesheet href=https://blog.visionary.top/css/styles.min.58f39d2fee5ad08dc7d0f0329831e6809c556f80c5f682777edb84f468b700cb.css integrity=sha256-WPOdL+5a0I3H0PAymDHmgJxVb4DF9oJ3ftuE9Gi3AMs=>
 <script>window.matchMedia("(prefers-color-scheme: dark)").matches?document.documentElement.classList.add("dark"):document.documentElement.classList.remove("dark")</script>
 </head>
 <body class="flex flex-col min-h-screen dark:bg-gray-900 dark:text-gray-100 transition-colors duration-500"><header class="w-full px-4 pt-4 max-w-5xl mx-auto">
@@ -17,6 +17,15 @@ VISIONARY
 </a>
 </div>
 <ul id=nav-menu class="flex w-auto mt-0 space-x-2">
+<li><div class=search>
+<label for=search>🔍</label><input placeholder=SEARCH id=search type=text class=dark:bg-gray-900>
+<ul id=results class=search_result>
+</ul>
+</div>
+<script type=text/javascript src=https://code.jquery.com/jquery-2.1.3.min.js></script>
+<script type=text/javascript src=/js/lunr/lunr.min.js></script>
+<script type=text/javascript>let lunrIndex,$results,pagesIndex;function initLunr(){$.getJSON("/js/lunr/PagesIndex.json").done(function(a){pagesIndex=a,console.info("index:",pagesIndex),lunrIndex=lunr(function(){this.field("title",{boost:10}),this.field("tags",{boost:5}),console.log(this.add),this.field("content"),this.ref("href"),pagesIndex.forEach(a=>{console.log(a),a&&this.add(a)})})}).fail(function(d,a,b){const c=a+", "+b;console.error("Error getting Hugo index flie:",c)})}function initUI(){$results=$("#results"),$("#search").keyup(function(){$results.empty();const a=$(this).val();if(a.length<2)return;const b=search(a);renderResults(b)})}function search(a){return lunrIndex.search(a).map(function(a){return console.log(a),pagesIndex.filter(function(b){return b&&b.href===a.ref})[0]})}function renderResults(a){if(!a.length)return;a.slice(0,10).forEach(function(a){const b=$("<li>");b.append($("<a>",{href:a?a.href:'',text:"🔗 "+a.title})),$results.append(b)})}initLunr(),$(document).ready(function(){initUI()})</script>
+</li>
 <li>
 <a href=https://blog.visionary.top/about/ class="hover:text-blue-800 dark:hover:text-blue-300">About Me</a>
 </li>
@@ -43,7 +52,6 @@ VISIONARY
 <aside class="content-aside-bar border-2 mb-4 mt-4">
 <nav id=TableOfContents></nav>
 </aside>
-<h2 class=text-xl>正文</h2>
 <div class="prose lg:prose-lg prose-blue dark:prose-dark">
 </div>
 <h1 class="text-3xl my-12">留下你的脚印 👣 </h1>
@@ -55,5 +63,7 @@ VISIONARY
 </main><footer class="w-full text-center p-4 text-xs text-gray-400">
 copyright © 2021 - VISIONARY · All rights reserved
 </footer>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-Z0FJ599SKS"></script>
+<script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments)}gtag('js',new Date),gtag('config','G-Z0FJ599SKS')</script>
 </body>
 </html>

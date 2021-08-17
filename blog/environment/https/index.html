@@ -1,0 +1,151 @@
+<!doctype html><html lang=en-us>
+<head>
+<meta charset=utf-8>
+<meta name=viewport content="width=device-width,initial-scale=1">
+<title>
+https相关内容 - VISIONARY
+</title><meta name=generator content="Hugo 0.87.0"><link rel=stylesheet href=https://blog.visionary.top/css/styles.min.58f39d2fee5ad08dc7d0f0329831e6809c556f80c5f682777edb84f468b700cb.css integrity=sha256-WPOdL+5a0I3H0PAymDHmgJxVb4DF9oJ3ftuE9Gi3AMs=>
+<script>window.matchMedia("(prefers-color-scheme: dark)").matches?document.documentElement.classList.add("dark"):document.documentElement.classList.remove("dark")</script>
+</head>
+<body class="flex flex-col min-h-screen dark:bg-gray-900 dark:text-gray-100 transition-colors duration-500"><header class="w-full px-4 pt-4 max-w-5xl mx-auto">
+<nav class="flex items-center justify-between flex-wrap">
+<div class="flex gap-2 items-center">
+<a href=mailto:min_0610@icloud.com aria-label=EMail><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentcolor" fill="none" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><circle cx="12" cy="12" r="4"/><path d="M16 12v1.5a2.5 2.5.0 005 0V12a9 9 0 10-5.5 8.28"/></svg>
+</a>
+<a href=https://blog.visionary.top/ class="flex items-center font-bold">
+VISIONARY
+</a>
+</div>
+<ul id=nav-menu class="flex w-auto mt-0 space-x-2">
+<li><div class=search>
+<label for=search>🔍</label><input placeholder=SEARCH id=search type=text class=dark:bg-gray-900>
+<ul id=results class=search_result>
+</ul>
+</div>
+<script type=text/javascript src=https://code.jquery.com/jquery-2.1.3.min.js></script>
+<script type=text/javascript src=/js/lunr/lunr.min.js></script>
+<script type=text/javascript>let lunrIndex,$results,pagesIndex;function initLunr(){$.getJSON("/js/lunr/PagesIndex.json").done(function(a){pagesIndex=a,console.info("index:",pagesIndex),lunrIndex=lunr(function(){this.field("title",{boost:10}),this.field("tags",{boost:5}),console.log(this.add),this.field("content"),this.ref("href"),pagesIndex.forEach(a=>{console.log(a),a&&this.add(a)})})}).fail(function(d,a,b){const c=a+", "+b;console.error("Error getting Hugo index flie:",c)})}function initUI(){$results=$("#results"),$("#search").keyup(function(){$results.empty();const a=$(this).val();if(a.length<2)return;const b=search(a);renderResults(b)})}function search(a){return lunrIndex.search(a).map(function(a){return console.log(a),pagesIndex.filter(function(b){return b&&b.href===a.ref})[0]})}function renderResults(a){if(!a.length)return;a.slice(0,10).forEach(function(a){const b=$("<li>");b.append($("<a>",{href:a?a.href:'',text:"🔗 "+a.title})),$results.append(b)})}initLunr(),$(document).ready(function(){initUI()})</script>
+</li>
+<li>
+<a href=https://blog.visionary.top/about/ class="hover:text-blue-800 dark:hover:text-blue-300">About Me</a>
+</li>
+<li>
+<a href=https://blog.visionary.top/blog/ class="hover:text-blue-800 dark:hover:text-blue-300">Blogs</a>
+</li>
+</ul>
+</nav>
+</header>
+<main class="flex-1 mx-4 md:mx-12 lg:mx-24 mt-8 sm:mt-16">
+<article class="mb-16 max-w-5xl mx-auto px-4">
+<h1 class="text-5xl mb-6">https相关内容</h1>
+<ul>
+</ul>
+<div class="post-footer mb-6">
+<div class=info>
+<span class=separator><a class=tag href=/tags/https/>https</a></span>
+</div>
+</div>
+<div class=post-footer>
+</div>
+<h2 class=text-xl>目录</h2>
+<aside class="content-aside-bar border-2 mb-4 mt-4">
+<nav id=TableOfContents>
+<ul>
+<li><a href=#一个站点的证书>一个站点的证书</a></li>
+<li><a href=#https验证过程>https验证过程</a></li>
+<li><a href=#证书的作用>证书的作用</a></li>
+<li><a href=#签名是什么>签名是什么</a></li>
+<li><a href=#其中-data-包含的内容有>其中 Data 包含的内容有：</a></li>
+<li><a href=#什么是证书链certificate-chain>什么是证书链（Certificate Chain）</a></li>
+<li><a href=#什么是中间人攻击man-in-the-middle-attack>什么是中间人攻击（Man-In-the-Middle-Attack）</a></li>
+<li><a href=#客户端校验服务端的数字证书的过程>客户端校验服务端的数字证书的过程</a></li>
+<li><a href=#什么是单向验证>什么是单向验证</a></li>
+<li><a href=#双向验证和单向验证>双向验证和单向验证</a></li>
+<li><a href=#https的加密>https的加密</a></li>
+<li><a href=#https验证阶段检查哪些内容>https验证阶段检查哪些内容</a></li>
+<li><a href=#为什么说https是安全的>为什么说https是安全的？</a></li>
+<li><a href=#https一定是安全的吗>https一定是安全的吗？</a></li>
+<li><a href=#https请求建立过程--中间人攻击>https请求建立过程 & 中间人攻击</a></li>
+<li><a href=#http2>HTTP/2</a></li>
+</ul>
+</nav>
+</aside>
+<div class="prose lg:prose-lg prose-blue dark:prose-dark">
+<p>https</p>
+<h2 id=一个站点的证书>一个站点的证书</h2>
+<p><img src=img.png alt=img.png>
+发行者信息
+<img src=img_3.png alt=img_3.png>
+公钥 签名
+<img src=img_1.png alt=img_1.png>
+指纹
+<img src=img_2.png alt=img_2.png></p>
+<h2 id=https验证过程>https验证过程</h2>
+<p>我们在访问 <a href=https://www.youzan.com>https://www.youzan.com</a> 时， 浏览器会得到一个 TLS 证书，这个数字证书用于证明我们正在访问的网站和证书的持有者是匹配的，否则因为身份认证无法通过，连接也就无法建立。</p>
+<h2 id=证书的作用>证书的作用</h2>
+<p>证书就是用来告诉客户端，该服务端是否是合法的，因为只有证书合法，才代表服务端身份是可信的。</p>
+<h2 id=签名是什么>签名是什么</h2>
+<p>一个 Certificate 由 Data 和 Signature 两部分组成。
+CA会对证书进行签名，之所以要签名，是因为签名的作用可以避免中间人在获取证书时对证书内容的篡改。</p>
+<h2 id=其中-data-包含的内容有>其中 Data 包含的内容有：</h2>
+<p>证书版本号：X.509v3</p>
+<p>序列号：一个 CA 机构内是唯一的，但不是全局唯一</p>
+<p>签名算法：签名的计算公式为RSA(sha256(Data), IssuerPrivateKey)</p>
+<p>签发者：DN（Distinguished Name）</p>
+<p>有效期：证书的有效期间 [Not Before, Not After]</p>
+<p>证书拥有者：也是一个 DN公钥长度一般是 2048bit，1024bit已经被证明不安全</p>
+<p>扩展字段：证书所携带的域名信息会配置在 SAN 中（X509v3 Subject Alternative Name）</p>
+<blockquote>
+<p>Signature 位于证书最末尾，签名算法 sha256WithRSAEncryption 在 Data 域内已经指明 ，而 RSA 进行非对称加密所需的私钥（Private Key）则是由 Issuer 提供，Issuer 是一个可以签发证书的证书，由证书权威 CA 提供，CA 需要保证证书的有效性，而且 CA 的私钥需要绝密保存，一旦泄露出去，证书可能会被随意签发，也就意味 CA 机构要赔很多钱，跟保险理赔类似。</p>
+</blockquote>
+<p>Signature = RSA(sha256(Data), IssuerPrivateKey)</p>
+<h2 id=什么是证书链certificate-chain>什么是证书链（Certificate Chain）</h2>
+<p>浏览器得到 -> 请求中间证书->找到根证书 【浏览器/操作系统信任根证书】-> 信任中间证书-> 信任site.com
+site.com的证书-> GlobalSign Organization Validation CA - SHA256 - G2->GlobalSign Root CA</p>
+<h2 id=什么是中间人攻击man-in-the-middle-attack>什么是中间人攻击（Man-In-the-Middle-Attack）</h2>
+<p>见文尾图
+中间人拦截请求，伪造服务器公钥，取到共享公钥窃取信息；</p>
+<h2 id=客户端校验服务端的数字证书的过程>客户端校验服务端的数字证书的过程</h2>
+<ol>
+<li>首先客户端会使用同样的 Hash 算法获取该证书的 Hash 值 H1；</li>
+<li>通常浏览器和操作系统中集成了 CA 的公钥信息，浏览器收到证书后可以使用 CA 的公钥解密 Certificate Signature 内容，得到一个 Hash 值 H2 ；</li>
+<li>最后比较 H1 和 H2，如果值相同，则为可信赖的证书，否则则认为证书不可信。</li>
+</ol>
+<h2 id=什么是单向验证>什么是单向验证</h2>
+<p>单向验证客户浏览器即可完成，即客户端truststore存放服务器public证书，即客户端验证服务器是否可被信任。</p>
+<h2 id=双向验证和单向验证>双向验证和单向验证</h2>
+<p>双向验证客户浏览器需要带客户端证书到服务器端由服务器端验证，客户端trust store存放服务器端public证书，keystore存放自身private证书，服务器端truststore存放客户端public证书，keystore存放自身private证书。</p>
+<h2 id=https的加密>https的加密</h2>
+<p>Https加密通信有两种加密，一种是非对称加密，另一种是对称加密。</p>
+<p>公钥只能进行加密，而解密是只能用私钥进行解密的。</p>
+<p>非对称加密，就是加密和解密的秘钥不同</p>
+<p>而对称加密，就是加密和解密都是用的同一个秘钥，加密和解密都很快，在不知道秘钥的情况下，想要破解的难度也非常大，比非对称加密破解还要难</p>
+<h2 id=https验证阶段检查哪些内容>https验证阶段检查哪些内容</h2>
+<ol>
+<li>证书是否过期，</li>
+<li>发行服务器证书的CA 是否可靠，
+em</li>
+<li>发行者证书的公钥能否正确解开服务器证书的“发行者的数字签名”，</li>
+<li>服务器证书上的域名是否和服务器的实际域名相匹配</li>
+</ol>
+<h2 id=为什么说https是安全的>为什么说https是安全的？</h2>
+<p>浏览器会验证证书是否可信 并且使用证书里提供的公钥生成共享密钥，对报文进行加密，这样只有服务器和客户端才能读懂，以保证数据的保密性。所以HTTPS是安全的。</p>
+<h2 id=https一定是安全的吗>https一定是安全的吗？</h2>
+<p>因为是单向校验，只有客户端去校验服务器提供的证书是否可信，一旦客户端安装了一个根证书</p>
+<h2 id=https请求建立过程--中间人攻击>https请求建立过程 & 中间人攻击</h2>
+<p><img src=img_4.png alt=img_4.png></p>
+<h2 id=http2>HTTP/2</h2>
+</div>
+<h1 class="text-3xl my-12">留下你的脚印 👣 </h1>
+<div id=disqus_thread>
+</div>
+<script type=text/javascript>(function(){var a,b;if(window.location.hostname=="localhost")return;a=document.createElement('script'),a.type='text/javascript',a.async=!0,b='visionary',a.src='//'+b+'.disqus.com/embed.js',(document.getElementsByTagName('head')[0]||document.getElementsByTagName('body')[0]).appendChild(a)})()</script>
+<noscript>Please enable JavaScript to view the <a href=https://disqus.com/?ref_noscript>comments powered by Disqus.</a></noscript>
+</article>
+</main><footer class="w-full text-center p-4 text-xs text-gray-400">
+copyright © 2021 - VISIONARY · All rights reserved
+</footer>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-Z0FJ599SKS"></script>
+<script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments)}gtag('js',new Date),gtag('config','G-Z0FJ599SKS')</script>
+</body>
+</html>

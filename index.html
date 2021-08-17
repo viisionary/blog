@@ -3,10 +3,8 @@
 <meta charset=utf-8>
 <meta name=viewport content="width=device-width,initial-scale=1">
 <title>
-Home of Mia 👋 - VISIONARY
-</title>
-<meta name=author content="John Doe">
-<meta name=generator content="Hugo 0.86.0"><link rel=stylesheet href=https://blog.visionary.top/css/styles.min.b8da27393bbffae36779e3d6f6c11ac48118496123b767ea3037ef00a94e91ad.css integrity=sha256-uNonOTu/+uNneePW9sEaxIEYSWEjt2fqMDfvAKlOka0=>
+About Me - VISIONARY
+</title><meta name=generator content="Hugo 0.87.0"><link rel=stylesheet href=https://blog.visionary.top/css/styles.min.58f39d2fee5ad08dc7d0f0329831e6809c556f80c5f682777edb84f468b700cb.css integrity=sha256-WPOdL+5a0I3H0PAymDHmgJxVb4DF9oJ3ftuE9Gi3AMs=>
 <script>window.matchMedia("(prefers-color-scheme: dark)").matches?document.documentElement.classList.add("dark"):document.documentElement.classList.remove("dark")</script>
 </head>
 <body class="flex flex-col min-h-screen dark:bg-gray-900 dark:text-gray-100 transition-colors duration-500"><header class="w-full px-4 pt-4 max-w-5xl mx-auto">
@@ -19,6 +17,15 @@ VISIONARY
 </a>
 </div>
 <ul id=nav-menu class="flex w-auto mt-0 space-x-2">
+<li><div class=search>
+<label for=search>🔍</label><input placeholder=SEARCH id=search type=text class=dark:bg-gray-900>
+<ul id=results class=search_result>
+</ul>
+</div>
+<script type=text/javascript src=https://code.jquery.com/jquery-2.1.3.min.js></script>
+<script type=text/javascript src=/js/lunr/lunr.min.js></script>
+<script type=text/javascript>let lunrIndex,$results,pagesIndex;function initLunr(){$.getJSON("/js/lunr/PagesIndex.json").done(function(a){pagesIndex=a,console.info("index:",pagesIndex),lunrIndex=lunr(function(){this.field("title",{boost:10}),this.field("tags",{boost:5}),console.log(this.add),this.field("content"),this.ref("href"),pagesIndex.forEach(a=>{console.log(a),a&&this.add(a)})})}).fail(function(d,a,b){const c=a+", "+b;console.error("Error getting Hugo index flie:",c)})}function initUI(){$results=$("#results"),$("#search").keyup(function(){$results.empty();const a=$(this).val();if(a.length<2)return;const b=search(a);renderResults(b)})}function search(a){return lunrIndex.search(a).map(function(a){return console.log(a),pagesIndex.filter(function(b){return b&&b.href===a.ref})[0]})}function renderResults(a){if(!a.length)return;a.slice(0,10).forEach(function(a){const b=$("<li>");b.append($("<a>",{href:a?a.href:'',text:"🔗 "+a.title})),$results.append(b)})}initLunr(),$(document).ready(function(){initUI()})</script>
+</li>
 <li>
 <a href=https://blog.visionary.top/about/ class="hover:text-blue-800 dark:hover:text-blue-300">About Me</a>
 </li>
@@ -182,22 +189,28 @@ front-end site deploy
 <div class="grid grid-cols-2 gap-4">
 <div>
 <div class="text-2xl font-semibold mb-4">Blog Tags</div>
+<a class=tag href=https://blog.visionary.top/tags/about/>About</a> 1
 <a class=tag href=https://blog.visionary.top/tags/grunt/>grunt</a> 1
+<a class=tag href=https://blog.visionary.top/tags/https/>https</a> 1
 <a class=tag href=https://blog.visionary.top/tags/jest/>jest</a> 1
-<a class=tag href=https://blog.visionary.top/tags/js/>js</a> 1
+<a class=tag href=https://blog.visionary.top/tags/js/>js</a> 3
 <a class=tag href=https://blog.visionary.top/tags/js%E5%9F%BA%E7%A1%80/>js基础</a> 1
 <a class=tag href=https://blog.visionary.top/tags/keymap/>keymap</a> 2
-<a class=tag href=https://blog.visionary.top/tags/npm/>npm</a> 1
+<a class=tag href=https://blog.visionary.top/tags/npm/>npm</a> 2
 <a class=tag href=https://blog.visionary.top/tags/qa/>qa</a> 3
-<a class=tag href=https://blog.visionary.top/tags/react/>react</a> 2
+<a class=tag href=https://blog.visionary.top/tags/react/>react</a> 7
 <a class=tag href=https://blog.visionary.top/tags/redux/>redux</a> 1
 <a class=tag href=https://blog.visionary.top/tags/thumbnail/>thumbnail</a> 1
-<a class=tag href=https://blog.visionary.top/tags/ts/>ts</a> 1
+<a class=tag href=https://blog.visionary.top/tags/ts/>ts</a> 2
 <a class=tag href=https://blog.visionary.top/tags/typescript/>typescript</a> 1
+<a class=tag href=https://blog.visionary.top/tags/web-media/>web media</a> 1
 <a class=tag href=https://blog.visionary.top/tags/webpack/>webpack</a> 3
+<a class=tag href=https://blog.visionary.top/tags/webrtc/>WebRTC</a> 1
 <a class=tag href=https://blog.visionary.top/tags/%E5%89%8D%E7%AB%AF%E5%AE%89%E5%85%A8/>前端安全</a> 16
 <a class=tag href=https://blog.visionary.top/tags/%E5%89%8D%E7%AB%AF%E6%80%A7%E8%83%BD/>前端性能</a> 1
+<a class=tag href=https://blog.visionary.top/tags/%E5%8A%9F%E8%83%BD/>功能</a> 1
 <a class=tag href=https://blog.visionary.top/tags/%E5%9F%BA%E7%A1%80/>基础</a> 1
+<a class=tag href=https://blog.visionary.top/tags/%E8%AF%AD%E6%B3%95/>语法</a> 1
 </div>
 <div>
 <div class="text-2xl font-semibold mb-4">Skills</div>
@@ -237,5 +250,7 @@ Ins
 </main><footer class="w-full text-center p-4 text-xs text-gray-400">
 copyright © 2021 - VISIONARY · All rights reserved
 </footer>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-Z0FJ599SKS"></script>
+<script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments)}gtag('js',new Date),gtag('config','G-Z0FJ599SKS')</script>
 </body>
 </html>

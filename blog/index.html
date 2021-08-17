@@ -4,7 +4,7 @@
 <meta name=viewport content="width=device-width,initial-scale=1">
 <title>
 Blogs - VISIONARY
-</title><meta name=generator content="Hugo 0.86.0"><link rel=stylesheet href=https://blog.visionary.top/css/styles.min.b8da27393bbffae36779e3d6f6c11ac48118496123b767ea3037ef00a94e91ad.css integrity=sha256-uNonOTu/+uNneePW9sEaxIEYSWEjt2fqMDfvAKlOka0=>
+</title><meta name=generator content="Hugo 0.87.0"><link rel=stylesheet href=https://blog.visionary.top/css/styles.min.58f39d2fee5ad08dc7d0f0329831e6809c556f80c5f682777edb84f468b700cb.css integrity=sha256-WPOdL+5a0I3H0PAymDHmgJxVb4DF9oJ3ftuE9Gi3AMs=>
 <script>window.matchMedia("(prefers-color-scheme: dark)").matches?document.documentElement.classList.add("dark"):document.documentElement.classList.remove("dark")</script>
 </head>
 <body class="flex flex-col min-h-screen dark:bg-gray-900 dark:text-gray-100 transition-colors duration-500"><header class="w-full px-4 pt-4 max-w-5xl mx-auto">
@@ -17,6 +17,15 @@ VISIONARY
 </a>
 </div>
 <ul id=nav-menu class="flex w-auto mt-0 space-x-2">
+<li><div class=search>
+<label for=search>🔍</label><input placeholder=SEARCH id=search type=text class=dark:bg-gray-900>
+<ul id=results class=search_result>
+</ul>
+</div>
+<script type=text/javascript src=https://code.jquery.com/jquery-2.1.3.min.js></script>
+<script type=text/javascript src=/js/lunr/lunr.min.js></script>
+<script type=text/javascript>let lunrIndex,$results,pagesIndex;function initLunr(){$.getJSON("/js/lunr/PagesIndex.json").done(function(a){pagesIndex=a,console.info("index:",pagesIndex),lunrIndex=lunr(function(){this.field("title",{boost:10}),this.field("tags",{boost:5}),console.log(this.add),this.field("content"),this.ref("href"),pagesIndex.forEach(a=>{console.log(a),a&&this.add(a)})})}).fail(function(d,a,b){const c=a+", "+b;console.error("Error getting Hugo index flie:",c)})}function initUI(){$results=$("#results"),$("#search").keyup(function(){$results.empty();const a=$(this).val();if(a.length<2)return;const b=search(a);renderResults(b)})}function search(a){return lunrIndex.search(a).map(function(a){return console.log(a),pagesIndex.filter(function(b){return b&&b.href===a.ref})[0]})}function renderResults(a){if(!a.length)return;a.slice(0,10).forEach(function(a){const b=$("<li>");b.append($("<a>",{href:a?a.href:'',text:"🔗 "+a.title})),$results.append(b)})}initLunr(),$(document).ready(function(){initUI()})</script>
+</li>
 <li>
 <a href=https://blog.visionary.top/about/ class="hover:text-blue-800 dark:hover:text-blue-300">About Me</a>
 </li>
@@ -31,6 +40,37 @@ VISIONARY
 <h1 class="text-4xl font-bold mb-4">Blogs</h1>
 <div class=text-gray-600></div>
 <div class=card-list>
+<a class="block my-6" href=/blog/js/%E6%AD%A3%E5%88%99/>
+<h2 class="text-xl font-semibold mb-1">JS正则相关</h2>
+<div class="font-light text-gray-800 dark:text-gray-200">
+<p>Regular Expressions Cheat Sheet & function</p>
+</div>
+</a>
+<div class="info dark:info-dark">
+<span class="font-light mb-2 text-gray-500 text-sm">
+August 10, 2021
+</span>
+<span class="font-light text-gray-500 text-sm dark:text-gray-200">
+<span class=separator><a class=tag href=/tags/js/>js</a></span>
+</span>
+</div>
+<a class="block my-6" href=/blog/js/%E5%88%86%E7%89%87%E4%B8%8A%E4%BC%A0/>
+<h2 class="text-xl font-semibold mb-1">使用resumable实现分片上传、暂停续传</h2>
+<div class="font-light text-gray-800 dark:text-gray-200">
+<p>框架：react / node
+使用 resumable 实现分片上传、暂停续传</p>
+<p>基本功能仿youtube</p>
+<p><a href=https://github.com/viisionary/resumableClient>https://github.com/viisionary/resumableClient</a></p>
+</div>
+</a>
+<div class="info dark:info-dark">
+<span class="font-light mb-2 text-gray-500 text-sm">
+August 1, 2021
+</span>
+<span class="font-light text-gray-500 text-sm dark:text-gray-200">
+<span class=separator><a class=tag href=/tags/%E5%8A%9F%E8%83%BD/>功能</a></span>
+</span>
+</div>
 <a class="block my-6" href=/blog/js/es6/>
 <h2 class="text-xl font-semibold mb-1">es6 新语法 - 2019 & 2020</h2>
 <div class="font-light text-gray-800 dark:text-gray-200">
@@ -61,6 +101,20 @@ July 22, 2021
 <span class=separator><a class=tag href=/tags/react/>react</a></span>
 </span>
 </div>
+<a class="block my-6" href=/blog/environment/https/>
+<h2 class="text-xl font-semibold mb-1">https相关内容</h2>
+<div class="font-light text-gray-800 dark:text-gray-200">
+<p>https</p>
+</div>
+</a>
+<div class="info dark:info-dark">
+<span class="font-light mb-2 text-gray-500 text-sm">
+July 22, 2021
+</span>
+<span class="font-light text-gray-500 text-sm dark:text-gray-200">
+<span class=separator><a class=tag href=/tags/https/>https</a></span>
+</span>
+</div>
 <a class="block my-6" href=/blog/qa/javascript-%E5%86%85%E5%AD%98%E6%B3%84%E6%BC%8F/>
 <h2 class="text-xl font-semibold mb-1">JavaScript 内存泄漏</h2>
 <div class="font-light text-gray-800 dark:text-gray-200">
@@ -75,6 +129,59 @@ July 22, 2021
 <span class=separator><a class=tag href=/tags/qa/>qa</a></span>
 </span>
 </div>
+<a class="block my-6" href=/blog/qa/js%E5%B9%B6%E5%8F%91%E6%A8%A1%E5%9E%8B%E4%BA%8B%E4%BB%B6%E5%BE%AA%E7%8E%AF%E6%9C%BA%E5%88%B6/>
+<h2 class="text-xl font-semibold mb-1">js 的 并发模型与事件循环</h2>
+<div class="font-light text-gray-800 dark:text-gray-200">
+</div>
+</a>
+<div class="info dark:info-dark">
+<span class="font-light mb-2 text-gray-500 text-sm">
+July 22, 2021
+</span>
+<span class="font-light text-gray-500 text-sm dark:text-gray-200">
+<span class=separator><a class=tag href=/tags/js/>js</a></span>
+</span>
+</div>
+<a class="block my-6" href=/blog/environment/npm%E7%9B%B8%E5%85%B3/>
+<h2 class="text-xl font-semibold mb-1">package-lock.json</h2>
+<div class="font-light text-gray-800 dark:text-gray-200">
+<p>对于任何 npm 修改node_modules树或package.json. 它描述了生成的确切树，以便后续安装能够生成相同的树，而不管中间依赖项更新如何。</p>
+</div>
+</a>
+<div class="info dark:info-dark">
+<span class="font-light mb-2 text-gray-500 text-sm">
+July 22, 2021
+</span>
+<span class="font-light text-gray-500 text-sm dark:text-gray-200">
+<span class=separator><a class=tag href=/tags/npm/>npm</a></span>
+</span>
+</div>
+<a class="block my-6" href=/blog/react%E4%BD%BF%E7%94%A8/purecomponent/>
+<h2 class="text-xl font-semibold mb-1">PureComponent</h2>
+<div class="font-light text-gray-800 dark:text-gray-200">
+</div>
+</a>
+<div class="info dark:info-dark">
+<span class="font-light mb-2 text-gray-500 text-sm">
+July 22, 2021
+</span>
+<span class="font-light text-gray-500 text-sm dark:text-gray-200">
+<span class=separator><a class=tag href=/tags/react/>react</a></span>
+</span>
+</div>
+<a class="block my-6" href=/blog/react%E4%BD%BF%E7%94%A8/api/>
+<h2 class="text-xl font-semibold mb-1">React 中的 不是很常用的API</h2>
+<div class="font-light text-gray-800 dark:text-gray-200">
+</div>
+</a>
+<div class="info dark:info-dark">
+<span class="font-light mb-2 text-gray-500 text-sm">
+July 22, 2021
+</span>
+<span class="font-light text-gray-500 text-sm dark:text-gray-200">
+<span class=separator><a class=tag href=/tags/react/>react</a></span>
+</span>
+</div>
 <a class="block my-6" href=/blog/react%E4%BD%BF%E7%94%A8/redux/>
 <h2 class="text-xl font-semibold mb-1">redux 相关</h2>
 <div class="font-light text-gray-800 dark:text-gray-200">
@@ -87,6 +194,46 @@ July 22, 2021
 </span>
 <span class="font-light text-gray-500 text-sm dark:text-gray-200">
 <span class=separator><a class=tag href=/tags/react/>react</a><a class=tag href=/tags/redux/>redux</a></span>
+</span>
+</div>
+<a class="block my-6" href=/blog/qa/serverless/>
+<h2 class="text-xl font-semibold mb-1">serverless</h2>
+<div class="font-light text-gray-800 dark:text-gray-200">
+</div>
+</a>
+<div class="info dark:info-dark">
+<span class="font-light mb-2 text-gray-500 text-sm">
+July 22, 2021
+</span>
+<span class="font-light text-gray-500 text-sm dark:text-gray-200">
+<span class=separator><a class=tag href=/tags/react/>react</a></span>
+</span>
+</div>
+<a class="block my-6" href=/blog/ts/%E7%94%A8%E8%BF%87%E7%9A%84%E7%B1%BB%E5%9E%8B/>
+<h2 class="text-xl font-semibold mb-1">ts & tsx lib中一些常用的 type</h2>
+<div class="font-light text-gray-800 dark:text-gray-200">
+</div>
+</a>
+<div class="info dark:info-dark">
+<span class="font-light mb-2 text-gray-500 text-sm">
+July 22, 2021
+</span>
+<span class="font-light text-gray-500 text-sm dark:text-gray-200">
+<span class=separator><a class=tag href=/tags/ts/>ts</a></span>
+</span>
+</div>
+<a class="block my-6" href=/blog/media/web-rtc/>
+<h2 class="text-xl font-semibold mb-1">WebRTC</h2>
+<div class="font-light text-gray-800 dark:text-gray-200">
+<p>WebRTC的总结</p>
+</div>
+</a>
+<div class="info dark:info-dark">
+<span class="font-light mb-2 text-gray-500 text-sm">
+July 22, 2021
+</span>
+<span class="font-light text-gray-500 text-sm dark:text-gray-200">
+<span class=separator><a class=tag href=/tags/webrtc/>WebRTC</a><a class=tag href=/tags/web-media/>web media</a></span>
 </span>
 </div>
 <a class="block my-6" href=/blog/webworker/>
@@ -114,6 +261,32 @@ July 22, 2021
 </span>
 <span class="font-light text-gray-500 text-sm dark:text-gray-200">
 <span class=separator><a class=tag href=/tags/%E5%89%8D%E7%AB%AF%E6%80%A7%E8%83%BD/>前端性能</a></span>
+</span>
+</div>
+<a class="block my-6" href=/blog/react%E4%BD%BF%E7%94%A8/%E5%85%B3%E4%BA%8Eref/>
+<h2 class="text-xl font-semibold mb-1">关于React 中的 ref</h2>
+<div class="font-light text-gray-800 dark:text-gray-200">
+</div>
+</a>
+<div class="info dark:info-dark">
+<span class="font-light mb-2 text-gray-500 text-sm">
+July 22, 2021
+</span>
+<span class="font-light text-gray-500 text-sm dark:text-gray-200">
+<span class=separator><a class=tag href=/tags/react/>react</a></span>
+</span>
+</div>
+<a class="block my-6" href=/blog/react%E4%BD%BF%E7%94%A8/%E5%8F%97%E6%8E%A7%E7%BB%84%E4%BB%B6%E4%B8%8D%E5%8F%97%E6%8E%A7%E7%BB%84%E4%BB%B6/>
+<h2 class="text-xl font-semibold mb-1">关于React 中的 受控组件 vs 不受控组件</h2>
+<div class="font-light text-gray-800 dark:text-gray-200">
+</div>
+</a>
+<div class="info dark:info-dark">
+<span class="font-light mb-2 text-gray-500 text-sm">
+July 22, 2021
+</span>
+<span class="font-light text-gray-500 text-sm dark:text-gray-200">
+<span class=separator><a class=tag href=/tags/react/>react</a></span>
 </span>
 </div>
 <a class="block my-6" href=/blog/qa/%E6%B5%8F%E8%A7%88%E5%99%A8%E5%8E%9F%E7%90%86%E7%9B%B8%E5%85%B3/>
@@ -162,6 +335,28 @@ July 22, 2021
 </span>
 <span class="font-light text-gray-500 text-sm dark:text-gray-200">
 <span class=separator><a class=tag href=/tags/%E5%89%8D%E7%AB%AF%E5%AE%89%E5%85%A8/>前端安全</a></span>
+</span>
+</div>
+<a class="block my-6" href=/blog/qa/nodejs%E4%BA%8B%E4%BB%B6%E5%BE%AA%E7%8E%AF/>
+<h2 class="text-xl font-semibold mb-1">NodeJs事件循环</h2>
+<div class="font-light text-gray-800 dark:text-gray-200">
+<p>事件循环是 Node.js 处理非阻塞 I/O 操作的机制</p>
+</div>
+</a>
+<div class="info dark:info-dark">
+<span class="font-light mb-2 text-gray-500 text-sm">
+July 20, 2021
+</span>
+</div>
+<a class="block my-6" href=/blog/react%E4%BD%BF%E7%94%A8/react-ssr/>
+<h2 class="text-xl font-semibold mb-1">react 服务端渲染</h2>
+<div class="font-light text-gray-800 dark:text-gray-200">
+<p>事件循环是 Node.js 处理非阻塞 I/O 操作的机制</p>
+</div>
+</a>
+<div class="info dark:info-dark">
+<span class="font-light mb-2 text-gray-500 text-sm">
+July 20, 2021
 </span>
 </div>
 <a class="block my-6" href=/blog/md/markdown/>
@@ -253,6 +448,22 @@ July 16, 2021
 </span>
 <span class="font-light text-gray-500 text-sm dark:text-gray-200">
 <span class=separator><a class=tag href=/tags/js%E5%9F%BA%E7%A1%80/>js基础</a></span>
+</span>
+</div>
+<a class="block my-6" href=/blog/js/js%E4%B8%AD%E7%9A%84%E6%95%B0%E5%AD%97%E5%88%86%E9%9A%94%E7%AC%A6/>
+<h2 class="text-xl font-semibold mb-1">js中几个遍历数组方法的特点</h2>
+<div class="font-light text-gray-800 dark:text-gray-200">
+只是提高了可读性，其余没有区别 const msInOneYear = 31536000000; const price = 4200; const msInOneYear = 31_536_000_000; //3千万 const price = 42_00; // 42
+</div>
+</a>
+<div class="info dark:info-dark">
+<span class="font-light mb-2 text-gray-500 text-sm">
+July 16, 2021
+</span>
+<span class="font-light text-gray-800 text-sm dark:text-gray-200"> <span class=separator><a class=category href=/categories/javascript/>javascript</a></span>
+</span>
+<span class="font-light text-gray-500 text-sm dark:text-gray-200">
+<span class=separator><a class=tag href=/tags/%E8%AF%AD%E6%B3%95/>语法</a></span>
 </span>
 </div>
 <a class="block my-6" href=/blog/js/js%E4%B8%AD%E7%9A%84this%E6%80%BB%E7%BB%93/>
@@ -671,18 +882,6 @@ April 2, 2021
 <a class="block my-6" href=/blog/react%E6%BA%90%E7%A0%81%E7%AC%94%E8%AE%B0/diff%E7%AE%97%E6%B3%95%E6%80%BB%E7%BB%93/>
 <h2 class="text-xl font-semibold mb-1">react 源码阅读 - diff 算法</h2>
 <div class="font-light text-gray-800 dark:text-gray-200">
-详细写了 diff 算法的原理，写了示例，分析了源码，加了注释
-// TODO 有空加一个可debug的demo 还有 模拟一个可test的简易diff
-可检查[1,2,3] [{props:{children:[]},next:''},{},{}]
-版本 v17.0.2 diff 算法只对同级元素进行
-diff算法比较的是什么 当前页面中的DOM节点对应的fiber节点 🆚 新一次render的结果生成的filter节点 生成的workInProgress Fiber 将被渲染到页面 diff算法的作用 找到可复用的fiber节点，提高效率 diff算法由什么触发 reconcile child fibers diff算法在哪个阶段执行 diff 就是在 遍历 - 打标记，知道resultingFirstChild 记录了新的fiber树 // TODO // new children debug看一下 // oldFiber debug看一下
-单节点 / 调和单节点 对于object/number/string
-先检查上次更新时fiber节点是否存在对应DOM - 即检查是不是首次渲染，渲染过才有DOM
-如果不存在对应DOM，则直接新生成新节点返回
-要是存在对应DOM，继续检查是否可复用 - key & type相同
-可复用的话，将节点新生成一个副本返回
-不可复用的话，将DOM标记为需要删除，再新生成节点返回
-&lt;div>old&lt;/div> // ⬇️ type & key = null 没变; children改变，div 可复用，标记child需要更新 &lt;div>new&lt;/div> &lt;div>old&lt;/div> // ⬇️ type改变 直接标记div为delection 新生成 p-> new 返回 &lt;p>new&lt;/p> &lt;div key="old">old&lt;/div> // ⬇️ key 改变 不可复用 &lt;div key="new">old&lt;/div> 多节点 对于 array
 </div>
 </a>
 <div class="info dark:info-dark">
@@ -1002,15 +1201,6 @@ May 16, 2018
 <span class="font-light mb-2 text-gray-500 text-sm">
 </span>
 </div>
-<a class="block my-6" href=/blog/js/js%E4%B8%AD%E7%9A%84%E6%95%B0%E5%AD%97%E5%88%86%E9%9A%94%E7%AC%A6/>
-<h2 class="text-xl font-semibold mb-1"></h2>
-<div class="font-light text-gray-800 dark:text-gray-200">
-</div>
-</a>
-<div class="info dark:info-dark">
-<span class="font-light mb-2 text-gray-500 text-sm">
-</span>
-</div>
 <a class="block my-6" href=/blog/js/%E5%8F%98%E9%87%8F%E6%8F%90%E5%8D%87%E7%9A%84%E6%B7%B1%E5%BA%A6%E8%A7%A3%E6%9E%90/>
 <h2 class="text-xl font-semibold mb-1"></h2>
 <div class="font-light text-gray-800 dark:text-gray-200">
@@ -1048,9 +1238,14 @@ May 16, 2018
 <span class="font-light mb-2 text-gray-500 text-sm">
 </span>
 </div>
-<a class="block my-6" href=/blog/media/web-rtc/>
+<a class="block my-6" href=/blog/media/%E8%A7%86%E9%A2%91%E6%92%AD%E6%94%BE%E5%99%A8/>
 <h2 class="text-xl font-semibold mb-1"></h2>
 <div class="font-light text-gray-800 dark:text-gray-200">
+hls safari的h5原生支持hls(m3u8)播放 chrome等浏览器需要自己写解码
+移动端和Safari可直接支持m3u8 支持H.264、H.265视频编码和AAC音频编码? 播放器直播流全平台支持flv，hls直播协议，支持解h264、h265解码。
+协议 延迟 谁在用 原理 优缺点 HttpFlv 低 1~3秒 斗鱼 pc web RTMP 低 1~3秒 - 转发 HLS 高 5~20秒（依切片情况） 各种移动web端 切片 性能高，延迟高 DASH/MPEG-DASH 高 油管，奈飞 切片 DASH协议 主播直播流上传
+服务器的编解码封装 流媒体分发器 mpd文件 切割后的媒体文件 客户端 客户端加载mpd文件 解析MPD文件, 组成文件下载链接 当前的网速和支持的编码加载相应的视频片段进行播放
+前端工作： 加载视频说明mpd文件 识别mpd内容 判断网速加载第一个适合该网速的视频片段, 解析视频数据 视频数据通过 MSE(Media Source Extensions) API 把视频数据传输给Video播放 不断通过加载视频片段大小/下载时间得出网速, 下载相应码率的视频
 </div>
 </a>
 <div class="info dark:info-dark">
@@ -1093,15 +1288,6 @@ JS引擎线程
 <span class="font-light mb-2 text-gray-500 text-sm">
 </span>
 </div>
-<a class="block my-6" href=/blog/react%E4%BD%BF%E7%94%A8/react-ssr/>
-<h2 class="text-xl font-semibold mb-1"></h2>
-<div class="font-light text-gray-800 dark:text-gray-200">
-</div>
-</a>
-<div class="info dark:info-dark">
-<span class="font-light mb-2 text-gray-500 text-sm">
-</span>
-</div>
 <a class="block my-6" href=/blog/react%E6%BA%90%E7%A0%81%E7%AC%94%E8%AE%B0/react/>
 <h2 class="text-xl font-semibold mb-1"></h2>
 <div class="font-light text-gray-800 dark:text-gray-200">
@@ -1135,6 +1321,39 @@ GUI渲染线程 JS线程 所以JS脚本执行和浏览器布局、绘制不能�
 <span class="font-light mb-2 text-gray-500 text-sm">
 </span>
 </div>
+<a class="block my-6" href=/blog/utils/hugo%E6%90%9C%E7%B4%A2%E5%BC%95%E6%93%8E%E4%BC%98%E5%8C%96/>
+<h2 class="text-xl font-semibold mb-1"></h2>
+<div class="font-light text-gray-800 dark:text-gray-200">
+</div>
+</a>
+<div class="info dark:info-dark">
+<span class="font-light mb-2 text-gray-500 text-sm">
+</span>
+</div>
+<a class="block my-6" href=/blog/utils/%E5%90%84%E7%A7%8D%E7%BD%91%E7%AB%99%E5%90%88%E9%9B%86/>
+<h2 class="text-xl font-semibold mb-1"></h2>
+<div class="font-light text-gray-800 dark:text-gray-200">
+部署 vercel https://vercel.com/
+codepen
+codesanbox
+</div>
+</a>
+<div class="info dark:info-dark">
+<span class="font-light mb-2 text-gray-500 text-sm">
+</span>
+</div>
+<a class="block my-6" href=/blog/web/upload/>
+<h2 class="text-xl font-semibold mb-1"></h2>
+<div class="font-light text-gray-800 dark:text-gray-200">
+youtube的上传 bilibili的上传 ##常见的方法 resumable file uploads https://github.com/23/resumable.js
+https://developers.google.com/youtube/v3/guides/using_resumable_upload_protocol
+预检请求 https://developer.mozilla.org/en-US/docs/Glossary/Preflight_request
+</div>
+</a>
+<div class="info dark:info-dark">
+<span class="font-light mb-2 text-gray-500 text-sm">
+</span>
+</div>
 <a class="block my-6" href=/blog/framework/%E6%96%B0%E7%89%88%E6%9C%AC%E7%9A%84babel-register-%E7%BC%96%E8%AF%91%E7%9B%B8%E5%85%B3-2021-7-07ce4d45319d46b39edf9777ea8b8151/>
 <h2 class="text-xl font-semibold mb-1">各种工具合集</h2>
 <div class="font-light text-gray-800 dark:text-gray-200">
@@ -1156,5 +1375,7 @@ GUI渲染线程 JS线程 所以JS脚本执行和浏览器布局、绘制不能�
 </main><footer class="w-full text-center p-4 text-xs text-gray-400">
 copyright © 2021 - VISIONARY · All rights reserved
 </footer>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-Z0FJ599SKS"></script>
+<script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments)}gtag('js',new Date),gtag('config','G-Z0FJ599SKS')</script>
 </body>
 </html>
