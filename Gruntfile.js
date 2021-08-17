@@ -4,7 +4,7 @@ const yaml = require('js-yaml');
 const CONTENT_PATH_PREFIX = "./content";
 
 module.exports = function(grunt) {
-	grunt.registerTask("lunr-index", function() {
+	grunt.registerTask("default", function() {
 		grunt.log.writeln("Build pages index");
 		const indexPages = function () {
 			const pagesIndex = [];
