@@ -28,11 +28,11 @@ jobs:
         with:
           hugo-version: 'latest'
 
-      - name: Build
-        run: hugo --minify
-
       - name: GENERATE SITE INDEX
         run: grunt
+
+      - name: Build
+        run: hugo --minify
 
       - name: Deploy
         uses: peaceiris/actions-gh-pages@v3
