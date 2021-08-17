@@ -30,7 +30,8 @@ jobs:
 
       - name: Build
         run: hugo --minify
-       - name: GENERATE SITE INDEX
+
+      - name: GENERATE SITE INDEX
         run: grunt unr-index
 
       - name: Deploy
