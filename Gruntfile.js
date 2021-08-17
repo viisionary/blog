@@ -35,7 +35,6 @@ module.exports = function(grunt) {
 			const pageName = S(filename).chompRight(".html").s;
 			const href = S(abspath)
 				.chompLeft(CONTENT_PATH_PREFIX).s;
-			console.log('content',S(content).trim().stripTags().stripPunctuation().s)
 			return {
 				title: pageName,
 				href: href,
@@ -74,7 +73,7 @@ module.exports = function(grunt) {
 			pageIndex = {
 				title: frontMatter.title,
 				tags: frontMatter.tags,
-				href: href,
+				href: href.slice(8),
 				content: S(content[2]).trim().stripTags().stripPunctuation().s
 			};
 
