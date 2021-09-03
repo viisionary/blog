@@ -4,7 +4,7 @@
 <meta name=viewport content="width=device-width,initial-scale=1">
 <title>
 Git Action - VISIONARY
-</title><meta name=generator content="Hugo 0.87.0"><link rel=stylesheet href=https://blog.visionary.top/css/styles.min.58f39d2fee5ad08dc7d0f0329831e6809c556f80c5f682777edb84f468b700cb.css integrity=sha256-WPOdL+5a0I3H0PAymDHmgJxVb4DF9oJ3ftuE9Gi3AMs=>
+</title><meta name=generator content="Hugo 0.88.0"><link rel=stylesheet href="https://blog.visionary.top/css/styles.min.58f39d2fee5ad08dc7d0f0329831e6809c556f80c5f682777edb84f468b700cb.css" integrity="sha256-WPOdL+5a0I3H0PAymDHmgJxVb4DF9oJ3ftuE9Gi3AMs=">
 <script>window.matchMedia("(prefers-color-scheme: dark)").matches?document.documentElement.classList.add("dark"):document.documentElement.classList.remove("dark")</script>
 </head>
 <body class="flex flex-col min-h-screen dark:bg-gray-900 dark:text-gray-100 transition-colors duration-500"><header class="w-full px-4 pt-4 max-w-5xl mx-auto">
@@ -42,8 +42,7 @@ VISIONARY
 </ul>
 <div class="post-footer mb-6">
 <div class=info>
-<span class=separator><a class=category href=/categories/%E6%9E%B6%E6%9E%84/>架构</a></span>
-<span class=separator><a class=tag href=/tags/webpack/>webpack</a></span>
+<span class=separator><a class=tag href=/tags/github/>Github</a></span>
 </div>
 </div>
 <div class=post-footer>
@@ -52,29 +51,33 @@ VISIONARY
 <aside class="content-aside-bar border-2 mb-4 mt-4">
 <nav id=TableOfContents>
 <ul>
-<li><a href=#public-to-npm>Public to npm</a></li>
+<li><a href=#public-to-npm>Public to npm</a>
+<ul>
 <li><a href=#加上workflow>加上workflow</a></li>
 <li><a href=#获取-npm-accesstoken>获取 npm accesstoken</a></li>
 <li><a href=#在该repositories中加上actions-secrets>在该repositories中加上Actions secrets</a></li>
 </ul>
+</li>
+<li><a href=#npm-publishyml>npm-publish.yml</a></li>
+</ul>
 </nav>
 </aside>
 <div class="prose lg:prose-lg prose-blue dark:prose-dark">
-<p>Emoji can be enabled in a Hugo project in a number of ways.</p>
 <p>github操作驱动一系列命令</p>
-<p>这里是描述</p>
-<p>还可以写更多</p>
+<p>使用 action 可以实现自动部署、发布</p>
+<p>以下是一个当 Git master 分支有新提交时自动发部到 npm</p>
+<p>项目地址是</p>
 <h2 id=public-to-npm>Public to npm</h2>
-<h2 id=加上workflow>加上workflow</h2>
+<h3 id=加上workflow>加上workflow</h3>
 <p><img src=Github%20Action%2062a4ecf1395640759a428b91d6ed22df/Untitled.png alt=Github%20Action%2062a4ecf1395640759a428b91d6ed22df/Untitled.png></p>
-<h2 id=获取-npm-accesstoken>获取 npm accesstoken</h2>
+<h3 id=获取-npm-accesstoken>获取 npm accesstoken</h3>
 <p><a href=https://www.npmjs.com/settings/>https://www.npmjs.com/settings/</a></p>
 <p>在npm官网中获取拥有publish权限的accesstoken</p>
-<h2 id=在该repositories中加上actions-secrets>在该repositories中加上Actions secrets</h2>
+<h3 id=在该repositories中加上actions-secrets>在该repositories中加上Actions secrets</h3>
 <p>NPM_TOKEN 名称在yml文件中将会用到</p>
 <p><img src=Github%20Action%2062a4ecf1395640759a428b91d6ed22df/Untitled%201.png alt=Github%20Action%2062a4ecf1395640759a428b91d6ed22df/Untitled%201.png></p>
 <p><img src=Github%20Action%2062a4ecf1395640759a428b91d6ed22df/Untitled%202.png alt=Github%20Action%2062a4ecf1395640759a428b91d6ed22df/Untitled%202.png></p>
-<h1 id=npm-publishyml>npm-publish.yml</h1>
+<h2 id=npm-publishyml>npm-publish.yml</h2>
 <blockquote>
 <p>当push master 时触发</p>
 </blockquote>
@@ -82,7 +85,7 @@ VISIONARY
 <ol>
 <li>npm ci 安装包</li>
 <li>运行build指令</li>
-<li>编辑好的代码在spider-utils</li>
+<li>编译好的代码在spider-utils</li>
 <li>发布</li>
 </ol>
 <div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-yaml data-lang=yaml><span style=color:#f92672>name</span>: <span style=color:#ae81ff>Node.js Package</span>
@@ -108,7 +111,6 @@ VISIONARY
         <span style=color:#f92672>env</span>:
           <span style=color:#f92672>NODE_AUTH_TOKEN</span>: <span style=color:#ae81ff>${{secrets.NPM_TOKEN}}</span>
 </code></pre></div><p>有不同依赖的命令</p>
-<p>package-lock.json的作用</p>
 </div>
 <h1 class="text-3xl my-12">留下你的脚印 👣 </h1>
 <div id=disqus_thread>

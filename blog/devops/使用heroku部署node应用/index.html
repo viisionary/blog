@@ -3,10 +3,10 @@
 <meta charset=utf-8>
 <meta name=viewport content="width=device-width,initial-scale=1">
 <title>
-vagrant - VISIONARY
+免费部署个人站点 - VISIONARY
 </title>
-<meta name=description content="Sample article showcasing basic Markdown syntax and formatting for HTML elements.">
-<meta name=generator content="Hugo 0.87.0"><link rel=stylesheet href=https://blog.visionary.top/css/styles.min.58f39d2fee5ad08dc7d0f0329831e6809c556f80c5f682777edb84f468b700cb.css integrity=sha256-WPOdL+5a0I3H0PAymDHmgJxVb4DF9oJ3ftuE9Gi3AMs=>
+<meta name=description content="🆓 免费免费免费 ">
+<meta name=generator content="Hugo 0.88.0"><link rel=stylesheet href="https://blog.visionary.top/css/styles.min.58f39d2fee5ad08dc7d0f0329831e6809c556f80c5f682777edb84f468b700cb.css" integrity="sha256-WPOdL+5a0I3H0PAymDHmgJxVb4DF9oJ3ftuE9Gi3AMs=">
 <script>window.matchMedia("(prefers-color-scheme: dark)").matches?document.documentElement.classList.add("dark"):document.documentElement.classList.remove("dark")</script>
 </head>
 <body class="flex flex-col min-h-screen dark:bg-gray-900 dark:text-gray-100 transition-colors duration-500"><header class="w-full px-4 pt-4 max-w-5xl mx-auto">
@@ -39,58 +39,59 @@ VISIONARY
 </header>
 <main class="flex-1 mx-4 md:mx-12 lg:mx-24 mt-8 sm:mt-16">
 <article class="mb-16 max-w-5xl mx-auto px-4">
-<h1 class="text-5xl mb-6">vagrant</h1>
+<h1 class="text-5xl mb-6">免费部署个人站点</h1>
 <ul>
 </ul>
 <div class="post-footer mb-6">
 <div class=info>
-<span class=separator><a class=category href=/categories/%E6%9E%B6%E6%9E%84/>架构</a><a class=category href=/categories/%E5%BE%AE%E5%89%8D%E7%AB%AF/>微前端</a></span>
-<span class=separator><a class=tag href=/tags/%E5%89%8D%E7%AB%AF%E5%AE%89%E5%85%A8/>前端安全</a></span>
+<span class=separator><a class=tag href=/tags/devops/>DevOps</a></span>
 </div>
 </div>
 <div class=post-footer>
 </div>
 <h2 class=text-xl>目录</h2>
 <aside class="content-aside-bar border-2 mb-4 mt-4">
-<nav id=TableOfContents></nav>
+<nav id=TableOfContents>
+<ul>
+<li><a href=#后端项目>后端项目</a>
+<ul>
+<li><a href=#heroku免费部署nodejs项目>Heroku免费部署Node.js项目</a></li>
+</ul>
+</li>
+<li><a href=#前端项目>前端项目</a>
+<ul>
+<li><a href=#githubio>GitHub.io</a></li>
+<li><a href=#vercel>Vercel</a></li>
+</ul>
+</li>
+<li><a href=#项目代码展示>项目代码展示</a></li>
+<li><a href=#数据库>数据库</a></li>
+</ul>
+</nav>
 </aside>
 <div class="prose lg:prose-lg prose-blue dark:prose-dark">
-<p>xss & csrf 都是窃token cookie之类的敏感信息</p>
-<p><a href=https://en.wikipedia.org/wiki/Cross-site_request_forgery>Cross-site request forgery - Wikipedia</a></p>
-<h1 id=vagrant>vagrant</h1>
-<p>Finished: No
-创建时间: April 8, 2021 12:39 PM</p>
-<div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-powershell data-lang=powershell>vagrant gloabl-status <span style=color:#75715e>#查看虚拟机状态</span>
-vagrant up a804f75 <span style=color:#75715e>#启动虚拟机</span>
-vagrant halt a804f75 <span style=color:#75715e>#关闭虚拟机</span>
-vagrant box list <span style=color:#75715e>#虚拟机列表</span>
-vagrant provision a804f75 <span style=color:#75715e>#重新加载配置</span>
-</code></pre></div><p>安装 centos7、8</p>
-<div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-powershell data-lang=powershell>vagrant init generic/centos8
-vagrant up
-
-vagrant init centos/7
-vagrant up
-</code></pre></div><div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-powershell data-lang=powershell>cd ~/vagrant/boxes/centos8
-vagrant up
-</code></pre></div><div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-powershell data-lang=powershell><span style=color:#75715e>#连接</span>
-vagrant ssh
-<span style=color:#75715e>#修改密码</span>
-sudo su
-sudo -i
-passwd
-
-<span style=color:#75715e># 可在virtual box直接进入</span>
-</code></pre></div><div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-powershell data-lang=powershell>firewall-cmd --zone=public --add-port=3306/tcp --permanent
-</code></pre></div><div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-powershell data-lang=powershell>regular ssh 连接
-You may <span style=color:#66d9ef>try</span> edit <span style=color:#66d9ef>in</span> /etc/ssh/sshd_config
-  PasswordAuthentication yes
-
-service sshd restart
-
-ssh [root@127.0.0.1](mailto<span style=color:#960050;background-color:#1e0010>:</span>root@127.0.0.1) -p 2222
-</code></pre></div><p>密码</p>
-<p>zxcvbnm</p>
+<h2 id=后端项目>后端项目</h2>
+<h3 id=heroku免费部署nodejs项目>Heroku免费部署Node.js项目</h3>
+<p>可以同步 GitHub 的项目；开启自动部署；可配置 domain</p>
+<p>服务器配置：</p>
+<p>每个月有550h的免费时间，超出就无法使用了
+<a href=https://spider-api-visionary.herokuapp.com/>https://spider-api-visionary.herokuapp.com/</a></p>
+<p>可以通过git 推送自动部署</p>
+<h2 id=前端项目>前端项目</h2>
+<h3 id=githubio>GitHub.io</h3>
+<p>静态网站</p>
+<h3 id=vercel>Vercel</h3>
+<p><a href=https://vercel.com/>https://vercel.com/</a></p>
+<h2 id=项目代码展示>项目代码展示</h2>
+<p>Codesanbox 可以访问本地服务 直接请求 localhost；处理一下跨域就行</p>
+<h2 id=数据库>数据库</h2>
+<p>MongoDB</p>
+<p>Redis 免费 30M</p>
+<p>100M 的 6 刀</p>
+<div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-shell data-lang=shell>redis-cli -h redis-15506.c284.us-east1-2.gce.cloud.redislabs.com -p <span style=color:#ae81ff>15506</span> -a Rw5zQwFbhevBZCjRvr27G24hUt0r8vbk
+</code></pre></div><p>看一下这个命令干什么用的</p>
+<p>yarn global add serve
+serve -s build</p>
 </div>
 <h1 class="text-3xl my-12">留下你的脚印 👣 </h1>
 <div id=disqus_thread>

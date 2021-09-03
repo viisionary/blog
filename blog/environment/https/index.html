@@ -4,7 +4,7 @@
 <meta name=viewport content="width=device-width,initial-scale=1">
 <title>
 https相关内容 - VISIONARY
-</title><meta name=generator content="Hugo 0.87.0"><link rel=stylesheet href=https://blog.visionary.top/css/styles.min.58f39d2fee5ad08dc7d0f0329831e6809c556f80c5f682777edb84f468b700cb.css integrity=sha256-WPOdL+5a0I3H0PAymDHmgJxVb4DF9oJ3ftuE9Gi3AMs=>
+</title><meta name=generator content="Hugo 0.88.0"><link rel=stylesheet href="https://blog.visionary.top/css/styles.min.58f39d2fee5ad08dc7d0f0329831e6809c556f80c5f682777edb84f468b700cb.css" integrity="sha256-WPOdL+5a0I3H0PAymDHmgJxVb4DF9oJ3ftuE9Gi3AMs=">
 <script>window.matchMedia("(prefers-color-scheme: dark)").matches?document.documentElement.classList.add("dark"):document.documentElement.classList.remove("dark")</script>
 </head>
 <body class="flex flex-col min-h-screen dark:bg-gray-900 dark:text-gray-100 transition-colors duration-500"><header class="w-full px-4 pt-4 max-w-5xl mx-auto">
@@ -42,7 +42,7 @@ VISIONARY
 </ul>
 <div class="post-footer mb-6">
 <div class=info>
-<span class=separator><a class=tag href=/tags/https/>https</a></span>
+<span class=separator><a class=tag href=/tags/https/>https</a><a class=tag href=/tags/network/>network</a></span>
 </div>
 </div>
 <div class=post-footer>
@@ -66,12 +66,19 @@ VISIONARY
 <li><a href=#为什么说https是安全的>为什么说https是安全的？</a></li>
 <li><a href=#https一定是安全的吗>https一定是安全的吗？</a></li>
 <li><a href=#https请求建立过程--中间人攻击>https请求建立过程 & 中间人攻击</a></li>
-<li><a href=#http2>HTTP/2</a></li>
+<li><a href=#http2>HTTP/2</a>
+<ul>
+<li><a href=#与-http-11-的不同>与 HTTP /1.1 的不同</a></li>
+<li><a href=#http2--nodejs>Http2 & node.js</a></li>
+</ul>
+</li>
 </ul>
 </nav>
 </aside>
 <div class="prose lg:prose-lg prose-blue dark:prose-dark">
-<p>https</p>
+<p>https的信息</p>
+<p>验证过程</p>
+<p>中间人攻击</p>
 <h2 id=一个站点的证书>一个站点的证书</h2>
 <p><img src=img.png alt=img.png>
 发行者信息
@@ -135,6 +142,10 @@ em</li>
 <h2 id=https请求建立过程--中间人攻击>https请求建立过程 & 中间人攻击</h2>
 <p><img src=img_4.png alt=img_4.png></p>
 <h2 id=http2>HTTP/2</h2>
+<h3 id=与-http-11-的不同>与 HTTP /1.1 的不同</h3>
+<p>This allows developers to decide which page resources will load first, every time. In HTTP/2, when a <a href=https://www.cloudflare.com/learning/serverless/glossary/client-side-vs-server-side/>client</a> makes a request for a webpage, the server sends several streams of data to the client at once, instead of sending one thing after another.</p>
+<p><img src=https://developers.google.com/web/fundamentals/performance/http2/images/binary_framing_layer01.svg alt="HTTP/2 二进制分帧层"></p>
+<h3 id=http2--nodejs>Http2 & node.js</h3>
 </div>
 <h1 class="text-3xl my-12">留下你的脚印 👣 </h1>
 <div id=disqus_thread>
