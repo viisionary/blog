@@ -2,23 +2,18 @@
 title : "Micro-Frontends with qiankun"
 date: 2020-11-20 
 description: "Sample article showcasing basic Markdown syntax and formatting for HTML elements."
-categories : [                              
-"架构","微前端",
-]
+categories : ["架构","微前端"]
 toc: true
-tags: [
-"webpack",
-]
+tags: ["webpack"]
 ---
 
 可以实现多团队共同开发，每个团队维护使用了不同前端框架的项目，独立使用git，也可以在新网站上集成旧项目
 
+<!--more-->
 
-## <!--more-->
+## Micro-Frontends with qiankun
 
-# Micro-Frontends with qiankun
-
-## 使用【乾坤搭建微前端框架】
+### 使用【乾坤搭建微前端框架】
 
 [qiankun](https://qiankun.umijs.org/)
 

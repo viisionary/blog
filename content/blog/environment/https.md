@@ -1,10 +1,16 @@
 ---
 title : https相关内容
 date: 2021-07-22
-tags: ["https"]
+tags: ["https", "network"]
 ---
-https
+https的信息
+
+验证过程
+
+中间人攻击
+
 <!--more-->
+
 ## 一个站点的证书
 ![img.png](img.png)
 发行者信息
@@ -47,6 +53,7 @@ site.com的证书-> GlobalSign Organization Validation CA - SHA256 - G2->GlobalS
 ## 什么是中间人攻击（Man-In-the-Middle-Attack）
 见文尾图
 中间人拦截请求，伪造服务器公钥，取到共享公钥窃取信息；
+
 ## 客户端校验服务端的数字证书的过程
 1. 首先客户端会使用同样的 Hash 算法获取该证书的 Hash 值 H1； 
 2. 通常浏览器和操作系统中集成了 CA 的公钥信息，浏览器收到证书后可以使用 CA 的公钥解密 Certificate Signature 内容，得到一个 Hash 值 H2 ；
@@ -81,3 +88,11 @@ Https加密通信有两种加密，一种是非对称加密，另一种是对称
 ![img_4.png](img_4.png)
 
 ## HTTP/2
+
+### 与 HTTP /1.1 的不同
+
+This allows developers to decide which page resources will load first, every time. In HTTP/2, when a [client](https://www.cloudflare.com/learning/serverless/glossary/client-side-vs-server-side/) makes a request for a webpage, the server sends several streams of data to the client at once, instead of sending one thing after another. 
+
+![HTTP/2 二进制分帧层](https://developers.google.com/web/fundamentals/performance/http2/images/binary_framing_layer01.svg)
+
+### Http2 & node.js

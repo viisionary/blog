@@ -1,4 +1,11 @@
+---
+title : "react源码 调用栈分析"
+date: 2021-07-16
+tag : ["react","源码"]
+---
+
 fixtures/packaging/babel-standalone/dev.html
+
 ```html
 <html>
   <body>
@@ -54,11 +61,17 @@ tips: $0 即 可选中标签
 $0.
 
 GUI渲染线程
+
 JS线程
+
 所以JS脚本执行和浏览器布局、绘制不能同时执行。
+
 JS脚本执行 -----  样式布局 ----- 样式绘制
+
 主流浏览器刷新频率为60Hz，即每（1000ms / 60Hz）16.6ms浏览器刷新一次。
+
 当JS执行时间过长，超出了16.6ms，这次刷新就没有时间执行样式布局和样式绘制了。
 
 在React中最多会同时存在两棵Fiber树。当前屏幕上显示内容对应的Fiber树称为current Fiber树，正在内存中构建的Fiber树称为workInProgress Fiber树。
+
 JSX在编译时会被Babel编译为React.createElement方法。
