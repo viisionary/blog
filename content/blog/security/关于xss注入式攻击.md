@@ -72,7 +72,7 @@ container.outerHTML=img;
 		</>
 ```
 
-![%E5%85%B3%E4%BA%8Exss%E6%B3%A8%E5%85%A5%E5%BC%8F%E6%94%BB%E5%87%BB%20d71051ed2f464824a10f3eaa7399b05a/Untitled.png](%E5%85%B3%E4%BA%8Exss%E6%B3%A8%E5%85%A5%E5%BC%8F%E6%94%BB%E5%87%BB%20d71051ed2f464824a10f3eaa7399b05a/Untitled.png)
+![/assets/security/Untitled.png](/assets/security/Untitled.png)
 
 ## xss规则过滤
 
@@ -139,19 +139,19 @@ startTimer('')+alert(1)+('');
 
 通过search input 渲染到页面的时候 url encode，正文用Entities
 
-![%E5%85%B3%E4%BA%8Exss%E6%B3%A8%E5%85%A5%E5%BC%8F%E6%94%BB%E5%87%BB%20d71051ed2f464824a10f3eaa7399b05a/Untitled%201.png](%E5%85%B3%E4%BA%8Exss%E6%B3%A8%E5%85%A5%E5%BC%8F%E6%94%BB%E5%87%BB%20d71051ed2f464824a10f3eaa7399b05a/Untitled%201.png)
+![/assets/security/Untitled%201.png](/assets/security/Untitled%201.png)
 
-![%E5%85%B3%E4%BA%8Exss%E6%B3%A8%E5%85%A5%E5%BC%8F%E6%94%BB%E5%87%BB%20d71051ed2f464824a10f3eaa7399b05a/Untitled%202.png](%E5%85%B3%E4%BA%8Exss%E6%B3%A8%E5%85%A5%E5%BC%8F%E6%94%BB%E5%87%BB%20d71051ed2f464824a10f3eaa7399b05a/Untitled%202.png)
+![/assets/security/Untitled%202.png](/assets/security/Untitled%202.png)
 
-![%E5%85%B3%E4%BA%8Exss%E6%B3%A8%E5%85%A5%E5%BC%8F%E6%94%BB%E5%87%BB%20d71051ed2f464824a10f3eaa7399b05a/Untitled%203.png](%E5%85%B3%E4%BA%8Exss%E6%B3%A8%E5%85%A5%E5%BC%8F%E6%94%BB%E5%87%BB%20d71051ed2f464824a10f3eaa7399b05a/Untitled%203.png)
+![/assets/security/Untitled%203.png](/assets/security/Untitled%203.png)
 
-![%E5%85%B3%E4%BA%8Exss%E6%B3%A8%E5%85%A5%E5%BC%8F%E6%94%BB%E5%87%BB%20d71051ed2f464824a10f3eaa7399b05a/Untitled%204.png](%E5%85%B3%E4%BA%8Exss%E6%B3%A8%E5%85%A5%E5%BC%8F%E6%94%BB%E5%87%BB%20d71051ed2f464824a10f3eaa7399b05a/Untitled%204.png)
+![/assets/security/Untitled%204.png](/assets/security/Untitled%204.png)
 
 前端的过滤容易被绕过，所以后端也应该处理
 
 ### **例子**：一旦用户输入或接口提交的内容直接作为标签被渲染，是十分危险的
 
-![%E5%85%B3%E4%BA%8Exss%E6%B3%A8%E5%85%A5%E5%BC%8F%E6%94%BB%E5%87%BB%20d71051ed2f464824a10f3eaa7399b05a/Untitled%205.png](%E5%85%B3%E4%BA%8Exss%E6%B3%A8%E5%85%A5%E5%BC%8F%E6%94%BB%E5%87%BB%20d71051ed2f464824a10f3eaa7399b05a/Untitled%205.png)
+![/assets/security/Untitled%205.png](/assets/security/Untitled%205.png)
 
 **情景：**某个hacker可以发表这个链接， 然后分享给其他已登录网站的用户 用户一旦被诱导点击 hacker就可以拿到cookie模拟该用户操作
 

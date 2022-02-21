@@ -1,5 +1,5 @@
 ---
-title : "react源码 调用栈分析"
+title: react 源码阅读 - 调用栈分析
 date: 2021-07-16
 tag : ["react","源码"]
 ---
@@ -27,7 +27,7 @@ fixtures/packaging/babel-standalone/dev.html
 render 实际就是计算差异 & commit
 render 调用栈内有一系列操作
 ![img.png](img.png)
-![img_1.png](img_1.png)
+![img_1.png](/assets/react/img_1.png)
 
 render后最先调用的是legacyRenderSubtreeIntoContainer
 json形式的elements作为children传入
@@ -55,7 +55,7 @@ function legacyRenderSubtreeIntoContainer(
 	
 }
 ```
-![img_2.png](img_2.png)
+![img_2.png](/assets/react/img_2.png)
 
 tips: $0 即 可选中标签
 $0.

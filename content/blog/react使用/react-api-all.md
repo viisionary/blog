@@ -1,8 +1,10 @@
 ---
-title : React 中的 不是很常用的API
-date: 2021-07-22
-tags: ["react"]
+title : React 中不是很常用的 Api
+date: 2022-02-21
 ---
+
+Fragment、Error Boundaries、componentDidCatch、Suspense、createPortal 等等
+
 <!--more-->
 
 ## Fragment
@@ -21,6 +23,7 @@ tags: ["react"]
 ```
 
 ## Error Boundaries/componentDidCatch/Suspense
+
 ```tsx
 import React, { Suspense } from 'react';
 import MyErrorBoundary from './MyErrorBoundary';
@@ -68,19 +71,26 @@ class MyErrorBoundary extends React.Component {
     return this.props.children; 
   }
 ```
+
 ## context
+
 使用场景
 
-数据提供 -> component-> component-> 使用 
+数据提供 -> component-> component-> 使用
 
 要跨越好几层不需要该数据的组件
 
-
 ## ReactDOM.createPortal
+
 门户的典型用例是父组件具有overflow: hidden或z-index样式，但您需要子组件在视觉上“脱离”其容器。例如，对话框、悬停卡和工具提示。
 使用
 
 children的事件还可以冒泡到domNode
+
+写法在内部 实际渲染在同级
+{{< codepen yzMaBd >}}
+
+
 ```jsx
 render() {
   // React does *not* create a new div. It renders the children into `domNode`.

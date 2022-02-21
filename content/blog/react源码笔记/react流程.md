@@ -1,5 +1,5 @@
 ---
-title : "react 源码阅读 - 流程"
+title: react 源码阅读 - 流程
 date: 2021-04-02
 categories : ["react","源码"]
 ---
@@ -30,11 +30,11 @@ React16架构
 );
 ```
 
-![img_4.png](img_4.png)
+![img_4.png](/assets/react/img_4.png)
 render是一个入口
 
-![img_13.png](img_13.png)
-![img_14.png](img_14.png)
+![img_13.png](/assets/react/img_13.png)
+![img_14.png](/assets/react/img_14.png)
 
 首次render需要创建FiberRoot
 
@@ -46,7 +46,7 @@ render是一个入口
 
 ## trigger api
 
-![img_17.png](img_17.png)
+![img_17.png](/assets/react/img_17.png)
 执行updateContainer 创建一个update
 
 ```javascript

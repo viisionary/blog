@@ -1,13 +1,13 @@
 ---
-title : git常用命令 
+title: git常用命令 
 date: 2022-02-21
 tags: ["git"]
 categories : ["git"]
 ---
+
 git常用命令.md
 
 <!--more-->
-
 
 ### 将当前提交合并入前一个commit
 
@@ -26,3 +26,4 @@ square 舍弃
 ### 添加一个子模块
 
 git add submodule https://github.com/viisionary/leetcode
+

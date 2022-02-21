@@ -1,7 +1,5 @@
 ---
-title : 关于React 中的 ref
-date: 2021-07-22
-tags: ["react"]
+title: 为什么要使用React.forwardRef
 ---
 <!--more-->
 
@@ -9,7 +7,7 @@ tags: ["react"]
 
 > 如果向HOC添加ref，则ref将引用最外层的容器组件，而不是包装的组件。
 
-```jsx 
+```jsx
 // 高阶组件是一个函数，它接受一个组件并返回一个新组件。
 function logProps(Component) {
   class LogProps extends React.Component {

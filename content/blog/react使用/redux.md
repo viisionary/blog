@@ -1,9 +1,7 @@
 ---
-title : redux 相关
-date: 2021-07-22
-tags: ["react","redux"]
+title : redux & redux-thunk & redux-saga
+date: 2019-03-22
 ---
-
 Store，Action 和 Reducer
 
 <!--more-->

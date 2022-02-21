@@ -1,8 +1,9 @@
 ---
 title : WebRTC
 date: 2021-07-22
-tags: ["WebRTC","web media"]
+tags: ["WebRTC","webMedia"]
 ---
+
 WebRTC的总结
 
 <!--more-->
@@ -33,12 +34,3 @@ turn
 ice
 
 nat内网穿透
-
-###Sequence Diagram
-
-```seq
-Andrew->China: Says Hello 
-Note right of China: China thinks\nabout it 
-China-->Andrew: How are you? 
-Andrew->>China: I am good thanks!
-```

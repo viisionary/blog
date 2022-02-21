@@ -2,9 +2,11 @@
 title : Hooks使用
 date: 2021-07-22
 tags: ["react"]
+categories: ["react"]
 ---
-> Hook 是 React 16.8 的新增特性。它可以让你在不编写 class 的情况下使用 state 以及其他的 React 特性。
-> Hook 将组件中相互关联的部分拆分成更小的函数（比如设置订阅或请求数据）,而并非强制按照生命周期划分
+
+* Hook 是 React 16.8 的新增特性。它可以让你在不编写 class 的情况下使用 state 以及其他的 React 特性。
+* Hook 将组件中相互关联的部分拆分成更小的函数（比如设置订阅或请求数据）,而并非强制按照生命周期划分
 
 <!--more-->
 
@@ -39,17 +41,17 @@ function FriendStatus() {
 	}
 	return <h5>joey is {isOnline ? "Online" : "Offline"}</h5>;
 }
-
 ```
 
 ### useLayoutEffect
 
 useEffect在浏览器渲染完成后执行 useLayoutEffect在浏览器渲染前执行
 
+#### useEffect vs useLayoutEffect
+
 ### useRef
 
 ```javascript
-
 const UseRefExample = () => {
 	const [count, setCount] = useState(0);
 	const btnRef = useRef(null);
@@ -132,7 +134,7 @@ const UseMemoExample = () => {
 
 ### useContext
 
-themeContext.Provider & createContext & useContext 给组件提供上下文，使范围内可获取
+**themeContext.Provider & createContext & useContext 给组件提供上下文，使范围内可获取**
 
 ```javascript
 const themeContext = createContext(null);
@@ -165,9 +167,7 @@ function UseThemeContext() {
 
 ### useReducer
 
-useReducer
-
-当你认为你写的一些数据可以放到一个对象内更好操作时就可使用useReducer
+**当你认为你写的一些数据可以放到一个对象内更好操作时就可使用useReducer**
 
 ```javascript
 const initial = {
@@ -209,4 +209,5 @@ function UseReducerExample() {
 
 ---
 
-[react hooks 源码分析]()
+## react hooks 源码分析
+

@@ -1,13 +1,17 @@
 ---
-title : "react 源码阅读 - diff 算法"
+title: react 源码阅读 - diff 算法
 date: 2021-04-02
 categories : ["react","源码"]
 ---
+版本 v17.0.2
+单节点比较、多节点比较
+
+
 <!--more-->
 
 详细写了 diff 算法的原理，写了示例，分析了源码，加了注释
 
-// TODO 有空加一个可debug的demo 还有 模拟一个可test的简易diff 
+// TODO 有空加一个可debu g的demo 还有 模拟一个可test的简易diff 
 
 可检查[1,2,3] [{props:{children:[]},next:''},{},{}]
 ## 版本 v17.0.2
@@ -64,25 +68,25 @@ diff 算法只对同级元素进行
 
 1. 对于 array只有更新的情况
 
-![img_5.png](img_5.png)
+![img_5.png](/assets/react/img_5.png)
 
 一次遍历即可结束 给要改变的节点打上标记
 
 2. 第一次遍历 old array没有了 - new array有剩余 - 新增
 
-![img_6.png](img_6.png)
+![img_6.png](/assets/react/img_6.png)
 
 第一次遍历标记完更新之后，继续遍历new array剩余部分，都标记为 placement
 
 3. 第一次遍历 new array没有了 - old array有剩余 - 删除
 
-![img_8.png](img_8.png)
+![img_8.png](/assets/react/img_8.png)
 
 继续遍历old array，都标记为deletion
 
 4. 第一次没有遍历完 - new array 和 old array 都有剩余
 
-![img_9.png](img_9.png)
+![img_9.png](/assets/react/img_9.png)
 
 将 剩余的old array 生成 key -> fiber node 对应表； 方便new array 遍历时找对应的
 
@@ -97,17 +101,19 @@ diff 算法只对同级元素进行
 > 在尾部插入时 index 相对来说是稳定的 就没有问题
 > 
 > 排序的时候 index是没变化的 props 跟着变了 state还是对应的原来的index 就不会有变化
-> 
+
+
 {{<codepen ZEKjyRm>}}
+
 开始第二次循环，遍历剩余的 new array
 
-![img_10.png](img_10.png)
+![img_10.png](/assets/react/img_10.png)
 
 标记移动了、删除了、新增了的节点
 
 hint：节点从后向前移消耗较大、因为标记不变的是1
 
-![img_11.png](img_11.png)
+![img_11.png](/assets/react/img_11.png)
 
 ### 这部分的代码在 react-reconciler
 

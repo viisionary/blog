@@ -1,5 +1,5 @@
 ---
-title : react & reactDOM API
+title: react & reactDOM API
 date: 2021-04-02
 categories : ["react","源码"]
 ---
@@ -7,7 +7,11 @@ categories : ["react","源码"]
 react v17.0.2 概述 
 react 整个项目的架构
 
+React Top-Level API
+
 读源码的有什么用
+
+<!--more-->
 
 ## react
 
@@ -84,6 +88,7 @@ React.lazy
 React.Suspense
 
 ## Hooks >=16.8
+
 ### Basic Hooks
 
 useState

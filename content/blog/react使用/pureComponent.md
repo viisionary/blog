@@ -1,11 +1,16 @@
 ---
-title : PureComponent
+title : PureComponent 纯组件
 date: 2021-07-22
 tags: ["react"]
 ---
+
+为什么要使用shouldComponentUpdate？什么时候使用React.PureComponent
+re render的情况
+
 <!--more-->
 
 作用 Avoid Reconciliation
+
 ```js
 function shouldComponentUpdate(nextProps, nextState) {
 return true;
