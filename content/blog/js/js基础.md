@@ -1,5 +1,5 @@
 ---
-title :  js基础问题
+title: js基础问题
 date: 2018-05-16 
 description: "Sample article showcasing basic Markdown syntax and formatting for HTML
 elements."
@@ -17,7 +17,9 @@ tags: [
 
 ## 变量提升
 
-使用var在创建阶段就已经为变量分配了内存空间、默认值是undefined let & const 也会被提升 但是不会被初始化、会抛出错误
+使用var在创建阶段就已经为变量分配了内存空间、默认值是undefined 
+
+let & const 也会被提升 但是不会被初始化、会抛出错误
 
 ```javascript
 function sayHi() {

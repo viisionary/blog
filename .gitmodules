@@ -1,3 +1,6 @@
 [submodule "themes/showfolio"]
 	path = themes/showfolio
 	url = https://github.com/viisionary/showfolio-hugo-theme.git
+[submodule "content/blog/leetcode"]
+	path = content/blog/leetcode
+	url = https://github.com/viisionary/leetcode

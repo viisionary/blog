@@ -3,12 +3,12 @@ title : Hooks使用
 date: 2021-07-22
 tags: ["react"]
 ---
->Hook 是 React 16.8 的新增特性。它可以让你在不编写 class 的情况下使用 state 以及其他的 React 特性。
+> Hook 是 React 16.8 的新增特性。它可以让你在不编写 class 的情况下使用 state 以及其他的 React 特性。
 > Hook 将组件中相互关联的部分拆分成更小的函数（比如设置订阅或请求数据）,而并非强制按照生命周期划分
+
 <!--more-->
 
 {{< codesandbox hooks-lsmnx >}}
-
 
 ### 自定义Hook
 

@@ -81,7 +81,7 @@ repos = ["spider-tool", "spider-cli", "deploy2server"]
 
 [params.homepage.npm]
 username = "visionary_m"
-packages = ["spider-utils", "deploy2server", "spider-cli-generater"]
+packages = ["spider-utils", "deploy2server", "spider-cli-generater","spider-optimize-svg", "spider-vision"]
 
 [params.homepage]
 title = "VISIONARY"

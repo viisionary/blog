@@ -11,13 +11,9 @@ tags: [
 ]
 ---
 
-xss & csrf 都是窃token cookie之类的敏感信息
+Hugo 是用go编写的，支持go HTML，模板主题多且开源方便自定义
 
-
- <!--more-->
-[Cross-site request forgery - Wikipedia](https://en.wikipedia.org/wiki/Cross-site_request_forgery)
-
-比较好看好搭的blog，有很多极简风，响应式做的好的主题
+对md的渲染支持很友好，可以自定义插入的内容
 
 [Quick Start](https://gohugo.io/getting-started/quick-start/)
 

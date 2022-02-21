@@ -2,12 +2,9 @@
 title : "lighthouse"
 date: 2021-07-16
 description: "Sample article showcasing basic Markdown syntax and formatting for HTML elements."
-categories : [                              
-"架构","微前端",
-]
 toc: true
 tags: [
-"前端安全",
+"前端性能",
 ]
 ---
 
@@ -23,7 +20,7 @@ Performance
 
 lighthouse测量，也可以通过web_vitals库测量
 
-![Chrome%20Lighthouse%2013fbc0f207184e848d9fb68069955f3e/Untitled.png](Chrome%20Lighthouse%2013fbc0f207184e848d9fb68069955f3e/Untitled.png)
+![Chrome%20Lighthouse%2013fbc0f207184e848d9fb68069955f3e/Untitled.png](content/blog/brower/performance/Chrome Lighthouse 13fbc0f207184e848d9fb68069955f3e/Untitled.png)
 
 ## First Contentful Paint (FCP)
 

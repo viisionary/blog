@@ -2,21 +2,14 @@
 title : "js中的this总结"
 date: 2021-07-16
 description: "Sample article showcasing basic Markdown syntax and formatting for HTML elements."
-categories : [                              
-"基础","js",
-]
 toc: true
-tags: [
-"前端安全",
-]
+tags: ["js"]
 ---
-
 js中的this总结
 
+<!--more-->
 
- <!--more-->
 [Cross-site request forgery - Wikipedia](https://en.wikipedia.org/wiki/Cross-site_request_forgery)
-
 
 ## 有7种情况，this有不同的指向
 

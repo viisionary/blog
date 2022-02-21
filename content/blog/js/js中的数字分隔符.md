@@ -1,12 +1,8 @@
 ---
-
-title: "js中几个遍历数组方法的特点"
-
+title: "js中的数字分隔符"
 date: 2021-07-16
-
 description: ""
-
-categories : [                              
+categories : [                          
 "javascript",
 ]
 
@@ -15,10 +11,8 @@ toc: true
 tags: [
 "语法",
 ]
-
 ---
-
-## 只是提高了可读性，其余没有区别
+只是提高了可读性，其余没有区别
 
 ```javascript
 
