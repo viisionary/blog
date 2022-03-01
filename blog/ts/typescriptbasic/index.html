@@ -3,14 +3,12 @@
 <meta charset=utf-8>
 <meta name=viewport content="width=device-width,initial-scale=1">
 <title>
-TypeScript Basic - VISIONARY
-</title>
-<meta name=description content="Sample article showcasing basic Markdown syntax and formatting for HTML elements.">
-<meta name=generator content="Hugo 0.88.0"><link rel=stylesheet href="https://visionary.top/css/styles.min.58f39d2fee5ad08dc7d0f0329831e6809c556f80c5f682777edb84f468b700cb.css" integrity="sha256-WPOdL+5a0I3H0PAymDHmgJxVb4DF9oJ3ftuE9Gi3AMs=">
+TypeScript 基础类型 - VISIONARY
+</title><meta name=description content="Sample article showcasing basic Markdown syntax and formatting for HTML elements.">
+<meta name=generator content="Hugo 0.93.0"><link rel=stylesheet href="https://visionary.top/css/styles.min.58f39d2fee5ad08dc7d0f0329831e6809c556f80c5f682777edb84f468b700cb.css" integrity="sha256-WPOdL+5a0I3H0PAymDHmgJxVb4DF9oJ3ftuE9Gi3AMs=">
 <script>window.matchMedia("(prefers-color-scheme: dark)").matches?document.documentElement.classList.add("dark"):document.documentElement.classList.remove("dark")</script>
 <script data-ad-client=ca-pub-6431705402019390 async src=https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js></script>
-</head>
-<body class="flex flex-col min-h-screen dark:bg-gray-900 dark:text-gray-100 transition-colors duration-500"><header class="w-full px-4 pt-4 max-w-5xl mx-auto">
+</head><body class="flex flex-col min-h-screen dark:bg-gray-900 dark:text-gray-100 transition-colors duration-500"><header class="w-full px-4 pt-4 max-w-5xl mx-auto">
 <nav class="flex items-center justify-between flex-wrap">
 <div class="flex gap-2 items-center">
 <a href=mailto:min_0610@icloud.com aria-label=EMail><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentcolor" fill="none" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><circle cx="12" cy="12" r="4"/><path d="M16 12v1.5a2.5 2.5.0 005 0V12a9 9 0 10-5.5 8.28"/></svg>
@@ -18,263 +16,218 @@ TypeScript Basic - VISIONARY
 <a href=https://visionary.top/ class="flex items-center font-bold">
 VISIONARY
 </a>
-</div>
-<ul id=nav-menu class="flex w-auto mt-0 space-x-2">
+</div><ul id=nav-menu class="flex w-auto mt-0 space-x-2">
 <li><div class=search>
 <label for=search>🔍</label><input placeholder=SEARCH id=search type=text class=dark:bg-gray-900>
 <ul id=results class=search_result>
-</ul>
-</div>
-<script type=text/javascript src=https://code.jquery.com/jquery-2.1.3.min.js></script>
+</ul></div><script type=text/javascript src=https://code.jquery.com/jquery-2.1.3.min.js></script>
 <script type=text/javascript src=/js/lunr/lunr.min.js></script>
-<script type=text/javascript>let lunrIndex,$results,pagesIndex;function initLunr(){$.getJSON("/js/lunr/PagesIndex.json").done(function(a){pagesIndex=a,console.info("index:",pagesIndex),lunrIndex=lunr(function(){this.field("title",{boost:10}),this.field("tags",{boost:5}),console.log(this.add),this.field("content"),this.ref("href"),pagesIndex.forEach(a=>{console.log(a),a&&this.add(a)})})}).fail(function(d,a,b){const c=a+", "+b;console.error("Error getting Hugo index flie:",c)})}function initUI(){$results=$("#results"),$("#search").keyup(function(){$results.empty();const a=$(this).val();if(a.length<2)return;const b=search(a);renderResults(b)})}function search(a){return lunrIndex.search(a).map(function(a){return console.log(a),pagesIndex.filter(function(b){return b&&b.href===a.ref})[0]})}function renderResults(a){if(!a.length)return;a.slice(0,10).forEach(function(a){const b=$("<li>");b.append($("<a>",{href:a?a.href:'',text:"🔗 "+a.title})),$results.append(b)})}initLunr(),$(document).ready(function(){initUI()})</script>
-</li>
-<li>
-<a href=https://visionary.top/about/ class="hover:text-blue-800 dark:hover:text-blue-300">About Me</a>
-</li>
-<li>
+<script type=text/javascript>let lunrIndex,$results,pagesIndex;function initLunr(){$.getJSON("/js/lunr/PagesIndex.json").done(function(e){pagesIndex=e,console.info("index:",pagesIndex),lunrIndex=lunr(function(){this.field("title",{boost:10}),this.field("tags",{boost:5}),console.log(this.add),this.field("content"),this.ref("href"),pagesIndex.forEach(e=>{console.log(e),e&&this.add(e)})})}).fail(function(s,e,t){const n=e+", "+t;console.error("Error getting Hugo index flie:",n)})}function initUI(){$results=$("#results"),$("#search").keyup(function(){$results.empty();const e=$(this).val();if(e.length<2)return;const t=search(e);renderResults(t)})}function search(e){return lunrIndex.search(e).map(function(e){return console.log(e),pagesIndex.filter(function(t){return t&&t.href===e.ref})[0]})}function renderResults(e){if(!e.length)return;e.slice(0,10).forEach(function(e){const t=$("<li>");t.append($("<a>",{href:e?e.href:'',text:"🔗 "+e.title})),$results.append(t)})}initLunr(),$(document).ready(function(){initUI()})</script>
+</li><li>
+<a href=https://visionary.top/tags/about/ class="hover:text-blue-800 dark:hover:text-blue-300">About</a>
+</li><li>
 <a href=https://visionary.top/blog/ class="hover:text-blue-800 dark:hover:text-blue-300">Blogs</a>
-</li>
-</ul>
-</nav>
-</header>
-<main class="flex-1 mx-4 md:mx-12 lg:mx-24 mt-8 sm:mt-16">
+</li></ul></nav></header><main class="flex-1 mx-4 md:mx-12 lg:mx-24 mt-8 sm:mt-16">
 <article class="mb-16 max-w-5xl mx-auto px-4">
-<h1 class="text-5xl mb-6">TypeScript Basic</h1>
-<ul>
-</ul>
-<div class="post-footer mb-6">
+<h1 class="text-5xl mb-6">TypeScript 基础类型</h1><ul>
+</ul><div class="post-footer mb-6">
 <div class=info>
 <span class=separator><a class=category href=/categories/%E6%9E%B6%E6%9E%84/>架构</a><a class=category href=/categories/%E5%BE%AE%E5%89%8D%E7%AB%AF/>微前端</a></span>
 <span class=separator><a class=tag href=/tags/%E5%89%8D%E7%AB%AF%E5%AE%89%E5%85%A8/>前端安全</a></span>
-</div>
-</div>
-<div class=post-footer>
-</div>
-<h2 class=text-xl>目录</h2>
-<aside class="content-aside-bar border-2 mb-4 mt-4">
+</div></div><div class=post-footer>
+</div><h2 class=text-xl>目录</h2><aside class="content-aside-bar border-2 mb-4 mt-4">
 <nav id=TableOfContents>
 <ul>
 <li>
 <ul>
-<li><a href=#一basic-types4-点>一、Basic Types【4 点】</a></li>
-<li><a href=#二enums枚举>二、enums【枚举】</a></li>
-<li><a href=#三union-enums-and-enum-member-types枚举用在类型声明的属性中>三、Union enums and enum member types【枚举用在类型声明的属性中】</a></li>
-<li><a href=#四function参数返回值>四、function【参数&返回值】</a></li>
-<li><a href=#五generics泛型>五、Generics【泛型】</a></li>
-<li><a href=#utility-types规定一下读取-type-transformations动态的改变类型>Utility Types【规定一下读取】& type transformations【动态的改变类型】</a></li>
-</ul>
-</li>
-</ul>
-</nav>
-</aside>
-<div class="prose lg:prose-lg prose-blue dark:prose-dark">
-<p>xss & csrf 都是窃token cookie之类的敏感信息</p>
-<p><a href=https://en.wikipedia.org/wiki/Cross-site_request_forgery>Cross-site request forgery - Wikipedia</a></p>
-<h1 id=typescript-basic>TypeScript Basic</h1>
-<h3 id=一basic-types4-点>一、Basic Types【4 点】</h3>
-<blockquote>
-<p>boolean, bigint, null, number, string, symbol, object, and undefined</p>
-</blockquote>
-<div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-tsx data-lang=tsx><span style=color:#75715e>/*
-</span><span style=color:#75715e>1、       
-</span><span style=color:#75715e>Basic Types   
-</span><span style=color:#75715e>声明一个变量时可规定多种类型   
-</span><span style=color:#75715e>*/</span>
-<span style=color:#66d9ef>type</span> <span style=color:#a6e22e>WindowStates</span> <span style=color:#f92672>=</span> <span style=color:#e6db74>&#34;open&#34;</span> <span style=color:#f92672>|</span> <span style=color:#e6db74>&#34;closed&#34;</span> <span style=color:#f92672>|</span> <span style=color:#e6db74>&#34;minimized&#34;</span>;
-<span style=color:#66d9ef>type</span> <span style=color:#a6e22e>LockStates</span> <span style=color:#f92672>=</span> <span style=color:#e6db74>&#34;locked&#34;</span> <span style=color:#f92672>|</span> <span style=color:#e6db74>&#34;unlocked&#34;</span>;
-<span style=color:#66d9ef>type</span> <span style=color:#a6e22e>OddNumbersUnderTen</span> <span style=color:#f92672>=</span> <span style=color:#ae81ff>1</span> <span style=color:#f92672>|</span> <span style=color:#ae81ff>3</span> <span style=color:#f92672>|</span> <span style=color:#ae81ff>5</span> <span style=color:#f92672>|</span> <span style=color:#ae81ff>7</span> <span style=color:#f92672>|</span> <span style=color:#ae81ff>9</span>;
-
-<span style=color:#75715e>/*
-</span><span style=color:#75715e>2、      
-</span><span style=color:#75715e>Interfaces
-</span><span style=color:#75715e>规定一个 object【包括其 props】 的类型
-</span><span style=color:#75715e>*/</span>
-<span style=color:#66d9ef>interface</span> <span style=color:#a6e22e>User</span> {
-  <span style=color:#a6e22e>name</span>: <span style=color:#66d9ef>string</span>;
-  <span style=color:#a6e22e>id</span>: <span style=color:#66d9ef>number</span>;
-}
-
-<span style=color:#66d9ef>const</span> <span style=color:#a6e22e>user</span>: <span style=color:#66d9ef>User</span> <span style=color:#f92672>=</span> {
-  <span style=color:#a6e22e>name</span><span style=color:#f92672>:</span> <span style=color:#e6db74>&#34;Hayes&#34;</span>,
-  <span style=color:#a6e22e>id</span>: <span style=color:#66d9ef>0</span>,
-};
-	
-<span style=color:#75715e>/*
-</span><span style=color:#75715e>3、
-</span><span style=color:#75715e>Classes        
-</span><span style=color:#75715e>规定类的私有属性、static 属性
-</span><span style=color:#75715e>*/</span>
-<span style=color:#66d9ef>class</span> <span style=color:#a6e22e>UserAccount</span> {
-  <span style=color:#a6e22e>name</span>: <span style=color:#66d9ef>string</span>;
-  <span style=color:#a6e22e>id</span>: <span style=color:#66d9ef>number</span>;
-
-	<span style=color:#66d9ef>static</span> <span style=color:#a6e22e>owner</span>:<span style=color:#66d9ef>string</span>;
-
-  <span style=color:#66d9ef>constructor</span>(<span style=color:#a6e22e>name</span>: <span style=color:#66d9ef>string</span>, <span style=color:#a6e22e>id</span>: <span style=color:#66d9ef>number</span>) {
-    <span style=color:#66d9ef>this</span>.<span style=color:#a6e22e>name</span> <span style=color:#f92672>=</span> <span style=color:#a6e22e>name</span>;
-    <span style=color:#66d9ef>this</span>.<span style=color:#a6e22e>id</span> <span style=color:#f92672>=</span> <span style=color:#a6e22e>id</span>;
-  }
-}
-
-<span style=color:#66d9ef>const</span> <span style=color:#a6e22e>user</span>: <span style=color:#66d9ef>User</span> <span style=color:#f92672>=</span> <span style=color:#66d9ef>new</span> <span style=color:#a6e22e>UserAccount</span>(<span style=color:#e6db74>&#34;Murphy&#34;</span>, <span style=color:#ae81ff>1</span>);
-<span style=color:#a6e22e>UserAccount.owner</span>:<span style=color:#66d9ef>string</span> <span style=color:#f92672>=</span> <span style=color:#e6db74>&#39;ali&#39;</span>;     <span style=color:#75715e>// 初始化静态变量
-</span><span style=color:#75715e></span>
-<span style=color:#75715e>/*
-</span><span style=color:#75715e>4.
-</span><span style=color:#75715e>定义抽象方法&amp;实现
-</span><span style=color:#75715e>*/</span>
-<span style=color:#66d9ef>interface</span> <span style=color:#a6e22e>StringValidator</span> {
-  <span style=color:#a6e22e>isAcceptable</span>(<span style=color:#a6e22e>s</span>: <span style=color:#66d9ef>string</span>)<span style=color:#f92672>:</span> <span style=color:#66d9ef>boolean</span>;
-}
-
-<span style=color:#66d9ef>class</span> <span style=color:#a6e22e>ZipCodeValidator</span> <span style=color:#66d9ef>implements</span> <span style=color:#a6e22e>StringValidator</span> {
-  <span style=color:#a6e22e>isAcceptable</span>(<span style=color:#a6e22e>s</span>: <span style=color:#66d9ef>string</span>) {
-    <span style=color:#66d9ef>return</span> <span style=color:#a6e22e>s</span>.<span style=color:#a6e22e>length</span> <span style=color:#f92672>===</span> <span style=color:#ae81ff>5</span> <span style=color:#f92672>&amp;&amp;</span> <span style=color:#a6e22e>numberRegexp</span>.<span style=color:#a6e22e>test</span>(<span style=color:#a6e22e>s</span>);
-  }
-}
-</code></pre></div><h3 id=二enums枚举>二、enums【枚举】</h3>
-<div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-tsx data-lang=tsx><span style=color:#75715e>// 定义
-</span><span style=color:#75715e></span><span style=color:#66d9ef>enum</span> <span style=color:#a6e22e>Color</span> {
-  <span style=color:#a6e22e>Red</span>,
-  <span style=color:#a6e22e>Green</span>,
-  <span style=color:#a6e22e>Blue</span>,
-}
-<span style=color:#66d9ef>let</span> <span style=color:#a6e22e>c</span>: <span style=color:#66d9ef>Color</span> <span style=color:#f92672>=</span> <span style=color:#a6e22e>Color</span>.<span style=color:#a6e22e>Green</span>;
-<span style=color:#75715e>// 可赋值
-</span><span style=color:#75715e></span><span style=color:#66d9ef>enum</span> <span style=color:#a6e22e>UserResponse</span> {
-  <span style=color:#a6e22e>No</span> <span style=color:#f92672>=</span> <span style=color:#ae81ff>0</span>,
-  <span style=color:#a6e22e>Yes</span> <span style=color:#f92672>=</span> <span style=color:#ae81ff>1</span>,
-}
-<span style=color:#75715e>// 可为计算结果
-</span><span style=color:#75715e></span><span style=color:#66d9ef>enum</span> <span style=color:#a6e22e>FileAccess</span> {
-  <span style=color:#75715e>// constant members
-</span><span style=color:#75715e></span>  <span style=color:#a6e22e>None</span>,
-  <span style=color:#a6e22e>Read</span> <span style=color:#f92672>=</span> <span style=color:#ae81ff>1</span> <span style=color:#f92672>&lt;&lt;</span> <span style=color:#ae81ff>1</span>,
-  <span style=color:#a6e22e>Write</span> <span style=color:#f92672>=</span> <span style=color:#ae81ff>1</span> <span style=color:#f92672>&lt;&lt;</span> <span style=color:#ae81ff>2</span>,
-  <span style=color:#a6e22e>ReadWrite</span> <span style=color:#f92672>=</span> <span style=color:#a6e22e>Read</span> <span style=color:#f92672>|</span> <span style=color:#a6e22e>Write</span>,
-  <span style=color:#75715e>// computed member
-</span><span style=color:#75715e></span>  <span style=color:#a6e22e>G</span> <span style=color:#f92672>=</span> <span style=color:#e6db74>&#34;123&#34;</span>.<span style=color:#a6e22e>length</span>,
-}
-</code></pre></div><h3 id=三union-enums-and-enum-member-types枚举用在类型声明的属性中>三、Union enums and enum member types【枚举用在类型声明的属性中】</h3>
-<div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-tsx data-lang=tsx><span style=color:#66d9ef>enum</span> <span style=color:#a6e22e>ShapeKind</span> {
-  <span style=color:#a6e22e>Circle</span>,
-  <span style=color:#a6e22e>Square</span>,
-}
-
-<span style=color:#66d9ef>interface</span> <span style=color:#a6e22e>Circle</span> {
-  <span style=color:#a6e22e>kind</span>: <span style=color:#66d9ef>ShapeKind.Circle</span>;<span style=color:#75715e>// 
-</span><span style=color:#75715e></span>  <span style=color:#a6e22e>radius</span>: <span style=color:#66d9ef>number</span>;
-}
-</code></pre></div><h3 id=四function参数返回值>四、function【参数&返回值】</h3>
-<div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-tsx data-lang=tsx><span style=color:#66d9ef>function</span> <span style=color:#a6e22e>getAdminUser</span>()<span style=color:#f92672>:</span> <span style=color:#a6e22e>User</span> {
-  <span style=color:#75715e>//...
-</span><span style=color:#75715e></span>}
-
-<span style=color:#66d9ef>function</span> <span style=color:#a6e22e>deleteUser</span>(<span style=color:#a6e22e>user</span>: <span style=color:#66d9ef>User</span>) {
-  <span style=color:#75715e>// ...
-</span><span style=color:#75715e></span>}
-
-<span style=color:#75715e>// 组合的参数
-</span><span style=color:#75715e></span><span style=color:#66d9ef>function</span> <span style=color:#a6e22e>getLength</span>(<span style=color:#a6e22e>obj</span>: <span style=color:#66d9ef>string</span> <span style=color:#f92672>|</span> <span style=color:#66d9ef>string</span>[]) {
-  <span style=color:#66d9ef>return</span> <span style=color:#a6e22e>obj</span>.<span style=color:#a6e22e>length</span>;
-}
-
-<span style=color:#75715e>// 剪头函数声明
-</span><span style=color:#75715e></span><span style=color:#66d9ef>let</span> <span style=color:#a6e22e>fst</span><span style=color:#f92672>:</span> &lt;<span style=color:#f92672>T</span><span style=color:#960050;background-color:#1e0010>,</span> <span style=color:#a6e22e>U</span>&gt;(<span style=color:#a6e22e>a</span>: <span style=color:#66d9ef>T</span>, <span style=color:#a6e22e>b</span>: <span style=color:#66d9ef>U</span>) <span style=color:#f92672>=&gt;</span> <span style=color:#a6e22e>T</span> <span style=color:#f92672>=</span> (<span style=color:#a6e22e>a</span>, <span style=color:#a6e22e>b</span>) <span style=color:#f92672>=&gt;</span> <span style=color:#a6e22e>a</span>;
-</code></pre></div><h3 id=五generics泛型>五、Generics【泛型】</h3>
-<div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-tsx data-lang=tsx>
-<span style=color:#66d9ef>type</span> <span style=color:#a6e22e>StringArray</span> <span style=color:#f92672>=</span> Array&lt;<span style=color:#f92672>string</span>&gt;;
-
-<span style=color:#66d9ef>type</span> <span style=color:#a6e22e>NumberArray</span> <span style=color:#f92672>=</span> Array&lt;<span style=color:#f92672>number</span>&gt;;
-
-<span style=color:#66d9ef>type</span> <span style=color:#a6e22e>ObjectWithNameArray</span> <span style=color:#f92672>=</span> Array<span style=color:#f92672>&lt;</span>{ <span style=color:#a6e22e>name</span>: <span style=color:#66d9ef>string</span> }<span style=color:#f92672>&gt;</span>;
-
-<span style=color:#75715e>//type 是个动态的；
-</span><span style=color:#75715e></span><span style=color:#66d9ef>interface</span> <span style=color:#a6e22e>Backpack</span>&lt;<span style=color:#f92672>Type</span>&gt; {
-  <span style=color:#a6e22e>add</span><span style=color:#f92672>:</span> (<span style=color:#a6e22e>obj</span>: <span style=color:#66d9ef>Type</span>) <span style=color:#f92672>=&gt;</span> <span style=color:#66d9ef>void</span>;
-  <span style=color:#66d9ef>get</span><span style=color:#f92672>:</span> () <span style=color:#f92672>=&gt;</span> <span style=color:#a6e22e>Type</span>;
-}
-
-<span style=color:#66d9ef>function</span> <span style=color:#a6e22e>identity</span>&lt;<span style=color:#f92672>T</span>&gt;(<span style=color:#a6e22e>arg</span>: <span style=color:#66d9ef>T</span>)<span style=color:#f92672>:</span> <span style=color:#a6e22e>T</span> {
-  <span style=color:#66d9ef>return</span> <span style=color:#a6e22e>arg</span>;
-}
-<span style=color:#66d9ef>let</span> <span style=color:#a6e22e>output</span> <span style=color:#f92672>=</span> <span style=color:#a6e22e>identity</span>&lt;<span style=color:#f92672>string</span>&gt;(<span style=color:#e6db74>&#34;myString&#34;</span>);
-
-<span style=color:#66d9ef>function</span> <span style=color:#a6e22e>loggingIdentity</span>&lt;<span style=color:#f92672>T</span>&gt;(<span style=color:#a6e22e>arg</span>: <span style=color:#66d9ef>T</span>[])<span style=color:#f92672>:</span> <span style=color:#a6e22e>T</span>[] {
-  <span style=color:#a6e22e>console</span>.<span style=color:#a6e22e>log</span>(<span style=color:#a6e22e>arg</span>.<span style=color:#a6e22e>length</span>);
-  <span style=color:#66d9ef>return</span> <span style=color:#a6e22e>arg</span>;
-}
-</code></pre></div><h3 id=utility-types规定一下读取-type-transformations动态的改变类型>Utility Types【规定一下读取】& type transformations【动态的改变类型】</h3>
-<div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-tsx data-lang=tsx><span style=color:#75715e>// 普通的
-</span><span style=color:#75715e></span><span style=color:#a6e22e>Partial</span>&lt;<span style=color:#f92672>Type</span>&gt;
-
-<span style=color:#75715e>// =&gt; 只读
-</span><span style=color:#75715e></span>
-<span style=color:#a6e22e>Readonly</span>&lt;<span style=color:#f92672>Type</span>&gt;
-
-<span style=color:#75715e>// key &amp; value 组合
-</span><span style=color:#75715e></span><span style=color:#a6e22e>Record</span>&lt;<span style=color:#f92672>Keys</span><span style=color:#960050;background-color:#1e0010>,</span><span style=color:#a6e22e>Type</span>&gt;;
-
-<span style=color:#66d9ef>interface</span> <span style=color:#a6e22e>PageInfo</span> {
-  <span style=color:#a6e22e>title</span> : <span style=color:#66d9ef>string</span>;
-}
-
-<span style=color:#66d9ef>type</span> <span style=color:#a6e22e>Page</span> <span style=color:#f92672>=</span> <span style=color:#e6db74>&#34;home&#34;</span> <span style=color:#f92672>|</span> <span style=color:#e6db74>&#34;about&#34;</span> <span style=color:#f92672>|</span> <span style=color:#e6db74>&#34;contact&#34;</span>;
-
-<span style=color:#66d9ef>const</span> <span style=color:#a6e22e>nav</span>: <span style=color:#66d9ef>Record</span>&lt;<span style=color:#f92672>Page</span><span style=color:#960050;background-color:#1e0010>,</span> <span style=color:#a6e22e>PageInfo</span>&gt; <span style=color:#f92672>=</span> {
-  <span style=color:#a6e22e>about</span><span style=color:#f92672>:</span> { <span style=color:#a6e22e>title</span> <span style=color:#f92672>:</span> <span style=color:#e6db74>&#34;about&#34;</span> },
-  <span style=color:#a6e22e>contact</span><span style=color:#f92672>:</span> { <span style=color:#a6e22e>title</span> <span style=color:#f92672>:</span> <span style=color:#e6db74>&#34;contact&#34;</span> },
-  <span style=color:#a6e22e>home</span><span style=color:#f92672>:</span> { <span style=color:#a6e22e>title</span> <span style=color:#f92672>:</span> <span style=color:#e6db74>&#34;home&#34;</span> },
-};
-
-<span style=color:#75715e>// 选取部分
-</span><span style=color:#75715e></span><span style=color:#a6e22e>Pick</span>&lt;<span style=color:#f92672>Type</span><span style=color:#960050;background-color:#1e0010>,</span> <span style=color:#a6e22e>Keys</span>&gt;
-
-<span style=color:#75715e>// 去掉
-</span><span style=color:#75715e></span><span style=color:#a6e22e>Omit</span>&lt;<span style=color:#f92672>Type</span><span style=color:#960050;background-color:#1e0010>,</span> <span style=color:#a6e22e>Keys</span>&gt;
-<span style=color:#a6e22e>Exclude</span>&lt;<span style=color:#f92672>Type</span><span style=color:#960050;background-color:#1e0010>,</span> <span style=color:#a6e22e>ExcludedUnion</span>&gt;
-
-<span style=color:#75715e>// 去掉空
-</span><span style=color:#75715e></span><span style=color:#a6e22e>NonNullable</span>&lt;<span style=color:#f92672>Type</span>&gt;
-</code></pre></div><div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-tsx data-lang=tsx><span style=color:#75715e>//规定函数参数的类型
-</span><span style=color:#75715e></span><span style=color:#a6e22e>Parameters</span>&lt;<span style=color:#f92672>Type</span>&gt;;
-
-<span style=color:#66d9ef>declare</span> <span style=color:#66d9ef>function</span> <span style=color:#a6e22e>f1</span>(<span style=color:#a6e22e>arg</span><span style=color:#f92672>:</span> { <span style=color:#a6e22e>a</span>: <span style=color:#66d9ef>number</span>; <span style=color:#a6e22e>b</span>: <span style=color:#66d9ef>string</span> })<span style=color:#f92672>:</span> <span style=color:#66d9ef>void</span>;
-
-<span style=color:#66d9ef>type</span> <span style=color:#a6e22e>T3</span> <span style=color:#f92672>=</span> <span style=color:#a6e22e>Parameters</span>&lt;<span style=color:#f92672>typeof</span> <span style=color:#a6e22e>f1</span>&gt;;
-<span style=color:#75715e>//    ^ = type T3 = [arg: {
-</span><span style=color:#75715e>//        a: number;
-</span><span style=color:#75715e>//        b: string;
-</span><span style=color:#75715e>//    }]
-</span><span style=color:#75715e></span>
-<span style=color:#75715e>// 返回值类型
-</span><span style=color:#75715e></span><span style=color:#a6e22e>ReturnType</span>&lt;<span style=color:#f92672>Type</span>&gt;
-
-<span style=color:#66d9ef>type</span> <span style=color:#a6e22e>T4</span> <span style=color:#f92672>=</span> <span style=color:#a6e22e>ReturnType</span>&lt;<span style=color:#f92672>typeof</span> <span style=color:#a6e22e>f1</span>&gt;;
-<span style=color:#75715e>//    ^ = type T4 = {
-</span><span style=color:#75715e>//        a: number;
-</span><span style=color:#75715e>//        b: string;
-</span><span style=color:#75715e>//    }
-</span></code></pre></div><div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-tsx data-lang=tsx><span style=color:#75715e>// class =&gt; type
-</span><span style=color:#75715e></span><span style=color:#a6e22e>InstanceType</span>&lt;<span style=color:#f92672>Type</span>&gt;
-<span style=color:#75715e>// 必填
-</span><span style=color:#75715e></span><span style=color:#a6e22e>Required</span>&lt;<span style=color:#f92672>Type</span>&gt;
-</code></pre></div><div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-tsx data-lang=tsx><span style=color:#66d9ef>const</span> <span style=color:#a6e22e>handleChange</span> <span style=color:#f92672>=</span> (<span style=color:#a6e22e>event</span>: <span style=color:#66d9ef>React.ChangeEvent</span><span style=color:#f92672>&lt;</span>{ <span style=color:#a6e22e>value</span>: <span style=color:#66d9ef>unknown</span> }<span style=color:#f92672>&gt;</span>) <span style=color:#f92672>=&gt;</span> {
-        <span style=color:#a6e22e>setAge</span>(<span style=color:#a6e22e>event</span>.<span style=color:#a6e22e>target</span>.<span style=color:#a6e22e>value</span> <span style=color:#66d9ef>as</span> <span style=color:#66d9ef>number</span>);
-    };
-</code></pre></div>
-</div>
-<h1 class="text-3xl my-12">留下你的脚印 👣 </h1>
-<div id=disqus_thread>
-</div>
-<script type=text/javascript>(function(){var a,b;if(window.location.hostname=="localhost")return;a=document.createElement('script'),a.type='text/javascript',a.async=!0,b='visionary',a.src='//'+b+'.disqus.com/embed.js',(document.getElementsByTagName('head')[0]||document.getElementsByTagName('body')[0]).appendChild(a)})()</script>
-<noscript>Please enable JavaScript to view the <a href=https://disqus.com/?ref_noscript>comments powered by Disqus.</a></noscript>
-</article>
-</main><footer class="w-full text-center p-4 text-xs text-gray-400">
+<li><a href=#一basic-types4-点>一、Basic Types【4 点】</a></li><li><a href=#二enums枚举>二、enums【枚举】</a></li><li><a href=#三union-enums-and-enum-member-types枚举用在类型声明的属性中>三、Union enums and enum member types【枚举用在类型声明的属性中】</a></li><li><a href=#四function参数返回值>四、function【参数&返回值】</a></li><li><a href=#五generics泛型>五、Generics【泛型】</a></li><li><a href=#utility-types规定一下读取-type-transformations动态的改变类型>Utility Types【规定一下读取】& type transformations【动态的改变类型】</a></li></ul></li></ul></nav></aside><div class="prose lg:prose-lg prose-blue dark:prose-dark">
+<p>Basic Type、Interfaces</p><p><a href=https://en.wikipedia.org/wiki/Cross-site_request_forgery>Cross-site request forgery - Wikipedia</a></p><h1 id=typescript-basic>TypeScript Basic</h1><h3 id=一basic-types4-点>一、Basic Types【4 点】</h3><blockquote>
+<p>boolean, bigint, null, number, string, symbol, object, and undefined</p></blockquote><div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-tsx data-lang=tsx><span style=display:flex><span><span style=color:#75715e>/*
+</span></span></span><span style=display:flex><span><span style=color:#75715e>1、       
+</span></span></span><span style=display:flex><span><span style=color:#75715e>Basic Types   
+</span></span></span><span style=display:flex><span><span style=color:#75715e>声明一个变量时可规定多种类型   
+</span></span></span><span style=display:flex><span><span style=color:#75715e>*/</span>
+</span></span><span style=display:flex><span><span style=color:#66d9ef>type</span> <span style=color:#a6e22e>WindowStates</span> <span style=color:#f92672>=</span> <span style=color:#e6db74>&#34;open&#34;</span> <span style=color:#f92672>|</span> <span style=color:#e6db74>&#34;closed&#34;</span> <span style=color:#f92672>|</span> <span style=color:#e6db74>&#34;minimized&#34;</span>;
+</span></span><span style=display:flex><span><span style=color:#66d9ef>type</span> <span style=color:#a6e22e>LockStates</span> <span style=color:#f92672>=</span> <span style=color:#e6db74>&#34;locked&#34;</span> <span style=color:#f92672>|</span> <span style=color:#e6db74>&#34;unlocked&#34;</span>;
+</span></span><span style=display:flex><span><span style=color:#66d9ef>type</span> <span style=color:#a6e22e>OddNumbersUnderTen</span> <span style=color:#f92672>=</span> <span style=color:#ae81ff>1</span> <span style=color:#f92672>|</span> <span style=color:#ae81ff>3</span> <span style=color:#f92672>|</span> <span style=color:#ae81ff>5</span> <span style=color:#f92672>|</span> <span style=color:#ae81ff>7</span> <span style=color:#f92672>|</span> <span style=color:#ae81ff>9</span>;
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span><span style=color:#75715e>/*
+</span></span></span><span style=display:flex><span><span style=color:#75715e>2、      
+</span></span></span><span style=display:flex><span><span style=color:#75715e>Interfaces
+</span></span></span><span style=display:flex><span><span style=color:#75715e>规定一个 object【包括其 props】 的类型
+</span></span></span><span style=display:flex><span><span style=color:#75715e>*/</span>
+</span></span><span style=display:flex><span><span style=color:#66d9ef>interface</span> <span style=color:#a6e22e>User</span> {
+</span></span><span style=display:flex><span>  <span style=color:#a6e22e>name</span>: <span style=color:#66d9ef>string</span>;
+</span></span><span style=display:flex><span>  <span style=color:#a6e22e>id</span>: <span style=color:#66d9ef>number</span>;
+</span></span><span style=display:flex><span>}
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span><span style=color:#66d9ef>const</span> <span style=color:#a6e22e>user</span>: <span style=color:#66d9ef>User</span> <span style=color:#f92672>=</span> {
+</span></span><span style=display:flex><span>  <span style=color:#a6e22e>name</span><span style=color:#f92672>:</span> <span style=color:#e6db74>&#34;Hayes&#34;</span>,
+</span></span><span style=display:flex><span>  <span style=color:#a6e22e>id</span>: <span style=color:#66d9ef>0</span>,
+</span></span><span style=display:flex><span>};
+</span></span><span style=display:flex><span>	
+</span></span><span style=display:flex><span><span style=color:#75715e>/*
+</span></span></span><span style=display:flex><span><span style=color:#75715e>3、
+</span></span></span><span style=display:flex><span><span style=color:#75715e>Classes        
+</span></span></span><span style=display:flex><span><span style=color:#75715e>规定类的私有属性、static 属性
+</span></span></span><span style=display:flex><span><span style=color:#75715e>*/</span>
+</span></span><span style=display:flex><span><span style=color:#66d9ef>class</span> <span style=color:#a6e22e>UserAccount</span> {
+</span></span><span style=display:flex><span>  <span style=color:#a6e22e>name</span>: <span style=color:#66d9ef>string</span>;
+</span></span><span style=display:flex><span>  <span style=color:#a6e22e>id</span>: <span style=color:#66d9ef>number</span>;
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span>	<span style=color:#66d9ef>static</span> <span style=color:#a6e22e>owner</span>:<span style=color:#66d9ef>string</span>;
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span>  <span style=color:#66d9ef>constructor</span>(<span style=color:#a6e22e>name</span>: <span style=color:#66d9ef>string</span>, <span style=color:#a6e22e>id</span>: <span style=color:#66d9ef>number</span>) {
+</span></span><span style=display:flex><span>    <span style=color:#66d9ef>this</span>.<span style=color:#a6e22e>name</span> <span style=color:#f92672>=</span> <span style=color:#a6e22e>name</span>;
+</span></span><span style=display:flex><span>    <span style=color:#66d9ef>this</span>.<span style=color:#a6e22e>id</span> <span style=color:#f92672>=</span> <span style=color:#a6e22e>id</span>;
+</span></span><span style=display:flex><span>  }
+</span></span><span style=display:flex><span>}
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span><span style=color:#66d9ef>const</span> <span style=color:#a6e22e>user</span>: <span style=color:#66d9ef>User</span> <span style=color:#f92672>=</span> <span style=color:#66d9ef>new</span> <span style=color:#a6e22e>UserAccount</span>(<span style=color:#e6db74>&#34;Murphy&#34;</span>, <span style=color:#ae81ff>1</span>);
+</span></span><span style=display:flex><span><span style=color:#a6e22e>UserAccount.owner</span>:<span style=color:#66d9ef>string</span> <span style=color:#f92672>=</span> <span style=color:#e6db74>&#39;ali&#39;</span>;     <span style=color:#75715e>// 初始化静态变量
+</span></span></span><span style=display:flex><span><span style=color:#75715e></span>
+</span></span><span style=display:flex><span><span style=color:#75715e>/*
+</span></span></span><span style=display:flex><span><span style=color:#75715e>4.
+</span></span></span><span style=display:flex><span><span style=color:#75715e>定义抽象方法&amp;实现
+</span></span></span><span style=display:flex><span><span style=color:#75715e>*/</span>
+</span></span><span style=display:flex><span><span style=color:#66d9ef>interface</span> <span style=color:#a6e22e>StringValidator</span> {
+</span></span><span style=display:flex><span>  <span style=color:#a6e22e>isAcceptable</span>(<span style=color:#a6e22e>s</span>: <span style=color:#66d9ef>string</span>)<span style=color:#f92672>:</span> <span style=color:#66d9ef>boolean</span>;
+</span></span><span style=display:flex><span>}
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span><span style=color:#66d9ef>class</span> <span style=color:#a6e22e>ZipCodeValidator</span> <span style=color:#66d9ef>implements</span> <span style=color:#a6e22e>StringValidator</span> {
+</span></span><span style=display:flex><span>  <span style=color:#a6e22e>isAcceptable</span>(<span style=color:#a6e22e>s</span>: <span style=color:#66d9ef>string</span>) {
+</span></span><span style=display:flex><span>    <span style=color:#66d9ef>return</span> <span style=color:#a6e22e>s</span>.<span style=color:#a6e22e>length</span> <span style=color:#f92672>===</span> <span style=color:#ae81ff>5</span> <span style=color:#f92672>&amp;&amp;</span> <span style=color:#a6e22e>numberRegexp</span>.<span style=color:#a6e22e>test</span>(<span style=color:#a6e22e>s</span>);
+</span></span><span style=display:flex><span>  }
+</span></span><span style=display:flex><span>}
+</span></span></code></pre></div><h3 id=二enums枚举>二、enums【枚举】</h3><div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-tsx data-lang=tsx><span style=display:flex><span><span style=color:#75715e>// 定义
+</span></span></span><span style=display:flex><span><span style=color:#75715e></span><span style=color:#66d9ef>enum</span> <span style=color:#a6e22e>Color</span> {
+</span></span><span style=display:flex><span>  <span style=color:#a6e22e>Red</span>,
+</span></span><span style=display:flex><span>  <span style=color:#a6e22e>Green</span>,
+</span></span><span style=display:flex><span>  <span style=color:#a6e22e>Blue</span>,
+</span></span><span style=display:flex><span>}
+</span></span><span style=display:flex><span><span style=color:#66d9ef>let</span> <span style=color:#a6e22e>c</span>: <span style=color:#66d9ef>Color</span> <span style=color:#f92672>=</span> <span style=color:#a6e22e>Color</span>.<span style=color:#a6e22e>Green</span>;
+</span></span><span style=display:flex><span><span style=color:#75715e>// 可赋值
+</span></span></span><span style=display:flex><span><span style=color:#75715e></span><span style=color:#66d9ef>enum</span> <span style=color:#a6e22e>UserResponse</span> {
+</span></span><span style=display:flex><span>  <span style=color:#a6e22e>No</span> <span style=color:#f92672>=</span> <span style=color:#ae81ff>0</span>,
+</span></span><span style=display:flex><span>  <span style=color:#a6e22e>Yes</span> <span style=color:#f92672>=</span> <span style=color:#ae81ff>1</span>,
+</span></span><span style=display:flex><span>}
+</span></span><span style=display:flex><span><span style=color:#75715e>// 可为计算结果
+</span></span></span><span style=display:flex><span><span style=color:#75715e></span><span style=color:#66d9ef>enum</span> <span style=color:#a6e22e>FileAccess</span> {
+</span></span><span style=display:flex><span>  <span style=color:#75715e>// constant members
+</span></span></span><span style=display:flex><span><span style=color:#75715e></span>  <span style=color:#a6e22e>None</span>,
+</span></span><span style=display:flex><span>  <span style=color:#a6e22e>Read</span> <span style=color:#f92672>=</span> <span style=color:#ae81ff>1</span> <span style=color:#f92672>&lt;&lt;</span> <span style=color:#ae81ff>1</span>,
+</span></span><span style=display:flex><span>  <span style=color:#a6e22e>Write</span> <span style=color:#f92672>=</span> <span style=color:#ae81ff>1</span> <span style=color:#f92672>&lt;&lt;</span> <span style=color:#ae81ff>2</span>,
+</span></span><span style=display:flex><span>  <span style=color:#a6e22e>ReadWrite</span> <span style=color:#f92672>=</span> <span style=color:#a6e22e>Read</span> <span style=color:#f92672>|</span> <span style=color:#a6e22e>Write</span>,
+</span></span><span style=display:flex><span>  <span style=color:#75715e>// computed member
+</span></span></span><span style=display:flex><span><span style=color:#75715e></span>  <span style=color:#a6e22e>G</span> <span style=color:#f92672>=</span> <span style=color:#e6db74>&#34;123&#34;</span>.<span style=color:#a6e22e>length</span>,
+</span></span><span style=display:flex><span>}
+</span></span></code></pre></div><h3 id=三union-enums-and-enum-member-types枚举用在类型声明的属性中>三、Union enums and enum member types【枚举用在类型声明的属性中】</h3><div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-tsx data-lang=tsx><span style=display:flex><span><span style=color:#66d9ef>enum</span> <span style=color:#a6e22e>ShapeKind</span> {
+</span></span><span style=display:flex><span>  <span style=color:#a6e22e>Circle</span>,
+</span></span><span style=display:flex><span>  <span style=color:#a6e22e>Square</span>,
+</span></span><span style=display:flex><span>}
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span><span style=color:#66d9ef>interface</span> <span style=color:#a6e22e>Circle</span> {
+</span></span><span style=display:flex><span>  <span style=color:#a6e22e>kind</span>: <span style=color:#66d9ef>ShapeKind.Circle</span>;<span style=color:#75715e>// 
+</span></span></span><span style=display:flex><span><span style=color:#75715e></span>  <span style=color:#a6e22e>radius</span>: <span style=color:#66d9ef>number</span>;
+</span></span><span style=display:flex><span>}
+</span></span></code></pre></div><h3 id=四function参数返回值>四、function【参数&返回值】</h3><div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-tsx data-lang=tsx><span style=display:flex><span><span style=color:#66d9ef>function</span> <span style=color:#a6e22e>getAdminUser</span>()<span style=color:#f92672>:</span> <span style=color:#a6e22e>User</span> {
+</span></span><span style=display:flex><span>  <span style=color:#75715e>//...
+</span></span></span><span style=display:flex><span><span style=color:#75715e></span>}
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span><span style=color:#66d9ef>function</span> <span style=color:#a6e22e>deleteUser</span>(<span style=color:#a6e22e>user</span>: <span style=color:#66d9ef>User</span>) {
+</span></span><span style=display:flex><span>  <span style=color:#75715e>// ...
+</span></span></span><span style=display:flex><span><span style=color:#75715e></span>}
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span><span style=color:#75715e>// 组合的参数
+</span></span></span><span style=display:flex><span><span style=color:#75715e></span><span style=color:#66d9ef>function</span> <span style=color:#a6e22e>getLength</span>(<span style=color:#a6e22e>obj</span>: <span style=color:#66d9ef>string</span> <span style=color:#f92672>|</span> <span style=color:#66d9ef>string</span>[]) {
+</span></span><span style=display:flex><span>  <span style=color:#66d9ef>return</span> <span style=color:#a6e22e>obj</span>.<span style=color:#a6e22e>length</span>;
+</span></span><span style=display:flex><span>}
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span><span style=color:#75715e>// 剪头函数声明
+</span></span></span><span style=display:flex><span><span style=color:#75715e></span><span style=color:#66d9ef>let</span> <span style=color:#a6e22e>fst</span><span style=color:#f92672>:</span> &lt;<span style=color:#f92672>T</span><span style=color:#960050;background-color:#1e0010>,</span> <span style=color:#a6e22e>U</span>&gt;(<span style=color:#a6e22e>a</span>: <span style=color:#66d9ef>T</span>, <span style=color:#a6e22e>b</span>: <span style=color:#66d9ef>U</span>) <span style=color:#f92672>=&gt;</span> <span style=color:#a6e22e>T</span> <span style=color:#f92672>=</span> (<span style=color:#a6e22e>a</span>, <span style=color:#a6e22e>b</span>) <span style=color:#f92672>=&gt;</span> <span style=color:#a6e22e>a</span>;
+</span></span></code></pre></div><h3 id=五generics泛型>五、Generics【泛型】</h3><div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-tsx data-lang=tsx><span style=display:flex><span>
+</span></span><span style=display:flex><span><span style=color:#66d9ef>type</span> <span style=color:#a6e22e>StringArray</span> <span style=color:#f92672>=</span> Array&lt;<span style=color:#f92672>string</span>&gt;;
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span><span style=color:#66d9ef>type</span> <span style=color:#a6e22e>NumberArray</span> <span style=color:#f92672>=</span> Array&lt;<span style=color:#f92672>number</span>&gt;;
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span><span style=color:#66d9ef>type</span> <span style=color:#a6e22e>ObjectWithNameArray</span> <span style=color:#f92672>=</span> Array<span style=color:#f92672>&lt;</span>{ <span style=color:#a6e22e>name</span>: <span style=color:#66d9ef>string</span> }<span style=color:#f92672>&gt;</span>;
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span><span style=color:#75715e>//type 是个动态的；
+</span></span></span><span style=display:flex><span><span style=color:#75715e></span><span style=color:#66d9ef>interface</span> <span style=color:#a6e22e>Backpack</span>&lt;<span style=color:#f92672>Type</span>&gt; {
+</span></span><span style=display:flex><span>  <span style=color:#a6e22e>add</span><span style=color:#f92672>:</span> (<span style=color:#a6e22e>obj</span>: <span style=color:#66d9ef>Type</span>) <span style=color:#f92672>=&gt;</span> <span style=color:#66d9ef>void</span>;
+</span></span><span style=display:flex><span>  <span style=color:#66d9ef>get</span><span style=color:#f92672>:</span> () <span style=color:#f92672>=&gt;</span> <span style=color:#a6e22e>Type</span>;
+</span></span><span style=display:flex><span>}
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span><span style=color:#66d9ef>function</span> <span style=color:#a6e22e>identity</span>&lt;<span style=color:#f92672>T</span>&gt;(<span style=color:#a6e22e>arg</span>: <span style=color:#66d9ef>T</span>)<span style=color:#f92672>:</span> <span style=color:#a6e22e>T</span> {
+</span></span><span style=display:flex><span>  <span style=color:#66d9ef>return</span> <span style=color:#a6e22e>arg</span>;
+</span></span><span style=display:flex><span>}
+</span></span><span style=display:flex><span><span style=color:#66d9ef>let</span> <span style=color:#a6e22e>output</span> <span style=color:#f92672>=</span> <span style=color:#a6e22e>identity</span>&lt;<span style=color:#f92672>string</span>&gt;(<span style=color:#e6db74>&#34;myString&#34;</span>);
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span><span style=color:#66d9ef>function</span> <span style=color:#a6e22e>loggingIdentity</span>&lt;<span style=color:#f92672>T</span>&gt;(<span style=color:#a6e22e>arg</span>: <span style=color:#66d9ef>T</span>[])<span style=color:#f92672>:</span> <span style=color:#a6e22e>T</span>[] {
+</span></span><span style=display:flex><span>  <span style=color:#a6e22e>console</span>.<span style=color:#a6e22e>log</span>(<span style=color:#a6e22e>arg</span>.<span style=color:#a6e22e>length</span>);
+</span></span><span style=display:flex><span>  <span style=color:#66d9ef>return</span> <span style=color:#a6e22e>arg</span>;
+</span></span><span style=display:flex><span>}
+</span></span></code></pre></div><h3 id=utility-types规定一下读取-type-transformations动态的改变类型>Utility Types【规定一下读取】& type transformations【动态的改变类型】</h3><div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-tsx data-lang=tsx><span style=display:flex><span><span style=color:#75715e>// 普通的
+</span></span></span><span style=display:flex><span><span style=color:#75715e></span><span style=color:#a6e22e>Partial</span>&lt;<span style=color:#f92672>Type</span>&gt;
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span><span style=color:#75715e>// =&gt; 只读
+</span></span></span><span style=display:flex><span><span style=color:#75715e></span>
+</span></span><span style=display:flex><span><span style=color:#a6e22e>Readonly</span>&lt;<span style=color:#f92672>Type</span>&gt;
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span><span style=color:#75715e>// key &amp; value 组合
+</span></span></span><span style=display:flex><span><span style=color:#75715e></span><span style=color:#a6e22e>Record</span>&lt;<span style=color:#f92672>Keys</span><span style=color:#960050;background-color:#1e0010>,</span><span style=color:#a6e22e>Type</span>&gt;;
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span><span style=color:#66d9ef>interface</span> <span style=color:#a6e22e>PageInfo</span> {
+</span></span><span style=display:flex><span>  <span style=color:#a6e22e>title</span> : <span style=color:#66d9ef>string</span>;
+</span></span><span style=display:flex><span>}
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span><span style=color:#66d9ef>type</span> <span style=color:#a6e22e>Page</span> <span style=color:#f92672>=</span> <span style=color:#e6db74>&#34;home&#34;</span> <span style=color:#f92672>|</span> <span style=color:#e6db74>&#34;about&#34;</span> <span style=color:#f92672>|</span> <span style=color:#e6db74>&#34;contact&#34;</span>;
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span><span style=color:#66d9ef>const</span> <span style=color:#a6e22e>nav</span>: <span style=color:#66d9ef>Record</span>&lt;<span style=color:#f92672>Page</span><span style=color:#960050;background-color:#1e0010>,</span> <span style=color:#a6e22e>PageInfo</span>&gt; <span style=color:#f92672>=</span> {
+</span></span><span style=display:flex><span>  <span style=color:#a6e22e>about</span><span style=color:#f92672>:</span> { <span style=color:#a6e22e>title</span> <span style=color:#f92672>:</span> <span style=color:#e6db74>&#34;about&#34;</span> },
+</span></span><span style=display:flex><span>  <span style=color:#a6e22e>contact</span><span style=color:#f92672>:</span> { <span style=color:#a6e22e>title</span> <span style=color:#f92672>:</span> <span style=color:#e6db74>&#34;contact&#34;</span> },
+</span></span><span style=display:flex><span>  <span style=color:#a6e22e>home</span><span style=color:#f92672>:</span> { <span style=color:#a6e22e>title</span> <span style=color:#f92672>:</span> <span style=color:#e6db74>&#34;home&#34;</span> },
+</span></span><span style=display:flex><span>};
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span><span style=color:#75715e>// 选取部分
+</span></span></span><span style=display:flex><span><span style=color:#75715e></span><span style=color:#a6e22e>Pick</span>&lt;<span style=color:#f92672>Type</span><span style=color:#960050;background-color:#1e0010>,</span> <span style=color:#a6e22e>Keys</span>&gt;
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span><span style=color:#75715e>// 去掉
+</span></span></span><span style=display:flex><span><span style=color:#75715e></span><span style=color:#a6e22e>Omit</span>&lt;<span style=color:#f92672>Type</span><span style=color:#960050;background-color:#1e0010>,</span> <span style=color:#a6e22e>Keys</span>&gt;
+</span></span><span style=display:flex><span><span style=color:#a6e22e>Exclude</span>&lt;<span style=color:#f92672>Type</span><span style=color:#960050;background-color:#1e0010>,</span> <span style=color:#a6e22e>ExcludedUnion</span>&gt;
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span><span style=color:#75715e>// 去掉空
+</span></span></span><span style=display:flex><span><span style=color:#75715e></span><span style=color:#a6e22e>NonNullable</span>&lt;<span style=color:#f92672>Type</span>&gt;
+</span></span></code></pre></div><div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-tsx data-lang=tsx><span style=display:flex><span><span style=color:#75715e>//规定函数参数的类型
+</span></span></span><span style=display:flex><span><span style=color:#75715e></span><span style=color:#a6e22e>Parameters</span>&lt;<span style=color:#f92672>Type</span>&gt;;
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span><span style=color:#66d9ef>declare</span> <span style=color:#66d9ef>function</span> <span style=color:#a6e22e>f1</span>(<span style=color:#a6e22e>arg</span><span style=color:#f92672>:</span> { <span style=color:#a6e22e>a</span>: <span style=color:#66d9ef>number</span>; <span style=color:#a6e22e>b</span>: <span style=color:#66d9ef>string</span> })<span style=color:#f92672>:</span> <span style=color:#66d9ef>void</span>;
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span><span style=color:#66d9ef>type</span> <span style=color:#a6e22e>T3</span> <span style=color:#f92672>=</span> <span style=color:#a6e22e>Parameters</span>&lt;<span style=color:#f92672>typeof</span> <span style=color:#a6e22e>f1</span>&gt;;
+</span></span><span style=display:flex><span><span style=color:#75715e>//    ^ = type T3 = [arg: {
+</span></span></span><span style=display:flex><span><span style=color:#75715e>//        a: number;
+</span></span></span><span style=display:flex><span><span style=color:#75715e>//        b: string;
+</span></span></span><span style=display:flex><span><span style=color:#75715e>//    }]
+</span></span></span><span style=display:flex><span><span style=color:#75715e></span>
+</span></span><span style=display:flex><span><span style=color:#75715e>// 返回值类型
+</span></span></span><span style=display:flex><span><span style=color:#75715e></span><span style=color:#a6e22e>ReturnType</span>&lt;<span style=color:#f92672>Type</span>&gt;
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span><span style=color:#66d9ef>type</span> <span style=color:#a6e22e>T4</span> <span style=color:#f92672>=</span> <span style=color:#a6e22e>ReturnType</span>&lt;<span style=color:#f92672>typeof</span> <span style=color:#a6e22e>f1</span>&gt;;
+</span></span><span style=display:flex><span><span style=color:#75715e>//    ^ = type T4 = {
+</span></span></span><span style=display:flex><span><span style=color:#75715e>//        a: number;
+</span></span></span><span style=display:flex><span><span style=color:#75715e>//        b: string;
+</span></span></span><span style=display:flex><span><span style=color:#75715e>//    }
+</span></span></span></code></pre></div><div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-tsx data-lang=tsx><span style=display:flex><span><span style=color:#75715e>// class =&gt; type
+</span></span></span><span style=display:flex><span><span style=color:#75715e></span><span style=color:#a6e22e>InstanceType</span>&lt;<span style=color:#f92672>Type</span>&gt;
+</span></span><span style=display:flex><span><span style=color:#75715e>// 必填
+</span></span></span><span style=display:flex><span><span style=color:#75715e></span><span style=color:#a6e22e>Required</span>&lt;<span style=color:#f92672>Type</span>&gt;
+</span></span></code></pre></div><div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-tsx data-lang=tsx><span style=display:flex><span><span style=color:#66d9ef>const</span> <span style=color:#a6e22e>handleChange</span> <span style=color:#f92672>=</span> (<span style=color:#a6e22e>event</span>: <span style=color:#66d9ef>React.ChangeEvent</span><span style=color:#f92672>&lt;</span>{ <span style=color:#a6e22e>value</span>: <span style=color:#66d9ef>unknown</span> }<span style=color:#f92672>&gt;</span>) <span style=color:#f92672>=&gt;</span> {
+</span></span><span style=display:flex><span>        <span style=color:#a6e22e>setAge</span>(<span style=color:#a6e22e>event</span>.<span style=color:#a6e22e>target</span>.<span style=color:#a6e22e>value</span> <span style=color:#66d9ef>as</span> <span style=color:#66d9ef>number</span>);
+</span></span><span style=display:flex><span>    };
+</span></span></code></pre></div></div><h1 class="text-3xl my-12">留下你的脚印 👣 </h1><div id=disqus_thread>
+</div><script type=text/javascript>(function(){if(window.location.hostname=="localhost")return;var e=document.createElement("script"),t;e.type="text/javascript",e.async=!0,t="visionary",e.src="//"+t+".disqus.com/embed.js",(document.getElementsByTagName("head")[0]||document.getElementsByTagName("body")[0]).appendChild(e)})()</script>
+<noscript>Please enable JavaScript to view the <a href=https://disqus.com/?ref_noscript>comments powered by Disqus.</a></noscript></article></main><footer class="w-full text-center p-4 text-xs text-gray-400">
 copyright © 2021 - VISIONARY · All rights reserved
-</footer>
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-Z0FJ599SKS"></script>
-<script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments)}gtag('js',new Date),gtag('config','G-Z0FJ599SKS')</script>
-</body>
-</html>
+</footer><script async src="https://www.googletagmanager.com/gtag/js?id=G-Z0FJ599SKS"></script>
+<script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments)}gtag("js",new Date),gtag("config","G-Z0FJ599SKS")</script>
+</body></html>

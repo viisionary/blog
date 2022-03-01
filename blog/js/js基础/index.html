@@ -4,13 +4,11 @@
 <meta name=viewport content="width=device-width,initial-scale=1">
 <title>
 js基础问题 - VISIONARY
-</title>
-<meta name=description content="Sample article showcasing basic Markdown syntax and formatting for HTML elements.">
-<meta name=generator content="Hugo 0.88.0"><link rel=stylesheet href="https://visionary.top/css/styles.min.58f39d2fee5ad08dc7d0f0329831e6809c556f80c5f682777edb84f468b700cb.css" integrity="sha256-WPOdL+5a0I3H0PAymDHmgJxVb4DF9oJ3ftuE9Gi3AMs=">
+</title><meta name=description content="Sample article showcasing basic Markdown syntax and formatting for HTML elements.">
+<meta name=generator content="Hugo 0.93.0"><link rel=stylesheet href="https://visionary.top/css/styles.min.58f39d2fee5ad08dc7d0f0329831e6809c556f80c5f682777edb84f468b700cb.css" integrity="sha256-WPOdL+5a0I3H0PAymDHmgJxVb4DF9oJ3ftuE9Gi3AMs=">
 <script>window.matchMedia("(prefers-color-scheme: dark)").matches?document.documentElement.classList.add("dark"):document.documentElement.classList.remove("dark")</script>
 <script data-ad-client=ca-pub-6431705402019390 async src=https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js></script>
-</head>
-<body class="flex flex-col min-h-screen dark:bg-gray-900 dark:text-gray-100 transition-colors duration-500"><header class="w-full px-4 pt-4 max-w-5xl mx-auto">
+</head><body class="flex flex-col min-h-screen dark:bg-gray-900 dark:text-gray-100 transition-colors duration-500"><header class="w-full px-4 pt-4 max-w-5xl mx-auto">
 <nav class="flex items-center justify-between flex-wrap">
 <div class="flex gap-2 items-center">
 <a href=mailto:min_0610@icloud.com aria-label=EMail><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentcolor" fill="none" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><circle cx="12" cy="12" r="4"/><path d="M16 12v1.5a2.5 2.5.0 005 0V12a9 9 0 10-5.5 8.28"/></svg>
@@ -18,652 +16,486 @@ js基础问题 - VISIONARY
 <a href=https://visionary.top/ class="flex items-center font-bold">
 VISIONARY
 </a>
-</div>
-<ul id=nav-menu class="flex w-auto mt-0 space-x-2">
+</div><ul id=nav-menu class="flex w-auto mt-0 space-x-2">
 <li><div class=search>
 <label for=search>🔍</label><input placeholder=SEARCH id=search type=text class=dark:bg-gray-900>
 <ul id=results class=search_result>
-</ul>
-</div>
-<script type=text/javascript src=https://code.jquery.com/jquery-2.1.3.min.js></script>
+</ul></div><script type=text/javascript src=https://code.jquery.com/jquery-2.1.3.min.js></script>
 <script type=text/javascript src=/js/lunr/lunr.min.js></script>
-<script type=text/javascript>let lunrIndex,$results,pagesIndex;function initLunr(){$.getJSON("/js/lunr/PagesIndex.json").done(function(a){pagesIndex=a,console.info("index:",pagesIndex),lunrIndex=lunr(function(){this.field("title",{boost:10}),this.field("tags",{boost:5}),console.log(this.add),this.field("content"),this.ref("href"),pagesIndex.forEach(a=>{console.log(a),a&&this.add(a)})})}).fail(function(d,a,b){const c=a+", "+b;console.error("Error getting Hugo index flie:",c)})}function initUI(){$results=$("#results"),$("#search").keyup(function(){$results.empty();const a=$(this).val();if(a.length<2)return;const b=search(a);renderResults(b)})}function search(a){return lunrIndex.search(a).map(function(a){return console.log(a),pagesIndex.filter(function(b){return b&&b.href===a.ref})[0]})}function renderResults(a){if(!a.length)return;a.slice(0,10).forEach(function(a){const b=$("<li>");b.append($("<a>",{href:a?a.href:'',text:"🔗 "+a.title})),$results.append(b)})}initLunr(),$(document).ready(function(){initUI()})</script>
-</li>
-<li>
-<a href=https://visionary.top/about/ class="hover:text-blue-800 dark:hover:text-blue-300">About Me</a>
-</li>
-<li>
+<script type=text/javascript>let lunrIndex,$results,pagesIndex;function initLunr(){$.getJSON("/js/lunr/PagesIndex.json").done(function(e){pagesIndex=e,console.info("index:",pagesIndex),lunrIndex=lunr(function(){this.field("title",{boost:10}),this.field("tags",{boost:5}),console.log(this.add),this.field("content"),this.ref("href"),pagesIndex.forEach(e=>{console.log(e),e&&this.add(e)})})}).fail(function(s,e,t){const n=e+", "+t;console.error("Error getting Hugo index flie:",n)})}function initUI(){$results=$("#results"),$("#search").keyup(function(){$results.empty();const e=$(this).val();if(e.length<2)return;const t=search(e);renderResults(t)})}function search(e){return lunrIndex.search(e).map(function(e){return console.log(e),pagesIndex.filter(function(t){return t&&t.href===e.ref})[0]})}function renderResults(e){if(!e.length)return;e.slice(0,10).forEach(function(e){const t=$("<li>");t.append($("<a>",{href:e?e.href:'',text:"🔗 "+e.title})),$results.append(t)})}initLunr(),$(document).ready(function(){initUI()})</script>
+</li><li>
+<a href=https://visionary.top/tags/about/ class="hover:text-blue-800 dark:hover:text-blue-300">About</a>
+</li><li>
 <a href=https://visionary.top/blog/ class="hover:text-blue-800 dark:hover:text-blue-300">Blogs</a>
-</li>
-</ul>
-</nav>
-</header>
-<main class="flex-1 mx-4 md:mx-12 lg:mx-24 mt-8 sm:mt-16">
+</li></ul></nav></header><main class="flex-1 mx-4 md:mx-12 lg:mx-24 mt-8 sm:mt-16">
 <article class="mb-16 max-w-5xl mx-auto px-4">
-<h1 class="text-5xl mb-6">js基础问题</h1>
-<ul>
-</ul>
-<div class="post-footer mb-6">
+<h1 class="text-5xl mb-6">js基础问题</h1><ul>
+</ul><div class="post-footer mb-6">
 <div class=info>
 <span class=separator><a class=category href=/categories/js/>js</a></span>
 <span class=separator><a class=tag href=/tags/%E5%9F%BA%E7%A1%80/>基础</a></span>
-</div>
-</div>
-<div class=post-footer>
-</div>
-<h2 class=text-xl>目录</h2>
-<aside class="content-aside-bar border-2 mb-4 mt-4">
+</div></div><div class=post-footer>
+</div><h2 class=text-xl>目录</h2><aside class="content-aside-bar border-2 mb-4 mt-4">
 <nav id=TableOfContents>
 <ul>
 <li><a href=#变量提升>变量提升</a>
 <ul>
-<li><a href=#use-strict>use strict</a></li>
-<li><a href=#catch>catch</a></li>
-</ul>
-</li>
-<li><a href=#箭头函数>箭头函数</a></li>
-<li><a href=#强制类型转换>强制类型转换</a>
+<li><a href=#use-strict>use strict</a></li><li><a href=#catch>catch</a></li></ul></li><li><a href=#箭头函数>箭头函数</a></li><li><a href=#强制类型转换>强制类型转换</a>
 <ul>
-<li><a href=#object-作为key会被转化为string->object 作为key会被转化为string =></a></li>
-</ul>
-</li>
-<li><a href=#指针>指针</a></li>
-<li><a href=#new-number>new Number</a></li>
-<li><a href=#class>class</a>
+<li><a href=#object-作为key会被转化为string->object 作为key会被转化为string =></a></li></ul></li><li><a href=#指针>指针</a></li><li><a href=#new-number>new Number</a></li><li><a href=#class>class</a>
 <ul>
-<li><a href=#class--prototype>class & prototype</a></li>
-</ul>
-</li>
-<li><a href=#私有变量-es2020>私有变量 ES2020</a>
+<li><a href=#class--prototype>class & prototype</a></li></ul></li><li><a href=#私有变量-es2020>私有变量 ES2020</a>
 <ul>
-<li><a href=#继承>继承</a></li>
-</ul>
-</li>
-<li><a href=#function实际上也是对象-可以往上挂属性>function实际上也是对象 可以往上挂属性</a></li>
-<li><a href=#关于new>关于new</a>
+<li><a href=#继承>继承</a></li></ul></li><li><a href=#function实际上也是对象-可以往上挂属性>function实际上也是对象 可以往上挂属性</a></li><li><a href=#关于new>关于new</a>
 <ul>
-<li><a href=#内置对象的原型链>内置对象的原型链</a></li>
-<li><a href=#原型链>原型链</a></li>
-<li><a href=#关于有没有prototype>关于有没有prototype</a></li>
-</ul>
-</li>
-<li><a href=#bind--call>bind & call</a></li>
-<li><a href=#模版字符串>模版字符串</a></li>
-<li><a href=#eval>eval</a></li>
-<li><a href=#storage>storage</a></li>
-<li><a href=#object-的key>object 的key</a></li>
-<li><a href=#全局执行的function-拥有global对象和this-keyword>全局执行的function 拥有global对象和"this" keyword</a></li>
-<li><a href=#boolean>Boolean</a></li>
-<li><a href=#array>array</a>
+<li><a href=#内置对象的原型链>内置对象的原型链</a></li><li><a href=#原型链>原型链</a></li><li><a href=#关于有没有prototype>关于有没有prototype</a></li></ul></li><li><a href=#bind--call>bind & call</a></li><li><a href=#模版字符串>模版字符串</a></li><li><a href=#eval>eval</a></li><li><a href=#storage>storage</a></li><li><a href=#object-的key>object 的key</a></li><li><a href=#全局执行的function-拥有global对象和this-keyword>全局执行的function 拥有global对象和"this" keyword</a></li><li><a href=#boolean>Boolean</a></li><li><a href=#array>array</a>
 <ul>
-<li><a href=#定义>定义</a></li>
-<li><a href=#reduce>reduce</a></li>
-<li><a href=#push>push</a></li>
-</ul>
-</li>
-<li><a href=#setinterval>setInterval</a></li>
-<li><a href=#generator>generator</a></li>
-<li><a href=#关于指针浅拷贝深拷贝>关于指针/浅拷贝/深拷贝</a>
+<li><a href=#定义>定义</a></li><li><a href=#reduce>reduce</a></li><li><a href=#push>push</a></li></ul></li><li><a href=#setinterval>setInterval</a></li><li><a href=#generator>generator</a></li><li><a href=#关于指针浅拷贝深拷贝>关于指针/浅拷贝/深拷贝</a>
 <ul>
-<li><a href=#objectassign>Object.assign()</a></li>
-</ul>
-</li>
-<li><a href=#遍历>遍历</a></li>
-<li><a href=#set>set</a></li>
-<li><a href=#模块化>模块化</a>
+<li><a href=#objectassign>Object.assign()</a></li></ul></li><li><a href=#遍历>遍历</a></li><li><a href=#set>set</a></li><li><a href=#模块化>模块化</a>
 <ul>
-<li><a href=#es6>es6</a></li>
-<li><a href=#export>export</a></li>
-</ul>
-</li>
-<li><a href=#delete>delete</a></li>
-<li><a href=#jsonstringify>JSON.stringify</a></li>
-<li><a href=#promise--async>promise & async</a>
+<li><a href=#es6>es6</a></li><li><a href=#export>export</a></li></ul></li><li><a href=#delete>delete</a></li><li><a href=#jsonstringify>JSON.stringify</a></li><li><a href=#promise--async>promise & async</a>
 <ul>
-<li><a href=#promise的状态>promise的状态</a></li>
-</ul>
-</li>
-<li><a href=#pure-function>pure function</a></li>
-<li><a href=#symbol>symbol</a></li>
-<li><a href=#默认值>默认值</a></li>
-<li><a href=#如何使object-可以迭代-iterable>如何使Object 可以迭代 iterable</a></li>
-<li><a href=#objectfromentries-array--object>Object.fromEntries [array => object]</a></li>
-<li><a href=#if条件的执行顺序>if条件的执行顺序</a></li>
-</ul>
-</nav>
-</aside>
-<div class="prose lg:prose-lg prose-blue dark:prose-dark">
-<p>一些js中的一些基础问题</p>
-<p>变量提升/this指向/指针/类型转换/迭代/模块化/promise 等</p>
-<h2 id=变量提升>变量提升</h2>
-<p>使用var在创建阶段就已经为变量分配了内存空间、默认值是undefined let & const 也会被提升 但是不会被初始化、会抛出错误</p>
-<div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-javascript data-lang=javascript><span style=color:#66d9ef>function</span> <span style=color:#a6e22e>sayHi</span>() {
-	<span style=color:#a6e22e>console</span>.<span style=color:#a6e22e>log</span>(<span style=color:#a6e22e>name</span>);
-	<span style=color:#a6e22e>console</span>.<span style=color:#a6e22e>log</span>(<span style=color:#a6e22e>age</span>);
-	<span style=color:#66d9ef>var</span> <span style=color:#a6e22e>name</span> <span style=color:#f92672>=</span> <span style=color:#e6db74>&#39;Lydia&#39;</span>;
-	<span style=color:#66d9ef>let</span> <span style=color:#a6e22e>age</span> <span style=color:#f92672>=</span> <span style=color:#ae81ff>21</span>;
-}
-
-<span style=color:#a6e22e>sayHi</span>();
-
-<span style=color:#75715e>//undefined and ReferenceError
-</span><span style=color:#75715e></span>
-</code></pre></div><p>setTimeout 的回调会在循环完毕之后执行 由于var的变量提升、var是全局的、每次+1，加到的是同一个变量上 若使用let/const的话 变量是局部的、每个i是个新值</p>
-<div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-javascript data-lang=javascript><span style=color:#66d9ef>for</span> (<span style=color:#66d9ef>var</span> <span style=color:#a6e22e>i</span> <span style=color:#f92672>=</span> <span style=color:#ae81ff>0</span>; <span style=color:#a6e22e>i</span> <span style=color:#f92672>&lt;</span> <span style=color:#ae81ff>3</span>; <span style=color:#a6e22e>i</span><span style=color:#f92672>++</span>) {
-	<span style=color:#a6e22e>setTimeout</span>(() =&gt; <span style=color:#a6e22e>console</span>.<span style=color:#a6e22e>log</span>(<span style=color:#a6e22e>i</span>), <span style=color:#ae81ff>1</span>);
-}
-<span style=color:#75715e>//3 3 3
-</span></code></pre></div><h3 id=use-strict>use strict</h3>
-<p>避免声明意外的全局变量</p>
-<div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-javascript data-lang=javascript>
-<span style=color:#66d9ef>function</span> <span style=color:#a6e22e>getAge</span>() {
-	<span style=color:#e6db74>&#39;use strict&#39;</span>;
-	<span style=color:#a6e22e>age</span> <span style=color:#f92672>=</span> <span style=color:#ae81ff>21</span>;
-	<span style=color:#a6e22e>console</span>.<span style=color:#a6e22e>log</span>(<span style=color:#a6e22e>age</span>);
-}
-
-
-<span style=color:#a6e22e>getAge</span>();
-<span style=color:#75715e>//ReferenceError
-</span></code></pre></div><p>函数内部重新声明</p>
-<p>会预先检查函数内部是否有使用的变量</p>
-<div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-javascript data-lang=javascript>
-<span style=color:#66d9ef>let</span> <span style=color:#a6e22e>name</span> <span style=color:#f92672>=</span> <span style=color:#e6db74>&#39;Lydia&#39;</span>;
-
-<span style=color:#66d9ef>function</span> <span style=color:#a6e22e>getName</span>() {
-	<span style=color:#a6e22e>console</span>.<span style=color:#a6e22e>log</span>(<span style=color:#a6e22e>name</span>);
-	<span style=color:#66d9ef>let</span> <span style=color:#a6e22e>name</span> <span style=color:#f92672>=</span> <span style=color:#e6db74>&#39;Sarah&#39;</span>;
-}
-
-<span style=color:#a6e22e>getName</span>();
-<span style=color:#75715e>//ReferenceError
-</span></code></pre></div><h3 id=catch>catch</h3>
-<p>x,y是模块的 catch中的x是error一个新变量</p>
-<div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-javascript data-lang=javascript>
-(() =&gt; {
-	<span style=color:#66d9ef>let</span> <span style=color:#a6e22e>x</span>, <span style=color:#a6e22e>y</span>;
-	<span style=color:#66d9ef>try</span> {
-		<span style=color:#66d9ef>throw</span> <span style=color:#66d9ef>new</span> Error();
-	} <span style=color:#66d9ef>catch</span> (<span style=color:#a6e22e>x</span>) {
-		(<span style=color:#a6e22e>x</span> <span style=color:#f92672>=</span> <span style=color:#ae81ff>1</span>), (<span style=color:#a6e22e>y</span> <span style=color:#f92672>=</span> <span style=color:#ae81ff>2</span>);
-		<span style=color:#a6e22e>console</span>.<span style=color:#a6e22e>log</span>(<span style=color:#a6e22e>x</span>);
-	}
-	<span style=color:#a6e22e>console</span>.<span style=color:#a6e22e>log</span>(<span style=color:#a6e22e>x</span>);
-	<span style=color:#a6e22e>console</span>.<span style=color:#a6e22e>log</span>(<span style=color:#a6e22e>y</span>);
-})();
-<span style=color:#75715e>// 1 undefined 2
-</span></code></pre></div><h2 id=箭头函数>箭头函数</h2>
-<p>这里perimeter使用箭头函数 this指向window</p>
-<div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-javascript data-lang=javascript>
-<span style=color:#66d9ef>const</span> <span style=color:#a6e22e>shape</span> <span style=color:#f92672>=</span> {
-	<span style=color:#a6e22e>radius</span><span style=color:#f92672>:</span> <span style=color:#ae81ff>10</span>,
-	<span style=color:#a6e22e>diameter</span>() {
-		<span style=color:#66d9ef>return</span> <span style=color:#66d9ef>this</span>.<span style=color:#a6e22e>radius</span> <span style=color:#f92672>*</span> <span style=color:#ae81ff>2</span>;
-	},
-	<span style=color:#a6e22e>perimeter</span><span style=color:#f92672>:</span> () =&gt; <span style=color:#ae81ff>2</span> <span style=color:#f92672>*</span> Math.<span style=color:#a6e22e>PI</span> <span style=color:#f92672>*</span> <span style=color:#66d9ef>this</span>.<span style=color:#a6e22e>radius</span>,
-};
-
-<span style=color:#a6e22e>console</span>.<span style=color:#a6e22e>log</span>(<span style=color:#a6e22e>shape</span>.<span style=color:#a6e22e>diameter</span>());
-<span style=color:#a6e22e>console</span>.<span style=color:#a6e22e>log</span>(<span style=color:#a6e22e>shape</span>.<span style=color:#a6e22e>perimeter</span>());
-
-<span style=color:#75715e>//20 and NaN 
-</span><span style=color:#75715e></span>
-</code></pre></div><h2 id=强制类型转换>强制类型转换</h2>
-<div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-javascript data-lang=javascript><span style=color:#f92672>+</span><span style=color:#66d9ef>true</span>;
-<span style=color:#f92672>!</span><span style=color:#e6db74>&#39;Lydia&#39;</span>;
-
-<span style=color:#75715e>// 1 and false
-</span><span style=color:#75715e></span>
-<span style=color:#ae81ff>1</span> <span style=color:#f92672>+</span> <span style=color:#e6db74>&#39;2&#39;</span>
-<span style=color:#75715e>// &#39;12&#39;
-</span><span style=color:#75715e></span><span style=color:#ae81ff>3</span> <span style=color:#f92672>+</span> <span style=color:#ae81ff>4</span> <span style=color:#f92672>+</span> <span style=color:#e6db74>&#39;5&#39;</span>;  <span style=color:#75715e>// 75
-</span></code></pre></div><h3 id=object-作为key会被转化为string->object 作为key会被转化为string =></h3>
-<div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-javascript data-lang=javascript><span style=color:#a6e22e>object</span> <span style=color:#f92672>-</span> <span style=color:#e6db74>&#34;[object Object]&#34;</span>
-<span style=color:#66d9ef>undefined</span> <span style=color:#f92672>-</span> <span style=color:#e6db74>&#34;undefined&#34;</span>
-<span style=color:#66d9ef>null</span> <span style=color:#f92672>-</span> <span style=color:#e6db74>&#34;null&#34;</span>
-</code></pre></div><div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-javascript data-lang=javascript>
-<span style=color:#66d9ef>const</span> <span style=color:#a6e22e>a</span> <span style=color:#f92672>=</span> {};
-<span style=color:#66d9ef>const</span> <span style=color:#a6e22e>b</span> <span style=color:#f92672>=</span> { <span style=color:#a6e22e>key</span><span style=color:#f92672>:</span> <span style=color:#e6db74>&#39;b&#39;</span> };
-<span style=color:#66d9ef>const</span> <span style=color:#a6e22e>c</span> <span style=color:#f92672>=</span> { <span style=color:#a6e22e>key</span><span style=color:#f92672>:</span> <span style=color:#e6db74>&#39;c&#39;</span> };
-
-<span style=color:#a6e22e>a</span>[<span style=color:#a6e22e>b</span>] <span style=color:#f92672>=</span> <span style=color:#ae81ff>123</span>;
-<span style=color:#a6e22e>a</span>[<span style=color:#a6e22e>c</span>] <span style=color:#f92672>=</span> <span style=color:#ae81ff>456</span>;
-
-<span style=color:#a6e22e>console</span>.<span style=color:#a6e22e>log</span>(<span style=color:#a6e22e>a</span>[<span style=color:#a6e22e>b</span>]);<span style=color:#75715e>//456
-</span></code></pre></div><h2 id=指针>指针</h2>
-<div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-javascript data-lang=javascript>
-<span style=color:#66d9ef>let</span> <span style=color:#a6e22e>c</span> <span style=color:#f92672>=</span> { <span style=color:#a6e22e>greeting</span><span style=color:#f92672>:</span> <span style=color:#e6db74>&#39;Hey!&#39;</span> };
-<span style=color:#66d9ef>let</span> <span style=color:#a6e22e>d</span>;
-
-<span style=color:#a6e22e>d</span> <span style=color:#f92672>=</span> <span style=color:#a6e22e>c</span>;
-<span style=color:#a6e22e>c</span>.<span style=color:#a6e22e>greeting</span> <span style=color:#f92672>=</span> <span style=color:#e6db74>&#39;Hello&#39;</span>;
-<span style=color:#a6e22e>console</span>.<span style=color:#a6e22e>log</span>(<span style=color:#a6e22e>d</span>.<span style=color:#a6e22e>greeting</span>);
-</code></pre></div><div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-javascript data-lang=javascript>
-<span style=color:#66d9ef>let</span> <span style=color:#a6e22e>number</span> <span style=color:#f92672>=</span> <span style=color:#ae81ff>0</span>;
-<span style=color:#a6e22e>console</span>.<span style=color:#a6e22e>log</span>(<span style=color:#a6e22e>number</span><span style=color:#f92672>++</span>);
-<span style=color:#ae81ff>0</span>
-<span style=color:#a6e22e>console</span>.<span style=color:#a6e22e>log</span>(<span style=color:#f92672>++</span><span style=color:#a6e22e>number</span>);
-<span style=color:#ae81ff>2</span>
-<span style=color:#a6e22e>console</span>.<span style=color:#a6e22e>log</span>(<span style=color:#a6e22e>number</span>);
-<span style=color:#ae81ff>2</span>
-</code></pre></div><h2 id=new-number>new Number</h2>
-<div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-javascript data-lang=javascript><span style=color:#66d9ef>new</span> Number(<span style=color:#ae81ff>3</span>) <span style=color:#f92672>===</span> <span style=color:#ae81ff>3</span> <span style=color:#75715e>//false
-</span><span style=color:#75715e></span>
-<span style=color:#66d9ef>typeof</span> <span style=color:#66d9ef>new</span> Number(<span style=color:#ae81ff>3</span>) <span style=color:#75715e>// object
-</span><span style=color:#75715e></span><span style=color:#66d9ef>typeof</span> <span style=color:#ae81ff>3</span> <span style=color:#75715e>// number
-</span><span style=color:#75715e></span>
-</code></pre></div><h2 id=class>class</h2>
-<div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-javascript data-lang=javascript>
-<span style=color:#66d9ef>class</span> <span style=color:#a6e22e>Chameleon</span> {
-	<span style=color:#66d9ef>static</span> <span style=color:#a6e22e>colorChange</span>(<span style=color:#a6e22e>newColor</span>) {
-		<span style=color:#66d9ef>this</span>.<span style=color:#a6e22e>newColor</span> <span style=color:#f92672>=</span> <span style=color:#a6e22e>newColor</span>;
-		<span style=color:#66d9ef>return</span> <span style=color:#66d9ef>this</span>.<span style=color:#a6e22e>newColor</span>;
-	}
-
-	<span style=color:#a6e22e>constructor</span>({ <span style=color:#a6e22e>newColor</span> <span style=color:#f92672>=</span> <span style=color:#e6db74>&#39;green&#39;</span> } <span style=color:#f92672>=</span> {}) {
-		<span style=color:#66d9ef>this</span>.<span style=color:#a6e22e>newColor</span> <span style=color:#f92672>=</span> <span style=color:#a6e22e>newColor</span>;
-	}
-}
-
-<span style=color:#66d9ef>const</span> <span style=color:#a6e22e>freddie</span> <span style=color:#f92672>=</span> <span style=color:#66d9ef>new</span> <span style=color:#a6e22e>Chameleon</span>({ <span style=color:#a6e22e>newColor</span><span style=color:#f92672>:</span> <span style=color:#e6db74>&#39;purple&#39;</span> });
-<span style=color:#a6e22e>console</span>.<span style=color:#a6e22e>log</span>(<span style=color:#a6e22e>freddie</span>.<span style=color:#a6e22e>colorChange</span>(<span style=color:#e6db74>&#39;orange&#39;</span>));
-<span style=color:#75715e>//TypeError
-</span></code></pre></div><h3 id=class--prototype>class & prototype</h3>
-<div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-javascript data-lang=javascript><span style=color:#66d9ef>class</span> <span style=color:#a6e22e>Dog</span> {
-	<span style=color:#a6e22e>constructor</span>(<span style=color:#a6e22e>name</span>) {
-		<span style=color:#66d9ef>this</span>.<span style=color:#a6e22e>name</span> <span style=color:#f92672>=</span> <span style=color:#a6e22e>name</span>;
-	}
-}
-
-<span style=color:#a6e22e>Dog</span>.<span style=color:#a6e22e>prototype</span>.<span style=color:#a6e22e>bark</span> <span style=color:#f92672>=</span> <span style=color:#66d9ef>function</span> () {
-	<span style=color:#a6e22e>console</span>.<span style=color:#a6e22e>log</span>(<span style=color:#e6db74>`Woof I am </span><span style=color:#e6db74>${</span><span style=color:#66d9ef>this</span>.<span style=color:#a6e22e>name</span><span style=color:#e6db74>}</span><span style=color:#e6db74>`</span>);
-};
-
-<span style=color:#66d9ef>const</span> <span style=color:#a6e22e>pet</span> <span style=color:#f92672>=</span> <span style=color:#66d9ef>new</span> <span style=color:#a6e22e>Dog</span>(<span style=color:#e6db74>&#39;Mara&#39;</span>);
-
-<span style=color:#a6e22e>pet</span>.<span style=color:#a6e22e>bark</span>();
-
-<span style=color:#66d9ef>delete</span> <span style=color:#a6e22e>Dog</span>.<span style=color:#a6e22e>prototype</span>.<span style=color:#a6e22e>bark</span>;
-
-<span style=color:#a6e22e>pet</span>.<span style=color:#a6e22e>bark</span>();
-</code></pre></div><h2 id=私有变量-es2020>私有变量 ES2020</h2>
-<p>不能被外部访问</p>
-<div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-javascript data-lang=javascript><span style=color:#66d9ef>class</span> <span style=color:#a6e22e>Counter</span> {
-	<span style=color:#960050;background-color:#1e0010>#</span><span style=color:#a6e22e>number</span> <span style=color:#f92672>=</span> <span style=color:#ae81ff>10</span>
-
-	<span style=color:#a6e22e>increment</span>() {
-		<span style=color:#66d9ef>this</span>.<span style=color:#960050;background-color:#1e0010>#</span><span style=color:#a6e22e>number</span><span style=color:#f92672>++</span>
-	}
-
-	<span style=color:#a6e22e>getNum</span>() {
-		<span style=color:#66d9ef>return</span> <span style=color:#66d9ef>this</span>.<span style=color:#960050;background-color:#1e0010>#</span><span style=color:#a6e22e>number</span>
-	}
-}
-
-<span style=color:#66d9ef>const</span> <span style=color:#a6e22e>counter</span> <span style=color:#f92672>=</span> <span style=color:#66d9ef>new</span> <span style=color:#a6e22e>Counter</span>()
-<span style=color:#a6e22e>counter</span>.<span style=color:#a6e22e>increment</span>() <span style=color:#75715e>//SyntaxError
-</span><span style=color:#75715e></span>
-<span style=color:#a6e22e>console</span>.<span style=color:#a6e22e>log</span>(<span style=color:#a6e22e>counter</span>.<span style=color:#960050;background-color:#1e0010>#</span><span style=color:#a6e22e>number</span>)
-</code></pre></div><h3 id=继承>继承</h3>
-<p>构造函数内 不能在使用super()之前使用this</p>
-<div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-javascript data-lang=javascript>
-<span style=color:#66d9ef>class</span> <span style=color:#a6e22e>Dog</span> {
-	<span style=color:#a6e22e>constructor</span>(<span style=color:#a6e22e>name</span>) {
-		<span style=color:#66d9ef>this</span>.<span style=color:#a6e22e>name</span> <span style=color:#f92672>=</span> <span style=color:#a6e22e>name</span>;
-	}
-};
-
-<span style=color:#66d9ef>class</span> <span style=color:#a6e22e>Labrador</span> <span style=color:#66d9ef>extends</span> <span style=color:#a6e22e>Dog</span> {
-	<span style=color:#a6e22e>constructor</span>(<span style=color:#a6e22e>name</span>, <span style=color:#a6e22e>size</span>) {
-		<span style=color:#66d9ef>super</span>(<span style=color:#a6e22e>name</span>);
-		<span style=color:#66d9ef>this</span>.<span style=color:#a6e22e>size</span> <span style=color:#f92672>=</span> <span style=color:#a6e22e>size</span>;
-	}
-}
-</code></pre></div><p>执行super的时候才会执行father的构造函数</p>
-<div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-javascript data-lang=javascript><span style=color:#66d9ef>class</span> <span style=color:#a6e22e>Bird</span> {
-	<span style=color:#a6e22e>constructor</span>() {
-		<span style=color:#a6e22e>console</span>.<span style=color:#a6e22e>log</span>(<span style=color:#e6db74>&#34;I&#39;m a bird. 🦢&#34;</span>);
-	}
-}
-
-<span style=color:#66d9ef>class</span> <span style=color:#a6e22e>Flamingo</span> <span style=color:#66d9ef>extends</span> <span style=color:#a6e22e>Bird</span> {
-	<span style=color:#a6e22e>constructor</span>() {
-		<span style=color:#a6e22e>console</span>.<span style=color:#a6e22e>log</span>(<span style=color:#e6db74>&#34;I&#39;m pink. 🌸&#34;</span>);
-		<span style=color:#66d9ef>super</span>();
-	}
-}
-
-<span style=color:#66d9ef>const</span> <span style=color:#a6e22e>pet</span> <span style=color:#f92672>=</span> <span style=color:#66d9ef>new</span> <span style=color:#a6e22e>Flamingo</span>();
-</code></pre></div><h2 id=function实际上也是对象-可以往上挂属性>function实际上也是对象 可以往上挂属性</h2>
-<div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-javascript data-lang=javascript>
-<span style=color:#66d9ef>function</span> <span style=color:#a6e22e>bark</span>() {
-	<span style=color:#a6e22e>console</span>.<span style=color:#a6e22e>log</span>(<span style=color:#e6db74>&#39;Woof!&#39;</span>);
-}
-
-<span style=color:#a6e22e>bark</span>.<span style=color:#a6e22e>animal</span> <span style=color:#f92672>=</span> <span style=color:#e6db74>&#39;dog&#39;</span>;
-</code></pre></div><h2 id=关于new>关于new</h2>
-<p>应挂到原型链上</p>
-<div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-javascript data-lang=javascript><span style=color:#66d9ef>function</span> <span style=color:#a6e22e>Person</span>(<span style=color:#a6e22e>firstName</span>, <span style=color:#a6e22e>lastName</span>) {
-	<span style=color:#66d9ef>this</span>.<span style=color:#a6e22e>firstName</span> <span style=color:#f92672>=</span> <span style=color:#a6e22e>firstName</span>;
-	<span style=color:#66d9ef>this</span>.<span style=color:#a6e22e>lastName</span> <span style=color:#f92672>=</span> <span style=color:#a6e22e>lastName</span>;
-}
-
-<span style=color:#66d9ef>const</span> <span style=color:#a6e22e>member</span> <span style=color:#f92672>=</span> <span style=color:#66d9ef>new</span> <span style=color:#a6e22e>Person</span>(<span style=color:#e6db74>&#39;Lydia&#39;</span>, <span style=color:#e6db74>&#39;Hallie&#39;</span>);
-<span style=color:#a6e22e>Person</span>.<span style=color:#a6e22e>getFullName</span> <span style=color:#f92672>=</span> <span style=color:#66d9ef>function</span> () {
-	<span style=color:#66d9ef>return</span> <span style=color:#e6db74>`</span><span style=color:#e6db74>${</span><span style=color:#66d9ef>this</span>.<span style=color:#a6e22e>firstName</span><span style=color:#e6db74>}</span><span style=color:#e6db74> </span><span style=color:#e6db74>${</span><span style=color:#66d9ef>this</span>.<span style=color:#a6e22e>lastName</span><span style=color:#e6db74>}</span><span style=color:#e6db74>`</span>;
-};
-<span style=color:#75715e>// 此时的函数内部的this 指向windows
-</span><span style=color:#75715e></span><span style=color:#a6e22e>console</span>.<span style=color:#a6e22e>log</span>(<span style=color:#a6e22e>Person</span>.<span style=color:#a6e22e>getFullName</span>());
-<span style=color:#75715e>// undefined undefined
-</span><span style=color:#75715e></span>
-<span style=color:#75715e>// 使this指到member上并生成一个新函数
-</span><span style=color:#75715e></span><span style=color:#a6e22e>console</span>.<span style=color:#a6e22e>log</span>(<span style=color:#a6e22e>Person</span>.<span style=color:#a6e22e>getFullName</span>.<span style=color:#a6e22e>bind</span>(<span style=color:#a6e22e>member</span>)());
-<span style=color:#75715e>//Lydia Hallie
-</span><span style=color:#75715e></span><span style=color:#a6e22e>console</span>.<span style=color:#a6e22e>log</span>(<span style=color:#a6e22e>member</span>.<span style=color:#a6e22e>getFullName</span>());
-<span style=color:#75715e>//TypeError
-</span><span style=color:#75715e></span><span style=color:#a6e22e>Person</span>.<span style=color:#a6e22e>prototype</span>.<span style=color:#a6e22e>getFullName</span> <span style=color:#f92672>=</span> <span style=color:#66d9ef>function</span> () {
-	<span style=color:#66d9ef>return</span> <span style=color:#e6db74>`</span><span style=color:#e6db74>${</span><span style=color:#66d9ef>this</span>.<span style=color:#a6e22e>firstName</span><span style=color:#e6db74>}</span><span style=color:#e6db74> </span><span style=color:#e6db74>${</span><span style=color:#66d9ef>this</span>.<span style=color:#a6e22e>lastName</span><span style=color:#e6db74>}</span><span style=color:#e6db74>`</span>;
-};
-<span style=color:#a6e22e>console</span>.<span style=color:#a6e22e>log</span>(<span style=color:#a6e22e>member</span>.<span style=color:#a6e22e>getFullName</span>())
-<span style=color:#75715e>// Lydia Hallie
-</span><span style=color:#75715e>//### new 来的对象没有prototypes
-</span><span style=color:#75715e></span>
-<span style=color:#a6e22e>console</span>.<span style=color:#a6e22e>info</span>(<span style=color:#a6e22e>member</span>.<span style=color:#a6e22e>prototype</span>) <span style=color:#75715e>// undefined
-</span><span style=color:#75715e></span><span style=color:#a6e22e>console</span>.<span style=color:#a6e22e>info</span>(<span style=color:#a6e22e>Person</span>.<span style=color:#a6e22e>prototype</span>)
-<span style=color:#75715e>//getFullName: ƒ ()
-</span><span style=color:#75715e>//constructor: ƒ Person(firstName, lastName)
-</span></code></pre></div><h3 id=内置对象的原型链>内置对象的原型链</h3>
-<div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-javascript data-lang=javascript>String.<span style=color:#a6e22e>prototype</span>.<span style=color:#a6e22e>giveLydiaPizza</span> <span style=color:#f92672>=</span> () =&gt; {
-	<span style=color:#66d9ef>return</span> <span style=color:#e6db74>&#39;Just give Lydia pizza already!&#39;</span>;
-};
-
-<span style=color:#66d9ef>const</span> <span style=color:#a6e22e>name</span> <span style=color:#f92672>=</span> <span style=color:#e6db74>&#39;Lydia&#39;</span>;
-
-<span style=color:#a6e22e>name</span>.<span style=color:#a6e22e>giveLydiaPizza</span>(); 
-</code></pre></div><h3 id=原型链>原型链</h3>
-<p>常规function 是有prototype的、箭头函数则没有</p>
-<div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-javascript data-lang=javascript><span style=color:#66d9ef>function</span> <span style=color:#a6e22e>giveLydiaPizza</span>() {
-	<span style=color:#66d9ef>return</span> <span style=color:#e6db74>&#39;Here is pizza!&#39;</span>;
-}
-
-<span style=color:#66d9ef>const</span> <span style=color:#a6e22e>giveLydiaChocolate</span> <span style=color:#f92672>=</span> () =&gt;
-	<span style=color:#e6db74>&#34;Here&#39;s chocolate... now go hit the gym already.&#34;</span>;
-
-<span style=color:#a6e22e>console</span>.<span style=color:#a6e22e>log</span>(<span style=color:#a6e22e>giveLydiaPizza</span>.<span style=color:#a6e22e>prototype</span>);
-<span style=color:#a6e22e>console</span>.<span style=color:#a6e22e>log</span>(<span style=color:#a6e22e>giveLydiaChocolate</span>.<span style=color:#a6e22e>prototype</span>);
-
-<span style=color:#75715e>// constructor: ...} undefined
-</span></code></pre></div><h3 id=关于有没有prototype>关于有没有prototype</h3>
-<h2 id=bind--call>bind & call</h2>
-<div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-javascript data-lang=javascript><span style=color:#66d9ef>const</span> <span style=color:#a6e22e>person</span> <span style=color:#f92672>=</span> { <span style=color:#a6e22e>name</span><span style=color:#f92672>:</span> <span style=color:#e6db74>&#39;Lydia&#39;</span> };
-
-<span style=color:#66d9ef>function</span> <span style=color:#a6e22e>sayHi</span>(<span style=color:#a6e22e>age</span>) {
-	<span style=color:#66d9ef>return</span> <span style=color:#e6db74>`</span><span style=color:#e6db74>${</span><span style=color:#66d9ef>this</span>.<span style=color:#a6e22e>name</span><span style=color:#e6db74>}</span><span style=color:#e6db74> is </span><span style=color:#e6db74>${</span><span style=color:#a6e22e>age</span><span style=color:#e6db74>}</span><span style=color:#e6db74>`</span>;
-}
-
-<span style=color:#a6e22e>console</span>.<span style=color:#a6e22e>log</span>(<span style=color:#a6e22e>sayHi</span>.<span style=color:#a6e22e>call</span>(<span style=color:#a6e22e>person</span>, <span style=color:#ae81ff>21</span>));
-<span style=color:#a6e22e>console</span>.<span style=color:#a6e22e>log</span>(<span style=color:#a6e22e>sayHi</span>.<span style=color:#a6e22e>bind</span>(<span style=color:#a6e22e>person</span>, <span style=color:#ae81ff>21</span>));
-</code></pre></div><h2 id=模版字符串>模版字符串</h2>
-<div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-javascript data-lang=javascript><span style=color:#66d9ef>function</span> <span style=color:#a6e22e>getPersonInfo</span>(<span style=color:#a6e22e>one</span>, <span style=color:#a6e22e>two</span>, <span style=color:#a6e22e>three</span>) {
-	<span style=color:#a6e22e>console</span>.<span style=color:#a6e22e>log</span>(<span style=color:#a6e22e>one</span>);
-	<span style=color:#a6e22e>console</span>.<span style=color:#a6e22e>log</span>(<span style=color:#a6e22e>two</span>);
-	<span style=color:#a6e22e>console</span>.<span style=color:#a6e22e>log</span>(<span style=color:#a6e22e>three</span>);
-}
-
-<span style=color:#66d9ef>const</span> <span style=color:#a6e22e>person</span> <span style=color:#f92672>=</span> <span style=color:#e6db74>&#39;Lydia&#39;</span>;
-<span style=color:#66d9ef>const</span> <span style=color:#a6e22e>age</span> <span style=color:#f92672>=</span> <span style=color:#ae81ff>21</span>;
-
-<span style=color:#a6e22e>getPersonInfo</span><span style=color:#e6db74>`</span><span style=color:#e6db74>${</span><span style=color:#a6e22e>person</span><span style=color:#e6db74>}</span><span style=color:#e6db74> is </span><span style=color:#e6db74>${</span><span style=color:#a6e22e>age</span><span style=color:#e6db74>}</span><span style=color:#e6db74> years old`</span>;
-<span style=color:#75715e>//[&#34;&#34;, &#34; is &#34;, &#34; years old&#34;] &#34;Lydia&#34; 21
-</span></code></pre></div><p>立即执行函数</p>
-<div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-javascript data-lang=javascript><span style=color:#a6e22e>console</span>.<span style=color:#a6e22e>log</span>(<span style=color:#e6db74>`</span><span style=color:#e6db74>${</span>(<span style=color:#a6e22e>x</span> =&gt; <span style=color:#a6e22e>x</span>)(<span style=color:#e6db74>&#39;I love&#39;</span>)<span style=color:#e6db74>}</span><span style=color:#e6db74> to program`</span>);
-<span style=color:#75715e>//I love to program
-</span><span style=color:#75715e></span>
-</code></pre></div><h2 id=eval>eval</h2>
-<p>Content Security Policy directive: &ldquo;script-src xxx&rdquo;.</p>
-<div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-javascript data-lang=javascript><span style=color:#66d9ef>const</span> <span style=color:#a6e22e>sum</span> <span style=color:#f92672>=</span> eval(<span style=color:#e6db74>&#39;10*10+5&#39;</span>);
-<span style=color:#75715e>//105
-</span></code></pre></div><h2 id=storage>storage</h2>
-<div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-javascript data-lang=javascript>
-<span style=color:#a6e22e>sessionStorage</span>.<span style=color:#a6e22e>setItem</span>(<span style=color:#e6db74>&#39;cool_secret&#39;</span>, <span style=color:#ae81ff>123</span>);
-<span style=color:#a6e22e>关闭tab后被移除</span>
-</code></pre></div><h2 id=object-的key>object 的key</h2>
-<div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-javascript data-lang=javascript><span style=color:#66d9ef>const</span> <span style=color:#a6e22e>obj</span> <span style=color:#f92672>=</span> { <span style=color:#ae81ff>1</span><span style=color:#f92672>:</span> <span style=color:#e6db74>&#39;a&#39;</span>, <span style=color:#ae81ff>2</span><span style=color:#f92672>:</span> <span style=color:#e6db74>&#39;b&#39;</span>, <span style=color:#ae81ff>3</span><span style=color:#f92672>:</span> <span style=color:#e6db74>&#39;c&#39;</span> };
-<span style=color:#66d9ef>const</span> <span style=color:#a6e22e>set</span> <span style=color:#f92672>=</span> <span style=color:#66d9ef>new</span> <span style=color:#a6e22e>Set</span>([<span style=color:#ae81ff>1</span>, <span style=color:#ae81ff>2</span>, <span style=color:#ae81ff>3</span>, <span style=color:#ae81ff>4</span>, <span style=color:#ae81ff>5</span>]);
-
-<span style=color:#a6e22e>obj</span>.<span style=color:#a6e22e>hasOwnProperty</span>(<span style=color:#e6db74>&#39;1&#39;</span>);
-<span style=color:#a6e22e>obj</span>.<span style=color:#a6e22e>hasOwnProperty</span>(<span style=color:#ae81ff>1</span>);
-<span style=color:#a6e22e>set</span>.<span style=color:#a6e22e>has</span>(<span style=color:#e6db74>&#39;1&#39;</span>);
-<span style=color:#a6e22e>set</span>.<span style=color:#a6e22e>has</span>(<span style=color:#ae81ff>1</span>);
-<span style=color:#75715e>//true true false true
-</span></code></pre></div><h2 id=全局执行的function-拥有global对象和this-keyword>全局执行的function 拥有global对象和"this" keyword</h2>
-<h2 id=boolean>Boolean</h2>
-<div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-javascript data-lang=javascript><span style=color:#66d9ef>new</span> Boolean(<span style=color:#66d9ef>false</span>) <span style=color:#f92672>?</span> <span style=color:#a6e22e>console</span>.<span style=color:#a6e22e>log</span>(<span style=color:#ae81ff>1</span>) <span style=color:#f92672>:</span> <span style=color:#a6e22e>console</span>.<span style=color:#a6e22e>log</span>(<span style=color:#ae81ff>2</span>)
-<span style=color:#75715e>// 1
-</span></code></pre></div><h2 id=array>array</h2>
-<h3 id=定义>定义</h3>
-<div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-javascript data-lang=javascript><span style=color:#66d9ef>const</span> <span style=color:#a6e22e>list</span> <span style=color:#f92672>=</span> [<span style=color:#ae81ff>1</span> <span style=color:#f92672>+</span> <span style=color:#ae81ff>2</span>, <span style=color:#ae81ff>1</span> <span style=color:#f92672>*</span> <span style=color:#ae81ff>2</span>, <span style=color:#ae81ff>1</span> <span style=color:#f92672>/</span> <span style=color:#ae81ff>2</span>];
-<span style=color:#a6e22e>console</span>.<span style=color:#a6e22e>log</span>(<span style=color:#a6e22e>list</span>);
-<span style=color:#75715e>// [3, 2, 0.5]
-</span></code></pre></div><h3 id=reduce>reduce</h3>
-<div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-javascript data-lang=javascript>[[<span style=color:#ae81ff>0</span>, <span style=color:#ae81ff>1</span>], [<span style=color:#ae81ff>2</span>, <span style=color:#ae81ff>3</span>]].<span style=color:#a6e22e>reduce</span>(
-	(<span style=color:#a6e22e>acc</span>, <span style=color:#a6e22e>cur</span>) =&gt; {
-		<span style=color:#66d9ef>return</span> <span style=color:#a6e22e>acc</span>.<span style=color:#a6e22e>concat</span>(<span style=color:#a6e22e>cur</span>);
-	},
-	[<span style=color:#ae81ff>1</span>, <span style=color:#ae81ff>2</span>],
-);
-<span style=color:#75715e>//[1, 2, 0, 1, 2, 3]
-</span></code></pre></div><h3 id=push>push</h3>
-<p>array.push()的返回值是当前数组长度</p>
-<h2 id=setinterval>setInterval</h2>
-<p>setInterval/setTimeout会返回一个唯一的id [number]</p>
-<div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-javascript data-lang=javascript>
-<span style=color:#a6e22e>setInterval</span>(() =&gt; <span style=color:#a6e22e>console</span>.<span style=color:#a6e22e>log</span>(<span style=color:#e6db74>&#39;Hi&#39;</span>), <span style=color:#ae81ff>1000</span>);
-<span style=color:#75715e>// 169
-</span><span style=color:#75715e></span><span style=color:#a6e22e>clearInterval</span>(<span style=color:#ae81ff>169</span>)
-<span style=color:#75715e>// Interval会停下来
-</span></code></pre></div><p>另一种调用方式</p>
-<div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-javascript data-lang=javascript><span style=color:#a6e22e>setTimeout</span>(<span style=color:#a6e22e>console</span>.<span style=color:#a6e22e>log</span>, <span style=color:#ae81ff>100</span>, <span style=color:#e6db74>&#39;two&#39;</span>);
-<span style=color:#75715e>// two
-</span></code></pre></div><h2 id=generator>generator</h2>
-<div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-javascript data-lang=javascript><span style=color:#66d9ef>function</span><span style=color:#f92672>*</span> <span style=color:#a6e22e>generator</span>(<span style=color:#a6e22e>i</span>) {
-	<span style=color:#66d9ef>yield</span> <span style=color:#a6e22e>i</span>;
-	<span style=color:#66d9ef>yield</span> <span style=color:#a6e22e>i</span> <span style=color:#f92672>*</span> <span style=color:#ae81ff>2</span>;
-}
-
-<span style=color:#66d9ef>const</span> <span style=color:#a6e22e>gen</span> <span style=color:#f92672>=</span> <span style=color:#a6e22e>generator</span>(<span style=color:#ae81ff>10</span>);
-
-<span style=color:#a6e22e>console</span>.<span style=color:#a6e22e>log</span>(<span style=color:#a6e22e>gen</span>.<span style=color:#a6e22e>next</span>().<span style=color:#a6e22e>value</span>);
-<span style=color:#a6e22e>console</span>.<span style=color:#a6e22e>log</span>(<span style=color:#a6e22e>gen</span>.<span style=color:#a6e22e>next</span>().<span style=color:#a6e22e>value</span>);
-<span style=color:#75715e>// 10 20
-</span></code></pre></div><h2 id=关于指针浅拷贝深拷贝>关于指针/浅拷贝/深拷贝</h2>
-<p>原本 person=>
+<li><a href=#promise的状态>promise的状态</a></li></ul></li><li><a href=#pure-function>pure function</a></li><li><a href=#symbol>symbol</a></li><li><a href=#默认值>默认值</a></li><li><a href=#如何使object-可以迭代-iterable>如何使Object 可以迭代 iterable</a></li><li><a href=#objectfromentries-array--object>Object.fromEntries [array => object]</a></li><li><a href=#if条件的执行顺序>if条件的执行顺序</a></li></ul></nav></aside><div class="prose lg:prose-lg prose-blue dark:prose-dark">
+<p>一些js中的一些基础问题</p><p>变量提升/this指向/指针/类型转换/迭代/模块化/promise 等</p><h2 id=变量提升>变量提升</h2><p>使用var在创建阶段就已经为变量分配了内存空间、默认值是undefined</p><p>let & const 也会被提升 但是不会被初始化、会抛出错误</p><div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-javascript data-lang=javascript><span style=display:flex><span><span style=color:#66d9ef>function</span> <span style=color:#a6e22e>sayHi</span>() {
+</span></span><span style=display:flex><span>	<span style=color:#a6e22e>console</span>.<span style=color:#a6e22e>log</span>(<span style=color:#a6e22e>name</span>);
+</span></span><span style=display:flex><span>	<span style=color:#a6e22e>console</span>.<span style=color:#a6e22e>log</span>(<span style=color:#a6e22e>age</span>);
+</span></span><span style=display:flex><span>	<span style=color:#66d9ef>var</span> <span style=color:#a6e22e>name</span> <span style=color:#f92672>=</span> <span style=color:#e6db74>&#39;Lydia&#39;</span>;
+</span></span><span style=display:flex><span>	<span style=color:#66d9ef>let</span> <span style=color:#a6e22e>age</span> <span style=color:#f92672>=</span> <span style=color:#ae81ff>21</span>;
+</span></span><span style=display:flex><span>}
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span><span style=color:#a6e22e>sayHi</span>();
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span><span style=color:#75715e>//undefined and ReferenceError
+</span></span></span></code></pre></div><p>setTimeout 的回调会在循环完毕之后执行 由于var的变量提升、var是全局的、每次+1，加到的是同一个变量上 若使用let/const的话 变量是局部的、每个i是个新值</p><div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-javascript data-lang=javascript><span style=display:flex><span><span style=color:#66d9ef>for</span> (<span style=color:#66d9ef>var</span> <span style=color:#a6e22e>i</span> <span style=color:#f92672>=</span> <span style=color:#ae81ff>0</span>; <span style=color:#a6e22e>i</span> <span style=color:#f92672>&lt;</span> <span style=color:#ae81ff>3</span>; <span style=color:#a6e22e>i</span><span style=color:#f92672>++</span>) {
+</span></span><span style=display:flex><span>	<span style=color:#a6e22e>setTimeout</span>(() =&gt; <span style=color:#a6e22e>console</span>.<span style=color:#a6e22e>log</span>(<span style=color:#a6e22e>i</span>), <span style=color:#ae81ff>1</span>);
+</span></span><span style=display:flex><span>}
+</span></span><span style=display:flex><span><span style=color:#75715e>//3 3 3
+</span></span></span></code></pre></div><h3 id=use-strict>use strict</h3><p>避免声明意外的全局变量</p><div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-javascript data-lang=javascript><span style=display:flex><span>
+</span></span><span style=display:flex><span><span style=color:#66d9ef>function</span> <span style=color:#a6e22e>getAge</span>() {
+</span></span><span style=display:flex><span>	<span style=color:#e6db74>&#39;use strict&#39;</span>;
+</span></span><span style=display:flex><span>	<span style=color:#a6e22e>age</span> <span style=color:#f92672>=</span> <span style=color:#ae81ff>21</span>;
+</span></span><span style=display:flex><span>	<span style=color:#a6e22e>console</span>.<span style=color:#a6e22e>log</span>(<span style=color:#a6e22e>age</span>);
+</span></span><span style=display:flex><span>}
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span><span style=color:#a6e22e>getAge</span>();
+</span></span><span style=display:flex><span><span style=color:#75715e>//ReferenceError
+</span></span></span></code></pre></div><p>函数内部重新声明</p><p>会预先检查函数内部是否有使用的变量</p><div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-javascript data-lang=javascript><span style=display:flex><span>
+</span></span><span style=display:flex><span><span style=color:#66d9ef>let</span> <span style=color:#a6e22e>name</span> <span style=color:#f92672>=</span> <span style=color:#e6db74>&#39;Lydia&#39;</span>;
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span><span style=color:#66d9ef>function</span> <span style=color:#a6e22e>getName</span>() {
+</span></span><span style=display:flex><span>	<span style=color:#a6e22e>console</span>.<span style=color:#a6e22e>log</span>(<span style=color:#a6e22e>name</span>);
+</span></span><span style=display:flex><span>	<span style=color:#66d9ef>let</span> <span style=color:#a6e22e>name</span> <span style=color:#f92672>=</span> <span style=color:#e6db74>&#39;Sarah&#39;</span>;
+</span></span><span style=display:flex><span>}
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span><span style=color:#a6e22e>getName</span>();
+</span></span><span style=display:flex><span><span style=color:#75715e>//ReferenceError
+</span></span></span></code></pre></div><h3 id=catch>catch</h3><p>x,y是模块的 catch中的x是error一个新变量</p><div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-javascript data-lang=javascript><span style=display:flex><span>
+</span></span><span style=display:flex><span>(() =&gt; {
+</span></span><span style=display:flex><span>	<span style=color:#66d9ef>let</span> <span style=color:#a6e22e>x</span>, <span style=color:#a6e22e>y</span>;
+</span></span><span style=display:flex><span>	<span style=color:#66d9ef>try</span> {
+</span></span><span style=display:flex><span>		<span style=color:#66d9ef>throw</span> <span style=color:#66d9ef>new</span> Error();
+</span></span><span style=display:flex><span>	} <span style=color:#66d9ef>catch</span> (<span style=color:#a6e22e>x</span>) {
+</span></span><span style=display:flex><span>		(<span style=color:#a6e22e>x</span> <span style=color:#f92672>=</span> <span style=color:#ae81ff>1</span>), (<span style=color:#a6e22e>y</span> <span style=color:#f92672>=</span> <span style=color:#ae81ff>2</span>);
+</span></span><span style=display:flex><span>		<span style=color:#a6e22e>console</span>.<span style=color:#a6e22e>log</span>(<span style=color:#a6e22e>x</span>);
+</span></span><span style=display:flex><span>	}
+</span></span><span style=display:flex><span>	<span style=color:#a6e22e>console</span>.<span style=color:#a6e22e>log</span>(<span style=color:#a6e22e>x</span>);
+</span></span><span style=display:flex><span>	<span style=color:#a6e22e>console</span>.<span style=color:#a6e22e>log</span>(<span style=color:#a6e22e>y</span>);
+</span></span><span style=display:flex><span>})();
+</span></span><span style=display:flex><span><span style=color:#75715e>// 1 undefined 2
+</span></span></span></code></pre></div><h2 id=箭头函数>箭头函数</h2><p>这里perimeter使用箭头函数 this指向window</p><div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-javascript data-lang=javascript><span style=display:flex><span>
+</span></span><span style=display:flex><span><span style=color:#66d9ef>const</span> <span style=color:#a6e22e>shape</span> <span style=color:#f92672>=</span> {
+</span></span><span style=display:flex><span>	<span style=color:#a6e22e>radius</span><span style=color:#f92672>:</span> <span style=color:#ae81ff>10</span>,
+</span></span><span style=display:flex><span>	<span style=color:#a6e22e>diameter</span>() {
+</span></span><span style=display:flex><span>		<span style=color:#66d9ef>return</span> <span style=color:#66d9ef>this</span>.<span style=color:#a6e22e>radius</span> <span style=color:#f92672>*</span> <span style=color:#ae81ff>2</span>;
+</span></span><span style=display:flex><span>	},
+</span></span><span style=display:flex><span>	<span style=color:#a6e22e>perimeter</span><span style=color:#f92672>:</span> () =&gt; <span style=color:#ae81ff>2</span> <span style=color:#f92672>*</span> Math.<span style=color:#a6e22e>PI</span> <span style=color:#f92672>*</span> <span style=color:#66d9ef>this</span>.<span style=color:#a6e22e>radius</span>,
+</span></span><span style=display:flex><span>};
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span><span style=color:#a6e22e>console</span>.<span style=color:#a6e22e>log</span>(<span style=color:#a6e22e>shape</span>.<span style=color:#a6e22e>diameter</span>());
+</span></span><span style=display:flex><span><span style=color:#a6e22e>console</span>.<span style=color:#a6e22e>log</span>(<span style=color:#a6e22e>shape</span>.<span style=color:#a6e22e>perimeter</span>());
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span><span style=color:#75715e>//20 and NaN 
+</span></span></span></code></pre></div><h2 id=强制类型转换>强制类型转换</h2><div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-javascript data-lang=javascript><span style=display:flex><span><span style=color:#f92672>+</span><span style=color:#66d9ef>true</span>;
+</span></span><span style=display:flex><span><span style=color:#f92672>!</span><span style=color:#e6db74>&#39;Lydia&#39;</span>;
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span><span style=color:#75715e>// 1 and false
+</span></span></span><span style=display:flex><span><span style=color:#75715e></span>
+</span></span><span style=display:flex><span><span style=color:#ae81ff>1</span> <span style=color:#f92672>+</span> <span style=color:#e6db74>&#39;2&#39;</span>
+</span></span><span style=display:flex><span><span style=color:#75715e>// &#39;12&#39;
+</span></span></span><span style=display:flex><span><span style=color:#75715e></span><span style=color:#ae81ff>3</span> <span style=color:#f92672>+</span> <span style=color:#ae81ff>4</span> <span style=color:#f92672>+</span> <span style=color:#e6db74>&#39;5&#39;</span>;  <span style=color:#75715e>// 75
+</span></span></span></code></pre></div><h3 id=object-作为key会被转化为string->object 作为key会被转化为string =></h3><div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-javascript data-lang=javascript><span style=display:flex><span><span style=color:#a6e22e>object</span> <span style=color:#f92672>-</span> <span style=color:#e6db74>&#34;[object Object]&#34;</span>
+</span></span><span style=display:flex><span><span style=color:#66d9ef>undefined</span> <span style=color:#f92672>-</span> <span style=color:#e6db74>&#34;undefined&#34;</span>
+</span></span><span style=display:flex><span><span style=color:#66d9ef>null</span> <span style=color:#f92672>-</span> <span style=color:#e6db74>&#34;null&#34;</span>
+</span></span></code></pre></div><div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-javascript data-lang=javascript><span style=display:flex><span>
+</span></span><span style=display:flex><span><span style=color:#66d9ef>const</span> <span style=color:#a6e22e>a</span> <span style=color:#f92672>=</span> {};
+</span></span><span style=display:flex><span><span style=color:#66d9ef>const</span> <span style=color:#a6e22e>b</span> <span style=color:#f92672>=</span> { <span style=color:#a6e22e>key</span><span style=color:#f92672>:</span> <span style=color:#e6db74>&#39;b&#39;</span> };
+</span></span><span style=display:flex><span><span style=color:#66d9ef>const</span> <span style=color:#a6e22e>c</span> <span style=color:#f92672>=</span> { <span style=color:#a6e22e>key</span><span style=color:#f92672>:</span> <span style=color:#e6db74>&#39;c&#39;</span> };
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span><span style=color:#a6e22e>a</span>[<span style=color:#a6e22e>b</span>] <span style=color:#f92672>=</span> <span style=color:#ae81ff>123</span>;
+</span></span><span style=display:flex><span><span style=color:#a6e22e>a</span>[<span style=color:#a6e22e>c</span>] <span style=color:#f92672>=</span> <span style=color:#ae81ff>456</span>;
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span><span style=color:#a6e22e>console</span>.<span style=color:#a6e22e>log</span>(<span style=color:#a6e22e>a</span>[<span style=color:#a6e22e>b</span>]);<span style=color:#75715e>//456
+</span></span></span></code></pre></div><h2 id=指针>指针</h2><div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-javascript data-lang=javascript><span style=display:flex><span>
+</span></span><span style=display:flex><span><span style=color:#66d9ef>let</span> <span style=color:#a6e22e>c</span> <span style=color:#f92672>=</span> { <span style=color:#a6e22e>greeting</span><span style=color:#f92672>:</span> <span style=color:#e6db74>&#39;Hey!&#39;</span> };
+</span></span><span style=display:flex><span><span style=color:#66d9ef>let</span> <span style=color:#a6e22e>d</span>;
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span><span style=color:#a6e22e>d</span> <span style=color:#f92672>=</span> <span style=color:#a6e22e>c</span>;
+</span></span><span style=display:flex><span><span style=color:#a6e22e>c</span>.<span style=color:#a6e22e>greeting</span> <span style=color:#f92672>=</span> <span style=color:#e6db74>&#39;Hello&#39;</span>;
+</span></span><span style=display:flex><span><span style=color:#a6e22e>console</span>.<span style=color:#a6e22e>log</span>(<span style=color:#a6e22e>d</span>.<span style=color:#a6e22e>greeting</span>);
+</span></span></code></pre></div><div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-javascript data-lang=javascript><span style=display:flex><span>
+</span></span><span style=display:flex><span><span style=color:#66d9ef>let</span> <span style=color:#a6e22e>number</span> <span style=color:#f92672>=</span> <span style=color:#ae81ff>0</span>;
+</span></span><span style=display:flex><span><span style=color:#a6e22e>console</span>.<span style=color:#a6e22e>log</span>(<span style=color:#a6e22e>number</span><span style=color:#f92672>++</span>);
+</span></span><span style=display:flex><span><span style=color:#ae81ff>0</span>
+</span></span><span style=display:flex><span><span style=color:#a6e22e>console</span>.<span style=color:#a6e22e>log</span>(<span style=color:#f92672>++</span><span style=color:#a6e22e>number</span>);
+</span></span><span style=display:flex><span><span style=color:#ae81ff>2</span>
+</span></span><span style=display:flex><span><span style=color:#a6e22e>console</span>.<span style=color:#a6e22e>log</span>(<span style=color:#a6e22e>number</span>);
+</span></span><span style=display:flex><span><span style=color:#ae81ff>2</span>
+</span></span></code></pre></div><h2 id=new-number>new Number</h2><div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-javascript data-lang=javascript><span style=display:flex><span><span style=color:#66d9ef>new</span> Number(<span style=color:#ae81ff>3</span>) <span style=color:#f92672>===</span> <span style=color:#ae81ff>3</span> <span style=color:#75715e>//false
+</span></span></span><span style=display:flex><span><span style=color:#75715e></span>
+</span></span><span style=display:flex><span><span style=color:#66d9ef>typeof</span> <span style=color:#66d9ef>new</span> Number(<span style=color:#ae81ff>3</span>) <span style=color:#75715e>// object
+</span></span></span><span style=display:flex><span><span style=color:#75715e></span><span style=color:#66d9ef>typeof</span> <span style=color:#ae81ff>3</span> <span style=color:#75715e>// number
+</span></span></span></code></pre></div><h2 id=class>class</h2><div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-javascript data-lang=javascript><span style=display:flex><span>
+</span></span><span style=display:flex><span><span style=color:#66d9ef>class</span> <span style=color:#a6e22e>Chameleon</span> {
+</span></span><span style=display:flex><span>	<span style=color:#66d9ef>static</span> <span style=color:#a6e22e>colorChange</span>(<span style=color:#a6e22e>newColor</span>) {
+</span></span><span style=display:flex><span>		<span style=color:#66d9ef>this</span>.<span style=color:#a6e22e>newColor</span> <span style=color:#f92672>=</span> <span style=color:#a6e22e>newColor</span>;
+</span></span><span style=display:flex><span>		<span style=color:#66d9ef>return</span> <span style=color:#66d9ef>this</span>.<span style=color:#a6e22e>newColor</span>;
+</span></span><span style=display:flex><span>	}
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span>	<span style=color:#a6e22e>constructor</span>({ <span style=color:#a6e22e>newColor</span> <span style=color:#f92672>=</span> <span style=color:#e6db74>&#39;green&#39;</span> } <span style=color:#f92672>=</span> {}) {
+</span></span><span style=display:flex><span>		<span style=color:#66d9ef>this</span>.<span style=color:#a6e22e>newColor</span> <span style=color:#f92672>=</span> <span style=color:#a6e22e>newColor</span>;
+</span></span><span style=display:flex><span>	}
+</span></span><span style=display:flex><span>}
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span><span style=color:#66d9ef>const</span> <span style=color:#a6e22e>freddie</span> <span style=color:#f92672>=</span> <span style=color:#66d9ef>new</span> <span style=color:#a6e22e>Chameleon</span>({ <span style=color:#a6e22e>newColor</span><span style=color:#f92672>:</span> <span style=color:#e6db74>&#39;purple&#39;</span> });
+</span></span><span style=display:flex><span><span style=color:#a6e22e>console</span>.<span style=color:#a6e22e>log</span>(<span style=color:#a6e22e>freddie</span>.<span style=color:#a6e22e>colorChange</span>(<span style=color:#e6db74>&#39;orange&#39;</span>));
+</span></span><span style=display:flex><span><span style=color:#75715e>//TypeError
+</span></span></span></code></pre></div><h3 id=class--prototype>class & prototype</h3><div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-javascript data-lang=javascript><span style=display:flex><span><span style=color:#66d9ef>class</span> <span style=color:#a6e22e>Dog</span> {
+</span></span><span style=display:flex><span>	<span style=color:#a6e22e>constructor</span>(<span style=color:#a6e22e>name</span>) {
+</span></span><span style=display:flex><span>		<span style=color:#66d9ef>this</span>.<span style=color:#a6e22e>name</span> <span style=color:#f92672>=</span> <span style=color:#a6e22e>name</span>;
+</span></span><span style=display:flex><span>	}
+</span></span><span style=display:flex><span>}
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span><span style=color:#a6e22e>Dog</span>.<span style=color:#a6e22e>prototype</span>.<span style=color:#a6e22e>bark</span> <span style=color:#f92672>=</span> <span style=color:#66d9ef>function</span> () {
+</span></span><span style=display:flex><span>	<span style=color:#a6e22e>console</span>.<span style=color:#a6e22e>log</span>(<span style=color:#e6db74>`Woof I am </span><span style=color:#e6db74>${</span><span style=color:#66d9ef>this</span>.<span style=color:#a6e22e>name</span><span style=color:#e6db74>}</span><span style=color:#e6db74>`</span>);
+</span></span><span style=display:flex><span>};
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span><span style=color:#66d9ef>const</span> <span style=color:#a6e22e>pet</span> <span style=color:#f92672>=</span> <span style=color:#66d9ef>new</span> <span style=color:#a6e22e>Dog</span>(<span style=color:#e6db74>&#39;Mara&#39;</span>);
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span><span style=color:#a6e22e>pet</span>.<span style=color:#a6e22e>bark</span>();
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span><span style=color:#66d9ef>delete</span> <span style=color:#a6e22e>Dog</span>.<span style=color:#a6e22e>prototype</span>.<span style=color:#a6e22e>bark</span>;
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span><span style=color:#a6e22e>pet</span>.<span style=color:#a6e22e>bark</span>();
+</span></span></code></pre></div><h2 id=私有变量-es2020>私有变量 ES2020</h2><p>不能被外部访问</p><div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-javascript data-lang=javascript><span style=display:flex><span><span style=color:#66d9ef>class</span> <span style=color:#a6e22e>Counter</span> {
+</span></span><span style=display:flex><span>	<span style=color:#960050;background-color:#1e0010>#</span><span style=color:#a6e22e>number</span> <span style=color:#f92672>=</span> <span style=color:#ae81ff>10</span>
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span>	<span style=color:#a6e22e>increment</span>() {
+</span></span><span style=display:flex><span>		<span style=color:#66d9ef>this</span>.<span style=color:#960050;background-color:#1e0010>#</span><span style=color:#a6e22e>number</span><span style=color:#f92672>++</span>
+</span></span><span style=display:flex><span>	}
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span>	<span style=color:#a6e22e>getNum</span>() {
+</span></span><span style=display:flex><span>		<span style=color:#66d9ef>return</span> <span style=color:#66d9ef>this</span>.<span style=color:#960050;background-color:#1e0010>#</span><span style=color:#a6e22e>number</span>
+</span></span><span style=display:flex><span>	}
+</span></span><span style=display:flex><span>}
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span><span style=color:#66d9ef>const</span> <span style=color:#a6e22e>counter</span> <span style=color:#f92672>=</span> <span style=color:#66d9ef>new</span> <span style=color:#a6e22e>Counter</span>()
+</span></span><span style=display:flex><span><span style=color:#a6e22e>counter</span>.<span style=color:#a6e22e>increment</span>() <span style=color:#75715e>//SyntaxError
+</span></span></span><span style=display:flex><span><span style=color:#75715e></span>
+</span></span><span style=display:flex><span><span style=color:#a6e22e>console</span>.<span style=color:#a6e22e>log</span>(<span style=color:#a6e22e>counter</span>.<span style=color:#960050;background-color:#1e0010>#</span><span style=color:#a6e22e>number</span>)
+</span></span></code></pre></div><h3 id=继承>继承</h3><p>构造函数内 不能在使用super()之前使用this</p><div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-javascript data-lang=javascript><span style=display:flex><span>
+</span></span><span style=display:flex><span><span style=color:#66d9ef>class</span> <span style=color:#a6e22e>Dog</span> {
+</span></span><span style=display:flex><span>	<span style=color:#a6e22e>constructor</span>(<span style=color:#a6e22e>name</span>) {
+</span></span><span style=display:flex><span>		<span style=color:#66d9ef>this</span>.<span style=color:#a6e22e>name</span> <span style=color:#f92672>=</span> <span style=color:#a6e22e>name</span>;
+</span></span><span style=display:flex><span>	}
+</span></span><span style=display:flex><span>};
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span><span style=color:#66d9ef>class</span> <span style=color:#a6e22e>Labrador</span> <span style=color:#66d9ef>extends</span> <span style=color:#a6e22e>Dog</span> {
+</span></span><span style=display:flex><span>	<span style=color:#a6e22e>constructor</span>(<span style=color:#a6e22e>name</span>, <span style=color:#a6e22e>size</span>) {
+</span></span><span style=display:flex><span>		<span style=color:#66d9ef>super</span>(<span style=color:#a6e22e>name</span>);
+</span></span><span style=display:flex><span>		<span style=color:#66d9ef>this</span>.<span style=color:#a6e22e>size</span> <span style=color:#f92672>=</span> <span style=color:#a6e22e>size</span>;
+</span></span><span style=display:flex><span>	}
+</span></span><span style=display:flex><span>}
+</span></span></code></pre></div><p>执行super的时候才会执行father的构造函数</p><div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-javascript data-lang=javascript><span style=display:flex><span><span style=color:#66d9ef>class</span> <span style=color:#a6e22e>Bird</span> {
+</span></span><span style=display:flex><span>	<span style=color:#a6e22e>constructor</span>() {
+</span></span><span style=display:flex><span>		<span style=color:#a6e22e>console</span>.<span style=color:#a6e22e>log</span>(<span style=color:#e6db74>&#34;I&#39;m a bird. 🦢&#34;</span>);
+</span></span><span style=display:flex><span>	}
+</span></span><span style=display:flex><span>}
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span><span style=color:#66d9ef>class</span> <span style=color:#a6e22e>Flamingo</span> <span style=color:#66d9ef>extends</span> <span style=color:#a6e22e>Bird</span> {
+</span></span><span style=display:flex><span>	<span style=color:#a6e22e>constructor</span>() {
+</span></span><span style=display:flex><span>		<span style=color:#a6e22e>console</span>.<span style=color:#a6e22e>log</span>(<span style=color:#e6db74>&#34;I&#39;m pink. 🌸&#34;</span>);
+</span></span><span style=display:flex><span>		<span style=color:#66d9ef>super</span>();
+</span></span><span style=display:flex><span>	}
+</span></span><span style=display:flex><span>}
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span><span style=color:#66d9ef>const</span> <span style=color:#a6e22e>pet</span> <span style=color:#f92672>=</span> <span style=color:#66d9ef>new</span> <span style=color:#a6e22e>Flamingo</span>();
+</span></span></code></pre></div><h2 id=function实际上也是对象-可以往上挂属性>function实际上也是对象 可以往上挂属性</h2><div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-javascript data-lang=javascript><span style=display:flex><span>
+</span></span><span style=display:flex><span><span style=color:#66d9ef>function</span> <span style=color:#a6e22e>bark</span>() {
+</span></span><span style=display:flex><span>	<span style=color:#a6e22e>console</span>.<span style=color:#a6e22e>log</span>(<span style=color:#e6db74>&#39;Woof!&#39;</span>);
+</span></span><span style=display:flex><span>}
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span><span style=color:#a6e22e>bark</span>.<span style=color:#a6e22e>animal</span> <span style=color:#f92672>=</span> <span style=color:#e6db74>&#39;dog&#39;</span>;
+</span></span></code></pre></div><h2 id=关于new>关于new</h2><p>应挂到原型链上</p><div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-javascript data-lang=javascript><span style=display:flex><span><span style=color:#66d9ef>function</span> <span style=color:#a6e22e>Person</span>(<span style=color:#a6e22e>firstName</span>, <span style=color:#a6e22e>lastName</span>) {
+</span></span><span style=display:flex><span>	<span style=color:#66d9ef>this</span>.<span style=color:#a6e22e>firstName</span> <span style=color:#f92672>=</span> <span style=color:#a6e22e>firstName</span>;
+</span></span><span style=display:flex><span>	<span style=color:#66d9ef>this</span>.<span style=color:#a6e22e>lastName</span> <span style=color:#f92672>=</span> <span style=color:#a6e22e>lastName</span>;
+</span></span><span style=display:flex><span>}
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span><span style=color:#66d9ef>const</span> <span style=color:#a6e22e>member</span> <span style=color:#f92672>=</span> <span style=color:#66d9ef>new</span> <span style=color:#a6e22e>Person</span>(<span style=color:#e6db74>&#39;Lydia&#39;</span>, <span style=color:#e6db74>&#39;Hallie&#39;</span>);
+</span></span><span style=display:flex><span><span style=color:#a6e22e>Person</span>.<span style=color:#a6e22e>getFullName</span> <span style=color:#f92672>=</span> <span style=color:#66d9ef>function</span> () {
+</span></span><span style=display:flex><span>	<span style=color:#66d9ef>return</span> <span style=color:#e6db74>`</span><span style=color:#e6db74>${</span><span style=color:#66d9ef>this</span>.<span style=color:#a6e22e>firstName</span><span style=color:#e6db74>}</span><span style=color:#e6db74> </span><span style=color:#e6db74>${</span><span style=color:#66d9ef>this</span>.<span style=color:#a6e22e>lastName</span><span style=color:#e6db74>}</span><span style=color:#e6db74>`</span>;
+</span></span><span style=display:flex><span>};
+</span></span><span style=display:flex><span><span style=color:#75715e>// 此时的函数内部的this 指向windows
+</span></span></span><span style=display:flex><span><span style=color:#75715e></span><span style=color:#a6e22e>console</span>.<span style=color:#a6e22e>log</span>(<span style=color:#a6e22e>Person</span>.<span style=color:#a6e22e>getFullName</span>());
+</span></span><span style=display:flex><span><span style=color:#75715e>// undefined undefined
+</span></span></span><span style=display:flex><span><span style=color:#75715e></span>
+</span></span><span style=display:flex><span><span style=color:#75715e>// 使this指到member上并生成一个新函数
+</span></span></span><span style=display:flex><span><span style=color:#75715e></span><span style=color:#a6e22e>console</span>.<span style=color:#a6e22e>log</span>(<span style=color:#a6e22e>Person</span>.<span style=color:#a6e22e>getFullName</span>.<span style=color:#a6e22e>bind</span>(<span style=color:#a6e22e>member</span>)());
+</span></span><span style=display:flex><span><span style=color:#75715e>//Lydia Hallie
+</span></span></span><span style=display:flex><span><span style=color:#75715e></span><span style=color:#a6e22e>console</span>.<span style=color:#a6e22e>log</span>(<span style=color:#a6e22e>member</span>.<span style=color:#a6e22e>getFullName</span>());
+</span></span><span style=display:flex><span><span style=color:#75715e>//TypeError
+</span></span></span><span style=display:flex><span><span style=color:#75715e></span><span style=color:#a6e22e>Person</span>.<span style=color:#a6e22e>prototype</span>.<span style=color:#a6e22e>getFullName</span> <span style=color:#f92672>=</span> <span style=color:#66d9ef>function</span> () {
+</span></span><span style=display:flex><span>	<span style=color:#66d9ef>return</span> <span style=color:#e6db74>`</span><span style=color:#e6db74>${</span><span style=color:#66d9ef>this</span>.<span style=color:#a6e22e>firstName</span><span style=color:#e6db74>}</span><span style=color:#e6db74> </span><span style=color:#e6db74>${</span><span style=color:#66d9ef>this</span>.<span style=color:#a6e22e>lastName</span><span style=color:#e6db74>}</span><span style=color:#e6db74>`</span>;
+</span></span><span style=display:flex><span>};
+</span></span><span style=display:flex><span><span style=color:#a6e22e>console</span>.<span style=color:#a6e22e>log</span>(<span style=color:#a6e22e>member</span>.<span style=color:#a6e22e>getFullName</span>())
+</span></span><span style=display:flex><span><span style=color:#75715e>// Lydia Hallie
+</span></span></span><span style=display:flex><span><span style=color:#75715e>//### new 来的对象没有prototypes
+</span></span></span><span style=display:flex><span><span style=color:#75715e></span>
+</span></span><span style=display:flex><span><span style=color:#a6e22e>console</span>.<span style=color:#a6e22e>info</span>(<span style=color:#a6e22e>member</span>.<span style=color:#a6e22e>prototype</span>) <span style=color:#75715e>// undefined
+</span></span></span><span style=display:flex><span><span style=color:#75715e></span><span style=color:#a6e22e>console</span>.<span style=color:#a6e22e>info</span>(<span style=color:#a6e22e>Person</span>.<span style=color:#a6e22e>prototype</span>)
+</span></span><span style=display:flex><span><span style=color:#75715e>//getFullName: ƒ ()
+</span></span></span><span style=display:flex><span><span style=color:#75715e>//constructor: ƒ Person(firstName, lastName)
+</span></span></span></code></pre></div><h3 id=内置对象的原型链>内置对象的原型链</h3><div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-javascript data-lang=javascript><span style=display:flex><span>String.<span style=color:#a6e22e>prototype</span>.<span style=color:#a6e22e>giveLydiaPizza</span> <span style=color:#f92672>=</span> () =&gt; {
+</span></span><span style=display:flex><span>	<span style=color:#66d9ef>return</span> <span style=color:#e6db74>&#39;Just give Lydia pizza already!&#39;</span>;
+</span></span><span style=display:flex><span>};
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span><span style=color:#66d9ef>const</span> <span style=color:#a6e22e>name</span> <span style=color:#f92672>=</span> <span style=color:#e6db74>&#39;Lydia&#39;</span>;
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span><span style=color:#a6e22e>name</span>.<span style=color:#a6e22e>giveLydiaPizza</span>(); 
+</span></span></code></pre></div><h3 id=原型链>原型链</h3><p>常规function 是有prototype的、箭头函数则没有</p><div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-javascript data-lang=javascript><span style=display:flex><span><span style=color:#66d9ef>function</span> <span style=color:#a6e22e>giveLydiaPizza</span>() {
+</span></span><span style=display:flex><span>	<span style=color:#66d9ef>return</span> <span style=color:#e6db74>&#39;Here is pizza!&#39;</span>;
+</span></span><span style=display:flex><span>}
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span><span style=color:#66d9ef>const</span> <span style=color:#a6e22e>giveLydiaChocolate</span> <span style=color:#f92672>=</span> () =&gt;
+</span></span><span style=display:flex><span>	<span style=color:#e6db74>&#34;Here&#39;s chocolate... now go hit the gym already.&#34;</span>;
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span><span style=color:#a6e22e>console</span>.<span style=color:#a6e22e>log</span>(<span style=color:#a6e22e>giveLydiaPizza</span>.<span style=color:#a6e22e>prototype</span>);
+</span></span><span style=display:flex><span><span style=color:#a6e22e>console</span>.<span style=color:#a6e22e>log</span>(<span style=color:#a6e22e>giveLydiaChocolate</span>.<span style=color:#a6e22e>prototype</span>);
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span><span style=color:#75715e>// constructor: ...} undefined
+</span></span></span></code></pre></div><h3 id=关于有没有prototype>关于有没有prototype</h3><h2 id=bind--call>bind & call</h2><div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-javascript data-lang=javascript><span style=display:flex><span><span style=color:#66d9ef>const</span> <span style=color:#a6e22e>person</span> <span style=color:#f92672>=</span> { <span style=color:#a6e22e>name</span><span style=color:#f92672>:</span> <span style=color:#e6db74>&#39;Lydia&#39;</span> };
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span><span style=color:#66d9ef>function</span> <span style=color:#a6e22e>sayHi</span>(<span style=color:#a6e22e>age</span>) {
+</span></span><span style=display:flex><span>	<span style=color:#66d9ef>return</span> <span style=color:#e6db74>`</span><span style=color:#e6db74>${</span><span style=color:#66d9ef>this</span>.<span style=color:#a6e22e>name</span><span style=color:#e6db74>}</span><span style=color:#e6db74> is </span><span style=color:#e6db74>${</span><span style=color:#a6e22e>age</span><span style=color:#e6db74>}</span><span style=color:#e6db74>`</span>;
+</span></span><span style=display:flex><span>}
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span><span style=color:#a6e22e>console</span>.<span style=color:#a6e22e>log</span>(<span style=color:#a6e22e>sayHi</span>.<span style=color:#a6e22e>call</span>(<span style=color:#a6e22e>person</span>, <span style=color:#ae81ff>21</span>));
+</span></span><span style=display:flex><span><span style=color:#a6e22e>console</span>.<span style=color:#a6e22e>log</span>(<span style=color:#a6e22e>sayHi</span>.<span style=color:#a6e22e>bind</span>(<span style=color:#a6e22e>person</span>, <span style=color:#ae81ff>21</span>));
+</span></span></code></pre></div><h2 id=模版字符串>模版字符串</h2><div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-javascript data-lang=javascript><span style=display:flex><span><span style=color:#66d9ef>function</span> <span style=color:#a6e22e>getPersonInfo</span>(<span style=color:#a6e22e>one</span>, <span style=color:#a6e22e>two</span>, <span style=color:#a6e22e>three</span>) {
+</span></span><span style=display:flex><span>	<span style=color:#a6e22e>console</span>.<span style=color:#a6e22e>log</span>(<span style=color:#a6e22e>one</span>);
+</span></span><span style=display:flex><span>	<span style=color:#a6e22e>console</span>.<span style=color:#a6e22e>log</span>(<span style=color:#a6e22e>two</span>);
+</span></span><span style=display:flex><span>	<span style=color:#a6e22e>console</span>.<span style=color:#a6e22e>log</span>(<span style=color:#a6e22e>three</span>);
+</span></span><span style=display:flex><span>}
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span><span style=color:#66d9ef>const</span> <span style=color:#a6e22e>person</span> <span style=color:#f92672>=</span> <span style=color:#e6db74>&#39;Lydia&#39;</span>;
+</span></span><span style=display:flex><span><span style=color:#66d9ef>const</span> <span style=color:#a6e22e>age</span> <span style=color:#f92672>=</span> <span style=color:#ae81ff>21</span>;
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span><span style=color:#a6e22e>getPersonInfo</span><span style=color:#e6db74>`</span><span style=color:#e6db74>${</span><span style=color:#a6e22e>person</span><span style=color:#e6db74>}</span><span style=color:#e6db74> is </span><span style=color:#e6db74>${</span><span style=color:#a6e22e>age</span><span style=color:#e6db74>}</span><span style=color:#e6db74> years old`</span>;
+</span></span><span style=display:flex><span><span style=color:#75715e>//[&#34;&#34;, &#34; is &#34;, &#34; years old&#34;] &#34;Lydia&#34; 21
+</span></span></span></code></pre></div><p>立即执行函数</p><div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-javascript data-lang=javascript><span style=display:flex><span><span style=color:#a6e22e>console</span>.<span style=color:#a6e22e>log</span>(<span style=color:#e6db74>`</span><span style=color:#e6db74>${</span>(<span style=color:#a6e22e>x</span> =&gt; <span style=color:#a6e22e>x</span>)(<span style=color:#e6db74>&#39;I love&#39;</span>)<span style=color:#e6db74>}</span><span style=color:#e6db74> to program`</span>);
+</span></span><span style=display:flex><span><span style=color:#75715e>//I love to program
+</span></span></span></code></pre></div><h2 id=eval>eval</h2><p>Content Security Policy directive: &ldquo;script-src xxx&rdquo;.</p><div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-javascript data-lang=javascript><span style=display:flex><span><span style=color:#66d9ef>const</span> <span style=color:#a6e22e>sum</span> <span style=color:#f92672>=</span> eval(<span style=color:#e6db74>&#39;10*10+5&#39;</span>);
+</span></span><span style=display:flex><span><span style=color:#75715e>//105
+</span></span></span></code></pre></div><h2 id=storage>storage</h2><div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-javascript data-lang=javascript><span style=display:flex><span>
+</span></span><span style=display:flex><span><span style=color:#a6e22e>sessionStorage</span>.<span style=color:#a6e22e>setItem</span>(<span style=color:#e6db74>&#39;cool_secret&#39;</span>, <span style=color:#ae81ff>123</span>);
+</span></span><span style=display:flex><span><span style=color:#a6e22e>关闭tab后被移除</span>
+</span></span></code></pre></div><h2 id=object-的key>object 的key</h2><div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-javascript data-lang=javascript><span style=display:flex><span><span style=color:#66d9ef>const</span> <span style=color:#a6e22e>obj</span> <span style=color:#f92672>=</span> { <span style=color:#ae81ff>1</span><span style=color:#f92672>:</span> <span style=color:#e6db74>&#39;a&#39;</span>, <span style=color:#ae81ff>2</span><span style=color:#f92672>:</span> <span style=color:#e6db74>&#39;b&#39;</span>, <span style=color:#ae81ff>3</span><span style=color:#f92672>:</span> <span style=color:#e6db74>&#39;c&#39;</span> };
+</span></span><span style=display:flex><span><span style=color:#66d9ef>const</span> <span style=color:#a6e22e>set</span> <span style=color:#f92672>=</span> <span style=color:#66d9ef>new</span> <span style=color:#a6e22e>Set</span>([<span style=color:#ae81ff>1</span>, <span style=color:#ae81ff>2</span>, <span style=color:#ae81ff>3</span>, <span style=color:#ae81ff>4</span>, <span style=color:#ae81ff>5</span>]);
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span><span style=color:#a6e22e>obj</span>.<span style=color:#a6e22e>hasOwnProperty</span>(<span style=color:#e6db74>&#39;1&#39;</span>);
+</span></span><span style=display:flex><span><span style=color:#a6e22e>obj</span>.<span style=color:#a6e22e>hasOwnProperty</span>(<span style=color:#ae81ff>1</span>);
+</span></span><span style=display:flex><span><span style=color:#a6e22e>set</span>.<span style=color:#a6e22e>has</span>(<span style=color:#e6db74>&#39;1&#39;</span>);
+</span></span><span style=display:flex><span><span style=color:#a6e22e>set</span>.<span style=color:#a6e22e>has</span>(<span style=color:#ae81ff>1</span>);
+</span></span><span style=display:flex><span><span style=color:#75715e>//true true false true
+</span></span></span></code></pre></div><h2 id=全局执行的function-拥有global对象和this-keyword>全局执行的function 拥有global对象和"this" keyword</h2><h2 id=boolean>Boolean</h2><div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-javascript data-lang=javascript><span style=display:flex><span><span style=color:#66d9ef>new</span> Boolean(<span style=color:#66d9ef>false</span>) <span style=color:#f92672>?</span> <span style=color:#a6e22e>console</span>.<span style=color:#a6e22e>log</span>(<span style=color:#ae81ff>1</span>) <span style=color:#f92672>:</span> <span style=color:#a6e22e>console</span>.<span style=color:#a6e22e>log</span>(<span style=color:#ae81ff>2</span>)
+</span></span><span style=display:flex><span><span style=color:#75715e>// 1
+</span></span></span></code></pre></div><h2 id=array>array</h2><h3 id=定义>定义</h3><div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-javascript data-lang=javascript><span style=display:flex><span><span style=color:#66d9ef>const</span> <span style=color:#a6e22e>list</span> <span style=color:#f92672>=</span> [<span style=color:#ae81ff>1</span> <span style=color:#f92672>+</span> <span style=color:#ae81ff>2</span>, <span style=color:#ae81ff>1</span> <span style=color:#f92672>*</span> <span style=color:#ae81ff>2</span>, <span style=color:#ae81ff>1</span> <span style=color:#f92672>/</span> <span style=color:#ae81ff>2</span>];
+</span></span><span style=display:flex><span><span style=color:#a6e22e>console</span>.<span style=color:#a6e22e>log</span>(<span style=color:#a6e22e>list</span>);
+</span></span><span style=display:flex><span><span style=color:#75715e>// [3, 2, 0.5]
+</span></span></span></code></pre></div><h3 id=reduce>reduce</h3><div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-javascript data-lang=javascript><span style=display:flex><span>[[<span style=color:#ae81ff>0</span>, <span style=color:#ae81ff>1</span>], [<span style=color:#ae81ff>2</span>, <span style=color:#ae81ff>3</span>]].<span style=color:#a6e22e>reduce</span>(
+</span></span><span style=display:flex><span>	(<span style=color:#a6e22e>acc</span>, <span style=color:#a6e22e>cur</span>) =&gt; {
+</span></span><span style=display:flex><span>		<span style=color:#66d9ef>return</span> <span style=color:#a6e22e>acc</span>.<span style=color:#a6e22e>concat</span>(<span style=color:#a6e22e>cur</span>);
+</span></span><span style=display:flex><span>	},
+</span></span><span style=display:flex><span>	[<span style=color:#ae81ff>1</span>, <span style=color:#ae81ff>2</span>],
+</span></span><span style=display:flex><span>);
+</span></span><span style=display:flex><span><span style=color:#75715e>//[1, 2, 0, 1, 2, 3]
+</span></span></span></code></pre></div><h3 id=push>push</h3><p>array.push()的返回值是当前数组长度</p><h2 id=setinterval>setInterval</h2><p>setInterval/setTimeout会返回一个唯一的id [number]</p><div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-javascript data-lang=javascript><span style=display:flex><span>
+</span></span><span style=display:flex><span><span style=color:#a6e22e>setInterval</span>(() =&gt; <span style=color:#a6e22e>console</span>.<span style=color:#a6e22e>log</span>(<span style=color:#e6db74>&#39;Hi&#39;</span>), <span style=color:#ae81ff>1000</span>);
+</span></span><span style=display:flex><span><span style=color:#75715e>// 169
+</span></span></span><span style=display:flex><span><span style=color:#75715e></span><span style=color:#a6e22e>clearInterval</span>(<span style=color:#ae81ff>169</span>)
+</span></span><span style=display:flex><span><span style=color:#75715e>// Interval会停下来
+</span></span></span></code></pre></div><p>另一种调用方式</p><div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-javascript data-lang=javascript><span style=display:flex><span><span style=color:#a6e22e>setTimeout</span>(<span style=color:#a6e22e>console</span>.<span style=color:#a6e22e>log</span>, <span style=color:#ae81ff>100</span>, <span style=color:#e6db74>&#39;two&#39;</span>);
+</span></span><span style=display:flex><span><span style=color:#75715e>// two
+</span></span></span></code></pre></div><h2 id=generator>generator</h2><div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-javascript data-lang=javascript><span style=display:flex><span><span style=color:#66d9ef>function</span><span style=color:#f92672>*</span> <span style=color:#a6e22e>generator</span>(<span style=color:#a6e22e>i</span>) {
+</span></span><span style=display:flex><span>	<span style=color:#66d9ef>yield</span> <span style=color:#a6e22e>i</span>;
+</span></span><span style=display:flex><span>	<span style=color:#66d9ef>yield</span> <span style=color:#a6e22e>i</span> <span style=color:#f92672>*</span> <span style=color:#ae81ff>2</span>;
+</span></span><span style=display:flex><span>}
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span><span style=color:#66d9ef>const</span> <span style=color:#a6e22e>gen</span> <span style=color:#f92672>=</span> <span style=color:#a6e22e>generator</span>(<span style=color:#ae81ff>10</span>);
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span><span style=color:#a6e22e>console</span>.<span style=color:#a6e22e>log</span>(<span style=color:#a6e22e>gen</span>.<span style=color:#a6e22e>next</span>().<span style=color:#a6e22e>value</span>);
+</span></span><span style=display:flex><span><span style=color:#a6e22e>console</span>.<span style=color:#a6e22e>log</span>(<span style=color:#a6e22e>gen</span>.<span style=color:#a6e22e>next</span>().<span style=color:#a6e22e>value</span>);
+</span></span><span style=display:flex><span><span style=color:#75715e>// 10 20
+</span></span></span></code></pre></div><h2 id=关于指针浅拷贝深拷贝>关于指针/浅拷贝/深拷贝</h2><p>原本 person=>
 members[0]=>
 都指向[{ name: &ldquo;Lydia&rdquo; }]
-然后person指向了null; 但是member的指向没变</p>
-<div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-javascript data-lang=javascript>
-<span style=color:#66d9ef>let</span> <span style=color:#a6e22e>person</span> <span style=color:#f92672>=</span> { <span style=color:#a6e22e>name</span><span style=color:#f92672>:</span> <span style=color:#e6db74>&#39;Lydia&#39;</span> };
-<span style=color:#66d9ef>const</span> <span style=color:#a6e22e>members</span> <span style=color:#f92672>=</span> [<span style=color:#a6e22e>person</span>];
-<span style=color:#a6e22e>person</span> <span style=color:#f92672>=</span> <span style=color:#66d9ef>null</span>;
-
-<span style=color:#a6e22e>console</span>.<span style=color:#a6e22e>log</span>(<span style=color:#a6e22e>members</span>);
-[{ <span style=color:#a6e22e>name</span><span style=color:#f92672>:</span> <span style=color:#e6db74>&#34;Lydia&#34;</span> }]
-</code></pre></div><h3 id=objectassign>Object.assign()</h3>
-<p>返回值和第一个参数指向一样</p>
-<div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-javascript data-lang=javascript><span style=color:#66d9ef>const</span> <span style=color:#a6e22e>user</span> <span style=color:#f92672>=</span> {
-	<span style=color:#a6e22e>email</span><span style=color:#f92672>:</span> <span style=color:#e6db74>&#34;e@mail.com&#34;</span>,
-	<span style=color:#a6e22e>password</span><span style=color:#f92672>:</span> <span style=color:#e6db74>&#34;12345&#34;</span>
-}
-
-<span style=color:#66d9ef>const</span> <span style=color:#a6e22e>updateUser</span> <span style=color:#f92672>=</span> ({ <span style=color:#a6e22e>email</span>, <span style=color:#a6e22e>password</span> }) =&gt; {
-	<span style=color:#66d9ef>if</span> (<span style=color:#a6e22e>email</span>) {
-		Object.<span style=color:#a6e22e>assign</span>(<span style=color:#a6e22e>user</span>, { <span style=color:#a6e22e>email</span> })
-	}
-
-	<span style=color:#66d9ef>if</span> (<span style=color:#a6e22e>password</span>) {
-		<span style=color:#a6e22e>user</span>.<span style=color:#a6e22e>password</span> <span style=color:#f92672>=</span> <span style=color:#a6e22e>password</span>
-	}
-
-	<span style=color:#66d9ef>return</span> <span style=color:#a6e22e>user</span>
-}
-
-<span style=color:#66d9ef>const</span> <span style=color:#a6e22e>updatedUser</span> <span style=color:#f92672>=</span> <span style=color:#a6e22e>updateUser</span>({ <span style=color:#a6e22e>email</span><span style=color:#f92672>:</span> <span style=color:#e6db74>&#34;new@email.com&#34;</span> })
-
-<span style=color:#a6e22e>console</span>.<span style=color:#a6e22e>log</span>(<span style=color:#a6e22e>updatedUser</span> <span style=color:#f92672>===</span> <span style=color:#a6e22e>user</span>)
-<span style=color:#75715e>//true
-</span></code></pre></div><p>Object.seal()的话就不能被assign()</p>
-<h2 id=遍历>遍历</h2>
-<div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-javascript data-lang=javascript>
-<span style=color:#66d9ef>const</span> <span style=color:#a6e22e>myLifeSummedUp</span> <span style=color:#f92672>=</span> [<span style=color:#e6db74>&#39;☕&#39;</span>, <span style=color:#e6db74>&#39;💻&#39;</span>, <span style=color:#e6db74>&#39;🍷&#39;</span>, <span style=color:#e6db74>&#39;🍫&#39;</span>];
-
-<span style=color:#66d9ef>for</span> (<span style=color:#66d9ef>let</span> <span style=color:#a6e22e>item</span> <span style=color:#66d9ef>in</span> <span style=color:#a6e22e>myLifeSummedUp</span>) {
-	<span style=color:#a6e22e>console</span>.<span style=color:#a6e22e>log</span>(<span style=color:#a6e22e>item</span>);
-}
-
-<span style=color:#66d9ef>for</span> (<span style=color:#66d9ef>let</span> <span style=color:#a6e22e>item</span> <span style=color:#66d9ef>of</span> <span style=color:#a6e22e>myLifeSummedUp</span>) {
-	<span style=color:#a6e22e>console</span>.<span style=color:#a6e22e>log</span>(<span style=color:#a6e22e>item</span>);
-}
-<span style=color:#75715e>//0 1 2 3 and &#34;☕&#34; &#34;💻&#34; &#34;🍷&#34; &#34;🍫&#34;
-</span></code></pre></div><h2 id=set>set</h2>
-<div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-javascript data-lang=javascript><span style=color:#66d9ef>const</span> <span style=color:#a6e22e>set</span> <span style=color:#f92672>=</span> <span style=color:#66d9ef>new</span> <span style=color:#a6e22e>Set</span>([<span style=color:#ae81ff>1</span>, <span style=color:#ae81ff>1</span>, <span style=color:#ae81ff>2</span>, <span style=color:#ae81ff>3</span>, <span style=color:#ae81ff>4</span>]);
-
-<span style=color:#a6e22e>console</span>.<span style=color:#a6e22e>log</span>(<span style=color:#a6e22e>set</span>);
-<span style=color:#75715e>// {1, 2, 3, 4}
-</span></code></pre></div><h2 id=模块化>模块化</h2>
-<h3 id=es6>es6</h3>
-<p>导入的模块是只读的：不能修改导入的模块。只有导出它们的模块才能更改其值。 当我们试图增加myCounter的值时，它会抛出一个错误：myCounter是只读的，不能修改。</p>
-<div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-javascript data-lang=javascript><span style=color:#75715e>// counter.js
-</span><span style=color:#75715e></span><span style=color:#66d9ef>let</span> <span style=color:#a6e22e>counter</span> <span style=color:#f92672>=</span> <span style=color:#ae81ff>10</span>;
-<span style=color:#66d9ef>export</span> <span style=color:#66d9ef>default</span> <span style=color:#a6e22e>counter</span>;
-<span style=color:#75715e>// index.js
-</span><span style=color:#75715e></span><span style=color:#66d9ef>import</span> <span style=color:#a6e22e>myCounter</span> <span style=color:#a6e22e>from</span> <span style=color:#e6db74>&#39;./counter&#39;</span>;
-
-<span style=color:#a6e22e>myCounter</span> <span style=color:#f92672>+=</span> <span style=color:#ae81ff>1</span>;
-
-<span style=color:#a6e22e>console</span>.<span style=color:#a6e22e>log</span>(<span style=color:#a6e22e>myCounter</span>);
-
-<span style=color:#75715e>//Error
-</span></code></pre></div><p>执行顺序问题 会预分析引入的模块，所以会先执行引入的模块</p>
-<div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-javascript data-lang=javascript><span style=color:#75715e>// index.js
-</span><span style=color:#75715e></span><span style=color:#a6e22e>console</span>.<span style=color:#a6e22e>log</span>(<span style=color:#e6db74>&#39;running index.js&#39;</span>);
-<span style=color:#66d9ef>import</span> { <span style=color:#a6e22e>sum</span> } <span style=color:#a6e22e>from</span> <span style=color:#e6db74>&#39;./sum.js&#39;</span>;
-
-<span style=color:#a6e22e>console</span>.<span style=color:#a6e22e>log</span>(<span style=color:#a6e22e>sum</span>(<span style=color:#ae81ff>1</span>, <span style=color:#ae81ff>2</span>));
-
-<span style=color:#75715e>// sum.js
-</span><span style=color:#75715e></span><span style=color:#a6e22e>console</span>.<span style=color:#a6e22e>log</span>(<span style=color:#e6db74>&#39;running sum.js&#39;</span>);
-<span style=color:#66d9ef>export</span> <span style=color:#66d9ef>const</span> <span style=color:#a6e22e>sum</span> <span style=color:#f92672>=</span> (<span style=color:#a6e22e>a</span>, <span style=color:#a6e22e>b</span>) =&gt; <span style=color:#a6e22e>a</span> <span style=color:#f92672>+</span> <span style=color:#a6e22e>b</span>;
-</code></pre></div><h3 id=export>export</h3>
-<div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-javascript data-lang=javascript><span style=color:#75715e>// module.js
-</span><span style=color:#75715e></span><span style=color:#66d9ef>export</span> <span style=color:#66d9ef>default</span> () =&gt; <span style=color:#e6db74>&#39;Hello world&#39;</span>;
-<span style=color:#66d9ef>export</span> <span style=color:#66d9ef>const</span> <span style=color:#a6e22e>name</span> <span style=color:#f92672>=</span> <span style=color:#e6db74>&#39;Lydia&#39;</span>;
-
-<span style=color:#75715e>// index.js
-</span><span style=color:#75715e></span><span style=color:#66d9ef>import</span> <span style=color:#f92672>*</span> <span style=color:#a6e22e>as</span> <span style=color:#a6e22e>data</span> <span style=color:#a6e22e>from</span> <span style=color:#e6db74>&#39;./module&#39;</span>;
-
-<span style=color:#a6e22e>console</span>.<span style=color:#a6e22e>log</span>(<span style=color:#a6e22e>data</span>);
-<span style=color:#75715e>// { default: function default(), name: &#34;Lydia&#34; }
-</span></code></pre></div><p>sum.default(4)</p>
-<div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-javascript data-lang=javascript><span style=color:#66d9ef>export</span> <span style=color:#66d9ef>default</span> <span style=color:#66d9ef>function</span> <span style=color:#a6e22e>sum</span>(<span style=color:#a6e22e>x</span>) {
-	<span style=color:#66d9ef>return</span> <span style=color:#a6e22e>x</span> <span style=color:#f92672>+</span> <span style=color:#a6e22e>x</span>;
-}
-
-<span style=color:#75715e>// index.js
-</span><span style=color:#75715e></span><span style=color:#66d9ef>import</span> <span style=color:#f92672>*</span> <span style=color:#a6e22e>as</span> <span style=color:#a6e22e>sum</span> <span style=color:#a6e22e>from</span> <span style=color:#e6db74>&#39;./sum&#39;</span>;
-<span style=color:#75715e>//sum.default(4)
-</span></code></pre></div><h2 id=delete>delete</h2>
-<div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-javascript data-lang=javascript>
-<span style=color:#66d9ef>const</span> <span style=color:#a6e22e>name</span> <span style=color:#f92672>=</span> <span style=color:#e6db74>&#39;Lydia&#39;</span>;
-<span style=color:#a6e22e>age</span> <span style=color:#f92672>=</span> <span style=color:#ae81ff>21</span>;
-
-<span style=color:#a6e22e>console</span>.<span style=color:#a6e22e>log</span>(<span style=color:#66d9ef>delete</span> <span style=color:#a6e22e>name</span>); <span style=color:#75715e>// false
-</span><span style=color:#75715e></span><span style=color:#a6e22e>console</span>.<span style=color:#a6e22e>log</span>(<span style=color:#66d9ef>delete</span> <span style=color:#a6e22e>age</span>); <span style=color:#75715e>// true
-</span></code></pre></div><h2 id=jsonstringify>JSON.stringify</h2>
-<p>可以只选取部分属性</p>
-<div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-javascript data-lang=javascript><span style=color:#66d9ef>const</span> <span style=color:#a6e22e>settings</span> <span style=color:#f92672>=</span> {
-	<span style=color:#a6e22e>username</span><span style=color:#f92672>:</span> <span style=color:#e6db74>&#39;lydiahallie&#39;</span>,
-	<span style=color:#a6e22e>level</span><span style=color:#f92672>:</span> <span style=color:#ae81ff>19</span>,
-	<span style=color:#a6e22e>health</span><span style=color:#f92672>:</span> <span style=color:#ae81ff>90</span>,
-};
-
-<span style=color:#66d9ef>const</span> <span style=color:#a6e22e>data</span> <span style=color:#f92672>=</span> <span style=color:#a6e22e>JSON</span>.<span style=color:#a6e22e>stringify</span>(<span style=color:#a6e22e>settings</span>, [<span style=color:#e6db74>&#39;level&#39;</span>, <span style=color:#e6db74>&#39;health&#39;</span>]);
-<span style=color:#a6e22e>console</span>.<span style=color:#a6e22e>log</span>(<span style=color:#a6e22e>data</span>);
-<span style=color:#75715e>//&#34;{&#34;level&#34;:19, &#34;health&#34;:90}&#34;
-</span></code></pre></div><h2 id=promise--async>promise & async</h2>
-<p>async返回的总是promise类型 pending是鹦鹉 Promise.resolve还没有被调用； 当data.then(res=>console.log(res));</p>
-<div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-javascript data-lang=javascript><span style=color:#66d9ef>async</span> <span style=color:#66d9ef>function</span> <span style=color:#a6e22e>getData</span>() {
-	<span style=color:#66d9ef>return</span> <span style=color:#66d9ef>await</span> Promise.<span style=color:#a6e22e>resolve</span>(<span style=color:#e6db74>&#39;I made it!&#39;</span>);
-}
-
-<span style=color:#66d9ef>const</span> <span style=color:#a6e22e>data</span> <span style=color:#f92672>=</span> <span style=color:#a6e22e>getData</span>();
-<span style=color:#a6e22e>console</span>.<span style=color:#a6e22e>log</span>(<span style=color:#a6e22e>data</span>);
-<span style=color:#75715e>//Promise {&lt;pending&gt;}
-</span><span style=color:#75715e></span><span style=color:#a6e22e>console</span>.<span style=color:#a6e22e>info</span>(<span style=color:#a6e22e>data</span>.<span style=color:#a6e22e>then</span>(<span style=color:#a6e22e>item</span> =&gt; {
-	<span style=color:#a6e22e>console</span>.<span style=color:#a6e22e>info</span>(<span style=color:#a6e22e>item</span>);
-	<span style=color:#a6e22e>console</span>.<span style=color:#a6e22e>log</span>(<span style=color:#a6e22e>data</span>);
-}))
-<span style=color:#75715e>// I made it!
-</span><span style=color:#75715e>// Promise {&lt;fulfilled&gt;: &#34;I made it!&#34;}
-</span></code></pre></div><h3 id=promise的状态>promise的状态</h3>
-<div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-javascript data-lang=javascript><span style=color:#75715e>// TODO promise 的几个状态
-</span></code></pre></div><h2 id=pure-function>pure function</h2>
-<p>如果传递相同的参数，则纯函数是始终返回相同结果的函数。</p>
-<h2 id=symbol>symbol</h2>
-<p>symbol是不可被枚举的、freeze的</p>
-<div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-javascript data-lang=javascript><span style=color:#66d9ef>const</span> <span style=color:#a6e22e>info</span> <span style=color:#f92672>=</span> {
-	[<span style=color:#a6e22e>Symbol</span>(<span style=color:#e6db74>&#39;a&#39;</span>)]<span style=color:#f92672>:</span> <span style=color:#e6db74>&#39;b&#39;</span>,
-};
-
-<span style=color:#a6e22e>console</span>.<span style=color:#a6e22e>log</span>(<span style=color:#a6e22e>info</span>);
-<span style=color:#a6e22e>console</span>.<span style=color:#a6e22e>log</span>(Object.<span style=color:#a6e22e>keys</span>(<span style=color:#a6e22e>info</span>));
-</code></pre></div><h2 id=默认值>默认值</h2>
-<p>参数上也会声明一个变量，被后面的参数所使用</p>
-<div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-javascript data-lang=javascript><span style=color:#66d9ef>const</span> <span style=color:#a6e22e>add</span> <span style=color:#f92672>=</span> <span style=color:#a6e22e>x</span> =&gt; <span style=color:#a6e22e>x</span> <span style=color:#f92672>+</span> <span style=color:#a6e22e>x</span>;
-
-<span style=color:#66d9ef>function</span> <span style=color:#a6e22e>myFunc</span>(<span style=color:#a6e22e>num</span> <span style=color:#f92672>=</span> <span style=color:#ae81ff>2</span>, <span style=color:#a6e22e>value</span> <span style=color:#f92672>=</span> <span style=color:#a6e22e>add</span>(<span style=color:#a6e22e>num</span>)) {
-	<span style=color:#a6e22e>console</span>.<span style=color:#a6e22e>log</span>(<span style=color:#a6e22e>num</span>, <span style=color:#a6e22e>value</span>);
-}
-
-<span style=color:#a6e22e>myFunc</span>();
-<span style=color:#a6e22e>myFunc</span>(<span style=color:#ae81ff>3</span>);
-</code></pre></div><h2 id=如何使object-可以迭代-iterable>如何使Object 可以迭代 iterable</h2>
-<div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-javascript data-lang=javascript><span style=color:#66d9ef>const</span> <span style=color:#a6e22e>person</span> <span style=color:#f92672>=</span> {
-	<span style=color:#a6e22e>name</span><span style=color:#f92672>:</span> <span style=color:#e6db74>&#34;Lydia Hallie&#34;</span>,
-	<span style=color:#a6e22e>age</span><span style=color:#f92672>:</span> <span style=color:#ae81ff>21</span>,
-	<span style=color:#75715e>// 实际是添加一个匿名generator函数,每次调用返回value 然后自动next();
-</span><span style=color:#75715e></span>	<span style=color:#75715e>// 所以可遍历了
-</span><span style=color:#75715e></span>	<span style=color:#f92672>*</span> [<span style=color:#a6e22e>Symbol</span>.<span style=color:#a6e22e>iterator</span>]() {
-		<span style=color:#66d9ef>yield</span><span style=color:#f92672>*</span> Object.<span style=color:#a6e22e>values</span>(<span style=color:#66d9ef>this</span>)
-	}
-}
-<span style=color:#a6e22e>console</span>.<span style=color:#a6e22e>log</span>([...<span style=color:#a6e22e>person</span>])
-</code></pre></div><h2 id=objectfromentries-array--object>Object.fromEntries [array => object]</h2>
-<div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-javascript data-lang=javascript>Object.<span style=color:#a6e22e>fromEntries</span>([[<span style=color:#e6db74>&#39;key1&#39;</span>, <span style=color:#e6db74>&#39;v1&#39;</span>], [<span style=color:#e6db74>&#39;key3&#39;</span>, <span style=color:#e6db74>&#39;v2&#39;</span>]],)
-<span style=color:#75715e>// {key1: &#34;v1&#34;, key3: &#34;v2&#34;}
-</span></code></pre></div><h2 id=if条件的执行顺序>if条件的执行顺序</h2>
-<p>先执行typeof randomValue > number</p>
-<p>!number = false</p>
-<p>false ===string false</p>
-<div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-javascript data-lang=javascript><span style=color:#66d9ef>let</span> <span style=color:#a6e22e>randomValue</span> <span style=color:#f92672>=</span> { <span style=color:#a6e22e>name</span><span style=color:#f92672>:</span> <span style=color:#e6db74>&#34;Lydia&#34;</span> }
-<span style=color:#a6e22e>randomValue</span> <span style=color:#f92672>=</span> <span style=color:#ae81ff>23</span>
-
-<span style=color:#66d9ef>if</span> (<span style=color:#f92672>!</span><span style=color:#66d9ef>typeof</span> <span style=color:#a6e22e>randomValue</span> <span style=color:#f92672>===</span> <span style=color:#e6db74>&#34;string&#34;</span>) {
-	<span style=color:#a6e22e>console</span>.<span style=color:#a6e22e>log</span>(<span style=color:#e6db74>&#34;It&#39;s not a string!&#34;</span>)
-} <span style=color:#66d9ef>else</span> {
-	<span style=color:#a6e22e>console</span>.<span style=color:#a6e22e>log</span>(<span style=color:#e6db74>&#34;Yay it&#39;s a string!&#34;</span>)
-}
-</code></pre></div>
-</div>
-<h1 class="text-3xl my-12">留下你的脚印 👣 </h1>
-<div id=disqus_thread>
-</div>
-<script type=text/javascript>(function(){var a,b;if(window.location.hostname=="localhost")return;a=document.createElement('script'),a.type='text/javascript',a.async=!0,b='visionary',a.src='//'+b+'.disqus.com/embed.js',(document.getElementsByTagName('head')[0]||document.getElementsByTagName('body')[0]).appendChild(a)})()</script>
-<noscript>Please enable JavaScript to view the <a href=https://disqus.com/?ref_noscript>comments powered by Disqus.</a></noscript>
-</article>
-</main><footer class="w-full text-center p-4 text-xs text-gray-400">
+然后person指向了null; 但是member的指向没变</p><div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-javascript data-lang=javascript><span style=display:flex><span>
+</span></span><span style=display:flex><span><span style=color:#66d9ef>let</span> <span style=color:#a6e22e>person</span> <span style=color:#f92672>=</span> { <span style=color:#a6e22e>name</span><span style=color:#f92672>:</span> <span style=color:#e6db74>&#39;Lydia&#39;</span> };
+</span></span><span style=display:flex><span><span style=color:#66d9ef>const</span> <span style=color:#a6e22e>members</span> <span style=color:#f92672>=</span> [<span style=color:#a6e22e>person</span>];
+</span></span><span style=display:flex><span><span style=color:#a6e22e>person</span> <span style=color:#f92672>=</span> <span style=color:#66d9ef>null</span>;
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span><span style=color:#a6e22e>console</span>.<span style=color:#a6e22e>log</span>(<span style=color:#a6e22e>members</span>);
+</span></span><span style=display:flex><span>[{ <span style=color:#a6e22e>name</span><span style=color:#f92672>:</span> <span style=color:#e6db74>&#34;Lydia&#34;</span> }]
+</span></span></code></pre></div><h3 id=objectassign>Object.assign()</h3><p>返回值和第一个参数指向一样</p><div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-javascript data-lang=javascript><span style=display:flex><span><span style=color:#66d9ef>const</span> <span style=color:#a6e22e>user</span> <span style=color:#f92672>=</span> {
+</span></span><span style=display:flex><span>	<span style=color:#a6e22e>email</span><span style=color:#f92672>:</span> <span style=color:#e6db74>&#34;e@mail.com&#34;</span>,
+</span></span><span style=display:flex><span>	<span style=color:#a6e22e>password</span><span style=color:#f92672>:</span> <span style=color:#e6db74>&#34;12345&#34;</span>
+</span></span><span style=display:flex><span>}
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span><span style=color:#66d9ef>const</span> <span style=color:#a6e22e>updateUser</span> <span style=color:#f92672>=</span> ({ <span style=color:#a6e22e>email</span>, <span style=color:#a6e22e>password</span> }) =&gt; {
+</span></span><span style=display:flex><span>	<span style=color:#66d9ef>if</span> (<span style=color:#a6e22e>email</span>) {
+</span></span><span style=display:flex><span>		Object.<span style=color:#a6e22e>assign</span>(<span style=color:#a6e22e>user</span>, { <span style=color:#a6e22e>email</span> })
+</span></span><span style=display:flex><span>	}
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span>	<span style=color:#66d9ef>if</span> (<span style=color:#a6e22e>password</span>) {
+</span></span><span style=display:flex><span>		<span style=color:#a6e22e>user</span>.<span style=color:#a6e22e>password</span> <span style=color:#f92672>=</span> <span style=color:#a6e22e>password</span>
+</span></span><span style=display:flex><span>	}
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span>	<span style=color:#66d9ef>return</span> <span style=color:#a6e22e>user</span>
+</span></span><span style=display:flex><span>}
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span><span style=color:#66d9ef>const</span> <span style=color:#a6e22e>updatedUser</span> <span style=color:#f92672>=</span> <span style=color:#a6e22e>updateUser</span>({ <span style=color:#a6e22e>email</span><span style=color:#f92672>:</span> <span style=color:#e6db74>&#34;new@email.com&#34;</span> })
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span><span style=color:#a6e22e>console</span>.<span style=color:#a6e22e>log</span>(<span style=color:#a6e22e>updatedUser</span> <span style=color:#f92672>===</span> <span style=color:#a6e22e>user</span>)
+</span></span><span style=display:flex><span><span style=color:#75715e>//true
+</span></span></span></code></pre></div><p>Object.seal()的话就不能被assign()</p><h2 id=遍历>遍历</h2><div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-javascript data-lang=javascript><span style=display:flex><span>
+</span></span><span style=display:flex><span><span style=color:#66d9ef>const</span> <span style=color:#a6e22e>myLifeSummedUp</span> <span style=color:#f92672>=</span> [<span style=color:#e6db74>&#39;☕&#39;</span>, <span style=color:#e6db74>&#39;💻&#39;</span>, <span style=color:#e6db74>&#39;🍷&#39;</span>, <span style=color:#e6db74>&#39;🍫&#39;</span>];
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span><span style=color:#66d9ef>for</span> (<span style=color:#66d9ef>let</span> <span style=color:#a6e22e>item</span> <span style=color:#66d9ef>in</span> <span style=color:#a6e22e>myLifeSummedUp</span>) {
+</span></span><span style=display:flex><span>	<span style=color:#a6e22e>console</span>.<span style=color:#a6e22e>log</span>(<span style=color:#a6e22e>item</span>);
+</span></span><span style=display:flex><span>}
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span><span style=color:#66d9ef>for</span> (<span style=color:#66d9ef>let</span> <span style=color:#a6e22e>item</span> <span style=color:#66d9ef>of</span> <span style=color:#a6e22e>myLifeSummedUp</span>) {
+</span></span><span style=display:flex><span>	<span style=color:#a6e22e>console</span>.<span style=color:#a6e22e>log</span>(<span style=color:#a6e22e>item</span>);
+</span></span><span style=display:flex><span>}
+</span></span><span style=display:flex><span><span style=color:#75715e>//0 1 2 3 and &#34;☕&#34; &#34;💻&#34; &#34;🍷&#34; &#34;🍫&#34;
+</span></span></span></code></pre></div><h2 id=set>set</h2><div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-javascript data-lang=javascript><span style=display:flex><span><span style=color:#66d9ef>const</span> <span style=color:#a6e22e>set</span> <span style=color:#f92672>=</span> <span style=color:#66d9ef>new</span> <span style=color:#a6e22e>Set</span>([<span style=color:#ae81ff>1</span>, <span style=color:#ae81ff>1</span>, <span style=color:#ae81ff>2</span>, <span style=color:#ae81ff>3</span>, <span style=color:#ae81ff>4</span>]);
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span><span style=color:#a6e22e>console</span>.<span style=color:#a6e22e>log</span>(<span style=color:#a6e22e>set</span>);
+</span></span><span style=display:flex><span><span style=color:#75715e>// {1, 2, 3, 4}
+</span></span></span></code></pre></div><h2 id=模块化>模块化</h2><h3 id=es6>es6</h3><p>导入的模块是只读的：不能修改导入的模块。只有导出它们的模块才能更改其值。 当我们试图增加myCounter的值时，它会抛出一个错误：myCounter是只读的，不能修改。</p><div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-javascript data-lang=javascript><span style=display:flex><span><span style=color:#75715e>// counter.js
+</span></span></span><span style=display:flex><span><span style=color:#75715e></span><span style=color:#66d9ef>let</span> <span style=color:#a6e22e>counter</span> <span style=color:#f92672>=</span> <span style=color:#ae81ff>10</span>;
+</span></span><span style=display:flex><span><span style=color:#66d9ef>export</span> <span style=color:#66d9ef>default</span> <span style=color:#a6e22e>counter</span>;
+</span></span><span style=display:flex><span><span style=color:#75715e>// index.js
+</span></span></span><span style=display:flex><span><span style=color:#75715e></span><span style=color:#66d9ef>import</span> <span style=color:#a6e22e>myCounter</span> <span style=color:#a6e22e>from</span> <span style=color:#e6db74>&#39;./counter&#39;</span>;
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span><span style=color:#a6e22e>myCounter</span> <span style=color:#f92672>+=</span> <span style=color:#ae81ff>1</span>;
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span><span style=color:#a6e22e>console</span>.<span style=color:#a6e22e>log</span>(<span style=color:#a6e22e>myCounter</span>);
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span><span style=color:#75715e>//Error
+</span></span></span></code></pre></div><p>执行顺序问题 会预分析引入的模块，所以会先执行引入的模块</p><div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-javascript data-lang=javascript><span style=display:flex><span><span style=color:#75715e>// index.js
+</span></span></span><span style=display:flex><span><span style=color:#75715e></span><span style=color:#a6e22e>console</span>.<span style=color:#a6e22e>log</span>(<span style=color:#e6db74>&#39;running index.js&#39;</span>);
+</span></span><span style=display:flex><span><span style=color:#66d9ef>import</span> { <span style=color:#a6e22e>sum</span> } <span style=color:#a6e22e>from</span> <span style=color:#e6db74>&#39;./sum.js&#39;</span>;
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span><span style=color:#a6e22e>console</span>.<span style=color:#a6e22e>log</span>(<span style=color:#a6e22e>sum</span>(<span style=color:#ae81ff>1</span>, <span style=color:#ae81ff>2</span>));
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span><span style=color:#75715e>// sum.js
+</span></span></span><span style=display:flex><span><span style=color:#75715e></span><span style=color:#a6e22e>console</span>.<span style=color:#a6e22e>log</span>(<span style=color:#e6db74>&#39;running sum.js&#39;</span>);
+</span></span><span style=display:flex><span><span style=color:#66d9ef>export</span> <span style=color:#66d9ef>const</span> <span style=color:#a6e22e>sum</span> <span style=color:#f92672>=</span> (<span style=color:#a6e22e>a</span>, <span style=color:#a6e22e>b</span>) =&gt; <span style=color:#a6e22e>a</span> <span style=color:#f92672>+</span> <span style=color:#a6e22e>b</span>;
+</span></span></code></pre></div><h3 id=export>export</h3><div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-javascript data-lang=javascript><span style=display:flex><span><span style=color:#75715e>// module.js
+</span></span></span><span style=display:flex><span><span style=color:#75715e></span><span style=color:#66d9ef>export</span> <span style=color:#66d9ef>default</span> () =&gt; <span style=color:#e6db74>&#39;Hello world&#39;</span>;
+</span></span><span style=display:flex><span><span style=color:#66d9ef>export</span> <span style=color:#66d9ef>const</span> <span style=color:#a6e22e>name</span> <span style=color:#f92672>=</span> <span style=color:#e6db74>&#39;Lydia&#39;</span>;
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span><span style=color:#75715e>// index.js
+</span></span></span><span style=display:flex><span><span style=color:#75715e></span><span style=color:#66d9ef>import</span> <span style=color:#f92672>*</span> <span style=color:#a6e22e>as</span> <span style=color:#a6e22e>data</span> <span style=color:#a6e22e>from</span> <span style=color:#e6db74>&#39;./module&#39;</span>;
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span><span style=color:#a6e22e>console</span>.<span style=color:#a6e22e>log</span>(<span style=color:#a6e22e>data</span>);
+</span></span><span style=display:flex><span><span style=color:#75715e>// { default: function default(), name: &#34;Lydia&#34; }
+</span></span></span></code></pre></div><p>sum.default(4)</p><div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-javascript data-lang=javascript><span style=display:flex><span><span style=color:#66d9ef>export</span> <span style=color:#66d9ef>default</span> <span style=color:#66d9ef>function</span> <span style=color:#a6e22e>sum</span>(<span style=color:#a6e22e>x</span>) {
+</span></span><span style=display:flex><span>	<span style=color:#66d9ef>return</span> <span style=color:#a6e22e>x</span> <span style=color:#f92672>+</span> <span style=color:#a6e22e>x</span>;
+</span></span><span style=display:flex><span>}
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span><span style=color:#75715e>// index.js
+</span></span></span><span style=display:flex><span><span style=color:#75715e></span><span style=color:#66d9ef>import</span> <span style=color:#f92672>*</span> <span style=color:#a6e22e>as</span> <span style=color:#a6e22e>sum</span> <span style=color:#a6e22e>from</span> <span style=color:#e6db74>&#39;./sum&#39;</span>;
+</span></span><span style=display:flex><span><span style=color:#75715e>//sum.default(4)
+</span></span></span></code></pre></div><h2 id=delete>delete</h2><div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-javascript data-lang=javascript><span style=display:flex><span>
+</span></span><span style=display:flex><span><span style=color:#66d9ef>const</span> <span style=color:#a6e22e>name</span> <span style=color:#f92672>=</span> <span style=color:#e6db74>&#39;Lydia&#39;</span>;
+</span></span><span style=display:flex><span><span style=color:#a6e22e>age</span> <span style=color:#f92672>=</span> <span style=color:#ae81ff>21</span>;
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span><span style=color:#a6e22e>console</span>.<span style=color:#a6e22e>log</span>(<span style=color:#66d9ef>delete</span> <span style=color:#a6e22e>name</span>); <span style=color:#75715e>// false
+</span></span></span><span style=display:flex><span><span style=color:#75715e></span><span style=color:#a6e22e>console</span>.<span style=color:#a6e22e>log</span>(<span style=color:#66d9ef>delete</span> <span style=color:#a6e22e>age</span>); <span style=color:#75715e>// true
+</span></span></span></code></pre></div><h2 id=jsonstringify>JSON.stringify</h2><p>可以只选取部分属性</p><div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-javascript data-lang=javascript><span style=display:flex><span><span style=color:#66d9ef>const</span> <span style=color:#a6e22e>settings</span> <span style=color:#f92672>=</span> {
+</span></span><span style=display:flex><span>	<span style=color:#a6e22e>username</span><span style=color:#f92672>:</span> <span style=color:#e6db74>&#39;lydiahallie&#39;</span>,
+</span></span><span style=display:flex><span>	<span style=color:#a6e22e>level</span><span style=color:#f92672>:</span> <span style=color:#ae81ff>19</span>,
+</span></span><span style=display:flex><span>	<span style=color:#a6e22e>health</span><span style=color:#f92672>:</span> <span style=color:#ae81ff>90</span>,
+</span></span><span style=display:flex><span>};
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span><span style=color:#66d9ef>const</span> <span style=color:#a6e22e>data</span> <span style=color:#f92672>=</span> <span style=color:#a6e22e>JSON</span>.<span style=color:#a6e22e>stringify</span>(<span style=color:#a6e22e>settings</span>, [<span style=color:#e6db74>&#39;level&#39;</span>, <span style=color:#e6db74>&#39;health&#39;</span>]);
+</span></span><span style=display:flex><span><span style=color:#a6e22e>console</span>.<span style=color:#a6e22e>log</span>(<span style=color:#a6e22e>data</span>);
+</span></span><span style=display:flex><span><span style=color:#75715e>//&#34;{&#34;level&#34;:19, &#34;health&#34;:90}&#34;
+</span></span></span></code></pre></div><h2 id=promise--async>promise & async</h2><p>async返回的总是promise类型 pending是鹦鹉 Promise.resolve还没有被调用； 当data.then(res=>console.log(res));</p><div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-javascript data-lang=javascript><span style=display:flex><span><span style=color:#66d9ef>async</span> <span style=color:#66d9ef>function</span> <span style=color:#a6e22e>getData</span>() {
+</span></span><span style=display:flex><span>	<span style=color:#66d9ef>return</span> <span style=color:#66d9ef>await</span> Promise.<span style=color:#a6e22e>resolve</span>(<span style=color:#e6db74>&#39;I made it!&#39;</span>);
+</span></span><span style=display:flex><span>}
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span><span style=color:#66d9ef>const</span> <span style=color:#a6e22e>data</span> <span style=color:#f92672>=</span> <span style=color:#a6e22e>getData</span>();
+</span></span><span style=display:flex><span><span style=color:#a6e22e>console</span>.<span style=color:#a6e22e>log</span>(<span style=color:#a6e22e>data</span>);
+</span></span><span style=display:flex><span><span style=color:#75715e>//Promise {&lt;pending&gt;}
+</span></span></span><span style=display:flex><span><span style=color:#75715e></span><span style=color:#a6e22e>console</span>.<span style=color:#a6e22e>info</span>(<span style=color:#a6e22e>data</span>.<span style=color:#a6e22e>then</span>(<span style=color:#a6e22e>item</span> =&gt; {
+</span></span><span style=display:flex><span>	<span style=color:#a6e22e>console</span>.<span style=color:#a6e22e>info</span>(<span style=color:#a6e22e>item</span>);
+</span></span><span style=display:flex><span>	<span style=color:#a6e22e>console</span>.<span style=color:#a6e22e>log</span>(<span style=color:#a6e22e>data</span>);
+</span></span><span style=display:flex><span>}))
+</span></span><span style=display:flex><span><span style=color:#75715e>// I made it!
+</span></span></span><span style=display:flex><span><span style=color:#75715e>// Promise {&lt;fulfilled&gt;: &#34;I made it!&#34;}
+</span></span></span></code></pre></div><h3 id=promise的状态>promise的状态</h3><div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-javascript data-lang=javascript><span style=display:flex><span><span style=color:#75715e>// TODO promise 的几个状态
+</span></span></span></code></pre></div><h2 id=pure-function>pure function</h2><p>如果传递相同的参数，则纯函数是始终返回相同结果的函数。</p><h2 id=symbol>symbol</h2><p>symbol是不可被枚举的、freeze的</p><div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-javascript data-lang=javascript><span style=display:flex><span><span style=color:#66d9ef>const</span> <span style=color:#a6e22e>info</span> <span style=color:#f92672>=</span> {
+</span></span><span style=display:flex><span>	[<span style=color:#a6e22e>Symbol</span>(<span style=color:#e6db74>&#39;a&#39;</span>)]<span style=color:#f92672>:</span> <span style=color:#e6db74>&#39;b&#39;</span>,
+</span></span><span style=display:flex><span>};
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span><span style=color:#a6e22e>console</span>.<span style=color:#a6e22e>log</span>(<span style=color:#a6e22e>info</span>);
+</span></span><span style=display:flex><span><span style=color:#a6e22e>console</span>.<span style=color:#a6e22e>log</span>(Object.<span style=color:#a6e22e>keys</span>(<span style=color:#a6e22e>info</span>));
+</span></span></code></pre></div><h2 id=默认值>默认值</h2><p>参数上也会声明一个变量，被后面的参数所使用</p><div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-javascript data-lang=javascript><span style=display:flex><span><span style=color:#66d9ef>const</span> <span style=color:#a6e22e>add</span> <span style=color:#f92672>=</span> <span style=color:#a6e22e>x</span> =&gt; <span style=color:#a6e22e>x</span> <span style=color:#f92672>+</span> <span style=color:#a6e22e>x</span>;
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span><span style=color:#66d9ef>function</span> <span style=color:#a6e22e>myFunc</span>(<span style=color:#a6e22e>num</span> <span style=color:#f92672>=</span> <span style=color:#ae81ff>2</span>, <span style=color:#a6e22e>value</span> <span style=color:#f92672>=</span> <span style=color:#a6e22e>add</span>(<span style=color:#a6e22e>num</span>)) {
+</span></span><span style=display:flex><span>	<span style=color:#a6e22e>console</span>.<span style=color:#a6e22e>log</span>(<span style=color:#a6e22e>num</span>, <span style=color:#a6e22e>value</span>);
+</span></span><span style=display:flex><span>}
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span><span style=color:#a6e22e>myFunc</span>();
+</span></span><span style=display:flex><span><span style=color:#a6e22e>myFunc</span>(<span style=color:#ae81ff>3</span>);
+</span></span></code></pre></div><h2 id=如何使object-可以迭代-iterable>如何使Object 可以迭代 iterable</h2><div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-javascript data-lang=javascript><span style=display:flex><span><span style=color:#66d9ef>const</span> <span style=color:#a6e22e>person</span> <span style=color:#f92672>=</span> {
+</span></span><span style=display:flex><span>	<span style=color:#a6e22e>name</span><span style=color:#f92672>:</span> <span style=color:#e6db74>&#34;Lydia Hallie&#34;</span>,
+</span></span><span style=display:flex><span>	<span style=color:#a6e22e>age</span><span style=color:#f92672>:</span> <span style=color:#ae81ff>21</span>,
+</span></span><span style=display:flex><span>	<span style=color:#75715e>// 实际是添加一个匿名generator函数,每次调用返回value 然后自动next();
+</span></span></span><span style=display:flex><span><span style=color:#75715e></span>	<span style=color:#75715e>// 所以可遍历了
+</span></span></span><span style=display:flex><span><span style=color:#75715e></span>	<span style=color:#f92672>*</span> [<span style=color:#a6e22e>Symbol</span>.<span style=color:#a6e22e>iterator</span>]() {
+</span></span><span style=display:flex><span>		<span style=color:#66d9ef>yield</span><span style=color:#f92672>*</span> Object.<span style=color:#a6e22e>values</span>(<span style=color:#66d9ef>this</span>)
+</span></span><span style=display:flex><span>	}
+</span></span><span style=display:flex><span>}
+</span></span><span style=display:flex><span><span style=color:#a6e22e>console</span>.<span style=color:#a6e22e>log</span>([...<span style=color:#a6e22e>person</span>])
+</span></span></code></pre></div><h2 id=objectfromentries-array--object>Object.fromEntries [array => object]</h2><div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-javascript data-lang=javascript><span style=display:flex><span>Object.<span style=color:#a6e22e>fromEntries</span>([[<span style=color:#e6db74>&#39;key1&#39;</span>, <span style=color:#e6db74>&#39;v1&#39;</span>], [<span style=color:#e6db74>&#39;key3&#39;</span>, <span style=color:#e6db74>&#39;v2&#39;</span>]],)
+</span></span><span style=display:flex><span><span style=color:#75715e>// {key1: &#34;v1&#34;, key3: &#34;v2&#34;}
+</span></span></span></code></pre></div><h2 id=if条件的执行顺序>if条件的执行顺序</h2><p>先执行typeof randomValue > number</p><p>!number = false</p><p>false ===string false</p><div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-javascript data-lang=javascript><span style=display:flex><span><span style=color:#66d9ef>let</span> <span style=color:#a6e22e>randomValue</span> <span style=color:#f92672>=</span> { <span style=color:#a6e22e>name</span><span style=color:#f92672>:</span> <span style=color:#e6db74>&#34;Lydia&#34;</span> }
+</span></span><span style=display:flex><span><span style=color:#a6e22e>randomValue</span> <span style=color:#f92672>=</span> <span style=color:#ae81ff>23</span>
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span><span style=color:#66d9ef>if</span> (<span style=color:#f92672>!</span><span style=color:#66d9ef>typeof</span> <span style=color:#a6e22e>randomValue</span> <span style=color:#f92672>===</span> <span style=color:#e6db74>&#34;string&#34;</span>) {
+</span></span><span style=display:flex><span>	<span style=color:#a6e22e>console</span>.<span style=color:#a6e22e>log</span>(<span style=color:#e6db74>&#34;It&#39;s not a string!&#34;</span>)
+</span></span><span style=display:flex><span>} <span style=color:#66d9ef>else</span> {
+</span></span><span style=display:flex><span>	<span style=color:#a6e22e>console</span>.<span style=color:#a6e22e>log</span>(<span style=color:#e6db74>&#34;Yay it&#39;s a string!&#34;</span>)
+</span></span><span style=display:flex><span>}
+</span></span></code></pre></div></div><h1 class="text-3xl my-12">留下你的脚印 👣 </h1><div id=disqus_thread>
+</div><script type=text/javascript>(function(){if(window.location.hostname=="localhost")return;var e=document.createElement("script"),t;e.type="text/javascript",e.async=!0,t="visionary",e.src="//"+t+".disqus.com/embed.js",(document.getElementsByTagName("head")[0]||document.getElementsByTagName("body")[0]).appendChild(e)})()</script>
+<noscript>Please enable JavaScript to view the <a href=https://disqus.com/?ref_noscript>comments powered by Disqus.</a></noscript></article></main><footer class="w-full text-center p-4 text-xs text-gray-400">
 copyright © 2021 - VISIONARY · All rights reserved
-</footer>
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-Z0FJ599SKS"></script>
-<script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments)}gtag('js',new Date),gtag('config','G-Z0FJ599SKS')</script>
-</body>
-</html>
+</footer><script async src="https://www.googletagmanager.com/gtag/js?id=G-Z0FJ599SKS"></script>
+<script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments)}gtag("js",new Date),gtag("config","G-Z0FJ599SKS")</script>
+</body></html>

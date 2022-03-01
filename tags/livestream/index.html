@@ -1,0 +1,54 @@
+<!doctype html><html lang=en-us>
+<head>
+<meta charset=utf-8>
+<meta name=viewport content="width=device-width,initial-scale=1">
+<title>
+livestream - VISIONARY
+</title><meta name=generator content="Hugo 0.93.0"><link rel=stylesheet href="https://visionary.top/css/styles.min.58f39d2fee5ad08dc7d0f0329831e6809c556f80c5f682777edb84f468b700cb.css" integrity="sha256-WPOdL+5a0I3H0PAymDHmgJxVb4DF9oJ3ftuE9Gi3AMs=">
+<script>window.matchMedia("(prefers-color-scheme: dark)").matches?document.documentElement.classList.add("dark"):document.documentElement.classList.remove("dark")</script>
+<script data-ad-client=ca-pub-6431705402019390 async src=https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js></script>
+</head><body class="flex flex-col min-h-screen dark:bg-gray-900 dark:text-gray-100 transition-colors duration-500"><header class="w-full px-4 pt-4 max-w-5xl mx-auto">
+<nav class="flex items-center justify-between flex-wrap">
+<div class="flex gap-2 items-center">
+<a href=mailto:min_0610@icloud.com aria-label=EMail><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentcolor" fill="none" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><circle cx="12" cy="12" r="4"/><path d="M16 12v1.5a2.5 2.5.0 005 0V12a9 9 0 10-5.5 8.28"/></svg>
+</a>
+<a href=https://visionary.top/ class="flex items-center font-bold">
+VISIONARY
+</a>
+</div><ul id=nav-menu class="flex w-auto mt-0 space-x-2">
+<li><div class=search>
+<label for=search>🔍</label><input placeholder=SEARCH id=search type=text class=dark:bg-gray-900>
+<ul id=results class=search_result>
+</ul></div><script type=text/javascript src=https://code.jquery.com/jquery-2.1.3.min.js></script>
+<script type=text/javascript src=/js/lunr/lunr.min.js></script>
+<script type=text/javascript>let lunrIndex,$results,pagesIndex;function initLunr(){$.getJSON("/js/lunr/PagesIndex.json").done(function(e){pagesIndex=e,console.info("index:",pagesIndex),lunrIndex=lunr(function(){this.field("title",{boost:10}),this.field("tags",{boost:5}),console.log(this.add),this.field("content"),this.ref("href"),pagesIndex.forEach(e=>{console.log(e),e&&this.add(e)})})}).fail(function(s,e,t){const n=e+", "+t;console.error("Error getting Hugo index flie:",n)})}function initUI(){$results=$("#results"),$("#search").keyup(function(){$results.empty();const e=$(this).val();if(e.length<2)return;const t=search(e);renderResults(t)})}function search(e){return lunrIndex.search(e).map(function(e){return console.log(e),pagesIndex.filter(function(t){return t&&t.href===e.ref})[0]})}function renderResults(e){if(!e.length)return;e.slice(0,10).forEach(function(e){const t=$("<li>");t.append($("<a>",{href:e?e.href:'',text:"🔗 "+e.title})),$results.append(t)})}initLunr(),$(document).ready(function(){initUI()})</script>
+</li><li>
+<a href=https://visionary.top/tags/about/ class="hover:text-blue-800 dark:hover:text-blue-300">About</a>
+</li><li>
+<a href=https://visionary.top/blog/ class="hover:text-blue-800 dark:hover:text-blue-300">Blogs</a>
+</li></ul></nav></header><main class="flex-1 mx-4 md:mx-12 lg:mx-24 mt-8 sm:mt-16">
+<article class="max-w-5xl mx-auto px-4">
+<h1 class="text-4xl font-bold mb-4">livestream</h1><div class=text-gray-600></div><div class=card-list>
+<a class="block my-6" href=/blog/media/%E8%A7%86%E9%A2%91%E6%92%AD%E6%94%BE%E5%99%A8/>
+<h2 class="text-xl font-semibold mb-1">各种直播流协议详解</h2><div class="font-light text-gray-800 dark:text-gray-200">
+hls safari的h5原生支持hls(m3u8)播放 chrome等浏览器需要自己写解码
+移动端和Safari可直接支持m3u8 支持H.264、H.265视频编码和AAC音频编码? 播放器直播流全平台支持flv，hls直播协议，支持解h264、h265解码。
+协议 延迟 谁在用 原理 优缺点 HttpFlv 低 1~3秒 斗鱼 pc web RTMP 低 1~3秒 - 转发 HLS 高 5~20秒（依切片情况） 各种移动web端 切片 性能高，延迟高 DASH/MPEG-DASH 高 油管，奈飞 切片 HLS 是苹果的 全系列兼容
+DASH 和他很相似 iOS 不兼容
+都支持 4K
+FFmpeg 可以生成这两种不同协议的流
+DASH协议 主播直播流上传
+服务器的编解码封装 流媒体分发器 mpd文件 切割后的媒体文件 客户端 客户端加载mpd文件 解析MPD文件, 组成文件下载链接 当前的网速和支持的编码加载相应的视频片段进行播放
+</div><div class="info dark:info-dark">
+<span class="font-light mb-2 text-gray-500 text-sm" style=display:inline>
+July 22, 2021
+</span>
+<span class="font-light text-gray-500 text-sm dark:text-gray-200">
+<span class=separator><a class=tag href=/tags/livestream/>livestream</a><a class=tag href=/tags/web-media/>web media</a></span>
+</span>
+</div></a>
+</div></article></main><footer class="w-full text-center p-4 text-xs text-gray-400">
+copyright © 2021 - VISIONARY · All rights reserved
+</footer><script async src="https://www.googletagmanager.com/gtag/js?id=G-Z0FJ599SKS"></script>
+<script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments)}gtag("js",new Date),gtag("config","G-Z0FJ599SKS")</script>
+</body></html>

@@ -4,11 +4,10 @@
 <meta name=viewport content="width=device-width,initial-scale=1">
 <title>
 新搭一个框架要做的事情 - VISIONARY
-</title><meta name=generator content="Hugo 0.88.0"><link rel=stylesheet href="https://visionary.top/css/styles.min.58f39d2fee5ad08dc7d0f0329831e6809c556f80c5f682777edb84f468b700cb.css" integrity="sha256-WPOdL+5a0I3H0PAymDHmgJxVb4DF9oJ3ftuE9Gi3AMs=">
+</title><meta name=generator content="Hugo 0.93.0"><link rel=stylesheet href="https://visionary.top/css/styles.min.58f39d2fee5ad08dc7d0f0329831e6809c556f80c5f682777edb84f468b700cb.css" integrity="sha256-WPOdL+5a0I3H0PAymDHmgJxVb4DF9oJ3ftuE9Gi3AMs=">
 <script>window.matchMedia("(prefers-color-scheme: dark)").matches?document.documentElement.classList.add("dark"):document.documentElement.classList.remove("dark")</script>
 <script data-ad-client=ca-pub-6431705402019390 async src=https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js></script>
-</head>
-<body class="flex flex-col min-h-screen dark:bg-gray-900 dark:text-gray-100 transition-colors duration-500"><header class="w-full px-4 pt-4 max-w-5xl mx-auto">
+</head><body class="flex flex-col min-h-screen dark:bg-gray-900 dark:text-gray-100 transition-colors duration-500"><header class="w-full px-4 pt-4 max-w-5xl mx-auto">
 <nav class="flex items-center justify-between flex-wrap">
 <div class="flex gap-2 items-center">
 <a href=mailto:min_0610@icloud.com aria-label=EMail><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentcolor" fill="none" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><circle cx="12" cy="12" r="4"/><path d="M16 12v1.5a2.5 2.5.0 005 0V12a9 9 0 10-5.5 8.28"/></svg>
@@ -16,142 +15,40 @@
 <a href=https://visionary.top/ class="flex items-center font-bold">
 VISIONARY
 </a>
-</div>
-<ul id=nav-menu class="flex w-auto mt-0 space-x-2">
+</div><ul id=nav-menu class="flex w-auto mt-0 space-x-2">
 <li><div class=search>
 <label for=search>🔍</label><input placeholder=SEARCH id=search type=text class=dark:bg-gray-900>
 <ul id=results class=search_result>
-</ul>
-</div>
-<script type=text/javascript src=https://code.jquery.com/jquery-2.1.3.min.js></script>
+</ul></div><script type=text/javascript src=https://code.jquery.com/jquery-2.1.3.min.js></script>
 <script type=text/javascript src=/js/lunr/lunr.min.js></script>
-<script type=text/javascript>let lunrIndex,$results,pagesIndex;function initLunr(){$.getJSON("/js/lunr/PagesIndex.json").done(function(a){pagesIndex=a,console.info("index:",pagesIndex),lunrIndex=lunr(function(){this.field("title",{boost:10}),this.field("tags",{boost:5}),console.log(this.add),this.field("content"),this.ref("href"),pagesIndex.forEach(a=>{console.log(a),a&&this.add(a)})})}).fail(function(d,a,b){const c=a+", "+b;console.error("Error getting Hugo index flie:",c)})}function initUI(){$results=$("#results"),$("#search").keyup(function(){$results.empty();const a=$(this).val();if(a.length<2)return;const b=search(a);renderResults(b)})}function search(a){return lunrIndex.search(a).map(function(a){return console.log(a),pagesIndex.filter(function(b){return b&&b.href===a.ref})[0]})}function renderResults(a){if(!a.length)return;a.slice(0,10).forEach(function(a){const b=$("<li>");b.append($("<a>",{href:a?a.href:'',text:"🔗 "+a.title})),$results.append(b)})}initLunr(),$(document).ready(function(){initUI()})</script>
-</li>
-<li>
-<a href=https://visionary.top/about/ class="hover:text-blue-800 dark:hover:text-blue-300">About Me</a>
-</li>
-<li>
+<script type=text/javascript>let lunrIndex,$results,pagesIndex;function initLunr(){$.getJSON("/js/lunr/PagesIndex.json").done(function(e){pagesIndex=e,console.info("index:",pagesIndex),lunrIndex=lunr(function(){this.field("title",{boost:10}),this.field("tags",{boost:5}),console.log(this.add),this.field("content"),this.ref("href"),pagesIndex.forEach(e=>{console.log(e),e&&this.add(e)})})}).fail(function(s,e,t){const n=e+", "+t;console.error("Error getting Hugo index flie:",n)})}function initUI(){$results=$("#results"),$("#search").keyup(function(){$results.empty();const e=$(this).val();if(e.length<2)return;const t=search(e);renderResults(t)})}function search(e){return lunrIndex.search(e).map(function(e){return console.log(e),pagesIndex.filter(function(t){return t&&t.href===e.ref})[0]})}function renderResults(e){if(!e.length)return;e.slice(0,10).forEach(function(e){const t=$("<li>");t.append($("<a>",{href:e?e.href:'',text:"🔗 "+e.title})),$results.append(t)})}initLunr(),$(document).ready(function(){initUI()})</script>
+</li><li>
+<a href=https://visionary.top/tags/about/ class="hover:text-blue-800 dark:hover:text-blue-300">About</a>
+</li><li>
 <a href=https://visionary.top/blog/ class="hover:text-blue-800 dark:hover:text-blue-300">Blogs</a>
-</li>
-</ul>
-</nav>
-</header>
-<main class="flex-1 mx-4 md:mx-12 lg:mx-24 mt-8 sm:mt-16">
+</li></ul></nav></header><main class="flex-1 mx-4 md:mx-12 lg:mx-24 mt-8 sm:mt-16">
 <article class="mb-16 max-w-5xl mx-auto px-4">
-<h1 class="text-5xl mb-6">新搭一个框架要做的事情</h1>
-<ul>
-</ul>
-<div class="post-footer mb-6">
+<h1 class="text-5xl mb-6">新搭一个框架要做的事情</h1><ul>
+</ul><div class="post-footer mb-6">
 <div class=info>
 <span class=separator><a class=category href=/categories/%E6%9E%B6%E6%9E%84/>架构</a></span>
-</div>
-</div>
-<div class=post-footer>
-</div>
-<h2 class=text-xl>目录</h2>
-<aside class="content-aside-bar border-2 mb-4 mt-4">
-<nav id=TableOfContents></nav>
-</aside>
-<div class="prose lg:prose-lg prose-blue dark:prose-dark">
-<p>新搭建一个前端项目的时候，必须要做的事情</p>
-<ol>
-<li>选择要使用的基础框架</li>
-<li>选择状态/数据流管理工具</li>
-<li>添加好开源组件库/或自己封装的组件库</li>
-<li>选择style的预编译语言/或使用style in js</li>
-<li>在index.less 中处理好标签的默认样式</li>
-<li>定义字体样式</li>
-<li>添加在不通窗口大小下的 font-size</li>
-<li>定义好color</li>
-</ol>
-<pre tabindex=0><code class=language-less data-lang=less>@text-primary-color: #ddd;
+</div></div><div class=post-footer>
+</div><h2 class=text-xl>目录</h2><aside class="content-aside-bar border-2 mb-4 mt-4">
+<nav id=TableOfContents></nav></aside><div class="prose lg:prose-lg prose-blue dark:prose-dark">
+<p>新搭建一个前端项目的时候，必须要做的事情</p><ol>
+<li>选择要使用的基础框架</li><li>选择状态/数据流管理工具</li><li>添加好开源组件库/或自己封装的组件库</li><li>选择style的预编译语言/或使用style in js</li><li>在index.less 中处理好标签的默认样式</li><li>定义字体样式</li><li>添加在不同窗口大小下的 font-size</li><li>定义好color</li></ol><pre tabindex=0><code class=language-less data-lang=less>@text-primary-color: #ddd;
 @text-second-color: #eee;
 @divider: 1px solid #ddd;
 @primary-color: blue;
 
 // ... and more 
 </code></pre><ol start=9>
-<li>定义好常用的mixin方法</li>
-</ol>
-<pre tabindex=0><code class=language-less data-lang=less>
-</code></pre><ol start=10>
-<li>
-<p>使用css 变量或其他方式，预留主题设置功能</p>
-</li>
-<li>
-<p>添加好ts配置/在使用cli时选择对应的</p>
-</li>
-<li>
-<p>配置好jest/mocha 可以进行前端测试</p>
-</li>
-<li>
-<p>加好文档、写明架构，文件结构</p>
-</li>
-<li>
-<p>加好代码检查，eslint、style-lint 等、并在文档中写明使用的规范，包括tsconfig</p>
-</li>
-<li>
-<p>配置好webpack, 使用compression 打包压缩后的文件
-加好webpack-analysis的脚本、随时可查看</p>
-</li>
-<li>
-<p>做好代码分割、在文档中写明</p>
-</li>
-<li>
-<p>文档中写明使用clean的code、并在review时注意</p>
-</li>
-<li>
-<p>http请求封装、auth、权限处理好 http可正确抛出异常</p>
-</li>
-<li>
-<p>constant 单独定义，并在文档中写明。如 api path、reducer type等</p>
-</li>
-<li>
-<p>要求提取公共方法，封装公共组件，提供使用文档，和通过单元测试</p>
-</li>
-<li>
-<p>封装全局组件、confirm、alert、empty、noSearch、loading等</p>
-</li>
-<li>
-<p>封装所需的高阶组件</p>
-</li>
-<li>
-<p>ci没配的话先加一个部署脚本</p>
-</li>
-<li>
-<p>配置好代理/mock地址</p>
-</li>
-<li>
-<p>确认接口规范</p>
-</li>
-<li>
-<p>封装好storage</p>
-</li>
-<li>
-<p>封装好表单组件/table组件</p>
-</li>
-<li>
-<p>添加代码提交前的eslint / stylelint 检查</p>
-</li>
-<li>
-<p>关注内存使用</p>
-</li>
-<li>
-<p>页面布局处理好 使用响应式还是内部最小宽高滚动
-&mldr; and more</p>
-</li>
-</ol>
-</div>
-<h1 class="text-3xl my-12">留下你的脚印 👣 </h1>
-<div id=disqus_thread>
-</div>
-<script type=text/javascript>(function(){var a,b;if(window.location.hostname=="localhost")return;a=document.createElement('script'),a.type='text/javascript',a.async=!0,b='visionary',a.src='//'+b+'.disqus.com/embed.js',(document.getElementsByTagName('head')[0]||document.getElementsByTagName('body')[0]).appendChild(a)})()</script>
-<noscript>Please enable JavaScript to view the <a href=https://disqus.com/?ref_noscript>comments powered by Disqus.</a></noscript>
-</article>
-</main><footer class="w-full text-center p-4 text-xs text-gray-400">
+<li>定义好常用的mixin方法</li></ol><pre tabindex=0><code class=language-less data-lang=less></code></pre><ol start=10>
+<li>使用css 变量或其他方式，预留主题设置功能</li><li>添加好ts配置/在使用cli时选择对应的</li><li>配置好jest/mocha 可以进行前端测试</li><li>加好文档、写明架构，文件结构</li><li>加好代码检查，eslint、style-lint 等、并在文档中写明使用的规范，包括tsconfig</li><li>配置好webpack, 使用compression 打包压缩后的文件
+加好webpack-analysis的脚本、随时可查看</li><li>做好代码分割、在文档中写明</li><li>文档中写明使用clean的code、并在review时注意</li><li>http请求封装、auth、权限处理好 http可正确抛出异常</li><li>constant 单独定义，并在文档中写明。如 api path、reducer type等</li><li>要求提取公共方法，封装公共组件，提供使用文档，和通过单元测试</li><li>封装全局组件、confirm、alert、empty、noSearch、loading等</li><li>封装所需的高阶组件</li><li>ci没配的话先加一个部署脚本</li><li>配置好代理/mock地址</li><li>确认接口规范</li><li>封装好storage</li><li>封装好表单组件/table组件</li><li>添加代码提交前的eslint / stylelint 检查</li><li>关注内存使用</li><li>页面布局处理好 使用响应式还是内部最小宽高滚动</li><li>处理loading状态管理</li><li>form</li><li>&mldr; and more</li></ol></div><h1 class="text-3xl my-12">留下你的脚印 👣 </h1><div id=disqus_thread>
+</div><script type=text/javascript>(function(){if(window.location.hostname=="localhost")return;var e=document.createElement("script"),t;e.type="text/javascript",e.async=!0,t="visionary",e.src="//"+t+".disqus.com/embed.js",(document.getElementsByTagName("head")[0]||document.getElementsByTagName("body")[0]).appendChild(e)})()</script>
+<noscript>Please enable JavaScript to view the <a href=https://disqus.com/?ref_noscript>comments powered by Disqus.</a></noscript></article></main><footer class="w-full text-center p-4 text-xs text-gray-400">
 copyright © 2021 - VISIONARY · All rights reserved
-</footer>
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-Z0FJ599SKS"></script>
-<script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments)}gtag('js',new Date),gtag('config','G-Z0FJ599SKS')</script>
-</body>
-</html>
+</footer><script async src="https://www.googletagmanager.com/gtag/js?id=G-Z0FJ599SKS"></script>
+<script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments)}gtag("js",new Date),gtag("config","G-Z0FJ599SKS")</script>
+</body></html>

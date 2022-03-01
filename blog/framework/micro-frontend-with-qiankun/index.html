@@ -4,13 +4,11 @@
 <meta name=viewport content="width=device-width,initial-scale=1">
 <title>
 Micro-Frontends with qiankun - VISIONARY
-</title>
-<meta name=description content="Sample article showcasing basic Markdown syntax and formatting for HTML elements.">
-<meta name=generator content="Hugo 0.88.0"><link rel=stylesheet href="https://visionary.top/css/styles.min.58f39d2fee5ad08dc7d0f0329831e6809c556f80c5f682777edb84f468b700cb.css" integrity="sha256-WPOdL+5a0I3H0PAymDHmgJxVb4DF9oJ3ftuE9Gi3AMs=">
+</title><meta name=description content="Sample article showcasing basic Markdown syntax and formatting for HTML elements.">
+<meta name=generator content="Hugo 0.93.0"><link rel=stylesheet href="https://visionary.top/css/styles.min.58f39d2fee5ad08dc7d0f0329831e6809c556f80c5f682777edb84f468b700cb.css" integrity="sha256-WPOdL+5a0I3H0PAymDHmgJxVb4DF9oJ3ftuE9Gi3AMs=">
 <script>window.matchMedia("(prefers-color-scheme: dark)").matches?document.documentElement.classList.add("dark"):document.documentElement.classList.remove("dark")</script>
 <script data-ad-client=ca-pub-6431705402019390 async src=https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js></script>
-</head>
-<body class="flex flex-col min-h-screen dark:bg-gray-900 dark:text-gray-100 transition-colors duration-500"><header class="w-full px-4 pt-4 max-w-5xl mx-auto">
+</head><body class="flex flex-col min-h-screen dark:bg-gray-900 dark:text-gray-100 transition-colors duration-500"><header class="w-full px-4 pt-4 max-w-5xl mx-auto">
 <nav class="flex items-center justify-between flex-wrap">
 <div class="flex gap-2 items-center">
 <a href=mailto:min_0610@icloud.com aria-label=EMail><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentcolor" fill="none" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><circle cx="12" cy="12" r="4"/><path d="M16 12v1.5a2.5 2.5.0 005 0V12a9 9 0 10-5.5 8.28"/></svg>
@@ -18,339 +16,257 @@ Micro-Frontends with qiankun - VISIONARY
 <a href=https://visionary.top/ class="flex items-center font-bold">
 VISIONARY
 </a>
-</div>
-<ul id=nav-menu class="flex w-auto mt-0 space-x-2">
+</div><ul id=nav-menu class="flex w-auto mt-0 space-x-2">
 <li><div class=search>
 <label for=search>🔍</label><input placeholder=SEARCH id=search type=text class=dark:bg-gray-900>
 <ul id=results class=search_result>
-</ul>
-</div>
-<script type=text/javascript src=https://code.jquery.com/jquery-2.1.3.min.js></script>
+</ul></div><script type=text/javascript src=https://code.jquery.com/jquery-2.1.3.min.js></script>
 <script type=text/javascript src=/js/lunr/lunr.min.js></script>
-<script type=text/javascript>let lunrIndex,$results,pagesIndex;function initLunr(){$.getJSON("/js/lunr/PagesIndex.json").done(function(a){pagesIndex=a,console.info("index:",pagesIndex),lunrIndex=lunr(function(){this.field("title",{boost:10}),this.field("tags",{boost:5}),console.log(this.add),this.field("content"),this.ref("href"),pagesIndex.forEach(a=>{console.log(a),a&&this.add(a)})})}).fail(function(d,a,b){const c=a+", "+b;console.error("Error getting Hugo index flie:",c)})}function initUI(){$results=$("#results"),$("#search").keyup(function(){$results.empty();const a=$(this).val();if(a.length<2)return;const b=search(a);renderResults(b)})}function search(a){return lunrIndex.search(a).map(function(a){return console.log(a),pagesIndex.filter(function(b){return b&&b.href===a.ref})[0]})}function renderResults(a){if(!a.length)return;a.slice(0,10).forEach(function(a){const b=$("<li>");b.append($("<a>",{href:a?a.href:'',text:"🔗 "+a.title})),$results.append(b)})}initLunr(),$(document).ready(function(){initUI()})</script>
-</li>
-<li>
-<a href=https://visionary.top/about/ class="hover:text-blue-800 dark:hover:text-blue-300">About Me</a>
-</li>
-<li>
+<script type=text/javascript>let lunrIndex,$results,pagesIndex;function initLunr(){$.getJSON("/js/lunr/PagesIndex.json").done(function(e){pagesIndex=e,console.info("index:",pagesIndex),lunrIndex=lunr(function(){this.field("title",{boost:10}),this.field("tags",{boost:5}),console.log(this.add),this.field("content"),this.ref("href"),pagesIndex.forEach(e=>{console.log(e),e&&this.add(e)})})}).fail(function(s,e,t){const n=e+", "+t;console.error("Error getting Hugo index flie:",n)})}function initUI(){$results=$("#results"),$("#search").keyup(function(){$results.empty();const e=$(this).val();if(e.length<2)return;const t=search(e);renderResults(t)})}function search(e){return lunrIndex.search(e).map(function(e){return console.log(e),pagesIndex.filter(function(t){return t&&t.href===e.ref})[0]})}function renderResults(e){if(!e.length)return;e.slice(0,10).forEach(function(e){const t=$("<li>");t.append($("<a>",{href:e?e.href:'',text:"🔗 "+e.title})),$results.append(t)})}initLunr(),$(document).ready(function(){initUI()})</script>
+</li><li>
+<a href=https://visionary.top/tags/about/ class="hover:text-blue-800 dark:hover:text-blue-300">About</a>
+</li><li>
 <a href=https://visionary.top/blog/ class="hover:text-blue-800 dark:hover:text-blue-300">Blogs</a>
-</li>
-</ul>
-</nav>
-</header>
-<main class="flex-1 mx-4 md:mx-12 lg:mx-24 mt-8 sm:mt-16">
+</li></ul></nav></header><main class="flex-1 mx-4 md:mx-12 lg:mx-24 mt-8 sm:mt-16">
 <article class="mb-16 max-w-5xl mx-auto px-4">
-<h1 class="text-5xl mb-6">Micro-Frontends with qiankun</h1>
-<ul>
-</ul>
-<div class="post-footer mb-6">
+<h1 class="text-5xl mb-6">Micro-Frontends with qiankun</h1><ul>
+</ul><div class="post-footer mb-6">
 <div class=info>
 <span class=separator><a class=category href=/categories/%E6%9E%B6%E6%9E%84/>架构</a><a class=category href=/categories/%E5%BE%AE%E5%89%8D%E7%AB%AF/>微前端</a></span>
 <span class=separator><a class=tag href=/tags/webpack/>webpack</a></span>
-</div>
-</div>
-<div class=post-footer>
-</div>
-<h2 class=text-xl>目录</h2>
-<aside class="content-aside-bar border-2 mb-4 mt-4">
+</div></div><div class=post-footer>
+</div><h2 class=text-xl>目录</h2><aside class="content-aside-bar border-2 mb-4 mt-4">
 <nav id=TableOfContents>
 <ul>
 <li><a href=#micro-frontends-with-qiankun>Micro-Frontends with qiankun</a>
 <ul>
-<li><a href=#使用乾坤搭建微前端框架>使用【乾坤搭建微前端框架】</a></li>
-</ul>
-</li>
-<li><a href=#项目结构>项目结构</a></li>
-<li><a href=#main-app-react>main-app 【react】</a>
+<li><a href=#使用乾坤搭建微前端框架>使用【乾坤搭建微前端框架】</a></li></ul></li><li><a href=#项目结构>项目结构</a></li><li><a href=#main-app-react>main-app 【react】</a>
 <ul>
-<li><a href=#初始化全局状态-initglobalstatejs>初始化全局状态 initGlobalState.js</a></li>
-<li><a href=#定义子应用>定义子应用</a></li>
-<li><a href=#注册子应用>注册子应用</a></li>
-</ul>
-</li>
-<li><a href=#child-app-1-react>child-app-1 【react】</a>
+<li><a href=#初始化全局状态-initglobalstatejs>初始化全局状态 initGlobalState.js</a></li><li><a href=#定义子应用>定义子应用</a></li><li><a href=#注册子应用>注册子应用</a></li></ul></li><li><a href=#child-app-1-react>child-app-1 【react】</a>
 <ul>
-<li><a href=#child-app-2>child-app-2</a></li>
-</ul>
-</li>
-</ul>
-<ul>
+<li><a href=#child-app-2>child-app-2</a></li></ul></li></ul><ul>
 <li><a href=#存储>存储</a>
 <ul>
-<li><a href=#localstorage>localStorage</a></li>
-<li><a href=#documentcookie>document.cookie</a></li>
-</ul>
-</li>
-<li><a href=#父子组件传值>父子组件传值</a></li>
-<li><a href=#子组件间传值>子组件间传值</a></li>
-</ul>
-<ul>
-<li><a href=#nginx-配置>NGINX 配置</a></li>
-<li><a href=#静态资源处理>静态资源处理</a></li>
-</ul>
-</nav>
-</aside>
-<div class="prose lg:prose-lg prose-blue dark:prose-dark">
-<p>可以实现多团队共同开发，每个团队维护使用了不同前端框架的项目，独立使用git，也可以在新网站上集成旧项目</p>
-<h2 id=micro-frontends-with-qiankun>Micro-Frontends with qiankun</h2>
-<h3 id=使用乾坤搭建微前端框架>使用【乾坤搭建微前端框架】</h3>
-<p><a href=https://qiankun.umijs.org/>qiankun</a></p>
-<h2 id=项目结构>项目结构</h2>
-<ul>
+<li><a href=#localstorage>localStorage</a></li><li><a href=#documentcookie>document.cookie</a></li></ul></li><li><a href=#父子组件传值>父子组件传值</a></li><li><a href=#子组件间传值>子组件间传值</a></li></ul><ul>
+<li><a href=#nginx-配置>NGINX 配置</a></li><li><a href=#静态资源处理>静态资源处理</a></li></ul></nav></aside><div class="prose lg:prose-lg prose-blue dark:prose-dark">
+<p>可以实现多团队共同开发，每个团队维护使用了不同前端框架的项目，独立使用git，也可以在新网站上集成旧项目</p><h2 id=micro-frontends-with-qiankun>Micro-Frontends with qiankun</h2><h3 id=使用乾坤搭建微前端框架>使用【乾坤搭建微前端框架】</h3><p><a href=https://qiankun.umijs.org/>qiankun</a></p><h2 id=项目结构>项目结构</h2><ul>
 <li>main-app 【react】
 <ul>
-<li>child-app-1【react】</li>
-<li>child-app-2【vue】</li>
-<li>more</li>
-</ul>
-</li>
-</ul>
-<h2 id=main-app-react>main-app 【react】</h2>
-<div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-jsx data-lang=jsx><span style=color:#66d9ef>import</span> {
-    <span style=color:#a6e22e>addGlobalUncaughtErrorHandler</span>,
-    <span style=color:#a6e22e>initGlobalState</span>,
-    <span style=color:#a6e22e>MicroAppStateActions</span>,
-    <span style=color:#a6e22e>runAfterFirstMounted</span>,
-    <span style=color:#a6e22e>start</span>
-} <span style=color:#a6e22e>from</span> <span style=color:#e6db74>&#39;qiankun&#39;</span>;
-<span style=color:#66d9ef>import</span> { <span style=color:#a6e22e>state</span> } <span style=color:#a6e22e>from</span> <span style=color:#e6db74>&#34;./config/initGlobalState&#34;</span>;
-
-<span style=color:#a6e22e>ReactDOM</span>.<span style=color:#a6e22e>render</span>(
-<span style=color:#75715e>/*react component*/</span>
-	&lt;<span style=color:#f92672>div</span>&gt;
-	{<span style=color:#75715e>/* header */</span>}
-  {<span style=color:#75715e>/* aside bar*/</span>}
-		&lt;<span style=color:#f92672>div</span> <span style=color:#a6e22e>id</span><span style=color:#f92672>=</span><span style=color:#e6db74>&#34;subContainer&#34;</span>&gt;
-      {<span style=color:#75715e>/* 子项目页面展示区域，当其加载 该dom内部会被替换*/</span>} 
-			&lt;<span style=color:#f92672>NoPage</span> /&gt;
-    &lt;/<span style=color:#f92672>div</span>&gt;
-	{<span style=color:#75715e>/* footer */</span>}
-  &lt;<span style=color:#f92672>div</span>/&gt;
-)
-
-<span style=color:#a6e22e>start</span>({
-    <span style=color:#a6e22e>prefetch</span><span style=color:#f92672>:</span> <span style=color:#e6db74>&#39;all&#39;</span>
-});
-
-<span style=color:#a6e22e>runAfterFirstMounted</span>(() =&gt; {
-    <span style=color:#a6e22e>console</span>.<span style=color:#a6e22e>log</span>(<span style=color:#e6db74>&#39;[MainApp] first app mounted&#39;</span>);
-});
-
-<span style=color:#a6e22e>addGlobalUncaughtErrorHandler</span>(<span style=color:#a6e22e>event</span> =&gt; <span style=color:#a6e22e>console</span>.<span style=color:#a6e22e>log</span>(<span style=color:#a6e22e>event</span>));
-<span style=color:#75715e>// 传递state
-</span><span style=color:#75715e></span><span style=color:#66d9ef>export</span> <span style=color:#66d9ef>const</span> <span style=color:#a6e22e>globalActions</span><span style=color:#f92672>:</span> <span style=color:#a6e22e>MicroAppStateActions</span> <span style=color:#f92672>=</span> <span style=color:#a6e22e>initGlobalState</span>(<span style=color:#a6e22e>state</span>);
-
-<span style=color:#a6e22e>globalActions</span>.<span style=color:#a6e22e>onGlobalStateChange</span>((<span style=color:#a6e22e>state</span>, <span style=color:#a6e22e>prev</span>) =&gt; {
-    <span style=color:#a6e22e>console</span>.<span style=color:#a6e22e>log</span>(<span style=color:#e6db74>&#39;[MainApp] &#39;</span>, <span style=color:#a6e22e>state</span>, <span style=color:#a6e22e>prev</span>);
-    <span style=color:#66d9ef>if</span> (<span style=color:#a6e22e>state</span>.<span style=color:#a6e22e>login</span>.<span style=color:#a6e22e>show</span>) {
-<span style=color:#75715e>// 在主项目中处理子项目发来的消息
-</span><span style=color:#75715e></span>        <span style=color:#a6e22e>store</span>.<span style=color:#a6e22e>dispatch</span>({ <span style=color:#a6e22e>type</span><span style=color:#f92672>:</span> <span style=color:#a6e22e>SET_USER_LOGIN</span>, <span style=color:#a6e22e>payload</span><span style=color:#f92672>:</span> { <span style=color:#a6e22e>hideLogin</span><span style=color:#f92672>:</span> <span style=color:#66d9ef>false</span>, <span style=color:#a6e22e>redirectUrl</span><span style=color:#f92672>:</span> <span style=color:#a6e22e>state</span>.<span style=color:#a6e22e>login</span>.<span style=color:#a6e22e>redirect</span>, <span style=color:#a6e22e>addTab</span><span style=color:#f92672>:</span> <span style=color:#f92672>!!</span><span style=color:#a6e22e>state</span>.<span style=color:#a6e22e>login</span>.<span style=color:#a6e22e>addTab</span> } })
-        <span style=color:#75715e>//显示登录弹窗
-</span><span style=color:#75715e></span>    }
-});
-</code></pre></div><h3 id=初始化全局状态-initglobalstatejs>初始化全局状态 initGlobalState.js</h3>
-<div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-jsx data-lang=jsx><span style=color:#66d9ef>const</span> <span style=color:#a6e22e>customHistory</span> <span style=color:#f92672>=</span> <span style=color:#a6e22e>createBrowserHistory</span>();
-<span style=color:#66d9ef>export</span> <span style=color:#66d9ef>const</span> <span style=color:#a6e22e>state</span> <span style=color:#f92672>=</span> {
-    <span style=color:#a6e22e>user</span><span style=color:#f92672>:</span> {
-        <span style=color:#a6e22e>id</span><span style=color:#f92672>:</span> <span style=color:#a6e22e>Storage</span>.<span style=color:#a6e22e>getItem</span>(<span style=color:#e6db74>&#39;operatorId&#39;</span>),
-        <span style=color:#a6e22e>name</span><span style=color:#f92672>:</span> <span style=color:#a6e22e>Storage</span>.<span style=color:#a6e22e>getItem</span>(<span style=color:#e6db74>&#39;userName&#39;</span>),
-        <span style=color:#a6e22e>phone</span><span style=color:#f92672>:</span> <span style=color:#a6e22e>Storage</span>.<span style=color:#a6e22e>getItem</span>(<span style=color:#e6db74>&#39;mobile&#39;</span>),
-        <span style=color:#a6e22e>role</span><span style=color:#f92672>:</span> <span style=color:#a6e22e>Storage</span>.<span style=color:#a6e22e>getItem</span>(<span style=color:#e6db74>&#39;role&#39;</span>),
-        <span style=color:#a6e22e>token</span><span style=color:#f92672>:</span> <span style=color:#a6e22e>Storage</span>.<span style=color:#a6e22e>getItem</span>(<span style=color:#e6db74>&#39;token&#39;</span>),
-        <span style=color:#a6e22e>oplevel</span><span style=color:#f92672>:</span> <span style=color:#a6e22e>Storage</span>.<span style=color:#a6e22e>getItem</span>(<span style=color:#e6db74>&#39;roleId&#39;</span>),
-        <span style=color:#a6e22e>provinceId</span><span style=color:#f92672>:</span> <span style=color:#a6e22e>Storage</span>.<span style=color:#a6e22e>getItem</span>(<span style=color:#e6db74>&#39;provinceId&#39;</span>)
-    },
-    <span style=color:#75715e>/**
-</span><span style=color:#75715e>     * 跳转 all page 回调
-</span><span style=color:#75715e>     * @param pathname
-</span><span style=color:#75715e>     * @param state
-</span><span style=color:#75715e>     * @param hash
-</span><span style=color:#75715e>     * @param search
-</span><span style=color:#75715e>     */</span>
-    <span style=color:#75715e>// @ts-ignore
-</span><span style=color:#75715e></span>    <span style=color:#a6e22e>historyCallback</span><span style=color:#f92672>:</span> ({<span style=color:#a6e22e>pathname</span>, <span style=color:#a6e22e>state</span>, <span style=color:#a6e22e>hash</span>, <span style=color:#a6e22e>search</span>}) =&gt; {
-    <span style=color:#75715e>// 子项目间页面跳转在main-app中处理；
-</span><span style=color:#75715e></span>        <span style=color:#66d9ef>const</span> {<span style=color:#a6e22e>location</span><span style=color:#f92672>:</span> {<span style=color:#a6e22e>pathname</span><span style=color:#f92672>:</span> <span style=color:#a6e22e>beforePathname</span>,}} <span style=color:#f92672>=</span> <span style=color:#a6e22e>customHistory</span>;
-        <span style=color:#a6e22e>customHistory</span>.<span style=color:#a6e22e>push</span>({<span style=color:#a6e22e>pathname</span>, <span style=color:#a6e22e>hash</span><span style=color:#f92672>:</span> <span style=color:#a6e22e>hash</span> <span style=color:#f92672>||</span> <span style=color:#e6db74>&#39;&#39;</span>, <span style=color:#a6e22e>search</span><span style=color:#f92672>:</span> <span style=color:#a6e22e>search</span> <span style=color:#f92672>||</span> <span style=color:#e6db74>&#39;&#39;</span>}, <span style=color:#a6e22e>state</span> <span style=color:#f92672>||</span> <span style=color:#e6db74>&#39;&#39;</span>)
-    },
-};
-</code></pre></div><h3 id=定义子应用>定义子应用</h3>
-<div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-jsx data-lang=jsx><span style=color:#66d9ef>export</span> <span style=color:#66d9ef>const</span> <span style=color:#a6e22e>getMicroApps</span> <span style=color:#f92672>=</span> (<span style=color:#a6e22e>host</span><span style=color:#f92672>:</span> <span style=color:#a6e22e>string</span>) =&gt; [
-    {
-        <span style=color:#75715e>// 北京 vue
-</span><span style=color:#75715e></span>        <span style=color:#e6db74>&#34;name&#34;</span><span style=color:#f92672>:</span> <span style=color:#e6db74>&#34;web-firm&#34;</span>,
-        <span style=color:#e6db74>&#34;entry&#34;</span><span style=color:#f92672>:</span> <span style=color:#a6e22e>host</span> <span style=color:#f92672>+</span> <span style=color:#e6db74>&#34;:8887&#34;</span>,
-        <span style=color:#e6db74>&#34;container&#34;</span><span style=color:#f92672>:</span> <span style=color:#e6db74>&#34;#subContainer&#34;</span>,
-        <span style=color:#e6db74>&#34;activeRule&#34;</span><span style=color:#f92672>:</span> <span style=color:#e6db74>&#34;/firm&#34;</span>,
-    },
-    {
-        <span style=color:#75715e>// 成都 vue
-</span><span style=color:#75715e></span>        <span style=color:#e6db74>&#34;name&#34;</span><span style=color:#f92672>:</span> <span style=color:#e6db74>&#34;web-member&#34;</span>,
-        <span style=color:#e6db74>&#34;entry&#34;</span><span style=color:#f92672>:</span> <span style=color:#a6e22e>host</span> <span style=color:#f92672>+</span> <span style=color:#e6db74>&#34;:8889&#34;</span>,
-        <span style=color:#e6db74>&#34;container&#34;</span><span style=color:#f92672>:</span> <span style=color:#e6db74>&#34;#subContainer&#34;</span>,
-        <span style=color:#e6db74>&#34;activeRule&#34;</span><span style=color:#f92672>:</span> <span style=color:#e6db74>&#34;/member&#34;</span>,
-    },
-    {
-        <span style=color:#75715e>// 成都 vue 内容
-</span><span style=color:#75715e></span>        <span style=color:#e6db74>&#34;name&#34;</span><span style=color:#f92672>:</span> <span style=color:#e6db74>&#34;web-content&#34;</span>,
-        <span style=color:#e6db74>&#34;entry&#34;</span><span style=color:#f92672>:</span> <span style=color:#a6e22e>host</span> <span style=color:#f92672>+</span> <span style=color:#e6db74>&#34;:8885&#34;</span>,
-        <span style=color:#e6db74>&#34;container&#34;</span><span style=color:#f92672>:</span> <span style=color:#e6db74>&#34;#subContainer&#34;</span>,
-        <span style=color:#e6db74>&#34;activeRule&#34;</span><span style=color:#f92672>:</span> <span style=color:#e6db74>&#34;/content&#34;</span>,
-    },
-    {
-        <span style=color:#75715e>// 北京 react
-</span><span style=color:#75715e></span>        <span style=color:#e6db74>&#34;name&#34;</span><span style=color:#f92672>:</span> <span style=color:#e6db74>&#34;web-hotLine&#34;</span>,
-        <span style=color:#e6db74>&#34;entry&#34;</span><span style=color:#f92672>:</span> <span style=color:#a6e22e>host</span> <span style=color:#f92672>+</span> <span style=color:#e6db74>&#34;:8886&#34;</span>,
-        <span style=color:#e6db74>&#34;container&#34;</span><span style=color:#f92672>:</span> <span style=color:#e6db74>&#34;#subContainer&#34;</span>,
-        <span style=color:#e6db74>&#34;activeRule&#34;</span><span style=color:#f92672>:</span> <span style=color:#e6db74>&#34;/hot&#34;</span>,
-    },
-    {
-        <span style=color:#75715e>//成都 视频制作
-</span><span style=color:#75715e></span>        <span style=color:#a6e22e>name</span><span style=color:#f92672>:</span> <span style=color:#e6db74>&#39;video-product&#39;</span>,
-        <span style=color:#a6e22e>entry</span><span style=color:#f92672>:</span> <span style=color:#a6e22e>host</span> <span style=color:#f92672>+</span> <span style=color:#e6db74>&#39;:8882&#39;</span>,
-        <span style=color:#a6e22e>container</span><span style=color:#f92672>:</span> <span style=color:#e6db74>&#39;#subContainer&#39;</span>,
-        <span style=color:#a6e22e>activeRule</span><span style=color:#f92672>:</span> <span style=color:#e6db74>&#39;/video-product&#39;</span>
-    }
-]
-</code></pre></div><h3 id=注册子应用>注册子应用</h3>
-<div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-jsx data-lang=jsx><span style=color:#a6e22e>registerMicroApps</span>(<span style=color:#a6e22e>getMicroApps</span>(<span style=color:#e6db74>&#39;//&#39;</span> <span style=color:#f92672>+</span> <span style=color:#a6e22e>host</span>), {
-                <span style=color:#a6e22e>beforeLoad</span><span style=color:#f92672>:</span> [<span style=color:#a6e22e>beforeLoad</span>],
-                <span style=color:#a6e22e>beforeMount</span><span style=color:#f92672>:</span> [<span style=color:#a6e22e>beforeMount</span>],
-                <span style=color:#a6e22e>afterMount</span><span style=color:#f92672>:</span> [<span style=color:#a6e22e>afterMount</span>],
-                <span style=color:#a6e22e>beforeUnmount</span><span style=color:#f92672>:</span> [<span style=color:#a6e22e>beforeUnmount</span>],
-                <span style=color:#a6e22e>afterUnmount</span><span style=color:#f92672>:</span> [<span style=color:#a6e22e>afterUnmount</span>],
-            });
-</code></pre></div><h2 id=child-app-1-react>child-app-1 【react】</h2>
-<p>入口文件</p>
-<div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-jsx data-lang=jsx>
-<span style=color:#66d9ef>function</span> <span style=color:#a6e22e>render</span>(<span style=color:#a6e22e>props</span><span style=color:#f92672>:</span> <span style=color:#a6e22e>any</span>) {
-    <span style=color:#66d9ef>const</span> { <span style=color:#a6e22e>container</span> } <span style=color:#f92672>=</span> <span style=color:#a6e22e>props</span>;
-    <span style=color:#a6e22e>ReactDOM</span>.<span style=color:#a6e22e>render</span>(&lt;<span style=color:#f92672>ConfigProvider</span> <span style=color:#a6e22e>locale</span><span style=color:#f92672>=</span>{<span style=color:#a6e22e>zhCN</span>}&gt;
-        &lt;<span style=color:#f92672>Provider</span> <span style=color:#a6e22e>store</span><span style=color:#f92672>=</span>{<span style=color:#a6e22e>store</span>}&gt;
-            &lt;<span style=color:#f92672>PrivateRoute</span> /&gt;
-        &lt;/<span style=color:#f92672>Provider</span>&gt;
-    &lt;/<span style=color:#f92672>ConfigProvider</span>&gt;, <span style=color:#a6e22e>container</span> <span style=color:#f92672>?</span> <span style=color:#a6e22e>container</span>.<span style=color:#a6e22e>querySelector</span>(<span style=color:#e6db74>&#39;#root&#39;</span>) <span style=color:#f92672>:</span> document.<span style=color:#a6e22e>querySelector</span>(<span style=color:#e6db74>&#39;#root&#39;</span>));
-}
-
-<span style=color:#66d9ef>function</span> <span style=color:#a6e22e>storeTest</span>(<span style=color:#a6e22e>props</span>) {
-    <span style=color:#75715e>// @ts-ignore
-</span><span style=color:#75715e></span>    <span style=color:#a6e22e>props</span>.<span style=color:#a6e22e>onGlobalStateChange</span>((<span style=color:#a6e22e>value</span>, <span style=color:#a6e22e>prev</span>) =&gt; <span style=color:#a6e22e>console</span>.<span style=color:#a6e22e>log</span>(<span style=color:#e6db74>`[</span><span style=color:#e6db74>${</span><span style=color:#a6e22e>props</span>.<span style=color:#a6e22e>name</span><span style=color:#e6db74>}</span><span style=color:#e6db74> props change]:`</span>, <span style=color:#a6e22e>value</span>, <span style=color:#a6e22e>prev</span>), <span style=color:#66d9ef>true</span>);
-}
-
-<span style=color:#66d9ef>export</span> <span style=color:#66d9ef>async</span> <span style=color:#66d9ef>function</span> <span style=color:#a6e22e>bootstrap</span>() {
-    <span style=color:#a6e22e>console</span>.<span style=color:#a6e22e>log</span>(<span style=color:#e6db74>&#39;[web-hotLine] react app bootstraped&#39;</span>);
-}
-
-<span style=color:#66d9ef>export</span> <span style=color:#66d9ef>async</span> <span style=color:#66d9ef>function</span> <span style=color:#a6e22e>mount</span>(<span style=color:#a6e22e>props</span><span style=color:#f92672>:</span> <span style=color:#a6e22e>any</span>) {
-    <span style=color:#a6e22e>console</span>.<span style=color:#a6e22e>log</span>(<span style=color:#e6db74>&#39;[web-hotLine] props from main framework&#39;</span>, <span style=color:#a6e22e>props</span>);
-    <span style=color:#a6e22e>storeTest</span>(<span style=color:#a6e22e>props</span>);
-    <span style=color:#a6e22e>render</span>(<span style=color:#a6e22e>props</span>);
-}
-
-<span style=color:#66d9ef>export</span> <span style=color:#66d9ef>async</span> <span style=color:#66d9ef>function</span> <span style=color:#a6e22e>unmount</span>(<span style=color:#a6e22e>props</span><span style=color:#f92672>:</span> <span style=color:#a6e22e>any</span>) {
-    <span style=color:#66d9ef>const</span> { <span style=color:#a6e22e>container</span> } <span style=color:#f92672>=</span> <span style=color:#a6e22e>props</span>;
-    <span style=color:#a6e22e>ReactDOM</span>.<span style=color:#a6e22e>unmountComponentAtNode</span>(<span style=color:#a6e22e>container</span> <span style=color:#f92672>?</span> <span style=color:#a6e22e>container</span>.<span style=color:#a6e22e>querySelector</span>(<span style=color:#e6db74>&#39;#root&#39;</span>) <span style=color:#f92672>:</span> document.<span style=color:#a6e22e>querySelector</span>(<span style=color:#e6db74>&#39;#root&#39;</span>));
-}
-
-<span style=color:#66d9ef>if</span> (<span style=color:#f92672>!</span>window.<span style=color:#a6e22e>__POWERED_BY_QIANKUN__</span>) {
-    <span style=color:#a6e22e>render</span>({});
-}
-</code></pre></div><h3 id=child-app-2>child-app-2</h3>
-<p>入口文件 main.ts</p>
-<div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-jsx data-lang=jsx><span style=color:#66d9ef>export</span> <span style=color:#66d9ef>function</span> <span style=color:#a6e22e>render</span>(<span style=color:#a6e22e>props</span> <span style=color:#f92672>=</span> {}) {
-    <span style=color:#a6e22e>console</span>.<span style=color:#a6e22e>log</span>(<span style=color:#e6db74>&#39;测试测试测试&#39;</span>)
-    <span style=color:#75715e>// @ts-ignore
-</span><span style=color:#75715e></span>    <span style=color:#66d9ef>const</span> { <span style=color:#a6e22e>container</span> } <span style=color:#f92672>=</span> <span style=color:#a6e22e>props</span>
-    <span style=color:#a6e22e>console</span>.<span style=color:#a6e22e>log</span>(<span style=color:#e6db74>&#39;container:&#39;</span> <span style=color:#f92672>+</span> <span style=color:#a6e22e>container</span>)
-    <span style=color:#a6e22e>instance</span> <span style=color:#f92672>=</span> <span style=color:#66d9ef>new</span> <span style=color:#a6e22e>Vue</span>({
-        <span style=color:#a6e22e>router</span>,
-        <span style=color:#a6e22e>store</span>,
-        <span style=color:#a6e22e>render</span><span style=color:#f92672>:</span> <span style=color:#a6e22e>h</span> =&gt; <span style=color:#a6e22e>h</span>(<span style=color:#a6e22e>App</span>)
-    }).<span style=color:#a6e22e>$mount</span>(<span style=color:#a6e22e>container</span> <span style=color:#f92672>?</span> <span style=color:#a6e22e>container</span>.<span style=color:#a6e22e>querySelector</span>(<span style=color:#e6db74>&#39;#app&#39;</span>) <span style=color:#f92672>:</span> <span style=color:#e6db74>&#39;#app&#39;</span>)
-}
-
-<span style=color:#66d9ef>export</span> <span style=color:#66d9ef>async</span> <span style=color:#66d9ef>function</span> <span style=color:#a6e22e>mount</span>(<span style=color:#a6e22e>props</span>) {
-    <span style=color:#a6e22e>console</span>.<span style=color:#a6e22e>log</span>(<span style=color:#e6db74>&#39;主应用传递的props:&#39;</span>)
-    <span style=color:#a6e22e>console</span>.<span style=color:#a6e22e>log</span>(<span style=color:#a6e22e>props</span>)
-    <span style=color:#a6e22e>storeTest</span>(<span style=color:#a6e22e>props</span>)
-    <span style=color:#a6e22e>setGlobalState</span> <span style=color:#f92672>=</span> <span style=color:#a6e22e>props</span>.<span style=color:#a6e22e>setGlobalState</span>
-    <span style=color:#a6e22e>render</span>(<span style=color:#a6e22e>props</span>)
-}
-
-<span style=color:#66d9ef>function</span> <span style=color:#a6e22e>storeTest</span>(<span style=color:#a6e22e>props</span>) {
-    <span style=color:#75715e>// @ts-ignore
-</span><span style=color:#75715e></span>    <span style=color:#a6e22e>props</span>.<span style=color:#a6e22e>onGlobalStateChange</span>((<span style=color:#a6e22e>value</span>, <span style=color:#a6e22e>prev</span>) =&gt; <span style=color:#a6e22e>console</span>.<span style=color:#a6e22e>log</span>(<span style=color:#e6db74>`[</span><span style=color:#e6db74>${</span><span style=color:#a6e22e>props</span>.<span style=color:#a6e22e>name</span><span style=color:#e6db74>}</span><span style=color:#e6db74> props change]:`</span>, <span style=color:#a6e22e>value</span>, <span style=color:#a6e22e>prev</span>), <span style=color:#66d9ef>true</span>);
-}
-
-<span style=color:#66d9ef>if</span> (<span style=color:#f92672>!</span>window.<span style=color:#a6e22e>__POWERED_BY_QIANKUN__</span>) {
-    <span style=color:#a6e22e>render</span>()
-}
-
-<span style=color:#66d9ef>export</span> <span style=color:#66d9ef>async</span> <span style=color:#66d9ef>function</span> <span style=color:#a6e22e>unmount</span>() {
-    <span style=color:#a6e22e>instance</span>.<span style=color:#a6e22e>$destroy</span>()
-    <span style=color:#a6e22e>instance</span>.<span style=color:#a6e22e>$el</span>.<span style=color:#a6e22e>innerHTML</span> <span style=color:#f92672>=</span> <span style=color:#e6db74>&#39;&#39;</span>
-    <span style=color:#a6e22e>instance</span> <span style=color:#f92672>=</span> <span style=color:#66d9ef>null</span>
-}
-</code></pre></div><h1 id=数据传递>数据传递</h1>
-<h2 id=存储>存储</h2>
-<h3 id=localstorage>localStorage</h3>
-<h3 id=documentcookie>document.cookie</h3>
-<h2 id=父子组件传值>父子组件传值</h2>
-<h2 id=子组件间传值>子组件间传值</h2>
-<h1 id=路由>路由</h1>
-<p>可任意跳转</p>
-<h1 id=部署>部署</h1>
-<p><img src=Micro-Frontends%20with%20qiankun%20f6f7e51842ef440ebde3ed5eb8e910ab/Untitled.png alt=Micro-Frontends%20with%20qiankun%20f6f7e51842ef440ebde3ed5eb8e910ab/Untitled.png></p>
-<p><img src=Micro-Frontends%20with%20qiankun%20f6f7e51842ef440ebde3ed5eb8e910ab/Untitled%201.png alt=Micro-Frontends%20with%20qiankun%20f6f7e51842ef440ebde3ed5eb8e910ab/Untitled%201.png></p>
-<h2 id=nginx-配置>NGINX 配置</h2>
-<p>为每个项目配置服务</p>
-<div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-jsx data-lang=jsx><span style=color:#960050;background-color:#1e0010>#</span><span style=color:#a6e22e>主应用</span>
-                <span style=color:#a6e22e>location</span> <span style=color:#f92672>/</span> {
-                        <span style=color:#a6e22e>rewrite</span> <span style=color:#f92672>/</span><span style=color:#a6e22e>h5</span><span style=color:#f92672>/</span>(.<span style=color:#f92672>*</span>) <span style=color:#a6e22e>http</span><span style=color:#f92672>:</span><span style=color:#75715e>//10.1.62.113:8888/video-product-h5;
-</span><span style=color:#75715e></span>                        <span style=color:#66d9ef>if</span> (<span style=color:#a6e22e>$request_filename</span> <span style=color:#f92672>~*</span> <span style=color:#f92672>^</span>.<span style=color:#f92672>*?</span>.(<span style=color:#a6e22e>html</span><span style=color:#f92672>|</span><span style=color:#a6e22e>htm</span>)<span style=color:#a6e22e>$</span>) {
-                                <span style=color:#a6e22e>add_header</span> <span style=color:#a6e22e>Cache</span><span style=color:#f92672>-</span><span style=color:#a6e22e>Control</span> <span style=color:#a6e22e>no</span><span style=color:#f92672>-</span><span style=color:#a6e22e>cache</span>,<span style=color:#a6e22e>no</span><span style=color:#f92672>-</span><span style=color:#a6e22e>store</span>,<span style=color:#a6e22e>must</span><span style=color:#f92672>-</span><span style=color:#a6e22e>revalidate</span>;
-                        }
-                        <span style=color:#a6e22e>root</span> <span style=color:#f92672>/</span><span style=color:#a6e22e>home</span><span style=color:#f92672>/</span><span style=color:#a6e22e>ccbop</span><span style=color:#f92672>/</span><span style=color:#a6e22e>wwwRoot</span><span style=color:#f92672>/</span><span style=color:#a6e22e>ccbop</span><span style=color:#f92672>-</span><span style=color:#a6e22e>frontend</span><span style=color:#f92672>/</span><span style=color:#a6e22e>main</span><span style=color:#f92672>-</span><span style=color:#a6e22e>app</span>;
-                        <span style=color:#a6e22e>index</span> <span style=color:#a6e22e>index</span>.<span style=color:#a6e22e>html</span>;
-                        <span style=color:#a6e22e>try_files</span> <span style=color:#a6e22e>$uri</span> <span style=color:#a6e22e>$uri</span><span style=color:#f92672>/</span> <span style=color:#960050;background-color:#1e0010>/index.html;</span>
-                }
-
-                <span style=color:#960050;background-color:#1e0010>#</span><span style=color:#a6e22e>子应用</span>
-                <span style=color:#a6e22e>location</span> <span style=color:#f92672>/</span><span style=color:#a6e22e>subapp</span> {
-                        <span style=color:#66d9ef>if</span> (<span style=color:#a6e22e>$request_filename</span> <span style=color:#f92672>~*</span> <span style=color:#f92672>^</span>.<span style=color:#f92672>*?</span>.(<span style=color:#a6e22e>html</span><span style=color:#f92672>|</span><span style=color:#a6e22e>htm</span>)<span style=color:#a6e22e>$</span>) {
-                                <span style=color:#a6e22e>add_header</span> <span style=color:#a6e22e>Cache</span><span style=color:#f92672>-</span><span style=color:#a6e22e>Control</span> <span style=color:#a6e22e>no</span><span style=color:#f92672>-</span><span style=color:#a6e22e>cache</span>,<span style=color:#a6e22e>no</span><span style=color:#f92672>-</span><span style=color:#a6e22e>store</span>,<span style=color:#a6e22e>must</span><span style=color:#f92672>-</span><span style=color:#a6e22e>revalidate</span>;
-                        }
-                        <span style=color:#a6e22e>alias</span> <span style=color:#f92672>/</span><span style=color:#a6e22e>home</span><span style=color:#f92672>/</span><span style=color:#a6e22e>ccbop</span><span style=color:#f92672>/</span><span style=color:#a6e22e>wwwRoot</span><span style=color:#f92672>/</span><span style=color:#a6e22e>ccbop</span><span style=color:#f92672>-</span><span style=color:#a6e22e>frontend</span><span style=color:#f92672>/</span><span style=color:#a6e22e>subapp</span>;
-                        <span style=color:#a6e22e>try_files</span> <span style=color:#a6e22e>$uri</span> <span style=color:#a6e22e>$uri</span><span style=color:#f92672>/</span> <span style=color:#960050;background-color:#1e0010>/index.html;</span>
-                }
-                <span style=color:#960050;background-color:#1e0010>#</span><span style=color:#a6e22e>视频制作h5</span>
-                <span style=color:#a6e22e>location</span> <span style=color:#f92672>/</span><span style=color:#a6e22e>video</span><span style=color:#f92672>-</span><span style=color:#a6e22e>product</span><span style=color:#f92672>-</span><span style=color:#a6e22e>h5</span> {
-                        <span style=color:#66d9ef>if</span> (<span style=color:#a6e22e>$request_filename</span> <span style=color:#f92672>~*</span> <span style=color:#f92672>^</span>.<span style=color:#f92672>*?</span>.(<span style=color:#a6e22e>html</span><span style=color:#f92672>|</span><span style=color:#a6e22e>htm</span>)<span style=color:#a6e22e>$</span>) {
-                                <span style=color:#a6e22e>add_header</span> <span style=color:#a6e22e>Cache</span><span style=color:#f92672>-</span><span style=color:#a6e22e>Control</span> <span style=color:#a6e22e>no</span><span style=color:#f92672>-</span><span style=color:#a6e22e>cache</span>,<span style=color:#a6e22e>no</span><span style=color:#f92672>-</span><span style=color:#a6e22e>store</span>,<span style=color:#a6e22e>must</span><span style=color:#f92672>-</span><span style=color:#a6e22e>revalidate</span>;
-                        }
-                        <span style=color:#a6e22e>alias</span> <span style=color:#f92672>/</span><span style=color:#a6e22e>home</span><span style=color:#f92672>/</span><span style=color:#a6e22e>ccbop</span><span style=color:#f92672>/</span><span style=color:#a6e22e>wwwRoot</span><span style=color:#f92672>/</span><span style=color:#a6e22e>ccbop</span><span style=color:#f92672>-</span><span style=color:#a6e22e>frontend</span><span style=color:#f92672>/</span><span style=color:#a6e22e>video</span><span style=color:#f92672>-</span><span style=color:#a6e22e>product</span><span style=color:#f92672>-</span><span style=color:#a6e22e>h5</span>;
-                        <span style=color:#a6e22e>try_files</span> <span style=color:#a6e22e>$uri</span> <span style=color:#a6e22e>$uri</span><span style=color:#f92672>/</span> <span style=color:#960050;background-color:#1e0010>/video-product-h5/index.html;</span>
-                }
-</code></pre></div><h2 id=静态资源处理>静态资源处理</h2>
-<p>要请求到正确的路径</p>
-<div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-jsx data-lang=jsx><span style=color:#75715e>// vue.config.js
-</span><span style=color:#75715e></span><span style=color:#a6e22e>module</span>.<span style=color:#a6e22e>exports</span> <span style=color:#f92672>=</span> {
-    <span style=color:#a6e22e>outputDir</span><span style=color:#f92672>:</span> <span style=color:#e6db74>&#39;dist&#39;</span>,
-    <span style=color:#a6e22e>assetsDir</span><span style=color:#f92672>:</span> <span style=color:#e6db74>&#39;firmStatic&#39;</span>,
-		<span style=color:#a6e22e>port</span><span style=color:#f92672>:</span> <span style=color:#ae81ff>8887</span>
-}
-</code></pre></div><p>github 链接</p>
-</div>
-<h1 class="text-3xl my-12">留下你的脚印 👣 </h1>
-<div id=disqus_thread>
-</div>
-<script type=text/javascript>(function(){var a,b;if(window.location.hostname=="localhost")return;a=document.createElement('script'),a.type='text/javascript',a.async=!0,b='visionary',a.src='//'+b+'.disqus.com/embed.js',(document.getElementsByTagName('head')[0]||document.getElementsByTagName('body')[0]).appendChild(a)})()</script>
-<noscript>Please enable JavaScript to view the <a href=https://disqus.com/?ref_noscript>comments powered by Disqus.</a></noscript>
-</article>
-</main><footer class="w-full text-center p-4 text-xs text-gray-400">
+<li>child-app-1【react】</li><li>child-app-2【vue】</li><li>more</li></ul></li></ul><h2 id=main-app-react>main-app 【react】</h2><div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-jsx data-lang=jsx><span style=display:flex><span><span style=color:#66d9ef>import</span> {
+</span></span><span style=display:flex><span>    <span style=color:#a6e22e>addGlobalUncaughtErrorHandler</span>,
+</span></span><span style=display:flex><span>    <span style=color:#a6e22e>initGlobalState</span>,
+</span></span><span style=display:flex><span>    <span style=color:#a6e22e>MicroAppStateActions</span>,
+</span></span><span style=display:flex><span>    <span style=color:#a6e22e>runAfterFirstMounted</span>,
+</span></span><span style=display:flex><span>    <span style=color:#a6e22e>start</span>
+</span></span><span style=display:flex><span>} <span style=color:#a6e22e>from</span> <span style=color:#e6db74>&#39;qiankun&#39;</span>;
+</span></span><span style=display:flex><span><span style=color:#66d9ef>import</span> { <span style=color:#a6e22e>state</span> } <span style=color:#a6e22e>from</span> <span style=color:#e6db74>&#34;./config/initGlobalState&#34;</span>;
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span><span style=color:#a6e22e>ReactDOM</span>.<span style=color:#a6e22e>render</span>(
+</span></span><span style=display:flex><span><span style=color:#75715e>/*react component*/</span>
+</span></span><span style=display:flex><span>	&lt;<span style=color:#f92672>div</span>&gt;
+</span></span><span style=display:flex><span>	{<span style=color:#75715e>/* header */</span>}
+</span></span><span style=display:flex><span>  {<span style=color:#75715e>/* aside bar*/</span>}
+</span></span><span style=display:flex><span>		&lt;<span style=color:#f92672>div</span> <span style=color:#a6e22e>id</span><span style=color:#f92672>=</span><span style=color:#e6db74>&#34;subContainer&#34;</span>&gt;
+</span></span><span style=display:flex><span>      {<span style=color:#75715e>/* 子项目页面展示区域，当其加载 该dom内部会被替换*/</span>} 
+</span></span><span style=display:flex><span>			&lt;<span style=color:#f92672>NoPage</span> /&gt;
+</span></span><span style=display:flex><span>    &lt;/<span style=color:#f92672>div</span>&gt;
+</span></span><span style=display:flex><span>	{<span style=color:#75715e>/* footer */</span>}
+</span></span><span style=display:flex><span>  &lt;<span style=color:#f92672>div</span>/&gt;
+</span></span><span style=display:flex><span>)
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span><span style=color:#a6e22e>start</span>({
+</span></span><span style=display:flex><span>    <span style=color:#a6e22e>prefetch</span><span style=color:#f92672>:</span> <span style=color:#e6db74>&#39;all&#39;</span>
+</span></span><span style=display:flex><span>});
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span><span style=color:#a6e22e>runAfterFirstMounted</span>(() =&gt; {
+</span></span><span style=display:flex><span>    <span style=color:#a6e22e>console</span>.<span style=color:#a6e22e>log</span>(<span style=color:#e6db74>&#39;[MainApp] first app mounted&#39;</span>);
+</span></span><span style=display:flex><span>});
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span><span style=color:#a6e22e>addGlobalUncaughtErrorHandler</span>(<span style=color:#a6e22e>event</span> =&gt; <span style=color:#a6e22e>console</span>.<span style=color:#a6e22e>log</span>(<span style=color:#a6e22e>event</span>));
+</span></span><span style=display:flex><span><span style=color:#75715e>// 传递state
+</span></span></span><span style=display:flex><span><span style=color:#75715e></span><span style=color:#66d9ef>export</span> <span style=color:#66d9ef>const</span> <span style=color:#a6e22e>globalActions</span><span style=color:#f92672>:</span> <span style=color:#a6e22e>MicroAppStateActions</span> <span style=color:#f92672>=</span> <span style=color:#a6e22e>initGlobalState</span>(<span style=color:#a6e22e>state</span>);
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span><span style=color:#a6e22e>globalActions</span>.<span style=color:#a6e22e>onGlobalStateChange</span>((<span style=color:#a6e22e>state</span>, <span style=color:#a6e22e>prev</span>) =&gt; {
+</span></span><span style=display:flex><span>    <span style=color:#a6e22e>console</span>.<span style=color:#a6e22e>log</span>(<span style=color:#e6db74>&#39;[MainApp] &#39;</span>, <span style=color:#a6e22e>state</span>, <span style=color:#a6e22e>prev</span>);
+</span></span><span style=display:flex><span>    <span style=color:#66d9ef>if</span> (<span style=color:#a6e22e>state</span>.<span style=color:#a6e22e>login</span>.<span style=color:#a6e22e>show</span>) {
+</span></span><span style=display:flex><span><span style=color:#75715e>// 在主项目中处理子项目发来的消息
+</span></span></span><span style=display:flex><span><span style=color:#75715e></span>        <span style=color:#a6e22e>store</span>.<span style=color:#a6e22e>dispatch</span>({ <span style=color:#a6e22e>type</span><span style=color:#f92672>:</span> <span style=color:#a6e22e>SET_USER_LOGIN</span>, <span style=color:#a6e22e>payload</span><span style=color:#f92672>:</span> { <span style=color:#a6e22e>hideLogin</span><span style=color:#f92672>:</span> <span style=color:#66d9ef>false</span>, <span style=color:#a6e22e>redirectUrl</span><span style=color:#f92672>:</span> <span style=color:#a6e22e>state</span>.<span style=color:#a6e22e>login</span>.<span style=color:#a6e22e>redirect</span>, <span style=color:#a6e22e>addTab</span><span style=color:#f92672>:</span> <span style=color:#f92672>!!</span><span style=color:#a6e22e>state</span>.<span style=color:#a6e22e>login</span>.<span style=color:#a6e22e>addTab</span> } })
+</span></span><span style=display:flex><span>        <span style=color:#75715e>//显示登录弹窗
+</span></span></span><span style=display:flex><span><span style=color:#75715e></span>    }
+</span></span><span style=display:flex><span>});
+</span></span></code></pre></div><h3 id=初始化全局状态-initglobalstatejs>初始化全局状态 initGlobalState.js</h3><div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-jsx data-lang=jsx><span style=display:flex><span><span style=color:#66d9ef>const</span> <span style=color:#a6e22e>customHistory</span> <span style=color:#f92672>=</span> <span style=color:#a6e22e>createBrowserHistory</span>();
+</span></span><span style=display:flex><span><span style=color:#66d9ef>export</span> <span style=color:#66d9ef>const</span> <span style=color:#a6e22e>state</span> <span style=color:#f92672>=</span> {
+</span></span><span style=display:flex><span>    <span style=color:#a6e22e>user</span><span style=color:#f92672>:</span> {
+</span></span><span style=display:flex><span>        <span style=color:#a6e22e>id</span><span style=color:#f92672>:</span> <span style=color:#a6e22e>Storage</span>.<span style=color:#a6e22e>getItem</span>(<span style=color:#e6db74>&#39;operatorId&#39;</span>),
+</span></span><span style=display:flex><span>        <span style=color:#a6e22e>name</span><span style=color:#f92672>:</span> <span style=color:#a6e22e>Storage</span>.<span style=color:#a6e22e>getItem</span>(<span style=color:#e6db74>&#39;userName&#39;</span>),
+</span></span><span style=display:flex><span>        <span style=color:#a6e22e>phone</span><span style=color:#f92672>:</span> <span style=color:#a6e22e>Storage</span>.<span style=color:#a6e22e>getItem</span>(<span style=color:#e6db74>&#39;mobile&#39;</span>),
+</span></span><span style=display:flex><span>        <span style=color:#a6e22e>role</span><span style=color:#f92672>:</span> <span style=color:#a6e22e>Storage</span>.<span style=color:#a6e22e>getItem</span>(<span style=color:#e6db74>&#39;role&#39;</span>),
+</span></span><span style=display:flex><span>        <span style=color:#a6e22e>token</span><span style=color:#f92672>:</span> <span style=color:#a6e22e>Storage</span>.<span style=color:#a6e22e>getItem</span>(<span style=color:#e6db74>&#39;token&#39;</span>),
+</span></span><span style=display:flex><span>        <span style=color:#a6e22e>oplevel</span><span style=color:#f92672>:</span> <span style=color:#a6e22e>Storage</span>.<span style=color:#a6e22e>getItem</span>(<span style=color:#e6db74>&#39;roleId&#39;</span>),
+</span></span><span style=display:flex><span>        <span style=color:#a6e22e>provinceId</span><span style=color:#f92672>:</span> <span style=color:#a6e22e>Storage</span>.<span style=color:#a6e22e>getItem</span>(<span style=color:#e6db74>&#39;provinceId&#39;</span>)
+</span></span><span style=display:flex><span>    },
+</span></span><span style=display:flex><span>    <span style=color:#75715e>/**
+</span></span></span><span style=display:flex><span><span style=color:#75715e>     * 跳转 all page 回调
+</span></span></span><span style=display:flex><span><span style=color:#75715e>     * @param pathname
+</span></span></span><span style=display:flex><span><span style=color:#75715e>     * @param state
+</span></span></span><span style=display:flex><span><span style=color:#75715e>     * @param hash
+</span></span></span><span style=display:flex><span><span style=color:#75715e>     * @param search
+</span></span></span><span style=display:flex><span><span style=color:#75715e>     */</span>
+</span></span><span style=display:flex><span>    <span style=color:#75715e>// @ts-ignore
+</span></span></span><span style=display:flex><span><span style=color:#75715e></span>    <span style=color:#a6e22e>historyCallback</span><span style=color:#f92672>:</span> ({<span style=color:#a6e22e>pathname</span>, <span style=color:#a6e22e>state</span>, <span style=color:#a6e22e>hash</span>, <span style=color:#a6e22e>search</span>}) =&gt; {
+</span></span><span style=display:flex><span>    <span style=color:#75715e>// 子项目间页面跳转在main-app中处理；
+</span></span></span><span style=display:flex><span><span style=color:#75715e></span>        <span style=color:#66d9ef>const</span> {<span style=color:#a6e22e>location</span><span style=color:#f92672>:</span> {<span style=color:#a6e22e>pathname</span><span style=color:#f92672>:</span> <span style=color:#a6e22e>beforePathname</span>,}} <span style=color:#f92672>=</span> <span style=color:#a6e22e>customHistory</span>;
+</span></span><span style=display:flex><span>        <span style=color:#a6e22e>customHistory</span>.<span style=color:#a6e22e>push</span>({<span style=color:#a6e22e>pathname</span>, <span style=color:#a6e22e>hash</span><span style=color:#f92672>:</span> <span style=color:#a6e22e>hash</span> <span style=color:#f92672>||</span> <span style=color:#e6db74>&#39;&#39;</span>, <span style=color:#a6e22e>search</span><span style=color:#f92672>:</span> <span style=color:#a6e22e>search</span> <span style=color:#f92672>||</span> <span style=color:#e6db74>&#39;&#39;</span>}, <span style=color:#a6e22e>state</span> <span style=color:#f92672>||</span> <span style=color:#e6db74>&#39;&#39;</span>)
+</span></span><span style=display:flex><span>    },
+</span></span><span style=display:flex><span>};
+</span></span></code></pre></div><h3 id=定义子应用>定义子应用</h3><div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-jsx data-lang=jsx><span style=display:flex><span><span style=color:#66d9ef>export</span> <span style=color:#66d9ef>const</span> <span style=color:#a6e22e>getMicroApps</span> <span style=color:#f92672>=</span> (<span style=color:#a6e22e>host</span><span style=color:#f92672>:</span> <span style=color:#a6e22e>string</span>) =&gt; [
+</span></span><span style=display:flex><span>    {
+</span></span><span style=display:flex><span>        <span style=color:#75715e>// 北京 vue
+</span></span></span><span style=display:flex><span><span style=color:#75715e></span>        <span style=color:#e6db74>&#34;name&#34;</span><span style=color:#f92672>:</span> <span style=color:#e6db74>&#34;web-firm&#34;</span>,
+</span></span><span style=display:flex><span>        <span style=color:#e6db74>&#34;entry&#34;</span><span style=color:#f92672>:</span> <span style=color:#a6e22e>host</span> <span style=color:#f92672>+</span> <span style=color:#e6db74>&#34;:8887&#34;</span>,
+</span></span><span style=display:flex><span>        <span style=color:#e6db74>&#34;container&#34;</span><span style=color:#f92672>:</span> <span style=color:#e6db74>&#34;#subContainer&#34;</span>,
+</span></span><span style=display:flex><span>        <span style=color:#e6db74>&#34;activeRule&#34;</span><span style=color:#f92672>:</span> <span style=color:#e6db74>&#34;/firm&#34;</span>,
+</span></span><span style=display:flex><span>    },
+</span></span><span style=display:flex><span>    {
+</span></span><span style=display:flex><span>        <span style=color:#75715e>// 成都 vue
+</span></span></span><span style=display:flex><span><span style=color:#75715e></span>        <span style=color:#e6db74>&#34;name&#34;</span><span style=color:#f92672>:</span> <span style=color:#e6db74>&#34;web-member&#34;</span>,
+</span></span><span style=display:flex><span>        <span style=color:#e6db74>&#34;entry&#34;</span><span style=color:#f92672>:</span> <span style=color:#a6e22e>host</span> <span style=color:#f92672>+</span> <span style=color:#e6db74>&#34;:8889&#34;</span>,
+</span></span><span style=display:flex><span>        <span style=color:#e6db74>&#34;container&#34;</span><span style=color:#f92672>:</span> <span style=color:#e6db74>&#34;#subContainer&#34;</span>,
+</span></span><span style=display:flex><span>        <span style=color:#e6db74>&#34;activeRule&#34;</span><span style=color:#f92672>:</span> <span style=color:#e6db74>&#34;/member&#34;</span>,
+</span></span><span style=display:flex><span>    },
+</span></span><span style=display:flex><span>    {
+</span></span><span style=display:flex><span>        <span style=color:#75715e>// 成都 vue 内容
+</span></span></span><span style=display:flex><span><span style=color:#75715e></span>        <span style=color:#e6db74>&#34;name&#34;</span><span style=color:#f92672>:</span> <span style=color:#e6db74>&#34;web-content&#34;</span>,
+</span></span><span style=display:flex><span>        <span style=color:#e6db74>&#34;entry&#34;</span><span style=color:#f92672>:</span> <span style=color:#a6e22e>host</span> <span style=color:#f92672>+</span> <span style=color:#e6db74>&#34;:8885&#34;</span>,
+</span></span><span style=display:flex><span>        <span style=color:#e6db74>&#34;container&#34;</span><span style=color:#f92672>:</span> <span style=color:#e6db74>&#34;#subContainer&#34;</span>,
+</span></span><span style=display:flex><span>        <span style=color:#e6db74>&#34;activeRule&#34;</span><span style=color:#f92672>:</span> <span style=color:#e6db74>&#34;/content&#34;</span>,
+</span></span><span style=display:flex><span>    },
+</span></span><span style=display:flex><span>    {
+</span></span><span style=display:flex><span>        <span style=color:#75715e>// 北京 react
+</span></span></span><span style=display:flex><span><span style=color:#75715e></span>        <span style=color:#e6db74>&#34;name&#34;</span><span style=color:#f92672>:</span> <span style=color:#e6db74>&#34;web-hotLine&#34;</span>,
+</span></span><span style=display:flex><span>        <span style=color:#e6db74>&#34;entry&#34;</span><span style=color:#f92672>:</span> <span style=color:#a6e22e>host</span> <span style=color:#f92672>+</span> <span style=color:#e6db74>&#34;:8886&#34;</span>,
+</span></span><span style=display:flex><span>        <span style=color:#e6db74>&#34;container&#34;</span><span style=color:#f92672>:</span> <span style=color:#e6db74>&#34;#subContainer&#34;</span>,
+</span></span><span style=display:flex><span>        <span style=color:#e6db74>&#34;activeRule&#34;</span><span style=color:#f92672>:</span> <span style=color:#e6db74>&#34;/hot&#34;</span>,
+</span></span><span style=display:flex><span>    },
+</span></span><span style=display:flex><span>    {
+</span></span><span style=display:flex><span>        <span style=color:#75715e>//成都 视频制作
+</span></span></span><span style=display:flex><span><span style=color:#75715e></span>        <span style=color:#a6e22e>name</span><span style=color:#f92672>:</span> <span style=color:#e6db74>&#39;video-product&#39;</span>,
+</span></span><span style=display:flex><span>        <span style=color:#a6e22e>entry</span><span style=color:#f92672>:</span> <span style=color:#a6e22e>host</span> <span style=color:#f92672>+</span> <span style=color:#e6db74>&#39;:8882&#39;</span>,
+</span></span><span style=display:flex><span>        <span style=color:#a6e22e>container</span><span style=color:#f92672>:</span> <span style=color:#e6db74>&#39;#subContainer&#39;</span>,
+</span></span><span style=display:flex><span>        <span style=color:#a6e22e>activeRule</span><span style=color:#f92672>:</span> <span style=color:#e6db74>&#39;/video-product&#39;</span>
+</span></span><span style=display:flex><span>    }
+</span></span><span style=display:flex><span>]
+</span></span></code></pre></div><h3 id=注册子应用>注册子应用</h3><div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-jsx data-lang=jsx><span style=display:flex><span><span style=color:#a6e22e>registerMicroApps</span>(<span style=color:#a6e22e>getMicroApps</span>(<span style=color:#e6db74>&#39;//&#39;</span> <span style=color:#f92672>+</span> <span style=color:#a6e22e>host</span>), {
+</span></span><span style=display:flex><span>                <span style=color:#a6e22e>beforeLoad</span><span style=color:#f92672>:</span> [<span style=color:#a6e22e>beforeLoad</span>],
+</span></span><span style=display:flex><span>                <span style=color:#a6e22e>beforeMount</span><span style=color:#f92672>:</span> [<span style=color:#a6e22e>beforeMount</span>],
+</span></span><span style=display:flex><span>                <span style=color:#a6e22e>afterMount</span><span style=color:#f92672>:</span> [<span style=color:#a6e22e>afterMount</span>],
+</span></span><span style=display:flex><span>                <span style=color:#a6e22e>beforeUnmount</span><span style=color:#f92672>:</span> [<span style=color:#a6e22e>beforeUnmount</span>],
+</span></span><span style=display:flex><span>                <span style=color:#a6e22e>afterUnmount</span><span style=color:#f92672>:</span> [<span style=color:#a6e22e>afterUnmount</span>],
+</span></span><span style=display:flex><span>            });
+</span></span></code></pre></div><h2 id=child-app-1-react>child-app-1 【react】</h2><p>入口文件</p><div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-jsx data-lang=jsx><span style=display:flex><span>
+</span></span><span style=display:flex><span><span style=color:#66d9ef>function</span> <span style=color:#a6e22e>render</span>(<span style=color:#a6e22e>props</span><span style=color:#f92672>:</span> <span style=color:#a6e22e>any</span>) {
+</span></span><span style=display:flex><span>    <span style=color:#66d9ef>const</span> { <span style=color:#a6e22e>container</span> } <span style=color:#f92672>=</span> <span style=color:#a6e22e>props</span>;
+</span></span><span style=display:flex><span>    <span style=color:#a6e22e>ReactDOM</span>.<span style=color:#a6e22e>render</span>(&lt;<span style=color:#f92672>ConfigProvider</span> <span style=color:#a6e22e>locale</span><span style=color:#f92672>=</span>{<span style=color:#a6e22e>zhCN</span>}&gt;
+</span></span><span style=display:flex><span>        &lt;<span style=color:#f92672>Provider</span> <span style=color:#a6e22e>store</span><span style=color:#f92672>=</span>{<span style=color:#a6e22e>store</span>}&gt;
+</span></span><span style=display:flex><span>            &lt;<span style=color:#f92672>PrivateRoute</span> /&gt;
+</span></span><span style=display:flex><span>        &lt;/<span style=color:#f92672>Provider</span>&gt;
+</span></span><span style=display:flex><span>    &lt;/<span style=color:#f92672>ConfigProvider</span>&gt;, <span style=color:#a6e22e>container</span> <span style=color:#f92672>?</span> <span style=color:#a6e22e>container</span>.<span style=color:#a6e22e>querySelector</span>(<span style=color:#e6db74>&#39;#root&#39;</span>) <span style=color:#f92672>:</span> document.<span style=color:#a6e22e>querySelector</span>(<span style=color:#e6db74>&#39;#root&#39;</span>));
+</span></span><span style=display:flex><span>}
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span><span style=color:#66d9ef>function</span> <span style=color:#a6e22e>storeTest</span>(<span style=color:#a6e22e>props</span>) {
+</span></span><span style=display:flex><span>    <span style=color:#75715e>// @ts-ignore
+</span></span></span><span style=display:flex><span><span style=color:#75715e></span>    <span style=color:#a6e22e>props</span>.<span style=color:#a6e22e>onGlobalStateChange</span>((<span style=color:#a6e22e>value</span>, <span style=color:#a6e22e>prev</span>) =&gt; <span style=color:#a6e22e>console</span>.<span style=color:#a6e22e>log</span>(<span style=color:#e6db74>`[</span><span style=color:#e6db74>${</span><span style=color:#a6e22e>props</span>.<span style=color:#a6e22e>name</span><span style=color:#e6db74>}</span><span style=color:#e6db74> props change]:`</span>, <span style=color:#a6e22e>value</span>, <span style=color:#a6e22e>prev</span>), <span style=color:#66d9ef>true</span>);
+</span></span><span style=display:flex><span>}
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span><span style=color:#66d9ef>export</span> <span style=color:#66d9ef>async</span> <span style=color:#66d9ef>function</span> <span style=color:#a6e22e>bootstrap</span>() {
+</span></span><span style=display:flex><span>    <span style=color:#a6e22e>console</span>.<span style=color:#a6e22e>log</span>(<span style=color:#e6db74>&#39;[web-hotLine] react app bootstraped&#39;</span>);
+</span></span><span style=display:flex><span>}
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span><span style=color:#66d9ef>export</span> <span style=color:#66d9ef>async</span> <span style=color:#66d9ef>function</span> <span style=color:#a6e22e>mount</span>(<span style=color:#a6e22e>props</span><span style=color:#f92672>:</span> <span style=color:#a6e22e>any</span>) {
+</span></span><span style=display:flex><span>    <span style=color:#a6e22e>console</span>.<span style=color:#a6e22e>log</span>(<span style=color:#e6db74>&#39;[web-hotLine] props from main framework&#39;</span>, <span style=color:#a6e22e>props</span>);
+</span></span><span style=display:flex><span>    <span style=color:#a6e22e>storeTest</span>(<span style=color:#a6e22e>props</span>);
+</span></span><span style=display:flex><span>    <span style=color:#a6e22e>render</span>(<span style=color:#a6e22e>props</span>);
+</span></span><span style=display:flex><span>}
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span><span style=color:#66d9ef>export</span> <span style=color:#66d9ef>async</span> <span style=color:#66d9ef>function</span> <span style=color:#a6e22e>unmount</span>(<span style=color:#a6e22e>props</span><span style=color:#f92672>:</span> <span style=color:#a6e22e>any</span>) {
+</span></span><span style=display:flex><span>    <span style=color:#66d9ef>const</span> { <span style=color:#a6e22e>container</span> } <span style=color:#f92672>=</span> <span style=color:#a6e22e>props</span>;
+</span></span><span style=display:flex><span>    <span style=color:#a6e22e>ReactDOM</span>.<span style=color:#a6e22e>unmountComponentAtNode</span>(<span style=color:#a6e22e>container</span> <span style=color:#f92672>?</span> <span style=color:#a6e22e>container</span>.<span style=color:#a6e22e>querySelector</span>(<span style=color:#e6db74>&#39;#root&#39;</span>) <span style=color:#f92672>:</span> document.<span style=color:#a6e22e>querySelector</span>(<span style=color:#e6db74>&#39;#root&#39;</span>));
+</span></span><span style=display:flex><span>}
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span><span style=color:#66d9ef>if</span> (<span style=color:#f92672>!</span>window.<span style=color:#a6e22e>__POWERED_BY_QIANKUN__</span>) {
+</span></span><span style=display:flex><span>    <span style=color:#a6e22e>render</span>({});
+</span></span><span style=display:flex><span>}
+</span></span></code></pre></div><h3 id=child-app-2>child-app-2</h3><p>入口文件 main.ts</p><div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-jsx data-lang=jsx><span style=display:flex><span><span style=color:#66d9ef>export</span> <span style=color:#66d9ef>function</span> <span style=color:#a6e22e>render</span>(<span style=color:#a6e22e>props</span> <span style=color:#f92672>=</span> {}) {
+</span></span><span style=display:flex><span>    <span style=color:#a6e22e>console</span>.<span style=color:#a6e22e>log</span>(<span style=color:#e6db74>&#39;测试测试测试&#39;</span>)
+</span></span><span style=display:flex><span>    <span style=color:#75715e>// @ts-ignore
+</span></span></span><span style=display:flex><span><span style=color:#75715e></span>    <span style=color:#66d9ef>const</span> { <span style=color:#a6e22e>container</span> } <span style=color:#f92672>=</span> <span style=color:#a6e22e>props</span>
+</span></span><span style=display:flex><span>    <span style=color:#a6e22e>console</span>.<span style=color:#a6e22e>log</span>(<span style=color:#e6db74>&#39;container:&#39;</span> <span style=color:#f92672>+</span> <span style=color:#a6e22e>container</span>)
+</span></span><span style=display:flex><span>    <span style=color:#a6e22e>instance</span> <span style=color:#f92672>=</span> <span style=color:#66d9ef>new</span> <span style=color:#a6e22e>Vue</span>({
+</span></span><span style=display:flex><span>        <span style=color:#a6e22e>router</span>,
+</span></span><span style=display:flex><span>        <span style=color:#a6e22e>store</span>,
+</span></span><span style=display:flex><span>        <span style=color:#a6e22e>render</span><span style=color:#f92672>:</span> <span style=color:#a6e22e>h</span> =&gt; <span style=color:#a6e22e>h</span>(<span style=color:#a6e22e>App</span>)
+</span></span><span style=display:flex><span>    }).<span style=color:#a6e22e>$mount</span>(<span style=color:#a6e22e>container</span> <span style=color:#f92672>?</span> <span style=color:#a6e22e>container</span>.<span style=color:#a6e22e>querySelector</span>(<span style=color:#e6db74>&#39;#app&#39;</span>) <span style=color:#f92672>:</span> <span style=color:#e6db74>&#39;#app&#39;</span>)
+</span></span><span style=display:flex><span>}
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span><span style=color:#66d9ef>export</span> <span style=color:#66d9ef>async</span> <span style=color:#66d9ef>function</span> <span style=color:#a6e22e>mount</span>(<span style=color:#a6e22e>props</span>) {
+</span></span><span style=display:flex><span>    <span style=color:#a6e22e>console</span>.<span style=color:#a6e22e>log</span>(<span style=color:#e6db74>&#39;主应用传递的props:&#39;</span>)
+</span></span><span style=display:flex><span>    <span style=color:#a6e22e>console</span>.<span style=color:#a6e22e>log</span>(<span style=color:#a6e22e>props</span>)
+</span></span><span style=display:flex><span>    <span style=color:#a6e22e>storeTest</span>(<span style=color:#a6e22e>props</span>)
+</span></span><span style=display:flex><span>    <span style=color:#a6e22e>setGlobalState</span> <span style=color:#f92672>=</span> <span style=color:#a6e22e>props</span>.<span style=color:#a6e22e>setGlobalState</span>
+</span></span><span style=display:flex><span>    <span style=color:#a6e22e>render</span>(<span style=color:#a6e22e>props</span>)
+</span></span><span style=display:flex><span>}
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span><span style=color:#66d9ef>function</span> <span style=color:#a6e22e>storeTest</span>(<span style=color:#a6e22e>props</span>) {
+</span></span><span style=display:flex><span>    <span style=color:#75715e>// @ts-ignore
+</span></span></span><span style=display:flex><span><span style=color:#75715e></span>    <span style=color:#a6e22e>props</span>.<span style=color:#a6e22e>onGlobalStateChange</span>((<span style=color:#a6e22e>value</span>, <span style=color:#a6e22e>prev</span>) =&gt; <span style=color:#a6e22e>console</span>.<span style=color:#a6e22e>log</span>(<span style=color:#e6db74>`[</span><span style=color:#e6db74>${</span><span style=color:#a6e22e>props</span>.<span style=color:#a6e22e>name</span><span style=color:#e6db74>}</span><span style=color:#e6db74> props change]:`</span>, <span style=color:#a6e22e>value</span>, <span style=color:#a6e22e>prev</span>), <span style=color:#66d9ef>true</span>);
+</span></span><span style=display:flex><span>}
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span><span style=color:#66d9ef>if</span> (<span style=color:#f92672>!</span>window.<span style=color:#a6e22e>__POWERED_BY_QIANKUN__</span>) {
+</span></span><span style=display:flex><span>    <span style=color:#a6e22e>render</span>()
+</span></span><span style=display:flex><span>}
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span><span style=color:#66d9ef>export</span> <span style=color:#66d9ef>async</span> <span style=color:#66d9ef>function</span> <span style=color:#a6e22e>unmount</span>() {
+</span></span><span style=display:flex><span>    <span style=color:#a6e22e>instance</span>.<span style=color:#a6e22e>$destroy</span>()
+</span></span><span style=display:flex><span>    <span style=color:#a6e22e>instance</span>.<span style=color:#a6e22e>$el</span>.<span style=color:#a6e22e>innerHTML</span> <span style=color:#f92672>=</span> <span style=color:#e6db74>&#39;&#39;</span>
+</span></span><span style=display:flex><span>    <span style=color:#a6e22e>instance</span> <span style=color:#f92672>=</span> <span style=color:#66d9ef>null</span>
+</span></span><span style=display:flex><span>}
+</span></span></code></pre></div><h1 id=数据传递>数据传递</h1><h2 id=存储>存储</h2><h3 id=localstorage>localStorage</h3><h3 id=documentcookie>document.cookie</h3><h2 id=父子组件传值>父子组件传值</h2><h2 id=子组件间传值>子组件间传值</h2><h1 id=路由>路由</h1><p>可任意跳转</p><h1 id=部署>部署</h1><p><img src=Micro-Frontends%20with%20qiankun%20f6f7e51842ef440ebde3ed5eb8e910ab/Untitled.png alt=Micro-Frontends%20with%20qiankun%20f6f7e51842ef440ebde3ed5eb8e910ab/Untitled.png></p><p><img src=Micro-Frontends%20with%20qiankun%20f6f7e51842ef440ebde3ed5eb8e910ab/Untitled%201.png alt=Micro-Frontends%20with%20qiankun%20f6f7e51842ef440ebde3ed5eb8e910ab/Untitled%201.png></p><h2 id=nginx-配置>NGINX 配置</h2><p>为每个项目配置服务</p><div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-jsx data-lang=jsx><span style=display:flex><span><span style=color:#960050;background-color:#1e0010>#</span><span style=color:#a6e22e>主应用</span>
+</span></span><span style=display:flex><span>                <span style=color:#a6e22e>location</span> <span style=color:#f92672>/</span> {
+</span></span><span style=display:flex><span>                        <span style=color:#a6e22e>rewrite</span> <span style=color:#f92672>/</span><span style=color:#a6e22e>h5</span><span style=color:#f92672>/</span>(.<span style=color:#f92672>*</span>) <span style=color:#a6e22e>http</span><span style=color:#f92672>:</span><span style=color:#75715e>//10.1.62.113:8888/video-product-h5;
+</span></span></span><span style=display:flex><span><span style=color:#75715e></span>                        <span style=color:#66d9ef>if</span> (<span style=color:#a6e22e>$request_filename</span> <span style=color:#f92672>~*</span> <span style=color:#f92672>^</span>.<span style=color:#f92672>*?</span>.(<span style=color:#a6e22e>html</span><span style=color:#f92672>|</span><span style=color:#a6e22e>htm</span>)<span style=color:#a6e22e>$</span>) {
+</span></span><span style=display:flex><span>                                <span style=color:#a6e22e>add_header</span> <span style=color:#a6e22e>Cache</span><span style=color:#f92672>-</span><span style=color:#a6e22e>Control</span> <span style=color:#a6e22e>no</span><span style=color:#f92672>-</span><span style=color:#a6e22e>cache</span>,<span style=color:#a6e22e>no</span><span style=color:#f92672>-</span><span style=color:#a6e22e>store</span>,<span style=color:#a6e22e>must</span><span style=color:#f92672>-</span><span style=color:#a6e22e>revalidate</span>;
+</span></span><span style=display:flex><span>                        }
+</span></span><span style=display:flex><span>                        <span style=color:#a6e22e>root</span> <span style=color:#f92672>/</span><span style=color:#a6e22e>home</span><span style=color:#f92672>/</span><span style=color:#a6e22e>ccbop</span><span style=color:#f92672>/</span><span style=color:#a6e22e>wwwRoot</span><span style=color:#f92672>/</span><span style=color:#a6e22e>ccbop</span><span style=color:#f92672>-</span><span style=color:#a6e22e>frontend</span><span style=color:#f92672>/</span><span style=color:#a6e22e>main</span><span style=color:#f92672>-</span><span style=color:#a6e22e>app</span>;
+</span></span><span style=display:flex><span>                        <span style=color:#a6e22e>index</span> <span style=color:#a6e22e>index</span>.<span style=color:#a6e22e>html</span>;
+</span></span><span style=display:flex><span>                        <span style=color:#a6e22e>try_files</span> <span style=color:#a6e22e>$uri</span> <span style=color:#a6e22e>$uri</span><span style=color:#f92672>/</span> <span style=color:#960050;background-color:#1e0010>/index.html;</span>
+</span></span><span style=display:flex><span>                }
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span>                <span style=color:#960050;background-color:#1e0010>#</span><span style=color:#a6e22e>子应用</span>
+</span></span><span style=display:flex><span>                <span style=color:#a6e22e>location</span> <span style=color:#f92672>/</span><span style=color:#a6e22e>subapp</span> {
+</span></span><span style=display:flex><span>                        <span style=color:#66d9ef>if</span> (<span style=color:#a6e22e>$request_filename</span> <span style=color:#f92672>~*</span> <span style=color:#f92672>^</span>.<span style=color:#f92672>*?</span>.(<span style=color:#a6e22e>html</span><span style=color:#f92672>|</span><span style=color:#a6e22e>htm</span>)<span style=color:#a6e22e>$</span>) {
+</span></span><span style=display:flex><span>                                <span style=color:#a6e22e>add_header</span> <span style=color:#a6e22e>Cache</span><span style=color:#f92672>-</span><span style=color:#a6e22e>Control</span> <span style=color:#a6e22e>no</span><span style=color:#f92672>-</span><span style=color:#a6e22e>cache</span>,<span style=color:#a6e22e>no</span><span style=color:#f92672>-</span><span style=color:#a6e22e>store</span>,<span style=color:#a6e22e>must</span><span style=color:#f92672>-</span><span style=color:#a6e22e>revalidate</span>;
+</span></span><span style=display:flex><span>                        }
+</span></span><span style=display:flex><span>                        <span style=color:#a6e22e>alias</span> <span style=color:#f92672>/</span><span style=color:#a6e22e>home</span><span style=color:#f92672>/</span><span style=color:#a6e22e>ccbop</span><span style=color:#f92672>/</span><span style=color:#a6e22e>wwwRoot</span><span style=color:#f92672>/</span><span style=color:#a6e22e>ccbop</span><span style=color:#f92672>-</span><span style=color:#a6e22e>frontend</span><span style=color:#f92672>/</span><span style=color:#a6e22e>subapp</span>;
+</span></span><span style=display:flex><span>                        <span style=color:#a6e22e>try_files</span> <span style=color:#a6e22e>$uri</span> <span style=color:#a6e22e>$uri</span><span style=color:#f92672>/</span> <span style=color:#960050;background-color:#1e0010>/index.html;</span>
+</span></span><span style=display:flex><span>                }
+</span></span><span style=display:flex><span>                <span style=color:#960050;background-color:#1e0010>#</span><span style=color:#a6e22e>视频制作h5</span>
+</span></span><span style=display:flex><span>                <span style=color:#a6e22e>location</span> <span style=color:#f92672>/</span><span style=color:#a6e22e>video</span><span style=color:#f92672>-</span><span style=color:#a6e22e>product</span><span style=color:#f92672>-</span><span style=color:#a6e22e>h5</span> {
+</span></span><span style=display:flex><span>                        <span style=color:#66d9ef>if</span> (<span style=color:#a6e22e>$request_filename</span> <span style=color:#f92672>~*</span> <span style=color:#f92672>^</span>.<span style=color:#f92672>*?</span>.(<span style=color:#a6e22e>html</span><span style=color:#f92672>|</span><span style=color:#a6e22e>htm</span>)<span style=color:#a6e22e>$</span>) {
+</span></span><span style=display:flex><span>                                <span style=color:#a6e22e>add_header</span> <span style=color:#a6e22e>Cache</span><span style=color:#f92672>-</span><span style=color:#a6e22e>Control</span> <span style=color:#a6e22e>no</span><span style=color:#f92672>-</span><span style=color:#a6e22e>cache</span>,<span style=color:#a6e22e>no</span><span style=color:#f92672>-</span><span style=color:#a6e22e>store</span>,<span style=color:#a6e22e>must</span><span style=color:#f92672>-</span><span style=color:#a6e22e>revalidate</span>;
+</span></span><span style=display:flex><span>                        }
+</span></span><span style=display:flex><span>                        <span style=color:#a6e22e>alias</span> <span style=color:#f92672>/</span><span style=color:#a6e22e>home</span><span style=color:#f92672>/</span><span style=color:#a6e22e>ccbop</span><span style=color:#f92672>/</span><span style=color:#a6e22e>wwwRoot</span><span style=color:#f92672>/</span><span style=color:#a6e22e>ccbop</span><span style=color:#f92672>-</span><span style=color:#a6e22e>frontend</span><span style=color:#f92672>/</span><span style=color:#a6e22e>video</span><span style=color:#f92672>-</span><span style=color:#a6e22e>product</span><span style=color:#f92672>-</span><span style=color:#a6e22e>h5</span>;
+</span></span><span style=display:flex><span>                        <span style=color:#a6e22e>try_files</span> <span style=color:#a6e22e>$uri</span> <span style=color:#a6e22e>$uri</span><span style=color:#f92672>/</span> <span style=color:#960050;background-color:#1e0010>/video-product-h5/index.html;</span>
+</span></span><span style=display:flex><span>                }
+</span></span></code></pre></div><h2 id=静态资源处理>静态资源处理</h2><p>要请求到正确的路径</p><div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-jsx data-lang=jsx><span style=display:flex><span><span style=color:#75715e>// vue.config.js
+</span></span></span><span style=display:flex><span><span style=color:#75715e></span><span style=color:#a6e22e>module</span>.<span style=color:#a6e22e>exports</span> <span style=color:#f92672>=</span> {
+</span></span><span style=display:flex><span>    <span style=color:#a6e22e>outputDir</span><span style=color:#f92672>:</span> <span style=color:#e6db74>&#39;dist&#39;</span>,
+</span></span><span style=display:flex><span>    <span style=color:#a6e22e>assetsDir</span><span style=color:#f92672>:</span> <span style=color:#e6db74>&#39;firmStatic&#39;</span>,
+</span></span><span style=display:flex><span>		<span style=color:#a6e22e>port</span><span style=color:#f92672>:</span> <span style=color:#ae81ff>8887</span>
+</span></span><span style=display:flex><span>}
+</span></span></code></pre></div><p>github 链接</p></div><h1 class="text-3xl my-12">留下你的脚印 👣 </h1><div id=disqus_thread>
+</div><script type=text/javascript>(function(){if(window.location.hostname=="localhost")return;var e=document.createElement("script"),t;e.type="text/javascript",e.async=!0,t="visionary",e.src="//"+t+".disqus.com/embed.js",(document.getElementsByTagName("head")[0]||document.getElementsByTagName("body")[0]).appendChild(e)})()</script>
+<noscript>Please enable JavaScript to view the <a href=https://disqus.com/?ref_noscript>comments powered by Disqus.</a></noscript></article></main><footer class="w-full text-center p-4 text-xs text-gray-400">
 copyright © 2021 - VISIONARY · All rights reserved
-</footer>
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-Z0FJ599SKS"></script>
-<script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments)}gtag('js',new Date),gtag('config','G-Z0FJ599SKS')</script>
-</body>
-</html>
+</footer><script async src="https://www.googletagmanager.com/gtag/js?id=G-Z0FJ599SKS"></script>
+<script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments)}gtag("js",new Date),gtag("config","G-Z0FJ599SKS")</script>
+</body></html>

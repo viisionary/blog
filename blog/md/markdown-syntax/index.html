@@ -4,13 +4,11 @@
 <meta name=viewport content="width=device-width,initial-scale=1">
 <title>
 Markdown Syntax Guide - VISIONARY
-</title>
-<meta name=author content="Hugo Authors">
-<meta name=generator content="Hugo 0.88.0"><link rel=stylesheet href="https://visionary.top/css/styles.min.58f39d2fee5ad08dc7d0f0329831e6809c556f80c5f682777edb84f468b700cb.css" integrity="sha256-WPOdL+5a0I3H0PAymDHmgJxVb4DF9oJ3ftuE9Gi3AMs=">
+</title><meta name=author content="Hugo Authors">
+<meta name=generator content="Hugo 0.93.0"><link rel=stylesheet href="https://visionary.top/css/styles.min.58f39d2fee5ad08dc7d0f0329831e6809c556f80c5f682777edb84f468b700cb.css" integrity="sha256-WPOdL+5a0I3H0PAymDHmgJxVb4DF9oJ3ftuE9Gi3AMs=">
 <script>window.matchMedia("(prefers-color-scheme: dark)").matches?document.documentElement.classList.add("dark"):document.documentElement.classList.remove("dark")</script>
 <script data-ad-client=ca-pub-6431705402019390 async src=https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js></script>
-</head>
-<body class="flex flex-col min-h-screen dark:bg-gray-900 dark:text-gray-100 transition-colors duration-500"><header class="w-full px-4 pt-4 max-w-5xl mx-auto">
+</head><body class="flex flex-col min-h-screen dark:bg-gray-900 dark:text-gray-100 transition-colors duration-500"><header class="w-full px-4 pt-4 max-w-5xl mx-auto">
 <nav class="flex items-center justify-between flex-wrap">
 <div class="flex gap-2 items-center">
 <a href=mailto:min_0610@icloud.com aria-label=EMail><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentcolor" fill="none" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><circle cx="12" cy="12" r="4"/><path d="M16 12v1.5a2.5 2.5.0 005 0V12a9 9 0 10-5.5 8.28"/></svg>
@@ -18,151 +16,65 @@ Markdown Syntax Guide - VISIONARY
 <a href=https://visionary.top/ class="flex items-center font-bold">
 VISIONARY
 </a>
-</div>
-<ul id=nav-menu class="flex w-auto mt-0 space-x-2">
+</div><ul id=nav-menu class="flex w-auto mt-0 space-x-2">
 <li><div class=search>
 <label for=search>🔍</label><input placeholder=SEARCH id=search type=text class=dark:bg-gray-900>
 <ul id=results class=search_result>
-</ul>
-</div>
-<script type=text/javascript src=https://code.jquery.com/jquery-2.1.3.min.js></script>
+</ul></div><script type=text/javascript src=https://code.jquery.com/jquery-2.1.3.min.js></script>
 <script type=text/javascript src=/js/lunr/lunr.min.js></script>
-<script type=text/javascript>let lunrIndex,$results,pagesIndex;function initLunr(){$.getJSON("/js/lunr/PagesIndex.json").done(function(a){pagesIndex=a,console.info("index:",pagesIndex),lunrIndex=lunr(function(){this.field("title",{boost:10}),this.field("tags",{boost:5}),console.log(this.add),this.field("content"),this.ref("href"),pagesIndex.forEach(a=>{console.log(a),a&&this.add(a)})})}).fail(function(d,a,b){const c=a+", "+b;console.error("Error getting Hugo index flie:",c)})}function initUI(){$results=$("#results"),$("#search").keyup(function(){$results.empty();const a=$(this).val();if(a.length<2)return;const b=search(a);renderResults(b)})}function search(a){return lunrIndex.search(a).map(function(a){return console.log(a),pagesIndex.filter(function(b){return b&&b.href===a.ref})[0]})}function renderResults(a){if(!a.length)return;a.slice(0,10).forEach(function(a){const b=$("<li>");b.append($("<a>",{href:a?a.href:'',text:"🔗 "+a.title})),$results.append(b)})}initLunr(),$(document).ready(function(){initUI()})</script>
-</li>
-<li>
-<a href=https://visionary.top/about/ class="hover:text-blue-800 dark:hover:text-blue-300">About Me</a>
-</li>
-<li>
+<script type=text/javascript>let lunrIndex,$results,pagesIndex;function initLunr(){$.getJSON("/js/lunr/PagesIndex.json").done(function(e){pagesIndex=e,console.info("index:",pagesIndex),lunrIndex=lunr(function(){this.field("title",{boost:10}),this.field("tags",{boost:5}),console.log(this.add),this.field("content"),this.ref("href"),pagesIndex.forEach(e=>{console.log(e),e&&this.add(e)})})}).fail(function(s,e,t){const n=e+", "+t;console.error("Error getting Hugo index flie:",n)})}function initUI(){$results=$("#results"),$("#search").keyup(function(){$results.empty();const e=$(this).val();if(e.length<2)return;const t=search(e);renderResults(t)})}function search(e){return lunrIndex.search(e).map(function(e){return console.log(e),pagesIndex.filter(function(t){return t&&t.href===e.ref})[0]})}function renderResults(e){if(!e.length)return;e.slice(0,10).forEach(function(e){const t=$("<li>");t.append($("<a>",{href:e?e.href:'',text:"🔗 "+e.title})),$results.append(t)})}initLunr(),$(document).ready(function(){initUI()})</script>
+</li><li>
+<a href=https://visionary.top/tags/about/ class="hover:text-blue-800 dark:hover:text-blue-300">About</a>
+</li><li>
 <a href=https://visionary.top/blog/ class="hover:text-blue-800 dark:hover:text-blue-300">Blogs</a>
-</li>
-</ul>
-</nav>
-</header>
-<main class="flex-1 mx-4 md:mx-12 lg:mx-24 mt-8 sm:mt-16">
+</li></ul></nav></header><main class="flex-1 mx-4 md:mx-12 lg:mx-24 mt-8 sm:mt-16">
 <article class="mb-16 max-w-5xl mx-auto px-4">
-<h1 class="text-5xl mb-6">Markdown Syntax Guide</h1>
-<ul>
-</ul>
-<div class="post-footer mb-6">
+<h1 class="text-5xl mb-6">Markdown Syntax Guide</h1><ul>
+</ul><div class="post-footer mb-6">
 <div class=info>
 <span class=separator><a class=category href=/categories/md/>md</a></span>
-</div>
-</div>
-<div class=post-footer>
-</div>
-<h2 class=text-xl>目录</h2>
-<aside class="content-aside-bar border-2 mb-4 mt-4">
+</div></div><div class=post-footer>
+</div><h2 class=text-xl>目录</h2><aside class="content-aside-bar border-2 mb-4 mt-4">
 <nav id=TableOfContents>
 <ul>
-<li><a href=#headings>Headings</a></li>
-</ul>
-<ul>
+<li><a href=#headings>Headings</a></li></ul><ul>
 <li><a href=#h2>H2</a>
 <ul>
-<li><a href=#h3>H3</a></li>
-</ul>
-</li>
-<li><a href=#paragraph>Paragraph</a></li>
-<li><a href=#blockquotes>Blockquotes</a>
+<li><a href=#h3>H3</a></li></ul></li><li><a href=#paragraph>Paragraph</a></li><li><a href=#blockquotes>Blockquotes</a>
 <ul>
-<li></li>
-</ul>
-</li>
-<li><a href=#tables>Tables</a>
+<li></li></ul></li><li><a href=#tables>Tables</a>
 <ul>
-<li></li>
-</ul>
-</li>
-<li><a href=#code-blocks>Code Blocks</a>
+<li></li></ul></li><li><a href=#code-blocks>Code Blocks</a>
 <ul>
-<li></li>
-</ul>
-</li>
-<li><a href=#list-types>List Types</a>
+<li></li></ul></li><li><a href=#list-types>List Types</a>
 <ul>
-<li></li>
-</ul>
-</li>
-<li><a href=#other-elements--abbr-sub-sup-kbd-mark>Other Elements — abbr, sub, sup, kbd, mark</a></li>
-</ul>
-</nav>
-</aside>
-<div class="prose lg:prose-lg prose-blue dark:prose-dark">
-<p>This article offers a sample of basic Markdown syntax that can be used in Hugo content files, also it shows whether basic HTML elements are decorated with CSS in a Hugo theme.</p>
-<h2 id=headings>Headings</h2>
-<p>The following HTML <code>&lt;h1></code>—<code>&lt;h6></code> elements represent six levels of section headings. <code>&lt;h1></code> is the highest section level while <code>&lt;h6></code> is the lowest.</p>
-<h1 id=h1>H1</h1>
-<h2 id=h2>H2</h2>
-<h3 id=h3>H3</h3>
-<h4 id=h4>H4</h4>
-<h5 id=h5>H5</h5>
-<h6 id=h6>H6</h6>
-<h2 id=paragraph>Paragraph</h2>
-<p>Xerum, quo qui aut unt expliquam qui dolut labo. Aque venitatiusda cum, voluptionse latur sitiae dolessi aut parist aut dollo enim qui voluptate ma dolestendit peritin re plis aut quas inctum laceat est volestemque commosa as cus endigna tectur, offic to cor sequas etum rerum idem sintibus eiur? Quianimin porecus evelectur, cum que nis nust voloribus ratem aut omnimi, sitatur? Quiatem. Nam, omnis sum am facea corem alique molestrunt et eos evelece arcillit ut aut eos eos nus, sin conecerem erum fuga. Ri oditatquam, ad quibus unda veliamenimin cusam et facea ipsamus es exerum sitate dolores editium rerore eost, temped molorro ratiae volorro te reribus dolorer sperchicium faceata tiustia prat.</p>
-<p>Itatur? Quiatae cullecum rem ent aut odis in re eossequodi nonsequ idebis ne sapicia is sinveli squiatum, core et que aut hariosam ex eat.</p>
-<h2 id=blockquotes>Blockquotes</h2>
-<p>The blockquote element represents content that is quoted from another source, optionally with a citation which must be within a <code>footer</code> or <code>cite</code> element, and optionally with in-line changes such as annotations and abbreviations.</p>
-<h4 id=blockquote-without-attribution>Blockquote without attribution</h4>
-<blockquote>
+<li></li></ul></li><li><a href=#other-elements--abbr-sub-sup-kbd-mark>Other Elements — abbr, sub, sup, kbd, mark</a></li></ul></nav></aside><div class="prose lg:prose-lg prose-blue dark:prose-dark">
+<p>This article offers a sample of basic Markdown syntax that can be used in Hugo content files, also it shows whether basic HTML elements are decorated with CSS in a Hugo theme.</p><h2 id=headings>Headings</h2><p>The following HTML <code>&lt;h1></code>—<code>&lt;h6></code> elements represent six levels of section headings. <code>&lt;h1></code> is the highest section level while <code>&lt;h6></code> is the lowest.</p><h1 id=h1>H1</h1><h2 id=h2>H2</h2><h3 id=h3>H3</h3><h4 id=h4>H4</h4><h5 id=h5>H5</h5><h6 id=h6>H6</h6><h2 id=paragraph>Paragraph</h2><p>Xerum, quo qui aut unt expliquam qui dolut labo. Aque venitatiusda cum, voluptionse latur sitiae dolessi aut parist aut dollo enim qui voluptate ma dolestendit peritin re plis aut quas inctum laceat est volestemque commosa as cus endigna tectur, offic to cor sequas etum rerum idem sintibus eiur? Quianimin porecus evelectur, cum que nis nust voloribus ratem aut omnimi, sitatur? Quiatem. Nam, omnis sum am facea corem alique molestrunt et eos evelece arcillit ut aut eos eos nus, sin conecerem erum fuga. Ri oditatquam, ad quibus unda veliamenimin cusam et facea ipsamus es exerum sitate dolores editium rerore eost, temped molorro ratiae volorro te reribus dolorer sperchicium faceata tiustia prat.</p><p>Itatur? Quiatae cullecum rem ent aut odis in re eossequodi nonsequ idebis ne sapicia is sinveli squiatum, core et que aut hariosam ex eat.</p><h2 id=blockquotes>Blockquotes</h2><p>The blockquote element represents content that is quoted from another source, optionally with a citation which must be within a <code>footer</code> or <code>cite</code> element, and optionally with in-line changes such as annotations and abbreviations.</p><h4 id=blockquote-without-attribution>Blockquote without attribution</h4><blockquote>
 <p>Tiam, ad mint andaepu dandae nostion secatur sequo quae.
-<strong>Note</strong> that you can use <em>Markdown syntax</em> within a blockquote.</p>
-</blockquote>
-<h4 id=blockquote-with-attribution>Blockquote with attribution</h4>
-<blockquote>
+<strong>Note</strong> that you can use <em>Markdown syntax</em> within a blockquote.</p></blockquote><h4 id=blockquote-with-attribution>Blockquote with attribution</h4><blockquote>
 <p>Don&rsquo;t communicate by sharing memory, share memory by communicating.
-— Rob Pike<sup id=fnref:1><a href=#fn:1 class=footnote-ref role=doc-noteref>1</a></sup></p>
-</blockquote>
-<h2 id=tables>Tables</h2>
-<p>Tables aren&rsquo;t part of the core Markdown spec, but Hugo supports supports them out-of-the-box.</p>
-<table>
+— Rob Pike<sup id=fnref:1><a href=#fn:1 class=footnote-ref role=doc-noteref>1</a></sup></p></blockquote><h2 id=tables>Tables</h2><p>Tables aren&rsquo;t part of the core Markdown spec, but Hugo supports supports them out-of-the-box.</p><table>
 <thead>
 <tr>
-<th>Name</th>
-<th>Age</th>
-</tr>
-</thead>
-<tbody>
+<th>Name</th><th>Age</th></tr></thead><tbody>
 <tr>
-<td>Bob</td>
-<td>27</td>
-</tr>
-<tr>
-<td>Alice</td>
-<td>23</td>
-</tr>
-</tbody>
-</table>
-<h4 id=inline-markdown-within-tables>Inline Markdown within tables</h4>
-<table>
+<td>Bob</td><td>27</td></tr><tr>
+<td>Alice</td><td>23</td></tr></tbody></table><h4 id=inline-markdown-within-tables>Inline Markdown within tables</h4><table>
 <thead>
 <tr>
-<th>Italics</th>
-<th>Bold</th>
-<th>Code</th>
-</tr>
-</thead>
-<tbody>
+<th>Italics</th><th>Bold</th><th>Code</th></tr></thead><tbody>
 <tr>
-<td><em>italics</em></td>
-<td><strong>bold</strong></td>
-<td><code>code</code></td>
-</tr>
-</tbody>
-</table>
-<h2 id=code-blocks>Code Blocks</h2>
-<h4 id=code-block-with-backticks>Code block with backticks</h4>
-<div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-html data-lang=html><span style=color:#75715e>&lt;!DOCTYPE html&gt;</span>
-&lt;<span style=color:#f92672>html</span> <span style=color:#a6e22e>lang</span><span style=color:#f92672>=</span><span style=color:#e6db74>&#34;en&#34;</span>&gt;
-  &lt;<span style=color:#f92672>head</span>&gt;
-    &lt;<span style=color:#f92672>meta</span> <span style=color:#a6e22e>charset</span><span style=color:#f92672>=</span><span style=color:#e6db74>&#34;utf-8&#34;</span> /&gt;
-    &lt;<span style=color:#f92672>title</span>&gt;Example HTML5 Document&lt;/<span style=color:#f92672>title</span>&gt;
-  &lt;/<span style=color:#f92672>head</span>&gt;
-  &lt;<span style=color:#f92672>body</span>&gt;
-    &lt;<span style=color:#f92672>p</span>&gt;Test&lt;/<span style=color:#f92672>p</span>&gt;
-  &lt;/<span style=color:#f92672>body</span>&gt;
-&lt;/<span style=color:#f92672>html</span>&gt;
-</code></pre></div><h4 id=code-block-indented-with-four-spaces>Code block indented with four spaces</h4>
-<pre><code>&lt;!doctype html&gt;
+<td><em>italics</em></td><td><strong>bold</strong></td><td><code>code</code></td></tr></tbody></table><h2 id=code-blocks>Code Blocks</h2><h4 id=code-block-with-backticks>Code block with backticks</h4><div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-html data-lang=html><span style=display:flex><span><span style=color:#75715e>&lt;!DOCTYPE html&gt;</span>
+</span></span><span style=display:flex><span>&lt;<span style=color:#f92672>html</span> <span style=color:#a6e22e>lang</span><span style=color:#f92672>=</span><span style=color:#e6db74>&#34;en&#34;</span>&gt;
+</span></span><span style=display:flex><span>  &lt;<span style=color:#f92672>head</span>&gt;
+</span></span><span style=display:flex><span>    &lt;<span style=color:#f92672>meta</span> <span style=color:#a6e22e>charset</span><span style=color:#f92672>=</span><span style=color:#e6db74>&#34;utf-8&#34;</span> /&gt;
+</span></span><span style=display:flex><span>    &lt;<span style=color:#f92672>title</span>&gt;Example HTML5 Document&lt;/<span style=color:#f92672>title</span>&gt;
+</span></span><span style=display:flex><span>  &lt;/<span style=color:#f92672>head</span>&gt;
+</span></span><span style=display:flex><span>  &lt;<span style=color:#f92672>body</span>&gt;
+</span></span><span style=display:flex><span>    &lt;<span style=color:#f92672>p</span>&gt;Test&lt;/<span style=color:#f92672>p</span>&gt;
+</span></span><span style=display:flex><span>  &lt;/<span style=color:#f92672>body</span>&gt;
+</span></span><span style=display:flex><span>&lt;/<span style=color:#f92672>html</span>&gt;
+</span></span></code></pre></div><h4 id=code-block-indented-with-four-spaces>Code block indented with four spaces</h4><pre><code>&lt;!doctype html&gt;
 &lt;html lang=&quot;en&quot;&gt;
 &lt;head&gt;
   &lt;meta charset=&quot;utf-8&quot;&gt;
@@ -172,73 +84,27 @@ VISIONARY
   &lt;p&gt;Test&lt;/p&gt;
 &lt;/body&gt;
 &lt;/html&gt;
-</code></pre>
-<h4 id=code-block-with-hugos-internal-highlight-shortcode>Code block with Hugo&rsquo;s internal highlight shortcode</h4>
-<span class=light-highLight><!doctype html>
+</code></pre><h4 id=code-block-with-hugos-internal-highlight-shortcode>Code block with Hugo&rsquo;s internal highlight shortcode</h4><span class=light-highLight><!doctype html>
 <html lang=en>
 <head>
 <meta charset=utf-8>
-<title>Example HTML5 Document</title>
-</head>
-<body>
-<p>Test</p>
-</body>
-</html>
-</span>
-<h2 id=list-types>List Types</h2>
-<h4 id=ordered-list>Ordered List</h4>
-<ol>
-<li>First item</li>
-<li>Second item</li>
-<li>Third item</li>
-</ol>
-<h4 id=unordered-list>Unordered List</h4>
-<ul>
-<li>List item</li>
-<li>Another item</li>
-<li>And another item</li>
-</ul>
-<h4 id=nested-list>Nested list</h4>
-<ul>
+<title>Example HTML5 Document</title></head><body>
+<p>Test</p></body></html></span>
+<h2 id=list-types>List Types</h2><h4 id=ordered-list>Ordered List</h4><ol>
+<li>First item</li><li>Second item</li><li>Third item</li></ol><h4 id=unordered-list>Unordered List</h4><ul>
+<li>List item</li><li>Another item</li><li>And another item</li></ul><h4 id=nested-list>Nested list</h4><ul>
 <li>Fruit
 <ul>
-<li>Apple</li>
-<li>Orange</li>
-<li>Banana</li>
-</ul>
-</li>
-<li>Dairy
+<li>Apple</li><li>Orange</li><li>Banana</li></ul></li><li>Dairy
 <ul>
-<li>Milk</li>
-<li>Cheese</li>
-</ul>
-</li>
-</ul>
-<h2 id=other-elements--abbr-sub-sup-kbd-mark>Other Elements — abbr, sub, sup, kbd, mark</h2>
-<p>GIF is a bitmap image format.</p>
-<p>H2O</p>
-<p>Xn + Yn = Zn</p>
-<p>Press CTRL+ALT+Delete to end the session.</p>
-<p>Most salamanders are nocturnal, and hunt for insects, worms, and other small creatures.</p>
-<section class=footnotes role=doc-endnotes>
+<li>Milk</li><li>Cheese</li></ul></li></ul><h2 id=other-elements--abbr-sub-sup-kbd-mark>Other Elements — abbr, sub, sup, kbd, mark</h2><p>GIF is a bitmap image format.</p><p>H2O</p><p>Xn + Yn = Zn</p><p>Press CTRL+ALT+Delete to end the session.</p><p>Most salamanders are nocturnal, and hunt for insects, worms, and other small creatures.</p><section class=footnotes role=doc-endnotes>
 <hr>
 <ol>
 <li id=fn:1 role=doc-endnote>
-<p>The above quote is excerpted from Rob Pike&rsquo;s <a href="https://www.youtube.com/watch?v=PAAkCSZUG1c">talk</a> during Gopherfest, November 18, 2015.&#160;<a href=#fnref:1 class=footnote-backref role=doc-backlink>&#8617;&#xfe0e;</a></p>
-</li>
-</ol>
-</section>
-</div>
-<h1 class="text-3xl my-12">留下你的脚印 👣 </h1>
-<div id=disqus_thread>
-</div>
-<script type=text/javascript>(function(){var a,b;if(window.location.hostname=="localhost")return;a=document.createElement('script'),a.type='text/javascript',a.async=!0,b='visionary',a.src='//'+b+'.disqus.com/embed.js',(document.getElementsByTagName('head')[0]||document.getElementsByTagName('body')[0]).appendChild(a)})()</script>
-<noscript>Please enable JavaScript to view the <a href=https://disqus.com/?ref_noscript>comments powered by Disqus.</a></noscript>
-</article>
-</main><footer class="w-full text-center p-4 text-xs text-gray-400">
+<p>The above quote is excerpted from Rob Pike&rsquo;s <a href="https://www.youtube.com/watch?v=PAAkCSZUG1c">talk</a> during Gopherfest, November 18, 2015.&#160;<a href=#fnref:1 class=footnote-backref role=doc-backlink>&#8617;&#xfe0e;</a></p></li></ol></section></div><h1 class="text-3xl my-12">留下你的脚印 👣 </h1><div id=disqus_thread>
+</div><script type=text/javascript>(function(){if(window.location.hostname=="localhost")return;var e=document.createElement("script"),t;e.type="text/javascript",e.async=!0,t="visionary",e.src="//"+t+".disqus.com/embed.js",(document.getElementsByTagName("head")[0]||document.getElementsByTagName("body")[0]).appendChild(e)})()</script>
+<noscript>Please enable JavaScript to view the <a href=https://disqus.com/?ref_noscript>comments powered by Disqus.</a></noscript></article></main><footer class="w-full text-center p-4 text-xs text-gray-400">
 copyright © 2021 - VISIONARY · All rights reserved
-</footer>
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-Z0FJ599SKS"></script>
-<script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments)}gtag('js',new Date),gtag('config','G-Z0FJ599SKS')</script>
-</body>
-</html>
+</footer><script async src="https://www.googletagmanager.com/gtag/js?id=G-Z0FJ599SKS"></script>
+<script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments)}gtag("js",new Date),gtag("config","G-Z0FJ599SKS")</script>
+</body></html>

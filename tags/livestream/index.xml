@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>livestream on VISIONARY</title><link>https://visionary.top/tags/livestream/</link><description>Recent content in livestream on VISIONARY</description><generator>Hugo -- gohugo.io</generator><language>en-us</language><lastBuildDate>Thu, 22 Jul 2021 00:00:00 +0000</lastBuildDate><atom:link href="https://visionary.top/tags/livestream/index.xml" rel="self" type="application/rss+xml"/><item><title>各种直播流协议详解</title><link>https://visionary.top/blog/media/%E8%A7%86%E9%A2%91%E6%92%AD%E6%94%BE%E5%99%A8/</link><pubDate>Thu, 22 Jul 2021 00:00:00 +0000</pubDate><guid>https://visionary.top/blog/media/%E8%A7%86%E9%A2%91%E6%92%AD%E6%94%BE%E5%99%A8/</guid><description>hls safari的h5原生支持hls(m3u8)播放 chrome等浏览器需要自己写解码
+移动端和Safari可直接支持m3u8 支持H.264、H.265视频编码和AAC音频编码? 播放器直播流全平台支持flv，hls直播协议，支持解h264、h265解码。
+协议 延迟 谁在用 原理 优缺点 HttpFlv 低 1~3秒 斗鱼 pc web RTMP 低 1~3秒 - 转发 HLS 高 5~20秒（依切片情况） 各种移动web端 切片 性能高，延迟高 DASH/MPEG-DASH 高 油管，奈飞 切片 HLS 是苹果的 全系列兼容
+DASH 和他很相似 iOS 不兼容
+都支持 4K
+FFmpeg 可以生成这两种不同协议的流
+DASH协议 主播直播流上传
+服务器的编解码封装 流媒体分发器 mpd文件 切割后的媒体文件 客户端 客户端加载mpd文件 解析MPD文件, 组成文件下载链接 当前的网速和支持的编码加载相应的视频片段进行播放</description></item></channel></rss>
