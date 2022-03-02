@@ -1,3 +1,11 @@
+---
+title : Curry Function - 柯里化函数
+date: 2021-07-16
+categories : [                              
+"数据结构","算法",
+]
+
+---
 # Curry Function
 
 Currying is a process in functional programming in which we can transform a function with multiple arguments into a sequence of nesting functions. It returns a new function that expects the next argument inline.
@@ -13,8 +21,9 @@ function multiply(a) {
 log(multiply(1)(2)(3)) // 6
 ```
 
+柯里化是一种函数的转换，它是指将一个函数从可调用的 f(a, b, c) 转换为可调用的 f(a)(b)(c)。
 
-
+柯里化不会调用函数。它只是对函数进行转换。
 ```
 function curry(fn, ...args) {
     return (..._arg) => {
@@ -23,6 +32,7 @@ function curry(fn, ...args) {
 }
 ```
 
+###### example
 ```
 function discount(discount) {
     return (price) => {

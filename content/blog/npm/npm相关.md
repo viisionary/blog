@@ -67,3 +67,5 @@ npm install # installs "1.1.0" (as required by the updated package.json)
 # also rewrites package-lock.json version to "1.1.0"
 # (i.e. when package.json is modified, it overrules the package-lock.json)
 ```
+npm run changelog
+自动生成 CHANGELOG.md 版本日志

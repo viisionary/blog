@@ -214,14 +214,29 @@ xhr.send();
 102、Git Hook 可以采用 Node 脚本进行设计吗？如何做到？
 103、如何确保别人上传的代码没有 Lint 错误？如何确保代码构建没有 Lint 错误？
 104、如何在 Vs Code 中进行 Lint 校验提示？如何在 Vs Code 中进行 Lint 保存格式化？
-105、ESLint 和 Prettier 的区别是什么？两者在一起工作时会产生问题吗？
-106、如何有效的识别 ESLint 和 Prettier 可能产生冲突的格式规则？如何解决此类规则冲突问题？
+###### 105、ESLint 和 Prettier 的区别是什么？两者在一起工作时会产生问题吗？
+eslint（包括其他一些lint 工具）的主要功能包含代码格式的校验，代码质量的校验。 
+Prettier 只是代码格式的校验（并格式化代码），不会对代码质量进行校验。 
+代码格式问题通常指的是：单行代码长度、tab长度、空格、逗号表达式等问题。
+代码质量问题指的是：未使用变量、三等号、全局变量声明等问题。eg: no-unused-vars、no-implicit-globals 以及 prefer-promise-reject-errors
+
+###### 106、如何有效的识别 ESLint 和 Prettier 可能产生冲突的格式规则？如何解决此类规则冲突问题？
+eslint-config-prettier + eslint-plugin-prettier。
+eslint-config-prettier 的作用是关闭eslint中与prettier相互冲突的规则。
+eslint-plugin-prettier 的作用是赋予eslint用prettier格式化代码的能力。
+
 107、在通常的脚手架项目中进行热更新（hot module replacement）时如何做到 ESLint 实时打印校验错误信息？
-108、谈谈你对 SourceMap 的了解？
+
+###### 108、谈谈你对 SourceMap 的了解？
+SourceMap是一个从转换的源映射到原始源的文件，使浏览器能够重建原始源，并在调试器中显示重建的原始源。
+
 109、如何调试 Node.js 代码？如何调试 Node.js TypeScript 代码？在浏览器中如何调试 Node.js 代码？
+
 110、列举你知道的所有构建工具并说说这些工具的优缺点？这些构建工具在不同的场景下应该如何选型？
-111、VS Code 配置中的用户和工作区有什么区别？
-112、VS Code 的插件可以只对当前项目生效吗？
+虽然配置Grunt可能比配置Gulp需要更长的时间，但Grunt对更多用户来说更友好，因为它更多地依赖于配置而不是代码。此外，虽然Gulp更容易阅读，但许多人觉得Grunt代码更容易编写。
+Grunt 使用临时文件。Gulp 利用 Node 流。
+Grunt 一项一项地执行任务。Gulp 同时执行多个任务。
+![](.qa_images/90e35e23.png)
 113、你所知道的测试有哪些测试类型？
 114、你所知道的测试框架有哪些？
 115、什么是 e2e 测试？有哪些 e2e 的测试框架？
