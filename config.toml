@@ -49,26 +49,18 @@ instagram = "https://www.instagram.com/mia_.min/"
 wechat = "/IMG_1958.JPG"
 [build]
 writeStats = true
-#[[params.homepage.resume.courses]]
-#name = "Design Principles"
-#provider = "UX Academy"
-#duration = "Nov 2019 - Jan 2020"
 
-#[[params.homepage.resume.work]]
-#name = "工作经历"
-#role = "Sr. UX Designer"
-#duration = "Jan 2016 - Oct 2019"
+[[params.homepage.resume.work]]
+# name = "工作经历"
+role = "Sr. WEB FRONT END DEVELOPER"
+duration = "AUG 2017 - NOW"
 
-#[[params.homepage.resume.work]]
-#name = "Google"
-#role = "Product Engineer"
-#duration = "Nov 2019 - Apr 2021"
 [params.homepage.resume]
-skills = ["HTML", "CSS", "JAVA SCRIPT", "NODE.JS"]
+skills = ["HTML\\ CSS\\ JAVA SCRIPT", "NODE.JS","WEBPACK\\GRUNT","TYPE SCRIPT", "WEB MEDIA"]
 
 [params.homepage.codepen]
 username = "viisionary"
-pens = ["poPeNKa", "RxodrP", "BmXGdm", "wdVypQ", "wdVypQ"]
+pens = ["MWmWVxw","wvrxrww", "RxodrP", "BmXGdm", "wdVypQ",]
 
 [params.homepage.codesandbox]
 username = "viisionary"
@@ -77,11 +69,11 @@ codesandbox = ["fsk69", "lsmnx"]
 #------------- git hub repo
 [params.homepage.github]
 username = "viisionary"
-repos = ["spider-tool", "spider-cli", "deploy2server"]
+repos = ["spider-tool", "spider-ui-cli", "spider-cli", "spider-api","deploy2server"]
 
 [params.homepage.npm]
 username = "visionary_m"
-packages = ["spider-utils", "deploy2server", "spider-cli-generater","spider-optimize-svg", "spider-vision"]
+packages = ["spider-utils", "deploy2server", "spider-cli-generater","spider-optimize-svg", "spider-vision",'spider-generate-api']
 
 [params.homepage]
 title = "VISIONARY"
