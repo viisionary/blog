@@ -36,3 +36,6 @@ sitemap.xml由hugo自动生成
 重复网页，网址已提交但未被选为规范网址
 
 已发现 - 尚未编入索引
+
+百度搜索
+https://ziyuan.baidu.com/linksubmit/index
