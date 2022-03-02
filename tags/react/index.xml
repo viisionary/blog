@@ -6,4 +6,4 @@ re render的情况&lt;/p></description></item><item><title>pureFunction</title><
 &lt;ul>
 &lt;li>对于相同的参数，函数返回值是相同的（与局部静态变量、非局部变量、可变引用参数或输入流没有变化），并且&lt;/li>
 &lt;li>函数应用程序没有副作用（局部静态变量、非局部变量、可变引用参数或输入/输出流没有突变）。&lt;/li>
-&lt;/ul></description></item><item><title>关于React 中的 受控组件 vs 不受控组件</title><link>https://visionary.top/blog/react%E4%BD%BF%E7%94%A8/control_component/</link><pubDate>Thu, 22 Jul 2021 00:00:00 +0000</pubDate><guid>https://visionary.top/blog/react%E4%BD%BF%E7%94%A8/control_component/</guid><description/></item><item><title>关于React 中的 受控组件 vs 不受控组件</title><link>https://visionary.top/blog/react%E4%BD%BF%E7%94%A8/hoc/</link><pubDate>Thu, 22 Jul 2021 00:00:00 +0000</pubDate><guid>https://visionary.top/blog/react%E4%BD%BF%E7%94%A8/hoc/</guid><description/></item></channel></rss>
+&lt;/ul></description></item><item><title>关于React 中的 受控组件 vs 不受控组件</title><link>https://visionary.top/blog/react%E4%BD%BF%E7%94%A8/control_component/</link><pubDate>Thu, 22 Jul 2021 00:00:00 +0000</pubDate><guid>https://visionary.top/blog/react%E4%BD%BF%E7%94%A8/control_component/</guid><description/></item></channel></rss>

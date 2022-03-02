@@ -3,8 +3,8 @@
 <meta charset=utf-8>
 <meta name=viewport content="width=device-width,initial-scale=1">
 <title>
-- VISIONARY
-</title><meta name=generator content="Hugo 0.93.0"><link rel=stylesheet href="https://visionary.top/css/styles.min.58f39d2fee5ad08dc7d0f0329831e6809c556f80c5f682777edb84f468b700cb.css" integrity="sha256-WPOdL+5a0I3H0PAymDHmgJxVb4DF9oJ3ftuE9Gi3AMs=">
+Curry Function - 柯里化函数 - VISIONARY
+</title><meta name=generator content="Hugo 0.93.0"><link rel=stylesheet href="https://visionary.top/css/styles.min.4c6318207e032652ed2d5a0b0b721df6e077d467da389283dc1f71791d76fd23.css" integrity="sha256-TGMYIH4DJlLtLVoLC3Id9uB31GfaOJKD3B9xeR12/SM=">
 <script>window.matchMedia("(prefers-color-scheme: dark)").matches?document.documentElement.classList.add("dark"):document.documentElement.classList.remove("dark")</script>
 <script data-ad-client=ca-pub-6431705402019390 async src=https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js></script>
 </head><body class="flex flex-col min-h-screen dark:bg-gray-900 dark:text-gray-100 transition-colors duration-500"><header class="w-full px-4 pt-4 max-w-5xl mx-auto">
@@ -28,12 +28,17 @@ VISIONARY
 <a href=https://visionary.top/blog/ class="hover:text-blue-800 dark:hover:text-blue-300">Blogs</a>
 </li></ul></nav></header><main class="flex-1 mx-4 md:mx-12 lg:mx-24 mt-8 sm:mt-16">
 <article class="mb-16 max-w-5xl mx-auto px-4">
-<h1 class="text-5xl mb-6"></h1><ul>
+<h1 class="text-5xl mb-6">Curry Function - 柯里化函数</h1><ul>
 </ul><div class="post-footer mb-6">
 <div class=info>
+<span class=separator><a class=category href=/categories/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/>数据结构</a><a class=category href=/categories/%E7%AE%97%E6%B3%95/>算法</a></span>
 </div></div><div class=post-footer>
 </div><h2 class=text-xl>目录</h2><aside class="content-aside-bar border-2 mb-4 mt-4">
-<nav id=TableOfContents></nav></aside><div class="prose lg:prose-lg prose-blue dark:prose-dark">
+<nav id=TableOfContents>
+<ul>
+<li>
+<ul>
+<li></li></ul></li></ul></nav></aside><div class="prose lg:prose-lg prose-blue dark:prose-dark">
 <h1 id=curry-function>Curry Function</h1><p>Currying is a process in functional programming in which we can transform a function with multiple arguments into a sequence of nesting functions. It returns a new function that expects the next argument inline.</p><pre tabindex=0><code>function multiply(a) {
     return (b) =&gt; {
         return (c) =&gt; {
@@ -42,12 +47,12 @@ VISIONARY
     }
 }
 log(multiply(1)(2)(3)) // 6
-</code></pre><pre tabindex=0><code>function curry(fn, ...args) {
+</code></pre><p>柯里化是一种函数的转换，它是指将一个函数从可调用的 f(a, b, c) 转换为可调用的 f(a)(b)(c)。</p><p>柯里化不会调用函数。它只是对函数进行转换。</p><pre tabindex=0><code>function curry(fn, ...args) {
     return (..._arg) =&gt; {
         return fn(...args, ..._arg);
     }
 }
-</code></pre><pre tabindex=0><code>function discount(discount) {
+</code></pre><h6 id=example>example</h6><pre tabindex=0><code>function discount(discount) {
     return (price) =&gt; {
         return price * discount;
     }
@@ -60,9 +65,8 @@ const twentyPercentDiscount = discount(0.2);
 
 twentyPercentDiscount(500); // 100
 // $500 - $100 = $400
-</code></pre></div><h1 class="text-3xl my-12">留下你的脚印 👣 </h1><div id=disqus_thread>
-</div><script type=text/javascript>(function(){if(window.location.hostname=="localhost")return;var e=document.createElement("script"),t;e.type="text/javascript",e.async=!0,t="visionary",e.src="//"+t+".disqus.com/embed.js",(document.getElementsByTagName("head")[0]||document.getElementsByTagName("body")[0]).appendChild(e)})()</script>
-<noscript>Please enable JavaScript to view the <a href=https://disqus.com/?ref_noscript>comments powered by Disqus.</a></noscript></article></main><footer class="w-full text-center p-4 text-xs text-gray-400">
+</code></pre></div><h1 class="text-xl my-12">留下你的脚印 👣 </h1><script src=https://utteranc.es/client.js repo=viisionary/visionary issue-term=pathname theme=github-light crossorigin=anonymous async></script>
+</article></main><footer class="w-full text-center p-4 text-xs text-gray-400">
 copyright © 2021 - VISIONARY · All rights reserved
 </footer><script async src="https://www.googletagmanager.com/gtag/js?id=G-Z0FJ599SKS"></script>
 <script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments)}gtag("js",new Date),gtag("config","G-Z0FJ599SKS")</script>
