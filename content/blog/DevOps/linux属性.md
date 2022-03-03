@@ -29,3 +29,10 @@ The top line reports on system memory, the bottom line reports on swap space. W
 - **Shared**: Memory that is used by the `tmpfs` file system.
 - **Buff/cache**: Memory used for buffers and cache.
 - **Available**: This is an estimation of the memory that is available to service memory requests from applications, any other functioning software within your computer, such as your graphical [desktop environment](https://en.wikipedia.org/wiki/Desktop_environment) and Linux commands.
+
+
+查看当前 Linux 版本
+```shell
+[root@eb63132 ~]# cat /etc/redhat-release 
+Red Hat Enterprise Linux release 8.4 (Ootpa)
+```
