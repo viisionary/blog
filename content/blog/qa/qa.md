@@ -73,7 +73,9 @@ const original = { x: { y: { z: 123 }}}
 setIn(original, ['x', 'y', 'z'], 456) // { x: { y: { z: 456 }}}
 console.log(original) // { x: { y: { z: 123 }}}
 ```
-. 说下crsf 和 xss，分别举例说明，各有什么解决办法？
+#说下csrf 和 xss，分别举例说明，各有什么解决办法？
+对提交的数据进行检测和过滤
+
 
 ## javascript 浏览器原理
 ### Cookie的同源策略是怎么样的，跨域情况下如何携带Cookie
@@ -92,7 +94,7 @@ xhr.withCredentials= true;  //关键句
 xhr.open("GET", url);
 xhr.send();
 ```
-. 有用过哪些跨平台框架，react-native中原生端和js端怎么进行通信的？
+### 有用过哪些跨平台框架，react-native中原生端和js端怎么进行通信的？
 
 ### 假设有一个非常复杂耗时的逻辑，代码逻辑已经最优了前提下要你优化，你有哪些办法？
 
@@ -113,11 +115,11 @@ xhr.send();
 > 配置gzip打包、nginx开启配置
 > 
 > GZIP，可以配置为1-9 之间的级别，其中1 表示最快压缩(较少压缩)，9 表示最慢压缩方法(最佳压缩)。
-13. 用二分法移除掉一个字符串中所有的字母字符。
+### 13. 用二分法移除掉一个字符串中所有的字母字符。
 
 3. 随机生成100w正负整数存储下来，记录时间t1；然后把这100w数据中的负数全去掉，记录时间t2；然后记录总共耗时t3 = t2 - t1。
 
-4. 在耗时t3的基础上优化下，使t4的耗时只有t3的70%; 在t4的耗时基础下再优化，使t5的耗时只有t4的70%...
+### 4. 在耗时t3的基础上优化下，使t4的耗时只有t3的70%; 在t4的耗时基础下再优化，使t5的耗时只有t4的70%...
 
 ### react中的diff算法的原理？传统的diff算法是怎么实现的？
 
@@ -137,27 +139,42 @@ xhr.send();
 
 11. 说出http2中至少三个新特性？你们有在实际中用过吗？
 
-四面（交叉面）
 
-交叉面和一面差不多，这里就不重复了。多问了http缓存机制问题，然后问了一下: 浏览器的默认缓存时间是多久？
+### http缓存机制问题，浏览器的默认缓存时间是多久？
+（访问时间 - 最后修改时间） ÷  10
 
-五面（总监面） 
+##五面
 
-1. 自我介绍
+### 自我介绍
 
-2. 为什么要离职
+## 为什么要离职
+### 要你设计一个前端监控方案，你打算怎么做。
 
-3. 要你设计一个前端监控方案，你打算怎么做。
 
-4. 平时喜欢听歌吗？用什么音乐app？（我答的以前用网易云，现在用Q音），这两个各有什么优劣势？
+### ES6 Modules 相对于 CommonJS 的优势是什么？
+   
+### 静态代码分析
 
-5. 对于你来说，你觉得做音乐app中最大的技术难点是什么？
-   ES6 Modules 相对于 CommonJS 的优势是什么？
-   规范
-1. 静态代码分析
+### Object.defineProperty 有哪几个参数？各自都有什么作用？
+> Object.defineProperty(obj, prop, descriptor)
 
-31、 Object.defineProperty 有哪几个参数？各自都有什么作用？
-32、 Object.defineProperty 和 ES6 的 Proxy 有什么区别？
+configurable
+当且仅当该属性的 configurable 键值为 true 时，该属性的描述符才能够被改变，同时该属性也能从对应的对象上被删除。
+默认为 false。
+enumerable
+当且仅当该属性的 enumerable 键值为 true 时，该属性才会出现在对象的枚举属性中。
+默认为 false。
+数据描述符还具有以下可选键值：
+
+value
+该属性对应的值。可以是任何有效的 JavaScript 值（数值，对象，函数等）。
+默认为 undefined。
+writable
+当且仅当该属性的 writable 键值为 true 时，属性的值，也就是上面的 value，才能被赋值运算符 (en-US)改变。
+默认为 false。
+
+### Object.defineProperty 和 ES6 的 Proxy 有什么区别？
+
 33、 ES6 中 Symbol、Map、Decorator 的使用场景有哪些？或者你在哪些库的源码里见过这些 API 的使用？
 
 34、 为什么要使用 TypeScript ? TypeScript 相对于 JavaScript 的优势是什么？
@@ -168,7 +185,6 @@ xhr.send();
 
 38、 TypeScript 中 interface 可以给 Function / Array / Class（Indexable）做声明吗？
 39、 TypeScript 中可以使用 String、Number、Boolean、Symbol、Object 等给类型做声明吗？
-
 
 40、 TypeScript 中的 this 和 JavaScript 中的 this 有什么差异？
 41、 TypeScript 中使用 Unions 时有哪些注意事项？
@@ -183,7 +199,7 @@ xhr.send();
 50、 TypeScript 中同名的 interface 或者同名的 interface 和 class 可以合并吗？
 51、 如何使 TypeScript 项目引入并识别编译为 JavaScript 的 npm 库包？
 
-
+## React
 57、 React 中高阶函数和自定义 Hook 的优缺点？
 58、 简要说明 React Hook 中 useState 和 useEffect 的运行原理？
 60、 React Hook 中 useEffect 有哪些参数，如何检测数组依赖项的变化？
@@ -193,7 +209,7 @@ xhr.send();
 64、 列举你常用的 React 性能优化技巧？
 85、如何发布一个支持 Tree Shaking 机制的 Npm 包？
 86、Npm 包中 peerDependencies 的作用是什么？
-87、如何优雅的调试需要发布的 Npm 包？
+87、如何优雅的调试需要发布的 Npm 包？JavaScriptDecorator
 88、在设计一些库包时如何生成版本日志？
 89、了解 Git （Submodule）子模块吗？简单介绍一下 Git 子模块的作用？
 90、Git 如何修改已经提交的 Commit 信息？

@@ -208,7 +208,7 @@ NonNullable<Type>
 
 ```tsx
 //规定函数参数的类型
-Parameters<Type>;
+// Parameters<Type>;
 
 declare function f1(arg: { a: number; b: string }): void;
 
@@ -219,7 +219,7 @@ type T3 = Parameters<typeof f1>;
 //    }]
 
 // 返回值类型
-ReturnType<Type>
+// ReturnType<Type>
 
 type T4 = ReturnType<typeof f1>;
 //    ^ = type T4 = {

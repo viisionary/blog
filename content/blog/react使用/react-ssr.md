@@ -1,7 +1,7 @@
 ---
 title: react 服务端渲染 & next.js使用
 date: 2022-02-22
-tags: ["react"]
+tags: ["react","ssr"]
 ---
 
 一般用来做官网，方便搜索引擎爬。
@@ -17,7 +17,6 @@ tags: ["react"]
 
 * SSR 需要更多资源并且可能很昂贵，因为所有处理都在服务器上完成。
 * 对于复杂的应用程序，大量的服务器请求会降低站点的速度。
-
 
 ### next.js
 
@@ -61,9 +60,43 @@ import Image from 'next/image'
 
 #### 路径
 
+pages/
+
 #### 多语言
+
+i18n
+配置好语言后会有一个 locale 作为 props 在 page 中取到
 
 #### 接口
 
+初始化全局 axios 时 配置好 baseURL
+
+客户端请求【render 中的请求 】走代理【初始化全局 axios 时 配置好 baseURL】
+服务端直接请求
+
+```js
+config.baseURL = isBrowser() ? '/' : 'http://ip:port':
+```
+
 #### 部署
+
+服务器上装个 docker 仓库
+本地 build image
+打个 tag
+推到服务器仓库
+在服务器上拉取 tag
+docker run
+
+查看日志
+docker log
+
+进入 container
+
+#### SEO
+
+添加Sitemap文件 并且向搜索引擎提交
+
+next.js 使用如下工具自动生成
+
+> https://github.com/iamvishnusankar/next-sitemap#readme
 
