@@ -12,13 +12,13 @@ https的信息
 <!--more-->
 
 ## 一个站点的证书
-![img.png](content/blog/network/img.png/blog/network/img.png)
+![img.png](/blog/network/img.png)
 发行者信息
-![img_3.png](content/blog/network/img_3.pnglog/network/img_3.png)
+![img_3.png](/blog/network/img_3.png)
 公钥 签名
-![img_1.png](content/blog/network/img_1.pnglog/network/img_1.png)
+![img_1.png](/blog/network/img_1.png)
 指纹
-![img_2.png](content/blog/network/img_2.pnglog/network/img_2.png)
+![img_2.png](/blog/network/img_2.png)
 
 ## https验证过程
 我们在访问 https://www.youzan.com 时， 浏览器会得到一个 TLS 证书，这个数字证书用于证明我们正在访问的网站和证书的持有者是匹配的，否则因为身份认证无法通过，连接也就无法建立。
@@ -89,6 +89,7 @@ Https加密通信有两种加密，一种是非对称加密，另一种是对称
 
 ## HTTP/2
 
+> [HTTP2](/http2)
 ### 与 HTTP /1.1 的不同
 
 This allows developers to decide which page resources will load first, every time. In HTTP/2, when a [client](https://www.cloudflare.com/learning/serverless/glossary/client-side-vs-server-side/) makes a request for a webpage, the server sends several streams of data to the client at once, instead of sending one thing after another. 
