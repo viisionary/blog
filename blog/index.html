@@ -1,393 +1,82 @@
-<!doctype html><html lang=en-us>
-<head>
-<meta charset=utf-8>
-<meta name=viewport content="width=device-width,initial-scale=1">
-<title>
-Blogs - VISIONARY
-</title><meta name=generator content="Hugo 0.93.0"><link rel=stylesheet href="https://visionary.top/css/styles.min.4c6318207e032652ed2d5a0b0b721df6e077d467da389283dc1f71791d76fd23.css" integrity="sha256-TGMYIH4DJlLtLVoLC3Id9uB31GfaOJKD3B9xeR12/SM=">
-<script>window.matchMedia("(prefers-color-scheme: dark)").matches?document.documentElement.classList.add("dark"):document.documentElement.classList.remove("dark")</script>
-<script data-ad-client=ca-pub-6431705402019390 async src=https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js></script>
-</head><body class="flex flex-col min-h-screen dark:bg-gray-900 dark:text-gray-100 transition-colors duration-500"><header class="w-full px-4 pt-4 max-w-5xl mx-auto">
-<nav class="flex items-center justify-between flex-wrap">
-<div class="flex gap-2 items-center">
-<a href=mailto:min_0610@icloud.com aria-label=EMail><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentcolor" fill="none" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><circle cx="12" cy="12" r="4"/><path d="M16 12v1.5a2.5 2.5.0 005 0V12a9 9 0 10-5.5 8.28"/></svg>
-</a>
-<a href=https://visionary.top/ class="flex items-center font-bold">
-VISIONARY
-</a>
-</div><ul id=nav-menu class="flex w-auto mt-0 space-x-2">
-<li><div class=search>
-<label for=search>🔍</label><input placeholder=SEARCH id=search type=text class=dark:bg-gray-900>
-<ul id=results class=search_result>
-</ul></div><script type=text/javascript src=https://code.jquery.com/jquery-2.1.3.min.js></script>
+<!doctype html><html lang=en-us><head><meta charset=utf-8><meta name=viewport content="width=device-width,initial-scale=1"><title>Blogs - VISIONARY</title><meta name=generator content="Hugo 0.94.2"><link rel=stylesheet href="https://visionary.top/css/styles.min.ec6ba89a06bf6fa69af8ca4da0bd1246456266abd1b4f130627e256c5123938c.css" integrity="sha256-7Guomga/b6aa+MpNoL0SRkViZqvRtPEwYn4lbFEjk4w="><script>window.matchMedia("(prefers-color-scheme: dark)").matches?document.documentElement.classList.add("dark"):document.documentElement.classList.remove("dark")</script><script data-ad-client=ca-pub-6431705402019390 async src=https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js></script></head><body class="flex flex-col min-h-screen dark:bg-gray-900 dark:text-gray-100 transition-colors duration-500"><header class="w-full px-4 pt-4 max-w-5xl mx-auto"><nav class="flex items-center justify-between flex-wrap"><div class="flex gap-2 items-center"><a href=mailto:min_0610@icloud.com aria-label=EMail><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentcolor" fill="none" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><circle cx="12" cy="12" r="4"/><path d="M16 12v1.5a2.5 2.5.0 005 0V12a9 9 0 10-5.5 8.28"/></svg></a><a href=https://visionary.top/ class="flex items-center font-bold">VISIONARY</a></div><ul id=nav-menu class="flex w-auto mt-0 space-x-2"><li><div class=search><label for=search>🔍</label><input placeholder=SEARCH id=search type=text class=dark:bg-gray-900><ul id=results class=search_result></ul></div><script type=text/javascript src=https://code.jquery.com/jquery-2.1.3.min.js></script>
 <script type=text/javascript src=/js/lunr/lunr.min.js></script>
-<script type=text/javascript>let lunrIndex,$results,pagesIndex;function initLunr(){$.getJSON("/js/lunr/PagesIndex.json").done(function(e){pagesIndex=e,console.info("index:",pagesIndex),lunrIndex=lunr(function(){this.field("title",{boost:10}),this.field("tags",{boost:5}),console.log(this.add),this.field("content"),this.ref("href"),pagesIndex.forEach(e=>{console.log(e),e&&this.add(e)})})}).fail(function(s,e,t){const n=e+", "+t;console.error("Error getting Hugo index flie:",n)})}function initUI(){$results=$("#results"),$("#search").keyup(function(){$results.empty();const e=$(this).val();if(e.length<2)return;const t=search(e);renderResults(t)})}function search(e){return lunrIndex.search(e).map(function(e){return console.log(e),pagesIndex.filter(function(t){return t&&t.href===e.ref})[0]})}function renderResults(e){if(!e.length)return;e.slice(0,10).forEach(function(e){const t=$("<li>");t.append($("<a>",{href:e?e.href:'',text:"🔗 "+e.title})),$results.append(t)})}initLunr(),$(document).ready(function(){initUI()})</script>
-</li><li>
-<a href=https://visionary.top/tags/about/ class="hover:text-blue-800 dark:hover:text-blue-300">About</a>
-</li><li>
-<a href=https://visionary.top/blog/ class="hover:text-blue-800 dark:hover:text-blue-300">Blogs</a>
-</li></ul></nav></header><main class="flex-1 mx-4 md:mx-12 lg:mx-24 mt-8 sm:mt-16">
-<article class="max-w-5xl mx-auto px-4">
-<h1 class="text-4xl font-bold mb-4">Blogs</h1><div class=text-gray-600></div><div class=card-list>
-<a class="block my-6" href=/blog/devnotes/jotdown/>
-<h2 class="text-xl font-semibold mb-1">JotDown</h2><div class="font-light text-gray-800 dark:text-gray-200">
-<p>开发随手记</p></div></a>
-<div class="info dark:info-dark">
-<span class="font-light mb-2 text-gray-500 text-sm">
-March 2, 2022
-</span>
-<span class="font-light text-gray-800 text-sm dark:text-gray-200"> <span class=separator><a class=category href=/categories/jotdown/>JotDown</a></span>
-</span>
-<span class="font-light text-gray-500 text-sm dark:text-gray-200">
-<span class=separator><a class=tag href=/tags/jotdown/>JotDown</a></span>
-</span>
-</div><a class="block my-6" href=/blog/js/module/>
-<h2 class="text-xl font-semibold mb-1">js es6 不同引入方式/暴露方式的区别</h2><div class="font-light text-gray-800 dark:text-gray-200">
-<p>module.md</p></div></a>
-<div class="info dark:info-dark">
-<span class="font-light mb-2 text-gray-500 text-sm">
-March 2, 2022
-</span>
-<span class="font-light text-gray-800 text-sm dark:text-gray-200"> <span class=separator><a class=category href=/categories/js/>js</a></span>
-</span>
-<span class="font-light text-gray-500 text-sm dark:text-gray-200">
-<span class=separator><a class=tag href=/tags/js/>js</a></span>
-</span>
-</div><a class="block my-6" href=/blog/js/node%E6%96%B9%E6%B3%95%E4%B8%80%E8%A7%88-cheat/>
-<h2 class="text-xl font-semibold mb-1">NODE方法一览-cheat</h2><div class="font-light text-gray-800 dark:text-gray-200">
-Node.js v16.14.0
-NODE方法一览-cheat.md
-</div></a>
-<div class="info dark:info-dark">
-<span class="font-light mb-2 text-gray-500 text-sm">
-March 1, 2022
-</span>
-<span class="font-light text-gray-800 text-sm dark:text-gray-200"> <span class=separator><a class=category href=/categories/node%E6%96%B9%E6%B3%95%E4%B8%80%E8%A7%88-cheat/>NODE方法一览-cheat</a></span>
-</span>
-<span class="font-light text-gray-500 text-sm dark:text-gray-200">
-<span class=separator><a class=tag href=/tags/node%E6%96%B9%E6%B3%95%E4%B8%80%E8%A7%88-cheat/>NODE方法一览-cheat</a></span>
-</span>
-</div><a class="block my-6" href=/blog/blog-info/%E4%B8%80%E4%B8%AAfn%E9%80%89%E5%8F%96%E6%96%87%E4%BB%B6/>
-<h2 class="text-xl font-semibold mb-1">一个fn选取文件</h2><div class="font-light text-gray-800 dark:text-gray-200">
-<p>一个fn调起窗口 选取文件的 promise 封装、限制文件类型&是否可多选</p></div></a>
-<div class="info dark:info-dark">
-<span class="font-light mb-2 text-gray-500 text-sm">
-March 1, 2022
-</span>
-<span class="font-light text-gray-800 text-sm dark:text-gray-200"> <span class=separator><a class=category href=/categories/%E4%B8%80%E4%B8%AAfn%E9%80%89%E5%8F%96%E6%96%87%E4%BB%B6/>一个fn选取文件</a></span>
-</span>
-<span class="font-light text-gray-500 text-sm dark:text-gray-200">
-<span class=separator><a class=tag href=/tags/%E4%B8%80%E4%B8%AAfn%E9%80%89%E5%8F%96%E6%96%87%E4%BB%B6/>一个fn选取文件</a></span>
-</span>
-</div><a class="block my-6" href=/blog/js/%E5%A6%82%E4%BD%95%E8%AE%A9%E4%B8%80%E7%BB%84%E5%BC%82%E6%AD%A5%E6%93%8D%E4%BD%9C%E9%A1%BA%E5%BA%8F%E6%89%A7%E8%A1%8C/>
-<h2 class="text-xl font-semibold mb-1">如何让一组异步操作顺序执行？</h2><div class="font-light text-gray-800 dark:text-gray-200">
-如何让一组异步操作顺序执行 - for await 的使用
-const exec = util.promisify(require("child_process").exec); let tasks = [`ls`,`echo hello`]; for await (let apiKey of tasks) { console.count(`开始生成API`); const {stdout, stderr} = await exec(apiKey.cmd); }
-</div></a>
-<div class="info dark:info-dark">
-<span class="font-light mb-2 text-gray-500 text-sm">
-March 1, 2022
-</span>
-<span class="font-light text-gray-800 text-sm dark:text-gray-200"> <span class=separator><a class=category href=/categories/js/>js</a></span>
-</span>
-<span class="font-light text-gray-500 text-sm dark:text-gray-200">
-<span class=separator><a class=tag href=/tags/js/>js</a></span>
-</span>
-</div><a class="block my-6" href=/blog/blog-info/%E8%AE%A1%E7%AE%97%E6%96%87%E4%BB%B6md5%E5%80%BC/>
-<h2 class="text-xl font-semibold mb-1">计算文件md5值</h2><div class="font-light text-gray-800 dark:text-gray-200">
-<p>分片抽取计算文件md5值.md</p></div></a>
-<div class="info dark:info-dark">
-<span class="font-light mb-2 text-gray-500 text-sm">
-March 1, 2022
-</span>
-<span class="font-light text-gray-800 text-sm dark:text-gray-200"> <span class=separator><a class=category href=/categories/%E8%AE%A1%E7%AE%97%E6%96%87%E4%BB%B6md5%E5%80%BC/>计算文件md5值</a></span>
-</span>
-<span class="font-light text-gray-500 text-sm dark:text-gray-200">
-<span class=separator><a class=tag href=/tags/%E8%AE%A1%E7%AE%97%E6%96%87%E4%BB%B6md5%E5%80%BC/>计算文件md5值</a></span>
-</span>
-</div><a class="block my-6" href=/blog/devnotes/envscript/>
-<h2 class="text-xl font-semibold mb-1">ENVscript.md</h2><div class="font-light text-gray-800 dark:text-gray-200">
-ENV script.md
-</div></a>
-<div class="info dark:info-dark">
-<span class="font-light mb-2 text-gray-500 text-sm">
-February 25, 2022
-</span>
-<span class="font-light text-gray-800 text-sm dark:text-gray-200"> <span class=separator><a class=category href=/categories/js/>js</a></span>
-</span>
-<span class="font-light text-gray-500 text-sm dark:text-gray-200">
-<span class=separator><a class=tag href=/tags/js/>js</a></span>
-</span>
-</div><a class="block my-6" href=/blog/react%E4%BD%BF%E7%94%A8/react-ssr/>
-<h2 class="text-xl font-semibold mb-1">react 服务端渲染 & next.js使用</h2><div class="font-light text-gray-800 dark:text-gray-200">
-<p>一般用来做官网，方便搜索引擎爬。</p></div></a>
-<div class="info dark:info-dark">
-<span class="font-light mb-2 text-gray-500 text-sm">
-February 22, 2022
-</span>
-<span class="font-light text-gray-500 text-sm dark:text-gray-200">
-<span class=separator><a class=tag href=/tags/react/>react</a></span>
-</span>
-</div><a class="block my-6" href=/blog/security/fakewebsite/>
-<h2 class="text-xl font-semibold mb-1">fakeWebsite</h2><div class="font-light text-gray-800 dark:text-gray-200">
-fakeWebsite.md
+<script type=text/javascript>let lunrIndex,$results,pagesIndex;function initLunr(){$.getJSON("/js/lunr/PagesIndex.json").done(function(e){pagesIndex=e,console.info("index:",pagesIndex),lunrIndex=lunr(function(){this.field("title",{boost:10}),this.field("tags",{boost:5}),console.log(this.add),this.field("content"),this.ref("href"),pagesIndex.forEach(e=>{console.log(e),e&&this.add(e)})})}).fail(function(s,e,t){const n=e+", "+t;console.error("Error getting Hugo index flie:",n)})}function initUI(){$results=$("#results"),$("#search").keyup(function(){$results.empty();const e=$(this).val();if(e.length<2)return;const t=search(e);renderResults(t)})}function search(e){return lunrIndex.search(e).map(function(e){return console.log(e),pagesIndex.filter(function(t){return t&&t.href===e.ref})[0]})}function renderResults(e){if(!e.length)return;e.slice(0,10).forEach(function(e){const t=$("<li>");t.append($("<a>",{href:e?e.href:'',text:"🔗 "+e.title})),$results.append(t)})}initLunr(),$(document).ready(function(){initUI()})</script></li><li><a href=https://visionary.top/tags/about/ class="hover:text-blue-800 dark:hover:text-blue-300">About</a></li><li><a href=https://visionary.top/blog/ class="hover:text-blue-800 dark:hover:text-blue-300">Blogs</a></li></ul></nav></header><main class="flex-1 mx-4 md:mx-12 lg:mx-24 mt-8 sm:mt-16"><article class="max-w-5xl mx-auto px-4"><h1 class="text-4xl font-bold mb-4">Blogs</h1><div class=text-gray-600></div><div class=card-list><a class="block my-6" href=/blog/qa/js_grammar_qa/><h2 class="text-xl font-semibold mb-1">js 语法相关的问题</h2><div class="font-light text-gray-800 dark:text-gray-200"><p>js_grammar_QA.md</p></div></a><div class="info dark:info-dark"><span class="font-light mb-2 text-gray-500 text-sm">March 17, 2022</span>
+<span class="font-light text-gray-800 text-sm dark:text-gray-200"><span class=separator><a class=category href=/categories/js_grammar_qa/>js_grammar_QA</a></span></span>
+<span class="font-light text-gray-500 text-sm dark:text-gray-200"><span class=separator><a class=tag href=/tags/js_grammar_qa/>js_grammar_QA</a></span></span></div><a class="block my-6" href=/blog/devops/nginx/><h2 class="text-xl font-semibold mb-1">nginx 配置文件 & context & 属性</h2><div class="font-light text-gray-800 dark:text-gray-200"><p>在 docker 中启动 Nginx的步骤 和 Nginx 中配置服务、负载均衡、缓冲区、Cache的属性</p></div></a><div class="info dark:info-dark"><span class="font-light mb-2 text-gray-500 text-sm">March 15, 2022</span>
+<span class="font-light text-gray-800 text-sm dark:text-gray-200"><span class=separator><a class=category href=/categories/nginx/>nginx</a></span></span>
+<span class="font-light text-gray-500 text-sm dark:text-gray-200"><span class=separator><a class=tag href=/tags/nginx/>nginx</a></span></span></div><a class="block my-6" href=/blog/brower/cache/><h2 class="text-xl font-semibold mb-1">HTTP缓存控制机制</h2><div class="font-light text-gray-800 dark:text-gray-200"><p>cache.md
+HTTP缓存控制机制</p></div></a><div class="info dark:info-dark"><span class="font-light mb-2 text-gray-500 text-sm">March 14, 2022</span>
+<span class="font-light text-gray-800 text-sm dark:text-gray-200"><span class=separator><a class=category href=/categories/cache/>cache</a></span></span>
+<span class="font-light text-gray-500 text-sm dark:text-gray-200"><span class=separator><a class=tag href=/tags/cache/>cache</a></span></span></div><a class="block my-6" href=/blog/js/javascriptdecorators/><h2 class="text-xl font-semibold mb-1">JavaScriptDecorators</h2><div class="font-light text-gray-800 dark:text-gray-200"><p>JavaScript Decorators</p></div></a><div class="info dark:info-dark"><span class="font-light mb-2 text-gray-500 text-sm">March 10, 2022</span>
+<span class="font-light text-gray-800 text-sm dark:text-gray-200"><span class=separator><a class=category href=/categories/javascriptdecorators/>JavaScriptDecorators</a></span></span>
+<span class="font-light text-gray-500 text-sm dark:text-gray-200"><span class=separator><a class=tag href=/tags/javascriptdecorators/>JavaScriptDecorators</a></span></span></div><a class="block my-6" href=/blog/devops/dockerdeploy/><h2 class="text-xl font-semibold mb-1">dockerDeploy</h2><div class="font-light text-gray-800 dark:text-gray-200"><p>docker 部署项目</p></div></a><div class="info dark:info-dark"><span class="font-light mb-2 text-gray-500 text-sm">March 3, 2022</span>
+<span class="font-light text-gray-800 text-sm dark:text-gray-200"><span class=separator><a class=category href=/categories/docker/>docker</a></span></span>
+<span class="font-light text-gray-500 text-sm dark:text-gray-200"><span class=separator><a class=tag href=/tags/docker/>docker</a><a class=tag href=/tags/devops/>devOps</a></span></span></div><a class="block my-6" href=/blog/devnotes/jotdown/><h2 class="text-xl font-semibold mb-1">JotDown</h2><div class="font-light text-gray-800 dark:text-gray-200"><p>开发随手记</p></div></a><div class="info dark:info-dark"><span class="font-light mb-2 text-gray-500 text-sm">March 2, 2022</span>
+<span class="font-light text-gray-800 text-sm dark:text-gray-200"><span class=separator><a class=category href=/categories/jotdown/>JotDown</a></span></span>
+<span class="font-light text-gray-500 text-sm dark:text-gray-200"><span class=separator><a class=tag href=/tags/jotdown/>JotDown</a></span></span></div><a class="block my-6" href=/blog/js/module/><h2 class="text-xl font-semibold mb-1">js es6 不同引入方式/暴露方式的区别</h2><div class="font-light text-gray-800 dark:text-gray-200"><p>module.md</p></div></a><div class="info dark:info-dark"><span class="font-light mb-2 text-gray-500 text-sm">March 2, 2022</span>
+<span class="font-light text-gray-800 text-sm dark:text-gray-200"><span class=separator><a class=category href=/categories/js/>js</a></span></span>
+<span class="font-light text-gray-500 text-sm dark:text-gray-200"><span class=separator><a class=tag href=/tags/js/>js</a></span></span></div><a class="block my-6" href=/blog/js/node%E6%96%B9%E6%B3%95%E4%B8%80%E8%A7%88-cheat/><h2 class="text-xl font-semibold mb-1">NODE方法一览-cheat</h2><div class="font-light text-gray-800 dark:text-gray-200">Node.js v16.14.0
+NODE方法一览-cheat.md</div></a><div class="info dark:info-dark"><span class="font-light mb-2 text-gray-500 text-sm">March 1, 2022</span>
+<span class="font-light text-gray-800 text-sm dark:text-gray-200"><span class=separator><a class=category href=/categories/node%E6%96%B9%E6%B3%95%E4%B8%80%E8%A7%88-cheat/>NODE方法一览-cheat</a></span></span>
+<span class="font-light text-gray-500 text-sm dark:text-gray-200"><span class=separator><a class=tag href=/tags/node%E6%96%B9%E6%B3%95%E4%B8%80%E8%A7%88-cheat/>NODE方法一览-cheat</a></span></span></div><a class="block my-6" href=/blog/blog-info/%E4%B8%80%E4%B8%AAfn%E9%80%89%E5%8F%96%E6%96%87%E4%BB%B6/><h2 class="text-xl font-semibold mb-1">一个fn选取文件</h2><div class="font-light text-gray-800 dark:text-gray-200"><p>一个fn调起窗口 选取文件的 promise 封装、限制文件类型&是否可多选</p></div></a><div class="info dark:info-dark"><span class="font-light mb-2 text-gray-500 text-sm">March 1, 2022</span>
+<span class="font-light text-gray-800 text-sm dark:text-gray-200"><span class=separator><a class=category href=/categories/%E4%B8%80%E4%B8%AAfn%E9%80%89%E5%8F%96%E6%96%87%E4%BB%B6/>一个fn选取文件</a></span></span>
+<span class="font-light text-gray-500 text-sm dark:text-gray-200"><span class=separator><a class=tag href=/tags/%E4%B8%80%E4%B8%AAfn%E9%80%89%E5%8F%96%E6%96%87%E4%BB%B6/>一个fn选取文件</a></span></span></div><a class="block my-6" href=/blog/js/%E5%A6%82%E4%BD%95%E8%AE%A9%E4%B8%80%E7%BB%84%E5%BC%82%E6%AD%A5%E6%93%8D%E4%BD%9C%E9%A1%BA%E5%BA%8F%E6%89%A7%E8%A1%8C/><h2 class="text-xl font-semibold mb-1">如何让一组异步操作顺序执行？</h2><div class="font-light text-gray-800 dark:text-gray-200">如何让一组异步操作顺序执行 - for await 的使用
+const exec = util.promisify(require("child_process").exec); let tasks = [`ls`,`echo hello`]; for await (let apiKey of tasks) { console.count(`开始生成API`); const {stdout, stderr} = await exec(apiKey.cmd); }</div></a><div class="info dark:info-dark"><span class="font-light mb-2 text-gray-500 text-sm">March 1, 2022</span>
+<span class="font-light text-gray-800 text-sm dark:text-gray-200"><span class=separator><a class=category href=/categories/js/>js</a></span></span>
+<span class="font-light text-gray-500 text-sm dark:text-gray-200"><span class=separator><a class=tag href=/tags/js/>js</a></span></span></div><a class="block my-6" href=/blog/blog-info/%E8%AE%A1%E7%AE%97%E6%96%87%E4%BB%B6md5%E5%80%BC/><h2 class="text-xl font-semibold mb-1">计算文件md5值</h2><div class="font-light text-gray-800 dark:text-gray-200"><p>分片抽取计算文件md5值.md</p></div></a><div class="info dark:info-dark"><span class="font-light mb-2 text-gray-500 text-sm">March 1, 2022</span>
+<span class="font-light text-gray-800 text-sm dark:text-gray-200"><span class=separator><a class=category href=/categories/%E8%AE%A1%E7%AE%97%E6%96%87%E4%BB%B6md5%E5%80%BC/>计算文件md5值</a></span></span>
+<span class="font-light text-gray-500 text-sm dark:text-gray-200"><span class=separator><a class=tag href=/tags/%E8%AE%A1%E7%AE%97%E6%96%87%E4%BB%B6md5%E5%80%BC/>计算文件md5值</a></span></span></div><a class="block my-6" href=/blog/devnotes/envscript/><h2 class="text-xl font-semibold mb-1">ENVscript.md</h2><div class="font-light text-gray-800 dark:text-gray-200">ENV script.md</div></a><div class="info dark:info-dark"><span class="font-light mb-2 text-gray-500 text-sm">February 25, 2022</span>
+<span class="font-light text-gray-800 text-sm dark:text-gray-200"><span class=separator><a class=category href=/categories/js/>js</a></span></span>
+<span class="font-light text-gray-500 text-sm dark:text-gray-200"><span class=separator><a class=tag href=/tags/js/>js</a></span></span></div><a class="block my-6" href=/blog/react%E4%BD%BF%E7%94%A8/react-ssr/><h2 class="text-xl font-semibold mb-1">react 服务端渲染 & next.js使用</h2><div class="font-light text-gray-800 dark:text-gray-200"><p>一般用来做官网，方便搜索引擎爬。</p></div></a><div class="info dark:info-dark"><span class="font-light mb-2 text-gray-500 text-sm">February 22, 2022</span>
+<span class="font-light text-gray-500 text-sm dark:text-gray-200"><span class=separator><a class=tag href=/tags/react/>react</a><a class=tag href=/tags/ssr/>ssr</a></span></span></div><a class="block my-6" href=/blog/security/fakewebsite/><h2 class="text-xl font-semibold mb-1">fakeWebsite</h2><div class="font-light text-gray-800 dark:text-gray-200">fakeWebsite.md
 钓鱼网站使用iframe 请求网站嵌入、拦截请求或者输入
-可以在 Nginx 中配置
-</div></a>
-<div class="info dark:info-dark">
-<span class="font-light mb-2 text-gray-500 text-sm">
-February 21, 2022
-</span>
-<span class="font-light text-gray-800 text-sm dark:text-gray-200"> <span class=separator><a class=category href=/categories/security/>security</a></span>
-</span>
-<span class="font-light text-gray-500 text-sm dark:text-gray-200">
-<span class=separator><a class=tag href=/tags/security/>security</a></span>
-</span>
-</div><a class="block my-6" href=/blog/github/git_command/>
-<h2 class="text-xl font-semibold mb-1">git常用命令</h2><div class="font-light text-gray-800 dark:text-gray-200">
-<p>git常用命令.md</p></div></a>
-<div class="info dark:info-dark">
-<span class="font-light mb-2 text-gray-500 text-sm">
-February 21, 2022
-</span>
-<span class="font-light text-gray-800 text-sm dark:text-gray-200"> <span class=separator><a class=category href=/categories/git/>git</a></span>
-</span>
-<span class="font-light text-gray-500 text-sm dark:text-gray-200">
-<span class=separator><a class=tag href=/tags/git/>git</a></span>
-</span>
-</div><a class="block my-6" href=/blog/js/closures/>
-<h2 class="text-xl font-semibold mb-1">Javascript - 闭包 Closures</h2><div class="font-light text-gray-800 dark:text-gray-200">
-<p>闭包示例代码</p></div></a>
-<div class="info dark:info-dark">
-<span class="font-light mb-2 text-gray-500 text-sm">
-February 21, 2022
-</span>
-<span class="font-light text-gray-800 text-sm dark:text-gray-200"> <span class=separator><a class=category href=/categories/javascript/>javascript</a></span>
-</span>
-<span class="font-light text-gray-500 text-sm dark:text-gray-200">
-<span class=separator><a class=tag href=/tags/javascript/>javascript</a></span>
-</span>
-</div><a class="block my-6" href=/blog/react%E4%BD%BF%E7%94%A8/react-api-all/>
-<h2 class="text-xl font-semibold mb-1">React 中不是很常用的 Api</h2><div class="font-light text-gray-800 dark:text-gray-200">
-<p>Fragment、Error Boundaries、componentDidCatch、Suspense、createPortal 等等</p></div></a>
-<div class="info dark:info-dark">
-<span class="font-light mb-2 text-gray-500 text-sm">
-February 21, 2022
-</span>
-</div><a class="block my-6" href=/blog/spider/spider%E8%AE%BE%E8%AE%A1/>
-<h2 class="text-xl font-semibold mb-1">spider 一系列的设计</h2><div class="font-light text-gray-800 dark:text-gray-200">
-<table>
-<thead>
-<tr>
-<th>Project</th><th>Desc</th></tr></thead><tbody>
-<tr>
-<td>spider</td><td>带有各种内容的完整框架 & 尝试性 demo</td></tr><tr>
-<td><a href=https://github.com/viisionary/spider-source>spider-source </a></td><td>脚手架的源码</td></tr><tr>
-<td>spider-cli</td><td>生成新项目的脚本 clone 的是 spider【改成<a href=https://github.com/viisionary/spider-source>spider-source</a>】</td></tr><tr>
-<td><a href=https://github.com/viisionary/spider-api>spider-api</a></td><td>spider 网站的服务、有一些 demo</td></tr><tr>
-<td>spider-ui-cli</td><td>组件库的源码 - build 后会生成spider-vision并发布</td></tr><tr>
-<td>spider-vision</td><td>组件库生成的 npm 包</td></tr><tr>
-<td>spider-tool</td><td>工具集的源码 - build 后会生成spider-util并发布</td></tr><tr>
-<td>spider-util</td><td>工具集生成的 npm 包</td></tr></tbody></table></div></a>
-<div class="info dark:info-dark">
-<span class="font-light mb-2 text-gray-500 text-sm">
-February 21, 2022
-</span>
-</div><a class="block my-6" href=/blog/explore/wasm/>
-<h2 class="text-xl font-semibold mb-1">WebAssembly & assemblyscript 示例</h2><div class="font-light text-gray-800 dark:text-gray-200">
-<h2 id=webassembly>WebAssembly</h2><p>WebAssembly 的简单介绍和assemblyscript的 hello word</p><p><a href=https://wasmbyexample.dev/>Wasm By Example</a></p><p><a href=https://github.com/AssemblyScript/assemblyscript>assemblyscript</a></p></div></a>
-<div class="info dark:info-dark">
-<span class="font-light mb-2 text-gray-500 text-sm">
-February 21, 2022
-</span>
-<span class="font-light text-gray-800 text-sm dark:text-gray-200"> <span class=separator><a class=category href=/categories/webassembly/>WebAssembly</a></span>
-</span>
-<span class="font-light text-gray-500 text-sm dark:text-gray-200">
-<span class=separator><a class=tag href=/tags/webassembly/>WebAssembly</a></span>
-</span>
-</div><a class="block my-6" href=/blog/mindmap_png/>
-<h2 class="text-xl font-semibold mb-1">BLOG mind map</h2><div class="font-light text-gray-800 dark:text-gray-200">
-blog 的脑图
-//TODO 待添加
-</div></a>
-<div class="info dark:info-dark">
-<span class="font-light mb-2 text-gray-500 text-sm">
-February 18, 2022
-</span>
-</div><a class="block my-6" href=/blog/media/aliplayer/>
-<h2 class="text-xl font-semibold mb-1">aliplayer 源码阅读笔记</h2><div class="font-light text-gray-800 dark:text-gray-200">
-支持格式 阿里云Web端播放器SDK，同时支持Flash和H5两种播放技术。
+可以在 Nginx 中配置</div></a><div class="info dark:info-dark"><span class="font-light mb-2 text-gray-500 text-sm">February 21, 2022</span>
+<span class="font-light text-gray-800 text-sm dark:text-gray-200"><span class=separator><a class=category href=/categories/security/>security</a></span></span>
+<span class="font-light text-gray-500 text-sm dark:text-gray-200"><span class=separator><a class=tag href=/tags/security/>security</a></span></span></div><a class="block my-6" href=/blog/github/git_command/><h2 class="text-xl font-semibold mb-1">git常用命令</h2><div class="font-light text-gray-800 dark:text-gray-200"><p>git常用命令.md</p></div></a><div class="info dark:info-dark"><span class="font-light mb-2 text-gray-500 text-sm">February 21, 2022</span>
+<span class="font-light text-gray-800 text-sm dark:text-gray-200"><span class=separator><a class=category href=/categories/git/>git</a></span></span>
+<span class="font-light text-gray-500 text-sm dark:text-gray-200"><span class=separator><a class=tag href=/tags/git/>git</a></span></span></div><a class="block my-6" href=/blog/js/closures/><h2 class="text-xl font-semibold mb-1">Javascript - 闭包 Closures</h2><div class="font-light text-gray-800 dark:text-gray-200"><p>闭包示例代码</p></div></a><div class="info dark:info-dark"><span class="font-light mb-2 text-gray-500 text-sm">February 21, 2022</span>
+<span class="font-light text-gray-800 text-sm dark:text-gray-200"><span class=separator><a class=category href=/categories/javascript/>javascript</a></span></span>
+<span class="font-light text-gray-500 text-sm dark:text-gray-200"><span class=separator><a class=tag href=/tags/javascript/>javascript</a></span></span></div><a class="block my-6" href=/blog/react%E4%BD%BF%E7%94%A8/react-api-all/><h2 class="text-xl font-semibold mb-1">React 中不是很常用的 Api</h2><div class="font-light text-gray-800 dark:text-gray-200"><p>Fragment、Error Boundaries、componentDidCatch、Suspense、createPortal 等等</p></div></a><div class="info dark:info-dark"><span class="font-light mb-2 text-gray-500 text-sm">February 21, 2022</span></div><a class="block my-6" href=/blog/spider/spider%E8%AE%BE%E8%AE%A1/><h2 class="text-xl font-semibold mb-1">spider 一系列的设计</h2><div class="font-light text-gray-800 dark:text-gray-200"><table><thead><tr><th>Project</th><th>Desc</th></tr></thead><tbody><tr><td>spider</td><td>带有各种内容的完整框架 & 尝试性 demo</td></tr><tr><td><a href=https://github.com/viisionary/spider-source>spider-source</a></td><td>脚手架的源码</td></tr><tr><td>spider-cli</td><td>生成新项目的脚本 clone 的是 spider【改成<a href=https://github.com/viisionary/spider-source>spider-source</a>】</td></tr><tr><td><a href=https://github.com/viisionary/spider-api>spider-api</a></td><td>spider 网站的服务、有一些 demo</td></tr><tr><td>spider-ui-cli</td><td>组件库的源码 - build 后会生成spider-vision并发布</td></tr><tr><td>spider-vision</td><td>组件库生成的 npm 包</td></tr><tr><td>spider-tool</td><td>工具集的源码 - build 后会生成spider-util并发布</td></tr><tr><td>spider-util</td><td>工具集生成的 npm 包</td></tr></tbody></table></div></a><div class="info dark:info-dark"><span class="font-light mb-2 text-gray-500 text-sm">February 21, 2022</span></div><a class="block my-6" href=/blog/explore/wasm/><h2 class="text-xl font-semibold mb-1">WebAssembly & assemblyscript 示例</h2><div class="font-light text-gray-800 dark:text-gray-200"><h2 id=webassembly>WebAssembly</h2><p>WebAssembly 的简单介绍和assemblyscript的 hello word</p><p><a href=https://wasmbyexample.dev/>Wasm By Example</a></p><p><a href=https://github.com/AssemblyScript/assemblyscript>assemblyscript</a></p></div></a><div class="info dark:info-dark"><span class="font-light mb-2 text-gray-500 text-sm">February 21, 2022</span>
+<span class="font-light text-gray-800 text-sm dark:text-gray-200"><span class=separator><a class=category href=/categories/webassembly/>WebAssembly</a></span></span>
+<span class="font-light text-gray-500 text-sm dark:text-gray-200"><span class=separator><a class=tag href=/tags/webassembly/>WebAssembly</a></span></span></div><a class="block my-6" href=/blog/mindmap_png/><h2 class="text-xl font-semibold mb-1">BLOG mind map</h2><div class="font-light text-gray-800 dark:text-gray-200">blog 的脑图
+//TODO 待添加</div></a><div class="info dark:info-dark"><span class="font-light mb-2 text-gray-500 text-sm">February 18, 2022</span></div><a class="block my-6" href=/blog/media/aliplayer/><h2 class="text-xl font-semibold mb-1">aliplayer 源码阅读笔记</h2><div class="font-light text-gray-800 dark:text-gray-200">支持格式 阿里云Web端播放器SDK，同时支持Flash和H5两种播放技术。
 播放技术 视频格式 视频编码 音频编码 Flash模式（已停止更新） MP4、FLV、M3U8、RTMP H.264 AAC、MP3 H5模式 MP4、FLV、M3U8 H.264 MP4 FLV M3U8 RTMP MP3 HLS加密播放
-&mdash; aliplayer.md
-</div></a>
-<div class="info dark:info-dark">
-<span class="font-light mb-2 text-gray-500 text-sm">
-December 20, 2021
-</span>
-</div><a class="block my-6" href=/blog/js/js%E7%9A%84%E5%BC%82%E6%AD%A5%E7%BC%96%E7%A8%8B/>
-<h2 class="text-xl font-semibold mb-1">js异步编程</h2><div class="font-light text-gray-800 dark:text-gray-200">
-<p>Js 是单线程的</p></div></a>
-<div class="info dark:info-dark">
-<span class="font-light mb-2 text-gray-500 text-sm">
-December 20, 2021
-</span>
-<span class="font-light text-gray-800 text-sm dark:text-gray-200"> <span class=separator><a class=category href=/categories/js/>js</a></span>
-</span>
-<span class="font-light text-gray-500 text-sm dark:text-gray-200">
-<span class=separator><a class=tag href=/tags/js/>js</a><a class=tag href=/tags/%E5%BC%82%E6%AD%A5/>异步</a></span>
-</span>
-</div><a class="block my-6" href=/blog/qa/nodejs%E4%BA%8B%E4%BB%B6%E5%BE%AA%E7%8E%AF/>
-<h2 class="text-xl font-semibold mb-1">NodeJs事件循环</h2><div class="font-light text-gray-800 dark:text-gray-200">
-<p>事件循环是 Node.js 处理非阻塞 I/O 操作的机制</p></div></a>
-<div class="info dark:info-dark">
-<span class="font-light mb-2 text-gray-500 text-sm">
-December 20, 2021
-</span>
-</div><a class="block my-6" href=/blog/npm/npm_package/>
-<h2 class="text-xl font-semibold mb-1">一些 npm上的工具 - serve</h2><div class="font-light text-gray-800 dark:text-gray-200">
-serve
+&mdash; aliplayer.md</div></a><div class="info dark:info-dark"><span class="font-light mb-2 text-gray-500 text-sm">December 20, 2021</span></div><a class="block my-6" href=/blog/js/js%E7%9A%84%E5%BC%82%E6%AD%A5%E7%BC%96%E7%A8%8B/><h2 class="text-xl font-semibold mb-1">js异步编程</h2><div class="font-light text-gray-800 dark:text-gray-200"><p>Js 是单线程的</p></div></a><div class="info dark:info-dark"><span class="font-light mb-2 text-gray-500 text-sm">December 20, 2021</span>
+<span class="font-light text-gray-800 text-sm dark:text-gray-200"><span class=separator><a class=category href=/categories/js/>js</a></span></span>
+<span class="font-light text-gray-500 text-sm dark:text-gray-200"><span class=separator><a class=tag href=/tags/js/>js</a><a class=tag href=/tags/%E5%BC%82%E6%AD%A5/>异步</a></span></span></div><a class="block my-6" href=/blog/qa/nodejs%E4%BA%8B%E4%BB%B6%E5%BE%AA%E7%8E%AF/><h2 class="text-xl font-semibold mb-1">NodeJs事件循环</h2><div class="font-light text-gray-800 dark:text-gray-200"><p>事件循环是 Node.js 处理非阻塞 I/O 操作的机制</p></div></a><div class="info dark:info-dark"><span class="font-light mb-2 text-gray-500 text-sm">December 20, 2021</span></div><a class="block my-6" href=/blog/npm/npm_package/><h2 class="text-xl font-semibold mb-1">一些 npm上的工具 - serve</h2><div class="font-light text-gray-800 dark:text-gray-200">serve
 https://www.npmjs.com/package/serve
 启一个静态服务器在本地
 省的在本地调试的时候需要部署 NGINX
-直接在 build 目录下 跑 serve 就 ok
-</div></a>
-<div class="info dark:info-dark">
-<span class="font-light mb-2 text-gray-500 text-sm">
-September 1, 2021
-</span>
-<span class="font-light text-gray-500 text-sm dark:text-gray-200">
-<span class=separator><a class=tag href=/tags/npm/>npm</a></span>
-</span>
-</div><a class="block my-6" href=/blog/js/%E6%AD%A3%E5%88%99/>
-<h2 class="text-xl font-semibold mb-1">JS正则相关</h2><div class="font-light text-gray-800 dark:text-gray-200">
-<p>Regular Expressions Cheat Sheet & function</p></div></a>
-<div class="info dark:info-dark">
-<span class="font-light mb-2 text-gray-500 text-sm">
-August 10, 2021
-</span>
-<span class="font-light text-gray-500 text-sm dark:text-gray-200">
-<span class=separator><a class=tag href=/tags/js/>js</a></span>
-</span>
-</div><a class="block my-6" href=/blog/js/%E5%88%86%E7%89%87%E4%B8%8A%E4%BC%A0/>
-<h2 class="text-xl font-semibold mb-1">使用resumable实现分片上传、暂停续传</h2><div class="font-light text-gray-800 dark:text-gray-200">
-<p>框架：react / node
-使用 resumable 实现分片上传、暂停续传</p><p>基本功能仿youtube</p><p><a href=https://github.com/viisionary/resumableClient>https://github.com/viisionary/resumableClient</a></p></div></a>
-<div class="info dark:info-dark">
-<span class="font-light mb-2 text-gray-500 text-sm">
-August 1, 2021
-</span>
-<span class="font-light text-gray-500 text-sm dark:text-gray-200">
-<span class=separator><a class=tag href=/tags/%E5%8A%9F%E8%83%BD/>功能</a></span>
-</span>
-</div><a class="block my-6" href=/blog/js/es6/>
-<h2 class="text-xl font-semibold mb-1">es6 新语法 - 2019 & 2020</h2><div class="font-light text-gray-800 dark:text-gray-200">
-</div></a>
-<div class="info dark:info-dark">
-<span class="font-light mb-2 text-gray-500 text-sm">
-July 22, 2021
-</span>
-<span class="font-light text-gray-500 text-sm dark:text-gray-200">
-<span class=separator><a class=tag href=/tags/js/>js</a></span>
-</span>
-</div><a class="block my-6" href=/blog/react%E4%BD%BF%E7%94%A8/hooks/>
-<h2 class="text-xl font-semibold mb-1">Hooks使用</h2><div class="font-light text-gray-800 dark:text-gray-200">
-<ul>
-<li>Hook 是 React 16.8 的新增特性。它可以让你在不编写 class 的情况下使用 state 以及其他的 React 特性。</li><li>Hook 将组件中相互关联的部分拆分成更小的函数（比如设置订阅或请求数据）,而并非强制按照生命周期划分</li></ul></div></a>
-<div class="info dark:info-dark">
-<span class="font-light mb-2 text-gray-500 text-sm">
-July 22, 2021
-</span>
-<span class="font-light text-gray-800 text-sm dark:text-gray-200"> <span class=separator><a class=category href=/categories/react/>react</a></span>
-</span>
-<span class="font-light text-gray-500 text-sm dark:text-gray-200">
-<span class=separator><a class=tag href=/tags/react/>react</a></span>
-</span>
-</div><a class="block my-6" href=/blog/network/https/>
-<h2 class="text-xl font-semibold mb-1">https相关内容</h2><div class="font-light text-gray-800 dark:text-gray-200">
-<p>https的信息</p><p>验证过程</p><p>中间人攻击</p></div></a>
-<div class="info dark:info-dark">
-<span class="font-light mb-2 text-gray-500 text-sm">
-July 22, 2021
-</span>
-<span class="font-light text-gray-500 text-sm dark:text-gray-200">
-<span class=separator><a class=tag href=/tags/https/>https</a><a class=tag href=/tags/network/>network</a></span>
-</span>
-</div><a class="block my-6" href=/blog/qa/js%E7%9A%84%E5%B9%B6%E5%8F%91%E6%A8%A1%E5%9E%8B%E4%B8%8E%E4%BA%8B%E4%BB%B6%E5%BE%AA%E7%8E%AF/>
-<h2 class="text-xl font-semibold mb-1">js的并发模型与事件循环</h2><div class="font-light text-gray-800 dark:text-gray-200">
-</div></a>
-<div class="info dark:info-dark">
-<span class="font-light mb-2 text-gray-500 text-sm">
-July 22, 2021
-</span>
-<span class="font-light text-gray-500 text-sm dark:text-gray-200">
-<span class=separator><a class=tag href=/tags/js/>js</a></span>
-</span>
-</div><a class="block my-6" href=/blog/npm/npm%E7%9B%B8%E5%85%B3/>
-<h2 class="text-xl font-semibold mb-1">package-lock.json的作用</h2><div class="font-light text-gray-800 dark:text-gray-200">
-<p>对于任何 npm 修改node_modules树或package.json. 它描述了生成的确切树，以便后续安装能够生成相同的树，而不管中间依赖项更新如何。</p></div></a>
-<div class="info dark:info-dark">
-<span class="font-light mb-2 text-gray-500 text-sm">
-July 22, 2021
-</span>
-<span class="font-light text-gray-500 text-sm dark:text-gray-200">
-<span class=separator><a class=tag href=/tags/npm/>npm</a></span>
-</span>
-</div><a class="block my-6" href=/blog/react%E4%BD%BF%E7%94%A8/purecomponent/>
-<h2 class="text-xl font-semibold mb-1">PureComponent 纯组件</h2><div class="font-light text-gray-800 dark:text-gray-200">
-<p>为什么要使用shouldComponentUpdate？什么时候使用React.PureComponent
-re render的情况</p></div></a>
-<div class="info dark:info-dark">
-<span class="font-light mb-2 text-gray-500 text-sm">
-July 22, 2021
-</span>
-<span class="font-light text-gray-500 text-sm dark:text-gray-200">
-<span class=separator><a class=tag href=/tags/react/>react</a></span>
-</span>
-</div><a class="block my-6" href=/blog/react%E4%BD%BF%E7%94%A8/purefunction/>
-<h2 class="text-xl font-semibold mb-1">pureFunction</h2><div class="font-light text-gray-800 dark:text-gray-200">
-<p>纯函数定义：</p><ul>
-<li>对于相同的参数，函数返回值是相同的（与局部静态变量、非局部变量、可变引用参数或输入流没有变化），并且</li><li>函数应用程序没有副作用（局部静态变量、非局部变量、可变引用参数或输入/输出流没有突变）。</li></ul></div></a>
-<div class="info dark:info-dark">
-<span class="font-light mb-2 text-gray-500 text-sm">
-July 22, 2021
-</span>
-<span class="font-light text-gray-500 text-sm dark:text-gray-200">
-<span class=separator><a class=tag href=/tags/react/>react</a></span>
-</span>
-</div><a class="block my-6" href=/blog/qa/serverless/>
-<h2 class="text-xl font-semibold mb-1">serverless</h2><div class="font-light text-gray-800 dark:text-gray-200">
-<p>腾讯的 serverless
-亚马逊的 serverless</p></div></a>
-<div class="info dark:info-dark">
-<span class="font-light mb-2 text-gray-500 text-sm">
-July 22, 2021
-</span>
-<span class="font-light text-gray-500 text-sm dark:text-gray-200">
-<span class=separator><a class=tag href=/tags/serverless/>serverless</a><a class=tag href=/tags/devops/>devOps</a></span>
-</span>
-</div><a class="block my-6" href=/blog/ts/%E7%94%A8%E8%BF%87%E7%9A%84%E7%B1%BB%E5%9E%8B/>
-<h2 class="text-xl font-semibold mb-1">ts & tsx lib中一些常用的 type</h2><div class="font-light text-gray-800 dark:text-gray-200">
-</div></a>
-<div class="info dark:info-dark">
-<span class="font-light mb-2 text-gray-500 text-sm">
-July 22, 2021
-</span>
-<span class="font-light text-gray-500 text-sm dark:text-gray-200">
-<span class=separator><a class=tag href=/tags/ts/>ts</a></span>
-</span>
-</div><a class="block my-6" href=/blog/media/web-rtc/>
-<h2 class="text-xl font-semibold mb-1">WebRTC</h2><div class="font-light text-gray-800 dark:text-gray-200">
-<p>WebRTC的总结</p></div></a>
-<div class="info dark:info-dark">
-<span class="font-light mb-2 text-gray-500 text-sm">
-July 22, 2021
-</span>
-<span class="font-light text-gray-500 text-sm dark:text-gray-200">
-<span class=separator><a class=tag href=/tags/webrtc/>WebRTC</a><a class=tag href=/tags/webmedia/>webMedia</a></span>
-</span>
-</div><a class="block my-6" href=/blog/js/webworker/>
-<h2 class="text-xl font-semibold mb-1">WebWorker</h2><div class="font-light text-gray-800 dark:text-gray-200">
-JavaScript 语言采用的是单线程模型，也就是说，所有任务只能在一个线程上完成，一次只能做一件事。前面的任务没做完，后面的任务只能等着。随着电脑计算能力的增强，尤其是多核 CPU 的出现，单线程带来很大的不便，无法充分发挥计算机的计算能力。
+直接在 build 目录下 跑 serve 就 ok</div></a><div class="info dark:info-dark"><span class="font-light mb-2 text-gray-500 text-sm">September 1, 2021</span>
+<span class="font-light text-gray-500 text-sm dark:text-gray-200"><span class=separator><a class=tag href=/tags/npm/>npm</a></span></span></div><a class="block my-6" href=/blog/js/%E6%AD%A3%E5%88%99/><h2 class="text-xl font-semibold mb-1">JS正则相关</h2><div class="font-light text-gray-800 dark:text-gray-200"><p>Regular Expressions Cheat Sheet & function</p></div></a><div class="info dark:info-dark"><span class="font-light mb-2 text-gray-500 text-sm">August 10, 2021</span>
+<span class="font-light text-gray-500 text-sm dark:text-gray-200"><span class=separator><a class=tag href=/tags/js/>js</a></span></span></div><a class="block my-6" href=/blog/js/%E5%88%86%E7%89%87%E4%B8%8A%E4%BC%A0/><h2 class="text-xl font-semibold mb-1">使用resumable实现分片上传、暂停续传</h2><div class="font-light text-gray-800 dark:text-gray-200"><p>框架：react / node
+使用 resumable 实现分片上传、暂停续传</p><p>基本功能仿youtube</p><p><a href=https://github.com/viisionary/resumableClient>https://github.com/viisionary/resumableClient</a></p></div></a><div class="info dark:info-dark"><span class="font-light mb-2 text-gray-500 text-sm">August 1, 2021</span>
+<span class="font-light text-gray-500 text-sm dark:text-gray-200"><span class=separator><a class=tag href=/tags/%E5%8A%9F%E8%83%BD/>功能</a></span></span></div><a class="block my-6" href=/blog/js/es6/><h2 class="text-xl font-semibold mb-1">es6 新语法 - 2019 & 2020</h2><div class="font-light text-gray-800 dark:text-gray-200"></div></a><div class="info dark:info-dark"><span class="font-light mb-2 text-gray-500 text-sm">July 22, 2021</span>
+<span class="font-light text-gray-500 text-sm dark:text-gray-200"><span class=separator><a class=tag href=/tags/js/>js</a></span></span></div><a class="block my-6" href=/blog/react%E4%BD%BF%E7%94%A8/hooks/><h2 class="text-xl font-semibold mb-1">Hooks使用</h2><div class="font-light text-gray-800 dark:text-gray-200"><ul><li>Hook 是 React 16.8 的新增特性。它可以让你在不编写 class 的情况下使用 state 以及其他的 React 特性。</li><li>Hook 将组件中相互关联的部分拆分成更小的函数（比如设置订阅或请求数据）,而并非强制按照生命周期划分</li></ul></div></a><div class="info dark:info-dark"><span class="font-light mb-2 text-gray-500 text-sm">July 22, 2021</span>
+<span class="font-light text-gray-800 text-sm dark:text-gray-200"><span class=separator><a class=category href=/categories/react/>react</a></span></span>
+<span class="font-light text-gray-500 text-sm dark:text-gray-200"><span class=separator><a class=tag href=/tags/react/>react</a></span></span></div><a class="block my-6" href=/blog/network/http2/><h2 class="text-xl font-semibold mb-1">HTTP/2相关内容</h2><div class="font-light text-gray-800 dark:text-gray-200">HTTP/2的优势 （1）多路复用 所以浏览器会限制同一个域的同时请求数，Chrome是限制6个，总连接数是17个
+HTTP2/特性 所有请求都是并行下载的，而不是在队列中 HTTP 标头被压缩 页面以二进制而不是文本文件的形式传输，效率更高 即使没有用户的请求，服务器也可以“推送”数据，从而提高高延迟用户的速度
+如何开启 HTTP2 [NGINX] 需要配置 SSL
+sudo openssl req -x509 -nodes -days 365 -newkey rsa:2048 -keyout /etc/ssl/private/nginx-selfsigned.key -out /etc/ssl/certs/nginx-selfsigned.crt 再开启 http2
+listen [::]:443 ssl http2 ipv6only=on; listen 443 ssl http2;</div></a><div class="info dark:info-dark"><span class="font-light mb-2 text-gray-500 text-sm">July 22, 2021</span>
+<span class="font-light text-gray-500 text-sm dark:text-gray-200"><span class=separator><a class=tag href=/tags/https/>https</a><a class=tag href=/tags/network/>network</a></span></span></div><a class="block my-6" href=/blog/network/https/><h2 class="text-xl font-semibold mb-1">https相关内容</h2><div class="font-light text-gray-800 dark:text-gray-200"><p>https的信息</p><p>验证过程</p><p>中间人攻击</p></div></a><div class="info dark:info-dark"><span class="font-light mb-2 text-gray-500 text-sm">July 22, 2021</span>
+<span class="font-light text-gray-500 text-sm dark:text-gray-200"><span class=separator><a class=tag href=/tags/https/>https</a><a class=tag href=/tags/network/>network</a></span></span></div><a class="block my-6" href=/blog/qa/js%E7%9A%84%E5%B9%B6%E5%8F%91%E6%A8%A1%E5%9E%8B%E4%B8%8E%E4%BA%8B%E4%BB%B6%E5%BE%AA%E7%8E%AF/><h2 class="text-xl font-semibold mb-1">js的并发模型与事件循环</h2><div class="font-light text-gray-800 dark:text-gray-200"></div></a><div class="info dark:info-dark"><span class="font-light mb-2 text-gray-500 text-sm">July 22, 2021</span>
+<span class="font-light text-gray-500 text-sm dark:text-gray-200"><span class=separator><a class=tag href=/tags/js/>js</a></span></span></div><a class="block my-6" href=/blog/npm/npm%E7%9B%B8%E5%85%B3/><h2 class="text-xl font-semibold mb-1">package-lock.json的作用</h2><div class="font-light text-gray-800 dark:text-gray-200"><p>对于任何 npm 修改node_modules树或package.json. 它描述了生成的确切树，以便后续安装能够生成相同的树，而不管中间依赖项更新如何。</p></div></a><div class="info dark:info-dark"><span class="font-light mb-2 text-gray-500 text-sm">July 22, 2021</span>
+<span class="font-light text-gray-500 text-sm dark:text-gray-200"><span class=separator><a class=tag href=/tags/npm/>npm</a></span></span></div><a class="block my-6" href=/blog/react%E4%BD%BF%E7%94%A8/purecomponent/><h2 class="text-xl font-semibold mb-1">PureComponent 纯组件</h2><div class="font-light text-gray-800 dark:text-gray-200"><p>为什么要使用shouldComponentUpdate？什么时候使用React.PureComponent
+re render的情况</p></div></a><div class="info dark:info-dark"><span class="font-light mb-2 text-gray-500 text-sm">July 22, 2021</span>
+<span class="font-light text-gray-500 text-sm dark:text-gray-200"><span class=separator><a class=tag href=/tags/react/>react</a></span></span></div><a class="block my-6" href=/blog/react%E4%BD%BF%E7%94%A8/purefunction/><h2 class="text-xl font-semibold mb-1">pureFunction</h2><div class="font-light text-gray-800 dark:text-gray-200"><p>纯函数定义：</p><ul><li>对于相同的参数，函数返回值是相同的（与局部静态变量、非局部变量、可变引用参数或输入流没有变化），并且</li><li>函数应用程序没有副作用（局部静态变量、非局部变量、可变引用参数或输入/输出流没有突变）。</li></ul></div></a><div class="info dark:info-dark"><span class="font-light mb-2 text-gray-500 text-sm">July 22, 2021</span>
+<span class="font-light text-gray-500 text-sm dark:text-gray-200"><span class=separator><a class=tag href=/tags/react/>react</a></span></span></div><a class="block my-6" href=/blog/qa/serverless/><h2 class="text-xl font-semibold mb-1">serverless</h2><div class="font-light text-gray-800 dark:text-gray-200"><p>腾讯的 serverless
+亚马逊的 serverless</p></div></a><div class="info dark:info-dark"><span class="font-light mb-2 text-gray-500 text-sm">July 22, 2021</span>
+<span class="font-light text-gray-500 text-sm dark:text-gray-200"><span class=separator><a class=tag href=/tags/serverless/>serverless</a><a class=tag href=/tags/devops/>devOps</a></span></span></div><a class="block my-6" href=/blog/ts/%E7%94%A8%E8%BF%87%E7%9A%84%E7%B1%BB%E5%9E%8B/><h2 class="text-xl font-semibold mb-1">ts & tsx lib中一些常用的 type</h2><div class="font-light text-gray-800 dark:text-gray-200"></div></a><div class="info dark:info-dark"><span class="font-light mb-2 text-gray-500 text-sm">July 22, 2021</span>
+<span class="font-light text-gray-500 text-sm dark:text-gray-200"><span class=separator><a class=tag href=/tags/ts/>ts</a></span></span></div><a class="block my-6" href=/blog/framework/webpack_loader/><h2 class="text-xl font-semibold mb-1">webpack中常用的 loader & 自定义 loader</h2><div class="font-light text-gray-800 dark:text-gray-200">@svgr/webpack 可以使得 svg 文件以组件形式加载
+yarn add @svgr/webpack --dev loader:[{ test: /\.svg$/, use: ['@svgr/webpack'], exclude: [/asPicture/,], }] style-loader\css-loader\sass-loader\postcss-loader style-loader: 用于将css编译完成的样式，挂载到页面style标签上。 需要注意loader执行顺序，style-loader放到第一位，因为loader都是从下往上执行，最后全部编译完成挂载到style上
+css-loader: 用于识别.css文件, 处理css必须配合style-loader共同使用，只安装css-loader样式不会生效。
+postcss-loader :用于补充css样式各种浏览器内核前缀，太方便了，不用我们手动写啦。
+cnpm i style-loader -D module.exports = { module: { rules: [ { test: /\.css/, use: ["style-loader"] } ] } } babel-loader \ ts-loader 将Es6+ 语法转换为Es5语法。 ts => js
+##html-loader 我们有时候想引入一个html页面代码片段赋值给DOM元素内容使用，这时就用到html-loader
+import Content from "../template.html" document.</div></a><div class="info dark:info-dark"><span class="font-light mb-2 text-gray-500 text-sm">July 22, 2021</span>
+<span class="font-light text-gray-500 text-sm dark:text-gray-200"><span class=separator><a class=tag href=/tags/webpack/>webpack</a></span></span></div><a class="block my-6" href=/blog/media/web-rtc/><h2 class="text-xl font-semibold mb-1">WebRTC</h2><div class="font-light text-gray-800 dark:text-gray-200"><p>WebRTC的总结</p></div></a><div class="info dark:info-dark"><span class="font-light mb-2 text-gray-500 text-sm">July 22, 2021</span>
+<span class="font-light text-gray-500 text-sm dark:text-gray-200"><span class=separator><a class=tag href=/tags/webrtc/>WebRTC</a><a class=tag href=/tags/webmedia/>webMedia</a></span></span></div><a class="block my-6" href=/blog/js/webworker/><h2 class="text-xl font-semibold mb-1">WebWorker</h2><div class="font-light text-gray-800 dark:text-gray-200">JavaScript 语言采用的是单线程模型，也就是说，所有任务只能在一个线程上完成，一次只能做一件事。前面的任务没做完，后面的任务只能等着。随着电脑计算能力的增强，尤其是多核 CPU 的出现，单线程带来很大的不便，无法充分发挥计算机的计算能力。
 Web Worker 使用教程 Web Worker 的作用，就是为 JavaScript 创造多线程环境，允许主线程创建 Worker 线程，将一些任务分配给后者运行
 Web Worker 有以下几个使用注意点。 （1）同源限制
 分配给 Worker 线程运行的脚本文件，必须与主线程的脚本文件同源。
@@ -400,321 +89,74 @@ Worker 线程不能执行alert()方法和confirm()方法，但可以使用 XMLHt
 （5）文件限制
 Worker 线程无法读取本地文件，即不能打开本机的文件系统（file://），它所加载的脚本，必须来自网络。 主线程
 var worker = new Worker('work.js'); worker.postMessage('Hello World'); worker.postMessage({method: 'echo', args: ['Work']}); 子线程
-worker.onmessage = function (event) { console.log('Received message ' + event.data); doSomething(); } function doSomething() { // 执行任务 worker.
-</div></a>
-<div class="info dark:info-dark">
-<span class="font-light mb-2 text-gray-500 text-sm">
-July 22, 2021
-</span>
-<span class="font-light text-gray-500 text-sm dark:text-gray-200">
-<span class=separator><a class=tag href=/tags/%E5%89%8D%E7%AB%AF%E6%80%A7%E8%83%BD/>前端性能</a></span>
-</span>
-</div><a class="block my-6" href=/blog/js/dombom/>
-<h2 class="text-xl font-semibold mb-1">什么是DOM & BOM？</h2><div class="font-light text-gray-800 dark:text-gray-200">
-</div></a>
-<div class="info dark:info-dark">
-<span class="font-light mb-2 text-gray-500 text-sm">
-July 22, 2021
-</span>
-<span class="font-light text-gray-500 text-sm dark:text-gray-200">
-<span class=separator><a class=tag href=/tags/js/>js</a></span>
-</span>
-</div><a class="block my-6" href=/blog/qa/%E4%BB%80%E4%B9%88%E6%98%AFjavascript%E5%86%85%E5%AD%98%E6%B3%84%E6%BC%8F/>
-<h2 class="text-xl font-semibold mb-1">什么是JavaScript 内存泄漏</h2><div class="font-light text-gray-800 dark:text-gray-200">
-</div></a>
-<div class="info dark:info-dark">
-<span class="font-light mb-2 text-gray-500 text-sm">
-July 22, 2021
-</span>
-<span class="font-light text-gray-500 text-sm dark:text-gray-200">
-<span class=separator><a class=tag href=/tags/qa/>qa</a></span>
-</span>
-</div><a class="block my-6" href=/blog/react%E4%BD%BF%E7%94%A8/control_component/>
-<h2 class="text-xl font-semibold mb-1">关于React 中的 受控组件 vs 不受控组件</h2><div class="font-light text-gray-800 dark:text-gray-200">
-</div></a>
-<div class="info dark:info-dark">
-<span class="font-light mb-2 text-gray-500 text-sm">
-July 22, 2021
-</span>
-<span class="font-light text-gray-800 text-sm dark:text-gray-200"> <span class=separator><a class=category href=/categories/react/>react</a></span>
-</span>
-<span class="font-light text-gray-500 text-sm dark:text-gray-200">
-<span class=separator><a class=tag href=/tags/react/>react</a></span>
-</span>
-</div><a class="block my-6" href=/blog/qa/qa/>
-<h2 class="text-xl font-semibold mb-1">前端面试q&a</h2><div class="font-light text-gray-800 dark:text-gray-200">
-<p>一些有质量的前端常见的面试题总结</p></div></a>
-<div class="info dark:info-dark">
-<span class="font-light mb-2 text-gray-500 text-sm">
-July 22, 2021
-</span>
-<span class="font-light text-gray-500 text-sm dark:text-gray-200">
-<span class=separator><a class=tag href=/tags/qa/>qa</a></span>
-</span>
-</div><a class="block my-6" href=/blog/media/%E8%A7%86%E9%A2%91%E6%92%AD%E6%94%BE%E5%99%A8/>
-<h2 class="text-xl font-semibold mb-1">各种直播流协议详解</h2><div class="font-light text-gray-800 dark:text-gray-200">
-hls safari的h5原生支持hls(m3u8)播放 chrome等浏览器需要自己写解码
+worker.onmessage = function (event) { console.log('Received message ' + event.data); doSomething(); } function doSomething() { // 执行任务 worker.</div></a><div class="info dark:info-dark"><span class="font-light mb-2 text-gray-500 text-sm">July 22, 2021</span>
+<span class="font-light text-gray-500 text-sm dark:text-gray-200"><span class=separator><a class=tag href=/tags/%E5%89%8D%E7%AB%AF%E6%80%A7%E8%83%BD/>前端性能</a></span></span></div><a class="block my-6" href=/blog/js/dombom/><h2 class="text-xl font-semibold mb-1">什么是DOM & BOM？</h2><div class="font-light text-gray-800 dark:text-gray-200"></div></a><div class="info dark:info-dark"><span class="font-light mb-2 text-gray-500 text-sm">July 22, 2021</span>
+<span class="font-light text-gray-500 text-sm dark:text-gray-200"><span class=separator><a class=tag href=/tags/js/>js</a></span></span></div><a class="block my-6" href=/blog/qa/%E4%BB%80%E4%B9%88%E6%98%AFjavascript%E5%86%85%E5%AD%98%E6%B3%84%E6%BC%8F/><h2 class="text-xl font-semibold mb-1">什么是JavaScript 内存泄漏</h2><div class="font-light text-gray-800 dark:text-gray-200"></div></a><div class="info dark:info-dark"><span class="font-light mb-2 text-gray-500 text-sm">July 22, 2021</span>
+<span class="font-light text-gray-500 text-sm dark:text-gray-200"><span class=separator><a class=tag href=/tags/qa/>qa</a></span></span></div><a class="block my-6" href=/blog/react%E4%BD%BF%E7%94%A8/control_component/><h2 class="text-xl font-semibold mb-1">关于React 中的 受控组件 vs 不受控组件</h2><div class="font-light text-gray-800 dark:text-gray-200"></div></a><div class="info dark:info-dark"><span class="font-light mb-2 text-gray-500 text-sm">July 22, 2021</span>
+<span class="font-light text-gray-800 text-sm dark:text-gray-200"><span class=separator><a class=category href=/categories/react/>react</a></span></span>
+<span class="font-light text-gray-500 text-sm dark:text-gray-200"><span class=separator><a class=tag href=/tags/react/>react</a></span></span></div><a class="block my-6" href=/blog/qa/qa/><h2 class="text-xl font-semibold mb-1">前端面试q&a</h2><div class="font-light text-gray-800 dark:text-gray-200"><p>一些有质量的前端常见的面试题总结</p></div></a><div class="info dark:info-dark"><span class="font-light mb-2 text-gray-500 text-sm">July 22, 2021</span>
+<span class="font-light text-gray-500 text-sm dark:text-gray-200"><span class=separator><a class=tag href=/tags/qa/>qa</a></span></span></div><a class="block my-6" href=/blog/media/%E8%A7%86%E9%A2%91%E6%92%AD%E6%94%BE%E5%99%A8/><h2 class="text-xl font-semibold mb-1">各种直播流协议详解</h2><div class="font-light text-gray-800 dark:text-gray-200">hls safari的h5原生支持hls(m3u8)播放 chrome等浏览器需要自己写解码
 移动端和Safari可直接支持m3u8 支持H.264、H.265视频编码和AAC音频编码? 播放器直播流全平台支持flv，hls直播协议，支持解h264、h265解码。
 协议 延迟 谁在用 原理 优缺点 HttpFlv 低 1~3秒 斗鱼 pc web RTMP 低 1~3秒 - 转发 HLS 高 5~20秒（依切片情况） 各种移动web端 切片 性能高，延迟高 DASH/MPEG-DASH 高 油管，奈飞 切片 HLS 是苹果的 全系列兼容
 DASH 和他很相似 iOS 不兼容
 都支持 4K
 FFmpeg 可以生成这两种不同协议的流
 DASH协议 主播直播流上传
-服务器的编解码封装 流媒体分发器 mpd文件 切割后的媒体文件 客户端 客户端加载mpd文件 解析MPD文件, 组成文件下载链接 当前的网速和支持的编码加载相应的视频片段进行播放
-</div></a>
-<div class="info dark:info-dark">
-<span class="font-light mb-2 text-gray-500 text-sm">
-July 22, 2021
-</span>
-<span class="font-light text-gray-500 text-sm dark:text-gray-200">
-<span class=separator><a class=tag href=/tags/livestream/>livestream</a><a class=tag href=/tags/web-media/>web media</a></span>
-</span>
-</div><a class="block my-6" href=/blog/media/media-server/>
-<h2 class="text-xl font-semibold mb-1">媒体服务器 【node】 ffmpeg</h2><div class="font-light text-gray-800 dark:text-gray-200">
-<p>媒体服务器相关</p></div></a>
-<div class="info dark:info-dark">
-<span class="font-light mb-2 text-gray-500 text-sm">
-July 22, 2021
-</span>
-<span class="font-light text-gray-500 text-sm dark:text-gray-200">
-<span class=separator><a class=tag href=/tags/node/>node</a><a class=tag href=/tags/web-media/>web media</a></span>
-</span>
-</div><a class="block my-6" href=/blog/security/%E6%B5%8F%E8%A7%88%E5%99%A8%E7%9A%84%E5%90%8C%E6%BA%90%E7%AD%96%E7%95%A5/>
-<h2 class="text-xl font-semibold mb-1">浏览器的同源策略</h2><div class="font-light text-gray-800 dark:text-gray-200">
-同源策略是一个重要的安全策略，它用于限制一个origin的文档或者它加载的脚本如何能与另一个源的资源进行交互。它能帮助阻隔恶意文档，减少可能被攻击的媒介。
+服务器的编解码封装 流媒体分发器 mpd文件 切割后的媒体文件 客户端 客户端加载mpd文件 解析MPD文件, 组成文件下载链接 当前的网速和支持的编码加载相应的视频片段进行播放</div></a><div class="info dark:info-dark"><span class="font-light mb-2 text-gray-500 text-sm">July 22, 2021</span>
+<span class="font-light text-gray-500 text-sm dark:text-gray-200"><span class=separator><a class=tag href=/tags/livestream/>livestream</a><a class=tag href=/tags/web-media/>web media</a></span></span></div><a class="block my-6" href=/blog/media/media-server/><h2 class="text-xl font-semibold mb-1">媒体服务器 【node】 ffmpeg</h2><div class="font-light text-gray-800 dark:text-gray-200"><p>媒体服务器相关</p></div></a><div class="info dark:info-dark"><span class="font-light mb-2 text-gray-500 text-sm">July 22, 2021</span>
+<span class="font-light text-gray-500 text-sm dark:text-gray-200"><span class=separator><a class=tag href=/tags/node/>node</a><a class=tag href=/tags/web-media/>web media</a></span></span></div><a class="block my-6" href=/blog/security/%E6%B5%8F%E8%A7%88%E5%99%A8%E7%9A%84%E5%90%8C%E6%BA%90%E7%AD%96%E7%95%A5/><h2 class="text-xl font-semibold mb-1">浏览器的同源策略</h2><div class="font-light text-gray-800 dark:text-gray-200">同源策略是一个重要的安全策略，它用于限制一个origin的文档或者它加载的脚本如何能与另一个源的资源进行交互。它能帮助阻隔恶意文档，减少可能被攻击的媒介。
 不同源
 https http 不同源 端口不同 不同源 域名不同 不同源
 跨源数据存储访问 访问存储在浏览器中的数据，如 localStorage 和 IndexedDB，是以源进行分割。每个源都拥有自己单独的存储空间，一个源中的 JavaScript 脚本不能对属于其它源的数据进行读写操作。
 Cookies 使用不同的源定义方式。一个页面可以为本域和其父域设置 cookie，只要是父域不是公共后缀（public suffix）即可。
 Internet Explorer 使用其内部的方法来检测域是否是公共后缀。不管使用哪个协议（HTTP/HTTPS）或端口号，浏览器都允许给定的域以及其任何子域名(sub-domains) 访问 cookie。当你设置 cookie 时，你可以使用 Domain、Path、Secure、和 HttpOnly 标记来限定其可访问性。当你读取 cookie 时，你无法知道它是在哪里被设置的。 即使您只使用安全的 https 连接，您看到的任何 cookie 都有可能是使用不安全的连接进行设置的。
-跨域携带 Cookie // 被请求的站点 Access-Control-Allow-Origin: a.com //这里需要换成相应的发起请求的域名 Access-Control-Allow-Credentials: true // 请求站点 xhr = new XMLHttpRequest(); xhr.withCredentials= true; //关键句 xhr.open("GET", url); xhr.send();
-</div></a>
-<div class="info dark:info-dark">
-<span class="font-light mb-2 text-gray-500 text-sm">
-July 22, 2021
-</span>
-<span class="font-light text-gray-500 text-sm dark:text-gray-200">
-<span class=separator><a class=tag href=/tags/%E5%89%8D%E7%AB%AF%E5%AE%89%E5%85%A8/>前端安全</a></span>
-</span>
-</div><a class="block my-6" href=/blog/md/markdown/>
-<h2 class="text-xl font-semibold mb-1">code spilt show</h2><div class="font-light text-gray-800 dark:text-gray-200">
-</div></a>
-<div class="info dark:info-dark">
-<span class="font-light mb-2 text-gray-500 text-sm">
-July 16, 2021
-</span>
-<span class="font-light text-gray-800 text-sm dark:text-gray-200"> <span class=separator><a class=category href=/categories/md/>md</a></span>
-</span>
-</div><a class="block my-6" href=/blog/algorithms/curry_function/>
-<h2 class="text-xl font-semibold mb-1">Curry Function - 柯里化函数</h2><div class="font-light text-gray-800 dark:text-gray-200">
-Curry Function Currying is a process in functional programming in which we can transform a function with multiple arguments into a sequence of nesting functions. It returns a new function that expects the next argument inline.
+跨域携带 Cookie // 被请求的站点 Access-Control-Allow-Origin: a.com //这里需要换成相应的发起请求的域名 Access-Control-Allow-Credentials: true // 请求站点 xhr = new XMLHttpRequest(); xhr.withCredentials= true; //关键句 xhr.open("GET", url); xhr.send();</div></a><div class="info dark:info-dark"><span class="font-light mb-2 text-gray-500 text-sm">July 22, 2021</span>
+<span class="font-light text-gray-500 text-sm dark:text-gray-200"><span class=separator><a class=tag href=/tags/%E5%89%8D%E7%AB%AF%E5%AE%89%E5%85%A8/>前端安全</a></span></span></div><a class="block my-6" href=/blog/blog-info/mywebsite/><h2 class="text-xl font-semibold mb-1">站点信息</h2><div class="font-light text-gray-800 dark:text-gray-200">aws部署数据库 v部署前端 hero部署后端
+github page 部署个人博客
+github开源项目
+codepen放样式特效动画的展示
+codeSanbox放node & react工程
+域名：
+https://spider-api.visionary.top 接口
+https://spider.visionary.top 前端
+https://blog.visionary.top 博客
+blog写notes 对应GitHub项目 & codeSanbox/codepen
+推特上一些好的信息收集起来</div></a><div class="info dark:info-dark"><span class="font-light mb-2 text-gray-500 text-sm">July 22, 2021</span>
+<span class="font-light text-gray-500 text-sm dark:text-gray-200"><span class=separator><a class=tag href=/tags/devops/>devOps</a></span></span></div><a class="block my-6" href=/blog/md/markdown/><h2 class="text-xl font-semibold mb-1">code spilt show</h2><div class="font-light text-gray-800 dark:text-gray-200"></div></a><div class="info dark:info-dark"><span class="font-light mb-2 text-gray-500 text-sm">July 16, 2021</span>
+<span class="font-light text-gray-800 text-sm dark:text-gray-200"><span class=separator><a class=category href=/categories/md/>md</a></span></span></div><a class="block my-6" href=/blog/algorithms/curry_function/><h2 class="text-xl font-semibold mb-1">Curry Function - 柯里化函数</h2><div class="font-light text-gray-800 dark:text-gray-200">Curry Function Currying is a process in functional programming in which we can transform a function with multiple arguments into a sequence of nesting functions. It returns a new function that expects the next argument inline.
 function multiply(a) { return (b) => { return (c) => { return a * b * c } } } log(multiply(1)(2)(3)) // 6 柯里化是一种函数的转换，它是指将一个函数从可调用的 f(a, b, c) 转换为可调用的 f(a)(b)(c)。
 柯里化不会调用函数。它只是对函数进行转换。
-function curry(fn, ...args) { return (.
-</div></a>
-<div class="info dark:info-dark">
-<span class="font-light mb-2 text-gray-500 text-sm">
-July 16, 2021
-</span>
-<span class="font-light text-gray-800 text-sm dark:text-gray-200"> <span class=separator><a class=category href=/categories/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/>数据结构</a><a class=category href=/categories/%E7%AE%97%E6%B3%95/>算法</a></span>
-</span>
-</div><a class="block my-6" href=/blog/github/github-sunmoudle-58cbca6eaada4bc6a5fc8ba40a41e4fc/>
-<h2 class="text-xl font-semibold mb-1">Github sun module</h2><div class="font-light text-gray-800 dark:text-gray-200">
-<p>xss & csrf 都是窃token cookie之类的敏感信息</p></div></a>
-<div class="info dark:info-dark">
-<span class="font-light mb-2 text-gray-500 text-sm">
-July 16, 2021
-</span>
-<span class="font-light text-gray-800 text-sm dark:text-gray-200"> <span class=separator><a class=category href=/categories/%E6%9E%B6%E6%9E%84/>架构</a><a class=category href=/categories/%E5%BE%AE%E5%89%8D%E7%AB%AF/>微前端</a></span>
-</span>
-<span class="font-light text-gray-500 text-sm dark:text-gray-200">
-<span class=separator><a class=tag href=/tags/%E5%89%8D%E7%AB%AF%E5%AE%89%E5%85%A8/>前端安全</a></span>
-</span>
-</div><a class="block my-6" href=/blog/%E4%BB%A3%E7%A0%81%E8%A7%84%E8%8C%83/cleancode/>
-<h2 class="text-xl font-semibold mb-1">js 代码规范 - clean code</h2><div class="font-light text-gray-800 dark:text-gray-200">
-<p>编写代码应该遵循的原则</p></div></a>
-<div class="info dark:info-dark">
-<span class="font-light mb-2 text-gray-500 text-sm">
-July 16, 2021
-</span>
-<span class="font-light text-gray-800 text-sm dark:text-gray-200"> <span class=separator><a class=category href=/categories/%E4%BB%A3%E7%A0%81%E8%A7%84%E8%8C%83/>代码规范</a></span>
-</span>
-</div><a class="block my-6" href=/blog/%E4%BB%A3%E7%A0%81%E8%A7%84%E8%8C%83/eslint/>
-<h2 class="text-xl font-semibold mb-1">js 代码规范 - eslint属性</h2><div class="font-light text-gray-800 dark:text-gray-200">
-</div></a>
-<div class="info dark:info-dark">
-<span class="font-light mb-2 text-gray-500 text-sm">
-July 16, 2021
-</span>
-<span class="font-light text-gray-800 text-sm dark:text-gray-200"> <span class=separator><a class=category href=/categories/%E4%BB%A3%E7%A0%81%E8%A7%84%E8%8C%83/>代码规范</a></span>
-</span>
-</div><a class="block my-6" href=/blog/%E4%BB%A3%E7%A0%81%E8%A7%84%E8%8C%83/less%E8%A7%84%E8%8C%83/>
-<h2 class="text-xl font-semibold mb-1">js 代码规范 - less规范</h2><div class="font-light text-gray-800 dark:text-gray-200">
-</div></a>
-<div class="info dark:info-dark">
-<span class="font-light mb-2 text-gray-500 text-sm">
-July 16, 2021
-</span>
-<span class="font-light text-gray-800 text-sm dark:text-gray-200"> <span class=separator><a class=category href=/categories/%E4%BB%A3%E7%A0%81%E8%A7%84%E8%8C%83/>代码规范</a></span>
-</span>
-</div><a class="block my-6" href=/blog/%E4%BB%A3%E7%A0%81%E8%A7%84%E8%8C%83/sass%E8%A7%84%E8%8C%83/>
-<h2 class="text-xl font-semibold mb-1">js 代码规范 - sass规范</h2><div class="font-light text-gray-800 dark:text-gray-200">
-</div></a>
-<div class="info dark:info-dark">
-<span class="font-light mb-2 text-gray-500 text-sm">
-July 16, 2021
-</span>
-<span class="font-light text-gray-800 text-sm dark:text-gray-200"> <span class=separator><a class=category href=/categories/%E4%BB%A3%E7%A0%81%E8%A7%84%E8%8C%83/>代码规范</a></span>
-</span>
-</div><a class="block my-6" href=/blog/js/arrayergodic/>
-<h2 class="text-xl font-semibold mb-1">js中几个遍历数组方法的特点</h2><div class="font-light text-gray-800 dark:text-gray-200">
-</div></a>
-<div class="info dark:info-dark">
-<span class="font-light mb-2 text-gray-500 text-sm">
-July 16, 2021
-</span>
-<span class="font-light text-gray-500 text-sm dark:text-gray-200">
-<span class=separator><a class=tag href=/tags/js%E5%9F%BA%E7%A1%80/>js基础</a></span>
-</span>
-</div><a class="block my-6" href=/blog/js/js%E4%B8%AD%E7%9A%84this%E6%80%BB%E7%BB%93/>
-<h2 class="text-xl font-semibold mb-1">js中的this总结</h2><div class="font-light text-gray-800 dark:text-gray-200">
-<p>js中的this总结</p></div></a>
-<div class="info dark:info-dark">
-<span class="font-light mb-2 text-gray-500 text-sm">
-July 16, 2021
-</span>
-<span class="font-light text-gray-500 text-sm dark:text-gray-200">
-<span class=separator><a class=tag href=/tags/js/>js</a></span>
-</span>
-</div><a class="block my-6" href=/blog/js/js%E4%B8%AD%E7%9A%84%E6%95%B0%E5%AD%97%E5%88%86%E9%9A%94%E7%AC%A6/>
-<h2 class="text-xl font-semibold mb-1">js中的数字分隔符</h2><div class="font-light text-gray-800 dark:text-gray-200">
-只是提高了可读性，其余没有区别
-const msInOneYear = 31536000000; const price = 4200; const msInOneYear = 31_536_000_000; //3千万 const price = 42_00; // 42
-</div></a>
-<div class="info dark:info-dark">
-<span class="font-light mb-2 text-gray-500 text-sm">
-July 16, 2021
-</span>
-<span class="font-light text-gray-800 text-sm dark:text-gray-200"> <span class=separator><a class=category href=/categories/javascript/>javascript</a></span>
-</span>
-<span class="font-light text-gray-500 text-sm dark:text-gray-200">
-<span class=separator><a class=tag href=/tags/%E8%AF%AD%E6%B3%95/>语法</a></span>
-</span>
-</div><a class="block my-6" href=/blog/brower/performance/chrome-lighthouse-13fbc0f207184e848d9fb68069955f3e/>
-<h2 class="text-xl font-semibold mb-1">lighthouse</h2><div class="font-light text-gray-800 dark:text-gray-200">
-<p>Performance</p></div></a>
-<div class="info dark:info-dark">
-<span class="font-light mb-2 text-gray-500 text-sm">
-July 16, 2021
-</span>
-<span class="font-light text-gray-500 text-sm dark:text-gray-200">
-<span class=separator><a class=tag href=/tags/%E5%89%8D%E7%AB%AF%E6%80%A7%E8%83%BD/>前端性能</a></span>
-</span>
-</div><a class="block my-6" href=/blog/devops/linux%E5%B1%9E%E6%80%A7/>
-<h2 class="text-xl font-semibold mb-1">linux 系统属性</h2><div class="font-light text-gray-800 dark:text-gray-200">
-<p>Linux 系统属性</p></div></a>
-<div class="info dark:info-dark">
-<span class="font-light mb-2 text-gray-500 text-sm">
-July 16, 2021
-</span>
-<span class="font-light text-gray-500 text-sm dark:text-gray-200">
-<span class=separator><a class=tag href=/tags/devops/>DevOps</a><a class=tag href=/tags/linux/>linux</a></span>
-</span>
-</div><a class="block my-6" href=/blog/react%E6%BA%90%E7%A0%81%E7%AC%94%E8%AE%B0/portals/>
-<h2 class="text-xl font-semibold mb-1">react 一些不常用API的示例</h2><div class="font-light text-gray-800 dark:text-gray-200">
-写法在内部 实际渲染在同级 Example: Portals - by Dan Abramov
-</div></a>
-<div class="info dark:info-dark">
-<span class="font-light mb-2 text-gray-500 text-sm">
-July 16, 2021
-</span>
-<span class="font-light text-gray-800 text-sm dark:text-gray-200"> <span class=separator><a class=category href=/categories/react/>react</a><a class=category href=/categories/%E6%BA%90%E7%A0%81/>源码</a></span>
-</span>
-</div><a class="block my-6" href=/blog/react%E6%BA%90%E7%A0%81%E7%AC%94%E8%AE%B0/react/>
-<h2 class="text-xl font-semibold mb-1">react 源码阅读 - 调用栈分析</h2><div class="font-light text-gray-800 dark:text-gray-200">
-fixtures/packaging/babel-standalone/dev.html
+function curry(fn, ...args) { return (.</div></a><div class="info dark:info-dark"><span class="font-light mb-2 text-gray-500 text-sm">July 16, 2021</span>
+<span class="font-light text-gray-800 text-sm dark:text-gray-200"><span class=separator><a class=category href=/categories/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/>数据结构</a><a class=category href=/categories/%E7%AE%97%E6%B3%95/>算法</a></span></span></div><a class="block my-6" href=/blog/github/github-sunmoudle-58cbca6eaada4bc6a5fc8ba40a41e4fc/><h2 class="text-xl font-semibold mb-1">Github sun module</h2><div class="font-light text-gray-800 dark:text-gray-200"></div></a><div class="info dark:info-dark"><span class="font-light mb-2 text-gray-500 text-sm">July 16, 2021</span>
+<span class="font-light text-gray-800 text-sm dark:text-gray-200"><span class=separator><a class=category href=/categories/%E6%9E%B6%E6%9E%84/>架构</a><a class=category href=/categories/%E5%BE%AE%E5%89%8D%E7%AB%AF/>微前端</a></span></span>
+<span class="font-light text-gray-500 text-sm dark:text-gray-200"><span class=separator><a class=tag href=/tags/%E5%89%8D%E7%AB%AF%E5%AE%89%E5%85%A8/>前端安全</a></span></span></div><a class="block my-6" href=/blog/%E4%BB%A3%E7%A0%81%E8%A7%84%E8%8C%83/cleancode/><h2 class="text-xl font-semibold mb-1">js 代码规范 - clean code</h2><div class="font-light text-gray-800 dark:text-gray-200"><p>编写代码应该遵循的原则</p></div></a><div class="info dark:info-dark"><span class="font-light mb-2 text-gray-500 text-sm">July 16, 2021</span>
+<span class="font-light text-gray-800 text-sm dark:text-gray-200"><span class=separator><a class=category href=/categories/%E4%BB%A3%E7%A0%81%E8%A7%84%E8%8C%83/>代码规范</a></span></span></div><a class="block my-6" href=/blog/%E4%BB%A3%E7%A0%81%E8%A7%84%E8%8C%83/eslint/><h2 class="text-xl font-semibold mb-1">js 代码规范 - eslint属性</h2><div class="font-light text-gray-800 dark:text-gray-200"></div></a><div class="info dark:info-dark"><span class="font-light mb-2 text-gray-500 text-sm">July 16, 2021</span>
+<span class="font-light text-gray-800 text-sm dark:text-gray-200"><span class=separator><a class=category href=/categories/%E4%BB%A3%E7%A0%81%E8%A7%84%E8%8C%83/>代码规范</a></span></span></div><a class="block my-6" href=/blog/%E4%BB%A3%E7%A0%81%E8%A7%84%E8%8C%83/less%E8%A7%84%E8%8C%83/><h2 class="text-xl font-semibold mb-1">js 代码规范 - less规范</h2><div class="font-light text-gray-800 dark:text-gray-200"></div></a><div class="info dark:info-dark"><span class="font-light mb-2 text-gray-500 text-sm">July 16, 2021</span>
+<span class="font-light text-gray-800 text-sm dark:text-gray-200"><span class=separator><a class=category href=/categories/%E4%BB%A3%E7%A0%81%E8%A7%84%E8%8C%83/>代码规范</a></span></span></div><a class="block my-6" href=/blog/%E4%BB%A3%E7%A0%81%E8%A7%84%E8%8C%83/sass%E8%A7%84%E8%8C%83/><h2 class="text-xl font-semibold mb-1">js 代码规范 - sass规范</h2><div class="font-light text-gray-800 dark:text-gray-200"></div></a><div class="info dark:info-dark"><span class="font-light mb-2 text-gray-500 text-sm">July 16, 2021</span>
+<span class="font-light text-gray-800 text-sm dark:text-gray-200"><span class=separator><a class=category href=/categories/%E4%BB%A3%E7%A0%81%E8%A7%84%E8%8C%83/>代码规范</a></span></span></div><a class="block my-6" href=/blog/js/arrayergodic/><h2 class="text-xl font-semibold mb-1">js中几个遍历数组方法的特点</h2><div class="font-light text-gray-800 dark:text-gray-200"></div></a><div class="info dark:info-dark"><span class="font-light mb-2 text-gray-500 text-sm">July 16, 2021</span>
+<span class="font-light text-gray-500 text-sm dark:text-gray-200"><span class=separator><a class=tag href=/tags/js%E5%9F%BA%E7%A1%80/>js基础</a></span></span></div><a class="block my-6" href=/blog/js/js%E4%B8%AD%E7%9A%84this%E6%80%BB%E7%BB%93/><h2 class="text-xl font-semibold mb-1">js中的this总结</h2><div class="font-light text-gray-800 dark:text-gray-200"><p>js中的this总结</p></div></a><div class="info dark:info-dark"><span class="font-light mb-2 text-gray-500 text-sm">July 16, 2021</span>
+<span class="font-light text-gray-500 text-sm dark:text-gray-200"><span class=separator><a class=tag href=/tags/js/>js</a></span></span></div><a class="block my-6" href=/blog/js/js%E4%B8%AD%E7%9A%84%E6%95%B0%E5%AD%97%E5%88%86%E9%9A%94%E7%AC%A6/><h2 class="text-xl font-semibold mb-1">js中的数字分隔符</h2><div class="font-light text-gray-800 dark:text-gray-200">只是提高了可读性，其余没有区别
+const msInOneYear = 31536000000; const price = 4200; const msInOneYear = 31_536_000_000; //3千万 const price = 42_00; // 42</div></a><div class="info dark:info-dark"><span class="font-light mb-2 text-gray-500 text-sm">July 16, 2021</span>
+<span class="font-light text-gray-800 text-sm dark:text-gray-200"><span class=separator><a class=category href=/categories/javascript/>javascript</a></span></span>
+<span class="font-light text-gray-500 text-sm dark:text-gray-200"><span class=separator><a class=tag href=/tags/%E8%AF%AD%E6%B3%95/>语法</a></span></span></div><a class="block my-6" href=/blog/brower/performance/chrome-lighthouse-13fbc0f207184e848d9fb68069955f3e/><h2 class="text-xl font-semibold mb-1">lighthouse</h2><div class="font-light text-gray-800 dark:text-gray-200"><p>Performance</p></div></a><div class="info dark:info-dark"><span class="font-light mb-2 text-gray-500 text-sm">July 16, 2021</span>
+<span class="font-light text-gray-500 text-sm dark:text-gray-200"><span class=separator><a class=tag href=/tags/%E5%89%8D%E7%AB%AF%E6%80%A7%E8%83%BD/>前端性能</a></span></span></div><a class="block my-6" href=/blog/devops/linux%E5%B1%9E%E6%80%A7/><h2 class="text-xl font-semibold mb-1">linux 系统属性</h2><div class="font-light text-gray-800 dark:text-gray-200"><p>Linux 系统属性</p></div></a><div class="info dark:info-dark"><span class="font-light mb-2 text-gray-500 text-sm">July 16, 2021</span>
+<span class="font-light text-gray-500 text-sm dark:text-gray-200"><span class=separator><a class=tag href=/tags/devops/>DevOps</a><a class=tag href=/tags/linux/>linux</a></span></span></div><a class="block my-6" href=/blog/react%E6%BA%90%E7%A0%81%E7%AC%94%E8%AE%B0/portals/><h2 class="text-xl font-semibold mb-1">react 一些不常用API的示例</h2><div class="font-light text-gray-800 dark:text-gray-200">写法在内部 实际渲染在同级 Example: Portals - by Dan Abramov</div></a><div class="info dark:info-dark"><span class="font-light mb-2 text-gray-500 text-sm">July 16, 2021</span>
+<span class="font-light text-gray-800 text-sm dark:text-gray-200"><span class=separator><a class=category href=/categories/react/>react</a><a class=category href=/categories/%E6%BA%90%E7%A0%81/>源码</a></span></span></div><a class="block my-6" href=/blog/react%E6%BA%90%E7%A0%81%E7%AC%94%E8%AE%B0/react/><h2 class="text-xl font-semibold mb-1">react 源码阅读 - 调用栈分析</h2><div class="font-light text-gray-800 dark:text-gray-200">fixtures/packaging/babel-standalone/dev.html
 &lt;html> &lt;body> &lt;script src="../../../build/node_modules/react/umd/react.development.js">&lt;/script> &lt;script src="../../../build/node_modules/react-dom/umd/react-dom.development.js">&lt;/script> &lt;script src="https://unpkg.com/babel-standalone@6/babel.js">&lt;/script> &lt;div id="container">&lt;/div> &lt;script type="text/babel"> ReactDOM.render( &lt;h1>Hello World!&lt;/h1>, document.getElementById('container') ); &lt;/script> &lt;/body> &lt;/html> 调用 ReactDOM.render发生了什么
 render 实际就是计算差异 & commit render 调用栈内有一系列操作 render后最先调用的是legacyRenderSubtreeIntoContainer json形式的elements作为children传入 packages/react-dom/src/client/ReactDOMLegacy.js 第一次是没有root的 会执行initial mount fiberRoot是？整个应用的根结点 定义了root之后 unbatchedUpdates
 unbatchedUpdates(() => { updateContainer(children, fiberRoot, parentComponent, callback); }); Fiber架构 在此处理过context
-function legacyRenderSubtreeIntoContainer( parentComponent: ?React$Component&lt;any, any>, children: ReactNodeList, container: Container, forceHydrate: boolean, callback: ?
-</div></a>
-<div class="info dark:info-dark">
-<span class="font-light mb-2 text-gray-500 text-sm">
-July 16, 2021
-</span>
-</div><a class="block my-6" href=/blog/ts/react%E4%B8%AD%E7%9A%84type/>
-<h2 class="text-xl font-semibold mb-1">React中常用的type</h2><div class="font-light text-gray-800 dark:text-gray-200">
-<p>React中常用的type</p></div></a>
-<div class="info dark:info-dark">
-<span class="font-light mb-2 text-gray-500 text-sm">
-July 16, 2021
-</span>
-<span class="font-light text-gray-800 text-sm dark:text-gray-200"> <span class=separator><a class=category href=/categories/%E6%9E%B6%E6%9E%84/>架构</a><a class=category href=/categories/%E5%BE%AE%E5%89%8D%E7%AB%AF/>微前端</a></span>
-</span>
-<span class="font-light text-gray-500 text-sm dark:text-gray-200">
-<span class=separator><a class=tag href=/tags/ts/>ts</a></span>
-</span>
-</div><a class="block my-6" href=/blog/spider/spider-tool/>
-<h2 class="text-xl font-semibold mb-1">spider-tool</h2><div class="font-light text-gray-800 dark:text-gray-200">
-<p>xss & csrf 都是窃token cookie之类的敏感信息</p></div></a>
-<div class="info dark:info-dark">
-<span class="font-light mb-2 text-gray-500 text-sm">
-July 16, 2021
-</span>
-<span class="font-light text-gray-800 text-sm dark:text-gray-200"> <span class=separator><a class=category href=/categories/%E6%9E%B6%E6%9E%84/>架构</a><a class=category href=/categories/%E5%BE%AE%E5%89%8D%E7%AB%AF/>微前端</a></span>
-</span>
-<span class="font-light text-gray-500 text-sm dark:text-gray-200">
-<span class=separator><a class=tag href=/tags/%E5%89%8D%E7%AB%AF%E5%AE%89%E5%85%A8/>前端安全</a></span>
-</span>
-</div><a class="block my-6" href=/blog/spider/spider-vision/>
-<h2 class="text-xl font-semibold mb-1">spider-vision</h2><div class="font-light text-gray-800 dark:text-gray-200">
-</div></a>
-<div class="info dark:info-dark">
-<span class="font-light mb-2 text-gray-500 text-sm">
-July 16, 2021
-</span>
-<span class="font-light text-gray-800 text-sm dark:text-gray-200"> <span class=separator><a class=category href=/categories/%E7%BB%84%E4%BB%B6%E5%BA%93/>组件库</a><a class=category href=/categories/react/>react</a></span>
-</span>
-<span class="font-light text-gray-500 text-sm dark:text-gray-200">
-<span class=separator><a class=tag href=/tags/grunt/>grunt</a><a class=tag href=/tags/typescript/>typescript</a><a class=tag href=/tags/jest/>jest</a></span>
-</span>
-</div><a class="block my-6" href=/blog/ts/tsconfig/>
-<h2 class="text-xl font-semibold mb-1">tsconfig.json 属性一览 & Module 对比</h2><div class="font-light text-gray-800 dark:text-gray-200">
-<p>build包的时候的配置、前端项目常用配置、字段备注</p></div></a>
-<div class="info dark:info-dark">
-<span class="font-light mb-2 text-gray-500 text-sm">
-July 16, 2021
-</span>
-<span class="font-light text-gray-800 text-sm dark:text-gray-200"> <span class=separator><a class=category href=/categories/%E6%9E%B6%E6%9E%84/>架构</a><a class=category href=/categories/%E5%BE%AE%E5%89%8D%E7%AB%AF/>微前端</a></span>
-</span>
-<span class="font-light text-gray-500 text-sm dark:text-gray-200">
-<span class=separator><a class=tag href=/tags/ts/>ts</a></span>
-</span>
-</div><a class="block my-6" href=/blog/ts/typescriptbasic/>
-<h2 class="text-xl font-semibold mb-1">TypeScript 基础类型</h2><div class="font-light text-gray-800 dark:text-gray-200">
-<p>Basic Type、Interfaces</p></div></a>
-<div class="info dark:info-dark">
-<span class="font-light mb-2 text-gray-500 text-sm">
-July 16, 2021
-</span>
-<span class="font-light text-gray-800 text-sm dark:text-gray-200"> <span class=separator><a class=category href=/categories/%E6%9E%B6%E6%9E%84/>架构</a><a class=category href=/categories/%E5%BE%AE%E5%89%8D%E7%AB%AF/>微前端</a></span>
-</span>
-<span class="font-light text-gray-500 text-sm dark:text-gray-200">
-<span class=separator><a class=tag href=/tags/%E5%89%8D%E7%AB%AF%E5%AE%89%E5%85%A8/>前端安全</a></span>
-</span>
-</div><a class="block my-6" href=/blog/devops/linux_package/>
-<h2 class="text-xl font-semibold mb-1">一些常用的Linux上的包</h2><div class="font-light text-gray-800 dark:text-gray-200">
-<p>xss & csrf 都是窃token cookie之类的敏感信息</p></div></a>
-<div class="info dark:info-dark">
-<span class="font-light mb-2 text-gray-500 text-sm">
-July 16, 2021
-</span>
-<span class="font-light text-gray-500 text-sm dark:text-gray-200">
-<span class=separator><a class=tag href=/tags/devops/>DevOps</a></span>
-</span>
-</div><a class="block my-6" href=/blog/utils/%E4%BD%BF%E7%94%A8hugo%E6%90%AD%E4%B8%80%E4%B8%AA%E8%87%AA%E5%B7%B1blog/>
-<h2 class="text-xl font-semibold mb-1">使用Hugo搭一个自己Blog</h2><div class="font-light text-gray-800 dark:text-gray-200">
-Hugo 是用go编写的，支持go HTML，模板主题多且开源方便自定义
+function legacyRenderSubtreeIntoContainer( parentComponent: ?React$Component&lt;any, any>, children: ReactNodeList, container: Container, forceHydrate: boolean, callback: ?</div></a><div class="info dark:info-dark"><span class="font-light mb-2 text-gray-500 text-sm">July 16, 2021</span></div><a class="block my-6" href=/blog/ts/react%E4%B8%AD%E7%9A%84type/><h2 class="text-xl font-semibold mb-1">React中常用的type</h2><div class="font-light text-gray-800 dark:text-gray-200"><p>React中常用的type</p></div></a><div class="info dark:info-dark"><span class="font-light mb-2 text-gray-500 text-sm">July 16, 2021</span>
+<span class="font-light text-gray-800 text-sm dark:text-gray-200"><span class=separator><a class=category href=/categories/%E6%9E%B6%E6%9E%84/>架构</a><a class=category href=/categories/%E5%BE%AE%E5%89%8D%E7%AB%AF/>微前端</a></span></span>
+<span class="font-light text-gray-500 text-sm dark:text-gray-200"><span class=separator><a class=tag href=/tags/ts/>ts</a></span></span></div><a class="block my-6" href=/blog/spider/spider-tool/><h2 class="text-xl font-semibold mb-1">spider-tool</h2><div class="font-light text-gray-800 dark:text-gray-200"><p>xss & csrf 都是窃token cookie之类的敏感信息</p></div></a><div class="info dark:info-dark"><span class="font-light mb-2 text-gray-500 text-sm">July 16, 2021</span>
+<span class="font-light text-gray-800 text-sm dark:text-gray-200"><span class=separator><a class=category href=/categories/%E6%9E%B6%E6%9E%84/>架构</a><a class=category href=/categories/%E5%BE%AE%E5%89%8D%E7%AB%AF/>微前端</a></span></span>
+<span class="font-light text-gray-500 text-sm dark:text-gray-200"><span class=separator><a class=tag href=/tags/%E5%89%8D%E7%AB%AF%E5%AE%89%E5%85%A8/>前端安全</a></span></span></div><a class="block my-6" href=/blog/spider/spider-vision/><h2 class="text-xl font-semibold mb-1">spider-vision</h2><div class="font-light text-gray-800 dark:text-gray-200"></div></a><div class="info dark:info-dark"><span class="font-light mb-2 text-gray-500 text-sm">July 16, 2021</span>
+<span class="font-light text-gray-800 text-sm dark:text-gray-200"><span class=separator><a class=category href=/categories/%E7%BB%84%E4%BB%B6%E5%BA%93/>组件库</a><a class=category href=/categories/react/>react</a></span></span>
+<span class="font-light text-gray-500 text-sm dark:text-gray-200"><span class=separator><a class=tag href=/tags/grunt/>grunt</a><a class=tag href=/tags/typescript/>typescript</a><a class=tag href=/tags/jest/>jest</a></span></span></div><a class="block my-6" href=/blog/ts/tsconfig/><h2 class="text-xl font-semibold mb-1">tsconfig.json 属性一览 & Module 对比</h2><div class="font-light text-gray-800 dark:text-gray-200"><p>build包的时候的配置、前端项目常用配置、字段备注</p></div></a><div class="info dark:info-dark"><span class="font-light mb-2 text-gray-500 text-sm">July 16, 2021</span>
+<span class="font-light text-gray-800 text-sm dark:text-gray-200"><span class=separator><a class=category href=/categories/%E6%9E%B6%E6%9E%84/>架构</a><a class=category href=/categories/%E5%BE%AE%E5%89%8D%E7%AB%AF/>微前端</a></span></span>
+<span class="font-light text-gray-500 text-sm dark:text-gray-200"><span class=separator><a class=tag href=/tags/ts/>ts</a></span></span></div><a class="block my-6" href=/blog/ts/typescriptbasic/><h2 class="text-xl font-semibold mb-1">TypeScript 基础类型</h2><div class="font-light text-gray-800 dark:text-gray-200"><p>Basic Type、Interfaces</p></div></a><div class="info dark:info-dark"><span class="font-light mb-2 text-gray-500 text-sm">July 16, 2021</span>
+<span class="font-light text-gray-800 text-sm dark:text-gray-200"><span class=separator><a class=category href=/categories/%E6%9E%B6%E6%9E%84/>架构</a><a class=category href=/categories/%E5%BE%AE%E5%89%8D%E7%AB%AF/>微前端</a></span></span>
+<span class="font-light text-gray-500 text-sm dark:text-gray-200"><span class=separator><a class=tag href=/tags/%E5%89%8D%E7%AB%AF%E5%AE%89%E5%85%A8/>前端安全</a></span></span></div><a class="block my-6" href=/blog/devops/linux_package/><h2 class="text-xl font-semibold mb-1">一些常用的Linux上的包</h2><div class="font-light text-gray-800 dark:text-gray-200"></div></a><div class="info dark:info-dark"><span class="font-light mb-2 text-gray-500 text-sm">July 16, 2021</span>
+<span class="font-light text-gray-500 text-sm dark:text-gray-200"><span class=separator><a class=tag href=/tags/devops/>DevOps</a></span></span></div><a class="block my-6" href=/blog/utils/%E4%BD%BF%E7%94%A8hugo%E6%90%AD%E4%B8%80%E4%B8%AA%E8%87%AA%E5%B7%B1blog/><h2 class="text-xl font-semibold mb-1">使用Hugo搭一个自己Blog</h2><div class="font-light text-gray-800 dark:text-gray-200">Hugo 是用go编写的，支持go HTML，模板主题多且开源方便自定义
 对md的渲染支持很友好，可以自定义插入的内容
 Quick Start
 安装 最简单的方法
@@ -727,528 +169,67 @@ hugo new site quickstart cd quickstart git init git submodule add https://github
 推一个文章 hugo new posts/my-first-post.md 启动 本地实时预览
 hugo server -D 配置主题 修改config.toml
 theme = "ananke" 构建静态页面 生成在public下
-hugo -D 集成到GitHub.io页面中 将quickstart项目remote到一个项目 开启pages功能 将pages指向 gh-pages的根目录 Actions中新建workflows git 将自动生成
-</div></a>
-<div class="info dark:info-dark">
-<span class="font-light mb-2 text-gray-500 text-sm">
-July 16, 2021
-</span>
-<span class="font-light text-gray-800 text-sm dark:text-gray-200"> <span class=separator><a class=category href=/categories/%E6%9E%B6%E6%9E%84/>架构</a><a class=category href=/categories/%E5%BE%AE%E5%89%8D%E7%AB%AF/>微前端</a></span>
-</span>
-<span class="font-light text-gray-500 text-sm dark:text-gray-200">
-<span class=separator><a class=tag href=/tags/%E5%89%8D%E7%AB%AF%E5%AE%89%E5%85%A8/>前端安全</a></span>
-</span>
-</div><a class="block my-6" href=/blog/npm/publishednpmpackge/>
-<h2 class="text-xl font-semibold mb-1">使用npm上发布自己的包</h2><div class="font-light text-gray-800 dark:text-gray-200">
-<p>使用npm上发布自己的包</p></div></a>
-<div class="info dark:info-dark">
-<span class="font-light mb-2 text-gray-500 text-sm">
-July 16, 2021
-</span>
-<span class="font-light text-gray-800 text-sm dark:text-gray-200"> <span class=separator><a class=category href=/categories/%E6%9E%B6%E6%9E%84/>架构</a></span>
-</span>
-<span class="font-light text-gray-500 text-sm dark:text-gray-200">
-<span class=separator><a class=tag href=/tags/npm/>npm</a></span>
-</span>
-</div><a class="block my-6" href=/blog/devops/%E4%BD%BF%E7%94%A8heroku%E9%83%A8%E7%BD%B2node%E5%BA%94%E7%94%A8/>
-<h2 class="text-xl font-semibold mb-1">免费部署个人站点</h2><div class="font-light text-gray-800 dark:text-gray-200">
-<h2 id=后端项目>后端项目</h2><h3 id=heroku免费部署nodejs项目>Heroku免费部署Node.js项目</h3><p>可以同步 GitHub 的项目；开启自动部署；可配置 domain</p><p>服务器配置：</p></div></a>
-<div class="info dark:info-dark">
-<span class="font-light mb-2 text-gray-500 text-sm">
-July 16, 2021
-</span>
-<span class="font-light text-gray-500 text-sm dark:text-gray-200">
-<span class=separator><a class=tag href=/tags/devops/>DevOps</a></span>
-</span>
-</div><a class="block my-6" href=/blog/algorithms/doublylinkedlist/>
-<h2 class="text-xl font-semibold mb-1">双向链表</h2><div class="font-light text-gray-800 dark:text-gray-200">
-export default class DoublyLinkedListNode { constructor(value, next = null, previous = null) { this.value = value; this.next = next; this.previous = previous; } toString(callback) { return callback ? callback(this.value) : `${this.value}`; } }
-</div></a>
-<div class="info dark:info-dark">
-<span class="font-light mb-2 text-gray-500 text-sm">
-July 16, 2021
-</span>
-<span class="font-light text-gray-800 text-sm dark:text-gray-200"> <span class=separator><a class=category href=/categories/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/>数据结构</a><a class=category href=/categories/%E7%AE%97%E6%B3%95/>算法</a></span>
-</span>
-</div><a class="block my-6" href=/blog/utils/%E5%90%84%E7%A7%8D%E5%B7%A5%E5%85%B7%E5%90%88%E9%9B%86/>
-<h2 class="text-xl font-semibold mb-1">各种工具合集</h2><div class="font-light text-gray-800 dark:text-gray-200">
-<p>xss & csrf 都是窃token cookie之类的敏感信息</p></div></a>
-<div class="info dark:info-dark">
-<span class="font-light mb-2 text-gray-500 text-sm">
-July 16, 2021
-</span>
-<span class="font-light text-gray-800 text-sm dark:text-gray-200"> <span class=separator><a class=category href=/categories/%E6%9E%B6%E6%9E%84/>架构</a><a class=category href=/categories/%E5%BE%AE%E5%89%8D%E7%AB%AF/>微前端</a></span>
-</span>
-<span class="font-light text-gray-500 text-sm dark:text-gray-200">
-<span class=separator><a class=tag href=/tags/%E5%89%8D%E7%AB%AF%E5%AE%89%E5%85%A8/>前端安全</a></span>
-</span>
-</div><a class="block my-6" href=/blog/network/%E5%A6%82%E4%BD%95%E4%BD%BF%E7%94%A8whistle%E6%8A%93%E5%8C%85-af3be691cfd1472a9dfbecd05a0e0769/>
-<h2 class="text-xl font-semibold mb-1">如何使用Whistle抓包</h2><div class="font-light text-gray-800 dark:text-gray-200">
-<p>xss & csrf 都是窃token cookie之类的敏感信息</p></div></a>
-<div class="info dark:info-dark">
-<span class="font-light mb-2 text-gray-500 text-sm">
-July 16, 2021
-</span>
-<span class="font-light text-gray-800 text-sm dark:text-gray-200"> <span class=separator><a class=category href=/categories/%E6%9E%B6%E6%9E%84/>架构</a><a class=category href=/categories/%E5%BE%AE%E5%89%8D%E7%AB%AF/>微前端</a></span>
-</span>
-<span class="font-light text-gray-500 text-sm dark:text-gray-200">
-<span class=separator><a class=tag href=/tags/%E5%89%8D%E7%AB%AF%E5%AE%89%E5%85%A8/>前端安全</a></span>
-</span>
-</div><a class="block my-6" href=/blog/framework/%E6%96%B0%E6%90%AD%E4%B8%80%E4%B8%AA%E6%A1%86%E6%9E%B6%E8%A6%81%E5%81%9A%E7%9A%84%E4%BA%8B%E6%83%85/>
-<h2 class="text-xl font-semibold mb-1">新搭一个框架要做的事情</h2><div class="font-light text-gray-800 dark:text-gray-200">
-<p>新搭建一个前端项目的时候，必须要做的事情</p></div></a>
-<div class="info dark:info-dark">
-<span class="font-light mb-2 text-gray-500 text-sm">
-July 16, 2021
-</span>
-<span class="font-light text-gray-800 text-sm dark:text-gray-200"> <span class=separator><a class=category href=/categories/%E6%9E%B6%E6%9E%84/>架构</a></span>
-</span>
-</div><a class="block my-6" href=/blog/others/%E6%96%B0%E7%89%88%E6%9C%AC%E7%9A%84babel-register-%E7%BC%96%E8%AF%91%E7%9B%B8%E5%85%B3/>
-<h2 class="text-xl font-semibold mb-1">新版本的@babel register & 编译相关</h2><div class="font-light text-gray-800 dark:text-gray-200">
-<p>babel</p></div></a>
-<div class="info dark:info-dark">
-<span class="font-light mb-2 text-gray-500 text-sm">
-July 16, 2021
-</span>
-<span class="font-light text-gray-800 text-sm dark:text-gray-200"> <span class=separator><a class=category href=/categories/%E6%9E%B6%E6%9E%84/>架构</a></span>
-</span>
-<span class="font-light text-gray-500 text-sm dark:text-gray-200">
-<span class=separator><a class=tag href=/tags/%E5%89%8D%E7%AB%AF%E5%AE%89%E5%85%A8/>前端安全</a></span>
-</span>
-</div><a class="block my-6" href=/blog/algorithms/linkedlist/>
-<h2 class="text-xl font-semibold mb-1">链表</h2><div class="font-light text-gray-800 dark:text-gray-200">
-<p>使用js实现链表</p></div></a>
-<div class="info dark:info-dark">
-<span class="font-light mb-2 text-gray-500 text-sm">
-July 16, 2021
-</span>
-<span class="font-light text-gray-800 text-sm dark:text-gray-200"> <span class=separator><a class=category href=/categories/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/>数据结构</a><a class=category href=/categories/%E7%AE%97%E6%B3%95/>算法</a></span>
-</span>
-</div><a class="block my-6" href=/blog/github/github-action-62a4ecf1395640759a428b91d6ed22df/>
-<h2 class="text-xl font-semibold mb-1">Git Action</h2><div class="font-light text-gray-800 dark:text-gray-200">
-<p>github操作驱动一系列命令</p><p>使用 action 可以实现自动部署、发布</p><p>以下是一个当 Git master 分支有新提交时自动发部到 npm</p><p>项目地址是</p></div></a>
-<div class="info dark:info-dark">
-<span class="font-light mb-2 text-gray-500 text-sm">
-July 15, 2021
-</span>
-<span class="font-light text-gray-500 text-sm dark:text-gray-200">
-<span class=separator><a class=tag href=/tags/github/>Github</a></span>
-</span>
-</div><a class="block my-6" href=/blog/github/github-fork-40a066569c71410791397d8e1b1a48d4/>
-<h2 class="text-xl font-semibold mb-1">Github Fork</h2><div class="font-light text-gray-800 dark:text-gray-200">
-<p>xss & csrf 都是窃token cookie之类的敏感信息</p></div></a>
-<div class="info dark:info-dark">
-<span class="font-light mb-2 text-gray-500 text-sm">
-July 13, 2021
-</span>
-<span class="font-light text-gray-800 text-sm dark:text-gray-200"> <span class=separator><a class=category href=/categories/%E6%9E%B6%E6%9E%84/>架构</a><a class=category href=/categories/%E5%BE%AE%E5%89%8D%E7%AB%AF/>微前端</a></span>
-</span>
-<span class="font-light text-gray-500 text-sm dark:text-gray-200">
-<span class=separator><a class=tag href=/tags/%E5%89%8D%E7%AB%AF%E5%AE%89%E5%85%A8/>前端安全</a></span>
-</span>
-</div><a class="block my-6" href=/blog/brower/chrome/>
-<h2 class="text-xl font-semibold mb-1">performance & source的使用</h2><div class="font-light text-gray-800 dark:text-gray-200">
-performance & source的使用 如何debug & 放大局部
+hugo -D 集成到GitHub.io页面中 将quickstart项目remote到一个项目 开启pages功能 将pages指向 gh-pages的根目录 Actions中新建workflows git 将自动生成</div></a><div class="info dark:info-dark"><span class="font-light mb-2 text-gray-500 text-sm">July 16, 2021</span>
+<span class="font-light text-gray-800 text-sm dark:text-gray-200"><span class=separator><a class=category href=/categories/%E6%9E%B6%E6%9E%84/>架构</a><a class=category href=/categories/%E5%BE%AE%E5%89%8D%E7%AB%AF/>微前端</a></span></span>
+<span class="font-light text-gray-500 text-sm dark:text-gray-200"><span class=separator><a class=tag href=/tags/%E5%89%8D%E7%AB%AF%E5%AE%89%E5%85%A8/>前端安全</a></span></span></div><a class="block my-6" href=/blog/npm/publishednpmpackge/><h2 class="text-xl font-semibold mb-1">使用npm上发布自己的包</h2><div class="font-light text-gray-800 dark:text-gray-200"><p>使用npm上发布自己的包</p></div></a><div class="info dark:info-dark"><span class="font-light mb-2 text-gray-500 text-sm">July 16, 2021</span>
+<span class="font-light text-gray-800 text-sm dark:text-gray-200"><span class=separator><a class=category href=/categories/%E6%9E%B6%E6%9E%84/>架构</a></span></span>
+<span class="font-light text-gray-500 text-sm dark:text-gray-200"><span class=separator><a class=tag href=/tags/npm/>npm</a></span></span></div><a class="block my-6" href=/blog/devops/%E4%BD%BF%E7%94%A8heroku%E9%83%A8%E7%BD%B2node%E5%BA%94%E7%94%A8/><h2 class="text-xl font-semibold mb-1">免费部署个人站点</h2><div class="font-light text-gray-800 dark:text-gray-200"><h2 id=后端项目>后端项目</h2><h3 id=heroku免费部署nodejs项目>Heroku免费部署Node.js项目</h3><p>可以同步 GitHub 的项目；开启自动部署；可配置 domain</p><p>服务器配置：</p></div></a><div class="info dark:info-dark"><span class="font-light mb-2 text-gray-500 text-sm">July 16, 2021</span>
+<span class="font-light text-gray-500 text-sm dark:text-gray-200"><span class=separator><a class=tag href=/tags/devops/>DevOps</a></span></span></div><a class="block my-6" href=/blog/algorithms/doublylinkedlist/><h2 class="text-xl font-semibold mb-1">双向链表</h2><div class="font-light text-gray-800 dark:text-gray-200">export default class DoublyLinkedListNode { constructor(value, next = null, previous = null) { this.value = value; this.next = next; this.previous = previous; } toString(callback) { return callback ? callback(this.value) : `${this.value}`; } }</div></a><div class="info dark:info-dark"><span class="font-light mb-2 text-gray-500 text-sm">July 16, 2021</span>
+<span class="font-light text-gray-800 text-sm dark:text-gray-200"><span class=separator><a class=category href=/categories/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/>数据结构</a><a class=category href=/categories/%E7%AE%97%E6%B3%95/>算法</a></span></span></div><a class="block my-6" href=/blog/utils/%E5%90%84%E7%A7%8D%E5%B7%A5%E5%85%B7%E5%90%88%E9%9B%86/><h2 class="text-xl font-semibold mb-1">各种工具合集</h2><div class="font-light text-gray-800 dark:text-gray-200"><p>xss & csrf 都是窃token cookie之类的敏感信息</p></div></a><div class="info dark:info-dark"><span class="font-light mb-2 text-gray-500 text-sm">July 16, 2021</span>
+<span class="font-light text-gray-800 text-sm dark:text-gray-200"><span class=separator><a class=category href=/categories/%E6%9E%B6%E6%9E%84/>架构</a><a class=category href=/categories/%E5%BE%AE%E5%89%8D%E7%AB%AF/>微前端</a></span></span>
+<span class="font-light text-gray-500 text-sm dark:text-gray-200"><span class=separator><a class=tag href=/tags/%E5%89%8D%E7%AB%AF%E5%AE%89%E5%85%A8/>前端安全</a></span></span></div><a class="block my-6" href=/blog/network/%E5%A6%82%E4%BD%95%E4%BD%BF%E7%94%A8whistle%E6%8A%93%E5%8C%85-af3be691cfd1472a9dfbecd05a0e0769/><h2 class="text-xl font-semibold mb-1">如何使用Whistle抓包</h2><div class="font-light text-gray-800 dark:text-gray-200"></div></a><div class="info dark:info-dark"><span class="font-light mb-2 text-gray-500 text-sm">July 16, 2021</span>
+<span class="font-light text-gray-800 text-sm dark:text-gray-200"><span class=separator><a class=category href=/categories/%E6%9E%B6%E6%9E%84/>架构</a><a class=category href=/categories/%E5%BE%AE%E5%89%8D%E7%AB%AF/>微前端</a></span></span>
+<span class="font-light text-gray-500 text-sm dark:text-gray-200"><span class=separator><a class=tag href=/tags/%E5%89%8D%E7%AB%AF%E5%AE%89%E5%85%A8/>前端安全</a></span></span></div><a class="block my-6" href=/blog/framework/%E6%96%B0%E6%90%AD%E4%B8%80%E4%B8%AA%E6%A1%86%E6%9E%B6%E8%A6%81%E5%81%9A%E7%9A%84%E4%BA%8B%E6%83%85/><h2 class="text-xl font-semibold mb-1">新搭一个框架要做的事情</h2><div class="font-light text-gray-800 dark:text-gray-200"><p>新搭建一个前端项目的时候，必须要做的事情</p></div></a><div class="info dark:info-dark"><span class="font-light mb-2 text-gray-500 text-sm">July 16, 2021</span>
+<span class="font-light text-gray-800 text-sm dark:text-gray-200"><span class=separator><a class=category href=/categories/%E6%9E%B6%E6%9E%84/>架构</a></span></span></div><a class="block my-6" href=/blog/others/%E6%96%B0%E7%89%88%E6%9C%AC%E7%9A%84babel-register-%E7%BC%96%E8%AF%91%E7%9B%B8%E5%85%B3/><h2 class="text-xl font-semibold mb-1">新版本的@babel register & 编译相关</h2><div class="font-light text-gray-800 dark:text-gray-200"><p>babel</p></div></a><div class="info dark:info-dark"><span class="font-light mb-2 text-gray-500 text-sm">July 16, 2021</span>
+<span class="font-light text-gray-800 text-sm dark:text-gray-200"><span class=separator><a class=category href=/categories/%E6%9E%B6%E6%9E%84/>架构</a></span></span>
+<span class="font-light text-gray-500 text-sm dark:text-gray-200"><span class=separator><a class=tag href=/tags/%E5%89%8D%E7%AB%AF%E5%AE%89%E5%85%A8/>前端安全</a></span></span></div><a class="block my-6" href=/blog/algorithms/linkedlist/><h2 class="text-xl font-semibold mb-1">链表</h2><div class="font-light text-gray-800 dark:text-gray-200"><p>使用js实现链表</p></div></a><div class="info dark:info-dark"><span class="font-light mb-2 text-gray-500 text-sm">July 16, 2021</span>
+<span class="font-light text-gray-800 text-sm dark:text-gray-200"><span class=separator><a class=category href=/categories/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/>数据结构</a><a class=category href=/categories/%E7%AE%97%E6%B3%95/>算法</a></span></span></div><a class="block my-6" href=/blog/github/github-action-62a4ecf1395640759a428b91d6ed22df/><h2 class="text-xl font-semibold mb-1">Git Action</h2><div class="font-light text-gray-800 dark:text-gray-200"><p>github操作驱动一系列命令</p><p>使用 action 可以实现自动部署、发布</p><p>以下是一个当 Git master 分支有新提交时自动发部到 npm</p><p>项目地址是</p></div></a><div class="info dark:info-dark"><span class="font-light mb-2 text-gray-500 text-sm">July 15, 2021</span>
+<span class="font-light text-gray-500 text-sm dark:text-gray-200"><span class=separator><a class=tag href=/tags/github/>Github</a></span></span></div><a class="block my-6" href=/blog/github/github-fork-40a066569c71410791397d8e1b1a48d4/><h2 class="text-xl font-semibold mb-1">Github Fork</h2><div class="font-light text-gray-800 dark:text-gray-200"></div></a><div class="info dark:info-dark"><span class="font-light mb-2 text-gray-500 text-sm">July 13, 2021</span>
+<span class="font-light text-gray-800 text-sm dark:text-gray-200"><span class=separator><a class=category href=/categories/%E6%9E%B6%E6%9E%84/>架构</a><a class=category href=/categories/%E5%BE%AE%E5%89%8D%E7%AB%AF/>微前端</a></span></span>
+<span class="font-light text-gray-500 text-sm dark:text-gray-200"><span class=separator><a class=tag href=/tags/%E5%89%8D%E7%AB%AF%E5%AE%89%E5%85%A8/>前端安全</a></span></span></div><a class="block my-6" href=/blog/brower/chrome/><h2 class="text-xl font-semibold mb-1">performance & source的使用</h2><div class="font-light text-gray-800 dark:text-gray-200">performance & source的使用 如何debug & 放大局部
 network方面 加载了2个文件 html js 顺序执行 innerHTML方法
-call stack
-</div></a>
-<div class="info dark:info-dark">
-<span class="font-light mb-2 text-gray-500 text-sm">
-July 13, 2021
-</span>
-<span class="font-light text-gray-800 text-sm dark:text-gray-200"> <span class=separator><a class=category href=/categories/chrome/>chrome</a><a class=category href=/categories/%E5%B7%A5%E5%85%B7/>工具</a></span>
-</span>
-</div><a class="block my-6" href=/blog/seo/seo/>
-<h2 class="text-xl font-semibold mb-1">seo支持 & 谷歌分析</h2><div class="font-light text-gray-800 dark:text-gray-200">
-<blockquote>
-<p><a href="https://search.google.com/search-console?resource_id=sc-domain:visionary.top">Search Console</a></p></blockquote><p>支持谷歌搜索</p></div></a>
-<div class="info dark:info-dark">
-<span class="font-light mb-2 text-gray-500 text-sm">
-July 13, 2021
-</span>
-<span class="font-light text-gray-800 text-sm dark:text-gray-200"> <span class=separator><a class=category href=/categories/seo%E6%94%AF%E6%8C%81/>seo支持</a><a class=category href=/categories/google/>google</a></span>
-</span>
-</div><a class="block my-6" href=/blog/utils/mackaymap/>
-<h2 class="text-xl font-semibold mb-1">MAC 上好用的快捷键</h2><div class="font-light text-gray-800 dark:text-gray-200">
-Press CTRL+ALT+Deleteto end the session. 按住command点击链接可以新标签打开
-</div></a>
-<div class="info dark:info-dark">
-<span class="font-light mb-2 text-gray-500 text-sm">
-April 24, 2021
-</span>
-<span class="font-light text-gray-800 text-sm dark:text-gray-200"> <span class=separator><a class=category href=/categories/mac/>mac</a></span>
-</span>
-<span class="font-light text-gray-500 text-sm dark:text-gray-200">
-<span class=separator><a class=tag href=/tags/keymap/>keymap</a></span>
-</span>
-</div><a class="block my-6" href=/blog/md/markdown-syntax/>
-<h2 class="text-xl font-semibold mb-1">Markdown Syntax Guide</h2><div class="font-light text-gray-800 dark:text-gray-200">
-<p>This article offers a sample of basic Markdown syntax that can be used in Hugo content files, also it shows whether basic HTML elements are decorated with CSS in a Hugo theme.</p></div></a>
-<div class="info dark:info-dark">
-<span class="font-light mb-2 text-gray-500 text-sm">
-April 24, 2021
-</span>
-<span class="font-light text-gray-800 text-sm dark:text-gray-200"> <span class=separator><a class=category href=/categories/md/>md</a></span>
-</span>
-</div><a class="block my-6" href=/blog/md/math-typesetting/>
-<h2 class="text-xl font-semibold mb-1">Math Typesetting</h2><div class="font-light text-gray-800 dark:text-gray-200">
-<p>Mathematical notation in a Hugo project can be enabled by using third party JavaScript libraries.</p></div></a>
-<div class="info dark:info-dark">
-<span class="font-light mb-2 text-gray-500 text-sm">
-April 24, 2021
-</span>
-<span class="font-light text-gray-800 text-sm dark:text-gray-200"> <span class=separator><a class=category href=/categories/md/>md</a></span>
-</span>
-</div><a class="block my-6" href=/blog/md/rich-content/>
-<h2 class="text-xl font-semibold mb-1">Rich Content</h2><div class="font-light text-gray-800 dark:text-gray-200">
-<p>Hugo ships with several <a href=https://gohugo.io/content-management/shortcodes/#use-hugos-built-in-shortcodes>Built-in Shortcodes</a> for rich content, along with a <a href=https://gohugo.io/about/hugo-and-gdpr/>Privacy Config</a> and a set of Simple Shortcodes that enable static and no-JS versions of various social media embeds.</p><h2 id=heading></h2></div></a>
-<div class="info dark:info-dark">
-<span class="font-light mb-2 text-gray-500 text-sm">
-April 24, 2021
-</span>
-<span class="font-light text-gray-800 text-sm dark:text-gray-200"> <span class=separator><a class=category href=/categories/md/>md</a></span>
-</span>
-</div><a class="block my-6" href=/blog/framework/%E5%A6%82%E4%BD%95%E4%BC%98%E5%8C%96%E4%BD%A0%E7%9A%84%E5%89%8D%E7%AB%AF%E9%A1%B9%E7%9B%AE/>
-<h2 class="text-xl font-semibold mb-1">如何优化你的前端项目</h2><div class="font-light text-gray-800 dark:text-gray-200">
-</div></a>
-<div class="info dark:info-dark">
-<span class="font-light mb-2 text-gray-500 text-sm">
-April 24, 2021
-</span>
-<span class="font-light text-gray-800 text-sm dark:text-gray-200"> <span class=separator><a class=category href=/categories/%E6%9E%B6%E6%9E%84/>架构</a></span>
-</span>
-<span class="font-light text-gray-500 text-sm dark:text-gray-200">
-<span class=separator><a class=tag href=/tags/webpack/>webpack</a></span>
-</span>
-</div><a class="block my-6" href=/blog/react%E6%BA%90%E7%A0%81%E7%AC%94%E8%AE%B0/hooks/>
-<h2 class="text-xl font-semibold mb-1">react 源码阅读 - Hooks</h2><div class="font-light text-gray-800 dark:text-gray-200">
-有那些hooks
+call stack</div></a><div class="info dark:info-dark"><span class="font-light mb-2 text-gray-500 text-sm">July 13, 2021</span>
+<span class="font-light text-gray-800 text-sm dark:text-gray-200"><span class=separator><a class=category href=/categories/chrome/>chrome</a><a class=category href=/categories/%E5%B7%A5%E5%85%B7/>工具</a></span></span></div><a class="block my-6" href=/blog/seo/seo/><h2 class="text-xl font-semibold mb-1">seo支持 & 谷歌分析</h2><div class="font-light text-gray-800 dark:text-gray-200"><blockquote><p><a href="https://search.google.com/search-console?resource_id=sc-domain:visionary.top">Search Console</a></p></blockquote><p>支持谷歌搜索</p></div></a><div class="info dark:info-dark"><span class="font-light mb-2 text-gray-500 text-sm">July 13, 2021</span>
+<span class="font-light text-gray-800 text-sm dark:text-gray-200"><span class=separator><a class=category href=/categories/seo%E6%94%AF%E6%8C%81/>seo支持</a><a class=category href=/categories/google/>google</a></span></span></div><a class="block my-6" href=/blog/utils/mackaymap/><h2 class="text-xl font-semibold mb-1">MAC 上好用的快捷键</h2><div class="font-light text-gray-800 dark:text-gray-200">Press CTRL+ALT+Deleteto end the session. 按住command点击链接可以新标签打开</div></a><div class="info dark:info-dark"><span class="font-light mb-2 text-gray-500 text-sm">April 24, 2021</span>
+<span class="font-light text-gray-800 text-sm dark:text-gray-200"><span class=separator><a class=category href=/categories/mac/>mac</a></span></span>
+<span class="font-light text-gray-500 text-sm dark:text-gray-200"><span class=separator><a class=tag href=/tags/keymap/>keymap</a></span></span></div><a class="block my-6" href=/blog/md/markdown-syntax/><h2 class="text-xl font-semibold mb-1">Markdown Syntax Guide</h2><div class="font-light text-gray-800 dark:text-gray-200"><p>This article offers a sample of basic Markdown syntax that can be used in Hugo content files, also it shows whether basic HTML elements are decorated with CSS in a Hugo theme.</p></div></a><div class="info dark:info-dark"><span class="font-light mb-2 text-gray-500 text-sm">April 24, 2021</span>
+<span class="font-light text-gray-800 text-sm dark:text-gray-200"><span class=separator><a class=category href=/categories/md/>md</a></span></span></div><a class="block my-6" href=/blog/md/math-typesetting/><h2 class="text-xl font-semibold mb-1">Math Typesetting</h2><div class="font-light text-gray-800 dark:text-gray-200"><p>Mathematical notation in a Hugo project can be enabled by using third party JavaScript libraries.</p></div></a><div class="info dark:info-dark"><span class="font-light mb-2 text-gray-500 text-sm">April 24, 2021</span>
+<span class="font-light text-gray-800 text-sm dark:text-gray-200"><span class=separator><a class=category href=/categories/md/>md</a></span></span></div><a class="block my-6" href=/blog/md/rich-content/><h2 class="text-xl font-semibold mb-1">Rich Content</h2><div class="font-light text-gray-800 dark:text-gray-200"><p>Hugo ships with several <a href=https://gohugo.io/content-management/shortcodes/#use-hugos-built-in-shortcodes>Built-in Shortcodes</a> for rich content, along with a <a href=https://gohugo.io/about/hugo-and-gdpr/>Privacy Config</a> and a set of Simple Shortcodes that enable static and no-JS versions of various social media embeds.</p><h2 id=heading></h2></div></a><div class="info dark:info-dark"><span class="font-light mb-2 text-gray-500 text-sm">April 24, 2021</span>
+<span class="font-light text-gray-800 text-sm dark:text-gray-200"><span class=separator><a class=category href=/categories/md/>md</a></span></span></div><a class="block my-6" href=/blog/framework/%E5%A6%82%E4%BD%95%E4%BC%98%E5%8C%96%E4%BD%A0%E7%9A%84%E5%89%8D%E7%AB%AF%E9%A1%B9%E7%9B%AE/><h2 class="text-xl font-semibold mb-1">如何优化你的前端项目</h2><div class="font-light text-gray-800 dark:text-gray-200"></div></a><div class="info dark:info-dark"><span class="font-light mb-2 text-gray-500 text-sm">April 24, 2021</span>
+<span class="font-light text-gray-800 text-sm dark:text-gray-200"><span class=separator><a class=category href=/categories/%E6%9E%B6%E6%9E%84/>架构</a></span></span>
+<span class="font-light text-gray-500 text-sm dark:text-gray-200"><span class=separator><a class=tag href=/tags/webpack/>webpack</a></span></span></div><a class="block my-6" href=/blog/react%E6%BA%90%E7%A0%81%E7%AC%94%E8%AE%B0/hooks/><h2 class="text-xl font-semibold mb-1">react 源码阅读 - Hooks</h2><div class="font-light text-gray-800 dark:text-gray-200">有那些hooks
 useState useReducer ##useEffect
 ##useContext
-##useRef
-</div></a>
-<div class="info dark:info-dark">
-<span class="font-light mb-2 text-gray-500 text-sm">
-April 5, 2021
-</span>
-<span class="font-light text-gray-800 text-sm dark:text-gray-200"> <span class=separator><a class=category href=/categories/react/>react</a><a class=category href=/categories/%E6%BA%90%E7%A0%81/>源码</a></span>
-</span>
-</div><a class="block my-6" href=/blog/react%E6%BA%90%E7%A0%81%E7%AC%94%E8%AE%B0/reactbasic/>
-<h2 class="text-xl font-semibold mb-1">react & reactDOM API</h2><div class="font-light text-gray-800 dark:text-gray-200">
-<p>react v17.0.2 概述
-react 整个项目的架构</p><p>React Top-Level API</p><p>读源码的有什么用</p></div></a>
-<div class="info dark:info-dark">
-<span class="font-light mb-2 text-gray-500 text-sm">
-April 2, 2021
-</span>
-<span class="font-light text-gray-800 text-sm dark:text-gray-200"> <span class=separator><a class=category href=/categories/react/>react</a><a class=category href=/categories/%E6%BA%90%E7%A0%81/>源码</a></span>
-</span>
-</div><a class="block my-6" href=/blog/react%E6%BA%90%E7%A0%81%E7%AC%94%E8%AE%B0/diff%E7%AE%97%E6%B3%95%E6%80%BB%E7%BB%93/>
-<h2 class="text-xl font-semibold mb-1">react 源码阅读 - diff 算法</h2><div class="font-light text-gray-800 dark:text-gray-200">
-<p>版本 v17.0.2
-单节点比较、多节点比较</p></div></a>
-<div class="info dark:info-dark">
-<span class="font-light mb-2 text-gray-500 text-sm">
-April 2, 2021
-</span>
-<span class="font-light text-gray-800 text-sm dark:text-gray-200"> <span class=separator><a class=category href=/categories/react/>react</a><a class=category href=/categories/%E6%BA%90%E7%A0%81/>源码</a></span>
-</span>
-</div><a class="block my-6" href=/blog/react%E6%BA%90%E7%A0%81%E7%AC%94%E8%AE%B0/setstate/>
-<h2 class="text-xl font-semibold mb-1">react 源码阅读 - setState</h2><div class="font-light text-gray-800 dark:text-gray-200">
-Component.prototype.setState = function (partialState, callback) { this.updater.enqueueSetState(this, partialState, callback, 'setState'); }; function enqueueSetState(inst, payload, callback) { // ... // 存在来updatel里 update.payload = payload; // 将update插入updateQueue // 调度update enqueueUpdate(fiber, update, lane); scheduleUpdateOnFiber(fiber, lane, eventTime); }
-</div></a>
-<div class="info dark:info-dark">
-<span class="font-light mb-2 text-gray-500 text-sm">
-April 2, 2021
-</span>
-<span class="font-light text-gray-800 text-sm dark:text-gray-200"> <span class=separator><a class=category href=/categories/react/>react</a><a class=category href=/categories/%E6%BA%90%E7%A0%81/>源码</a></span>
-</span>
-</div><a class="block my-6" href=/blog/react%E6%BA%90%E7%A0%81%E7%AC%94%E8%AE%B0/react%E7%BB%93%E5%90%88%E5%AE%9E%E6%88%98/>
-<h2 class="text-xl font-semibold mb-1">react 源码阅读 - show with code</h2><div class="font-light text-gray-800 dark:text-gray-200">
-</div></a>
-<div class="info dark:info-dark">
-<span class="font-light mb-2 text-gray-500 text-sm">
-April 2, 2021
-</span>
-<span class="font-light text-gray-800 text-sm dark:text-gray-200"> <span class=separator><a class=category href=/categories/react/>react</a><a class=category href=/categories/%E6%BA%90%E7%A0%81/>源码</a></span>
-</span>
-</div><a class="block my-6" href=/blog/react%E6%BA%90%E7%A0%81%E7%AC%94%E8%AE%B0/react%E6%BA%90%E7%A0%81%E4%B8%AD%E7%9A%84%E4%B8%80%E4%BA%9B%E5%90%8D%E8%AF%8D/>
-<h2 class="text-xl font-semibold mb-1">react 源码阅读 - 名词 & 数据结构</h2><div class="font-light text-gray-800 dark:text-gray-200">
-</div></a>
-<div class="info dark:info-dark">
-<span class="font-light mb-2 text-gray-500 text-sm">
-April 2, 2021
-</span>
-<span class="font-light text-gray-800 text-sm dark:text-gray-200"> <span class=separator><a class=category href=/categories/react/>react</a><a class=category href=/categories/%E6%BA%90%E7%A0%81/>源码</a></span>
-</span>
-</div><a class="block my-6" href=/blog/react%E6%BA%90%E7%A0%81%E7%AC%94%E8%AE%B0/react%E6%B5%81%E7%A8%8B/>
-<h2 class="text-xl font-semibold mb-1">react 源码阅读 - 流程</h2><div class="font-light text-gray-800 dark:text-gray-200">
-<p>React16架构</p><ul>
-<li>scheduler 调度 【v15没有】
-<blockquote>
-<p>调度任务的优先级，高优任务优先进入Reconciler
+##useRef</div></a><div class="info dark:info-dark"><span class="font-light mb-2 text-gray-500 text-sm">April 5, 2021</span>
+<span class="font-light text-gray-800 text-sm dark:text-gray-200"><span class=separator><a class=category href=/categories/react/>react</a><a class=category href=/categories/%E6%BA%90%E7%A0%81/>源码</a></span></span></div><a class="block my-6" href=/blog/react%E6%BA%90%E7%A0%81%E7%AC%94%E8%AE%B0/reactbasic/><h2 class="text-xl font-semibold mb-1">react & reactDOM API</h2><div class="font-light text-gray-800 dark:text-gray-200"><p>react v17.0.2 概述
+react 整个项目的架构</p><p>React Top-Level API</p><p>读源码的有什么用</p></div></a><div class="info dark:info-dark"><span class="font-light mb-2 text-gray-500 text-sm">April 2, 2021</span>
+<span class="font-light text-gray-800 text-sm dark:text-gray-200"><span class=separator><a class=category href=/categories/react/>react</a><a class=category href=/categories/%E6%BA%90%E7%A0%81/>源码</a></span></span></div><a class="block my-6" href=/blog/react%E6%BA%90%E7%A0%81%E7%AC%94%E8%AE%B0/diff%E7%AE%97%E6%B3%95%E6%80%BB%E7%BB%93/><h2 class="text-xl font-semibold mb-1">react 源码阅读 - diff 算法</h2><div class="font-light text-gray-800 dark:text-gray-200"><p>版本 v17.0.2
+单节点比较、多节点比较</p></div></a><div class="info dark:info-dark"><span class="font-light mb-2 text-gray-500 text-sm">April 2, 2021</span>
+<span class="font-light text-gray-800 text-sm dark:text-gray-200"><span class=separator><a class=category href=/categories/react/>react</a><a class=category href=/categories/%E6%BA%90%E7%A0%81/>源码</a></span></span></div><a class="block my-6" href=/blog/react%E6%BA%90%E7%A0%81%E7%AC%94%E8%AE%B0/setstate/><h2 class="text-xl font-semibold mb-1">react 源码阅读 - setState</h2><div class="font-light text-gray-800 dark:text-gray-200">Component.prototype.setState = function (partialState, callback) { this.updater.enqueueSetState(this, partialState, callback, 'setState'); }; function enqueueSetState(inst, payload, callback) { // ... // 存在来updatel里 update.payload = payload; // 将update插入updateQueue // 调度update enqueueUpdate(fiber, update, lane); scheduleUpdateOnFiber(fiber, lane, eventTime); }</div></a><div class="info dark:info-dark"><span class="font-light mb-2 text-gray-500 text-sm">April 2, 2021</span>
+<span class="font-light text-gray-800 text-sm dark:text-gray-200"><span class=separator><a class=category href=/categories/react/>react</a><a class=category href=/categories/%E6%BA%90%E7%A0%81/>源码</a></span></span></div><a class="block my-6" href=/blog/react%E6%BA%90%E7%A0%81%E7%AC%94%E8%AE%B0/react%E7%BB%93%E5%90%88%E5%AE%9E%E6%88%98/><h2 class="text-xl font-semibold mb-1">react 源码阅读 - show with code</h2><div class="font-light text-gray-800 dark:text-gray-200"></div></a><div class="info dark:info-dark"><span class="font-light mb-2 text-gray-500 text-sm">April 2, 2021</span>
+<span class="font-light text-gray-800 text-sm dark:text-gray-200"><span class=separator><a class=category href=/categories/react/>react</a><a class=category href=/categories/%E6%BA%90%E7%A0%81/>源码</a></span></span></div><a class="block my-6" href=/blog/react%E6%BA%90%E7%A0%81%E7%AC%94%E8%AE%B0/react%E6%BA%90%E7%A0%81%E4%B8%AD%E7%9A%84%E4%B8%80%E4%BA%9B%E5%90%8D%E8%AF%8D/><h2 class="text-xl font-semibold mb-1">react 源码阅读 - 名词 & 数据结构</h2><div class="font-light text-gray-800 dark:text-gray-200"></div></a><div class="info dark:info-dark"><span class="font-light mb-2 text-gray-500 text-sm">April 2, 2021</span>
+<span class="font-light text-gray-800 text-sm dark:text-gray-200"><span class=separator><a class=category href=/categories/react/>react</a><a class=category href=/categories/%E6%BA%90%E7%A0%81/>源码</a></span></span></div><a class="block my-6" href=/blog/react%E6%BA%90%E7%A0%81%E7%AC%94%E8%AE%B0/react%E6%B5%81%E7%A8%8B/><h2 class="text-xl font-semibold mb-1">react 源码阅读 - 流程</h2><div class="font-light text-gray-800 dark:text-gray-200"><p>React16架构</p><ul><li>scheduler 调度 【v15没有】<blockquote><p>调度任务的优先级，高优任务优先进入Reconciler
 到底是怎么调度的？
-react v18的并发模式 Concurrent Mode</p></blockquote></li><li>reconciler 协调
-<blockquote>
-<p>负责找出变化的组件</p></blockquote></li><li>renderer 渲染
-<blockquote>
-<p>负责将变化的组件渲染到页面上</p></blockquote></li></ul></div></a>
-<div class="info dark:info-dark">
-<span class="font-light mb-2 text-gray-500 text-sm">
-April 2, 2021
-</span>
-<span class="font-light text-gray-800 text-sm dark:text-gray-200"> <span class=separator><a class=category href=/categories/react/>react</a><a class=category href=/categories/%E6%BA%90%E7%A0%81/>源码</a></span>
-</span>
-</div><a class="block my-6" href=/blog/security/%E5%85%B3%E4%BA%8Exss%E6%B3%A8%E5%85%A5%E5%BC%8F%E6%94%BB%E5%87%BB/>
-<h2 class="text-xl font-semibold mb-1">关于xss注入式攻击</h2><div class="font-light text-gray-800 dark:text-gray-200">
-<p>xss & csrf 都是窃token cookie之类的敏感信息</p></div></a>
-<div class="info dark:info-dark">
-<span class="font-light mb-2 text-gray-500 text-sm">
-January 20, 2021
-</span>
-<span class="font-light text-gray-800 text-sm dark:text-gray-200"> <span class=separator><a class=category href=/categories/%E6%9E%B6%E6%9E%84/>架构</a><a class=category href=/categories/%E5%BE%AE%E5%89%8D%E7%AB%AF/>微前端</a></span>
-</span>
-<span class="font-light text-gray-500 text-sm dark:text-gray-200">
-<span class=separator><a class=tag href=/tags/%E5%89%8D%E7%AB%AF%E5%AE%89%E5%85%A8/>前端安全</a></span>
-</span>
-</div><a class="block my-6" href=/blog/framework/micro-frontend-with-qiankun/>
-<h2 class="text-xl font-semibold mb-1">Micro-Frontends with qiankun</h2><div class="font-light text-gray-800 dark:text-gray-200">
-<p>可以实现多团队共同开发，每个团队维护使用了不同前端框架的项目，独立使用git，也可以在新网站上集成旧项目</p></div></a>
-<div class="info dark:info-dark">
-<span class="font-light mb-2 text-gray-500 text-sm">
-November 20, 2020
-</span>
-<span class="font-light text-gray-800 text-sm dark:text-gray-200"> <span class=separator><a class=category href=/categories/%E6%9E%B6%E6%9E%84/>架构</a><a class=category href=/categories/%E5%BE%AE%E5%89%8D%E7%AB%AF/>微前端</a></span>
-</span>
-<span class="font-light text-gray-500 text-sm dark:text-gray-200">
-<span class=separator><a class=tag href=/tags/webpack/>webpack</a></span>
-</span>
-</div><a class="block my-6" href=/blog/framework/grunt%E7%9A%84%E4%BD%BF%E7%94%A8%E5%8F%8A%E9%85%8D%E7%BD%AE/>
-<h2 class="text-xl font-semibold mb-1">Grunt的使用及配置</h2><div class="font-light text-gray-800 dark:text-gray-200">
-<p>一个用来打包编译js/ts项目的工具</p><p>可以使用不同的plugins达到要的效果</p><p>可以将写的 es6语法的ts/tsx/单元测试文件</p><p>混淆压缩、编译 ES6、运行测试文件</p></div></a>
-<div class="info dark:info-dark">
-<span class="font-light mb-2 text-gray-500 text-sm">
-July 15, 2020
-</span>
-<span class="font-light text-gray-800 text-sm dark:text-gray-200"> <span class=separator><a class=category href=/categories/%E6%9E%B6%E6%9E%84/>架构</a><a class=category href=/categories/%E5%BE%AE%E5%89%8D%E7%AB%AF/>微前端</a></span>
-</span>
-<span class="font-light text-gray-500 text-sm dark:text-gray-200">
-<span class=separator><a class=tag href=/tags/%E5%89%8D%E7%AB%AF%E5%AE%89%E5%85%A8/>前端安全</a></span>
-</span>
-</div><a class="block my-6" href=/blog/style/css-reference-sheet/>
-<h2 class="text-xl font-semibold mb-1">Css Reference Sheet</h2><div class="font-light text-gray-800 dark:text-gray-200">
-<p>常用的一些css显示效果</p></div></a>
-<div class="info dark:info-dark">
-<span class="font-light mb-2 text-gray-500 text-sm">
-July 14, 2019
-</span>
-<span class="font-light text-gray-800 text-sm dark:text-gray-200"> <span class=separator><a class=category href=/categories/css/>css</a><a class=category href=/categories/grid/>grid</a><a class=category href=/categories/%E5%A4%9A%E8%A1%8C%E7%9C%81%E7%95%A5/>多行省略</a><a class=category href=/categories/%E6%BB%9A%E5%8A%A8%E6%9D%A1/>滚动条</a></span>
-</span>
-<span class="font-light text-gray-500 text-sm dark:text-gray-200">
-<span class=separator><a class=tag href=/tags/thumbnail/>thumbnail</a></span>
-</span>
-</div><a class="block my-6" href=/blog/react%E4%BD%BF%E7%94%A8/redux/>
-<h2 class="text-xl font-semibold mb-1">redux & redux-thunk & redux-saga</h2><div class="font-light text-gray-800 dark:text-gray-200">
-<p>Store，Action 和 Reducer</p></div></a>
-<div class="info dark:info-dark">
-<span class="font-light mb-2 text-gray-500 text-sm">
-March 22, 2019
-</span>
-</div><a class="block my-6" href=/blog/utils/zsh/>
-<h2 class="text-xl font-semibold mb-1">zsh常用配置等</h2><div class="font-light text-gray-800 dark:text-gray-200">
-</div></a>
-<div class="info dark:info-dark">
-<span class="font-light mb-2 text-gray-500 text-sm">
-January 12, 2019
-</span>
-<span class="font-light text-gray-500 text-sm dark:text-gray-200">
-<span class=separator><a class=tag href=/tags/keymap/>keymap</a></span>
-</span>
-</div><a class="block my-6" href=/blog/algorithms/graph/dijkstraalgorithm/>
-<h2 class="text-xl font-semibold mb-1">Dijkstra Algorithm</h2><div class="font-light text-gray-800 dark:text-gray-200">
-finding the shortest paths to all graph vertices from single vertex 从单顶点找到所有图形顶点的最短路径
-</div></a>
-<div class="info dark:info-dark">
-<span class="font-light mb-2 text-gray-500 text-sm">
-May 16, 2018
-</span>
-<span class="font-light text-gray-800 text-sm dark:text-gray-200"> <span class=separator><a class=category href=/categories/algorithm/>algorithm</a><a class=category href=/categories/graph/>graph</a></span>
-</span>
-</div><a class="block my-6" href=/blog/algorithms/graph/primsalgorithm/>
-<h2 class="text-xl font-semibold mb-1">Dijkstra Algorithm</h2><div class="font-light text-gray-800 dark:text-gray-200">
-finding Minimum Spanning Tree (MST) for weighted undirected graph 找到加权无向图的最小生成树（MST）
-</div></a>
-<div class="info dark:info-dark">
-<span class="font-light mb-2 text-gray-500 text-sm">
-May 16, 2018
-</span>
-<span class="font-light text-gray-800 text-sm dark:text-gray-200"> <span class=separator><a class=category href=/categories/algorithm/>algorithm</a><a class=category href=/categories/graph/>graph</a></span>
-</span>
-</div><a class="block my-6" href=/blog/js/js%E5%9F%BA%E7%A1%80/>
-<h2 class="text-xl font-semibold mb-1">js基础问题</h2><div class="font-light text-gray-800 dark:text-gray-200">
-<p>一些js中的一些基础问题</p><p>变量提升/this指向/指针/类型转换/迭代/模块化/promise 等</p></div></a>
-<div class="info dark:info-dark">
-<span class="font-light mb-2 text-gray-500 text-sm">
-May 16, 2018
-</span>
-<span class="font-light text-gray-800 text-sm dark:text-gray-200"> <span class=separator><a class=category href=/categories/js/>js</a></span>
-</span>
-<span class="font-light text-gray-500 text-sm dark:text-gray-200">
-<span class=separator><a class=tag href=/tags/%E5%9F%BA%E7%A1%80/>基础</a></span>
-</span>
-</div><a class="block my-6" href=/blog/%E4%BB%A3%E7%A0%81%E8%A7%84%E8%8C%83/react%E8%A7%84%E8%8C%83/>
-<h2 class="text-xl font-semibold mb-1">react 代码规范</h2><div class="font-light text-gray-800 dark:text-gray-200">
-</div></a>
-<div class="info dark:info-dark">
-<span class="font-light mb-2 text-gray-500 text-sm">
-May 16, 2018
-</span>
-<span class="font-light text-gray-800 text-sm dark:text-gray-200"> <span class=separator><a class=category href=/categories/%E4%BB%A3%E7%A0%81%E8%A7%84%E8%8C%83/>代码规范</a></span>
-</span>
-</div><a class="block my-6" href=/blog/project/%E5%85%B3%E4%BA%8E%E5%8F%82%E6%95%B0%E6%A0%A1%E9%AA%8C/>
-<h2 class="text-xl font-semibold mb-1">关于参数校验 JavaScript</h2><div class="font-light text-gray-800 dark:text-gray-200">
-一些常用的库 ajv 9.6 Joi 68.9k
+react v18的并发模式 Concurrent Mode</p></blockquote></li><li>reconciler 协调<blockquote><p>负责找出变化的组件</p></blockquote></li><li>renderer 渲染<blockquote><p>负责将变化的组件渲染到页面上</p></blockquote></li></ul></div></a><div class="info dark:info-dark"><span class="font-light mb-2 text-gray-500 text-sm">April 2, 2021</span>
+<span class="font-light text-gray-800 text-sm dark:text-gray-200"><span class=separator><a class=category href=/categories/react/>react</a><a class=category href=/categories/%E6%BA%90%E7%A0%81/>源码</a></span></span></div><a class="block my-6" href=/blog/security/%E5%85%B3%E4%BA%8Exss%E6%B3%A8%E5%85%A5%E5%BC%8F%E6%94%BB%E5%87%BB/><h2 class="text-xl font-semibold mb-1">关于xss注入式攻击</h2><div class="font-light text-gray-800 dark:text-gray-200"><p>xss & csrf 都是窃token cookie之类的敏感信息</p></div></a><div class="info dark:info-dark"><span class="font-light mb-2 text-gray-500 text-sm">January 20, 2021</span>
+<span class="font-light text-gray-800 text-sm dark:text-gray-200"><span class=separator><a class=category href=/categories/%E6%9E%B6%E6%9E%84/>架构</a><a class=category href=/categories/%E5%BE%AE%E5%89%8D%E7%AB%AF/>微前端</a></span></span>
+<span class="font-light text-gray-500 text-sm dark:text-gray-200"><span class=separator><a class=tag href=/tags/%E5%89%8D%E7%AB%AF%E5%AE%89%E5%85%A8/>前端安全</a></span></span></div><a class="block my-6" href=/blog/framework/micro-frontend-with-qiankun/><h2 class="text-xl font-semibold mb-1">Micro-Frontends with qiankun</h2><div class="font-light text-gray-800 dark:text-gray-200"><p>可以实现多团队共同开发，每个团队维护使用了不同前端框架的项目，独立使用git，也可以在新网站上集成旧项目</p></div></a><div class="info dark:info-dark"><span class="font-light mb-2 text-gray-500 text-sm">November 20, 2020</span>
+<span class="font-light text-gray-800 text-sm dark:text-gray-200"><span class=separator><a class=category href=/categories/%E6%9E%B6%E6%9E%84/>架构</a><a class=category href=/categories/%E5%BE%AE%E5%89%8D%E7%AB%AF/>微前端</a></span></span>
+<span class="font-light text-gray-500 text-sm dark:text-gray-200"><span class=separator><a class=tag href=/tags/webpack/>webpack</a></span></span></div><a class="block my-6" href=/blog/framework/grunt%E7%9A%84%E4%BD%BF%E7%94%A8%E5%8F%8A%E9%85%8D%E7%BD%AE/><h2 class="text-xl font-semibold mb-1">Grunt的使用及配置</h2><div class="font-light text-gray-800 dark:text-gray-200"><p>一个用来打包编译js/ts项目的工具</p><p>可以使用不同的plugins达到要的效果</p><p>可以将写的 es6语法的ts/tsx/单元测试文件</p><p>混淆压缩、编译 ES6、运行测试文件</p></div></a><div class="info dark:info-dark"><span class="font-light mb-2 text-gray-500 text-sm">July 15, 2020</span>
+<span class="font-light text-gray-800 text-sm dark:text-gray-200"><span class=separator><a class=category href=/categories/%E6%9E%B6%E6%9E%84/>架构</a><a class=category href=/categories/%E5%BE%AE%E5%89%8D%E7%AB%AF/>微前端</a></span></span>
+<span class="font-light text-gray-500 text-sm dark:text-gray-200"><span class=separator><a class=tag href=/tags/%E5%89%8D%E7%AB%AF%E5%AE%89%E5%85%A8/>前端安全</a></span></span></div><a class="block my-6" href=/blog/style/css-reference-sheet/><h2 class="text-xl font-semibold mb-1">Css Reference Sheet</h2><div class="font-light text-gray-800 dark:text-gray-200"><p>常用的一些css显示效果</p></div></a><div class="info dark:info-dark"><span class="font-light mb-2 text-gray-500 text-sm">July 14, 2019</span>
+<span class="font-light text-gray-800 text-sm dark:text-gray-200"><span class=separator><a class=category href=/categories/css/>css</a><a class=category href=/categories/grid/>grid</a><a class=category href=/categories/%E5%A4%9A%E8%A1%8C%E7%9C%81%E7%95%A5/>多行省略</a><a class=category href=/categories/%E6%BB%9A%E5%8A%A8%E6%9D%A1/>滚动条</a></span></span>
+<span class="font-light text-gray-500 text-sm dark:text-gray-200"><span class=separator><a class=tag href=/tags/thumbnail/>thumbnail</a></span></span></div><a class="block my-6" href=/blog/react%E4%BD%BF%E7%94%A8/redux/><h2 class="text-xl font-semibold mb-1">redux & redux-thunk & redux-saga</h2><div class="font-light text-gray-800 dark:text-gray-200"><p>Store，Action 和 Reducer</p></div></a><div class="info dark:info-dark"><span class="font-light mb-2 text-gray-500 text-sm">March 22, 2019</span></div><a class="block my-6" href=/blog/utils/zsh/><h2 class="text-xl font-semibold mb-1">zsh常用配置等</h2><div class="font-light text-gray-800 dark:text-gray-200"></div></a><div class="info dark:info-dark"><span class="font-light mb-2 text-gray-500 text-sm">January 12, 2019</span>
+<span class="font-light text-gray-500 text-sm dark:text-gray-200"><span class=separator><a class=tag href=/tags/keymap/>keymap</a></span></span></div><a class="block my-6" href=/blog/algorithms/graph/dijkstraalgorithm/><h2 class="text-xl font-semibold mb-1">Dijkstra Algorithm</h2><div class="font-light text-gray-800 dark:text-gray-200">finding the shortest paths to all graph vertices from single vertex 从单顶点找到所有图形顶点的最短路径</div></a><div class="info dark:info-dark"><span class="font-light mb-2 text-gray-500 text-sm">May 16, 2018</span>
+<span class="font-light text-gray-800 text-sm dark:text-gray-200"><span class=separator><a class=category href=/categories/algorithm/>algorithm</a><a class=category href=/categories/graph/>graph</a></span></span></div><a class="block my-6" href=/blog/algorithms/graph/primsalgorithm/><h2 class="text-xl font-semibold mb-1">Dijkstra Algorithm</h2><div class="font-light text-gray-800 dark:text-gray-200">finding Minimum Spanning Tree (MST) for weighted undirected graph 找到加权无向图的最小生成树（MST）</div></a><div class="info dark:info-dark"><span class="font-light mb-2 text-gray-500 text-sm">May 16, 2018</span>
+<span class="font-light text-gray-800 text-sm dark:text-gray-200"><span class=separator><a class=category href=/categories/algorithm/>algorithm</a><a class=category href=/categories/graph/>graph</a></span></span></div><a class="block my-6" href=/blog/js/js%E5%9F%BA%E7%A1%80/><h2 class="text-xl font-semibold mb-1">js基础问题</h2><div class="font-light text-gray-800 dark:text-gray-200"><p>一些js中的一些基础问题</p><p>变量提升/this指向/指针/类型转换/迭代/模块化/promise 等</p></div></a><div class="info dark:info-dark"><span class="font-light mb-2 text-gray-500 text-sm">May 16, 2018</span>
+<span class="font-light text-gray-800 text-sm dark:text-gray-200"><span class=separator><a class=category href=/categories/js/>js</a></span></span>
+<span class="font-light text-gray-500 text-sm dark:text-gray-200"><span class=separator><a class=tag href=/tags/%E5%9F%BA%E7%A1%80/>基础</a></span></span></div><a class="block my-6" href=/blog/%E4%BB%A3%E7%A0%81%E8%A7%84%E8%8C%83/react%E8%A7%84%E8%8C%83/><h2 class="text-xl font-semibold mb-1">react 代码规范</h2><div class="font-light text-gray-800 dark:text-gray-200"></div></a><div class="info dark:info-dark"><span class="font-light mb-2 text-gray-500 text-sm">May 16, 2018</span>
+<span class="font-light text-gray-800 text-sm dark:text-gray-200"><span class=separator><a class=category href=/categories/%E4%BB%A3%E7%A0%81%E8%A7%84%E8%8C%83/>代码规范</a></span></span></div><a class="block my-6" href=/blog/project/%E5%85%B3%E4%BA%8E%E5%8F%82%E6%95%B0%E6%A0%A1%E9%AA%8C/><h2 class="text-xl font-semibold mb-1">关于参数校验 JavaScript</h2><div class="font-light text-gray-800 dark:text-gray-200">一些常用的库 ajv 9.6 Joi 68.9k
 yup 14k 使用示例
-import {array, object, string} from "yup"; const SpecialCharactersReg = /^((?!'|"|`|‘|’|“|”|@|&lt;|>|\\|\/|\{|\}|&|[|]|[$]|[%])[\s\S])*$/; const uploadFormValidationSchema = object({ filePostscript: string().max(200, "最多200个字符").trim(), labelList: array().max(2, "最多选择 2 个标签"), files: array().max(5).min(1, "请至少上传一个文件"), fileName: string().max(20, "文件名称不得超出20个字符").matches(SpecialCharactersReg, "该项不得包含“&lt;、>、'、\"、”等特殊符号") dataTimePickers: date() .min(moment().add(5, 'minute').format('yyyy-MM-DD HH:mm'), '开始时间已过，无法预约') .max(moment().add(2, 'day').format('yyyy-MM-DD HH:mm'), '超过2天后了'), });
-</div></a>
-<div class="info dark:info-dark">
-<span class="font-light mb-2 text-gray-500 text-sm">
-May 16, 2018
-</span>
-<span class="font-light text-gray-800 text-sm dark:text-gray-200"> <span class=separator><a class=category href=/categories/js-lib/>js lib</a></span>
-</span>
-</div><a class="block my-6" href=/blog/project/%E5%89%8D%E7%AB%AF%E5%B7%A5%E7%A8%8B%E5%8C%96/>
-<h2 class="text-xl font-semibold mb-1">前端工程化</h2><div class="font-light text-gray-800 dark:text-gray-200">
-<p>即 模块化、组件化、规范化、自动化</p></div></a>
-<div class="info dark:info-dark">
-<span class="font-light mb-2 text-gray-500 text-sm">
-May 16, 2018
-</span>
-<span class="font-light text-gray-800 text-sm dark:text-gray-200"> <span class=separator><a class=category href=/categories/js-lib/>js lib</a></span>
-</span>
-</div><a class="block my-6" href=/blog/algorithms/-queue/>
-<h2 class="text-xl font-semibold mb-1"></h2><div class="font-light text-gray-800 dark:text-gray-200">
-</div></a>
-<div class="info dark:info-dark">
-<span class="font-light mb-2 text-gray-500 text-sm">
-</span>
-</div><a class="block my-6" href=/blog/algorithms/red-blacktree/>
-<h2 class="text-xl font-semibold mb-1"></h2><div class="font-light text-gray-800 dark:text-gray-200">
-</div></a>
-<div class="info dark:info-dark">
-<span class="font-light mb-2 text-gray-500 text-sm">
-</span>
-</div><a class="block my-6" href=/blog/algorithms/sort/bubblesort/>
-<h2 class="text-xl font-semibold mb-1"></h2><div class="font-light text-gray-800 dark:text-gray-200">
-</div></a>
-<div class="info dark:info-dark">
-<span class="font-light mb-2 text-gray-500 text-sm">
-</span>
-</div><a class="block my-6" href=/blog/algorithms/sort/heapsort/>
-<h2 class="text-xl font-semibold mb-1"></h2><div class="font-light text-gray-800 dark:text-gray-200">
-</div></a>
-<div class="info dark:info-dark">
-<span class="font-light mb-2 text-gray-500 text-sm">
-</span>
-</div><a class="block my-6" href=/blog/algorithms/sort/mergesort/>
-<h2 class="text-xl font-semibold mb-1"></h2><div class="font-light text-gray-800 dark:text-gray-200">
-</div></a>
-<div class="info dark:info-dark">
-<span class="font-light mb-2 text-gray-500 text-sm">
-</span>
-</div><a class="block my-6" href=/blog/algorithms/sort/quicksort/>
-<h2 class="text-xl font-semibold mb-1"></h2><div class="font-light text-gray-800 dark:text-gray-200">
-</div></a>
-<div class="info dark:info-dark">
-<span class="font-light mb-2 text-gray-500 text-sm">
-</span>
-</div><a class="block my-6" href=/blog/algorithms/sort/selectionsort/>
-<h2 class="text-xl font-semibold mb-1"></h2><div class="font-light text-gray-800 dark:text-gray-200">
-</div></a>
-<div class="info dark:info-dark">
-<span class="font-light mb-2 text-gray-500 text-sm">
-</span>
-</div><a class="block my-6" href=/blog/algorithms/stack/>
-<h2 class="text-xl font-semibold mb-1"></h2><div class="font-light text-gray-800 dark:text-gray-200">
-</div></a>
-<div class="info dark:info-dark">
-<span class="font-light mb-2 text-gray-500 text-sm">
-</span>
-</div><a class="block my-6" href=/blog/algorithms/%E5%8F%8C%E6%8C%87%E9%92%88%E9%81%8D%E5%8E%86/>
-<h2 class="text-xl font-semibold mb-1"></h2><div class="font-light text-gray-800 dark:text-gray-200">
-</div></a>
-<div class="info dark:info-dark">
-<span class="font-light mb-2 text-gray-500 text-sm">
-</span>
-</div><a class="block my-6" href=/blog/blog-info/mywebsite/>
-<h2 class="text-xl font-semibold mb-1"></h2><div class="font-light text-gray-800 dark:text-gray-200">
-站点信息 aws部署数据库 v部署前端 hero部署后端
-github page 部署个人博客
-github开源项目
-codepen放样式特效动画的展示
-codeSanbox放node & react工程
-域名： https://spider-api.visionary.top 接口 https://spider.visionary.top 前端 https://blog.visionary.top 博客
-blog写notes 对应GitHub项目 & codeSanbox/codepen
-推特上一些好的信息收集起来
-</div></a>
-<div class="info dark:info-dark">
-<span class="font-light mb-2 text-gray-500 text-sm">
-</span>
-</div><a class="block my-6" href=/blog/framework/webpack%E4%B8%AD%E7%9A%84svg%E6%96%87%E4%BB%B6%E5%A4%84%E7%90%86/>
-<h2 class="text-xl font-semibold mb-1"></h2><div class="font-light text-gray-800 dark:text-gray-200">
-loader:[{ test: /\.svg$/, use: ['@svgr/webpack'], exclude: [/asPicture/,], }] yarn add @svgr/webpack --dev
-</div></a>
-<div class="info dark:info-dark">
-<span class="font-light mb-2 text-gray-500 text-sm">
-</span>
-</div><a class="block my-6" href=/blog/js/%E5%8F%98%E9%87%8F%E6%8F%90%E5%8D%87%E7%9A%84%E6%B7%B1%E5%BA%A6%E8%A7%A3%E6%9E%90/>
-<h2 class="text-xl font-semibold mb-1"></h2><div class="font-light text-gray-800 dark:text-gray-200">
-</div></a>
-<div class="info dark:info-dark">
-<span class="font-light mb-2 text-gray-500 text-sm">
-</span>
-</div><a class="block my-6" href=/blog/js/%E5%B0%8F%E8%AE%B0/>
-<h2 class="text-xl font-semibold mb-1"></h2><div class="font-light text-gray-800 dark:text-gray-200">
-6.系统可能不会保存你所做的修改 onbeforeunload // 监听页面关闭 window.addEventListener('beforeunload', (e) => { let changeSymbol = false if(changeSymbol) { return (e.returnValue = '有信息未保存，确认离开？！'); } // return null; // 不会弹框 // return true // 会弹框 })
-</div></a>
-<div class="info dark:info-dark">
-<span class="font-light mb-2 text-gray-500 text-sm">
-</span>
-</div><a class="block my-6" href=/blog/media/hls/>
-<h2 class="text-xl font-semibold mb-1"></h2><div class="font-light text-gray-800 dark:text-gray-200">
-</div></a>
-<div class="info dark:info-dark">
-<span class="font-light mb-2 text-gray-500 text-sm">
-</span>
-</div><a class="block my-6" href=/blog/media/stream/>
-<h2 class="text-xl font-semibold mb-1"></h2><div class="font-light text-gray-800 dark:text-gray-200">
-</div></a>
-<div class="info dark:info-dark">
-<span class="font-light mb-2 text-gray-500 text-sm">
-</span>
-</div><a class="block my-6" href=/blog/network/http2/>
-<h2 class="text-xl font-semibold mb-1"></h2><div class="font-light text-gray-800 dark:text-gray-200">
-title : HTTP/2相关内容 date: 2021-07-22 tags: [&ldquo;https&rdquo;, &ldquo;network&rdquo;]
-HTTP/2的优势 （1）多路复用 所以浏览器会限制同一个域的同时请求数，Chrome是限制6个，总连接数是17个
-</div></a>
-<div class="info dark:info-dark">
-<span class="font-light mb-2 text-gray-500 text-sm">
-</span>
-</div><a class="block my-6" href=/blog/others/babel-%E8%BD%AC%E5%8C%96/>
-<h2 class="text-xl font-semibold mb-1"></h2><div class="font-light text-gray-800 dark:text-gray-200">
-</div></a>
-<div class="info dark:info-dark">
-<span class="font-light mb-2 text-gray-500 text-sm">
-</span>
-</div><a class="block my-6" href=/blog/others/ssd-install-windows/>
-<h2 class="text-xl font-semibold mb-1"></h2><div class="font-light text-gray-800 dark:text-gray-200">
-</div></a>
-<div class="info dark:info-dark">
-<span class="font-light mb-2 text-gray-500 text-sm">
-</span>
-</div><a class="block my-6" href=/blog/others/%E7%BF%BB%E8%AF%91%E8%BD%AF%E4%BB%B6/>
-<h2 class="text-xl font-semibold mb-1"></h2><div class="font-light text-gray-800 dark:text-gray-200">
-awesomeString
+import {array, object, string} from "yup"; const SpecialCharactersReg = /^((?!'|"|`|‘|’|“|”|@|&lt;|>|\\|\/|\{|\}|&|[|]|[$]|[%])[\s\S])*$/; const uploadFormValidationSchema = object({ filePostscript: string().max(200, "最多200个字符").trim(), labelList: array().max(2, "最多选择 2 个标签"), files: array().max(5).min(1, "请至少上传一个文件"), fileName: string().max(20, "文件名称不得超出20个字符").matches(SpecialCharactersReg, "该项不得包含“&lt;、>、'、\"、”等特殊符号") dataTimePickers: date() .min(moment().add(5, 'minute').format('yyyy-MM-DD HH:mm'), '开始时间已过，无法预约') .max(moment().add(2, 'day').format('yyyy-MM-DD HH:mm'), '超过2天后了'), });</div></a><div class="info dark:info-dark"><span class="font-light mb-2 text-gray-500 text-sm">May 16, 2018</span>
+<span class="font-light text-gray-800 text-sm dark:text-gray-200"><span class=separator><a class=category href=/categories/js-lib/>js lib</a></span></span></div><a class="block my-6" href=/blog/project/%E5%89%8D%E7%AB%AF%E5%B7%A5%E7%A8%8B%E5%8C%96/><h2 class="text-xl font-semibold mb-1">前端工程化</h2><div class="font-light text-gray-800 dark:text-gray-200"><p>即 模块化、组件化、规范化、自动化</p></div></a><div class="info dark:info-dark"><span class="font-light mb-2 text-gray-500 text-sm">May 16, 2018</span>
+<span class="font-light text-gray-800 text-sm dark:text-gray-200"><span class=separator><a class=category href=/categories/js-lib/>js lib</a></span></span></div><a class="block my-6" href=/blog/algorithms/-queue/><h2 class="text-xl font-semibold mb-1"></h2><div class="font-light text-gray-800 dark:text-gray-200"></div></a><div class="info dark:info-dark"><span class="font-light mb-2 text-gray-500 text-sm"></span></div><a class="block my-6" href=/blog/algorithms/red-blacktree/><h2 class="text-xl font-semibold mb-1"></h2><div class="font-light text-gray-800 dark:text-gray-200"></div></a><div class="info dark:info-dark"><span class="font-light mb-2 text-gray-500 text-sm"></span></div><a class="block my-6" href=/blog/algorithms/sort/bubblesort/><h2 class="text-xl font-semibold mb-1"></h2><div class="font-light text-gray-800 dark:text-gray-200"></div></a><div class="info dark:info-dark"><span class="font-light mb-2 text-gray-500 text-sm"></span></div><a class="block my-6" href=/blog/algorithms/sort/heapsort/><h2 class="text-xl font-semibold mb-1"></h2><div class="font-light text-gray-800 dark:text-gray-200"></div></a><div class="info dark:info-dark"><span class="font-light mb-2 text-gray-500 text-sm"></span></div><a class="block my-6" href=/blog/algorithms/sort/mergesort/><h2 class="text-xl font-semibold mb-1"></h2><div class="font-light text-gray-800 dark:text-gray-200"></div></a><div class="info dark:info-dark"><span class="font-light mb-2 text-gray-500 text-sm"></span></div><a class="block my-6" href=/blog/algorithms/sort/quicksort/><h2 class="text-xl font-semibold mb-1"></h2><div class="font-light text-gray-800 dark:text-gray-200"></div></a><div class="info dark:info-dark"><span class="font-light mb-2 text-gray-500 text-sm"></span></div><a class="block my-6" href=/blog/algorithms/sort/selectionsort/><h2 class="text-xl font-semibold mb-1"></h2><div class="font-light text-gray-800 dark:text-gray-200"></div></a><div class="info dark:info-dark"><span class="font-light mb-2 text-gray-500 text-sm"></span></div><a class="block my-6" href=/blog/algorithms/stack/><h2 class="text-xl font-semibold mb-1"></h2><div class="font-light text-gray-800 dark:text-gray-200"></div></a><div class="info dark:info-dark"><span class="font-light mb-2 text-gray-500 text-sm"></span></div><a class="block my-6" href=/blog/algorithms/%E5%8F%8C%E6%8C%87%E9%92%88%E9%81%8D%E5%8E%86/><h2 class="text-xl font-semibold mb-1"></h2><div class="font-light text-gray-800 dark:text-gray-200"></div></a><div class="info dark:info-dark"><span class="font-light mb-2 text-gray-500 text-sm"></span></div><a class="block my-6" href=/blog/js/%E5%8F%98%E9%87%8F%E6%8F%90%E5%8D%87%E7%9A%84%E6%B7%B1%E5%BA%A6%E8%A7%A3%E6%9E%90/><h2 class="text-xl font-semibold mb-1"></h2><div class="font-light text-gray-800 dark:text-gray-200"></div></a><div class="info dark:info-dark"><span class="font-light mb-2 text-gray-500 text-sm"></span></div><a class="block my-6" href=/blog/js/%E5%B0%8F%E8%AE%B0/><h2 class="text-xl font-semibold mb-1"></h2><div class="font-light text-gray-800 dark:text-gray-200">6.系统可能不会保存你所做的修改 onbeforeunload // 监听页面关闭 window.addEventListener('beforeunload', (e) => { let changeSymbol = false if(changeSymbol) { return (e.returnValue = '有信息未保存，确认离开？！'); } // return null; // 不会弹框 // return true // 会弹框 })</div></a><div class="info dark:info-dark"><span class="font-light mb-2 text-gray-500 text-sm"></span></div><a class="block my-6" href=/blog/media/hls/><h2 class="text-xl font-semibold mb-1"></h2><div class="font-light text-gray-800 dark:text-gray-200"></div></a><div class="info dark:info-dark"><span class="font-light mb-2 text-gray-500 text-sm"></span></div><a class="block my-6" href=/blog/media/stream/><h2 class="text-xl font-semibold mb-1"></h2><div class="font-light text-gray-800 dark:text-gray-200"></div></a><div class="info dark:info-dark"><span class="font-light mb-2 text-gray-500 text-sm"></span></div><a class="block my-6" href=/blog/others/babel-%E8%BD%AC%E5%8C%96/><h2 class="text-xl font-semibold mb-1"></h2><div class="font-light text-gray-800 dark:text-gray-200"></div></a><div class="info dark:info-dark"><span class="font-light mb-2 text-gray-500 text-sm"></span></div><a class="block my-6" href=/blog/others/ssd-install-windows/><h2 class="text-xl font-semibold mb-1"></h2><div class="font-light text-gray-800 dark:text-gray-200"></div></a><div class="info dark:info-dark"><span class="font-light mb-2 text-gray-500 text-sm"></span></div><a class="block my-6" href=/blog/others/%E7%BF%BB%E8%AF%91%E8%BD%AF%E4%BB%B6/><h2 class="text-xl font-semibold mb-1"></h2><div class="font-light text-gray-800 dark:text-gray-200">awesomeString
 快捷键翻译
 替换
 中文=> 驼峰
@@ -1257,87 +238,16 @@ awesomeString
 划词显示翻译
 浮窗要极简
 屏蔽某些app
-收藏夹功能
-</div></a>
-<div class="info dark:info-dark">
-<span class="font-light mb-2 text-gray-500 text-sm">
-</span>
-</div><a class="block my-6" href=/blog/qa/%E5%89%8D%E7%AB%AF%E7%9B%91%E6%8E%A7/>
-<h2 class="text-xl font-semibold mb-1"></h2><div class="font-light text-gray-800 dark:text-gray-200">
-window.performance FP和FCP
+收藏夹功能</div></a><div class="info dark:info-dark"><span class="font-light mb-2 text-gray-500 text-sm"></span></div><a class="block my-6" href=/blog/qa/%E5%89%8D%E7%AB%AF%E7%9B%91%E6%8E%A7/><h2 class="text-xl font-semibold mb-1"></h2><div class="font-light text-gray-800 dark:text-gray-200">window.performance FP和FCP
 const paint = window.performance.getEntriesByType('paint'); const FP = paint[0].startTime, const FCP = paint[1].startTime, LCP
-function getLCP() { // 增加一个性能条目的观察者 new PerformanceObserver((entryList, observer) => { let entries = entryList.getEntries(); const lastEntry = entries[entries.length - 1]; observer.disconnect(); console.log('LCP', lastEntry.renderTime || lastEntry.loadTime); }).observe({entryTypes: ['largest-contentful-paint']}); } export function listenerError() { window.addEventListener('error', (event) => { if (event.target.localName) { console.log('这是资源错误', event); } else { console.
-</div></a>
-<div class="info dark:info-dark">
-<span class="font-light mb-2 text-gray-500 text-sm">
-</span>
-</div><a class="block my-6" href=/blog/qa/%E6%B5%8F%E8%A7%88%E5%99%A8%E8%BF%9B%E7%A8%8B/%E7%BA%BF%E7%A8%8B%E6%A8%A1%E5%9E%8B/>
-<h2 class="text-xl font-semibold mb-1"></h2><div class="font-light text-gray-800 dark:text-gray-200">
-浏览器是多进程的，有一个主控进程，以及每一个tab页面都会新开一个进程（某些情况下多个tab会合并进程）。 每一个tab页面可以看作是浏览器内核进程，然后这个进程是多线程的，它有几大类子线程： GUI线程
+function getLCP() { // 增加一个性能条目的观察者 new PerformanceObserver((entryList, observer) => { let entries = entryList.getEntries(); const lastEntry = entries[entries.length - 1]; observer.disconnect(); console.log('LCP', lastEntry.renderTime || lastEntry.loadTime); }).observe({entryTypes: ['largest-contentful-paint']}); } export function listenerError() { window.addEventListener('error', (event) => { if (event.target.localName) { console.log('这是资源错误', event); } else { console.</div></a><div class="info dark:info-dark"><span class="font-light mb-2 text-gray-500 text-sm"></span></div><a class="block my-6" href=/blog/qa/%E6%B5%8F%E8%A7%88%E5%99%A8%E8%BF%9B%E7%A8%8B/%E7%BA%BF%E7%A8%8B%E6%A8%A1%E5%9E%8B/><h2 class="text-xl font-semibold mb-1"></h2><div class="font-light text-gray-800 dark:text-gray-200">浏览器是多进程的，有一个主控进程，以及每一个tab页面都会新开一个进程（某些情况下多个tab会合并进程）。 每一个tab页面可以看作是浏览器内核进程，然后这个进程是多线程的，它有几大类子线程： GUI线程
 JS引擎线程
 事件触发线程
 定时器线程
-网络请求线程
-</div></a>
-<div class="info dark:info-dark">
-<span class="font-light mb-2 text-gray-500 text-sm">
-</span>
-</div><a class="block my-6" href=/blog/resume/>
-<h2 class="text-xl font-semibold mb-1"></h2><div class="font-light text-gray-800 dark:text-gray-200">
-</div></a>
-<div class="info dark:info-dark">
-<span class="font-light mb-2 text-gray-500 text-sm">
-</span>
-</div><a class="block my-6" href=/blog/utils/hugo%E6%90%9C%E7%B4%A2%E5%BC%95%E6%93%8E%E4%BC%98%E5%8C%96/>
-<h2 class="text-xl font-semibold mb-1"></h2><div class="font-light text-gray-800 dark:text-gray-200">
-</div></a>
-<div class="info dark:info-dark">
-<span class="font-light mb-2 text-gray-500 text-sm">
-</span>
-</div><a class="block my-6" href=/blog/utils/%E5%90%84%E7%A7%8D%E7%BD%91%E7%AB%99%E5%90%88%E9%9B%86/>
-<h2 class="text-xl font-semibold mb-1"></h2><div class="font-light text-gray-800 dark:text-gray-200">
-部署 vercel https://vercel.com/
+网络请求线程</div></a><div class="info dark:info-dark"><span class="font-light mb-2 text-gray-500 text-sm"></span></div><a class="block my-6" href=/blog/resume/><h2 class="text-xl font-semibold mb-1"></h2><div class="font-light text-gray-800 dark:text-gray-200"></div></a><div class="info dark:info-dark"><span class="font-light mb-2 text-gray-500 text-sm"></span></div><a class="block my-6" href=/blog/utils/hugo%E6%90%9C%E7%B4%A2%E5%BC%95%E6%93%8E%E4%BC%98%E5%8C%96/><h2 class="text-xl font-semibold mb-1"></h2><div class="font-light text-gray-800 dark:text-gray-200"></div></a><div class="info dark:info-dark"><span class="font-light mb-2 text-gray-500 text-sm"></span></div><a class="block my-6" href=/blog/utils/%E5%90%84%E7%A7%8D%E7%BD%91%E7%AB%99%E5%90%88%E9%9B%86/><h2 class="text-xl font-semibold mb-1"></h2><div class="font-light text-gray-800 dark:text-gray-200">部署 vercel https://vercel.com/
 codepen
-codesanbox
-</div></a>
-<div class="info dark:info-dark">
-<span class="font-light mb-2 text-gray-500 text-sm">
-</span>
-</div><a class="block my-6" href=/blog/web/upload/>
-<h2 class="text-xl font-semibold mb-1"></h2><div class="font-light text-gray-800 dark:text-gray-200">
-youtube的上传 bilibili的上传 ##常见的方法 resumable file uploads https://github.com/23/resumable.js
+codesanbox</div></a><div class="info dark:info-dark"><span class="font-light mb-2 text-gray-500 text-sm"></span></div><a class="block my-6" href=/blog/web/upload/><h2 class="text-xl font-semibold mb-1"></h2><div class="font-light text-gray-800 dark:text-gray-200">youtube的上传 bilibili的上传 ##常见的方法 resumable file uploads https://github.com/23/resumable.js
 https://developers.google.com/youtube/v3/guides/using_resumable_upload_protocol
-预检请求 https://developer.mozilla.org/en-US/docs/Glossary/Preflight_request
-</div></a>
-<div class="info dark:info-dark">
-<span class="font-light mb-2 text-gray-500 text-sm">
-</span>
-</div><a class="block my-6" href=/blog/framework/babel-register/>
-<h2 class="text-xl font-semibold mb-1">babel/register 编译</h2><div class="font-light text-gray-800 dark:text-gray-200">
-<p>xss & csrf 都是窃token cookie之类的敏感信息</p><p><a href=https://en.wikipedia.org/wiki/Cross-site_request_forgery>Cross-site request forgery - Wikipedia</a></p></div></a>
-<div class="info dark:info-dark">
-<span class="font-light mb-2 text-gray-500 text-sm">
-</span>
-<span class="font-light text-gray-800 text-sm dark:text-gray-200"> <span class=separator><a class=category href=/categories/%E6%9E%B6%E6%9E%84/>架构</a><a class=category href=/categories/%E5%BE%AE%E5%89%8D%E7%AB%AF/>微前端</a></span>
-</span>
-<span class="font-light text-gray-500 text-sm dark:text-gray-200">
-<span class=separator><a class=tag href=/tags/%E5%89%8D%E7%AB%AF%E5%AE%89%E5%85%A8/>前端安全</a></span>
-</span>
-</div><a class="block my-6" href=/blog/npm/peerdependencies/>
-<h2 class="text-xl font-semibold mb-1">peerDependenices</h2><div class="font-light text-gray-800 dark:text-gray-200">
-peerDependencies How do I build a reusable component to fit with different use cases? How do I build a component with a simple API, making it easy to use? How do I build an extensible component in terms of UI and functionality?
-</div></a>
-<div class="info dark:info-dark">
-<span class="font-light mb-2 text-gray-500 text-sm">
-</span>
-</div><a class="block my-6" href=/blog/react%E4%BD%BF%E7%94%A8/%E5%85%B3%E4%BA%8Eref/>
-<h2 class="text-xl font-semibold mb-1">为什么要使用React.forwardRef</h2><div class="font-light text-gray-800 dark:text-gray-200">
-</div></a>
-<div class="info dark:info-dark">
-<span class="font-light mb-2 text-gray-500 text-sm">
-</span>
-</div></div></article></main><footer class="w-full text-center p-4 text-xs text-gray-400">
-copyright © 2021 - VISIONARY · All rights reserved
-</footer><script async src="https://www.googletagmanager.com/gtag/js?id=G-Z0FJ599SKS"></script>
-<script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments)}gtag("js",new Date),gtag("config","G-Z0FJ599SKS")</script>
-</body></html>
+预检请求 https://developer.mozilla.org/en-US/docs/Glossary/Preflight_request</div></a><div class="info dark:info-dark"><span class="font-light mb-2 text-gray-500 text-sm"></span></div><a class="block my-6" href=/blog/framework/babel-register/><h2 class="text-xl font-semibold mb-1">babel/register 编译</h2><div class="font-light text-gray-800 dark:text-gray-200"><p><a href=https://en.wikipedia.org/wiki/Cross-site_request_forgery>Cross-site request forgery - Wikipedia</a></p></div></a><div class="info dark:info-dark"><span class="font-light mb-2 text-gray-500 text-sm"></span><span class="font-light text-gray-800 text-sm dark:text-gray-200"><span class=separator><a class=category href=/categories/%E6%9E%B6%E6%9E%84/>架构</a><a class=category href=/categories/%E5%BE%AE%E5%89%8D%E7%AB%AF/>微前端</a></span></span>
+<span class="font-light text-gray-500 text-sm dark:text-gray-200"><span class=separator><a class=tag href=/tags/%E5%89%8D%E7%AB%AF%E5%AE%89%E5%85%A8/>前端安全</a></span></span></div><a class="block my-6" href=/blog/npm/peerdependencies/><h2 class="text-xl font-semibold mb-1">peerDependenices</h2><div class="font-light text-gray-800 dark:text-gray-200">peerDependencies How do I build a reusable component to fit with different use cases? How do I build a component with a simple API, making it easy to use? How do I build an extensible component in terms of UI and functionality?</div></a><div class="info dark:info-dark"><span class="font-light mb-2 text-gray-500 text-sm"></span></div><a class="block my-6" href=/blog/react%E4%BD%BF%E7%94%A8/%E5%85%B3%E4%BA%8Eref/><h2 class="text-xl font-semibold mb-1">为什么要使用React.forwardRef</h2><div class="font-light text-gray-800 dark:text-gray-200"></div></a><div class="info dark:info-dark"><span class="font-light mb-2 text-gray-500 text-sm"></span></div></div></article></main><footer class="w-full text-center p-4 text-xs text-gray-400">copyright © 2021 - VISIONARY · All rights reserved</footer><script async src="https://www.googletagmanager.com/gtag/js?id=G-Z0FJ599SKS"></script>
+<script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments)}gtag("js",new Date),gtag("config","G-Z0FJ599SKS")</script></body></html>
