@@ -1,9 +1,12 @@
 ---
 author: "Hugo Authors"
+
 title: "Markdown Syntax Guide"
+
 categories : [                              
 "md",
 ]
+
 date: 2021-04-24
 ---
 

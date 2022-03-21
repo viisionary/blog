@@ -22,19 +22,19 @@ tags : [
 
 [Cross-site request forgery - Wikipedia](https://en.wikipedia.org/wiki/Cross-site_request_forgery)
 
-# Grunt的使用及配置
+## Grunt的使用及配置
 
 
 [Getting started - Grunt: The JavaScript Task Runner](https://gruntjs.com/getting-started)
 
 
-# 安装
+## 安装
 
 ```bash
 npm install -g grunt-cli
 ```
 
-## 在项目目录下
+### 在项目目录下
 
 ```bash
 npm install grunt --save-dev
@@ -42,7 +42,7 @@ npm install grunt --save-dev
 npm install grunt-contrib-uglify --save-dev 
 ```
 
-## 编辑项目文件
+### 编辑项目文件
 
 新建index.js 文件 随意编写内容
 
@@ -75,7 +75,7 @@ module.exports = function(grunt) {
 
 运行grunt将会生成压缩后的文件 目录在dest中定义
 
-# plugins
+## plugins
 
 ### uglify ｜ 压缩某个目录下的所有文件
 
@@ -172,16 +172,15 @@ babel: {
 
 // TODO
 
-## grunt-ts ｜编译ts文件
+### grunt-ts ｜编译ts文件
 
-## grunt-contrib-copy ｜复制文件
+### grunt-contrib-copy ｜复制文件
 
-## grunt-mocha-test ｜运行测试文件
+### grunt-mocha-test ｜运行测试文件
 
-## grunt.registerTask() ｜自定义Task
+### grunt.registerTask() ｜自定义Task
 
-# 一个完整配置文件的示例
-
+## 一个完整配置文件的示例
 【ts & mocha & 压缩】
 
 ```jsx

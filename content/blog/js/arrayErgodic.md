@@ -5,8 +5,20 @@ tags: ["js基础"]
 ---
 <!--more-->
 
-处理空
+处理空值的方式
 
-```javascript
+## 普通for循环
+
+```js
+for(j = 0; j < arr.length; j++) {
+}
+```
+## foreach循环
+```js
 
 ```
+
+## for in
+
+## map 
+## for of

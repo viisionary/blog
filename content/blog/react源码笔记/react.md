@@ -4,7 +4,12 @@ date: 2021-07-16
 tag : ["react","源码"]
 ---
 
-fixtures/packaging/babel-standalone/dev.html
+调用 ReactDOM.render发生了什么
+
+
+<!--more-->
+
+#### fixtures/packaging/babel-standalone/dev.html
 
 ```html
 <html>
@@ -22,7 +27,8 @@ fixtures/packaging/babel-standalone/dev.html
   </body>
 </html>
 ```
-调用 ReactDOM.render发生了什么
+
+## 调用 ReactDOM.render发生了什么
 
 render 实际就是计算差异 & commit
 render 调用栈内有一系列操作
@@ -36,6 +42,7 @@ packages/react-dom/src/client/ReactDOMLegacy.js
 fiberRoot是？整个应用的根结点
 定义了root之后
 unbatchedUpdates
+
 ```javascript
   unbatchedUpdates(() => {
       updateContainer(children, fiberRoot, parentComponent, callback);
@@ -60,7 +67,7 @@ function legacyRenderSubtreeIntoContainer(
 tips: $0 即 可选中标签
 $0.
 
-GUI渲染线程
+## GUI渲染线程
 
 JS线程
 
@@ -74,4 +81,4 @@ JS脚本执行 -----  样式布局 ----- 样式绘制
 
 在React中最多会同时存在两棵Fiber树。当前屏幕上显示内容对应的Fiber树称为current Fiber树，正在内存中构建的Fiber树称为workInProgress Fiber树。
 
-JSX在编译时会被Babel编译为React.createElement方法。
+> JSX在编译时会被Babel编译为React.createElement方法。

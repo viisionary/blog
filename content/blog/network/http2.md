@@ -1,8 +1,15 @@
 ---
 title : HTTP/2相关内容
+
 date: 2021-07-22
-tags: ["https", "network"]
+
+tags: ["network"]
+
+categories: ["network"]
+
 ---
+
+<!--more-->
 
 ## HTTP/2的优势
    （1）多路复用

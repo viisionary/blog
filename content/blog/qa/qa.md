@@ -534,19 +534,23 @@ dev、build 时抛出 warn 、error
 
 commit 前检查
 
-### 105、ESLint 和 Prettier 的区别是什么？两者在一起工作时会产生问题吗？
+### ESLint 和 Prettier 的区别是什么？两者在一起工作时会产生问题吗？
 
-eslint（包括其他一些lint 工具）的主要功能包含代码格式的校验，代码质量的校验。 Prettier 只是代码格式的校验（并格式化代码），不会对代码质量进行校验。
+eslint（包括其他一些lint 工具）的主要功能包含代码格式的校验，代码质量的校验。
 
-代码格式问题通常指的是：单行代码长度、tab长度、空格、逗号表达式等问题。 代码质量问题指的是：未使用变量、三等号、全局变量声明等问题。eg: no-unused-vars、no-implicit-globals 以及
-prefer-promise-reject-errors
+Prettier 只是代码格式的校验（并格式化代码），不会对代码质量进行校验。
 
-### 106、如何有效的识别 ESLint 和 Prettier 可能产生冲突的格式规则？如何解决此类规则冲突问题？
+代码格式问题通常指的是：单行代码长度、tab长度、空格、逗号表达式等问题。
+
+代码质量问题指的是：未使用变量、三等号、全局变量声明等问题。
+eg: no-unused-vars、no-implicit-globals 以及 prefer-promise-reject-errors
+
+### 如何有效的识别 ESLint 和 Prettier 可能产生冲突的格式规则？如何解决此类规则冲突问题？
 
 eslint-config-prettier + eslint-plugin-prettier。 eslint-config-prettier 的作用是关闭eslint中与prettier相互冲突的规则。
 eslint-plugin-prettier 的作用是赋予eslint用prettier格式化代码的能力。
 
-### 107、在通常的脚手架项目中进行热更新（hot module replacement）时如何做到 ESLint 实时打印校验错误信息？
+### 在通常的脚手架项目中进行热更新（hot module replacement）时如何做到 ESLint 实时打印校验错误信息？
 
 在 webpack dev config 中添加 next.js 示例
 
@@ -561,7 +565,7 @@ eslint-plugin-prettier 的作用是赋予eslint用prettier格式化代码的能�
 }
 ```
 
-### 108、谈谈你对 SourceMap 的了解？
+### 谈谈你对 SourceMap 的了解？
 
 SourceMap是一个从转换的源映射到原始源的文件，使浏览器能够重建原始源，并在调试器中显示重建的原始源。
 
@@ -587,7 +591,9 @@ Node 流。 Grunt 一项一项地执行任务。Gulp 同时执行多个任务。
 
 ## 测试
 
-113、你所知道的测试有哪些测试类型？ 114、你所知道的测试框架有哪些？ 115、什么是 e2e 测试？ End to End 它模仿用户，从某个入口开始，逐步执行操作，直到完成某项工作
+### 113、你所知道的测试有哪些测试类型？ 
+### 114、你所知道的测试框架有哪些？
+### 115、什么是 e2e 测试？ End to End 它模仿用户，从某个入口开始，逐步执行操作，直到完成某项工作
 
 ### 有哪些 e2e 的测试框架？
 

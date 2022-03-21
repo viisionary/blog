@@ -1,5 +1,6 @@
 ---
 title : nginx 配置文件 & context & 属性
+
 date: 2022-03-15
 tags: ["nginx"]
 categories : ["nginx"]
@@ -7,6 +8,7 @@ categories : ["nginx"]
 
 在 docker 中启动 Nginx的步骤 和 Nginx 中配置服务、负载均衡、缓冲区、Cache的属性
 
+[NGINX 配置文件自动生成网站](https://www.digitalocean.com/community/tools/nginx?domains.0.php.php=false&domains.0.routing.index=index.html&domains.0.routing.fallbackHtml=true&global.app.lang=zhCN)
 <!--more-->
 
 ## 在 docker 中启动 Nginx
