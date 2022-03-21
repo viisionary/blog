@@ -2,8 +2,8 @@
 &lt;li>Hook 是 React 16.8 的新增特性。它可以让你在不编写 class 的情况下使用 state 以及其他的 React 特性。&lt;/li>
 &lt;li>Hook 将组件中相互关联的部分拆分成更小的函数（比如设置订阅或请求数据）,而并非强制按照生命周期划分&lt;/li>
 &lt;/ul></description></item><item><title>PureComponent 纯组件</title><link>https://visionary.top/blog/react%E4%BD%BF%E7%94%A8/purecomponent/</link><pubDate>Thu, 22 Jul 2021 00:00:00 +0000</pubDate><guid>https://visionary.top/blog/react%E4%BD%BF%E7%94%A8/purecomponent/</guid><description>&lt;p>为什么要使用shouldComponentUpdate？什么时候使用React.PureComponent
-re render的情况&lt;/p></description></item><item><title>pureFunction</title><link>https://visionary.top/blog/react%E4%BD%BF%E7%94%A8/purefunction/</link><pubDate>Thu, 22 Jul 2021 00:00:00 +0000</pubDate><guid>https://visionary.top/blog/react%E4%BD%BF%E7%94%A8/purefunction/</guid><description>&lt;p>纯函数定义：&lt;/p>
+re render的情况&lt;/p></description></item><item><title>pureFunction</title><link>https://visionary.top/blog/react%E4%BD%BF%E7%94%A8/purefunction/</link><pubDate>Thu, 22 Jul 2021 00:00:00 +0000</pubDate><guid>https://visionary.top/blog/react%E4%BD%BF%E7%94%A8/purefunction/</guid><description>&lt;p>纯函数定义： 对于相同的参数，函数返回值是相同的&lt;/p>
 &lt;ul>
-&lt;li>对于相同的参数，函数返回值是相同的（与局部静态变量、非局部变量、可变引用参数或输入流没有变化），并且&lt;/li>
-&lt;li>函数应用程序没有副作用（局部静态变量、非局部变量、可变引用参数或输入/输出流没有突变）。&lt;/li>
+&lt;li>（与局部静态变量、非局部变量、可变引用参数或输入流没有变化）&lt;/li>
+&lt;li>并且函数应用程序没有副作用（局部静态变量、非局部变量、可变引用参数或输入/输出流没有突变）。&lt;/li>
 &lt;/ul></description></item><item><title>关于React 中的 受控组件 vs 不受控组件</title><link>https://visionary.top/blog/react%E4%BD%BF%E7%94%A8/control_component/</link><pubDate>Thu, 22 Jul 2021 00:00:00 +0000</pubDate><guid>https://visionary.top/blog/react%E4%BD%BF%E7%94%A8/control_component/</guid><description/></item></channel></rss>
