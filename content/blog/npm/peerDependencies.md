@@ -6,6 +6,12 @@ date: 2021-07-22
 tags: ["npm"]
 
 ---
+
+整理依赖树
+
+<!--more-->
+
+
 [](https://nodejs.org/es/blog/npm/peer-dependencies/)
 
 ## peerDependencies

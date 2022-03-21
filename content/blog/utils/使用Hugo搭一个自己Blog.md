@@ -15,6 +15,8 @@ Hugo 是用go编写的，支持go HTML，模板主题多且开源方便自定义
 
 对md的渲染支持很友好，可以自定义插入的内容
 
+<!--more-->
+
 [Quick Start](https://gohugo.io/getting-started/quick-start/)
 
 ## 安装

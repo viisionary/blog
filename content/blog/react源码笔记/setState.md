@@ -4,6 +4,11 @@ date: 2021-04-02
 categories : ["react","源码"]
 ---
 
+setState 的源码分析
+
+<!--more-->
+
+
 ```typescript
 Component.prototype.setState = function (partialState, callback) {
     this.updater.enqueueSetState(this, partialState, callback, 'setState');

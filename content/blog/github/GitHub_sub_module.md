@@ -11,6 +11,10 @@ tags: ["Git",]
 
 ---
 
+子模块允许你将一个Git 仓库作为另一个Git 仓库的子目录。
+
+<!--more-->
+
 ## 作用
 
 子模块允许你将一个Git 仓库作为另一个Git 仓库的子目录。
@@ -25,9 +29,8 @@ tags: ["Git",]
 
 ## hugo 中的应用
 
-```
+```toml
 [submodule "themes/visiionary"]
 path= themes/visiionary
 url= https://github.com/visiionary/showfolio-hugo-theme.git
-
 ```

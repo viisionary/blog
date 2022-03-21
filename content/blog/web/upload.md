@@ -1,7 +1,15 @@
+---
+title: upload
+date: 2021-04-02
+categories : ["js"]
+---
+
+<!--more-->
+
 ## youtube的上传
-![img.png](img.png)
+![img.png](/blog/web/img.png)
 ## bilibili的上传
-##常见的方法
+## 常见的方法
 resumable file uploads
 https://github.com/23/resumable.js
 

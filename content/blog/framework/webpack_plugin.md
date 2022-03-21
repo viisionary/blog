@@ -3,9 +3,9 @@ title : webpack_plugin
 
 date: 2022-03-18
 
-tags: ["webpack_plugin"]
+tags: ["webpack"]
 
-categories : ["webpack_plugin"]
+categories : ["webpack"]
 
 ---
 
@@ -29,3 +29,6 @@ module.exports = {
 Answer: Topological Sorting
 
 [](https://dev.to/jasmin/how-dependancy-graph-in-webpack-resolve-module-dependency-5ej4)
+
+## webpack 制作 lib 
+https://webpack.js.org/guides/author-libraries/

@@ -5,6 +5,8 @@ categories : ["react","源码"]
 ---
 React16架构
 
+<!--more-->
+
 * scheduler 调度 【v15没有】
   > 调度任务的优先级，高优任务优先进入Reconciler
   > 到底是怎么调度的？
@@ -14,7 +16,6 @@ React16架构
 * renderer 渲染
   > 负责将变化的组件渲染到页面上
 
-<!--more-->  
 ## 双缓存 - Fiber树 【由fiber Node组成】
 >                1. current
 >                2. workInProgress
