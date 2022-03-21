@@ -1,42 +1,36 @@
 ---
 title : TypeScript 基础类型
+
 date: 2021-07-16
-description: "Sample article showcasing basic Markdown syntax and formatting for HTML elements."
-categories : [                              
-"架构","微前端",
-]
-toc: true
-tags: [
-"前端安全",
-]
+
+categories : ["TypeScript"]
+
+tags: ["TypeScript"]
+
 ---
 
-Basic Type、Interfaces
+[ts hand book](https://www.typescriptlang.org/docs/handbook/intro.html)
 
  <!--more-->
-[Cross-site request forgery - Wikipedia](https://en.wikipedia.org/wiki/Cross-site_request_forgery)
 
-# TypeScript Basic
+{{< codesandbox g6o2ei >}}
 
-### 一、Basic Types【4 点】
+## TypeScript Basic
+
 
 > boolean, bigint, null, number, string, symbol, object, and undefined
 
+### 1. Type
 ```tsx
-/*
-1、       
-Basic Types   
-声明一个变量时可规定多种类型   
-*/
+/*声明一个变量时可规定多种类型   */
 type WindowStates = "open" | "closed" | "minimized";
 type LockStates = "locked" | "unlocked";
 type OddNumbersUnderTen = 1 | 3 | 5 | 7 | 9;
+```
+### 2. Interfaces
 
-/*
-2、      
-Interfaces
-规定一个 object【包括其 props】 的类型
-*/
+```tsx
+/*  规定一个 object【包括其 props】 的类型 */
 interface User {
   name: string;
   id: number;
@@ -46,11 +40,10 @@ const user: User = {
   name: "Hayes",
   id: 0,
 };
-	
-/*
-3、
-Classes        
-规定类的私有属性、static 属性
+```
+###3. Classes
+```tsx
+/* 规定类的私有属性、static 属性
 */
 class UserAccount {
   name: string;
@@ -66,7 +59,10 @@ class UserAccount {
 
 const user: User = new UserAccount("Murphy", 1);
 UserAccount.owner:string = 'ali';     // 初始化静态变量
+```
 
+### 4. implements
+```tsx
 /*
 4.
 定义抽象方法&实现
@@ -82,7 +78,7 @@ class ZipCodeValidator implements StringValidator {
 }
 ```
 
-### 二、enums【枚举】
+### 5. enums
 
 ```tsx
 // 定义
@@ -109,7 +105,7 @@ enum FileAccess {
 }
 ```
 
-### 三、Union enums and enum member types【枚举用在类型声明的属性中】
+Union enums and enum member types【枚举用在类型声明的属性中】
 
 ```tsx
 enum ShapeKind {
@@ -123,7 +119,8 @@ interface Circle {
 }
 ```
 
-### 四、function【参数&返回值】
+### 6. function
+规定【参数&返回值】
 
 ```tsx
 function getAdminUser(): User {
@@ -143,7 +140,9 @@ function getLength(obj: string | string[]) {
 let fst: <T, U>(a: T, b: U) => T = (a, b) => a;
 ```
 
-### 五、Generics【泛型】
+## 高级
+### 1. Generics
+【泛型】
 
 ```tsx
 
@@ -170,17 +169,17 @@ function loggingIdentity<T>(arg: T[]): T[] {
 }
 ```
 
-### Utility Types【规定一下读取】& type transformations【动态的改变类型】
+### Utility Types
+type transformations【动态的改变类型】
 
 ```tsx
-// 普通的
+// 部分
 Partial<Type>
 
-// => 只读
-
+// 只读
 Readonly<Type>
 
-// key & value 组合
+//---------------- 声明对象 指定key & value的类型
 Record<Keys,Type>;
 
 interface PageInfo {
@@ -194,7 +193,7 @@ const nav: Record<Page, PageInfo> = {
   contact: { title : "contact" },
   home: { title : "home" },
 };
-
+//--------------------
 // 选取部分
 Pick<Type, Keys>
 
@@ -206,37 +205,35 @@ Exclude<Type, ExcludedUnion>
 NonNullable<Type>
 ```
 
+从一个已声明的函数中取到函数参数的类型/返回值的类型
+
 ```tsx
-//规定函数参数的类型
-// Parameters<Type>;
-
+// Parameters<Type>; 参数
 declare function f1(arg: { a: number; b: string }): void;
-
 type T3 = Parameters<typeof f1>;
 //    ^ = type T3 = [arg: {
 //        a: number;
 //        b: string;
 //    }]
 
-// 返回值类型
-// ReturnType<Type>
-
+// ReturnType<Type> 返回值
 type T4 = ReturnType<typeof f1>;
 //    ^ = type T4 = {
 //        a: number;
 //        b: string;
 //    }
 ```
-
+从 class中取
 ```tsx
+class C {
+    x = 0;
+    y = 0;
+}
 // class => type
 InstanceType<Type>
 // 必填
 Required<Type>
 ```
 
-```tsx
-const handleChange = (event: React.ChangeEvent<{ value: unknown }>) => {
-        setAge(event.target.value as number);
-    };
-```
+## Namespaces
+

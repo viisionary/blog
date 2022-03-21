@@ -1,21 +1,26 @@
 ---
-title :  js es6 不同引入方式/暴露方式的区别
+title :  JS module 不同引入方式/暴露方式的区别
 date: 2022-03-02 
 tags: ["js"]
 categories : ["js"]
 ---
 
-module.md
+AMD、UMD、CommonJS、ES6
 
 <!--more-->
-> AMD – one of the most ancient module systems, initially implemented by the library require.js.
 
-> CommonJS – the module system created for Node.js server.
+> AMD – one of the most ancient module systems, initially implemented by the library require.js.
 
 > UMD – one more module system, suggested as a universal one, compatible with AMD and CommonJS.
 
+> CommonJS – the module system created for Node.js server.
 
-###在 HTML 中的使用
+## 代码
+
+{{< codesandbox se01wu >}}
+
+
+## 在 HTML 中的使用
 Modules work only via HTTP(s), not locally
 ```html
 <!doctype html>
@@ -26,7 +31,8 @@ Modules work only via HTTP(s), not locally
 </script>
 ```
 
-###重新导出
+## ES6 語法
+### 重新导出
 ```js
 export {sayHi} from './say.js'; // 重新导出 sayHi
 
@@ -51,3 +57,36 @@ import {sub1_Var} from "./module1";
 // 全部打包
 import module1 from "./module1";
 ```
+### TS
+@filename: animal.ts
+```typescript
+export type Cat = { breed: string; yearOfBirth: number };
+ 
+export interface Dog {
+  breeds: string[];
+  yearOfBirth: number;
+}
+
+```
+@filename: app.ts
+```typescript
+ 
+import { Cat, Dog } from "./animal.js";
+type Animals = Cat | Dog
+```
+## CommonJS
+module.exports  & require('')
+
+```js
+console.log(module)
+// output
+/* 
+id: "/src/module1.js:"
+exports: Object
+globals: undefined
+hot: Object
+ */
+```
+
+## AMD
+[REPO](https://github.com/requirejs/requirejs)

@@ -13,4 +13,14 @@ tags: [
 React中常用的type
 
 
+
  <!--more-->
+
+{{< codesandbox qf7ti >}}
+
+事件
+```tsx
+const handleChange = (event: React.ChangeEvent<{ value: unknown }>) => {
+        setAge(event.target.value as number);
+    };
+```

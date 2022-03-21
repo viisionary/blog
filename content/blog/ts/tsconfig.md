@@ -16,7 +16,6 @@ build包的时候的配置、前端项目常用配置、字段备注
 
  <!--more-->
 
-[Cross-site request forgery - Wikipedia](https://en.wikipedia.org/wiki/Cross-site_request_forgery)
 
 ## 属性一览
 
