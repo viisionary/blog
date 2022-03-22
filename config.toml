@@ -69,7 +69,7 @@ codesandbox = ["fsk69", "lsmnx"]
 #------------- git hub repo
 [params.homepage.github]
 username = "viisionary"
-repos = ["spider-tool", "spider-ui-cli", "spider-cli", "spider-api","deploy2server"]
+repos = ["spider-tool", "spider-ui-cli", "spider-cli", "spider-api","deploy2server","spider-generate-api"]
 
 [params.homepage.npm]
 username = "visionary_m"
