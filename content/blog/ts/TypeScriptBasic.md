@@ -17,6 +17,7 @@ tags: ["TypeScript"]
 
 ## TypeScript Basic
 
+[ts](/blog/ts/ts.png)
 
 > boolean, bigint, null, number, string, symbol, object, and undefined
 
@@ -41,7 +42,7 @@ const user: User = {
   id: 0,
 };
 ```
-###3. Classes
+### 3. Classes
 ```tsx
 /* 规定类的私有属性、static 属性
 */
@@ -169,7 +170,7 @@ function loggingIdentity<T>(arg: T[]): T[] {
 }
 ```
 
-### Utility Types
+### 2. Utility Types
 type transformations【动态的改变类型】
 
 ```tsx
@@ -236,4 +237,6 @@ Required<Type>
 ```
 
 ## Namespaces
+
+## Declare
 

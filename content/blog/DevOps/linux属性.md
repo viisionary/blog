@@ -36,3 +36,9 @@ The top line reports on system memory, the bottom line reports on swap space. W
 [root@eb63132 ~]# cat /etc/redhat-release 
 Red Hat Enterprise Linux release 8.4 (Ootpa)
 ```
+```shell
+# 压缩
+tar zcvf www.tar.gz *
+# 包含隐藏文件
+tar zcvf www.tar.gz .[!.] *
+```
