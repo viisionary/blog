@@ -1,17 +1,16 @@
 ---
-title : free_online_db
+title : 免费数据库 - mongodb
 
 date: 2022-03-30
 
-tags: ["free_online_db"]
+tags: ["db"]
 
-categories : ["free_online_db"]
+categories : ["db"]
 
 ---
 
-free_online_db.md
-
 [mongodb](https://cloud.mongodb.com/)
+
 <!--more-->
 
 
@@ -19,4 +18,4 @@ free_online_db.md
 brew install mongosh
 ```
 
-visionary 0610mm
+[comment]: <> (visionary 0610mm)

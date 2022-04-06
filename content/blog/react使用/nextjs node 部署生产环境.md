@@ -1,15 +1,15 @@
 ---
-title : nextJs node 部署生产环境
+title : nextJs - node 部署生产环境
 
 date: 2022-03-30
 
-tags: ["nextjs node 部署生产环境"]
+tags: ["nextJs","SSR"]
 
-categories : ["nextjs node 部署生产环境"]
+categories : ["nextJs","SSR"]
 
 ---
 
-nextjs node 部署生产环境.md
+next.js node 部署生产环境
 
 <!--more-->
 ## NODE 部署
@@ -67,5 +67,4 @@ root@eb63132:/root/standalone/.next>tree -L 1 -a
 `-- static
 
 3 directories, 7 files
-root@eb63132:/root/standalone/.next>
 ```

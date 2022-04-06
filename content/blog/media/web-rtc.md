@@ -1,6 +1,6 @@
 ---
-title : WebRTC
-date: 2021-07-22
+title : WebRTC 
+date: 2021-07-22 
 tags: ["WebRTC","webMedia"]
 ---
 
@@ -8,9 +8,23 @@ WebRTC的总结
 
 <!--more-->
 
-#WebRTC
 
 ## 兼容性
+
+### 屏幕共享
+该功能目前支持chrome以及火狐浏览器,chrome 72版本以下需下载插件,chrome 72版及72 以上和Firefox不需要,包括了多路推流
+
+## 可用的 stun 服务
+```typescript
+export const iceServers = [
+{ url: 'stun:stun.l.google.com:19302' },
+{ url: 'stun:stun.voipbuster.com' },
+{ url: 'stun:stun.voipstunt.com' },
+{ url: 'stun:stun-eu.3cx.com:3478' },
+```
+
+## code流程
+多对多连麦
 
 用户创建会议-> 显示自己的画面【推流】
 
@@ -18,19 +32,97 @@ WebRTC的总结
 
 显示新用户画面
 
-```javascript
+```typescript
+import Peer from 'peerjs';
+import React, {useEffect, useRef} from 'react';
 
-navigator.mediaDevices && navigator.mediaDevices.getUserMedia()
+const peer = useRef<any>(null);
 
+const ws = useRef<any>(null);
+
+navigator.mediaDevices &&
+navigator.mediaDevices
+    .getUserMedia({
+        video: true,
+        audio: true,
+    }).then((stream: MediaStream) => {
+    // 取到摄像头的流
+
+    // TODO 渲染 VIDEO 暂时自己的画面
+
+    // ws 发送自己加入房间的消息
+    ws.current.emit('join-room', roomId, myUserId);
+
+    ws.current.on('user-list', (list: any) => {
+        // 收到已在房间的用户列表
+        setBeforeUserVideos(list);
+    });
+    ws.current.on('user-connected', (userId: string) => {
+        // ws有新用户接入, peer 去 call 新用户
+        const call = peer.current.call(userId, stream);
+        call && call.on('stream', (remoteStream: any) => { /* TODO 创建新播放器*/})
+        call && call.on('close', () => {/* TODO 移除该用户窗口*/})
+    })
+
+    ws.current.on('user-disconnected', (userId: string) => {
+        // 用户从房间退出
+    });
+    
+    const peerConfig: any = {
+        id: myUserId,
+        config: {
+            iceServers,
+        } 
+    };
+    peer.current = new Peer(myUserId, peerConfig);
+
+    peer.current.on('call', (call: any) => {
+        // 连接接入时
+        call.on('stream', function (remoteStream: any) {
+            // TODO new video 展示接入用户的画面
+        });
+        // 连接关闭时
+        call.on('close', () => {
+            // TODO rm  video
+        });
+    });
+
+})
 ```
+
 可以输入流
 
 call 用户时通过id确定用户；
 
 要使用服务器
 
-stun
-turn
-ice
+stun turn ice
 
 nat内网穿透
+
+## TODO 
+### 基础直播
+一方推流、多方拉流、控制音视频输入
+
+#### 自适应码率
+
+#### 手动选择码率
+
+#### 混音【多路】
+音视频混流、写入掌声、笑声、画面等等
+#### 混流
+多路混一路
+
+### 会议[连麦]
+多用户可加入会议
+创建人可控制参会人连麦/视频状态
+
+### 推视频
+选择视频文件直播
+
+### 共享屏幕
+
+### 截图录像
+
+### 互动白板
+### 文件共享
