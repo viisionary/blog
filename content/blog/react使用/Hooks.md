@@ -1,8 +1,12 @@
 ---
-title : Hooks使用
-date: 2021-07-22
+title : Hooks使用 
+
+date: 2021-07-22 
+
 tags: ["react"]
+
 categories: ["react"]
+
 ---
 
 * Hook 是 React 16.8 的新增特性。它可以让你在不编写 class 的情况下使用 state 以及其他的 React 特性。
@@ -16,30 +20,30 @@ categories: ["react"]
 
 ```javascript
 const getFriendInfo = (name, callback) => {
-	callback({ name, isOnline: true });
+    callback({name, isOnline: true});
 };
 
 function useFriendStatus(name) {
-	const [isOnline, setIsOnline] = useState(null);
+    const [isOnline, setIsOnline] = useState(null);
 
-	function handleStatusChange(status) {
-		setIsOnline(status.isOnline);
-	}
+    function handleStatusChange(status) {
+        setIsOnline(status.isOnline);
+    }
 
-	useEffect(() => {
-		getFriendInfo(name, handleStatusChange);
-		return () => {
-		};
-	});
-	return [isOnline];
+    useEffect(() => {
+        getFriendInfo(name, handleStatusChange);
+        return () => {
+        };
+    });
+    return [isOnline];
 }
 
 function FriendStatus() {
-	const [isOnline] = useFriendStatus("joey");
-	if (isOnline === null) {
-		return "Loading...";
-	}
-	return <h5>joey is {isOnline ? "Online" : "Offline"}</h5>;
+    const [isOnline] = useFriendStatus("joey");
+    if (isOnline === null) {
+        return "Loading...";
+    }
+    return <h5>joey is {isOnline ? "Online" : "Offline"}</h5>;
 }
 ```
 
@@ -53,82 +57,84 @@ useEffect在浏览器渲染完成后执行 useLayoutEffect在浏览器渲染前�
 
 ```javascript
 const UseRefExample = () => {
-	const [count, setCount] = useState(0);
-	const btnRef = useRef(null);
+    const [count, setCount] = useState(0);
+    const btnRef = useRef(null);
 
-	useEffect(() => {
-		const onClick = () => {
-			setCount(count + 1);
-		};
-		btnRef.current.addEventListener("click", onClick, false);
-		return () => btnRef.current.removeEventListener("click", onClick, false);
-	}, [count]);
+    useEffect(() => {
+        const onClick = () => {
+            setCount(count + 1);
+        };
+        btnRef.current.addEventListener("click", onClick, false);
+        return () => btnRef.current.removeEventListener("click", onClick, false);
+    }, [count]);
 
-	return (
-		<div>
-			<div>{count}</div>
-			<button ref={btnRef}>click me</button>
-		</div>
-	);
+    return (
+        <div>
+            <div>{count}</div>
+            <button ref={btnRef}>click me</button>
+        </div>
+    );
 };
 
 function UseLayoutEffectExample() {
-	const [n, setN] = useState(0);
-	const onClick = () => {
-		setN((i) => i + 1);
-	};
-	useEffect(() => {
-		console.log("useEffect");
-	});
-	useLayoutEffect(() => {
-		console.log("useLayoutEffect");
-	});
-	return (
-		<div className="App">
-			<h1>n: {n}</h1>
-			<button onClick={onClick}>Click</button>
-		</div>
-	);
+    const [n, setN] = useState(0);
+    const onClick = () => {
+        setN((i) => i + 1);
+    };
+    useEffect(() => {
+        console.log("useEffect");
+    });
+    useLayoutEffect(() => {
+        console.log("useLayoutEffect");
+    });
+    return (
+        <div className="App">
+            <h1>n: {n}</h1>
+            <button onClick={onClick}>Click</button>
+        </div>
+    );
 }
 ```
 
 ### useMemo & memo & useCallback
 
-useMemo 可限制子组件随着父组件的render而render useCallback是useMemo的语法糖
+useMemo 可限制子组件随着父组件的render而render useCallback是useMemo的语法糖。
+
+useCallback 和 useMemo 之间的主要区别在于useCallback 将存储返回值，而 useMemo 将存储函数。
 
 ```javascript
-const Child = memo(({ data }) => {
-	console.log("child render");
-	return (
-		<div>
-			<div>child</div>
-			<div>{data.name}</div>
-		</div>
-	);
+const Child = memo(({data}) => {
+    console.log("child render");
+    return (
+        <div>
+            <div>child</div>
+            <div>{data.name}</div>
+        </div>
+    );
 });
 
 const UseMemoExample = () => {
-	console.log("Hook render...");
-	const [count, setCount] = useState(0);
-	const [name, setName] = useState("rose");
+    console.log("Hook render...");
+    const [count, setCount] = useState(0);
+    const [name, setName] = useState("rose");
 
-	// const data = useMemo(() => {
-	//   return {
-	//     name
-	//   };
-	// }, [name]);
-	const data = useCallback(() => {
-		return {
-			name
-		};
-	}, [name]);
-	return (
-		<div>
-			<div>{count}</div>
-			<button onClick={() => setCount(count + 1)}>update count</button>
-			<Child data={data} />
-		</div>
-	);
+    // const data = useMemo(() => {
+    //   return {
+    //     name
+    //   };
+    // }, [name]);
+    const data = useCallback(() => {
+        return {
+            name
+        };
+    }, [name]);
+    return (
+        <div>
+            <div>{count}</div>
+            <button onClick={() => setCount(count + 1)}>update count</button>
+            <Child data={data}/>
+        </div>
+    );
 };
 ```
 
@@ -140,28 +146,28 @@ const UseMemoExample = () => {
 const themeContext = createContext(null);
 
 const Child2 = () => {
-	const { theme, setTheme } = useContext(themeContext);
-	return (
-		<button
-			onClick={() => {
-				setTheme(theme === "light" ? "dark" : "light");
-			}}
-		>
-			{theme}
-		</button>
-	);
+    const {theme, setTheme} = useContext(themeContext);
+    return (
+        <button
+            onClick={() => {
+                setTheme(theme === "light" ? "dark" : "light");
+            }}
+        >
+            {theme}
+        </button>
+    );
 };
 
 function UseThemeContext() {
-	const [theme, setTheme] = useState("dark");
-	return (
-		<themeContext.Provider value={{ theme, setTheme }}>
-			<div className="App">
-				{theme}
-				<Child2 />
-			</div>
-		</themeContext.Provider>
-	);
+    const [theme, setTheme] = useState("dark");
+    return (
+        <themeContext.Provider value={{theme, setTheme}}>
+            <div className="App">
+                {theme}
+                <Child2/>
+            </div>
+        </themeContext.Provider>
+    );
 }
 ```
 
@@ -171,41 +177,53 @@ function UseThemeContext() {
 
 ```javascript
 const initial = {
-	n: 0
+    n: 0
 };
 const reducer = (state, action) => {
-	if (action.type === "add") {
-		return { n: state.n + action.number };
-	} else if (action.type === "multi") {
-		return { n: state.n * 2 };
-	} else {
-		throw new Error("unknown type");
-	}
+    if (action.type === "add") {
+        return {n: state.n + action.number};
+    } else if (action.type === "multi") {
+        return {n: state.n * 2};
+    } else {
+        throw new Error("unknown type");
+    }
 };
 
 function UseReducerExample() {
-	const [state, dispatch] = useReducer(reducer, initial);
-	const { n } = state;
-	const onClick = () => {
-		dispatch({ type: "add", number: 1 });
-	};
-	const onClick2 = () => {
-		dispatch({ type: "add", number: 2 });
-	};
-	return (
-		<div className="App">
-			<h1>n: {n}</h1>
+    const [state, dispatch] = useReducer(reducer, initial);
+    const {n} = state;
+    const onClick = () => {
+        dispatch({type: "add", number: 1});
+    };
+    const onClick2 = () => {
+        dispatch({type: "add", number: 2});
+    };
+    return (
+        <div className="App">
+            <h1>n: {n}</h1>
 
-			<button onClick={onClick}>+1</button>
-			<button onClick={onClick2}>+2</button>
-		</div>
-	);
+            <button onClick={onClick}>+1</button>
+            <button onClick={onClick2}>+2</button>
+        </div>
+    );
 }
 ```
 
 ### useState & useEffect
 
 最常用的
+
+```typescript
+//异步
+const doSomthing = async () => {
+}
+
+useEffect(() => {
+    (async () => {
+        await doSomthing
+    })()
+}, [])
+```
 
 ---
 

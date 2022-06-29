@@ -42,3 +42,15 @@ tar zcvf www.tar.gz *
 # 包含隐藏文件
 tar zcvf www.tar.gz .[!.] *
 ```
+
+```shell
+%Cpu(s): 35.0 us, 25.1 sy,  0.0 ni, 39.7 id,  0.1 wa,  0.0 hi,  0.1 si,  0.0 st
+
+KiB Mem : 13173243+total, 52521144 free, 33416016 used, 45795268 buff/cache
+```
+
+```shell
+cat /proc/cpuinfo | grep 'model name' | uniq	
+
+model name	: Intel(R) Xeon(R) CPU E5-2660 v3 @ 2.60GHz
+```
