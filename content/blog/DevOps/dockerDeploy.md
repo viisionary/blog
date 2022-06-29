@@ -5,7 +5,7 @@ tags: ["docker","devOps"]
 categories : ["docker"]
 ---
 
-docker 部署项目
+docker 注册私有仓库 & 部署项目
 
 <!--more-->
 

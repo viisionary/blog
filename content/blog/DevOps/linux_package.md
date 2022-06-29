@@ -18,3 +18,7 @@ tags: [
 sudo yum install yum-utils
 ```
 
+
+```shell
+sudo yum install git
+```
