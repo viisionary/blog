@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>工具 on VISIONARY</title><link>https://visionary.top/tags/%E5%B7%A5%E5%85%B7/</link><description>Recent content in 工具 on VISIONARY</description><generator>Hugo -- gohugo.io</generator><language>en-us</language><lastBuildDate>Tue, 28 Jun 2022 00:00:00 +0000</lastBuildDate><atom:link href="https://visionary.top/tags/%E5%B7%A5%E5%85%B7/index.xml" rel="self" type="application/rss+xml"/><item><title>百度网盘 开放API 上传 &amp; 下载</title><link>https://visionary.top/blog/devnotes/baidu_netdisk/</link><pubDate>Tue, 28 Jun 2022 00:00:00 +0000</pubDate><guid>https://visionary.top/blog/devnotes/baidu_netdisk/</guid><description>&lt;p>百度网盘 开放API 上传 &amp;amp; 下载 功能。&lt;/p>
+&lt;p>未做分片 仅支持 4M 以下小文件，文件可直接下载。&lt;/p>
+&lt;p>需要百度账号，接入网盘功能&lt;/p>
+&lt;p>取得 appid &amp;amp; appkey&lt;/p></description></item></channel></rss>
