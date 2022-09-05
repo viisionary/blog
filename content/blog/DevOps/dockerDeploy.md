@@ -28,9 +28,14 @@ vim /etc/docker/daemon.json
 ```
 
 ```json
+//{
+//  "insecure-registries": [
+//    "localhost:5000"
+//  ]
+//}
 {
   "insecure-registries": [
-    "localhost:5000"
+    "0.0.0.0/0"
   ]
 }
 ```
@@ -105,3 +110,4 @@ vim /etc/ssh/sshd_config
 #pubsKey 选项打开  ~/.ssh/authorized_keys的放置路径打开
 ```
 
+The three primary differences between the Dockerfile and docker-compose are: The Dockerfile is used to build images while the docker-compose. yaml file is used to run images. The Dockerfile uses the docker build command, while the docker-compose.

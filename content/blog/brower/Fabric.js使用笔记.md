@@ -3,13 +3,15 @@ title : Fabric.js使用笔记
 
 date: 2022-05-22
 
-tags: ["Fabric.js使用笔记"]
+tags: ["js"]
 
-categories : ["Fabric.js使用笔记"]
+categories : ["js"]
 
 ---
 
-Fabric.js使用笔记.md
+Fabric.js is a powerful and simple
+Javascript HTML5 canvas library
+
 
 <!--more-->
 

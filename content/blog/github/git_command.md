@@ -93,3 +93,26 @@ git log -1 --pretty=format:"%s"
 ### 删除 tag
 `git tag -d v1.0.0`
 `git push origin :refs/tags/v1.0.0`
+
+### Want to find which commit caused a bug
+`git bisect start`
+`git bisect bad `          # Current version is bad
+`git bisect good v1.1`     # v1.1 is known to be good
+
+`git help bisect`
+
+### zsh 的一些常用简写 [alias]
+```shell
+gst - git status
+gc  - git commit
+gaa - git add --all
+gco - git checkout
+gp  - git push
+gl  - git pull
+gcb - git checkout -b
+gm  - git merge
+grb - git rebase
+gpsup - git push --set-upstream origin $(current_branch)
+gbda  - git branch --no-color --merged | command grep -vE "^(\+|\*|\s*(master|develop|dev)\s*$)" | command xargs -n 1 git branch -d
+gfa - git fetch --all --prune
+```
