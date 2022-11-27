@@ -1,4 +1,47 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>react on VISIONARY</title><link>https://visionary.top/tags/react/</link><description>Recent content in react on VISIONARY</description><generator>Hugo -- gohugo.io</generator><language>en-us</language><lastBuildDate>Tue, 22 Feb 2022 00:00:00 +0000</lastBuildDate><atom:link href="https://visionary.top/tags/react/index.xml" rel="self" type="application/rss+xml"/><item><title>react 服务端渲染 &amp; next.js使用</title><link>https://visionary.top/blog/react%E4%BD%BF%E7%94%A8/react-ssr/</link><pubDate>Tue, 22 Feb 2022 00:00:00 +0000</pubDate><guid>https://visionary.top/blog/react%E4%BD%BF%E7%94%A8/react-ssr/</guid><description>&lt;p>一般用来做官网，方便搜索引擎爬。&lt;/p></description></item><item><title>Hooks使用</title><link>https://visionary.top/blog/react%E4%BD%BF%E7%94%A8/hooks/</link><pubDate>Thu, 22 Jul 2021 00:00:00 +0000</pubDate><guid>https://visionary.top/blog/react%E4%BD%BF%E7%94%A8/hooks/</guid><description>&lt;ul>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>react on VISIONARY</title><link>https://visionary.top/tags/react/</link><description>Recent content in react on VISIONARY</description><generator>Hugo -- gohugo.io</generator><language>en-us</language><lastBuildDate>Tue, 22 Feb 2022 00:00:00 +0000</lastBuildDate><atom:link href="https://visionary.top/tags/react/index.xml" rel="self" type="application/rss+xml"/><item><title>react 服务端渲染 &amp; next.js使用</title><link>https://visionary.top/blog/react%E4%BD%BF%E7%94%A8/react-ssr/</link><pubDate>Tue, 22 Feb 2022 00:00:00 +0000</pubDate><guid>https://visionary.top/blog/react%E4%BD%BF%E7%94%A8/react-ssr/</guid><description>&lt;p>一般用来做官网，方便搜索引擎爬。&lt;/p></description></item><item><title>React 中不是很常用的 Api</title><link>https://visionary.top/blog/react%E4%BD%BF%E7%94%A8/react-api-all/</link><pubDate>Mon, 21 Feb 2022 00:00:00 +0000</pubDate><guid>https://visionary.top/blog/react%E4%BD%BF%E7%94%A8/react-api-all/</guid><description>&lt;p>Fragment、Error Boundaries、componentDidCatch、Suspense、createPortal 等等&lt;/p></description></item><item><title>spider 一系列的设计</title><link>https://visionary.top/blog/spider/spider%E8%AE%BE%E8%AE%A1/</link><pubDate>Mon, 21 Feb 2022 00:00:00 +0000</pubDate><guid>https://visionary.top/blog/spider/spider%E8%AE%BE%E8%AE%A1/</guid><description>&lt;table>
+&lt;thead>
+&lt;tr>
+&lt;th>Project&lt;/th>
+&lt;th>Desc&lt;/th>
+&lt;/tr>
+&lt;/thead>
+&lt;tbody>
+&lt;tr>
+&lt;td>spider&lt;/td>
+&lt;td>带有各种内容的完整框架 &amp;amp; 尝试性 demo&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>&lt;a href="https://github.com/viisionary/spider-source">spider-source &lt;/a>&lt;/td>
+&lt;td>脚手架的源码&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>spider-cli&lt;/td>
+&lt;td>生成新项目的脚本 clone 的是 spider【改成&lt;a href="https://github.com/viisionary/spider-source">spider-source&lt;/a>】&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>&lt;a href="https://github.com/viisionary/spider-api">spider-api&lt;/a>&lt;/td>
+&lt;td>spider 网站的服务、有一些 demo&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>spider-ui-cli&lt;/td>
+&lt;td>组件库的源码 - build 后会生成spider-vision并发布&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>spider-vision&lt;/td>
+&lt;td>组件库生成的 npm 包&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>spider-tool&lt;/td>
+&lt;td>工具集的源码 - build 后会生成spider-util并发布&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>spider-util&lt;/td>
+&lt;td>工具集生成的 npm 包&lt;/td>
+&lt;/tr>
+&lt;/tbody>
+&lt;/table></description></item><item><title>BLOG mind map</title><link>https://visionary.top/blog/mindmap_png/</link><pubDate>Fri, 18 Feb 2022 00:00:00 +0000</pubDate><guid>https://visionary.top/blog/mindmap_png/</guid><description>blog 的脑图
+//TODO 待添加</description></item><item><title>aliplayer 源码阅读笔记</title><link>https://visionary.top/blog/media/aliplayer/</link><pubDate>Mon, 20 Dec 2021 00:00:00 +0000</pubDate><guid>https://visionary.top/blog/media/aliplayer/</guid><description>&lt;p>支持格式: MP4、FLV、M3U8、RTMP&lt;/p>
+&lt;p>阿里云Web端播放器SDK，同时支持Flash和H5两种播放技术。&lt;/p></description></item><item><title>Hooks使用</title><link>https://visionary.top/blog/react%E4%BD%BF%E7%94%A8/hooks/</link><pubDate>Thu, 22 Jul 2021 00:00:00 +0000</pubDate><guid>https://visionary.top/blog/react%E4%BD%BF%E7%94%A8/hooks/</guid><description>&lt;ul>
 &lt;li>Hook 是 React 16.8 的新增特性。它可以让你在不编写 class 的情况下使用 state 以及其他的 React 特性。&lt;/li>
 &lt;li>Hook 将组件中相互关联的部分拆分成更小的函数（比如设置订阅或请求数据）,而并非强制按照生命周期划分&lt;/li>
 &lt;/ul></description></item><item><title>PureComponent 纯组件</title><link>https://visionary.top/blog/react%E4%BD%BF%E7%94%A8/purecomponent/</link><pubDate>Thu, 22 Jul 2021 00:00:00 +0000</pubDate><guid>https://visionary.top/blog/react%E4%BD%BF%E7%94%A8/purecomponent/</guid><description>&lt;p>为什么要使用shouldComponentUpdate？什么时候使用React.PureComponent
@@ -6,4 +49,11 @@ re render的情况&lt;/p></description></item><item><title>pureFunction</title><
 &lt;ul>
 &lt;li>（与局部静态变量、非局部变量、可变引用参数或输入流没有变化）&lt;/li>
 &lt;li>并且函数应用程序没有副作用（局部静态变量、非局部变量、可变引用参数或输入/输出流没有突变）。&lt;/li>
-&lt;/ul></description></item><item><title>关于React 中的 受控组件 vs 不受控组件</title><link>https://visionary.top/blog/react%E4%BD%BF%E7%94%A8/control_component/</link><pubDate>Thu, 22 Jul 2021 00:00:00 +0000</pubDate><guid>https://visionary.top/blog/react%E4%BD%BF%E7%94%A8/control_component/</guid><description/></item></channel></rss>
+&lt;/ul></description></item><item><title>关于React 中的 受控组件 vs 不受控组件</title><link>https://visionary.top/blog/react%E4%BD%BF%E7%94%A8/control_component/</link><pubDate>Thu, 22 Jul 2021 00:00:00 +0000</pubDate><guid>https://visionary.top/blog/react%E4%BD%BF%E7%94%A8/control_component/</guid><description/></item><item><title>react 源码阅读 - 调用栈分析</title><link>https://visionary.top/blog/react%E6%BA%90%E7%A0%81%E7%AC%94%E8%AE%B0/react/</link><pubDate>Fri, 16 Jul 2021 00:00:00 +0000</pubDate><guid>https://visionary.top/blog/react%E6%BA%90%E7%A0%81%E7%AC%94%E8%AE%B0/react/</guid><description>&lt;p>调用 ReactDOM.render发生了什么&lt;/p></description></item><item><title>双向链表</title><link>https://visionary.top/blog/algorithms/doublylinkedlist/</link><pubDate>Fri, 16 Jul 2021 00:00:00 +0000</pubDate><guid>https://visionary.top/blog/algorithms/doublylinkedlist/</guid><description>export default class DoublyLinkedListNode { constructor(value, next = null, previous = null) { this.value = value; this.next = next; this.previous = previous; } toString(callback) { return callback ? callback(this.value) : `${this.value}`; } }</description></item><item><title>新搭一个框架要做的事情</title><link>https://visionary.top/blog/framework/%E6%96%B0%E6%90%AD%E4%B8%80%E4%B8%AA%E6%A1%86%E6%9E%B6%E8%A6%81%E5%81%9A%E7%9A%84%E4%BA%8B%E6%83%85/</link><pubDate>Fri, 16 Jul 2021 00:00:00 +0000</pubDate><guid>https://visionary.top/blog/framework/%E6%96%B0%E6%90%AD%E4%B8%80%E4%B8%AA%E6%A1%86%E6%9E%B6%E8%A6%81%E5%81%9A%E7%9A%84%E4%BA%8B%E6%83%85/</guid><description>&lt;p>新搭建一个前端项目的时候，必须要做的事情&lt;/p></description></item><item><title>react 源码阅读 - Hooks</title><link>https://visionary.top/blog/react%E6%BA%90%E7%A0%81%E7%AC%94%E8%AE%B0/hooks/</link><pubDate>Mon, 05 Apr 2021 00:00:00 +0000</pubDate><guid>https://visionary.top/blog/react%E6%BA%90%E7%A0%81%E7%AC%94%E8%AE%B0/hooks/</guid><description>有那些hooks
+useState useReducer ##useEffect
+##useContext
+##useRef</description></item><item><title>react &amp; reactDOM API</title><link>https://visionary.top/blog/react%E6%BA%90%E7%A0%81%E7%AC%94%E8%AE%B0/reactbasic/</link><pubDate>Fri, 02 Apr 2021 00:00:00 +0000</pubDate><guid>https://visionary.top/blog/react%E6%BA%90%E7%A0%81%E7%AC%94%E8%AE%B0/reactbasic/</guid><description>&lt;p>react v17.0.2 概述
+react 整个项目的架构&lt;/p>
+&lt;p>React Top-Level API&lt;/p>
+&lt;p>读源码的有什么用&lt;/p></description></item><item><title>react 源码阅读 - diff 算法</title><link>https://visionary.top/blog/react%E6%BA%90%E7%A0%81%E7%AC%94%E8%AE%B0/diff%E7%AE%97%E6%B3%95%E6%80%BB%E7%BB%93/</link><pubDate>Fri, 02 Apr 2021 00:00:00 +0000</pubDate><guid>https://visionary.top/blog/react%E6%BA%90%E7%A0%81%E7%AC%94%E8%AE%B0/diff%E7%AE%97%E6%B3%95%E6%80%BB%E7%BB%93/</guid><description>&lt;p>版本 v17.0.2
+单节点比较、多节点比较&lt;/p></description></item><item><title>react 源码阅读 - setState</title><link>https://visionary.top/blog/react%E6%BA%90%E7%A0%81%E7%AC%94%E8%AE%B0/setstate/</link><pubDate>Fri, 02 Apr 2021 00:00:00 +0000</pubDate><guid>https://visionary.top/blog/react%E6%BA%90%E7%A0%81%E7%AC%94%E8%AE%B0/setstate/</guid><description>&lt;p>setState 的源码分析&lt;/p></description></item><item><title>react 源码阅读 - show with code</title><link>https://visionary.top/blog/react%E6%BA%90%E7%A0%81%E7%AC%94%E8%AE%B0/react%E7%BB%93%E5%90%88%E5%AE%9E%E6%88%98/</link><pubDate>Fri, 02 Apr 2021 00:00:00 +0000</pubDate><guid>https://visionary.top/blog/react%E6%BA%90%E7%A0%81%E7%AC%94%E8%AE%B0/react%E7%BB%93%E5%90%88%E5%AE%9E%E6%88%98/</guid><description/></item><item><title>react 源码阅读 - 名词 &amp; 数据结构</title><link>https://visionary.top/blog/react%E6%BA%90%E7%A0%81%E7%AC%94%E8%AE%B0/react%E6%BA%90%E7%A0%81%E4%B8%AD%E7%9A%84%E4%B8%80%E4%BA%9B%E5%90%8D%E8%AF%8D/</link><pubDate>Fri, 02 Apr 2021 00:00:00 +0000</pubDate><guid>https://visionary.top/blog/react%E6%BA%90%E7%A0%81%E7%AC%94%E8%AE%B0/react%E6%BA%90%E7%A0%81%E4%B8%AD%E7%9A%84%E4%B8%80%E4%BA%9B%E5%90%8D%E8%AF%8D/</guid><description/></item><item><title>react 源码阅读 - 流程</title><link>https://visionary.top/blog/react%E6%BA%90%E7%A0%81%E7%AC%94%E8%AE%B0/react%E6%B5%81%E7%A8%8B/</link><pubDate>Fri, 02 Apr 2021 00:00:00 +0000</pubDate><guid>https://visionary.top/blog/react%E6%BA%90%E7%A0%81%E7%AC%94%E8%AE%B0/react%E6%B5%81%E7%A8%8B/</guid><description>&lt;p>React16架构&lt;/p></description></item></channel></rss>

@@ -1,7 +1,48 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>React on VISIONARY</title><link>https://visionary.top/categories/react/</link><description>Recent content in React on VISIONARY</description><generator>Hugo -- gohugo.io</generator><language>en-us</language><lastBuildDate>Mon, 05 Sep 2022 00:00:00 +0000</lastBuildDate><atom:link href="https://visionary.top/categories/react/index.xml" rel="self" type="application/rss+xml"/><item><title>React代码层优化</title><link>https://visionary.top/blog/js/react%E4%BB%A3%E7%A0%81%E5%B1%82%E4%BC%98%E5%8C%96/</link><pubDate>Mon, 05 Sep 2022 00:00:00 +0000</pubDate><guid>https://visionary.top/blog/js/react%E4%BB%A3%E7%A0%81%E5%B1%82%E4%BC%98%E5%8C%96/</guid><description>&lt;p>要处理大型列表和过深的state&lt;/p></description></item><item><title>Ahook</title><link>https://visionary.top/blog/react%E4%BD%BF%E7%94%A8/ahook/</link><pubDate>Mon, 09 May 2022 00:00:00 +0000</pubDate><guid>https://visionary.top/blog/react%E4%BD%BF%E7%94%A8/ahook/</guid><description>&lt;p>Ahook.md&lt;/p></description></item><item><title>Hooks使用</title><link>https://visionary.top/blog/react%E4%BD%BF%E7%94%A8/hooks/</link><pubDate>Thu, 22 Jul 2021 00:00:00 +0000</pubDate><guid>https://visionary.top/blog/react%E4%BD%BF%E7%94%A8/hooks/</guid><description>&lt;ul>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>React on VISIONARY</title><link>https://visionary.top/categories/react/</link><description>Recent content in React on VISIONARY</description><generator>Hugo -- gohugo.io</generator><language>en-us</language><lastBuildDate>Mon, 05 Sep 2022 00:00:00 +0000</lastBuildDate><atom:link href="https://visionary.top/categories/react/index.xml" rel="self" type="application/rss+xml"/><item><title>React代码层优化</title><link>https://visionary.top/blog/js/react%E4%BB%A3%E7%A0%81%E5%B1%82%E4%BC%98%E5%8C%96/</link><pubDate>Mon, 05 Sep 2022 00:00:00 +0000</pubDate><guid>https://visionary.top/blog/js/react%E4%BB%A3%E7%A0%81%E5%B1%82%E4%BC%98%E5%8C%96/</guid><description>&lt;p>要处理大型列表和过深的state&lt;/p></description></item><item><title>Ahook</title><link>https://visionary.top/blog/react%E4%BD%BF%E7%94%A8/ahook/</link><pubDate>Mon, 09 May 2022 00:00:00 +0000</pubDate><guid>https://visionary.top/blog/react%E4%BD%BF%E7%94%A8/ahook/</guid><description>&lt;p>Ahook.md&lt;/p></description></item><item><title>React 中不是很常用的 Api</title><link>https://visionary.top/blog/react%E4%BD%BF%E7%94%A8/react-api-all/</link><pubDate>Mon, 21 Feb 2022 00:00:00 +0000</pubDate><guid>https://visionary.top/blog/react%E4%BD%BF%E7%94%A8/react-api-all/</guid><description>&lt;p>Fragment、Error Boundaries、componentDidCatch、Suspense、createPortal 等等&lt;/p></description></item><item><title>spider 一系列的设计</title><link>https://visionary.top/blog/spider/spider%E8%AE%BE%E8%AE%A1/</link><pubDate>Mon, 21 Feb 2022 00:00:00 +0000</pubDate><guid>https://visionary.top/blog/spider/spider%E8%AE%BE%E8%AE%A1/</guid><description>&lt;table>
+&lt;thead>
+&lt;tr>
+&lt;th>Project&lt;/th>
+&lt;th>Desc&lt;/th>
+&lt;/tr>
+&lt;/thead>
+&lt;tbody>
+&lt;tr>
+&lt;td>spider&lt;/td>
+&lt;td>带有各种内容的完整框架 &amp;amp; 尝试性 demo&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>&lt;a href="https://github.com/viisionary/spider-source">spider-source &lt;/a>&lt;/td>
+&lt;td>脚手架的源码&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>spider-cli&lt;/td>
+&lt;td>生成新项目的脚本 clone 的是 spider【改成&lt;a href="https://github.com/viisionary/spider-source">spider-source&lt;/a>】&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>&lt;a href="https://github.com/viisionary/spider-api">spider-api&lt;/a>&lt;/td>
+&lt;td>spider 网站的服务、有一些 demo&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>spider-ui-cli&lt;/td>
+&lt;td>组件库的源码 - build 后会生成spider-vision并发布&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>spider-vision&lt;/td>
+&lt;td>组件库生成的 npm 包&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>spider-tool&lt;/td>
+&lt;td>工具集的源码 - build 后会生成spider-util并发布&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>spider-util&lt;/td>
+&lt;td>工具集生成的 npm 包&lt;/td>
+&lt;/tr>
+&lt;/tbody>
+&lt;/table></description></item><item><title>Hooks使用</title><link>https://visionary.top/blog/react%E4%BD%BF%E7%94%A8/hooks/</link><pubDate>Thu, 22 Jul 2021 00:00:00 +0000</pubDate><guid>https://visionary.top/blog/react%E4%BD%BF%E7%94%A8/hooks/</guid><description>&lt;ul>
 &lt;li>Hook 是 React 16.8 的新增特性。它可以让你在不编写 class 的情况下使用 state 以及其他的 React 特性。&lt;/li>
 &lt;li>Hook 将组件中相互关联的部分拆分成更小的函数（比如设置订阅或请求数据）,而并非强制按照生命周期划分&lt;/li>
-&lt;/ul></description></item><item><title>关于React 中的 受控组件 vs 不受控组件</title><link>https://visionary.top/blog/react%E4%BD%BF%E7%94%A8/control_component/</link><pubDate>Thu, 22 Jul 2021 00:00:00 +0000</pubDate><guid>https://visionary.top/blog/react%E4%BD%BF%E7%94%A8/control_component/</guid><description/></item><item><title>react 一些不常用API的示例</title><link>https://visionary.top/blog/react%E6%BA%90%E7%A0%81%E7%AC%94%E8%AE%B0/portals/</link><pubDate>Fri, 16 Jul 2021 00:00:00 +0000</pubDate><guid>https://visionary.top/blog/react%E6%BA%90%E7%A0%81%E7%AC%94%E8%AE%B0/portals/</guid><description>写法在内部 实际渲染在同级 Example: Portals - by Dan Abramov</description></item><item><title>spider-vision</title><link>https://visionary.top/blog/spider/spider-vision/</link><pubDate>Fri, 16 Jul 2021 00:00:00 +0000</pubDate><guid>https://visionary.top/blog/spider/spider-vision/</guid><description/></item><item><title>react 源码阅读 - Hooks</title><link>https://visionary.top/blog/react%E6%BA%90%E7%A0%81%E7%AC%94%E8%AE%B0/hooks/</link><pubDate>Mon, 05 Apr 2021 00:00:00 +0000</pubDate><guid>https://visionary.top/blog/react%E6%BA%90%E7%A0%81%E7%AC%94%E8%AE%B0/hooks/</guid><description>有那些hooks
+&lt;/ul></description></item><item><title>关于React 中的 受控组件 vs 不受控组件</title><link>https://visionary.top/blog/react%E4%BD%BF%E7%94%A8/control_component/</link><pubDate>Thu, 22 Jul 2021 00:00:00 +0000</pubDate><guid>https://visionary.top/blog/react%E4%BD%BF%E7%94%A8/control_component/</guid><description/></item><item><title>spider-vision</title><link>https://visionary.top/blog/spider/spider-vision/</link><pubDate>Fri, 16 Jul 2021 00:00:00 +0000</pubDate><guid>https://visionary.top/blog/spider/spider-vision/</guid><description/></item><item><title>react 源码阅读 - Hooks</title><link>https://visionary.top/blog/react%E6%BA%90%E7%A0%81%E7%AC%94%E8%AE%B0/hooks/</link><pubDate>Mon, 05 Apr 2021 00:00:00 +0000</pubDate><guid>https://visionary.top/blog/react%E6%BA%90%E7%A0%81%E7%AC%94%E8%AE%B0/hooks/</guid><description>有那些hooks
 useState useReducer ##useEffect
 ##useContext
 ##useRef</description></item><item><title>react &amp; reactDOM API</title><link>https://visionary.top/blog/react%E6%BA%90%E7%A0%81%E7%AC%94%E8%AE%B0/reactbasic/</link><pubDate>Fri, 02 Apr 2021 00:00:00 +0000</pubDate><guid>https://visionary.top/blog/react%E6%BA%90%E7%A0%81%E7%AC%94%E8%AE%B0/reactbasic/</guid><description>&lt;p>react v17.0.2 概述
