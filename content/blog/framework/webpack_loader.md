@@ -3,7 +3,7 @@ title : webpack中常用的 loader & 自定义 loader
 
 date: 2021-07-22 
 
-tags: ["webpack"]
+tags: ["Webpack"]
 
 ---
 Loaders - 它告诉 javascript 在模块中使用后如何解析非 javascript 模块。它获取资源文件并返回修改后的状态。

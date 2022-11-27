@@ -15,6 +15,7 @@ next.js node 部署生产环境
 ## NODE 部署
 
 > node 版本 v16.14.2
+> 
 
 ```shell
 # 安装依赖
@@ -22,7 +23,7 @@ yarn install
 # 构建  http://10.1.63.132:8088/ 为接口地址
 ADDRESS='http://10.1.63.132:8088/' yarn run build
 
-# 复制静态资源
+## 复制静态资源
 # official-website 目录下
 cp -r ./pubilc ./.next/standalone
 cp -r .next/static ./.next/standalone/.next

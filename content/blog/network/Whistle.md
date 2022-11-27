@@ -3,9 +3,9 @@ title : "如何使用Whistle抓包"
 
 date: 2021-07-16
 
-tags: ["network"]
+tags: ["Network"]
 
-categories: ["network"]
+categories: ["Network"]
 
 ---
 

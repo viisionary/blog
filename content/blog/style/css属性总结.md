@@ -3,12 +3,11 @@ title : css属性总结
 
 date: 2022-04-06
 
-tags: ["css属性总结"]
+tags: ["css"]
 
-categories : ["css属性总结"]
+categories : ["css"]
 
 ---
 
-css属性总结.md
 
 <!--more-->

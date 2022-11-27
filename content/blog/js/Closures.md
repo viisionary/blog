@@ -1,8 +1,8 @@
 ---
 title: Javascript - 闭包 Closures
 date: 2022-02-21
-tags: ["javascript"]
-categories: ["javascript"]
+tags: ["闭包","Closures"]
+categories: ["Java Script"]
 ---
 闭包示例代码
 

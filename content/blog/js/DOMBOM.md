@@ -1,7 +1,7 @@
 ---
 title: 什么是DOM & BOM？
 date: 2021-07-22 
-tags: ["js"]
+tags: ["Java Script"]
 ---
 
 <!--more-->

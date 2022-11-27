@@ -3,9 +3,9 @@ title : Fabric.js使用笔记
 
 date: 2022-05-22
 
-tags: ["js"]
+tags: ["Java Script"]
 
-categories : ["js"]
+categories : ["Java Script"]
 
 ---
 

@@ -3,9 +3,9 @@ title : svg简述
 
 date: 2022-06-14
 
-tags: ["svg简述"]
+tags: ["svg"]
 
-categories : ["svg简述"]
+categories : ["svg"]
 
 ---
 

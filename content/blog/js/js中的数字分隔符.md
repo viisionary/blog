@@ -3,7 +3,7 @@ title: "js中的数字分隔符"
 date: 2021-07-16
 description: ""
 categories : [                          
-"javascript",
+"Java Script",
 ]
 
 toc: true

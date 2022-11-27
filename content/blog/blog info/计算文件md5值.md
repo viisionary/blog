@@ -3,9 +3,9 @@ title : 计算文件md5值
 
 date: 2022-03-01 
 
-tags: ["js", "browser"]
+tags: ["常用方法"]
 
-categories : ["js","browser"]
+categories : ["Java Script","browser"]
 
 ---
 

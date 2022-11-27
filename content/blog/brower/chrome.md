@@ -1,7 +1,8 @@
 ---
 title : performance & source的使用 
 date: 2021-07-13 
-categories : ["chrome","工具"]
+tags: ["Chrome"]
+categories: ["工具"]
 ---
 performance & source的使用
 如何debug &

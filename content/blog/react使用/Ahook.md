@@ -3,9 +3,9 @@ title : Ahook
 
 date: 2022-05-09
 
-tags: ["Ahook"]
+tags: ["react hook"]
 
-categories : ["Ahook"]
+categories : ["React"]
 
 ---
 

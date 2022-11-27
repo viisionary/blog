@@ -1,15 +1,14 @@
 ---
-title : REM
+title : 移动端常见问题
 
 date: 2022-04-06
 
-tags: ["REM"]
+tags: ["css"]
 
-categories : ["REM"]
+categories : ["CSS"]
 
 ---
 
 REM.md
 
 <!--more-->
-移动端常见问题

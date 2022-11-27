@@ -3,9 +3,9 @@ title : srs使用笔记
 
 date: 2022-06-06
 
-tags: ["srs使用笔记"]
+tags: ["srs"]
 
-categories : ["srs使用笔记"]
+categories : ["Web Media"]
 
 ---
 

@@ -4,10 +4,10 @@ title :  js异步编程
 date: 2021-12-20 
 description: "js的异步编程总结"
 categories : [                              
-"js",
+"Java Script",
 ]
 tags: [
-"js","异步",
+"Java Script","异步",
 ]
 
 ---

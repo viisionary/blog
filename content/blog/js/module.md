@@ -1,8 +1,8 @@
 ---
 title :  JS module 不同引入方式/暴露方式的区别
 date: 2022-03-02 
-tags: ["js"]
-categories : ["js"]
+tags: ["Java Script"]
+categories : ["Java Script"]
 ---
 
 AMD、UMD、CommonJS、ES6

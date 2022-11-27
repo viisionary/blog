@@ -1,7 +1,7 @@
 ---
 title : es6 新语法 - 2019 & 2020 
 date: 2021-07-22 
-tags: ["js"]
+tags: ["Java Script"]
 ---
 
 <!--more-->

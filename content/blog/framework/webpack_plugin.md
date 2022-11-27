@@ -3,9 +3,9 @@ title : webpack_plugin
 
 date: 2022-03-18
 
-tags: ["webpack"]
+tags: ["Webpack"]
 
-categories : ["webpack"]
+categories : ["Webpack"]
 
 ---
 

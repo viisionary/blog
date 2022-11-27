@@ -295,6 +295,7 @@
       "dash协议",
       "declare",
       "delete",
+      "docker-build-指定dockerfile",
       "docker-compose",
       "dockerfile",
       "documentcookie",

@@ -3,9 +3,9 @@ title : lessAPI
 
 date: 2022-04-06
 
-tags: ["lessAPI"]
+tags: ["less","CSS"]
 
-categories : ["lessAPI"]
+categories : ["CSS"]
 
 ---
 

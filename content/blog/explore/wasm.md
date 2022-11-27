@@ -2,7 +2,7 @@
 title : WebAssembly & assemblyscript 示例
 date: 2022-02-21
 tags: ["WebAssembly"]
-categories : ["WebAssembly"]
+categories : ["Java Script"]
 ---
 ## WebAssembly
 

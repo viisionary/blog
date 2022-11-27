@@ -1,8 +1,8 @@
 ---
 title : 一个fn选取文件
 date: 2022-03-01 
-tags: ["一个fn选取文件"]
-categories : ["一个fn选取文件"]
+tags: ["常用方法"]
+categories : ["Java Script"]
 ---
 
 一个fn调起窗口 选取文件的 promise 封装、限制文件类型&是否可多选

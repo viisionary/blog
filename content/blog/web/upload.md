@@ -1,7 +1,7 @@
 ---
 title: upload
 date: 2021-04-02
-categories : ["js"]
+categories : ["Java Script"]
 ---
 
 <!--more-->

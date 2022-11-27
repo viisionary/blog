@@ -1,9 +1,8 @@
 ---
 title : seo支持 & 谷歌分析
 date: 2021-07-13
-categories : ["seo支持","google"]
+categories : ["SEO"]
 keywords: ["seo支持"]
-
 ---
 > [Search Console](https://search.google.com/search-console?resource_id=sc-domain:visionary.top)
 

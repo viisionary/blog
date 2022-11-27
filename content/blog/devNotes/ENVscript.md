@@ -3,9 +3,9 @@ title : ENV script
 
 date: 2022-02-25 
 
-tags: ["js", "node"]
+tags: ["Java Script", "node"]
 
-categories : ["js"]
+categories : ["Java Script"]
 
 ---
 

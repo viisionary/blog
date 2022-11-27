@@ -3,8 +3,6 @@ title: 为什么要使用React.forwardRef
 ---
 <!--more-->
 
-## 为什么要使用React.forwardRef？
-
 > 如果向HOC添加ref，则ref将引用最外层的容器组件，而不是包装的组件。
 
 ```jsx

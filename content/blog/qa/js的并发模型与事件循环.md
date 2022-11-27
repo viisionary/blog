@@ -1,7 +1,7 @@
 ---
 title : js的并发模型与事件循环
 date: 2021-07-22
-tags: ["js"]
+tags: ["Java Script"]
 ---
 <!--more-->
 
