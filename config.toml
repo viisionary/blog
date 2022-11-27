@@ -81,3 +81,21 @@ tagline = "BLOG"
 description = "There is my development notes."
 contact = "https://twitter.com/visionary_mi"
 
+# syntax highlight settings
+[markup]
+  [markup.highlight]
+    style = "dracula"
+  [markup.goldmark]
+    [markup.goldmark.extensions]
+      mark = true
+      definitionList = true
+      footnote = true
+      linkify = true
+      strikethrough = true
+      table = true
+      taskList = true
+      typographer = true
+    [markup.goldmark.renderer]
+       hardWraps = false
+       unsafe = true
+       xhtml = false
