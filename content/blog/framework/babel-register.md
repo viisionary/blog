@@ -1,5 +1,4 @@
 ---
-
 title : "babel/register 编译"
 date: 2021-7-16
 description: "Sample article showcasing basic Markdown syntax and formatting for HTML elements."
@@ -8,8 +7,8 @@ categories : [
 ]
 toc: true
 tags: [
-"前端安全",
-]
+"前端安全",]
+date: 2022-09-27
 ---
 
 

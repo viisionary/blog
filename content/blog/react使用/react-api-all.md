@@ -1,6 +1,8 @@
 ---
 title : React 中不是很常用的 Api
 date: 2022-02-21
+categories : ["react"]
+tags : ["react","源码"]
 ---
 
 Fragment、Error Boundaries、componentDidCatch、Suspense、createPortal 等等

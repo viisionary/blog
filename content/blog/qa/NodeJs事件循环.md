@@ -1,6 +1,8 @@
 ---
 title : NodeJs事件循环
 date: 2021-12-20
+categories : ["Java Script"]
+tags : ["Java Script"]
 ---
 事件循环是 Node.js 处理非阻塞 I/O 操作的机制
 <!--more-->

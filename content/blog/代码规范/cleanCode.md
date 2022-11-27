@@ -1,9 +1,8 @@
 ---
 title : "js 代码规范 - clean code"
 date: 2021-07-16
-categories : [                              
-"代码规范",
-]
+categories : ["Java Script"]
+tags : ["Java Script"]
 ---
 
 编写代码应该遵循的原则

@@ -1,9 +1,8 @@
 ---
 title : "Rich Content"
 date: 2021-04-24
-categories : [                              
-"md",
-]
+categories : ["md",]
+tags: ["markdown", "css", "html"]
 
 ---
 

@@ -1,6 +1,8 @@
 ---
 title : aliplayer 源码阅读笔记
 date: 2021-12-20
+categories : ["Web Media"]
+tags : ["react","java script"]
 ---
 支持格式: MP4、FLV、M3U8、RTMP
 

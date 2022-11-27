@@ -2,7 +2,7 @@
 author: "Hugo Authors"
 
 title: "Markdown Syntax Guide"
-
+tags: ["markdown", "css", "html"]
 categories : [                              
 "md",
 ]

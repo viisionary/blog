@@ -1,6 +1,8 @@
 ---
 title : redux & redux-thunk & redux-saga
 date: 2019-03-22
+tags: ["Java Script"]
+
 ---
 Store，Action 和 Reducer
 

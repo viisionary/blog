@@ -1,7 +1,8 @@
 ---
 title: react 源码阅读 - 调用栈分析
 date: 2021-07-16
-tag : ["react","源码"]
+tags : ["react","源码"]
+categories : ["Java Script"]
 ---
 
 调用 ReactDOM.render发生了什么
